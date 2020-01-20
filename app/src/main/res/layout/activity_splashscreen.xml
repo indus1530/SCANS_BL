@@ -1,0 +1,87 @@
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/sosas_splash"
+    tools:context=".ui.other.SplashscreenActivity">
+
+    <!-- The primary full-screen view. This can be replaced with whatever view
+         is needed to present your content, e.g. VideoView, SurfaceView,
+         TextureView, etc. -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="center"
+        android:layout_margin="16dp"
+        android:orientation="vertical">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="350dp"
+            android:contentDescription="Aga khan LOGO"
+            android:src="@drawable/agakhannew"
+            android:visibility="gone" />
+
+        <TextView
+            android:id="@+id/fullscreen_content"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="#3b484e"
+            android:elevation="2dp"
+            android:gravity="center_horizontal"
+            android:keepScreenOn="true"
+            android:textColor="#56ae51"
+            android:textSize="36sp"
+            android:textStyle="bold"
+            android:visibility="invisible" />
+
+        <!--<TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center_horizontal"
+            android:keepScreenOn="true"
+            android:text="Trust for Vaccination &amp; Immunization (TVI)"
+            android:textColor="@color/colorAccent"
+            android:textSize="28sp"
+            android:textStyle="bold" />-->
+
+        <!--<TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center_horizontal"
+            android:keepScreenOn="true"
+            android:paddingTop="72dp"
+            android:text="@string/app_name"
+            android:textColor="@color/colorPrimaryDark"
+            android:textSize="24sp"
+            android:textStyle="bold" />-->
+
+        <LinearLayout
+            android:id="@+id/fullscreen_content_controls"
+            style="?metaButtonBarStyle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom|center_horizontal"
+            android:background="@color/black_overlay"
+            android:orientation="horizontal"
+            tools:ignore="UselessParent">
+
+            <Button
+                android:id="@+id/dummy_button"
+                style="?metaButtonBarButtonStyle"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="@string/dummy_button" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <!-- This FrameLayout insets its children based on system windows using
+         android:fitsSystemWindows. -->
+
+
+</ScrollView>

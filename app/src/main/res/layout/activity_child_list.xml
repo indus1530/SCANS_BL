@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<layout>
+
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:background="@drawable/sosas_bg"
+        android:padding="8dp"
+        tools:context=".ui.ChildListActivity">
+
+        <TextView
+            style="@style/HeadingTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:elevation="1dp"
+            android:paddingStart="12dp"
+            android:paddingEnd="12dp"
+            android:radius="2dp"
+            android:text="CHILDREN LIST" />
+
+        <!--        <LinearLayout-->
+        <!--            android:layout_width="match_parent"-->
+        <!--            android:layout_height="56dp"-->
+        <!--            android:layout_marginStart="16dp"-->
+        <!--            android:layout_marginEnd="16dp"-->
+        <!--            android:background="@color/gray"-->
+        <!--            android:orientation="horizontal">-->
+
+        <!--            <TextView-->
+        <!--                android:layout_width="wrap_content"-->
+        <!--                android:layout_height="match_parent"-->
+        <!--                android:layout_gravity="center_vertical"-->
+        <!--                android:background="@color/colorPrimary"-->
+        <!--                android:elevation="1dp"-->
+        <!--                android:gravity="center_vertical"-->
+        <!--                android:padding="8dp"-->
+        <!--                android:radius="2dp"-->
+        <!--                android:text="DSSID"-->
+        <!--                android:textColor="@color/white"-->
+        <!--                android:textSize="18sp"-->
+        <!--                android:textStyle="bold" />-->
+
+        <!--            <EditText-->
+        <!--                android:id="@+id/filterDSS"-->
+        <!--                android:layout_width="0dp"-->
+        <!--                android:layout_height="match_parent"-->
+        <!--                android:layout_marginStart="16dp"-->
+        <!--                android:layout_weight="1"-->
+        <!--                android:background="@color/white"-->
+        <!--                android:padding="4dp"-->
+        <!--                android:textColor="@color/black" />-->
+        <!--        </LinearLayout>-->
+
+        <androidx.recyclerview.widget.RecyclerView
+            tools:listitem="@layout/item_child_list"
+            android:id="@+id/childlist"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="8dp"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+        </androidx.recyclerview.widget.RecyclerView>
+
+
+    </LinearLayout>
+</layout>

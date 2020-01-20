@@ -1,0 +1,278 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layoutDirection="rtl"
+        android:orientation="vertical">
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="8dp"
+            android:elevation="1dp"
+            android:layoutDirection="ltr"
+            android:padding="16dp"
+            app:cardCornerRadius="2dp">
+
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+
+                    <View
+                        android:layout_width="10dp"
+                        android:layout_height="0dp" />
+
+
+                    <ImageView
+                        android:id="@+id/genderImage"
+                        android:layout_width="70dp"
+                        android:layout_height="70dp"
+                        android:layout_gravity="center_vertical"
+                        android:src="@drawable/boy" />
+
+                    <View
+                        android:layout_width="10dp"
+                        android:layout_height="0dp" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="10dp"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Study ID:"
+                                android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                                android:textStyle="bold" />
+
+                            <TextView
+                                android:id="@+id/studyID"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="10dp"
+                                android:layout_weight="1"
+                                android:text="35019"
+                                android:textAppearance="@style/TextAppearance.AppCompat.Medium" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="5dp"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="DSS ID:"
+                                android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                                android:textStyle="bold" />
+
+                            <TextView
+                                android:id="@+id/dssID"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="10dp"
+                                android:layout_weight="1"
+                                android:text="AGAS04068A1"
+                                android:textAppearance="@style/TextAppearance.AppCompat.Medium" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="5dp"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Mother Name:"
+                                android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                                android:textStyle="bold" />
+
+                            <TextView
+                                android:id="@+id/motherName"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="10dp"
+                                android:layout_weight="1"
+                                android:text="SAIRA"
+                                android:textAppearance="@style/TextAppearance.AppCompat.Medium" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="5dp"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Father Name:"
+                                android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                                android:textStyle="bold" />
+
+                            <TextView
+                                android:id="@+id/fatherName"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="10dp"
+                                android:layout_weight="1"
+                                android:text="M.HUSSAIN"
+                                android:textAppearance="@style/TextAppearance.AppCompat.Medium" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="5dp"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Date Of Birth:"
+                                android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                                android:textStyle="bold" />
+
+                            <TextView
+                                android:id="@+id/dob"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="10dp"
+                                android:layout_weight="1"
+                                android:text="DOB"
+                                android:textAppearance="@style/TextAppearance.AppCompat.Medium" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="5dp"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Age (months):"
+                                android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                                android:textStyle="bold" />
+
+                            <TextView
+                                android:id="@+id/months"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="10dp"
+                                android:layout_weight="1"
+                                android:text="Months"
+                                android:textAppearance="@style/TextAppearance.AppCompat.Medium" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="5dp"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Gender:"
+                                android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                                android:textStyle="bold" />
+
+                            <TextView
+                                android:id="@+id/gender"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="10dp"
+                                android:layout_weight="1"
+                                android:text="Male"
+                                android:textAppearance="@style/TextAppearance.AppCompat.Medium" />
+                        </LinearLayout>
+
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="1dp"
+                            android:layout_gravity="bottom"
+                            android:layout_marginTop="10dp"
+                            android:background="#e6e6e6e6" />
+                    </LinearLayout>
+
+
+                </LinearLayout>
+
+
+            </RelativeLayout>
+        </androidx.cardview.widget.CardView>
+
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal"
+            android:padding="24dp"
+            android:paddingBottom="28dp">
+
+
+            <CheckBox
+                android:id="@+id/checkChild"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/dialogCheck"
+                android:drawablePadding="32dp"
+                android:textSize="24sp"
+                android:typeface="serif"
+
+
+                />
+        </androidx.appcompat.widget.LinearLayoutCompat>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="end"
+            android:padding="4dp">
+            <Button
+                android:id="@+id/start"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:backgroundTint="@color/colorPrimary"
+                android:layout_margin="4dp"
+                android:text="@string/yes"
+                android:textColor="@color/white" />
+            <Button
+                android:id="@+id/cancel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:backgroundTint="@color/colorPrimary"
+                android:layout_margin="4dp"
+                android:text="@string/no"
+                android:textColor="@color/white" />
+
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+
+</layout>

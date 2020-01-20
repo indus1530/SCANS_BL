@@ -1,0 +1,346 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+
+    <data>
+
+        <import type="android.view.View" />
+
+        <variable
+            name="callback"
+            type="edu.aku.hassannaqvi.uen_midline.ui.other.MainActivity" />
+    </data>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/sosas_bg"
+        android:orientation="vertical">
+        <!-- Login progress -->
+
+        <TextView
+            android:id="@+id/testing"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="@color/ticker_red"
+            android:elevation="6dp"
+            android:gravity="center"
+            android:keepScreenOn="true"
+            android:padding="4dp"
+            android:text="ONLY FOR TESTING"
+            android:textColor="@color/white"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/lblAppVersion"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:layout_marginBottom="8dp"
+            android:background="@color/lightOrange"
+            android:textAlignment="center"
+            android:textColor="@color/darkRed"
+            android:textStyle="bold"
+            android:visibility="gone" />
+
+
+        <ScrollView
+            android:id="@+id/activity_main"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:paddingLeft="@dimen/activity_horizontal_margin"
+                android:paddingTop="50dp"
+                android:paddingRight="@dimen/activity_horizontal_margin"
+                android:paddingBottom="@dimen/activity_vertical_margin">
+
+
+                <TextView
+                    android:id="@+id/lblMainMenu"
+                    android:layout_width="match_parent"
+                    android:layout_height="?attr/actionBarSize"
+                    android:layout_marginTop="16dp"
+                    android:background="@drawable/mainmenu"
+                    android:gravity="center"
+                    android:padding="10dp"
+                    android:text="Main Menu"
+                    android:textAlignment="center"
+                    android:textAllCaps="true"
+                    android:textColor="@color/white"
+                    android:textSize="20sp"
+                    android:textStyle="bold" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/summary"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="?attr/actionBarSize"
+                        android:background="@color/dullWhiteOverlay"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="?attr/actionBarSize"
+                            android:layout_gravity="center_horizontal"
+                            android:gravity="center"
+                            android:padding="20dp"
+                            android:text="Records Summary"
+                            android:textColor="@color/black"
+                            android:textSize="20sp"
+                            android:typeface="monospace" />
+
+
+                    </LinearLayout>
+
+                    <TextView
+                        android:id="@+id/recordSummary"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal"
+                        android:background="@drawable/summary"
+                        android:padding="20dp"
+                        android:text="Records Summary"
+                        android:textColor="@color/black"
+                        android:textSize="14sp"
+                        android:typeface="monospace" />
+
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="12dp"
+                    android:orientation="horizontal">
+
+                    <androidx.cardview.widget.CardView
+                        android:layout_width="0dp"
+                        android:layout_height="100dp"
+                        android:layout_margin="@dimen/cardview_compat_inset_shadow"
+                        android:layout_weight="1"
+                        android:clickable="true"
+                        android:foreground="?android:attr/selectableItemBackground"
+                        android:onClick='@{()->callback.OpenFormFunc()}'
+                        app:cardCornerRadius="20dp">
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_centerInParent="true"
+                                android:layout_gravity="center_horizontal"
+                                android:text="Open Form"
+                                android:textAppearance="@style/TextAppearance.AppCompat.Large"
+                                android:textColor="@color/colorPrimaryDark"
+                                android:textSize="30sp" />
+                        </RelativeLayout>
+
+
+                    </androidx.cardview.widget.CardView>
+
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+
+                    <LinearLayout
+                        android:id="@+id/layout2"
+                        android:layout_width="match_parent"
+                        android:layout_height="130dp"
+                        android:layout_marginStart="10dp"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginEnd="10dp"
+                        android:orientation="horizontal">
+
+                        <androidx.cardview.widget.CardView
+                            android:id="@+id/uploadData"
+                            android:layout_width="0dp"
+                            android:layout_height="120dp"
+                            android:layout_margin="@dimen/cardview_compat_inset_shadow"
+                            android:layout_weight="1"
+                            android:clickable="true"
+                            android:foreground="?android:attr/selectableItemBackground"
+                            android:onClick="@{() -> callback.syncServer()}">
+
+                            <RelativeLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_margin="10dp">
+
+
+                                <ImageView
+                                    android:layout_width="?attr/actionBarSize"
+                                    android:layout_height="?attr/actionBarSize"
+                                    android:layout_centerVertical="true"
+                                    android:layout_toStartOf="@id/formText2"
+                                    android:src="@drawable/upload" />
+
+                                <TextView
+                                    android:id="@+id/formText2"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_centerHorizontal="true"
+                                    android:layout_centerVertical="true"
+                                    android:layout_marginStart="10dp"
+                                    android:text="Upload Data"
+                                    android:textAppearance="@style/TextAppearance.AppCompat.Large"
+                                    android:textColor="@color/colorPrimaryDark" />
+
+                            </RelativeLayout>
+
+                        </androidx.cardview.widget.CardView>
+
+                        <androidx.cardview.widget.CardView
+                            android:id="@+id/databaseBtn"
+                            android:layout_width="0dp"
+                            android:layout_height="120dp"
+                            android:layout_margin="@dimen/cardview_compat_inset_shadow"
+                            android:layout_weight="1"
+                            android:clickable="true"
+                            android:foreground="?android:attr/selectableItemBackground"
+                            android:onClick="@{() -> callback.openDB()}">
+
+                            <RelativeLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_margin="10dp">
+
+
+                                <ImageView
+                                    android:layout_width="?attr/actionBarSize"
+                                    android:layout_height="?attr/actionBarSize"
+                                    android:layout_centerVertical="true"
+                                    android:layout_toStartOf="@id/formText3"
+                                    android:src="@drawable/database" />
+
+                                <TextView
+                                    android:id="@+id/formText3"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_centerInParent="true"
+                                    android:layout_marginStart="10dp"
+                                    android:text="Database"
+                                    android:textAppearance="@style/TextAppearance.AppCompat.Large"
+                                    android:textColor="@color/colorPrimaryDark" />
+
+                            </RelativeLayout>
+
+                        </androidx.cardview.widget.CardView>
+
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/layout3"
+                        android:layout_width="match_parent"
+                        android:layout_height="130dp"
+                        android:layout_marginStart="10dp"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginEnd="10dp"
+                        android:orientation="horizontal">
+
+                        <androidx.cardview.widget.CardView
+                            android:id="@+id/syncBLRandom"
+                            android:layout_width="0dp"
+                            android:layout_height="120dp"
+                            android:layout_margin="@dimen/cardview_compat_inset_shadow"
+                            android:layout_weight="1"
+                            android:clickable="true"
+                            android:foreground="?android:attr/selectableItemBackground"
+                            android:onClick="@{() -> callback.syncFamilyMembers()}">
+
+                            <RelativeLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_margin="10dp">
+
+
+                                <ImageView
+                                    android:layout_width="?attr/actionBarSize"
+                                    android:layout_height="?attr/actionBarSize"
+                                    android:layout_centerVertical="true"
+                                    android:layout_toStartOf="@id/formText4"
+                                    android:src="@drawable/download" />
+
+                                <TextView
+                                    android:id="@+id/formText4"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_centerHorizontal="true"
+                                    android:layout_centerVertical="true"
+                                    android:text="Download Data"
+                                    android:textAppearance="@style/TextAppearance.AppCompat.Large"
+                                    android:textColor="@color/colorPrimaryDark" />
+
+                            </RelativeLayout>
+
+                        </androidx.cardview.widget.CardView>
+
+                    </LinearLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/adminsec"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:visibility="gone">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical">
+
+                        <Button
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:onClick="openB"
+                            android:text="Open Section B (Mothers's Info)" />
+
+                        <Button
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:onClick="openC"
+                            android:text="Open Section C (Children's Info)" />
+
+                        <Button
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:onClick="openD"
+                            android:text="Open Section D (Deceased)" />
+
+                        <Button
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:onClick="openE"
+                            android:text="Open Section D (Problems)" />
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+
+            </LinearLayout>
+
+        </ScrollView>
+    </LinearLayout>
+
+</layout>

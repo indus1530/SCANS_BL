@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <import type="android.view.View" />
+
+        <variable
+            name="callback"
+            type="edu.aku.hassannaqvi.uen_midline.ui.sync.SyncActivity" />
+    </data>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/sosas_bg">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:animateLayoutChanges="false"
+            android:layoutDirection="ltr"
+            android:orientation="vertical">
+
+            <Button
+                android:id="@+id/btnSync"
+                style="?android:textAppearanceSmall"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:background="@color/colorPrimary"
+                android:elevation="2dp"
+                android:padding="16dp"
+                android:text="@string/btnSync"
+                android:textColor="@color/white"
+                android:textStyle="bold" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rv_sync_list"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                tools:listitem="@layout/sync_list_adapter" />
+
+
+            <TextView
+                android:id="@+id/no_item"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:gravity="center"
+                android:text="No Activty"
+                android:textColor="@color/red"
+                android:visibility="gone" />
+
+            <Button
+                android:id="@+id/btnUpload"
+                style="?android:textAppearanceSmall"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:layout_marginTop="15dp"
+                android:background="@color/colorPrimary"
+                android:elevation="2dp"
+                android:padding="16dp"
+                android:text="@string/btnUpload"
+                android:textColor="@color/white"
+                android:textStyle="bold" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rv_upload_list"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:visibility="visible"
+                tools:listitem="@layout/sync_list_adapter">
+
+            </androidx.recyclerview.widget.RecyclerView>
+
+            <TextView
+                android:id="@+id/no_data_item"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:gravity="center"
+                android:text="No Activty"
+                android:textColor="@color/red"
+                android:visibility="gone" />
+
+        </LinearLayout>
+    </ScrollView>
+</layout>
+
