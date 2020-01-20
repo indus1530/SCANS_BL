@@ -16,7 +16,6 @@
     <ScrollView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="@drawable/sosas_bg"
         android:layoutDirection="rtl"
         android:padding="16dp">
 
@@ -440,7 +439,7 @@
                         android:text="@string/td02" />
 
                     <TextView
-                        style="@style/i_textview"
+                        style="@style/textView3Head"
                         android:text="@string/td02a" />
 
                     <EditText
@@ -941,6 +940,7 @@
                             style="@style/radiobutton"
                             android:text="@string/td14d" />
 
+
                     </RadioGroup>
 
                 </LinearLayout>
@@ -948,19 +948,6 @@
             </androidx.cardview.widget.CardView>
 
 
-            <RadioButton
-                android:id="@+id/RS1696"
-                style="@style/radiobutton"
-                android:text="@string/other" />
-
-            <EditText
-                android:id="@+id/RS1696x"
-                style="@style/textInput"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:digits="@string/ed_letterOnly"
-                android:hint="@string/other"
-                android:tag="RS1696" />
 
             <LinearLayout
                 android:layout_width="match_parent"

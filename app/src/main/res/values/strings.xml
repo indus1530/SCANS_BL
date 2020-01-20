@@ -18,6 +18,11 @@
 
     <string name="taheading">SECTION A: HH Identification</string>
 
+    <string name="splashText">Supporting Women and Girls in Pakistan Scaling Up\n
+    Empowerment and Care  Strategies  to Address Health and Survival\n
+    Centre of Excellence Women &amp; Child Health\n
+    Aga Khan University, Karachi, Pakistan</string>
+
     <string name="ta01"> Cluster Number </string>
     <string name="ta02"> Cluster type </string>
     <string name="ta02a"> LHW Covered </string>
