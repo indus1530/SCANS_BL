@@ -22,7 +22,20 @@
         android:label="@string/app_name"
         android:screenOrientation="portrait"
         android:theme="@style/AppTheme">
-        <activity android:name=".ui.other.EndingActivity"></activity>
+        <activity android:name=".ui.sections.SectionOActivity"></activity>
+        <activity android:name=".ui.sections.SectionNActivity" />
+        <activity android:name=".ui.sections.SectionMActivity" />
+        <activity android:name=".ui.sections.SectionLActivity" />
+        <activity android:name=".ui.sections.SectionKActivity" />
+        <activity android:name=".ui.sections.SectionJActivity" />
+        <activity android:name=".ui.sections.SectionI2Activity" />
+        <activity android:name=".ui.sections.SectionIActivity" />
+        <activity android:name=".ui.sections.SectionHActivity" />
+        <activity android:name=".ui.sections.SectionGActivity" />
+        <activity android:name=".ui.sections.SectionFActivity" />
+        <activity android:name=".ui.sections.SectionEActivity" />
+        <activity android:name=".ui.sections.SectionDActivity" />
+        <activity android:name=".ui.other.EndingActivity" />
         <activity
             android:name=".ui.other.SplashscreenActivity"
             android:screenOrientation="portrait">
