@@ -31,7 +31,6 @@ import java.util.Date;
 import java.util.HashMap;
 import java.util.List;
 
-import edu.aku.hassannaqvi.uen_midline.ui.other.EndingActivity;
 import edu.aku.hassannaqvi.uen_midline.R;
 import edu.aku.hassannaqvi.uen_midline.contracts.AppInfo;
 import edu.aku.hassannaqvi.uen_midline.contracts.ChildContract;
@@ -42,6 +41,7 @@ import edu.aku.hassannaqvi.uen_midline.contracts.MotherContract;
 import edu.aku.hassannaqvi.uen_midline.contracts.ProblemContract;
 import edu.aku.hassannaqvi.uen_midline.databinding.AlertDialogLayoutBinding;
 import edu.aku.hassannaqvi.uen_midline.databinding.CountAlertDialogLayoutBinding;
+import edu.aku.hassannaqvi.uen_midline.ui.other.EndingActivity;
 
 
 /**
@@ -403,14 +403,14 @@ public class MainApp extends Application {
         builder.setView(view);
         AlertDialog dialog = builder.create();
         dialog.show();
-        bi.mainHeading.setText(context.getString(R.string.countAlertMsg) + ("(No:" + String.format("%2d", count) + ")"));
-
-        bi.continueBtn.setOnClickListener(v -> {
-            countItemClick.itemClick();
-            dialog.dismiss();
-        });
-
-        bi.noBtn.setOnClickListener(v -> dialog.dismiss());
+//        bi.mainHeading.setText(context.getString(R.string.countAlertMsg) + ("(No:" + String.format("%2d", count) + ")"));
+//
+//        bi.continueBtn.setOnClickListener(v -> {
+//            countItemClick.itemClick();
+//            dialog.dismiss();
+//        });
+//
+//        bi.noBtn.setOnClickListener(v -> dialog.dismiss());
     }
 
     public static void openDialog(Context context, FamilyMembersContract item, boolean isMother) {

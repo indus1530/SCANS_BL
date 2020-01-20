@@ -235,17 +235,17 @@
             android:paddingBottom="28dp">
 
 
-            <CheckBox
-                android:id="@+id/checkChild"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="@string/dialogCheck"
-                android:drawablePadding="32dp"
-                android:textSize="24sp"
-                android:typeface="serif"
+            <!--            <CheckBox-->
+            <!--                android:id="@+id/checkChild"-->
+            <!--                android:layout_width="match_parent"-->
+            <!--                android:layout_height="wrap_content"-->
+            <!--                android:text="@string/dialogCheck"-->
+            <!--                android:drawablePadding="32dp"-->
+            <!--                android:textSize="24sp"-->
+            <!--                android:typeface="serif"-->
 
 
-                />
+            <!--                />-->
         </androidx.appcompat.widget.LinearLayoutCompat>
         <LinearLayout
             android:layout_width="match_parent"
@@ -258,7 +258,6 @@
                 android:layout_height="wrap_content"
                 android:backgroundTint="@color/colorPrimary"
                 android:layout_margin="4dp"
-                android:text="@string/yes"
                 android:textColor="@color/white" />
             <Button
                 android:id="@+id/cancel"
@@ -266,7 +265,6 @@
                 android:layout_height="wrap_content"
                 android:backgroundTint="@color/colorPrimary"
                 android:layout_margin="4dp"
-                android:text="@string/no"
                 android:textColor="@color/white" />
 
 
