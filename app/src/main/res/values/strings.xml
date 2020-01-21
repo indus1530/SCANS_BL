@@ -33,6 +33,7 @@
     <string name="specify"> Specify </string>
     <string name="year"> Years </string>
     <string name="month"> Months </string>
+    <string name="weeks"> Weeks </string>
     <string name="days"> Days </string>
     <string name="hours"> Hours </string>
     <string name="minutes"> Minutes </string>
@@ -1953,8 +1954,8 @@
     <string name="o108x">Others (specify) </string>
 
 
-    <string name="end_interview"> اختتام </string>
+    <string name="end_interview"> End </string>
     <string name="start_interview"> انٹرویو شروع کریں </string>
-    <string name="nextSection"> اگلا حصہ </string>
+    <string name="nextSection"> Next </string>
 
 </resources>
