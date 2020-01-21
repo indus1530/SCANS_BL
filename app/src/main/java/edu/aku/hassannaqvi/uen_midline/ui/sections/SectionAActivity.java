@@ -3,29 +3,26 @@ package edu.aku.hassannaqvi.uen_midline.ui.sections;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.databinding.DataBindingUtil;
 
-import android.app.AlertDialog;
-import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
-import android.widget.Toast;
 
 import com.validatorcrawler.aliazaz.Validator;
 
 import org.json.JSONException;
 
 import edu.aku.hassannaqvi.uen_midline.R;
-import edu.aku.hassannaqvi.uen_midline.databinding.ActivitySectionEBinding;
+import edu.aku.hassannaqvi.uen_midline.databinding.ActivitySectionABinding;
 import edu.aku.hassannaqvi.uen_midline.utils.Util;
 
-public class SectionEActivity extends AppCompatActivity {
+public class SectionAActivity extends AppCompatActivity {
 
-    ActivitySectionEBinding bi;
+    ActivitySectionABinding bi;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
-        bi = DataBindingUtil.setContentView(this, R.layout.activity_section_e);
+        bi = DataBindingUtil.setContentView(this, R.layout.activity_section_a);
         bi.setCallback(this);
     }
 
@@ -37,7 +34,7 @@ public class SectionEActivity extends AppCompatActivity {
                 e.printStackTrace();
             }
             if (UpdateDB()) {
-                startActivity(new Intent(SectionEActivity.this, SectionE2Activity.class));
+                startActivity(new Intent(SectionAActivity.this, SectionEActivity.class));
             }
 
         }
@@ -53,7 +50,7 @@ public class SectionEActivity extends AppCompatActivity {
 
     private boolean formValidation() {
 
-        return Validator.emptyCheckingContainer(this, bi.fldGrpSectionE);
+        return Validator.emptyCheckingContainer(this, bi.fldGrpSectionA);
 
     }
 
@@ -61,6 +58,4 @@ public class SectionEActivity extends AppCompatActivity {
 
         Util.openEndActivity(this);
     }
-
-
 }

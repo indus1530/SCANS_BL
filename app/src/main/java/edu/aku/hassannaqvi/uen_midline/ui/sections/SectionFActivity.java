@@ -3,6 +3,7 @@ package edu.aku.hassannaqvi.uen_midline.ui.sections;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.databinding.DataBindingUtil;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.widget.RadioGroup;
 
@@ -59,13 +60,7 @@ public class SectionFActivity extends AppCompatActivity {
                 e.printStackTrace();
             }
             if (UpdateDB()) {
-//                if (MainApp.childCount > 0) {
-//                    finish();
-//                    startActivity(new Intent(this, SectionDAActivity.class));
-//                } else {
-//                    finish();
-//                    startActivity(new Intent(this, ChildListActivity.class));
-//                }
+                startActivity(new Intent(SectionFActivity.this, SectionF02Activity.class));
             }
 
         }

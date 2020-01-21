@@ -1,5 +1,6 @@
 package edu.aku.hassannaqvi.uen_midline.ui.sections;
 
+import android.content.Intent;
 import android.os.Bundle;
 
 import androidx.appcompat.app.AppCompatActivity;
@@ -62,13 +63,7 @@ public class SectionF02Activity extends AppCompatActivity {
                 e.printStackTrace();
             }
             if (UpdateDB()) {
-//                if (MainApp.childCount > 0) {
-//                    finish();
-//                    startActivity(new Intent(this, SectionDAActivity.class));
-//                } else {
-//                    finish();
-//                    startActivity(new Intent(this, ChildListActivity.class));
-//                }
+                startActivity(new Intent(SectionF02Activity.this, SectionGActivity.class));
             }
 
         }

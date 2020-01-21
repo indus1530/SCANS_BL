@@ -40,7 +40,8 @@
     <string name="cm"> Centimeters </string>
     <string name="in"> Inches </string>
 
-    <string name="a101">Cluster number: This information will be based on the list of villages generated from the district. Each enumerator will be given a list of clusters that he/she will be visiting, and before starting the interview, this information will be entered from the same list. </string>
+    <string name="a101">Cluster number </string>
+    <string name="a101a">This information will be based on the list of villages generated from the district. Each enumerator will be given a list of clusters that he/she will be visiting, and before starting the interview, this information will be entered from the same list.</string>
     <string name="a102">Cluster type</string>
     <string name="a102a">LHW covered </string>
     <string name="a102b">LHW uncovered </string>
@@ -61,15 +62,16 @@
     <string name="a105f_title">Sindh</string>
     <string name="a105g">Sanghar </string>
     <string name="a105h">Qamber Shahdadkot </string>
-    <string name="a106">Name of Tehsil/Taluka : Select from the drop down menu.  The list of Tehsil/Taluka will appear once a district has been selected. </string>
-    <string name="a107">Name of Union Council : Select from the drop down menu.  The list of  UC will appear once a  Tehsil/Taluka has been selected.</string>
+    <string name="a106">Name of Tehsil/Taluka </string>
+    <string name="a107">Name of Union Council </string>
     <string name="a108">Location</string>
     <string name="a108a">Urban </string>
     <string name="a108b">Rural </string>
-    <string name="a109">Village : Use text box to enter village name</string>
-    <string name="a110">Block/mohalla : Use text box  or Not Available</string>
-    <string name="a111">Street : Use text box  or Not Available</string>
+    <string name="a109">Village</string>
+    <string name="a110">Block/mohalla</string>
+    <string name="a111">Street</string>
     <string name="a112">House number/khandan number</string>
+    <string name="a112a">Not Available</string>
 
     <string name="b101">Latitude (Example: 24.861462) </string>
     <string name="b102">Longitude (Example:67.009939)</string>
