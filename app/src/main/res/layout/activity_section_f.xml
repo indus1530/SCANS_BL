@@ -46,12 +46,12 @@
                         android:orientation="vertical">
 
                         <RadioButton
-                            android:id="@+id/f101y"
+                            android:id="@+id/f101a"
                             style="@style/radiobutton"
                             android:text="@string/f101y" />
 
                         <RadioButton
-                            android:id="@+id/f101n"
+                            android:id="@+id/f101b"
                             style="@style/radiobutton"
                             android:text="@string/f101n" />
 
@@ -349,19 +349,19 @@
                         <!--                            android:visibility='@{f107b.checked? View.VISIBLE : View.GONE}' />-->
 
                         <RadioButton
-                            android:id="@+id/f107x"
+                            android:id="@+id/f10796"
                             style="@style/radiobutton"
                             android:text="@string/f107x" />
 
                         <EditText
-                            android:id="@+id/f107xt"
+                            android:id="@+id/f10796x"
                             style="@style/radiobutton"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:hint="@string/f107x"
-                            android:tag="f107x"
-                            android:text='@{f107x.checked? f107xt.getText().toString() : ""}'
-                            android:visibility='@{f107x.checked? View.VISIBLE : View.GONE}' />
+                            android:tag="f10796"
+                            android:text='@{f10796.checked? f10796.getText().toString() : ""}'
+                            android:visibility='@{f10796.checked? View.VISIBLE : View.GONE}' />
                     </RadioGroup>
                 </LinearLayout>
             </androidx.cardview.widget.CardView>
@@ -379,11 +379,6 @@
                     <TextView
                         style="@style/i_textview"
                         android:text="@string/f108" />
-
-                    <RadioGroup
-                        android:id="@+id/f108"
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent">
 
                         <TextView
                             style="@style/i_textview"
@@ -417,11 +412,11 @@
                             app:minValue="9"
                             app:type="range" />
 
-                        <RadioButton
+                    <CheckBox
                             android:id="@+id/f108c"
-                            style="@style/radiobutton"
+                        style="@style/checkbox"
                             android:text="@string/f108c" />
-                    </RadioGroup>
+
                 </LinearLayout>
             </androidx.cardview.widget.CardView>
 
@@ -532,19 +527,20 @@
                             android:text="@string/f110i" />
 
                         <CheckBox
-                            android:id="@+id/f110x"
+                            android:id="@+id/f11096"
                             style="@style/checkbox"
                             android:text="@string/f110x" />
 
                         <EditText
-                            android:id="@+id/f110xt"
+                            android:id="@+id/f11096x"
                             style="@style/radiobutton"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:hint="@string/f110x"
-                            android:tag="f110x"
-                            android:text='@{f110x.checked? f110xt.getText().toString() : ""}'
-                            android:visibility='@{f110x.checked? View.VISIBLE : View.GONE}' />
+                            android:tag="f11096"
+                            android:text='@{f11096.checked? f11096x.getText().toString() : ""}'
+                            android:visibility='@{f11096.checked? View.VISIBLE : View.GONE}' />
+
                     </LinearLayout>
                 </LinearLayout>
             </androidx.cardview.widget.CardView>
@@ -644,13 +640,13 @@
                             android:text="@string/f113a" />
 
                         <EditText
-                            android:id="@+id/f113at"
+                            android:id="@+id/f113ax"
                             style="@style/radiobutton"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:hint="@string/f113a"
                             android:tag="f113a"
-                            android:text='@{f113a.checked? f113at.getText().toString() : ""}'
+                            android:text='@{f113a.checked? f113ax.getText().toString() : ""}'
                             android:visibility='@{f113a.checked? View.VISIBLE : View.GONE}' />
 
                         <RadioButton
@@ -894,13 +890,13 @@
                                 android:text="@string/f118a" />
 
                             <EditText
-                                android:id="@+id/f118at"
+                                android:id="@+id/f118ax"
                                 style="@style/radiobutton"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:hint="@string/f118a"
                                 android:tag="f118a"
-                                android:text='@{f118a.checked? f118at.getText().toString() : ""}'
+                                android:text='@{f118a.checked? f118ax.getText().toString() : ""}'
                                 android:visibility='@{f118a.checked? View.VISIBLE : View.GONE}' />
 
                             <RadioButton
@@ -909,13 +905,13 @@
                                 android:text="@string/f118b" />
 
                             <EditText
-                                android:id="@+id/f118bt"
+                                android:id="@+id/f118bx"
                                 style="@style/radiobutton"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:hint="@string/f118b"
                                 android:tag="f118b"
-                                android:text='@{f118b.checked? f118bt.getText().toString() : ""}'
+                                android:text='@{f118b.checked? f118bx.getText().toString() : ""}'
                                 android:visibility='@{f118b.checked? View.VISIBLE : View.GONE}' />
                         </RadioGroup>
                     </LinearLayout>
@@ -982,8 +978,6 @@
                     </LinearLayout>
                 </androidx.cardview.widget.CardView>
             </LinearLayout>
-
-
 
 
             <LinearLayout
