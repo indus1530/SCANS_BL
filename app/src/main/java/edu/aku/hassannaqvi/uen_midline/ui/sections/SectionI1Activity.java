@@ -1,16 +1,267 @@
 package edu.aku.hassannaqvi.uen_midline.ui.sections;
 
-import androidx.appcompat.app.AppCompatActivity;
-
+import android.content.Intent;
 import android.os.Bundle;
+import android.widget.Toast;
+
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.databinding.DataBindingUtil;
+
+import org.json.JSONException;
+import org.json.JSONObject;
 
 import edu.aku.hassannaqvi.uen_midline.R;
+import edu.aku.hassannaqvi.uen_midline.core.MainApp;
+import edu.aku.hassannaqvi.uen_midline.databinding.ActivitySectionI1Binding;
+import edu.aku.hassannaqvi.uen_midline.validator.ClearClass;
+import edu.aku.hassannaqvi.uen_midline.validator.ValidatorClass;
 
 public class SectionI1Activity extends AppCompatActivity {
+
+    ActivitySectionI1Binding bi;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_section_i1);
+        bi = DataBindingUtil.setContentView(this, R.layout.activity_section_i1);
+        bi.setCallback(this);
+
+        setlistener();
+    }
+
+
+    private void setlistener() {
+
+
+        bi.i101.setOnCheckedChangeListener(((radioGroup, i) -> {
+
+            if (i == bi.i101b.getId()) {
+                ClearClass.ClearAllFields(bi.fldGrpi01, null);
+            }
+
+        }));
+
+        bi.i105.setOnCheckedChangeListener(((radioGroup, i) -> {
+            if (i == bi.i105a.getId()) {
+                ClearClass.ClearAllFields(bi.fldGrpCVi106, null);
+            }
+        }));
+
+        bi.i113.setOnCheckedChangeListener(((radioGroup, i) -> {
+
+            if (i == bi.i113b.getId()) {
+                ClearClass.ClearAllFields(bi.fldGrpi02, null);
+            }
+        }));
+
+        bi.i117.setOnCheckedChangeListener(((radioGroup, i) -> {
+
+            if (i == bi.i117b.getId()) {
+                ClearClass.ClearAllFields(bi.fldGrpi03, null);
+            }
+        }));
+
+        bi.i118.setOnCheckedChangeListener(((radioGroup, i) -> {
+
+            if (i == bi.i118b.getId()) {
+                ClearClass.ClearAllFields(bi.fldGrpCVi119, null);
+            }
+        }));
+
+        bi.i122.setOnCheckedChangeListener(((radioGroup, i) -> {
+
+            if (i == bi.i122b.getId()) {
+                ClearClass.ClearAllFields(bi.fldGrpi04, null);
+            }
+        }));
+
+        bi.i125.setOnCheckedChangeListener(((radioGroup, i) -> {
+
+            if (i == bi.i125b.getId()) {
+                ClearClass.ClearAllFields(bi.fldGrpCVi126, null);
+            }
+        }));
+    }
+
+
+    public void BtnContinue() {
+        if (formValidation()) {
+            try {
+                SaveDraft();
+            } catch (Exception e) {
+                e.printStackTrace();
+            }
+            if (UpdateDB()) {
+                finish();
+                startActivity(new Intent(this, SectionI2Activity.class));
+            } else {
+                Toast.makeText(this, "Failed to Update Database!", Toast.LENGTH_SHORT).show();
+            }
+        }
+    }
+
+
+    public void BtnEnd() {
+        MainApp.endActivity(this, this);
+    }
+
+
+    private boolean UpdateDB() {
+
+        /*DatabaseHelper db = new DatabaseHelper(this);
+
+        int updcount = db.updateSB();
+
+        if (updcount == 1) {
+            Toast.makeText(this, "Updating Database... Successful!", Toast.LENGTH_SHORT).show();
+            return true;
+        } else {
+            Toast.makeText(this, "Updating Database... ERROR!", Toast.LENGTH_SHORT).show();
+            return false;
+        }*/
+
+        return true;
+    }
+
+
+    private void SaveDraft() throws JSONException {
+
+        JSONObject f1 = new JSONObject();
+
+        f1.put("i101", bi.i101a.isChecked() ? "1" :
+                bi.i101b.isChecked() ? "2" : "0");
+
+        f1.put("i102", bi.i102.getText().toString());
+
+        f1.put("i103", bi.i103.getText().toString());
+
+        f1.put("i104", bi.i104a.isChecked() ? "1" :
+                bi.i104b.isChecked() ? "2" :
+                        bi.i104c.isChecked() ? "98" : "0");
+
+        f1.put("i105", bi.i105a.isChecked() ? "1" :
+                bi.i105b.isChecked() ? "2" : "0");
+
+        f1.put("i106", bi.i106a.isChecked() ? "1" :
+                bi.i106b.isChecked() ? "2" :
+                        bi.i106c.isChecked() ? "3" :
+                                bi.i106d.isChecked() ? "4" :
+                                        bi.i106e.isChecked() ? "5" :
+                                                bi.i106f.isChecked() ? "6" : "0");
+
+        f1.put("i107", bi.i107a.isChecked() ? "1" :
+                bi.i107b.isChecked() ? "2" :
+                        bi.i107c.isChecked() ? "3" : "0");
+
+        f1.put("i108", bi.i108a.isChecked() ? "1" :
+                bi.i108b.isChecked() ? "2" :
+                        bi.i108c.isChecked() ? "3" :
+                                bi.i108d.isChecked() ? "4" :
+                                        bi.i108e.isChecked() ? "5" :
+                                                bi.i108f.isChecked() ? "6" : "0");
+
+        f1.put("i109", bi.i109.getText().toString());
+
+        f1.put("i110", bi.i110.getText().toString());
+
+        f1.put("i111", bi.i111a.isChecked() ? "1" :
+                bi.i111b.isChecked() ? "2" :
+                        bi.i111c.isChecked() ? "3" :
+                                bi.i111d.isChecked() ? "4" :
+                                        bi.i111e.isChecked() ? "5" :
+                                                bi.i111f.isChecked() ? "6" :
+                                                        bi.i111g.isChecked() ? "7" : "0");
+
+        f1.put("i112", bi.i112a.isChecked() ? "1" :
+                bi.i112b.isChecked() ? "2" :
+                        bi.i112c.isChecked() ? "3" :
+                                bi.i112d.isChecked() ? "4" :
+                                        bi.i112e.isChecked() ? "5" :
+                                                bi.i112f.isChecked() ? "6" :
+                                                        bi.i112g.isChecked() ? "7" :
+                                                                bi.i112h.isChecked() ? "8" :
+                                                                        bi.i112i.isChecked() ? "9" :
+                                                                                bi.i112j.isChecked() ? "10" :
+                                                                                        bi.i112k.isChecked() ? "11" : "0");
+
+        f1.put("i113", bi.i113a.isChecked() ? "1" :
+                bi.i113b.isChecked() ? "2" : "0");
+
+        f1.put("i114", bi.i114a.isChecked() ? "1" :
+                bi.i114b.isChecked() ? "2" :
+                        bi.i114c.isChecked() ? "3" : "0");
+
+        f1.put("i115a", bi.i115a.getText().toString());
+        f1.put("i115b", bi.i115b.getText().toString());
+
+        f1.put("i116a", bi.i116a.isChecked() ? "1" : "0");
+        f1.put("i116b", bi.i116b.isChecked() ? "2" : "0");
+        f1.put("i116c", bi.i116c.isChecked() ? "3" : "0");
+        f1.put("i116d", bi.i116d.isChecked() ? "4" : "0");
+        f1.put("i116e", bi.i116e.isChecked() ? "5" : "0");
+        f1.put("i116f", bi.i116f.isChecked() ? "6" : "0");
+        f1.put("i116g", bi.i116g.isChecked() ? "7" : "0");
+        f1.put("i116h", bi.i116h.isChecked() ? "8" : "0");
+
+        f1.put("i117", bi.i117a.isChecked() ? "1" :
+                bi.i117b.isChecked() ? "2" : "0");
+
+        f1.put("i118", bi.i118a.isChecked() ? "1" :
+                bi.i118b.isChecked() ? "2" : "0");
+
+        f1.put("i119", bi.i119a.isChecked() ? "1" :
+                bi.i119b.isChecked() ? "2" :
+                        bi.i119c.isChecked() ? "3" :
+                                bi.i119d.isChecked() ? "4" :
+                                        bi.i119e.isChecked() ? "5" :
+                                                bi.i119f.isChecked() ? "6" :
+                                                        bi.i119g.isChecked() ? "7" :
+                                                                bi.i119h.isChecked() ? "8" :
+                                                                        bi.i119i.isChecked() ? "9" : "0");
+
+        f1.put("i120", bi.i120.getText().toString());
+
+        f1.put("i121", bi.i121.getText().toString());
+
+        f1.put("i122", bi.i122a.isChecked() ? "1" :
+                bi.i122b.isChecked() ? "2" : "0");
+
+        f1.put("i123", bi.i123a.isChecked() ? "1" :
+                bi.i123b.isChecked() ? "2" :
+                        bi.i123c.isChecked() ? "3" :
+                                bi.i123d.isChecked() ? "4" :
+                                        bi.i123e.isChecked() ? "5" :
+                                                bi.i123f.isChecked() ? "6" : "0");
+
+        f1.put("i124", bi.i124a.isChecked() ? "1" :
+                bi.i124b.isChecked() ? "2" :
+                        bi.i124c.isChecked() ? "3" :
+                                bi.i124d.isChecked() ? "4" :
+                                        bi.i124e.isChecked() ? "5" :
+                                                bi.i124f.isChecked() ? "6" :
+                                                        bi.i124g.isChecked() ? "7" : "0");
+
+        f1.put("i125", bi.i125a.isChecked() ? "1" :
+                bi.i125b.isChecked() ? "2" : "0");
+
+        f1.put("i126", bi.i126a.isChecked() ? "1" :
+                bi.i126b.isChecked() ? "2" :
+                        bi.i126c.isChecked() ? "3" :
+                                bi.i126d.isChecked() ? "4" :
+                                        bi.i126e.isChecked() ? "5" : "0");
+
+
+    }
+
+
+    private boolean formValidation() {
+        return ValidatorClass.EmptyCheckingContainer(this, bi.fldGrpSectioni01);
+
+    }
+
+
+    @Override
+    public void onBackPressed() {
+        Toast.makeText(this, "You can't go back", Toast.LENGTH_SHORT).show();
     }
 }
