@@ -1,7 +1,9 @@
 package edu.aku.hassannaqvi.uen_midline.ui.sections;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.databinding.DataBindingUtil;
@@ -13,6 +15,7 @@ import edu.aku.hassannaqvi.uen_midline.R;
 import edu.aku.hassannaqvi.uen_midline.core.MainApp;
 import edu.aku.hassannaqvi.uen_midline.databinding.ActivitySectionGBinding;
 import edu.aku.hassannaqvi.uen_midline.validator.ClearClass;
+import edu.aku.hassannaqvi.uen_midline.validator.ValidatorClass;
 
 public class SectionGActivity extends AppCompatActivity {
 
@@ -157,6 +160,46 @@ public class SectionGActivity extends AppCompatActivity {
         });
 
 
+    }
+
+
+    public void BtnContinue() {
+        if (formValidation()) {
+            try {
+                SaveDraft();
+            } catch (Exception e) {
+                e.printStackTrace();
+            }
+            if (UpdateDB()) {
+                finish();
+                startActivity(new Intent(this, SectionHActivity.class));
+            } else {
+                Toast.makeText(this, "Failed to Update Database!", Toast.LENGTH_SHORT).show();
+            }
+        }
+    }
+
+
+    public void BtnEnd() {
+        MainApp.endActivity(this, this);
+    }
+
+
+    private boolean UpdateDB() {
+
+        /*DatabaseHelper db = new DatabaseHelper(this);
+
+        int updcount = db.updateSB();
+
+        if (updcount == 1) {
+            Toast.makeText(this, "Updating Database... Successful!", Toast.LENGTH_SHORT).show();
+            return true;
+        } else {
+            Toast.makeText(this, "Updating Database... ERROR!", Toast.LENGTH_SHORT).show();
+            return false;
+        }*/
+
+        return true;
     }
 
 
@@ -355,6 +398,18 @@ public class SectionGActivity extends AppCompatActivity {
 
         MainApp.fc.setsA(String.valueOf(json));
 
+    }
+
+
+    private boolean formValidation() {
+        return ValidatorClass.EmptyCheckingContainer(this, bi.GrpName);
+
+    }
+
+
+    @Override
+    public void onBackPressed() {
+        Toast.makeText(this, "You can't go back", Toast.LENGTH_SHORT).show();
     }
 
 
