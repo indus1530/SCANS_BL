@@ -43,9 +43,11 @@
                         style="@style/textInputName"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:hint="@string/h101"
+                        android:hint="@string/month"
                         android:textColor="@android:color/black" />
+
                 </LinearLayout>
+
             </androidx.cardview.widget.CardView>
 
             <!-- h102  Radio   -->
@@ -70,19 +72,22 @@
                         <RadioButton
                             android:id="@+id/h102a"
                             style="@style/radiobutton"
-                            android:text="@string/h102a" />
+                            android:text="@string/yes" />
 
                         <RadioButton
                             android:id="@+id/h102b"
                             style="@style/radiobutton"
-                            android:text="@string/h102b" />
+                            android:text="@string/no" />
 
                         <RadioButton
-                            android:id="@+id/h102c"
+                            android:id="@+id/h10298"
                             style="@style/radiobutton"
-                            android:text="@string/h102c" />
+                            android:text="@string/dkn" />
+
                     </RadioGroup>
+
                 </LinearLayout>
+
             </androidx.cardview.widget.CardView>
 
             <!-- h103  Radio   -->
@@ -107,19 +112,22 @@
                         <RadioButton
                             android:id="@+id/h103a"
                             style="@style/radiobutton"
-                            android:text="@string/h103a" />
+                            android:text="@string/yes" />
 
                         <RadioButton
                             android:id="@+id/h103b"
                             style="@style/radiobutton"
-                            android:text="@string/h103b" />
+                            android:text="@string/no" />
 
                         <RadioButton
-                            android:id="@+id/h103c"
+                            android:id="@+id/h10398"
                             style="@style/radiobutton"
-                            android:text="@string/h103c" />
+                            android:text="@string/dkn" />
+
                     </RadioGroup>
+
                 </LinearLayout>
+
             </androidx.cardview.widget.CardView>
 
             <!-- h104  Radio   -->
@@ -157,21 +165,24 @@
                             android:text="@string/h104c" />
 
                         <RadioButton
-                            android:id="@+id/h104x"
+                            android:id="@+id/h10496"
                             style="@style/radiobutton"
-                            android:text="@string/h104x" />
+                            android:text="@string/other" />
 
                         <EditText
-                            android:id="@+id/h104xt"
+                            android:id="@+id/h10496x"
                             style="@style/radiobutton"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:hint="@string/h104x"
-                            android:tag="h104x"
-                            android:text='@{h104x.checked? h104xt.getText().toString() : ""}'
-                            android:visibility='@{h104x.checked? View.VISIBLE : View.GONE}' />
+                            android:hint="@string/specify"
+                            android:tag="h10496"
+                            android:text='@{h10496.checked? h10496x.getText().toString() : ""}'
+                            android:visibility='@{h10496.checked? View.VISIBLE : View.GONE}' />
+
                     </RadioGroup>
+
                 </LinearLayout>
+
             </androidx.cardview.widget.CardView>
 
             <!-- h105  Radio   -->
@@ -196,19 +207,22 @@
                         <RadioButton
                             android:id="@+id/h105a"
                             style="@style/radiobutton"
-                            android:text="@string/h105a" />
+                            android:text="@string/yes" />
 
                         <RadioButton
                             android:id="@+id/h105b"
                             style="@style/radiobutton"
-                            android:text="@string/h105b" />
+                            android:text="@string/no" />
 
                         <RadioButton
-                            android:id="@+id/h105c"
+                            android:id="@+id/h10598"
                             style="@style/radiobutton"
-                            android:text="@string/h105c" />
+                            android:text="@string/dkn" />
+
                     </RadioGroup>
+
                 </LinearLayout>
+
             </androidx.cardview.widget.CardView>
 
             <!-- h106  Input-Numeric   -->
@@ -230,13 +244,15 @@
                         style="@style/EditTextAlphaNumeric"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:hint="@string/h106"
+                        android:hint="@string/minutes"
                         android:inputType="number"
                         app:mask="##"
-                        app:maxValue="0"
-                        app:minValue="0"
+                        app:maxValue="59"
+                        app:minValue="1"
                         app:type="range" />
+
                 </LinearLayout>
+
             </androidx.cardview.widget.CardView>
 
             <!-- h107  Radio   -->
@@ -277,8 +293,11 @@
                             android:id="@+id/h107d"
                             style="@style/radiobutton"
                             android:text="@string/h107d" />
+
                     </RadioGroup>
+
                 </LinearLayout>
+
             </androidx.cardview.widget.CardView>
 
             <!-- h108  Radio   -->
@@ -319,8 +338,11 @@
                             android:id="@+id/h108d"
                             style="@style/radiobutton"
                             android:text="@string/h108d" />
+
                     </RadioGroup>
+
                 </LinearLayout>
+
             </androidx.cardview.widget.CardView>
 
             <!-- h109  Radio   -->
@@ -381,8 +403,11 @@
                             android:id="@+id/h109h"
                             style="@style/radiobutton"
                             android:text="@string/h109h" />
+
                     </RadioGroup>
+
                 </LinearLayout>
+
             </androidx.cardview.widget.CardView>
 
             <!-- h110  Radio   -->
@@ -407,19 +432,22 @@
                         <RadioButton
                             android:id="@+id/h110a"
                             style="@style/radiobutton"
-                            android:text="@string/h110a" />
+                            android:text="@string/yes" />
 
                         <RadioButton
                             android:id="@+id/h110b"
                             style="@style/radiobutton"
-                            android:text="@string/h110b" />
+                            android:text="@string/no" />
 
                         <RadioButton
-                            android:id="@+id/h110c"
+                            android:id="@+id/h11098"
                             style="@style/radiobutton"
-                            android:text="@string/h110c" />
+                            android:text="@string/dkn" />
+
                     </RadioGroup>
+
                 </LinearLayout>
+
             </androidx.cardview.widget.CardView>
 
             <!-- h111  Input-Numeric   -->
@@ -441,13 +469,15 @@
                         style="@style/EditTextAlphaNumeric"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:hint="@string/h111"
+                        android:hint="@string/minutes"
                         android:inputType="number"
                         app:mask="##"
-                        app:maxValue="0"
-                        app:minValue="0"
+                        app:maxValue="59"
+                        app:minValue="1"
                         app:type="range" />
+
                 </LinearLayout>
+
             </androidx.cardview.widget.CardView>
 
             <!-- h112  Input-Numeric   -->
@@ -469,13 +499,15 @@
                         style="@style/EditTextAlphaNumeric"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:hint="@string/h112"
+                        android:hint="@string/minutes"
                         android:inputType="number"
                         app:mask="##"
-                        app:maxValue="0"
-                        app:minValue="0"
+                        app:maxValue="59"
+                        app:minValue="1"
                         app:type="range" />
+
                 </LinearLayout>
+
             </androidx.cardview.widget.CardView>
 
             <!-- h113  Radio   -->
@@ -500,14 +532,17 @@
                         <RadioButton
                             android:id="@+id/h113a"
                             style="@style/radiobutton"
-                            android:text="@string/h113a" />
+                            android:text="@string/yes" />
 
                         <RadioButton
                             android:id="@+id/h113b"
                             style="@style/radiobutton"
-                            android:text="@string/h113b" />
+                            android:text="@string/no" />
+
                     </RadioGroup>
+
                 </LinearLayout>
+
             </androidx.cardview.widget.CardView>
 
             <!-- h114  Radio   -->
@@ -568,8 +603,11 @@
                             android:id="@+id/h114h"
                             style="@style/radiobutton"
                             android:text="@string/h114h" />
+
                     </RadioGroup>
+
                 </LinearLayout>
+
             </androidx.cardview.widget.CardView>
 
             <!-- h115  CheckBox   -->
@@ -632,8 +670,11 @@
                             android:id="@+id/h115h"
                             style="@style/checkbox"
                             android:text="@string/h115h" />
+
                     </LinearLayout>
+
                 </LinearLayout>
+
             </androidx.cardview.widget.CardView>
 
             <!-- h116  Input-Numeric   -->
@@ -664,7 +705,9 @@
                         android:id="@+id/h116c"
                         style="@style/radiobutton"
                         android:text="@string/h116c" />
+
                 </LinearLayout>
+
             </androidx.cardview.widget.CardView>
 
             <!-- h117  Input-Numeric   -->
@@ -686,13 +729,15 @@
                         style="@style/EditTextAlphaNumeric"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:hint="@string/h117"
+                        android:hint="@string/month"
                         android:inputType="number"
-                        app:mask="##"
-                        app:maxValue="0"
-                        app:minValue="0"
+                        app:mask="#"
+                        app:maxValue="6"
+                        app:minValue="1"
                         app:type="range" />
+
                 </LinearLayout>
+
             </androidx.cardview.widget.CardView>
 
             <!-- h118  Radio   -->
@@ -717,14 +762,17 @@
                         <RadioButton
                             android:id="@+id/h118a"
                             style="@style/radiobutton"
-                            android:text="@string/h118a" />
+                            android:text="@string/yes" />
 
                         <RadioButton
                             android:id="@+id/h118b"
                             style="@style/radiobutton"
-                            android:text="@string/h118b" />
+                            android:text="@string/no" />
+
                     </RadioGroup>
+
                 </LinearLayout>
+
             </androidx.cardview.widget.CardView>
 
             <!-- h119  Input-Numeric   -->
@@ -746,13 +794,15 @@
                         style="@style/EditTextAlphaNumeric"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:hint="@string/h119"
+                        android:hint="@string/month"
                         android:inputType="number"
                         app:mask="##"
-                        app:maxValue="0"
-                        app:minValue="0"
+                        app:maxValue="30"
+                        app:minValue="1"
                         app:type="range" />
+
                 </LinearLayout>
+
             </androidx.cardview.widget.CardView>
 
             <!-- h120  Radio   -->
@@ -800,11 +850,14 @@
                             android:text="@string/h120e" />
 
                         <RadioButton
-                            android:id="@+id/h120f"
+                            android:id="@+id/h12098"
                             style="@style/radiobutton"
                             android:text="@string/h120f" />
+
                     </RadioGroup>
+
                 </LinearLayout>
+
             </androidx.cardview.widget.CardView>
 
             <!-- h121  Radio   -->
@@ -829,14 +882,17 @@
                         <RadioButton
                             android:id="@+id/h121a"
                             style="@style/radiobutton"
-                            android:text="@string/h121a" />
+                            android:text="@string/yes" />
 
                         <RadioButton
                             android:id="@+id/h121b"
                             style="@style/radiobutton"
-                            android:text="@string/h121b" />
+                            android:text="@string/no" />
+
                     </RadioGroup>
+
                 </LinearLayout>
+
             </androidx.cardview.widget.CardView>
 
             <!-- h122  Radio   -->
@@ -853,33 +909,28 @@
                         style="@style/i_textview"
                         android:text="@string/h122" />
 
-                    <RadioGroup
-                        android:id="@+id/h122"
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent">
-
-                        <TextView
-                            style="@style/i_textview"
-                            android:text="@string/h122a" />
-
                         <com.edittextpicker.aliazaz.EditTextPicker
-                            android:id="@+id/h122a"
+                            android:id="@+id/h122"
                             style="@style/EditTextAlphaNumeric"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:hint="@string/h122a"
+                            android:hint="@string/kg"
                             android:inputType="number"
-                            app:mask="##"
-                            app:maxValue="0"
-                            app:minValue="0"
+                            android:text='@{h12298.checked ? "" : h122.getText().toString()}'
+                            android:visibility='@{h12298.checked ? View.GONE : View.VISIBLE}'
+                            app:mask="#"
+                            app:maxValue="5"
+                            app:minValue="1"
                             app:type="range" />
 
-                        <RadioButton
-                            android:id="@+id/h122b"
-                            style="@style/radiobutton"
-                            android:text="@string/h122b" />
-                    </RadioGroup>
+                    <CheckBox
+                        android:id="@+id/h12298"
+                        style="@style/checkbox"
+                        android:tag="-1"
+                        android:text="@string/dkn" />
+
                 </LinearLayout>
+
             </androidx.cardview.widget.CardView>
 
             <!-- h123  Radio   -->
@@ -910,8 +961,11 @@
                             android:id="@+id/h123b"
                             style="@style/radiobutton"
                             android:text="@string/h123b" />
+
                     </RadioGroup>
+
                 </LinearLayout>
+
             </androidx.cardview.widget.CardView>
 
             <!-- h124  Radio   -->
@@ -962,8 +1016,11 @@
                             android:id="@+id/h124f"
                             style="@style/radiobutton"
                             android:text="@string/h124f" />
+
                     </RadioGroup>
+
                 </LinearLayout>
+
             </androidx.cardview.widget.CardView>
 
             <!-- h125  Radio   -->
@@ -994,8 +1051,11 @@
                             android:id="@+id/h125b"
                             style="@style/radiobutton"
                             android:text="@string/h125b" />
+
                     </RadioGroup>
+
                 </LinearLayout>
+
             </androidx.cardview.widget.CardView>
 
             <!-- h126  Radio   -->
@@ -1041,8 +1101,11 @@
                             android:id="@+id/h126e"
                             style="@style/radiobutton"
                             android:text="@string/h126e" />
+
                     </RadioGroup>
+
                 </LinearLayout>
+
             </androidx.cardview.widget.CardView>
 
             <!-- h127  Radio   -->
@@ -1083,8 +1146,11 @@
                             android:id="@+id/h127d"
                             style="@style/radiobutton"
                             android:text="@string/h127d" />
+
                     </RadioGroup>
+
                 </LinearLayout>
+
             </androidx.cardview.widget.CardView>
 
             <!-- h128  Radio   -->
@@ -1125,8 +1191,11 @@
                             android:id="@+id/h128d"
                             style="@style/radiobutton"
                             android:text="@string/h128d" />
+
                     </RadioGroup>
+
                 </LinearLayout>
+
             </androidx.cardview.widget.CardView>
 
             <!-- h129  Title   -->
@@ -1252,8 +1321,11 @@
                             android:id="@+id/h129cc"
                             style="@style/radiobutton"
                             android:text="@string/h129cc" />
+
                     </RadioGroup>
+
                 </LinearLayout>
+
             </androidx.cardview.widget.CardView>
 
             <!-- h129d  Radio   -->
@@ -1289,8 +1361,11 @@
                             android:id="@+id/h129dc"
                             style="@style/radiobutton"
                             android:text="@string/h129dc" />
+
                     </RadioGroup>
+
                 </LinearLayout>
+
             </androidx.cardview.widget.CardView>
 
             <!-- h129e  Radio   -->
@@ -1326,8 +1401,11 @@
                             android:id="@+id/h129ec"
                             style="@style/radiobutton"
                             android:text="@string/h129ec" />
+
                     </RadioGroup>
+
                 </LinearLayout>
+
             </androidx.cardview.widget.CardView>
 
             <!-- h130  Radio   -->
@@ -1358,8 +1436,11 @@
                             android:id="@+id/h130b"
                             style="@style/radiobutton"
                             android:text="@string/h130b" />
+
                     </RadioGroup>
+
                 </LinearLayout>
+
             </androidx.cardview.widget.CardView>
 
             <!-- h131  Radio   -->
@@ -1390,8 +1471,11 @@
                             android:id="@+id/h131b"
                             style="@style/radiobutton"
                             android:text="@string/h131b" />
+
                     </RadioGroup>
+
                 </LinearLayout>
+
             </androidx.cardview.widget.CardView>
 
             <!-- h132  Radio   -->
@@ -1427,8 +1511,11 @@
                             android:id="@+id/h132c"
                             style="@style/radiobutton"
                             android:text="@string/h132c" />
+
                     </RadioGroup>
+
                 </LinearLayout>
+
             </androidx.cardview.widget.CardView>
 
             <!-- h133  Radio   -->
@@ -1489,8 +1576,11 @@
                             android:id="@+id/h133h"
                             style="@style/radiobutton"
                             android:text="@string/h133h" />
+
                     </RadioGroup>
+
                 </LinearLayout>
+
             </androidx.cardview.widget.CardView>
 
             <!-- h134  Radio   -->
@@ -1728,8 +1818,11 @@
                             android:id="@+id/h137aae"
                             style="@style/radiobutton"
                             android:text="@string/h137aae" />
+
                     </RadioGroup>
+
                 </LinearLayout>
+
             </androidx.cardview.widget.CardView>
 
             <!-- h137bb  Radio   -->
@@ -1790,8 +1883,11 @@
                             android:id="@+id/h137bbx"
                             style="@style/radiobutton"
                             android:text="@string/h137bbx" />
+
                     </RadioGroup>
+
                 </LinearLayout>
+
             </androidx.cardview.widget.CardView>
 
             <!-- h201  Input-Numeric   -->
@@ -1819,7 +1915,9 @@
                         app:maxValue="0"
                         app:minValue="0"
                         app:type="range" />
+
                 </LinearLayout>
+
             </androidx.cardview.widget.CardView>
 
             <!-- h201_title  Title   -->
@@ -1866,8 +1964,11 @@
                             android:id="@+id/h202b"
                             style="@style/radiobutton"
                             android:text="@string/h202b" />
+
                     </RadioGroup>
+
                 </LinearLayout>
+
             </androidx.cardview.widget.CardView>
 
             <!-- h203  Input-Numeric   -->
@@ -1895,7 +1996,9 @@
                         app:maxValue="0"
                         app:minValue="0"
                         app:type="range" />
+
                 </LinearLayout>
+
             </androidx.cardview.widget.CardView>
 
             <!-- h204  Radio   -->
@@ -1931,8 +2034,11 @@
                             android:id="@+id/h204c"
                             style="@style/radiobutton"
                             android:text="@string/h204c" />
+
                     </RadioGroup>
+
                 </LinearLayout>
+
             </androidx.cardview.widget.CardView>
 
             <!-- h205  Radio   -->
@@ -1978,8 +2084,11 @@
                             android:id="@+id/h205e"
                             style="@style/radiobutton"
                             android:text="@string/h205e" />
+
                     </RadioGroup>
+
                 </LinearLayout>
+
             </androidx.cardview.widget.CardView>
 
             <!-- h206  Radio   -->
@@ -2010,8 +2119,11 @@
                             android:id="@+id/h206b"
                             style="@style/radiobutton"
                             android:text="@string/h206b" />
+
                     </RadioGroup>
+
                 </LinearLayout>
+
             </androidx.cardview.widget.CardView>
 
             <!-- h207  CheckBox   -->
@@ -2079,8 +2191,11 @@
                             android:id="@+id/h207i"
                             style="@style/checkbox"
                             android:text="@string/h207i" />
+
                     </LinearLayout>
+
                 </LinearLayout>
+
             </androidx.cardview.widget.CardView>
 
             <!-- h208  CheckBox   -->
@@ -2133,8 +2248,11 @@
                             android:id="@+id/h208f"
                             style="@style/checkbox"
                             android:text="@string/h208f" />
+
                     </LinearLayout>
+
                 </LinearLayout>
+
             </androidx.cardview.widget.CardView>
 
             <!-- h209  Radio   -->
@@ -2165,8 +2283,11 @@
                             android:id="@+id/h209b"
                             style="@style/radiobutton"
                             android:text="@string/h209b" />
+
                     </RadioGroup>
+
                 </LinearLayout>
+
             </androidx.cardview.widget.CardView>
 
             <!-- h210  Radio   -->
@@ -2207,8 +2328,11 @@
                             android:id="@+id/h210d"
                             style="@style/radiobutton"
                             android:text="@string/h210d" />
+
                     </RadioGroup>
+
                 </LinearLayout>
+
             </androidx.cardview.widget.CardView>
 
             <!-- h211  Radio   -->
@@ -2274,8 +2398,11 @@
                             android:id="@+id/h211i"
                             style="@style/radiobutton"
                             android:text="@string/h211i" />
+
                     </RadioGroup>
+
                 </LinearLayout>
+
             </androidx.cardview.widget.CardView>
 
             <!-- h212  Input-Numeric   -->
@@ -2303,7 +2430,9 @@
                         app:maxValue="0"
                         app:minValue="0"
                         app:type="range" />
+
                 </LinearLayout>
+
             </androidx.cardview.widget.CardView>
 
             <!-- h213  Radio   -->
@@ -2522,8 +2651,11 @@
                             android:id="@+id/h217x"
                             style="@style/radiobutton"
                             android:text="@string/h217x" />
+
                     </RadioGroup>
+
                 </LinearLayout>
+
             </androidx.cardview.widget.CardView>
 
             <!-- h218  Radio   -->
@@ -2559,8 +2691,11 @@
                             android:id="@+id/h218c"
                             style="@style/radiobutton"
                             android:text="@string/h218c" />
+
                     </RadioGroup>
+
                 </LinearLayout>
+
             </androidx.cardview.widget.CardView>
 
             <!-- h219  Radio   -->
@@ -2616,8 +2751,21 @@
                             android:id="@+id/h219x"
                             style="@style/radiobutton"
                             android:text="@string/h219x" />
+
+                        <EditText
+                            android:id="@+id/h219xt"
+                            style="@style/radiobutton"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:hint="@string/h219x"
+                            android:tag="h219x"
+                            android:text='@{h219x.checked? h219xt.getText().toString() : ""}'
+                            android:visibility='@{h219x.checked? View.VISIBLE : View.GONE}' />
+
                     </RadioGroup>
+
                 </LinearLayout>
+
             </androidx.cardview.widget.CardView>
 
             <!-- h220  Radio   -->
@@ -2673,8 +2821,11 @@
                             android:id="@+id/h220x"
                             style="@style/radiobutton"
                             android:text="@string/h220x" />
+
                     </RadioGroup>
+
                 </LinearLayout>
+
             </androidx.cardview.widget.CardView>
 
             <!-- h221  Radio   -->
@@ -2710,8 +2861,11 @@
                             android:id="@+id/h221c"
                             style="@style/radiobutton"
                             android:text="@string/h221c" />
+
                     </RadioGroup>
+
                 </LinearLayout>
+
             </androidx.cardview.widget.CardView>
 
             <!-- h222  Radio   -->
@@ -2752,8 +2906,11 @@
                             android:id="@+id/h222d"
                             style="@style/radiobutton"
                             android:text="@string/h222d" />
+
                     </RadioGroup>
+
                 </LinearLayout>
+
             </androidx.cardview.widget.CardView>
 
             <!-- h223  Radio   -->
@@ -2794,8 +2951,11 @@
                             android:id="@+id/h223d"
                             style="@style/radiobutton"
                             android:text="@string/h223d" />
+
                     </RadioGroup>
+
                 </LinearLayout>
+
             </androidx.cardview.widget.CardView>
 
             <LinearLayout
@@ -2820,5 +2980,7 @@
                 <!--'onClick' for btn_End will NOT change and always call 'endInterview'-->
             </LinearLayout>
         </LinearLayout>
+
     </ScrollView>
+
 </layout>
