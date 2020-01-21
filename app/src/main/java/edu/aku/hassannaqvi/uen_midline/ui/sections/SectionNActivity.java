@@ -3,7 +3,9 @@ package edu.aku.hassannaqvi.uen_midline.ui.sections;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.databinding.DataBindingUtil;
 
+import android.content.Intent;
 import android.os.Bundle;
+import android.widget.Toast;
 
 import com.validatorcrawler.aliazaz.Validator;
 
@@ -58,13 +60,10 @@ public class SectionNActivity extends AppCompatActivity {
                 e.printStackTrace();
             }
             if (UpdateDB()) {
-//                if (MainApp.childCount > 0) {
-//                    finish();
-//                    startActivity(new Intent(this, SectionDAActivity.class));
-//                } else {
-//                    finish();
-//                    startActivity(new Intent(this, ChildListActivity.class));
-//                }
+                finish();
+                startActivity(new Intent(this, SectionOActivity.class));
+            } else {
+                Toast.makeText(this, "Failed to Update Database!", Toast.LENGTH_SHORT).show();
             }
 
         }

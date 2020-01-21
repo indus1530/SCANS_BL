@@ -85,8 +85,10 @@
     <string name="c101bb">No</string>
 
     <string name="d101">Member Serial Number : [Auto Generate Starting from 01]</string>
-    <string name="d102">Name : Please give me the names of the persons who usually live in your household, starting with the head of the household.</string>
-    <string name="d103">Relationship to Head of HH : What is the relationship of [NAME] to the Head of the household?</string>
+    <string name="d102">Name</string>
+    <string name="d102a">Please give me the names of the persons who usually live in your household, starting with the head of the household.</string>
+    <string name="d103">Relationship to Head of HH</string>
+    <string name="d103x">What is the relationship of [NAME] to the Head of the household?</string>
     <string name="d103a">Head of HH</string>
     <string name="d103b">Wife/Husband</string>
     <string name="d103c">Son/DaughterS</string>
@@ -138,7 +140,8 @@
     <string name="d110k">Religious Education (Hafiz/Aalim)</string>
     <string name="d110l">Don\'t Know</string>
     <string name="d110m">Not Applicable</string>
-    <string name="d111">Occupation : For children less than five years, this variable will not be visible, and an auto generated NA code will appear.</string>
+    <string name="d111">Occupation</string>
+    <string name="d111x">For children less than five years, this variable will not be visible, and an auto generated NA code will appear.</string>
     <string name="d111a">Housewife </string>
     <string name="d111b">Unskilled Manual Labor</string>
     <string name="d111c">Skilled Manual labor</string>
@@ -1958,5 +1961,9 @@
     <string name="end_interview"> اختتام </string>
     <string name="start_interview"> انٹرویو شروع کریں </string>
     <string name="nextSection"> اگلا حصہ </string>
+
+    <string name="istatus">Interview Results</string>
+    <string name="istatusa">Complete</string>
+    <string name="istatusb">Incomplete</string>
 
 </resources>
