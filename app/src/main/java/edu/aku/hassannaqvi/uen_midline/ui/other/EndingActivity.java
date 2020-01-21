@@ -1,15 +1,13 @@
 package edu.aku.hassannaqvi.uen_midline.ui.other;
 
-import androidx.appcompat.app.AppCompatActivity;
-import androidx.databinding.DataBindingUtil;
-
 import android.content.Intent;
 import android.os.Bundle;
 import android.widget.Toast;
 
-import com.validatorcrawler.aliazaz.Validator;
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.databinding.DataBindingUtil;
 
-import java.util.concurrent.ExecutionException;
+import com.validatorcrawler.aliazaz.Validator;
 
 import edu.aku.hassannaqvi.uen_midline.R;
 import edu.aku.hassannaqvi.uen_midline.databinding.ActivityEndingBinding;
@@ -17,7 +15,6 @@ import edu.aku.hassannaqvi.uen_midline.databinding.ActivityEndingBinding;
 public class EndingActivity extends AppCompatActivity {
 
     ActivityEndingBinding bi;
-    Forms fc;
 
 
     @Override
@@ -72,7 +69,6 @@ public class EndingActivity extends AppCompatActivity {
     }
 
     private boolean formValidation() {
-
         return Validator.emptyCheckingContainer(this, bi.fldGrpEnd);
     }
 

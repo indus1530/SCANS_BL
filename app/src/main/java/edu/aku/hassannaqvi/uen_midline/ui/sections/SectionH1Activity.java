@@ -2,6 +2,7 @@ package edu.aku.hassannaqvi.uen_midline.ui.sections;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.view.View;
 import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
@@ -12,18 +13,18 @@ import org.json.JSONObject;
 
 import edu.aku.hassannaqvi.uen_midline.R;
 import edu.aku.hassannaqvi.uen_midline.core.MainApp;
-import edu.aku.hassannaqvi.uen_midline.databinding.ActivitySectionHBinding;
+import edu.aku.hassannaqvi.uen_midline.databinding.ActivitySectionH1Binding;
 import edu.aku.hassannaqvi.uen_midline.validator.ClearClass;
 import edu.aku.hassannaqvi.uen_midline.validator.ValidatorClass;
 
-public class SectionHActivity extends AppCompatActivity {
+public class SectionH1Activity extends AppCompatActivity {
 
-    ActivitySectionHBinding bi;
+    ActivitySectionH1Binding bi;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        bi = DataBindingUtil.setContentView(this, R.layout.activity_section_h);
+        bi = DataBindingUtil.setContentView(this, R.layout.activity_section_h1);
         bi.setCallback(this);
         setupSkips();
 
@@ -31,130 +32,221 @@ public class SectionHActivity extends AppCompatActivity {
 
 
     private void setupSkips() {
-/*
-        //g102
-        bi.g102.setOnCheckedChangeListener((group, checkedId) -> {
 
-            ClearClass.ClearAllFields(bi.fldGrpCVg103, null);
-            ClearClass.ClearAllFields(bi.fldGrpCVg104, null);
-            ClearClass.ClearAllFields(bi.fldGrpCVg105, null);
-            ClearClass.ClearAllFields(bi.fldGrpCVg106, null);
-            ClearClass.ClearAllFields(bi.fldGrpCVg107, null);
-            bi.fldGrpCVg103.setVisibility(View.GONE);
-            bi.fldGrpCVg104.setVisibility(View.GONE);
-            bi.fldGrpCVg105.setVisibility(View.GONE);
-            bi.fldGrpCVg106.setVisibility(View.GONE);
-            bi.fldGrpCVg107.setVisibility(View.GONE);
+        //h102
+        bi.h102.setOnCheckedChangeListener((group, checkedId) -> {
 
-            if (checkedId == bi.g102a.getId()) {
-                bi.fldGrpCVg103.setVisibility(View.VISIBLE);
+            if (checkedId != bi.h102a.getId()) {
+                bi.fldGrpCVh103.setVisibility(View.VISIBLE);
+                bi.fldGrpCVh104.setVisibility(View.VISIBLE);
             } else {
-                bi.fldGrpCVg104.setVisibility(View.VISIBLE);
-                bi.fldGrpCVg105.setVisibility(View.VISIBLE);
-                bi.fldGrpCVg106.setVisibility(View.VISIBLE);
-                bi.fldGrpCVg107.setVisibility(View.VISIBLE);
+                ClearClass.ClearAllFields(bi.fldGrpCVh103, null);
+                ClearClass.ClearAllFields(bi.fldGrpCVh104, null);
+                bi.fldGrpCVh103.setVisibility(View.GONE);
+                bi.fldGrpCVh104.setVisibility(View.GONE);
             }
         });
 
 
-        //g110
-        bi.g110.setOnCheckedChangeListener((group, checkedId) -> {
+        //h103
+        bi.h103.setOnCheckedChangeListener((group, checkedId) -> {
 
-            if (checkedId == bi.g110a.getId()) {
-                bi.fldGrpCVg111.setVisibility(View.VISIBLE);
-                bi.fldGrpCVg112.setVisibility(View.VISIBLE);
+            if (checkedId == bi.h103a.getId()) {
+                bi.fldGrpCVh104.setVisibility(View.VISIBLE);
             } else {
-                ClearClass.ClearAllFields(bi.fldGrpCVg111, null);
-                ClearClass.ClearAllFields(bi.fldGrpCVg112, null);
-                bi.fldGrpCVg111.setVisibility(View.GONE);
-                bi.fldGrpCVg112.setVisibility(View.GONE);
+                ClearClass.ClearAllFields(bi.fldGrpCVh104, null);
+                bi.fldGrpCVh104.setVisibility(View.GONE);
             }
         });
 
 
-        //g111
-        bi.g111.setOnCheckedChangeListener((group, checkedId) -> {
+        //h105
+        bi.h105.setOnCheckedChangeListener((group, checkedId) -> {
 
-            if (checkedId == bi.g111a.getId()) {
-                bi.fldGrpCVg112.setVisibility(View.VISIBLE);
+            if (checkedId == bi.h105a.getId()) {
+                bi.fldGrpCVh106.setVisibility(View.VISIBLE);
+                bi.fldGrpCVh107.setVisibility(View.VISIBLE);
             } else {
-                ClearClass.ClearAllFields(bi.fldGrpCVg112, null);
-                bi.fldGrpCVg112.setVisibility(View.GONE);
+                ClearClass.ClearAllFields(bi.fldGrpCVh106, null);
+                ClearClass.ClearAllFields(bi.fldGrpCVh107, null);
+                bi.fldGrpCVh106.setVisibility(View.GONE);
+                bi.fldGrpCVh107.setVisibility(View.GONE);
             }
         });
 
 
-        //g113
-        bi.g113.setOnCheckedChangeListener((group, checkedId) -> {
+        //h110
+        bi.h110.setOnCheckedChangeListener((group, checkedId) -> {
 
-            if (checkedId == bi.g113a.getId()) {
-                bi.fldGrpCVg114.setVisibility(View.VISIBLE);
-                bi.fldGrpCVg115.setVisibility(View.VISIBLE);
-                bi.fldGrpCVg116.setVisibility(View.VISIBLE);
+            if (checkedId == bi.h110a.getId()) {
+                bi.fldGrpCVh111.setVisibility(View.VISIBLE);
             } else {
-                ClearClass.ClearAllFields(bi.fldGrpCVg114, null);
-                ClearClass.ClearAllFields(bi.fldGrpCVg115, null);
-                ClearClass.ClearAllFields(bi.fldGrpCVg116, null);
-                bi.fldGrpCVg114.setVisibility(View.GONE);
-                bi.fldGrpCVg115.setVisibility(View.GONE);
-                bi.fldGrpCVg116.setVisibility(View.GONE);
+                ClearClass.ClearAllFields(bi.fldGrpCVh111, null);
+                bi.fldGrpCVh111.setVisibility(View.GONE);
             }
         });
 
 
-        //g115
-        bi.g115.setOnCheckedChangeListener((group, checkedId) -> {
+        //h113
+        bi.h113.setOnCheckedChangeListener((group, checkedId) -> {
 
-            if (checkedId == bi.g115a.getId()) {
-                bi.fldGrpCVg116.setVisibility(View.VISIBLE);
+            if (checkedId == bi.h113a.getId()) {
+                bi.fldGrpCVh114.setVisibility(View.VISIBLE);
             } else {
-                ClearClass.ClearAllFields(bi.fldGrpCVg116, null);
-                bi.fldGrpCVg116.setVisibility(View.GONE);
+                ClearClass.ClearAllFields(bi.fldGrpCVh114, null);
+                bi.fldGrpCVh114.setVisibility(View.GONE);
             }
         });
 
 
-        //g119
-        bi.g119.setOnCheckedChangeListener((group, checkedId) -> {
+        //h116
+        bi.h116.setOnCheckedChangeListener((group, checkedId) -> {
 
-            ClearClass.ClearAllFields(bi.fldGrpCVg120, null);
-            ClearClass.ClearAllFields(bi.fldGrpCVg121, null);
-            bi.fldGrpCVg120.setVisibility(View.GONE);
-            bi.fldGrpCVg121.setVisibility(View.GONE);
+            ClearClass.ClearAllFields(bi.fldGrpCVh117, null);
+            ClearClass.ClearAllFields(bi.fldGrpCVh118, null);
+            ClearClass.ClearAllFields(bi.fldGrpCVh119, null);
+            bi.fldGrpCVh117.setVisibility(View.GONE);
+            bi.fldGrpCVh118.setVisibility(View.GONE);
+            bi.fldGrpCVh119.setVisibility(View.GONE);
 
-            if (checkedId == bi.g119a.getId()) {
-                bi.fldGrpCVg120.setVisibility(View.VISIBLE);
-            } else {
-                bi.fldGrpCVg121.setVisibility(View.VISIBLE);
+            if (checkedId == bi.h116a.getId()) {
+                bi.fldGrpCVh117.setVisibility(View.VISIBLE);
+            } else if (checkedId == bi.h116b.getId()) {
+                bi.fldGrpCVh118.setVisibility(View.VISIBLE);
             }
         });
 
 
-        //g122
-        bi.g122.setOnCheckedChangeListener((group, checkedId) -> {
+        //h118
+        bi.h118.setOnCheckedChangeListener((group, checkedId) -> {
 
-            if (checkedId == bi.g122a.getId()) {
-                bi.fldGrpCVg123.setVisibility(View.VISIBLE);
-                bi.fldGrpCVg124.setVisibility(View.VISIBLE);
+            if (checkedId == bi.h118a.getId()) {
+                bi.fldGrpCVh119.setVisibility(View.VISIBLE);
             } else {
-                ClearClass.ClearAllFields(bi.fldGrpCVg123, null);
-                ClearClass.ClearAllFields(bi.fldGrpCVg124, null);
-                bi.fldGrpCVg123.setVisibility(View.GONE);
-                bi.fldGrpCVg124.setVisibility(View.GONE);
+                ClearClass.ClearAllFields(bi.fldGrpCVh119, null);
+                bi.fldGrpCVh119.setVisibility(View.GONE);
             }
         });
 
 
-        //g126
-        bi.g126.setOnCheckedChangeListener((group, checkedId) -> {
+        //h121
+        bi.h121.setOnCheckedChangeListener((group, checkedId) -> {
 
-            if (checkedId == bi.g126a.getId()) {
-                bi.fldGrpCVg127.setVisibility(View.VISIBLE);
-            } else {
-                ClearClass.ClearAllFields(bi.fldGrpCVg127, null);
-                bi.fldGrpCVg127.setVisibility(View.GONE);
+            ClearClass.ClearAllFields(bi.fldGrpCVh122, null);
+            ClearClass.ClearAllFields(bi.fldGrpCVh123, null);
+            ClearClass.ClearAllFields(bi.fldGrpCVh124, null);
+            bi.fldGrpCVh122.setVisibility(View.GONE);
+            bi.fldGrpCVh123.setVisibility(View.GONE);
+            bi.fldGrpCVh124.setVisibility(View.GONE);
+
+            if (checkedId == bi.h121a.getId()) {
+                bi.fldGrpCVh122.setVisibility(View.VISIBLE);
+                bi.fldGrpCVh123.setVisibility(View.VISIBLE);
+            } else if (checkedId == bi.h121b.getId()) {
+                bi.fldGrpCVh124.setVisibility(View.VISIBLE);
             }
-        });*/
+        });
+
+
+        //h12298
+        bi.h12298.setOnCheckedChangeListener((compoundButton, b) -> {
+            if (b) {
+                ClearClass.ClearAllFields(bi.h122, null);
+                ClearClass.ClearAllFields(bi.fldGrpCVh123, null);
+                bi.h122.setVisibility(View.GONE);
+                bi.fldGrpCVh123.setVisibility(View.GONE);
+            } else {
+                bi.h122.setVisibility(View.VISIBLE);
+                bi.fldGrpCVh123.setVisibility(View.VISIBLE);
+            }
+        });
+
+
+        //h123
+        bi.h123.setOnCheckedChangeListener((group, checkedId) -> {
+
+            if (checkedId == bi.h123b.getId()) {
+                bi.fldGrpCVh124.setVisibility(View.VISIBLE);
+            } else {
+                ClearClass.ClearAllFields(bi.fldGrpCVh124, null);
+                bi.fldGrpCVh124.setVisibility(View.GONE);
+            }
+        });
+
+
+        //h125
+        bi.h125.setOnCheckedChangeListener((group, checkedId) -> {
+
+            if (checkedId == bi.h125a.getId()) {
+                bi.fldGrpCVh126.setVisibility(View.VISIBLE);
+                bi.fldGrpCVh127.setVisibility(View.VISIBLE);
+                bi.fldGrpCVh128.setVisibility(View.VISIBLE);
+                bi.fldGrpCVh129a.setVisibility(View.VISIBLE);
+                bi.fldGrpCVh129b.setVisibility(View.VISIBLE);
+                bi.fldGrpCVh129c.setVisibility(View.VISIBLE);
+                bi.fldGrpCVh129d.setVisibility(View.VISIBLE);
+                bi.fldGrpCVh129e.setVisibility(View.VISIBLE);
+            } else {
+                ClearClass.ClearAllFields(bi.fldGrpCVh126, null);
+                ClearClass.ClearAllFields(bi.fldGrpCVh127, null);
+                ClearClass.ClearAllFields(bi.fldGrpCVh128, null);
+                ClearClass.ClearAllFields(bi.fldGrpCVh129a, null);
+                ClearClass.ClearAllFields(bi.fldGrpCVh129b, null);
+                ClearClass.ClearAllFields(bi.fldGrpCVh129c, null);
+                ClearClass.ClearAllFields(bi.fldGrpCVh129d, null);
+                ClearClass.ClearAllFields(bi.fldGrpCVh129e, null);
+                bi.fldGrpCVh126.setVisibility(View.GONE);
+                bi.fldGrpCVh127.setVisibility(View.GONE);
+                bi.fldGrpCVh128.setVisibility(View.GONE);
+                bi.fldGrpCVh129a.setVisibility(View.GONE);
+                bi.fldGrpCVh129b.setVisibility(View.GONE);
+                bi.fldGrpCVh129c.setVisibility(View.GONE);
+                bi.fldGrpCVh129d.setVisibility(View.GONE);
+                bi.fldGrpCVh129e.setVisibility(View.GONE);
+            }
+        });
+
+
+        //h132
+        bi.h132.setOnCheckedChangeListener((group, checkedId) -> {
+
+            if (checkedId == bi.h132a.getId()) {
+                bi.fldGrpCVh133.setVisibility(View.VISIBLE);
+            } else {
+                ClearClass.ClearAllFields(bi.fldGrpCVh133, null);
+                bi.fldGrpCVh133.setVisibility(View.GONE);
+            }
+        });
+
+
+        //h134
+        bi.h134.setOnCheckedChangeListener((group, checkedId) -> {
+
+            if (checkedId == bi.h134a.getId()) {
+                bi.fldGrpCVh135.setVisibility(View.VISIBLE);
+                bi.fldGrpCVh136.setVisibility(View.VISIBLE);
+            } else {
+                ClearClass.ClearAllFields(bi.fldGrpCVh135, null);
+                ClearClass.ClearAllFields(bi.fldGrpCVh136, null);
+                bi.fldGrpCVh135.setVisibility(View.GONE);
+                bi.fldGrpCVh136.setVisibility(View.GONE);
+            }
+        });
+
+
+        //h137
+        bi.h137.setOnCheckedChangeListener((group, checkedId) -> {
+
+            if (checkedId == bi.h137a.getId()) {
+                bi.fldGrpCVh137aa.setVisibility(View.VISIBLE);
+                bi.fldGrpCVh137bb.setVisibility(View.VISIBLE);
+            } else {
+                ClearClass.ClearAllFields(bi.fldGrpCVh137aa, null);
+                ClearClass.ClearAllFields(bi.fldGrpCVh137bb, null);
+                bi.fldGrpCVh137aa.setVisibility(View.GONE);
+                bi.fldGrpCVh137bb.setVisibility(View.GONE);
+            }
+        });
 
 
         //h13598
@@ -165,17 +257,6 @@ public class SectionHActivity extends AppCompatActivity {
             } else {
                 ClearClass.ClearAllFields(bi.h135check, true);
                 bi.h135check.setTag("0");
-            }
-        });
-
-        //h20798
-        bi.h20798.setOnCheckedChangeListener((compoundButton, b) -> {
-            if (b) {
-                ClearClass.ClearAllFields(bi.h207check, false);
-                bi.h207check.setTag("-1");
-            } else {
-                ClearClass.ClearAllFields(bi.h207check, true);
-                bi.h207check.setTag("0");
             }
         });
 
@@ -192,7 +273,7 @@ public class SectionHActivity extends AppCompatActivity {
             }
             if (UpdateDB()) {
                 finish();
-                startActivity(new Intent(this, SectionI1Activity.class));
+                startActivity(new Intent(this, SectionH1Activity.class));
             } else {
                 Toast.makeText(this, "Failed to Update Database!", Toast.LENGTH_SHORT).show();
             }
@@ -493,166 +574,6 @@ public class SectionHActivity extends AppCompatActivity {
                                                                         bi.h137bb96.isChecked() ? "96" :
                                                                                 "0");
         json.put("h137bb96x", bi.h137bb96x.getText().toString());
-
-        json.put("h201",
-                bi.h201a.isChecked() ? "1" :
-                        bi.h201b.isChecked() ? "2" :
-                                bi.h201c.isChecked() ? "3" :
-                                        "0");
-        json.put("h201x", bi.h201x.getText().toString());
-
-        json.put("h202",
-                bi.h202a.isChecked() ? "1" :
-                        bi.h202b.isChecked() ? "2" :
-                                "0");
-
-        json.put("h203",
-                bi.h203a.isChecked() ? "1" :
-                        bi.h203b.isChecked() ? "2" :
-                                bi.h203c.isChecked() ? "3" :
-                                        "0");
-        json.put("h203x", bi.h203x.getText().toString());
-
-        json.put("h204",
-                bi.h204a.isChecked() ? "1" :
-                        bi.h204b.isChecked() ? "2" :
-                                bi.h204c.isChecked() ? "3" :
-                                        "0");
-
-        json.put("h205",
-                bi.h205a.isChecked() ? "1" :
-                        bi.h205b.isChecked() ? "2" :
-                                bi.h205c.isChecked() ? "3" :
-                                        bi.h205d.isChecked() ? "4" :
-                                                bi.h205e.isChecked() ? "5" :
-                                                        "0");
-
-        json.put("h206",
-                bi.h206a.isChecked() ? "1" :
-                        bi.h206b.isChecked() ? "2" :
-                                "0");
-
-        json.put("h207a", bi.h207a.isChecked() ? "1" : "0");
-        json.put("h207b", bi.h207b.isChecked() ? "2" : "0");
-        json.put("h207c", bi.h207c.isChecked() ? "3" : "0");
-        json.put("h207d", bi.h207d.isChecked() ? "4" : "0");
-        json.put("h207e", bi.h207e.isChecked() ? "5" : "0");
-        json.put("h207f", bi.h207f.isChecked() ? "6" : "0");
-        json.put("h207g", bi.h207g.isChecked() ? "7" : "0");
-        json.put("h207h", bi.h207h.isChecked() ? "8" : "0");
-        json.put("h207i", bi.h20798.isChecked() ? "98" : "0");
-
-        json.put("h208a", bi.h208a.isChecked() ? "1" : "0");
-        json.put("h208b", bi.h208b.isChecked() ? "2" : "0");
-        json.put("h208c", bi.h208c.isChecked() ? "3" : "0");
-        json.put("h208d", bi.h208d.isChecked() ? "4" : "0");
-        json.put("h208e", bi.h208e.isChecked() ? "5" : "0");
-        json.put("h208f", bi.h208f.isChecked() ? "6" : "0");
-
-        json.put("h209",
-                bi.h209a.isChecked() ? "1" :
-                        bi.h209b.isChecked() ? "2" :
-                                "0");
-        json.put("h210",
-                bi.h210a.isChecked() ? "1" :
-                        bi.h210b.isChecked() ? "2" :
-                                bi.h210c.isChecked() ? "3" :
-                                        bi.h21098.isChecked() ? "98" :
-                                                "0");
-        json.put("h211",
-                bi.h211a.isChecked() ? "1" :
-                        bi.h211b.isChecked() ? "2" :
-                                bi.h211c.isChecked() ? "3" :
-                                        bi.h211d.isChecked() ? "4" :
-                                                bi.h211e.isChecked() ? "5" :
-                                                        bi.h211f.isChecked() ? "6" :
-                                                                bi.h211g.isChecked() ? "7" :
-                                                                        bi.h211h.isChecked() ? "8" :
-                                                                                bi.h211i.isChecked() ? "9" :
-                                                                                        "0");
-        json.put("h212", bi.h212.getText().toString());
-        json.put("h213",
-                bi.h213a.isChecked() ? "1" :
-                        bi.h213b.isChecked() ? "2" :
-                                bi.h213c.isChecked() ? "3" :
-                                        "0");
-        json.put("h214",
-                bi.h214a.isChecked() ? "1" :
-                        bi.h214b.isChecked() ? "2" :
-                                bi.h214c.isChecked() ? "3" :
-                                        bi.h214d.isChecked() ? "4" :
-                                                "0");
-        json.put("h215",
-                bi.h215a.isChecked() ? "1" :
-                        bi.h215b.isChecked() ? "2" :
-                                bi.h215c.isChecked() ? "3" :
-                                        bi.h215d.isChecked() ? "4" :
-                                                bi.h215e.isChecked() ? "5" :
-                                                        "0");
-        json.put("h216",
-                bi.h216a.isChecked() ? "1" :
-                        bi.h216b.isChecked() ? "2" :
-                                bi.h216c.isChecked() ? "3" :
-                                        "0");
-        json.put("h217",
-                bi.h217a.isChecked() ? "1" :
-                        bi.h217b.isChecked() ? "2" :
-                                bi.h217c.isChecked() ? "3" :
-                                        bi.h217d.isChecked() ? "4" :
-                                                bi.h217e.isChecked() ? "5" :
-                                                        bi.h217f.isChecked() ? "6" :
-                                                                bi.h21796.isChecked() ? "96" :
-                                                                        "0");
-        json.put("h21796x", bi.h21796x.getText().toString());
-
-        json.put("h218",
-                bi.h218a.isChecked() ? "1" :
-                        bi.h218b.isChecked() ? "2" :
-                                bi.h21898.isChecked() ? "98" :
-                                        "0");
-        json.put("h219",
-                bi.h219a.isChecked() ? "1" :
-                        bi.h219b.isChecked() ? "2" :
-                                bi.h219c.isChecked() ? "3" :
-                                        bi.h219d.isChecked() ? "4" :
-                                                bi.h219e.isChecked() ? "5" :
-                                                        bi.h219f.isChecked() ? "6" :
-                                                                bi.h21996.isChecked() ? "96" :
-                                                                        "0");
-        json.put("h21996x", bi.h21996x.getText().toString());
-
-        json.put("h220",
-                bi.h220a.isChecked() ? "1" :
-                        bi.h220b.isChecked() ? "2" :
-                                bi.h220c.isChecked() ? "3" :
-                                        bi.h220d.isChecked() ? "4" :
-                                                bi.h220e.isChecked() ? "5" :
-                                                        bi.h220f.isChecked() ? "6" :
-                                                                bi.h22096.isChecked() ? "96" :
-                                                                        "0");
-        json.put("h22096x", bi.h22096x.getText().toString());
-
-        json.put("h221",
-                bi.h221a.isChecked() ? "1" :
-                        bi.h221b.isChecked() ? "2" :
-                                bi.h221c.isChecked() ? "3" :
-                                        "0");
-
-        json.put("h222",
-                bi.h222a.isChecked() ? "1" :
-                        bi.h222b.isChecked() ? "2" :
-                                bi.h222c.isChecked() ? "3" :
-                                        bi.h222d.isChecked() ? "4" :
-                                                bi.h22296.isChecked() ? "96" :
-                                                        "0");
-        json.put("h22296x", bi.h22296x.getText().toString());
-
-        json.put("h223",
-                bi.h223a.isChecked() ? "1" :
-                        bi.h223b.isChecked() ? "2" :
-                                bi.h223c.isChecked() ? "4" :
-                                        bi.h223d.isChecked() ? "5" :
-                                                "0");
 
 
         MainApp.fc.setsA(String.valueOf(json));
