@@ -6,8 +6,13 @@ import androidx.databinding.DataBindingUtil;
 import android.os.Bundle;
 import android.widget.RadioGroup;
 
+import com.validatorcrawler.aliazaz.Validator;
+
+import org.json.JSONException;
+
 import edu.aku.hassannaqvi.uen_midline.R;
 import edu.aku.hassannaqvi.uen_midline.databinding.ActivitySectionFBinding;
+import edu.aku.hassannaqvi.uen_midline.utils.Util;
 import edu.aku.hassannaqvi.uen_midline.validator.ClearClass;
 
 public class SectionFActivity extends AppCompatActivity {
@@ -26,6 +31,18 @@ public class SectionFActivity extends AppCompatActivity {
 
     void setUIComponent() {
 
+        bi.f101.setOnCheckedChangeListener(((radioGroup, i) -> {
+            if (i == bi.f101y.getId()) {
+                ClearClass.ClearAllFields(bi.fldGrpCVf101a, null);
+            }
+        }));
+
+        bi.f112.setOnCheckedChangeListener(((radioGroup, i) -> {
+            if (i != bi.f112a.getId()) {
+                ClearClass.ClearAllFields(bi.fldGrpCVf113, null);
+            }
+        }));
+
         bi.f114.setOnCheckedChangeListener((radioGroup, i) -> {
 
             if (i != bi.f114a.getId()) {
@@ -33,4 +50,44 @@ public class SectionFActivity extends AppCompatActivity {
             }
         });
     }
+
+    public void BtnContinue() {
+        if (formValidation()) {
+            try {
+                SaveDraft();
+            } catch (Exception e) {
+                e.printStackTrace();
+            }
+            if (UpdateDB()) {
+//                if (MainApp.childCount > 0) {
+//                    finish();
+//                    startActivity(new Intent(this, SectionDAActivity.class));
+//                } else {
+//                    finish();
+//                    startActivity(new Intent(this, ChildListActivity.class));
+//                }
+            }
+
+        }
+    }
+
+    private boolean UpdateDB() {
+
+        return true;
+    }
+
+    private void SaveDraft() throws JSONException {
+    }
+
+    private boolean formValidation() {
+
+        return Validator.emptyCheckingContainer(this, bi.fldGrpSectionF);
+
+    }
+
+    public void BtnEnd() {
+
+        Util.openEndActivity(this);
+    }
+
 }
