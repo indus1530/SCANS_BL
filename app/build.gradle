@@ -28,8 +28,8 @@ android {
             applicationId "edu.aku.hassannaqvi.uen_midline"
             minSdkVersion 21
             targetSdkVersion 29
-//            versionCode code
-            versionName "1.2"
+            versionCode code
+            versionName "0.1"
             testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
         }
     } else {
