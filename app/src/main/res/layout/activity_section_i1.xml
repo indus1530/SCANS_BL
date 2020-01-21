@@ -8,7 +8,7 @@
 
         <variable
             name="callback"
-            type="edu.aku.hassannaqvi.uen_midline.ui.sections.SectionIActivity" />
+            type="edu.aku.hassannaqvi.uen_midline.ui.sections.SectionI1Activity" />
     </data>
 
     <ScrollView
@@ -35,7 +35,7 @@
                     android:orientation="vertical">
 
                     <TextView
-                        style="@style/i_textview"
+                        style="@style/textView3Head"
                         android:text="@string/i1.diarrhea" />
                 </LinearLayout>
             </androidx.cardview.widget.CardView>
@@ -451,7 +451,7 @@
                 </LinearLayout>
             </androidx.cardview.widget.CardView>
 
-            <!-- i112  Radio   -->
+            <!-- i112  CheckBox   -->
             <androidx.cardview.widget.CardView
                 android:id="@+id/fldGrpCVi112"
                 style="@style/cardView">
@@ -465,66 +465,68 @@
                         style="@style/i_textview"
                         android:text="@string/i112" />
 
-                    <RadioGroup
-                        android:id="@+id/i112"
+                    <LinearLayout
+                        android:id="@+id/i112check"
                         android:layout_width="match_parent"
-                        android:layout_height="match_parent">
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:tag="0">
 
-                        <RadioButton
+                        <CheckBox
                             android:id="@+id/i112a"
-                            style="@style/radiobutton"
+                            style="@style/checkbox"
                             android:text="@string/i112a" />
 
-                        <RadioButton
+                        <CheckBox
                             android:id="@+id/i112b"
-                            style="@style/radiobutton"
+                            style="@style/checkbox"
                             android:text="@string/i112b" />
 
-                        <RadioButton
+                        <CheckBox
                             android:id="@+id/i112c"
-                            style="@style/radiobutton"
+                            style="@style/checkbox"
                             android:text="@string/i112c" />
 
-                        <RadioButton
+                        <CheckBox
                             android:id="@+id/i112d"
-                            style="@style/radiobutton"
+                            style="@style/checkbox"
                             android:text="@string/i112d" />
 
-                        <RadioButton
+                        <CheckBox
                             android:id="@+id/i112e"
-                            style="@style/radiobutton"
+                            style="@style/checkbox"
                             android:text="@string/i112e" />
 
-                        <RadioButton
+                        <CheckBox
                             android:id="@+id/i112f"
-                            style="@style/radiobutton"
+                            style="@style/checkbox"
                             android:text="@string/i112f" />
 
-                        <RadioButton
+                        <CheckBox
                             android:id="@+id/i112g"
-                            style="@style/radiobutton"
+                            style="@style/checkbox"
                             android:text="@string/i112g" />
 
-                        <RadioButton
+                        <CheckBox
                             android:id="@+id/i112h"
-                            style="@style/radiobutton"
+                            style="@style/checkbox"
                             android:text="@string/i112h" />
 
-                        <RadioButton
+                        <CheckBox
                             android:id="@+id/i112i"
-                            style="@style/radiobutton"
+                            style="@style/checkbox"
                             android:text="@string/i112i" />
 
-                        <RadioButton
+                        <CheckBox
                             android:id="@+id/i112j"
-                            style="@style/radiobutton"
+                            style="@style/checkbox"
                             android:text="@string/i112j" />
 
-                        <RadioButton
+                        <CheckBox
                             android:id="@+id/i112k"
-                            style="@style/radiobutton"
+                            style="@style/checkbox"
                             android:text="@string/i112k" />
-                    </RadioGroup>
+                    </LinearLayout>
                 </LinearLayout>
             </androidx.cardview.widget.CardView>
 
@@ -988,7 +990,7 @@
                 </LinearLayout>
             </androidx.cardview.widget.CardView>
 
-            <!-- i124  Radio   -->
+            <!-- i124  CheckBox   -->
             <androidx.cardview.widget.CardView
                 android:id="@+id/fldGrpCVi124"
                 style="@style/cardView">
@@ -1002,46 +1004,48 @@
                         style="@style/i_textview"
                         android:text="@string/i124" />
 
-                    <RadioGroup
-                        android:id="@+id/i124"
+                    <LinearLayout
+                        android:id="@+id/i124check"
                         android:layout_width="match_parent"
-                        android:layout_height="match_parent">
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:tag="0">
 
-                        <RadioButton
+                        <CheckBox
                             android:id="@+id/i124a"
-                            style="@style/radiobutton"
+                            style="@style/checkbox"
                             android:text="@string/i124a" />
 
-                        <RadioButton
+                        <CheckBox
                             android:id="@+id/i124b"
-                            style="@style/radiobutton"
+                            style="@style/checkbox"
                             android:text="@string/i124b" />
 
-                        <RadioButton
+                        <CheckBox
                             android:id="@+id/i124c"
-                            style="@style/radiobutton"
+                            style="@style/checkbox"
                             android:text="@string/i124c" />
 
-                        <RadioButton
+                        <CheckBox
                             android:id="@+id/i124d"
-                            style="@style/radiobutton"
+                            style="@style/checkbox"
                             android:text="@string/i124d" />
 
-                        <RadioButton
+                        <CheckBox
                             android:id="@+id/i124e"
-                            style="@style/radiobutton"
+                            style="@style/checkbox"
                             android:text="@string/i124e" />
 
-                        <RadioButton
+                        <CheckBox
                             android:id="@+id/i124f"
-                            style="@style/radiobutton"
+                            style="@style/checkbox"
                             android:text="@string/i124f" />
 
-                        <RadioButton
+                        <CheckBox
                             android:id="@+id/i124g"
-                            style="@style/radiobutton"
+                            style="@style/checkbox"
                             android:text="@string/i124g" />
-                    </RadioGroup>
+                    </LinearLayout>
                 </LinearLayout>
             </androidx.cardview.widget.CardView>
 
@@ -1077,7 +1081,7 @@
                 </LinearLayout>
             </androidx.cardview.widget.CardView>
 
-            <!-- i126  Radio   -->
+            <!-- i126  CheckBox   -->
             <androidx.cardview.widget.CardView
                 android:id="@+id/fldGrpCVi126"
                 style="@style/cardView">
@@ -1091,36 +1095,38 @@
                         style="@style/i_textview"
                         android:text="@string/i126" />
 
-                    <RadioGroup
-                        android:id="@+id/i126"
+                    <LinearLayout
+                        android:id="@+id/i126check"
                         android:layout_width="match_parent"
-                        android:layout_height="match_parent">
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:tag="0">
 
-                        <RadioButton
+                        <CheckBox
                             android:id="@+id/i126a"
-                            style="@style/radiobutton"
+                            style="@style/checkbox"
                             android:text="@string/i126a" />
 
-                        <RadioButton
+                        <CheckBox
                             android:id="@+id/i126b"
-                            style="@style/radiobutton"
+                            style="@style/checkbox"
                             android:text="@string/i126b" />
 
-                        <RadioButton
+                        <CheckBox
                             android:id="@+id/i126c"
-                            style="@style/radiobutton"
+                            style="@style/checkbox"
                             android:text="@string/i126c" />
 
-                        <RadioButton
+                        <CheckBox
                             android:id="@+id/i126d"
-                            style="@style/radiobutton"
+                            style="@style/checkbox"
                             android:text="@string/i126d" />
 
-                        <RadioButton
+                        <CheckBox
                             android:id="@+id/i126e"
-                            style="@style/radiobutton"
+                            style="@style/checkbox"
                             android:text="@string/i126e" />
-                    </RadioGroup>
+                    </LinearLayout>
                 </LinearLayout>
             </androidx.cardview.widget.CardView>
 

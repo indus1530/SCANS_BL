@@ -6,11 +6,11 @@ import android.os.Bundle;
 
 import edu.aku.hassannaqvi.uen_midline.R;
 
-public class SectionIActivity extends AppCompatActivity {
+public class SectionI1Activity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_section_i);
+        setContentView(R.layout.activity_section_i1);
     }
 }
