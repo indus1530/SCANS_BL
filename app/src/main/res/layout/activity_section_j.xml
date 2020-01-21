@@ -19,7 +19,7 @@
         tools:context=".ui.Myactivity">
 
         <LinearLayout
-            android:id="@+id/GrpName"
+            android:id="@+id/fldGrpSectionJ"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="vertical">

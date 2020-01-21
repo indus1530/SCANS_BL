@@ -1304,8 +1304,8 @@
                         <RadioButton
                             android:id="@+id/h129b98"
                             android:layout_width="0dp"
-                            android:layout_weight="1"
                             style="@style/radiobutton"
+                            android:layout_weight="1"
                             android:text="@string/dkn" />
 
                     </RadioGroup>

@@ -17,38 +17,39 @@
         android:scrollbarSize="10dip">
 
         <LinearLayout
-            android:id="@+id/GrpName"
+            android:id="@+id/fldGrpSectionD"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layoutDirection="ltr"
             android:orientation="vertical">
 
-            <!-- d101  Input-Numeric   -->
-            <androidx.cardview.widget.CardView
-                android:id="@+id/fldGrpCVd101"
-                style="@style/cardView">
+            <!--            &lt;!&ndash; d101  Input-Numeric   &ndash;&gt;-->
+            <!--            <androidx.cardview.widget.CardView-->
+            <!--                android:id="@+id/fldGrpCVd101"-->
+            <!--                style="@style/cardView">-->
 
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:orientation="vertical">
+            <!--                <LinearLayout-->
+            <!--                    android:layout_width="match_parent"-->
+            <!--                    android:layout_height="wrap_content"-->
+            <!--                    android:orientation="vertical">-->
 
-                    <TextView
-                        style="@style/i_textview"
-                        android:text="@string/d101" />
+            <!--                    <TextView-->
+            <!--                        style="@style/i_textview"-->
+            <!--                        android:text="@string/d101" />-->
 
-                    <com.edittextpicker.aliazaz.EditTextPicker
-                        android:id="@+id/d101"
-                        style="@style/EditTextAlphaNumeric"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:hint="@string/d101"
-                        android:inputType="number"
-                        app:mask="##"
-                        app:maxValue="0"
-                        app:minValue="0"
-                        app:type="range" />
-                </LinearLayout>
-            </androidx.cardview.widget.CardView>
+            <!--                    <com.edittextpicker.aliazaz.EditTextPicker-->
+            <!--                        android:id="@+id/d101"-->
+            <!--                        style="@style/EditTextAlphaNumeric"-->
+            <!--                        android:layout_width="match_parent"-->
+            <!--                        android:layout_height="wrap_content"-->
+            <!--                        android:hint="@string/d101"-->
+            <!--                        android:inputType="number"-->
+            <!--                        app:mask="##"-->
+            <!--                        app:maxValue="0"-->
+            <!--                        app:minValue="0"-->
+            <!--                        app:type="range" />-->
+            <!--                </LinearLayout>-->
+            <!--            </androidx.cardview.widget.CardView>-->
 
             <!-- d102  Input   -->
             <androidx.cardview.widget.CardView
@@ -63,6 +64,10 @@
                     <TextView
                         style="@style/i_textview"
                         android:text="@string/d102" />
+
+                    <TextView
+                        style="@style/textView3Head"
+                        android:text="@string/d102a" />
 
                     <EditText
                         android:id="@+id/d102"
@@ -87,6 +92,10 @@
                     <TextView
                         style="@style/i_textview"
                         android:text="@string/d103" />
+
+                    <TextView
+                        style="@style/textView3Head"
+                        android:text="@string/d103x" />
 
                     <RadioGroup
                         android:id="@+id/d103"
@@ -245,89 +254,89 @@
                 </LinearLayout>
             </androidx.cardview.widget.CardView>
 
-            <!-- d106  Radio   -->
-            <androidx.cardview.widget.CardView
-                android:id="@+id/fldGrpCVd106"
-                style="@style/cardView">
+            <!--            &lt;!&ndash; d106  Radio   &ndash;&gt;-->
+            <!--            <androidx.cardview.widget.CardView-->
+            <!--                android:id="@+id/fldGrpCVd106"-->
+            <!--                style="@style/cardView">-->
 
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:orientation="vertical">
+            <!--                <LinearLayout-->
+            <!--                    android:layout_width="match_parent"-->
+            <!--                    android:layout_height="wrap_content"-->
+            <!--                    android:orientation="vertical">-->
 
-                    <TextView
-                        style="@style/i_textview"
-                        android:text="@string/d106" />
+            <!--                    <TextView-->
+            <!--                        style="@style/i_textview"-->
+            <!--                        android:text="@string/d106" />-->
 
-                    <RadioGroup
-                        android:id="@+id/d106"
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent">
+            <!--                    <RadioGroup-->
+            <!--                        android:id="@+id/d106"-->
+            <!--                        android:layout_width="match_parent"-->
+            <!--                        android:layout_height="match_parent">-->
 
-                        <RadioButton
-                            android:id="@+id/d106a"
-                            style="@style/radiobutton"
-                            android:text="@string/d106a" />
+            <!--                        <RadioButton-->
+            <!--                            android:id="@+id/d106a"-->
+            <!--                            style="@style/radiobutton"-->
+            <!--                            android:text="@string/d106a" />-->
 
-                        <EditText
-                            android:id="@+id/d106at"
-                            style="@style/radiobutton"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:hint="@string/d106a"
-                            android:tag="d106a"
-                            android:text='@{d106a.checked? d106at.getText().toString() : ""}'
-                            android:visibility='@{d106a.checked? View.VISIBLE : View.GONE}' />
+            <!--                        <EditText-->
+            <!--                            android:id="@+id/d106at"-->
+            <!--                            style="@style/radiobutton"-->
+            <!--                            android:layout_width="match_parent"-->
+            <!--                            android:layout_height="wrap_content"-->
+            <!--                            android:hint="@string/d106a"-->
+            <!--                            android:tag="d106a"-->
+            <!--                            android:text='@{d106a.checked? d106at.getText().toString() : ""}'-->
+            <!--                            android:visibility='@{d106a.checked? View.VISIBLE : View.GONE}' />-->
 
-                        <RadioButton
-                            android:id="@+id/d106b"
-                            style="@style/radiobutton"
-                            android:text="@string/d106b" />
-                    </RadioGroup>
-                </LinearLayout>
-            </androidx.cardview.widget.CardView>
+            <!--                        <RadioButton-->
+            <!--                            android:id="@+id/d106b"-->
+            <!--                            style="@style/radiobutton"-->
+            <!--                            android:text="@string/d106b" />-->
+            <!--                    </RadioGroup>-->
+            <!--                </LinearLayout>-->
+            <!--            </androidx.cardview.widget.CardView>-->
 
-            <!-- d107  Radio   -->
-            <androidx.cardview.widget.CardView
-                android:id="@+id/fldGrpCVd107"
-                style="@style/cardView">
+            <!--            &lt;!&ndash; d107  Radio   &ndash;&gt;-->
+            <!--            <androidx.cardview.widget.CardView-->
+            <!--                android:id="@+id/fldGrpCVd107"-->
+            <!--                style="@style/cardView">-->
 
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:orientation="vertical">
+            <!--                <LinearLayout-->
+            <!--                    android:layout_width="match_parent"-->
+            <!--                    android:layout_height="wrap_content"-->
+            <!--                    android:orientation="vertical">-->
 
-                    <TextView
-                        style="@style/i_textview"
-                        android:text="@string/d107" />
+            <!--                    <TextView-->
+            <!--                        style="@style/i_textview"-->
+            <!--                        android:text="@string/d107" />-->
 
-                    <RadioGroup
-                        android:id="@+id/d107"
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent">
+            <!--                    <RadioGroup-->
+            <!--                        android:id="@+id/d107"-->
+            <!--                        android:layout_width="match_parent"-->
+            <!--                        android:layout_height="match_parent">-->
 
-                        <RadioButton
-                            android:id="@+id/d107a"
-                            style="@style/radiobutton"
-                            android:text="@string/d107a" />
+            <!--                        <RadioButton-->
+            <!--                            android:id="@+id/d107a"-->
+            <!--                            style="@style/radiobutton"-->
+            <!--                            android:text="@string/d107a" />-->
 
-                        <EditText
-                            android:id="@+id/d107at"
-                            style="@style/radiobutton"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:hint="@string/d107a"
-                            android:tag="d107a"
-                            android:text='@{d107a.checked? d107at.getText().toString() : ""}'
-                            android:visibility='@{d107a.checked? View.VISIBLE : View.GONE}' />
+            <!--                        <EditText-->
+            <!--                            android:id="@+id/d107at"-->
+            <!--                            style="@style/radiobutton"-->
+            <!--                            android:layout_width="match_parent"-->
+            <!--                            android:layout_height="wrap_content"-->
+            <!--                            android:hint="@string/d107a"-->
+            <!--                            android:tag="d107a"-->
+            <!--                            android:text='@{d107a.checked? d107at.getText().toString() : ""}'-->
+            <!--                            android:visibility='@{d107a.checked? View.VISIBLE : View.GONE}' />-->
 
-                        <RadioButton
-                            android:id="@+id/d107b"
-                            style="@style/radiobutton"
-                            android:text="@string/d107b" />
-                    </RadioGroup>
-                </LinearLayout>
-            </androidx.cardview.widget.CardView>
+            <!--                        <RadioButton-->
+            <!--                            android:id="@+id/d107b"-->
+            <!--                            style="@style/radiobutton"-->
+            <!--                            android:text="@string/d107b" />-->
+            <!--                    </RadioGroup>-->
+            <!--                </LinearLayout>-->
+            <!--            </androidx.cardview.widget.CardView>-->
 
             <!-- d108  Title   -->
             <androidx.cardview.widget.CardView
@@ -344,7 +353,7 @@
                         android:text="@string/d108" />
 
                     <TextView
-                        style="@style/i_textview"
+                        style="@style/textView3Head"
                         android:text="@string/d108a" />
 
                     <EditText
@@ -356,7 +365,7 @@
                         android:textColor="@android:color/black" />
 
                     <TextView
-                        style="@style/i_textview"
+                        style="@style/textView3Head"
                         android:text="@string/d108b" />
 
                     <EditText
@@ -368,7 +377,7 @@
                         android:textColor="@android:color/black" />
 
                     <TextView
-                        style="@style/i_textview"
+                        style="@style/textView3Head"
                         android:text="@string/d108c" />
 
                     <EditText
@@ -396,7 +405,7 @@
                         android:text="@string/d109" />
 
                     <TextView
-                        style="@style/i_textview"
+                        style="@style/textView3Head"
                         android:text="@string/d109a" />
 
                     <EditText
@@ -408,7 +417,7 @@
                         android:textColor="@android:color/black" />
 
                     <TextView
-                        style="@style/i_textview"
+                        style="@style/textView3Head"
                         android:text="@string/d109b" />
 
                     <EditText
@@ -420,7 +429,7 @@
                         android:textColor="@android:color/black" />
 
                     <TextView
-                        style="@style/i_textview"
+                        style="@style/textView3Head"
                         android:text="@string/d109c" />
 
                     <EditText
@@ -534,6 +543,10 @@
                         style="@style/i_textview"
                         android:text="@string/d111" />
 
+                    <TextView
+                        style="@style/textView3Head"
+                        android:text="@string/d111x" />
+
                     <RadioGroup
                         android:id="@+id/d111"
                         android:layout_width="match_parent"
@@ -592,55 +605,55 @@
                 </LinearLayout>
             </androidx.cardview.widget.CardView>
 
-            <!-- d112  Input   -->
-            <androidx.cardview.widget.CardView
-                android:id="@+id/fldGrpCVd112"
-                style="@style/cardView">
+            <!--          &lt;!&ndash; d112  Input   &ndash;&gt;
+                      <androidx.cardview.widget.CardView
+                          android:id="@+id/fldGrpCVd112"
+                          style="@style/cardView">
 
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:orientation="vertical">
+                          <LinearLayout
+                              android:layout_width="match_parent"
+                              android:layout_height="wrap_content"
+                              android:orientation="vertical">
 
-                    <TextView
-                        style="@style/i_textview"
-                        android:text="@string/d112" />
+                              <TextView
+                                  style="@style/i_textview"
+                                  android:text="@string/d112" />
 
-                    <EditText
-                        android:id="@+id/d112"
-                        style="@style/textInputName"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:hint="@string/d112"
-                        android:textColor="@android:color/black" />
-                </LinearLayout>
-            </androidx.cardview.widget.CardView>
+                              <EditText
+                                  android:id="@+id/d112"
+                                  style="@style/textInputName"
+                                  android:layout_width="match_parent"
+                                  android:layout_height="wrap_content"
+                                  android:hint="@string/d112"
+                                  android:textColor="@android:color/black" />
+                          </LinearLayout>
+                      </androidx.cardview.widget.CardView>
 
-            <!-- d113  Input   -->
-            <androidx.cardview.widget.CardView
-                android:id="@+id/fldGrpCVd113"
-                style="@style/cardView">
+                      &lt;!&ndash; d113  Input   &ndash;&gt;
+                      <androidx.cardview.widget.CardView
+                          android:id="@+id/fldGrpCVd113"
+                          style="@style/cardView">
 
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:orientation="vertical">
+                          <LinearLayout
+                              android:layout_width="match_parent"
+                              android:layout_height="wrap_content"
+                              android:orientation="vertical">
 
-                    <TextView
-                        style="@style/i_textview"
-                        android:text="@string/d113" />
+                              <TextView
+                                  style="@style/i_textview"
+                                  android:text="@string/d113" />
 
-                    <EditText
-                        android:id="@+id/d113"
-                        style="@style/textInputName"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:hint="@string/d113"
-                        android:textColor="@android:color/black" />
-                </LinearLayout>
-            </androidx.cardview.widget.CardView>
-
-            <!-- d114  Input   -->
+                              <EditText
+                                  android:id="@+id/d113"
+                                  style="@style/textInputName"
+                                  android:layout_width="match_parent"
+                                  android:layout_height="wrap_content"
+                                  android:hint="@string/d113"
+                                  android:textColor="@android:color/black" />
+                          </LinearLayout>
+                      </androidx.cardview.widget.CardView>
+          -->
+            <!--&lt;!&ndash; d114  Input   &ndash;&gt;
             <androidx.cardview.widget.CardView
                 android:id="@+id/fldGrpCVd114"
                 style="@style/cardView">
@@ -662,7 +675,7 @@
                         android:hint="@string/d114"
                         android:textColor="@android:color/black" />
                 </LinearLayout>
-            </androidx.cardview.widget.CardView>
+            </androidx.cardview.widget.CardView>-->
 
             <LinearLayout
                 android:layout_width="match_parent"
