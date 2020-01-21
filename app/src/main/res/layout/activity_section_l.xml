@@ -420,7 +420,7 @@
                             android:text="@string/l109c" />
 
                         <RadioButton
-                            android:id="@+id/l109c"
+                            android:id="@+id/l109d"
                             style="@style/radiobutton"
                             android:text="@string/l109c" />
 

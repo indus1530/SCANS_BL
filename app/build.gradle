@@ -79,4 +79,6 @@ dependencies {
 
     implementation 'com.github.santalu:mask-edittext:1.0.9'
     implementation 'com.google.android:flexbox:2.0.0'
+    implementation 'com.github.AliAzaz:AndroidValidatorCrawler:1.0.1'
+
 }

@@ -291,26 +291,25 @@
                         android:layout_width="match_parent"
                         android:layout_height="match_parent">
 
-                        <TextView
-                            style="@style/i_textview"
-                            android:text="@string/n104a" />
-
-                        <com.edittextpicker.aliazaz.EditTextPicker
-                            android:id="@+id/n104a"
-                            style="@style/EditTextAlphaNumeric"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:hint="@string/n104a"
-                            android:inputType="number"
-                            app:mask="##"
-                            app:maxValue="0"
-                            app:minValue="0"
-                            app:type="range" />
-
                         <RadioButton
                             android:id="@+id/n104a"
                             style="@style/radiobutton"
                             android:text="@string/n104a" />
+
+                        <EditText
+                            android:id="@+id/n104at"
+                            style="@style/radiobutton"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:hint="@string/n104a"
+                            android:tag="n104a"
+                            android:text='@{n104a.checked? n104at.getText().toString() : ""}'
+                            android:visibility='@{n104a.checked? View.VISIBLE : View.GONE}' />
+
+                        <RadioButton
+                            android:id="@+id/n104b"
+                            style="@style/radiobutton"
+                            android:text="@string/dkn" />
                     </RadioGroup>
                 </LinearLayout>
             </androidx.cardview.widget.CardView>

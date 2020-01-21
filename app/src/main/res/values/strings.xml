@@ -24,6 +24,7 @@
     Aga Khan University, Karachi, Pakistan</string>
 
     <string name="uc">UC</string>
+    <string name="dkn">Don\'t Know</string>
 
     <string name="a101">Cluster number: This information will be based on the list of villages generated from the district. Each enumerator will be given a list of clusters that he/she will be visiting, and before starting the interview, this information will be entered from the same list. </string>
     <string name="a102">Cluster type</string>
@@ -811,8 +812,8 @@
     <string name="h219b">Bank/Loan from organization</string>
     <string name="h219c">Community revolving fund</string>
     <string name="h219d">Borrowing from relative/friend</string>
-    <string name="h219d">Selling assets</string>
-    <string name="h219e">Medical insurance</string>
+    <string name="h219e">Selling assets</string>
+    <string name="h219f">Medical insurance</string>
     <string name="h219x">Other (specify)</string>
     <string name="h220">For what purpose the majority of this financial support was utilized?</string>
     <string name="h220a">Transport</string>
@@ -1464,7 +1465,7 @@
     <string name="k105aa">Since when you are using current method without stopping it?</string>
     <string name="k105aaa">Month</string>
     <string name="k105aab">Years</string>
-    <string name="k105aab">Stop using now</string>
+    <string name="k105aac">Stop using now</string>
     <string name="k105b">Family Welfare Centre</string>
     <string name="k105c">Mobile service camp</string>
     <string name="k105d">Lady Health Worker</string>

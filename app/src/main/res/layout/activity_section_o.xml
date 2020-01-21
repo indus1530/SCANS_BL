@@ -190,10 +190,6 @@
                             style="@style/checkbox"
                             android:text="@string/o104e" />
 
-                        <CheckBox
-                            android:id="@+id/o104f"
-                            style="@style/checkbox"
-                            android:text="@string/o104f" />
 
                         <CheckBox
                             android:id="@+id/o104x"
