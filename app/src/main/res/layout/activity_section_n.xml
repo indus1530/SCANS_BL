@@ -303,14 +303,14 @@
                             android:text="@string/n104a" />
 
                         <EditText
-                            android:id="@+id/n104ax"
+                            android:id="@+id/n104at"
                             style="@style/radiobutton"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:hint="@string/n104a"
                             android:maxLength="2"
                             android:tag="n104a"
-                            android:text='@{n104a.checked? n104ax.getText().toString() : ""}'
+                            android:text='@{n104a.checked? n104at.getText().toString() : ""}'
                             android:visibility='@{n104a.checked? View.VISIBLE : View.GONE}' />
 
                         <RadioButton

@@ -689,27 +689,20 @@
                         style="@style/i_textview"
                         android:text="@string/h116" />
 
-                    <RadioGroup
-                        android:id="@+id/h116"
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent">
+                    <RadioButton
+                        android:id="@+id/h116a"
+                        style="@style/radiobutton"
+                        android:text="@string/h116a" />
 
-                        <RadioButton
-                            android:id="@+id/h116a"
-                            style="@style/radiobutton"
-                            android:text="@string/h116a" />
+                    <RadioButton
+                        android:id="@+id/h116b"
+                        style="@style/radiobutton"
+                        android:text="@string/h116b" />
 
-                        <RadioButton
-                            android:id="@+id/h116b"
-                            style="@style/radiobutton"
-                            android:text="@string/h116b" />
-
-                        <RadioButton
-                            android:id="@+id/h116c"
-                            style="@style/radiobutton"
-                            android:text="@string/h116c" />
-
-                    </RadioGroup>
+                    <RadioButton
+                        android:id="@+id/h116c"
+                        style="@style/radiobutton"
+                        android:text="@string/h116c" />
 
                 </LinearLayout>
 
@@ -921,6 +914,8 @@
                             android:layout_height="wrap_content"
                             android:hint="@string/kg"
                             android:inputType="number"
+                            android:text='@{h12298.checked ? "" : h122.getText().toString()}'
+                            android:visibility='@{h12298.checked ? View.GONE : View.VISIBLE}'
                             app:mask="#"
                             app:maxValue="5"
                             app:minValue="1"
@@ -1206,9 +1201,9 @@
 
             </androidx.cardview.widget.CardView>
 
-            <!-- h129a  Radio   -->
+            <!-- h129  Title   -->
             <androidx.cardview.widget.CardView
-                android:id="@+id/fldGrpCVh129a"
+                android:id="@+id/fldGrpCVh129"
                 style="@style/cardView">
 
                 <LinearLayout
@@ -1218,8 +1213,22 @@
 
                     <TextView
                         style="@style/i_textview"
-                        android:text="@string/h129"
-                        android:textAlignment="center" />
+                        android:textAlignment="center"
+                        android:text="@string/h129" />
+
+                </LinearLayout>
+
+            </androidx.cardview.widget.CardView>
+
+            <!-- h129a  Radio   -->
+            <androidx.cardview.widget.CardView
+                android:id="@+id/fldGrpCVh129a"
+                style="@style/cardView">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
 
                     <TextView
                         style="@style/i_textview"

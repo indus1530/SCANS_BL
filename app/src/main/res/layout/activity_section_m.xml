@@ -833,6 +833,7 @@
                 </LinearLayout>
             </androidx.cardview.widget.CardView>
 
+
             <!-- m110  Radio   -->
             <androidx.cardview.widget.CardView
                 android:id="@+id/fldGrpCVm110"
@@ -1193,12 +1194,6 @@
                             android:id="@+id/m114da"
                             style="@style/radiobutton"
                             android:text="@string/m114da" />
-
-                        <RadioButton
-                            android:id="@+id/m114db"
-                            style="@style/radiobutton"
-                            android:text="@string/m114cb" />
-
                     </RadioGroup>
                 </LinearLayout>
             </androidx.cardview.widget.CardView>
