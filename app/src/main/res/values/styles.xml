@@ -17,20 +17,19 @@
         <item name="android:editTextStyle">@style/textInput</item>
         <item name="android:radioButtonStyle">@style/radiobutton</item>
         <item name="checkboxStyle">@style/checkbox</item>
-        <item name="buttonStyle">@style/buttons</item>
         <item name="android:textColorHint">@color/colorPrimaryBeta</item>
         <item name="android:typeface">serif</item>
 
+    </style>
 
-        <!--        &lt;!&ndash;        <item name="buttonStyle">@style/buttons</item>&ndash;&gt;-->
-        <!--        <item name="android:fillAfter">true</item>-->
-        <!--        <item name="android:enterFadeDuration">600</item>-->
-        <!--        <item name="android:exitFadeDuration">200</item>-->
-        <!--        <item name="android:animateLayoutChanges">false</item>-->
-        <!--        <item name="android:typeface">sans</item>-->
-        <!--        &lt;!&ndash;        <item name="android:toolbarStyle">@style/ActionBar</item>&ndash;&gt;-->
-        <!--        &lt;!&ndash;        <item name="actionBarStyle">@style/ActionBar</item>&ndash;&gt;-->
-        <!--        &lt;!&ndash; Customize your theme here. &ndash;&gt;-->
+    <style name="buttons_bottom">
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_margin">4dp</item>
+        <item name="android:layout_weight">1</item>
+        <item name="android:textColor">@color/white</item>
+        <item name="android:textSize">24sp</item>
+        <item name="android:textStyle">bold</item>
     </style>
 
     <style name="textView3Head">
@@ -403,6 +402,11 @@
         <!--<item name="android:layout_marginLeft">10dp</item>-->
         <item name="cardCornerRadius">7dp</item>
         <item name="cardElevation">1dp</item>
+    </style>
+
+    <style name="AppTheme.NoActionBar">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
     </style>
     <!--Card View End-->
 

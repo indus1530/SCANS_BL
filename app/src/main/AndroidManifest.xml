@@ -56,9 +56,9 @@
             android:screenOrientation="portrait"
             android:theme="@style/AppTheme1" />
         <activity
-            android:name=".ui.form1.Section01Activity"
-            android:screenOrientation="portrait"
-            android:theme="@style/AppTheme1" />
+            android:name=".FamilyMembersListActivity"
+            android:label="@string/title_activity_family_members_list"
+            android:theme="@style/AppTheme.NoActionBar"></activity>
         <activity
             android:name=".core.AndroidDatabaseManager"
             android:parentActivityName=".ui.other.MainActivity"
