@@ -31,7 +31,6 @@ public class SectionI2Activity extends AppCompatActivity {
 
     private void setlistener() {
 
-
         bi.i201.setOnCheckedChangeListener(((radioGroup, i) -> {
 
             if (i == bi.i201b.getId()) {
@@ -104,36 +103,36 @@ public class SectionI2Activity extends AppCompatActivity {
 
     private void SaveDraft() throws JSONException {
 
-        JSONObject f1 = new JSONObject();
+        JSONObject f2 = new JSONObject();
 
-        f1.put("i201",
+        f2.put("i201",
                 bi.i201a.isChecked() ? "1" :
                         bi.i201b.isChecked() ? "2" :
                                 "0");
 
-        f1.put("i202", bi.i202.getText().toString());
+        f2.put("i202", bi.i202.getText().toString());
 
-        f1.put("i203",
+        f2.put("i203",
                 bi.i203a.isChecked() ? "1" :
                         bi.i203b.isChecked() ? "2" :
                                 "0");
 
-        f1.put("i204", bi.i204.getText().toString());
+        f2.put("i204", bi.i204.getText().toString());
 
-        f1.put("i205",
+        f2.put("i205",
                 bi.i205a.isChecked() ? "1" :
                         bi.i205b.isChecked() ? "2" :
                                 bi.i205c.isChecked() ? "98" :
                                         "0");
 
-        f1.put("i206", bi.i206.getText().toString());
+        f2.put("i206", bi.i206.getText().toString());
 
-        f1.put("i207",
+        f2.put("i207",
                 bi.i207a.isChecked() ? "1" :
                         bi.i207b.isChecked() ? "2" :
                                 "0");
 
-        f1.put("i208",
+        f2.put("i208",
                 bi.i208a.isChecked() ? "1" :
                         bi.i208b.isChecked() ? "2" :
                                 bi.i208c.isChecked() ? "3" :
@@ -143,13 +142,13 @@ public class SectionI2Activity extends AppCompatActivity {
                                                                 bi.i208g.isChecked() ? "7" :
                                                                         bi.i208h.isChecked() ? "8" :
                                                                                 "0");
-        f1.put("i209",
+        f2.put("i209",
                 bi.i209a.isChecked() ? "1" :
                         bi.i209b.isChecked() ? "2" :
                                 bi.i209c.isChecked() ? "3" :
                                         bi.i209d.isChecked() ? "4" :
                                                 "0");
-        f1.put("i210",
+        f2.put("i210",
                 bi.i210a.isChecked() ? "1" :
                         bi.i210b.isChecked() ? "2" :
                                 bi.i210c.isChecked() ? "3" :
@@ -160,11 +159,11 @@ public class SectionI2Activity extends AppCompatActivity {
                                                                         bi.i210h.isChecked() ? "8" :
                                                                                 "0");
 
-        f1.put("i211", bi.i211.getText().toString());
+        f2.put("i211", bi.i211.getText().toString());
 
-        f1.put("i212", bi.i212.getText().toString());
+        f2.put("i212", bi.i212.getText().toString());
 
-        f1.put("i213",
+        f2.put("i213",
                 bi.i213a.isChecked() ? "1" :
                         bi.i213b.isChecked() ? "2" :
                                 bi.i213c.isChecked() ? "3" :
@@ -172,58 +171,58 @@ public class SectionI2Activity extends AppCompatActivity {
                                                 bi.i213e.isChecked() ? "5" :
                                                         "0");
 
-        f1.put("i214",
+        f2.put("i214",
                 bi.i214a.isChecked() ? "1" :
                         bi.i214b.isChecked() ? "2" :
                                 "0");
 
-        f1.put("i215",
+        f2.put("i215",
                 bi.i215a.isChecked() ? "1" :
                         bi.i215b.isChecked() ? "2" :
                                 bi.i215c.isChecked() ? "3" :
                                         "0");
 
-        f1.put("i216", bi.i216.getText().toString());
+        f2.put("i216", bi.i216.getText().toString());
 
-        f1.put("i217",
+        f2.put("i217",
                 bi.i217a.isChecked() ? "1" :
                         bi.i217b.isChecked() ? "2" :
                                 bi.i217c.isChecked() ? "98" :
                                         "0");
 
-        f1.put("i218a", bi.i218a.isChecked() ? "1" : "0");
-        f1.put("i218b", bi.i218b.isChecked() ? "2" : "0");
-        f1.put("i218c", bi.i218c.isChecked() ? "3" : "0");
-        f1.put("i218d", bi.i218d.isChecked() ? "4" : "0");
-        f1.put("i218e", bi.i218e.isChecked() ? "5" : "0");
-        f1.put("i218f", bi.i218f.isChecked() ? "6" : "0");
-        f1.put("i218g", bi.i218g.isChecked() ? "7" : "0");
-        f1.put("i218h", bi.i218h.isChecked() ? "8" : "0");
-        f1.put("i218i", bi.i218i.isChecked() ? "9" : "0");
-        f1.put("i218j", bi.i218j.isChecked() ? "10" : "0");
-        f1.put("i218k", bi.i218k.isChecked() ? "11" : "0");
-        f1.put("i218l", bi.i218l.isChecked() ? "12" : "0");
-        f1.put("i218m", bi.i218m.isChecked() ? "13" : "0");
-        f1.put("i218n", bi.i218n.isChecked() ? "14" : "0");
-        f1.put("i219",
+        f2.put("i218a", bi.i218a.isChecked() ? "1" : "0");
+        f2.put("i218b", bi.i218b.isChecked() ? "2" : "0");
+        f2.put("i218c", bi.i218c.isChecked() ? "3" : "0");
+        f2.put("i218d", bi.i218d.isChecked() ? "4" : "0");
+        f2.put("i218e", bi.i218e.isChecked() ? "5" : "0");
+        f2.put("i218f", bi.i218f.isChecked() ? "6" : "0");
+        f2.put("i218g", bi.i218g.isChecked() ? "7" : "0");
+        f2.put("i218h", bi.i218h.isChecked() ? "8" : "0");
+        f2.put("i218i", bi.i218i.isChecked() ? "9" : "0");
+        f2.put("i218j", bi.i218j.isChecked() ? "10" : "0");
+        f2.put("i218k", bi.i218k.isChecked() ? "11" : "0");
+        f2.put("i218l", bi.i218l.isChecked() ? "12" : "0");
+        f2.put("i218m", bi.i218m.isChecked() ? "13" : "0");
+        f2.put("i218n", bi.i218n.isChecked() ? "14" : "0");
 
+        f2.put("i219",
                 bi.i219a.isChecked() ? "1" :
                         bi.i219b.isChecked() ? "2" :
                                 "0");
 
-        f1.put("i220",
+        f2.put("i220",
                 bi.i220a.isChecked() ? "1" :
                         bi.i220b.isChecked() ? "2" :
                                 "0");
 
-        f1.put("i221", bi.i221.getText().toString());
+        f2.put("i221", bi.i221.getText().toString());
 
-        f1.put("i222",
+        f2.put("i222",
                 bi.i222a.isChecked() ? "1" :
                         bi.i222b.isChecked() ? "2" :
                                 "0");
 
-        f1.put("i223",
+        f2.put("i223",
                 bi.i223a.isChecked() ? "1" :
                         bi.i223b.isChecked() ? "2" :
                                 bi.i223c.isChecked() ? "3" :
@@ -232,19 +231,19 @@ public class SectionI2Activity extends AppCompatActivity {
                                                         bi.i223f.isChecked() ? "6" :
                                                                 bi.i223g.isChecked() ? "7" :
                                                                         "0");
-        f1.put("i224a", bi.i224a.isChecked() ? "1" : "0");
-        f1.put("i224b", bi.i224b.isChecked() ? "2" : "0");
-        f1.put("i224c", bi.i224c.isChecked() ? "3" : "0");
-        f1.put("i224d", bi.i224d.isChecked() ? "4" : "0");
-        f1.put("i224e", bi.i224e.isChecked() ? "5" : "0");
-        f1.put("i224f", bi.i224f.isChecked() ? "6" : "0");
+        f2.put("i224a", bi.i224a.isChecked() ? "1" : "0");
+        f2.put("i224b", bi.i224b.isChecked() ? "2" : "0");
+        f2.put("i224c", bi.i224c.isChecked() ? "3" : "0");
+        f2.put("i224d", bi.i224d.isChecked() ? "4" : "0");
+        f2.put("i224e", bi.i224e.isChecked() ? "5" : "0");
+        f2.put("i224f", bi.i224f.isChecked() ? "6" : "0");
 
-        f1.put("i225",
+        f2.put("i225",
                 bi.i225a.isChecked() ? "1" :
                         bi.i225b.isChecked() ? "2" :
                                 "0");
 
-        f1.put("i226",
+        f2.put("i226",
                 bi.i226a.isChecked() ? "1" :
                         bi.i226b.isChecked() ? "2" :
                                 bi.i226c.isChecked() ? "3" :
