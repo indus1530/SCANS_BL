@@ -23,6 +23,8 @@
     Centre of Excellence Women &amp; Child Health\n
     Aga Khan University, Karachi, Pakistan</string>
 
+    <string name="title_activity_family_members_list">Family Members List</string>
+
     <string name="uc">UC</string>
     <string name="yes"> Yes </string>
     <string name="no"> No </string>
@@ -602,7 +604,7 @@
     <string name="h115g">Green tea</string>
     <string name="h115h">Breast Milk</string>
     <string name="h116">Did you breastfeed {NAME}?</string>
-    <string name="h116">For how long did you exclusively breastfeed {NAME}? </string>
+    <string name="h116t">For how long did you exclusively breastfeed {NAME}? </string>
     <string name="h116a">Yes, Exclusive breastfeeding </string>
     <string name="h116b">Yes, Breast milk with other eat/ drink Item</string>
     <string name="h116c">Never breast fed {Name}</string>
@@ -849,7 +851,7 @@
     <string name="h223c">Borrowing another loan from someone</string>
     <string name="h223d">Donations/fund raising</string>
 
-    <string name="i1.diarrhea">Now I would like to ask you some questions related to diarrhea and Acute Respiratory Infection (ARI) about less than 5 years of age children in your household during last two weeks.</string>
+    <string name="i1_diarrhea">Now I would like to ask you some questions related to diarrhea and Acute Respiratory Infection (ARI) about less than 5 years of age children in your household during last two weeks.</string>
     <string name="i101">Has any child less than 5 years of age in the household had diarrhea in the last 2 weeks?  An episode of diarrhea is defined as, “(three or more loose stools in a day/24 hours)” </string>
     <string name="i101a">Yes</string>
     <string name="i101b">No</string>
@@ -1547,7 +1549,7 @@
     <string name="l109a">Respondent</string>
     <string name="l109b">Husband</string>
     <string name="l109c">Jointly</string>
-    <string name="l109c">Other (specify)</string>
+    <string name="l109x">Other (specify)</string>
     <string name="l110">Do you own this or any other house/land/property?</string>
     <string name="l110a">Alone respondent</string>
     <string name="l110b">With husband</string>
@@ -1856,7 +1858,7 @@
     <string name="n103c">Elsewhere</string>
     <string name="n104">How long does it take to get to the water source to get water and come back?</string>
     <string name="n104a">Number of minutes</string>
-    <string name="n104a">Don\'t Know</string>
+    <string name="n10498">Don\'t Know</string>
     <string name="n105">Who usually goes to this source to collect water for the household?  Probe: Is this person under age 15? What sex?</string>
     <string name="n105a">Adult woman (age 15+ years) </string>
     <string name="n105b">Adult man (age 15+ years)</string>
@@ -1927,7 +1929,7 @@
     <string name="o104c">Liquid soap </string>
     <string name="o104d">Ash/Mud/Sand</string>
     <string name="o104e">None/Never</string>
-    <string name="o104e">Refused</string>
+    <string name="o10499">Refused</string>
     <string name="o104x">Other</string>
     <string name="o105">Do you have any soap or detergent or ash/mud/sand in your house for washing hands?</string>
     <string name="o105a">Yes</string>

@@ -36,7 +36,7 @@
 
                     <TextView
                         style="@style/textView3Head"
-                        android:text="@string/i1.diarrhea" />
+                        android:text="@string/i1_diarrhea" />
                 </LinearLayout>
             </androidx.cardview.widget.CardView>
 
@@ -1149,7 +1149,6 @@
                     style="@style/button"
                     android:onClick="@{() -> callback.BtnContinue()}"
                     android:text="Save" />
-                <!--'onClick' for btn_End will NOT change and always call 'endInterview'-->
             </LinearLayout>
         </LinearLayout>
     </ScrollView>
