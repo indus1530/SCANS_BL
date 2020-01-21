@@ -63,16 +63,18 @@ dependencies {
     testImplementation 'junit:junit:4.13'
     implementation 'com.github.amlcurran.showcaseview:library:5.4.3'
     annotationProcessor 'com.jakewharton:butterknife-compiler:10.2.1'
-//    // RecyclerView
-//    implementation 'com.android.support:recyclerview-v7:28.0.0'
-
+    // RecyclerView
+    implementation "androidx.recyclerview:recyclerview:1.1.0"
+    // For control over item selection of both touch and mouse driven selection
+    implementation "androidx.recyclerview:recyclerview-selection:1.1.0-beta01"
 
     //Combobox
     implementation 'com.github.arcadefire:nice-spinner:1.4.4'
     implementation 'com.github.Shashank02051997:FancyToast-Android:0.1.6'
 
     //Ali mask
-    implementation 'com.github.AliAzaz:Edittext-Library:1.0.4'
+    implementation 'com.github.AliAzaz:Edittext-Library:2.0.0'
+    implementation 'com.github.AliAzaz:AndroidValidatorCrawler:1.0.1'
     implementation 'com.google.code.gson:gson:2.8.6'
 
     implementation 'com.balysv:material-ripple:1.0.2'
