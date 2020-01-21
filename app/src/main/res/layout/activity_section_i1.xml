@@ -36,7 +36,7 @@
 
                     <TextView
                         style="@style/textView3Head"
-                        android:text="@string/i1.diarrhea" />
+                        android:text="@string/i1_diarrhea" />
                 </LinearLayout>
             </androidx.cardview.widget.CardView>
 

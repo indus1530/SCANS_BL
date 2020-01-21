@@ -26,7 +26,19 @@
     <string name="title_activity_family_members_list">Family Members List</string>
 
     <string name="uc">UC</string>
-    <string name="dkn">Don\'t Know</string>
+    <string name="yes"> Yes </string>
+    <string name="no"> No </string>
+    <string name="dkn"> Don\'t Know </string>
+    <string name="other"> Other </string>
+    <string name="specify"> Specify </string>
+    <string name="year"> Years </string>
+    <string name="month"> Months </string>
+    <string name="days"> Days </string>
+    <string name="hours"> Hours </string>
+    <string name="minutes"> Minutes </string>
+    <string name="kg"> Kilograms </string>
+    <string name="cm"> Centimeters </string>
+    <string name="in"> Inches </string>
 
     <string name="a101">Cluster number: This information will be based on the list of villages generated from the district. Each enumerator will be given a list of clusters that he/she will be visiting, and before starting the interview, this information will be entered from the same list. </string>
     <string name="a102">Cluster type</string>
@@ -602,12 +614,12 @@
     <string name="h118b">No</string>
     <string name="h119">For how many months did you breastfeed {NAME}?</string>
     <string name="h120">How long after delivery {NAME} was given the first bath?</string>
-    <string name="h120a">Immediately/less than 1 hour</string>
-    <string name="h120b">One to six hours</string>
-    <string name="h120c">Six to 12 hours</string>
-    <string name="h120d">12 to 24 hours</string>
-    <string name="h120e">more than 24 hours</string>
-    <string name="h120f">Don’t Know/Don’t remember</string>
+    <string name="h120a"> Immediately / less than 1 hour </string>
+    <string name="h120b"> One to six hours </string>
+    <string name="h120c"> Six to 12 hours </string>
+    <string name="h120d"> 12 to 24 hours </string>
+    <string name="h120e"> more than 24 hours </string>
+    <string name="h120f"> Don’t Know/Remember </string>
     <string name="h121">Was {NAME} weighed at birth?</string>
     <string name="h121a">Yes</string>
     <string name="h121b">No</string>
