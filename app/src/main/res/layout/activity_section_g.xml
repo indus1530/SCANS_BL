@@ -52,8 +52,11 @@
                             android:id="@+id/g101b"
                             style="@style/radiobutton"
                             android:text="@string/g101b" />
+
                     </RadioGroup>
+
                 </LinearLayout>
+
             </androidx.cardview.widget.CardView>
 
             <!-- g102  Radio   -->
@@ -242,7 +245,9 @@
                         app:maxValue="0"
                         app:minValue="0"
                         app:type="range" />
+
                 </LinearLayout>
+
             </androidx.cardview.widget.CardView>
 
             <!-- g106  Radio   -->
@@ -312,7 +317,9 @@
                         app:maxValue="0"
                         app:minValue="0"
                         app:type="range" />
+
                 </LinearLayout>
+
             </androidx.cardview.widget.CardView>
 
             <!-- g108  Radio   -->
@@ -479,11 +486,13 @@
                         android:layout_height="wrap_content"
                         android:hint="@string/g112"
                         android:inputType="number"
-                        app:mask="##"
-                        app:maxValue="0"
-                        app:minValue="0"
+                        app:mask="####"
+                        app:maxValue="1000"
+                        app:minValue="1"
                         app:type="range" />
+
                 </LinearLayout>
+
             </androidx.cardview.widget.CardView>
 
             <!-- g113  Radio   -->
@@ -689,8 +698,8 @@
                         android:layout_height="wrap_content"
                         android:hint="@string/g117a"
                         android:inputType="number"
-                        app:mask="##"
-                        app:maxValue="0"
+                        app:mask="#"
+                        app:maxValue="3"
                         app:minValue="0"
                         app:type="range" />
 
@@ -706,7 +715,7 @@
                         android:hint="@string/g117b"
                         android:inputType="number"
                         app:mask="##"
-                        app:maxValue="0"
+                        app:maxValue="23"
                         app:minValue="0"
                         app:type="range" />
 
@@ -722,10 +731,12 @@
                         android:hint="@string/g117c"
                         android:inputType="number"
                         app:mask="##"
-                        app:maxValue="0"
+                        app:maxValue="59"
                         app:minValue="0"
                         app:type="range" />
+
                 </LinearLayout>
+
             </androidx.cardview.widget.CardView>
 
             <!-- g118  Input-Numeric   -->
@@ -749,11 +760,13 @@
                         android:layout_height="wrap_content"
                         android:hint="@string/g118"
                         android:inputType="number"
-                        app:mask="##"
-                        app:maxValue="0"
-                        app:minValue="0"
+                        app:mask="######"
+                        app:maxValue="100000"
+                        app:minValue="1"
                         app:type="range" />
+
                 </LinearLayout>
+
             </androidx.cardview.widget.CardView>
 
             <!-- g119  Radio   -->
@@ -789,8 +802,11 @@
                             android:id="@+id/g119c"
                             style="@style/radiobutton"
                             android:text="@string/g119c" />
+
                     </RadioGroup>
+
                 </LinearLayout>
+
             </androidx.cardview.widget.CardView>
 
             <!-- g120  Radio   -->
@@ -1293,19 +1309,36 @@
                 android:orientation="horizontal">
 
                 <Button
-                    android:id="@+id/btn_End"
-                    style="@style/button"
-                    android:layout_marginRight="10dp"
-                    android:onClick="@{() -> callback.BtnEnd()}"
-                    android:text="Cancel" />
+                    android:id="@+id/btnNext"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="4dp"
+                    android:layout_weight="1"
+                    android:background="@android:color/holo_green_light"
+                    android:onClick="@{() -> callback.BtnContinue()}"
+                    android:text="@string/nextSection"
+                    android:textColor="@color/white"
+                    android:textSize="24sp"
+                    android:textStyle="bold" />
 
                 <Button
-                    android:id="@+id/btn_Continue"
-                    style="@style/button"
-                    android:onClick="@{() -> callback.BtnContinue()}"
-                    android:text="Save" />
+                    android:id="@+id/btnEnd"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="4dp"
+                    android:layout_weight="1"
+                    android:background="@android:color/holo_red_light"
+                    android:onClick="@{() -> callback.BtnEnd()}"
+                    android:text="@string/end_interview"
+                    android:textColor="@color/white"
+                    android:textSize="24sp"
+                    android:textStyle="bold" />
                 <!--'onClick' for btn_End will NOT change and always call 'endInterview'-->
+
             </LinearLayout>
+
         </LinearLayout>
+
     </ScrollView>
+
 </layout>
