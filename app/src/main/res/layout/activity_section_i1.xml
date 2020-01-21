@@ -26,7 +26,7 @@
 
             <!-- i1.diarrhea  Title   -->
             <androidx.cardview.widget.CardView
-                android:id="@+id/fldGrpCVi1.diarrhea"
+                android:id="@+id/fldGrpCVi1"
                 style="@style/cardView">
 
                 <LinearLayout
