@@ -2603,14 +2603,14 @@
                             android:text="@string/h219d" />
 
                         <RadioButton
-                            android:id="@+id/h219d"
-                            style="@style/radiobutton"
-                            android:text="@string/h219d" />
-
-                        <RadioButton
                             android:id="@+id/h219e"
                             style="@style/radiobutton"
                             android:text="@string/h219e" />
+
+                        <RadioButton
+                            android:id="@+id/h219f"
+                            style="@style/radiobutton"
+                            android:text="@string/h219f" />
 
                         <RadioButton
                             android:id="@+id/h219x"

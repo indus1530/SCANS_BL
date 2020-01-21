@@ -415,9 +415,9 @@
                             app:type="range" />
 
                         <RadioButton
-                            android:id="@+id/k105aab"
+                            android:id="@+id/k105aac"
                             style="@style/radiobutton"
-                            android:text="@string/k105aab" />
+                            android:text="@string/k105aac" />
                     </RadioGroup>
                 </LinearLayout>
             </androidx.cardview.widget.CardView>
