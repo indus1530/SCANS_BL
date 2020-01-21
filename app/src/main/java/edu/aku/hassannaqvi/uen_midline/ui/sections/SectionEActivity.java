@@ -1,17 +1,15 @@
 package edu.aku.hassannaqvi.uen_midline.ui.sections;
 
-import androidx.appcompat.app.AppCompatActivity;
-import androidx.databinding.DataBindingUtil;
-
-import android.app.AlertDialog;
-import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
-import android.widget.Toast;
+
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.databinding.DataBindingUtil;
 
 import com.validatorcrawler.aliazaz.Validator;
 
 import org.json.JSONException;
+import org.json.JSONObject;
 
 import edu.aku.hassannaqvi.uen_midline.R;
 import edu.aku.hassannaqvi.uen_midline.databinding.ActivitySectionEBinding;
@@ -49,6 +47,21 @@ public class SectionEActivity extends AppCompatActivity {
     }
 
     private void SaveDraft() throws JSONException {
+
+        JSONObject e1 = new JSONObject();
+
+        e1.put("e101",
+                bi.e101a.isChecked() ? "1" :
+                        bi.e101b.isChecked() ? "2" :
+                                "0");
+
+        e1.put("e102", bi.e102.getText().toString());
+
+        e1.put("e102a",
+                bi.e102aa.isChecked() ? "1" :
+                        bi.e102ab.isChecked() ? "2" :
+                                "0");
+
     }
 
     private boolean formValidation() {
