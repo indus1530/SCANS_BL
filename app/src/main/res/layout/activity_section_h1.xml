@@ -38,13 +38,15 @@
                         style="@style/i_textview"
                         android:text="@string/h101" />
 
-                    <EditText
+                    <com.edittextpicker.aliazaz.EditTextPicker
                         android:id="@+id/h101"
-                        style="@style/textInputName"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
+                        style="@style/EditTextAlphaNumeric"
                         android:hint="@string/month"
-                        android:textColor="@android:color/black" />
+                        android:inputType="number"
+                        app:mask="#"
+                        app:maxValue="9"
+                        app:minValue="1"
+                        app:type="range" />
 
                 </LinearLayout>
 
@@ -240,8 +242,6 @@
                     <com.edittextpicker.aliazaz.EditTextPicker
                         android:id="@+id/h106"
                         style="@style/EditTextAlphaNumeric"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
                         android:hint="@string/minutes"
                         android:inputType="number"
                         app:mask="##"
@@ -465,8 +465,6 @@
                     <com.edittextpicker.aliazaz.EditTextPicker
                         android:id="@+id/h111"
                         style="@style/EditTextAlphaNumeric"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
                         android:hint="@string/minutes"
                         android:inputType="number"
                         app:mask="##"
@@ -495,8 +493,6 @@
                     <com.edittextpicker.aliazaz.EditTextPicker
                         android:id="@+id/h112"
                         style="@style/EditTextAlphaNumeric"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
                         android:hint="@string/minutes"
                         android:inputType="number"
                         app:mask="##"

@@ -347,15 +347,13 @@ public class SectionGActivity extends AppCompatActivity {
                         bi.g122b.isChecked() ? "2" :
                                 "0");
 
-        json.put("g123",
-                bi.g123a.isChecked() ? "1" :
-                        bi.g123b.isChecked() ? "2" :
-                                bi.g123c.isChecked() ? "3" :
-                                        bi.g123d.isChecked() ? "4" :
-                                                bi.g123e.isChecked() ? "5" :
-                                                        bi.g123f.isChecked() ? "6" :
-                                                                bi.g123g.isChecked() ? "7" :
-                                                                        "0");
+        json.put("g123a", bi.g123a.isChecked() ? "1" : "0");
+        json.put("g123b", bi.g123b.isChecked() ? "2" : "0");
+        json.put("g123c", bi.g123c.isChecked() ? "3" : "0");
+        json.put("g123d", bi.g123d.isChecked() ? "4" : "0");
+        json.put("g123e", bi.g123e.isChecked() ? "5" : "0");
+        json.put("g123f", bi.g123f.isChecked() ? "6" : "0");
+        json.put("g123g", bi.g123g.isChecked() ? "7" : "0");
 
         json.put("g124a", bi.g124a.isChecked() ? "1" : "0");
         json.put("g124b", bi.g124b.isChecked() ? "2" : "0");

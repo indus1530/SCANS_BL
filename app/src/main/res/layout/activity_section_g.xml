@@ -1001,47 +1001,43 @@
                         style="@style/i_textview"
                         android:text="@string/g123" />
 
-                    <RadioGroup
-                        android:id="@+id/g123"
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent">
-
-                        <RadioButton
+                    <CheckBox
                             android:id="@+id/g123a"
-                            style="@style/radiobutton"
+                        style="@style/checkbox"
                             android:text="@string/g123a" />
 
-                        <RadioButton
+                    <CheckBox
                             android:id="@+id/g123b"
-                            style="@style/radiobutton"
+                        style="@style/checkbox"
                             android:text="@string/g123b" />
 
-                        <RadioButton
+                    <CheckBox
                             android:id="@+id/g123c"
-                            style="@style/radiobutton"
+                        style="@style/checkbox"
                             android:text="@string/g123c" />
 
-                        <RadioButton
+                    <CheckBox
                             android:id="@+id/g123d"
-                            style="@style/radiobutton"
+                        style="@style/checkbox"
                             android:text="@string/g123d" />
 
-                        <RadioButton
+                    <CheckBox
                             android:id="@+id/g123e"
-                            style="@style/radiobutton"
+                        style="@style/checkbox"
                             android:text="@string/g123e" />
 
-                        <RadioButton
+                    <CheckBox
                             android:id="@+id/g123f"
-                            style="@style/radiobutton"
+                        style="@style/checkbox"
                             android:text="@string/g123f" />
 
-                        <RadioButton
+                    <CheckBox
                             android:id="@+id/g123g"
-                            style="@style/radiobutton"
+                        style="@style/checkbox"
                             android:text="@string/g123g" />
-                    </RadioGroup>
+
                 </LinearLayout>
+
             </androidx.cardview.widget.CardView>
 
             <!-- g124  CheckBox   -->
