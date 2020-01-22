@@ -34,6 +34,18 @@ public class DateUtils {
         return monthsBetween;
     }
 
+    public static long ageInYears(int day, int month, int year) {
+        Calendar cal = Calendar.getInstance();
+        cal.setTime(cal.getTime());
+        cal.add(Calendar.DAY_OF_MONTH, day);
+        cal.add(Calendar.MONTH, month);
+        cal.add(Calendar.YEAR, year);
+        Date dob = cal.getTime();
+        Date today = new Date();
+        Long diff = today.getTime() - dob.getTime();
+        return (diff / (24 * 60 * 60 * 1000)) / 365;
+    }
+
     public static long ageInMonths(String year, String month) {
         long ageInMonths = (Integer.valueOf(year) * 12) + Integer.valueOf(month);
         return ageInMonths;
