@@ -410,4 +410,8 @@
     </style>
     <!--Card View End-->
 
+    <style name="expandCollapse">
+        <item name="android:textColor">@color/colorPrimary</item>
+    </style>
+
 </resources>

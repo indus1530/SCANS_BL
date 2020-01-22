@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 
-<layout xmlns:android="http://schemas.android.com/apk/res/android">
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
 
 
     <androidx.cardview.widget.CardView
@@ -31,7 +32,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_centerInParent="true"
-                        android:text="13"
+                        android:text="01"
                         android:textColor="@color/white"
                         android:textSize="20sp"
                         android:textStyle="bold" />
@@ -69,11 +70,11 @@
                         android:textStyle="bold" />
 
                     <TextView
-                        android:id="@+id/id"
+                        android:id="@+id/subname"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
-                        android:text="Mother Id Not Found"
+                        android:text="Husband/Mother Name Not Found"
                         android:textAppearance="@style/TextAppearance.AppCompat.Medium" />
 
                     <TextView
@@ -83,7 +84,6 @@
                         android:layout_weight="1"
                         android:text="7 Months"
                         android:textAppearance="@style/TextAppearance.AppCompat.Medium" />
-
 
                 </LinearLayout>
 
@@ -96,7 +96,9 @@
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
                     android:layout_weight="0.3"
-                    android:gravity="center">
+                    android:gravity="center"
+                    android:visibility="gone"
+                    tools:visibility="visible">
 
                     <ImageView
                         android:layout_width="50dp"
@@ -104,40 +106,6 @@
                         android:src="@drawable/check" />
 
                 </LinearLayout>
-
-                <!--                <View-->
-                <!--                    android:layout_width="10dp"-->
-                <!--                    android:layout_height="match_parent" />-->
-
-
-                <!--                <LinearLayout-->
-                <!--                    android:layout_width="wrap_content"-->
-                <!--                    android:layout_height="match_parent"-->
-                <!--                    android:layout_alignParentEnd="true"-->
-                <!--                    android:orientation="vertical"-->
-                <!--                    android:padding="16dp">-->
-
-                <!--                    <TextView-->
-                <!--                        android:id="@+id/studyID"-->
-                <!--                        android:layout_width="match_parent"-->
-                <!--                        android:layout_height="wrap_content"-->
-                <!--                        android:layout_weight="1"-->
-                <!--                        android:gravity="end"-->
-                <!--                        android:textColor="@color/colorPrimary" />-->
-
-
-                <!--                    <TextView-->
-                <!--                        android:id="@+id/child_status"-->
-                <!--                        android:layout_width="match_parent"-->
-                <!--                        android:layout_height="wrap_content"-->
-                <!--                        android:background="@color/enrolled"-->
-                <!--                        android:gravity="center"-->
-                <!--                        android:padding="10dp"-->
-                <!--                        android:text="Selected"-->
-                <!--                        android:textColor="@color/black" />-->
-
-
-                <!--                </LinearLayout>-->
 
             </LinearLayout>
 

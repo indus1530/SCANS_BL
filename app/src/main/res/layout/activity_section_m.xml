@@ -20,19 +20,14 @@
 
         <LinearLayout
             android:id="@+id/GrpName"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="vertical">
+            style="@style/linearlayout_view_wt_bound">
 
             <!-- m101  Radio   -->
             <androidx.cardview.widget.CardView
                 android:id="@+id/fldGrpCVm101"
                 style="@style/cardView">
 
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:orientation="vertical">
+                <LinearLayout style="@style/linearlayout_view_wt_bound">
 
                     <TextView
                         style="@style/i_textview"
@@ -66,10 +61,7 @@
                 android:id="@+id/fldGrpCVm102"
                 style="@style/cardView">
 
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:orientation="vertical">
+                <LinearLayout style="@style/linearlayout_view_wt_bound">
 
                     <TextView
                         style="@style/i_textview"
