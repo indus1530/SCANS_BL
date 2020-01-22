@@ -17,8 +17,7 @@ import java.util.Date;
 
 public class FormsContract {
 
-    private final String projectName = "UEN SOSAS";
-    //private final String surveyType = "SN";
+    private final String projectName = "UEN HHS Midline";
     private String _ID = "";
     private String _UID = "";
     private String formType = "";

@@ -8,6 +8,8 @@ import android.widget.Toast;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.databinding.DataBindingUtil;
 
+import com.validatorcrawler.aliazaz.Validator;
+
 import org.json.JSONException;
 import org.json.JSONObject;
 
@@ -15,7 +17,6 @@ import edu.aku.hassannaqvi.uen_midline.R;
 import edu.aku.hassannaqvi.uen_midline.core.MainApp;
 import edu.aku.hassannaqvi.uen_midline.databinding.ActivitySectionGBinding;
 import edu.aku.hassannaqvi.uen_midline.validator.ClearClass;
-import edu.aku.hassannaqvi.uen_midline.validator.ValidatorClass;
 
 public class SectionGActivity extends AppCompatActivity {
 
@@ -172,7 +173,7 @@ public class SectionGActivity extends AppCompatActivity {
             }
             if (UpdateDB()) {
                 finish();
-                startActivity(new Intent(this, SectionHActivity.class));
+                startActivity(new Intent(this, SectionH1Activity.class));
             } else {
                 Toast.makeText(this, "Failed to Update Database!", Toast.LENGTH_SHORT).show();
             }
@@ -402,7 +403,7 @@ public class SectionGActivity extends AppCompatActivity {
 
 
     private boolean formValidation() {
-        return ValidatorClass.EmptyCheckingContainer(this, bi.GrpName);
+        return Validator.emptyCheckingContainer(this, bi.GrpName);
 
     }
 

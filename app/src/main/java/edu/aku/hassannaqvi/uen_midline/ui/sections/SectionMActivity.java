@@ -1,16 +1,86 @@
 package edu.aku.hassannaqvi.uen_midline.ui.sections;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.databinding.DataBindingUtil;
 
+import android.content.Intent;
 import android.os.Bundle;
+import android.widget.Toast;
+
+import com.validatorcrawler.aliazaz.Validator;
+
+import org.json.JSONException;
 
 import edu.aku.hassannaqvi.uen_midline.R;
+import edu.aku.hassannaqvi.uen_midline.databinding.ActivitySectionMBinding;
+import edu.aku.hassannaqvi.uen_midline.utils.Util;
+import edu.aku.hassannaqvi.uen_midline.validator.ClearClass;
 
 public class SectionMActivity extends AppCompatActivity {
+
+
+    ActivitySectionMBinding bi;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_section_m);
+
+        bi = DataBindingUtil.setContentView(this, R.layout.activity_section_m);
+        bi.setCallback(this);
+
+        setUIComponents();
     }
+
+    private void setUIComponents() {
+
+        bi.m109.setOnCheckedChangeListener(((radioGroup, i) -> {
+
+            if (i != bi.m109a.getId()) {
+                ClearClass.ClearAllFields(bi.fldGrpCVm110, null);
+            }
+        }));
+
+        bi.m111.setOnCheckedChangeListener(((radioGroup, i) -> {
+            if (i == bi.m111b.getId()) {
+                ClearClass.ClearAllFields(bi.fldGrpCVm112, null);
+            }
+        }));
+    }
+
+    public void BtnContinue() {
+        if (formValidation()) {
+            try {
+                SaveDraft();
+            } catch (Exception e) {
+                e.printStackTrace();
+            }
+            if (UpdateDB()) {
+                finish();
+                startActivity(new Intent(this, SectionNActivity.class));
+            } else {
+                Toast.makeText(this, "Failed to Update Database!", Toast.LENGTH_SHORT).show();
+            }
+
+        }
+    }
+
+    private boolean UpdateDB() {
+
+        return true;
+    }
+
+    private void SaveDraft() throws JSONException {
+    }
+
+    private boolean formValidation() {
+
+        return Validator.emptyCheckingContainer(this, bi.fldGrpSectionM);
+
+    }
+
+    public void BtnEnd() {
+
+        Util.openEndActivity(this);
+    }
+
 }

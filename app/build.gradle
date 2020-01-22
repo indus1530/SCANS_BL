@@ -74,8 +74,10 @@ dependencies {
 
     //Ali mask
     implementation 'com.github.AliAzaz:Edittext-Library:2.0.0'
-    implementation 'com.github.AliAzaz:AndroidValidatorCrawler:1.0.1'
+
     implementation 'com.google.code.gson:gson:2.8.6'
+
+    implementation 'com.github.AliAzaz:AndroidValidatorCrawler:1.0.1'
 
     implementation 'com.balysv:material-ripple:1.0.2'
 
