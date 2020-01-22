@@ -358,7 +358,8 @@
 
                     <EditText
                         android:id="@+id/d108a"
-                        style="@style/textInputName"
+                        style="@style/textInput"
+                        android:inputType="number"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:hint="@string/d108a"
@@ -370,7 +371,8 @@
 
                     <EditText
                         android:id="@+id/d108b"
-                        style="@style/textInputName"
+                        style="@style/textInput"
+                        android:inputType="number"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:hint="@string/d108b"
@@ -382,7 +384,8 @@
 
                     <EditText
                         android:id="@+id/d108c"
-                        style="@style/textInputName"
+                        style="@style/textInput"
+                        android:inputType="number"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:hint="@string/d108c"
@@ -410,7 +413,8 @@
 
                     <EditText
                         android:id="@+id/d109a"
-                        style="@style/textInputName"
+                        style="@style/textInput"
+                        android:inputType="number"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:hint="@string/d109a"
@@ -422,7 +426,8 @@
 
                     <EditText
                         android:id="@+id/d109b"
-                        style="@style/textInputName"
+                        style="@style/textInput"
+                        android:inputType="number"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:hint="@string/d109b"
@@ -434,7 +439,8 @@
 
                     <EditText
                         android:id="@+id/d109c"
-                        style="@style/textInputName"
+                        style="@style/textInput"
+                        android:inputType="number"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:hint="@string/d109c"

@@ -50,6 +50,7 @@ import edu.aku.hassannaqvi.uen_midline.core.DatabaseHelper;
 import edu.aku.hassannaqvi.uen_midline.core.MainApp;
 import edu.aku.hassannaqvi.uen_midline.databinding.ActivityMainBinding;
 import edu.aku.hassannaqvi.uen_midline.get.GetFamilyMembersData;
+import edu.aku.hassannaqvi.uen_midline.ui.sections.SectionDActivity;
 import edu.aku.hassannaqvi.uen_midline.ui.sections.SectionE2Activity;
 import edu.aku.hassannaqvi.uen_midline.ui.sync.SyncActivity;
 
@@ -303,7 +304,7 @@ public class MainActivity extends AppCompatActivity {
     public void OpenFormFunc() {
         Intent oF = new Intent();
         if (!MainApp.userName.equals("0000")) {
-            oF = new Intent(MainActivity.this, SectionE2Activity.class);
+            oF = new Intent(MainActivity.this, SectionDActivity.class);
             startActivity(oF);
         } else {
             Toast.makeText(getApplicationContext(), "Please login Again!", Toast.LENGTH_LONG).show();

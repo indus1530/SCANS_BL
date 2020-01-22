@@ -169,8 +169,10 @@ public class MainApp extends Application {
     public static int childCount = 0;
     public static int problemType = 1;
     public static int problemCount = 0;
+    public static int noOfPragnencies = 0;
     public static List<Integer> extLst;
     public static boolean twinFlag = false;
+    public static List<String> pragnantWoman = new ArrayList<>();
 
     /*
      problem type

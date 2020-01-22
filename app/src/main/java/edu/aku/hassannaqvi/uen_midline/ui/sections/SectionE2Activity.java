@@ -1,11 +1,12 @@
 package edu.aku.hassannaqvi.uen_midline.ui.sections;
 
+import android.app.Dialog;
 import android.content.Intent;
 import android.os.Bundle;
-import android.view.LayoutInflater;
 import android.view.View;
+import android.view.Window;
+import android.view.WindowManager;
 
-import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.databinding.DataBindingUtil;
 
@@ -17,7 +18,6 @@ import org.json.JSONObject;
 import edu.aku.hassannaqvi.uen_midline.R;
 import edu.aku.hassannaqvi.uen_midline.core.MainApp;
 import edu.aku.hassannaqvi.uen_midline.databinding.ActivitySectionE2Binding;
-import edu.aku.hassannaqvi.uen_midline.databinding.ItemDialogBinding;
 import edu.aku.hassannaqvi.uen_midline.utils.Util;
 import edu.aku.hassannaqvi.uen_midline.validator.ClearClass;
 
@@ -38,8 +38,24 @@ public class SectionE2Activity extends AppCompatActivity {
 
     private void setUIComponent() {
 
+
         bi.e105.setOnCheckedChangeListener(((radioGroup, i) -> {
+
             MainApp.twinFlag = i == bi.e105c.getId();
+            if (i == bi.e105e.getId()) {
+                bi.container1.setVisibility(View.GONE);
+                bi.container2.setVisibility(View.GONE);
+            } else {
+                bi.container1.setVisibility(View.VISIBLE);
+                bi.container2.setVisibility(View.VISIBLE);
+            }
+
+
+        }));
+
+
+        bi.e107.setOnCheckedChangeListener(((radioGroup, i) -> {
+
         }));
 
     }
@@ -56,8 +72,12 @@ public class SectionE2Activity extends AppCompatActivity {
                     openDialog();
                 }
             } else {
-                MainApp.counter++;
-                startActivity(new Intent(SectionE2Activity.this, SectionE2Activity.class));
+                if (MainApp.noOfPragnencies > 0) {
+                    startActivity(new Intent(SectionE2Activity.this, SectionE2Activity.class));
+                } else {
+                    startActivity(new Intent(SectionE2Activity.this, SectionE3Activity.class));
+                }
+
             }
 
 
@@ -65,17 +85,27 @@ public class SectionE2Activity extends AppCompatActivity {
     }
 
     private void openDialog() {
-        AlertDialog.Builder builder = new AlertDialog.Builder(this);
-        View view = LayoutInflater.from(this).inflate(R.layout.item_dialog, null);
-        ItemDialogBinding bin = DataBindingUtil.bind(view.getRootView());
-        builder.setView(view);
-        AlertDialog dialog = builder.create();
-        dialog.show();
-        bin.okBtn.setOnClickListener(view1 -> {
-            clearContainer();
-            dialog.dismiss();
+        Dialog dialog = new Dialog(this);
+        dialog.requestWindowFeature(Window.FEATURE_NO_TITLE);
+        dialog.setContentView(R.layout.item_dialog);
+        dialog.setCancelable(false);
+        WindowManager.LayoutParams params = new WindowManager.LayoutParams();
+        params.copyFrom(dialog.getWindow().getAttributes());
+        params.width = WindowManager.LayoutParams.WRAP_CONTENT;
+        params.height = WindowManager.LayoutParams.WRAP_CONTENT;
 
+        dialog.show();
+        dialog.getWindow().setAttributes(params);
+
+        dialog.findViewById(R.id.btnOk).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                clearContainer();
+                dialog.dismiss();
+
+            }
         });
+
     }
 
     private void clearContainer() {
@@ -156,6 +186,8 @@ public class SectionE2Activity extends AppCompatActivity {
                 bi.e115a.isChecked() ? "1" :
                         bi.e115b.isChecked() ? "2" :
                                 "0");
+
+        --MainApp.noOfPragnencies;
 
 
     }
