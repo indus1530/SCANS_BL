@@ -35,6 +35,7 @@
 
     <color name="black_overlay">#66000000</color>
     <color name="zxing_transparent">#00000000</color>
+    <color name="greenInfo">#7CB342</color>
 
     <color name="year">#999999</color>
     <color name="title">#222222</color>

@@ -6,7 +6,6 @@
 
         <import type="android.view.View" />
 
-
         <variable
             name="callback"
             type="edu.aku.hassannaqvi.uen_midline.ui.sections.SectionMActivity" />
@@ -20,20 +19,15 @@
         tools:context=".ui.Myactivity">
 
         <LinearLayout
-            android:id="@+id/fldGrpSectionM"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="vertical">
+            android:id="@+id/GrpName"
+            style="@style/linearlayout_view_wt_bound">
 
             <!-- m101  Radio   -->
             <androidx.cardview.widget.CardView
                 android:id="@+id/fldGrpCVm101"
                 style="@style/cardView">
 
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:orientation="vertical">
+                <LinearLayout style="@style/linearlayout_view_wt_bound">
 
                     <TextView
                         style="@style/i_textview"
@@ -67,10 +61,7 @@
                 android:id="@+id/fldGrpCVm102"
                 style="@style/cardView">
 
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:orientation="vertical">
+                <LinearLayout style="@style/linearlayout_view_wt_bound">
 
                     <TextView
                         style="@style/i_textview"
@@ -113,15 +104,14 @@
                         android:layout_width="match_parent"
                         android:layout_height="match_parent">
 
-                        <TextView
-                            style="@style/textView3Head"
-                            android:text="@string/m103a_title" />
-
                         <RadioButton
                             android:id="@+id/m103a"
                             style="@style/radiobutton"
                             android:text="@string/m103a" />
 
+                        <TextView
+                            style="@style/i_textview"
+                            android:text="@string/m103a_title" />
 
                         <RadioButton
                             android:id="@+id/m103b"
@@ -143,15 +133,14 @@
                             style="@style/radiobutton"
                             android:text="@string/m103e" />
 
-                        <TextView
-                            style="@style/textView3Head"
-                            android:text="@string/m103f_title" />
-
                         <RadioButton
                             android:id="@+id/m103f"
                             style="@style/radiobutton"
                             android:text="@string/m103f" />
 
+                        <TextView
+                            style="@style/i_textview"
+                            android:text="@string/m103f_title" />
 
                         <RadioButton
                             android:id="@+id/m103g"
@@ -215,15 +204,14 @@
                         android:layout_width="match_parent"
                         android:layout_height="match_parent">
 
-                        <TextView
-                            style="@style/textView3Head"
-                            android:text="@string/m104a_title" />
-
                         <RadioButton
                             android:id="@+id/m104a"
                             style="@style/radiobutton"
                             android:text="@string/m104a" />
 
+                        <TextView
+                            style="@style/i_textview"
+                            android:text="@string/m104a_title" />
 
                         <RadioButton
                             android:id="@+id/m104b"
@@ -235,14 +223,14 @@
                             style="@style/radiobutton"
                             android:text="@string/m104c" />
 
-                        <TextView
-                            style="@style/textView3Head"
-                            android:text="@string/m104d_title" />
-
                         <RadioButton
                             android:id="@+id/m104d"
                             style="@style/radiobutton"
                             android:text="@string/m104d" />
+
+                        <TextView
+                            style="@style/i_textview"
+                            android:text="@string/m104d_title" />
 
                         <RadioButton
                             android:id="@+id/m104e"
@@ -259,15 +247,14 @@
                             style="@style/radiobutton"
                             android:text="@string/m104g" />
 
-                        <TextView
-                            style="@style/textView3Head"
-                            android:text="@string/m104h_title" />
-
                         <RadioButton
                             android:id="@+id/m104h"
                             style="@style/radiobutton"
                             android:text="@string/m104h" />
 
+                        <TextView
+                            style="@style/i_textview"
+                            android:text="@string/m104h_title" />
 
                         <RadioButton
                             android:id="@+id/m104i"
@@ -326,14 +313,14 @@
                         android:layout_width="match_parent"
                         android:layout_height="match_parent">
 
-                        <TextView
-                            style="@style/textView3Head"
-                            android:text="@string/m105a_title" />
-
                         <RadioButton
                             android:id="@+id/m105a"
                             style="@style/radiobutton"
                             android:text="@string/m105a" />
+
+                        <TextView
+                            style="@style/i_textview"
+                            android:text="@string/m105a_title" />
 
                         <RadioButton
                             android:id="@+id/m105b"
@@ -355,14 +342,14 @@
                             style="@style/radiobutton"
                             android:text="@string/m105e" />
 
-                        <TextView
-                            style="@style/textView3Head"
-                            android:text="@string/m105f_title" />
-
                         <RadioButton
                             android:id="@+id/m105f"
                             style="@style/radiobutton"
                             android:text="@string/m105f" />
+
+                        <TextView
+                            style="@style/i_textview"
+                            android:text="@string/m105f_title" />
 
                         <RadioButton
                             android:id="@+id/m105g"
@@ -399,14 +386,14 @@
                             style="@style/radiobutton"
                             android:text="@string/m105m" />
 
-                        <TextView
-                            style="@style/textView3Head"
-                            android:text="@string/m105n_title" />
-
                         <RadioButton
                             android:id="@+id/m105n"
                             style="@style/radiobutton"
                             android:text="@string/m105n" />
+
+                        <TextView
+                            style="@style/i_textview"
+                            android:text="@string/m105n_title" />
 
                         <RadioButton
                             android:id="@+id/m105o"
@@ -467,7 +454,10 @@
                         android:layout_height="wrap_content"
                         android:hint="@string/m106"
                         android:inputType="number"
-                        android:maxLength="2" />
+                        app:mask="##"
+                        app:maxValue="0"
+                        app:minValue="0"
+                        app:type="range" />
                 </LinearLayout>
             </androidx.cardview.widget.CardView>
 
@@ -498,7 +488,7 @@
                     android:orientation="vertical">
 
                     <TextView
-                        style="@style/textView3Head"
+                        style="@style/i_textview"
                         android:text="@string/m107a" />
 
                     <RadioGroup
@@ -530,7 +520,7 @@
                     android:orientation="vertical">
 
                     <TextView
-                        style="@style/textView3Head"
+                        style="@style/i_textview"
                         android:text="@string/m107b" />
 
                     <RadioGroup
@@ -562,7 +552,7 @@
                     android:orientation="vertical">
 
                     <TextView
-                        style="@style/textView3Head"
+                        style="@style/i_textview"
                         android:text="@string/m107c" />
 
                     <RadioGroup
@@ -594,7 +584,7 @@
                     android:orientation="vertical">
 
                     <TextView
-                        style="@style/textView3Head"
+                        style="@style/i_textview"
                         android:text="@string/m107d" />
 
                     <RadioButton
@@ -620,7 +610,7 @@
                     android:orientation="vertical">
 
                     <TextView
-                        style="@style/textView3Head"
+                        style="@style/i_textview"
                         android:text="@string/m107e" />
 
                     <RadioGroup
@@ -652,7 +642,7 @@
                     android:orientation="vertical">
 
                     <TextView
-                        style="@style/textView3Head"
+                        style="@style/i_textview"
                         android:text="@string/m107f" />
 
                     <RadioGroup
@@ -684,7 +674,7 @@
                     android:orientation="vertical">
 
                     <TextView
-                        style="@style/textView3Head"
+                        style="@style/i_textview"
                         android:text="@string/m107g" />
 
                     <RadioGroup
@@ -716,7 +706,7 @@
                     android:orientation="vertical">
 
                     <TextView
-                        style="@style/textView3Head"
+                        style="@style/i_textview"
                         android:text="@string/m107h" />
 
                     <RadioGroup
@@ -748,7 +738,7 @@
                     android:orientation="vertical">
 
                     <TextView
-                        style="@style/textView3Head"
+                        style="@style/i_textview"
                         android:text="@string/m107i" />
 
                     <RadioGroup
@@ -833,12 +823,10 @@
                 </LinearLayout>
             </androidx.cardview.widget.CardView>
 
-
             <!-- m110  Radio   -->
             <androidx.cardview.widget.CardView
                 android:id="@+id/fldGrpCVm110"
-                style="@style/cardView"
-                android:visibility='@{m109a.checked? View.VISIBLE : View.GONE}'>
+                style="@style/cardView">
 
                 <LinearLayout
                     android:layout_width="match_parent"
@@ -849,41 +837,48 @@
                         style="@style/i_textview"
                         android:text="@string/m110" />
 
-                    <TextView
-                        style="@style/textView3Head"
-                        android:text="@string/m110a" />
-
-                    <com.edittextpicker.aliazaz.EditTextPicker
-                        android:id="@+id/m110a"
-                        style="@style/EditTextAlphaNumeric"
+                    <RadioGroup
+                        android:id="@+id/m110"
                         android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:enabled='@{m110c.checked? false : true}'
-                        android:hint="@string/m110a"
-                        android:inputType="number"
-                        android:text='@{m110c.checked? "" :m110a.getText().toString() }'
-                        app:mask="###.#" />
+                        android:layout_height="match_parent">
 
-                    <TextView
-                        style="@style/textView3Head"
-                        android:text="@string/m110b" />
+                        <TextView
+                            style="@style/i_textview"
+                            android:text="@string/m110a" />
 
-                    <com.edittextpicker.aliazaz.EditTextPicker
-                        android:id="@+id/m110b"
-                        style="@style/EditTextAlphaNumeric"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:enabled='@{m110c.checked? false : true}'
-                        android:hint="@string/m110b"
-                        android:inputType="number"
-                        android:text='@{m110c.checked? "" :m110b.getText().toString() }'
-                        app:mask="###.#" />
+                        <com.edittextpicker.aliazaz.EditTextPicker
+                            android:id="@+id/m110a"
+                            style="@style/EditTextAlphaNumeric"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:hint="@string/m110a"
+                            android:inputType="number"
+                            app:mask="##"
+                            app:maxValue="0"
+                            app:minValue="0"
+                            app:type="range" />
 
-                    <CheckBox
-                        android:id="@+id/m110c"
-                        style="@style/radiobutton"
-                        android:tag="-1"
-                        android:text="@string/m110c" />
+                        <TextView
+                            style="@style/i_textview"
+                            android:text="@string/m110b" />
+
+                        <com.edittextpicker.aliazaz.EditTextPicker
+                            android:id="@+id/m110b"
+                            style="@style/EditTextAlphaNumeric"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:hint="@string/m110b"
+                            android:inputType="number"
+                            app:mask="##"
+                            app:maxValue="0"
+                            app:minValue="0"
+                            app:type="range" />
+
+                        <RadioButton
+                            android:id="@+id/m110c"
+                            style="@style/radiobutton"
+                            android:text="@string/m110c" />
+                    </RadioGroup>
                 </LinearLayout>
             </androidx.cardview.widget.CardView>
 
@@ -922,8 +917,7 @@
             <!-- m112  Title   -->
             <androidx.cardview.widget.CardView
                 android:id="@+id/fldGrpCVm112"
-                style="@style/cardView"
-                android:visibility='@{m111b.checked? View.GONE : View.VISIBLE}'>
+                style="@style/cardView">
 
                 <LinearLayout
                     android:layout_width="match_parent"
@@ -935,7 +929,7 @@
                         android:text="@string/m112" />
 
                     <TextView
-                        style="@style/textView3Head"
+                        style="@style/i_textview"
                         android:text="@string/m112a" />
 
                     <com.edittextpicker.aliazaz.EditTextPicker
@@ -945,10 +939,13 @@
                         android:layout_height="wrap_content"
                         android:hint="@string/m112a"
                         android:inputType="number"
-                        android:maxLength="2" />
+                        app:mask="##"
+                        app:maxValue="0"
+                        app:minValue="0"
+                        app:type="range" />
 
                     <TextView
-                        style="@style/textView3Head"
+                        style="@style/i_textview"
                         android:text="@string/m112b" />
 
                     <com.edittextpicker.aliazaz.EditTextPicker
@@ -958,10 +955,13 @@
                         android:layout_height="wrap_content"
                         android:hint="@string/m112b"
                         android:inputType="number"
-                        android:maxLength="2" />
+                        app:mask="##"
+                        app:maxValue="0"
+                        app:minValue="0"
+                        app:type="range" />
 
                     <TextView
-                        style="@style/textView3Head"
+                        style="@style/i_textview"
                         android:text="@string/m112c" />
 
                     <com.edittextpicker.aliazaz.EditTextPicker
@@ -971,10 +971,13 @@
                         android:layout_height="wrap_content"
                         android:hint="@string/m112c"
                         android:inputType="number"
-                        android:maxLength="2" />
+                        app:mask="##"
+                        app:maxValue="0"
+                        app:minValue="0"
+                        app:type="range" />
 
                     <TextView
-                        style="@style/textView3Head"
+                        style="@style/i_textview"
                         android:text="@string/m112d" />
 
                     <com.edittextpicker.aliazaz.EditTextPicker
@@ -984,10 +987,13 @@
                         android:layout_height="wrap_content"
                         android:hint="@string/m112d"
                         android:inputType="number"
-                        android:maxLength="2" />
+                        app:mask="##"
+                        app:maxValue="0"
+                        app:minValue="0"
+                        app:type="range" />
 
                     <TextView
-                        style="@style/textView3Head"
+                        style="@style/i_textview"
                         android:text="@string/m112e" />
 
                     <com.edittextpicker.aliazaz.EditTextPicker
@@ -997,10 +1003,13 @@
                         android:layout_height="wrap_content"
                         android:hint="@string/m112e"
                         android:inputType="number"
-                        android:maxLength="2" />
+                        app:mask="##"
+                        app:maxValue="0"
+                        app:minValue="0"
+                        app:type="range" />
 
                     <TextView
-                        style="@style/textView3Head"
+                        style="@style/i_textview"
                         android:text="@string/m112f" />
 
                     <com.edittextpicker.aliazaz.EditTextPicker
@@ -1010,10 +1019,13 @@
                         android:layout_height="wrap_content"
                         android:hint="@string/m112f"
                         android:inputType="number"
-                        android:maxLength="2" />
+                        app:mask="##"
+                        app:maxValue="0"
+                        app:minValue="0"
+                        app:type="range" />
 
                     <TextView
-                        style="@style/textView3Head"
+                        style="@style/i_textview"
                         android:text="@string/m112g" />
 
                     <com.edittextpicker.aliazaz.EditTextPicker
@@ -1023,7 +1035,10 @@
                         android:layout_height="wrap_content"
                         android:hint="@string/m112g"
                         android:inputType="number"
-                        android:maxLength="2" />
+                        app:mask="##"
+                        app:maxValue="0"
+                        app:minValue="0"
+                        app:type="range" />
                 </LinearLayout>
             </androidx.cardview.widget.CardView>
 
@@ -1086,7 +1101,7 @@
                     android:orientation="vertical">
 
                     <TextView
-                        style="@style/textView3Head"
+                        style="@style/i_textview"
                         android:text="@string/m114a" />
 
                     <RadioGroup
@@ -1118,7 +1133,7 @@
                     android:orientation="vertical">
 
                     <TextView
-                        style="@style/textView3Head"
+                        style="@style/i_textview"
                         android:text="@string/m114b" />
 
                     <RadioGroup
@@ -1150,7 +1165,7 @@
                     android:orientation="vertical">
 
                     <TextView
-                        style="@style/textView3Head"
+                        style="@style/i_textview"
                         android:text="@string/m114c" />
 
                     <RadioGroup
@@ -1182,7 +1197,7 @@
                     android:orientation="vertical">
 
                     <TextView
-                        style="@style/textView3Head"
+                        style="@style/i_textview"
                         android:text="@string/m114d" />
 
                     <RadioGroup
@@ -1209,7 +1224,7 @@
                     android:orientation="vertical">
 
                     <TextView
-                        style="@style/textView3Head"
+                        style="@style/i_textview"
                         android:text="@string/m114e" />
 
                     <RadioGroup
@@ -1241,7 +1256,7 @@
                     android:orientation="vertical">
 
                     <TextView
-                        style="@style/textView3Head"
+                        style="@style/i_textview"
                         android:text="@string/m114f" />
 
                     <RadioGroup
@@ -1273,7 +1288,7 @@
                     android:orientation="vertical">
 
                     <TextView
-                        style="@style/textView3Head"
+                        style="@style/i_textview"
                         android:text="@string/m114g" />
 
                     <RadioGroup
@@ -1305,7 +1320,7 @@
                     android:orientation="vertical">
 
                     <TextView
-                        style="@style/textView3Head"
+                        style="@style/i_textview"
                         android:text="@string/m114h" />
 
                     <RadioGroup
@@ -1337,7 +1352,7 @@
                     android:orientation="vertical">
 
                     <TextView
-                        style="@style/textView3Head"
+                        style="@style/i_textview"
                         android:text="@string/m114i" />
 
                     <RadioGroup
@@ -1369,7 +1384,7 @@
                     android:orientation="vertical">
 
                     <TextView
-                        style="@style/textView3Head"
+                        style="@style/i_textview"
                         android:text="@string/m114j" />
 
                     <RadioGroup
@@ -1401,7 +1416,7 @@
                     android:orientation="vertical">
 
                     <TextView
-                        style="@style/textView3Head"
+                        style="@style/i_textview"
                         android:text="@string/m114k" />
 
                     <RadioGroup
@@ -1433,7 +1448,7 @@
                     android:orientation="vertical">
 
                     <TextView
-                        style="@style/textView3Head"
+                        style="@style/i_textview"
                         android:text="@string/m114l" />
 
                     <RadioGroup
@@ -1465,7 +1480,7 @@
                     android:orientation="vertical">
 
                     <TextView
-                        style="@style/textView3Head"
+                        style="@style/i_textview"
                         android:text="@string/m114m" />
 
                     <RadioGroup
@@ -1497,7 +1512,7 @@
                     android:orientation="vertical">
 
                     <TextView
-                        style="@style/textView3Head"
+                        style="@style/i_textview"
                         android:text="@string/m114n" />
 
                     <RadioGroup
@@ -1529,7 +1544,7 @@
                     android:orientation="vertical">
 
                     <TextView
-                        style="@style/textView3Head"
+                        style="@style/i_textview"
                         android:text="@string/m114o" />
 
                     <RadioGroup
@@ -1561,7 +1576,7 @@
                     android:orientation="vertical">
 
                     <TextView
-                        style="@style/textView3Head"
+                        style="@style/i_textview"
                         android:text="@string/m114p" />
 
                     <RadioGroup
@@ -1593,7 +1608,7 @@
                     android:orientation="vertical">
 
                     <TextView
-                        style="@style/textView3Head"
+                        style="@style/i_textview"
                         android:text="@string/m114q" />
 
                     <RadioGroup
@@ -1625,7 +1640,7 @@
                     android:orientation="vertical">
 
                     <TextView
-                        style="@style/textView3Head"
+                        style="@style/i_textview"
                         android:text="@string/m114r" />
 
                     <RadioGroup

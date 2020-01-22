@@ -169,7 +169,10 @@ public class MainApp extends Application {
     public static int childCount = 0;
     public static int problemType = 1;
     public static int problemCount = 0;
+    public static int noOfPragnencies = 0;
     public static List<Integer> extLst;
+    public static boolean twinFlag = false;
+    public static List<String> pragnantWoman = new ArrayList<>();
 
     /*
      problem type
@@ -422,13 +425,6 @@ public class MainApp extends Application {
         builder.setView(view);
         AlertDialog dialog = builder.create();
         dialog.show();
-        bi.itemLayout.mainHeading.setText("You Have Selected " + item.getName());
-        bi.itemLayout.genderImage.setImageResource(isMother ? R.drawable.mother_1 : R.drawable.maternity);
-        bi.itemLayout.hhNo.setText(item.getHhno());
-        bi.itemLayout.clusterNo.setText(item.getClusterno());
-        bi.itemLayout.dob.setText(item.getAge() + " Years");
-        bi.itemLayout.name.setText(item.getName());
-        bi.itemLayout.id.setText(item.getSerialno());
 
         bi.continueBtn.setOnClickListener(new View.OnClickListener() {
             @Override

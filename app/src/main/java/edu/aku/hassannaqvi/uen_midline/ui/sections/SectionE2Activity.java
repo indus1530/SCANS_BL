@@ -1,7 +1,11 @@
 package edu.aku.hassannaqvi.uen_midline.ui.sections;
 
+import android.app.Dialog;
 import android.content.Intent;
 import android.os.Bundle;
+import android.view.View;
+import android.view.Window;
+import android.view.WindowManager;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.databinding.DataBindingUtil;
@@ -12,6 +16,7 @@ import org.json.JSONException;
 import org.json.JSONObject;
 
 import edu.aku.hassannaqvi.uen_midline.R;
+import edu.aku.hassannaqvi.uen_midline.core.MainApp;
 import edu.aku.hassannaqvi.uen_midline.databinding.ActivitySectionE2Binding;
 import edu.aku.hassannaqvi.uen_midline.utils.Util;
 import edu.aku.hassannaqvi.uen_midline.validator.ClearClass;
@@ -19,6 +24,7 @@ import edu.aku.hassannaqvi.uen_midline.validator.ClearClass;
 public class SectionE2Activity extends AppCompatActivity {
 
     ActivitySectionE2Binding bi;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -32,11 +38,26 @@ public class SectionE2Activity extends AppCompatActivity {
 
     private void setUIComponent() {
 
+
         bi.e105.setOnCheckedChangeListener(((radioGroup, i) -> {
-            if (i != bi.e105a.getId()) {
-                ClearClass.ClearAllFields(bi.fldGrp0612, null);
+
+            MainApp.twinFlag = i == bi.e105c.getId();
+            if (i == bi.e105e.getId()) {
+                bi.container1.setVisibility(View.GONE);
+                bi.container2.setVisibility(View.GONE);
+            } else {
+                bi.container1.setVisibility(View.VISIBLE);
+                bi.container2.setVisibility(View.VISIBLE);
             }
+
+
         }));
+
+
+        bi.e107.setOnCheckedChangeListener(((radioGroup, i) -> {
+
+        }));
+
     }
 
     public void BtnContinue() {
@@ -46,11 +67,53 @@ public class SectionE2Activity extends AppCompatActivity {
             } catch (Exception e) {
                 e.printStackTrace();
             }
-            if (UpdateDB()) {
-                startActivity(new Intent(SectionE2Activity.this, SectionFActivity.class));
+            if (MainApp.twinFlag) {
+                if (UpdateDB()) {
+                    openDialog();
+                }
+            } else {
+                if (MainApp.noOfPragnencies > 0) {
+                    startActivity(new Intent(SectionE2Activity.this, SectionE2Activity.class));
+                } else {
+                    startActivity(new Intent(SectionE2Activity.this, SectionE3Activity.class));
+                }
+
             }
 
+
         }
+    }
+
+    private void openDialog() {
+        Dialog dialog = new Dialog(this);
+        dialog.requestWindowFeature(Window.FEATURE_NO_TITLE);
+        dialog.setContentView(R.layout.item_dialog);
+        dialog.setCancelable(false);
+        WindowManager.LayoutParams params = new WindowManager.LayoutParams();
+        params.copyFrom(dialog.getWindow().getAttributes());
+        params.width = WindowManager.LayoutParams.WRAP_CONTENT;
+        params.height = WindowManager.LayoutParams.WRAP_CONTENT;
+
+        dialog.show();
+        dialog.getWindow().setAttributes(params);
+
+        dialog.findViewById(R.id.btnOk).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                clearContainer();
+                dialog.dismiss();
+
+            }
+        });
+
+    }
+
+    private void clearContainer() {
+        ClearClass.ClearAllFields(bi.container1, null);
+        ClearClass.ClearAllFields(bi.mainContainer2, null);
+        bi.container1.requestFocus();
+        MainApp.twinFlag = false;
+
     }
 
     private boolean UpdateDB() {
@@ -124,39 +187,7 @@ public class SectionE2Activity extends AppCompatActivity {
                         bi.e115b.isChecked() ? "2" :
                                 "0");
 
-        e2.put("e116",
-                bi.e116a.isChecked() ? "1" :
-                        bi.e116b.isChecked() ? "2" :
-                                "0");
-
-        e2.put("e117", bi.e117.getText().toString());
-
-        e2.put("e118", bi.e118.getText().toString());
-
-        e2.put("e119", bi.e119.getText().toString());
-
-        e2.put("e120", bi.e120.getText().toString());
-
-        e2.put("e121",
-                bi.e121a.isChecked() ? "1" :
-                        bi.e121b.isChecked() ? "2" :
-                                bi.e121c.isChecked() ? "3" :
-                                        bi.e121d.isChecked() ? "4" :
-                                                bi.e121e.isChecked() ? "5" :
-                                                        bi.e121f.isChecked() ? "6" :
-                                                                bi.e121g.isChecked() ? "7" :
-                                                                        bi.e121h.isChecked() ? "98" :
-                                                                                bi.e12196.isChecked() ? "96" :
-                                                                                        "0");
-        e2.put("e12196x", bi.e12196x.getText().toString());
-
-        e2.put("e122",
-                bi.e122a.isChecked() ? "1" :
-                        bi.e122b.isChecked() ? "2" :
-                                bi.e122c.isChecked() ? "3" :
-                                        bi.e122d.isChecked() ? "4" :
-                                                bi.e122e.isChecked() ? "5" :
-                                                        "0");
+        --MainApp.noOfPragnencies;
 
 
     }

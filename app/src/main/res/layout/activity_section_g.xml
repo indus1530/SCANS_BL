@@ -484,7 +484,7 @@
                         style="@style/EditTextAlphaNumeric"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:hint="@string/g112"
+                        android:hint="@string/rupees"
                         android:inputType="number"
                         app:mask="####"
                         app:maxValue="1000"
@@ -517,19 +517,22 @@
                         <RadioButton
                             android:id="@+id/g113a"
                             style="@style/radiobutton"
-                            android:text="@string/g113a" />
+                            android:text="@string/yes" />
 
                         <RadioButton
                             android:id="@+id/g113b"
                             style="@style/radiobutton"
-                            android:text="@string/g113b" />
+                            android:text="@string/no" />
 
                         <RadioButton
                             android:id="@+id/g113c"
                             style="@style/radiobutton"
-                            android:text="@string/g113c" />
+                            android:text="@string/dkn" />
+
                     </RadioGroup>
+
                 </LinearLayout>
+
             </androidx.cardview.widget.CardView>
 
             <!-- g114  Radio   -->
@@ -689,48 +692,42 @@
 
                     <TextView
                         style="@style/i_textview"
-                        android:text="@string/g117a" />
+                        android:text="@string/days" />
 
                     <com.edittextpicker.aliazaz.EditTextPicker
                         android:id="@+id/g117a"
                         style="@style/EditTextAlphaNumeric"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:hint="@string/g117a"
+                        android:hint="@string/days"
                         android:inputType="number"
-                        app:mask="#"
+                        android:maxLength="1"
                         app:maxValue="3"
                         app:minValue="0"
                         app:type="range" />
 
                     <TextView
                         style="@style/i_textview"
-                        android:text="@string/g117b" />
+                        android:text="@string/hours" />
 
                     <com.edittextpicker.aliazaz.EditTextPicker
                         android:id="@+id/g117b"
                         style="@style/EditTextAlphaNumeric"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:hint="@string/g117b"
+                        android:hint="@string/hours"
                         android:inputType="number"
-                        app:mask="##"
+                        android:maxLength="2"
                         app:maxValue="23"
                         app:minValue="0"
                         app:type="range" />
 
                     <TextView
                         style="@style/i_textview"
-                        android:text="@string/g117c" />
+                        android:text="@string/minutes" />
 
                     <com.edittextpicker.aliazaz.EditTextPicker
                         android:id="@+id/g117c"
                         style="@style/EditTextAlphaNumeric"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:hint="@string/g117c"
+                        android:hint="@string/minutes"
                         android:inputType="number"
-                        app:mask="##"
+                        android:maxLength="2"
                         app:maxValue="59"
                         app:minValue="0"
                         app:type="range" />
@@ -758,7 +755,7 @@
                         style="@style/EditTextAlphaNumeric"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:hint="@string/g118"
+                        android:hint="@string/rupees"
                         android:inputType="number"
                         app:mask="######"
                         app:maxValue="100000"

@@ -22,7 +22,8 @@
         android:label="@string/app_name"
         android:screenOrientation="portrait"
         android:theme="@style/AppTheme">
-        <activity android:name=".ui.sections.SectionJ03Activity">
+        <activity android:name=".ui.other.LoginActivity">
+
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -30,6 +31,7 @@
             </intent-filter>
         </activity>
         <activity android:name=".ui.sections.SectionH2Activity" />
+        <activity android:name=".ui.sections.SectionE3Activity"></activity>
         <activity android:name=".ui.sections.SectionH1Activity" />
         <activity android:name=".ui.sections.SectionAActivity" />
         <activity android:name=".ui.sections.SectionF02Activity" />
@@ -40,35 +42,29 @@
         <activity android:name=".ui.sections.SectionLActivity" />
         <activity android:name=".ui.sections.SectionKActivity" />
         <activity android:name=".ui.sections.SectionJActivity" />
-        <activity android:name=".ui.sections.SectionJ02Activity" />
+        <activity android:name=".ui.sections.SectionJ03Activity" />
         <activity android:name=".ui.sections.SectionI2Activity" />
         <activity android:name=".ui.sections.SectionI1Activity" />
         <activity android:name=".ui.other.SplashscreenActivity" />
         <activity android:name=".ui.sections.SectionFActivity" />
-        <activity android:name=".ui.sections.SectionEActivity" />
-        <activity android:name=".ui.sections.SectionDActivity" />
+        <activity android:name=".ui.sections.SectionE1Activity" />
+        <activity android:name=".ui.sections.SectionDActivity">
+
+        </activity>
         <activity android:name=".ui.other.EndingActivity" />
         <activity
             android:name=".ui.sections.SectionGActivity"
             android:screenOrientation="portrait">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
 
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
         </activity>
-        <activity
-            android:name=".ui.other.LoginActivity"
-            android:screenOrientation="portrait"
-            android:theme="@style/AppTheme1" />
+        <!--        <activity-->
+        <!--            android:name=".ui.other.LoginActivity"-->
+        <!--            android:screenOrientation="portrait"-->
+        <!--            android:theme="@style/AppTheme1" />-->
         <activity
             android:name=".ui.other.MainActivity"
             android:screenOrientation="portrait"
             android:theme="@style/AppTheme1" />
-        <activity
-            android:name=".FamilyMembersListActivity"
-            android:label="@string/title_activity_family_members_list"
-            android:theme="@style/AppTheme.NoActionBar" />
         <activity
             android:name=".core.AndroidDatabaseManager"
             android:parentActivityName=".ui.other.MainActivity"

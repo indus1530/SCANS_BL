@@ -42,6 +42,7 @@
     <string name="kg"> Kilograms </string>
     <string name="cm"> Centimeters </string>
     <string name="in"> Inches </string>
+    <string name="rupees"> Rupees </string>
 
     <string name="a101">Cluster number </string>
     <string name="a101a">This information will be based on the list of villages generated from the district. Each enumerator will be given a list of clusters that he/she will be visiting, and before starting the interview, this information will be entered from the same list.</string>
@@ -87,7 +88,7 @@
     <string name="c101ba">Yes</string>
     <string name="c101bb">No</string>
 
-    <string name="d101">Member Serial Number : [Auto Generate Starting from 01]</string>
+    <string name="d101">Member Serial Number</string>
     <string name="d102">Name</string>
     <string name="d102a">Please give me the names of the persons who usually live in your household, starting with the head of the household.</string>
     <string name="d103">Relationship to Head of HH</string>
@@ -173,7 +174,10 @@
     <string name="e105">Was the baby born alive, born dead or lost before birth?</string>
     <string name="e105a">Born alive (Live birth)</string>
     <string name="e105b">Born dead (Still birth)</string>
-    <string name="e105c">Lost before full term(Miscarriage)</string>
+    <string name="e105c">Twin Birth</string>
+    <string name="e105d">One Born One Dead</string>
+    <string name="e105e">Both Dead</string>
+    <string name="e105f">Lost before full term(Miscarriage)</string>
     <string name="e106">In what month and year was {NAME} born? : Probe: When is his/her birthday?</string>
     <string name="e106a">Days</string>
     <string name="e106b">Month</string>
@@ -406,31 +410,36 @@
     <string name="f134f">Blood donor</string>
     <string name="f134g">Didn’t do any preparation</string>
 
-    <string name="g101">Did you know the expected date of delivery for {NAME}?</string>
-    <string name="g101a">Yes</string>
-    <string name="g101b">No</string>
-    <string name="g102">Where did {NAME}’s delivery take place?</string>
-    <string name="g102a">At home</string>
-    <string name="g102b">Government health facility</string>
-    <string name="g102c">Private health facility</string>
-    <string name="g102d">NGO health facility</string>
-    <string name="g102e">On the way to the health care Facility</string>
-    <string name="g103">Why didn’t you deliver {NAME} in a health facility?   If delivery take place at home Probe to identify any other reason Record all mentioned.</string>
-    <string name="g103a">No transportation</string>
-    <string name="g103b">Poor attitude of staff</string>
-    <string name="g103c">Facility not functional</string>
-    <string name="g103d">Too far</string>
-    <string name="g103e">A male/husband was not present to accompany me to the health facility</string>
-    <string name="g103f">Poor quality of service</string>
-    <string name="g103g">No female provider at facility</string>
-    <string name="g103h">Not necessary</string>
-    <string name="g103i">High Cost</string>
-    <string name="g104">Who delivered {NAME}?</string>
-    <string name="g104a">Doctor</string>
-    <string name="g104b">LHV (Lady Health Visitor)</string>
-    <string name="g104c">Nurse</string>
-    <string name="g104d">CMW (Community Midwife) </string>
-    <string name="g104e">Dai/TBA (Traditional Birth Attendant)</string>
+
+    <string name="g101"> G101:\t Did you know the expected date of delivery for {NAME}? </string>
+    <string name="g101a"> Yes </string>
+    <string name="g101b"> No </string>
+
+    <string name="g102"> G102: Where did {NAME}’s delivery take place? </string>
+    <string name="g102a"> At Home </string>
+    <string name="g102b"> Government Health Facility </string>
+    <string name="g102c"> Private health facility </string>
+    <string name="g102d"> NGO health facility </string>
+    <string name="g102e"> On the way to the health care Facility </string>
+
+    <string name="g103"> G103: Why didn’t you deliver {NAME} in a health facility?   If delivery take place at home Probe to identify any other reason Record all mentioned. </string>
+    <string name="g103a"> No transportation </string>
+    <string name="g103b"> Poor attitude of staff </string>
+    <string name="g103c"> Facility not functional </string>
+    <string name="g103d"> Too far </string>
+    <string name="g103e"> A male/husband was not present to accompany me to the health facility </string>
+    <string name="g103f"> Poor quality of service </string>
+    <string name="g103g"> No female provider at facility </string>
+    <string name="g103h"> Not necessary </string>
+    <string name="g103i"> High Cost </string>
+
+    <string name="g104"> G104:\t Who delivered {NAME}? </string>
+    <string name="g104a"> Doctor </string>
+    <string name="g104b"> LHV (Lady Health Visitor) </string>
+    <string name="g104c"> Nurse </string>
+    <string name="g104d"> CMW (Community Midwife) </string>
+    <string name="g104e"> Dai/TBA (Traditional Birth Attendant) </string>
+
     <string name="g105">How far is the place from your home, where {NAME} was delivered?</string>
     <string name="g106">What mode of transport did you use to travel to the place, where {NAME} was delivered? </string>
     <string name="g106a">Car </string>
@@ -1968,5 +1977,6 @@
     <string name="istatus">Interview Results</string>
     <string name="istatusa">Complete</string>
     <string name="istatusb">Incomplete</string>
+    <string name="dialog_text">Please add Info for second child.</string>
 
 </resources>
