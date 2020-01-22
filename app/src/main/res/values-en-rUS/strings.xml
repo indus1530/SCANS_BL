@@ -29,6 +29,8 @@
     <string name="yes"> Yes </string>
     <string name="no"> No </string>
     <string name="dkn"> Don\'t Know </string>
+    <string name="none"> None or Never </string>
+    <string name="ref"> Refused </string>
     <string name="other"> Other </string>
     <string name="specify"> Specify </string>
     <string name="year"> Years </string>
