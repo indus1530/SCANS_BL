@@ -30,6 +30,7 @@
     <string name="no"> No </string>
     <string name="dkn"> Don\'t Know </string>
     <string name="none"> None or Never </string>
+    <string name="na"> Not Applicable/Available  </string>
     <string name="ref"> Refused </string>
     <string name="other"> Other </string>
     <string name="specify"> Specify </string>
@@ -40,6 +41,7 @@
     <string name="hours"> Hours </string>
     <string name="minutes"> Minutes </string>
     <string name="kg"> Kilograms </string>
+    <string name="km"> Kilometers </string>
     <string name="cm"> Centimeters </string>
     <string name="in"> Inches </string>
     <string name="rupees"> Rupees </string>
