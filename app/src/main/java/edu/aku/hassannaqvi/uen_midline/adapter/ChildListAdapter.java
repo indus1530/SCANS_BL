@@ -10,11 +10,10 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import java.util.List;
 
-import edu.aku.hassannaqvi.uen_midline.contracts.FormsContract;
-import edu.aku.hassannaqvi.uen_midline.core.DatabaseHelper;
 import edu.aku.hassannaqvi.uen_midline.R;
 import edu.aku.hassannaqvi.uen_midline.contracts.FamilyMembersContract;
-import edu.aku.hassannaqvi.uen_midline.databinding.ItemChildListBinding;
+import edu.aku.hassannaqvi.uen_midline.core.DatabaseHelper;
+import edu.aku.hassannaqvi.uen_midline.databinding.ItemMemListBinding;
 
 public class ChildListAdapter extends RecyclerView.Adapter<ChildListAdapter.ViewHolder> {
 
@@ -23,20 +22,11 @@ public class ChildListAdapter extends RecyclerView.Adapter<ChildListAdapter.View
     private Context mContext;
     private List<FamilyMembersContract> mList;
     DatabaseHelper db;
-    FormsContract ChildData;
-    boolean isMother;
-    /*
-       if Mother
-       isMother = true
+    private ItemMemListBinding viewHolder;
 
-       if child
-       isMother = false
-     */
-
-    public ChildListAdapter(Context mContext, List<FamilyMembersContract> mList, boolean isMother) {
+    public ChildListAdapter(Context mContext, List<FamilyMembersContract> mList) {
         this.mContext = mContext;
         this.mList = mList;
-        this.isMother = isMother;
         db = new DatabaseHelper(mContext);
 
     }
@@ -48,26 +38,22 @@ public class ChildListAdapter extends RecyclerView.Adapter<ChildListAdapter.View
     @NonNull
     @Override
     public ViewHolder onCreateViewHolder(@NonNull ViewGroup viewGroup, final int i) {
-
-        ItemChildListBinding bi = DataBindingUtil.inflate(LayoutInflater.from(mContext), R.layout.item_child_list, viewGroup, false);
+        ItemMemListBinding bi = DataBindingUtil.inflate(LayoutInflater.from(mContext), R.layout.item_mem_list, viewGroup, false);
         return new ViewHolder(bi);
     }
 
     @Override
     public void onBindViewHolder(@NonNull final ViewHolder holder, final int i) {
 
-        holder.bi.id.setText("Serial No: " + mList.get(i).getSerialno());
-        holder.bi.name.setText(isMother ? mList.get(i).getName() : mList.get(i).getName() + "/" + mList.get(i).getMotherName());
+        holder.bi.name.setText(mList.get(i).getName());
+        holder.bi.realHead.setText(mList.get(i).getRelHH());
         holder.bi.dob.setText("Age: " + mList.get(i).getAge() + " Year(s)");
-        holder.bi.index.setText(String.valueOf(i + 1));
-        holder.bi.genderImage.setImageResource(isMother ? R.drawable.mother : R.drawable.boy);
-        holder.bi.parentLayout.setOnClickListener(v -> {
-                    itemClicked.onItemClick(mList.get(i), i, isMother);
-                    holder.bi.parentLayout.setEnabled(false);
-                    holder.bi.parentLayout.setBackgroundColor(mContext.getResources().getColor(R.color.gray));
-                }
-        );
-
+        holder.bi.index.setText(String.format("%02d", Integer.valueOf(mList.get(i).getSerialno())));
+        String gender = mList.get(i).getGender();
+        holder.bi.genderImage.setImageResource(gender.equals("1") ? R.drawable.boy : R.drawable.mother);
+        holder.bi.motherName.setText(mList.get(i).getmName());
+        holder.bi.parentLayout.setOnClickListener(v -> itemClicked.onItemClick(mList.get(i), i));
+        viewHolder = holder.bi;
     }
 
     @Override
@@ -75,17 +61,20 @@ public class ChildListAdapter extends RecyclerView.Adapter<ChildListAdapter.View
         return mList.size();
     }
 
+    public ItemMemListBinding getHolder() {
+        return viewHolder;
+    }
+
     public interface OnItemClicked {
-        void onItemClick(FamilyMembersContract item, int position, boolean isMother);
+        void onItemClick(FamilyMembersContract item, int position);
     }
 
     class ViewHolder extends RecyclerView.ViewHolder {
 
-        ItemChildListBinding bi;
+        ItemMemListBinding bi;
 
-        ViewHolder(@NonNull ItemChildListBinding itemView) {
+        ViewHolder(@NonNull ItemMemListBinding itemView) {
             super(itemView.getRoot());
-
             bi = itemView;
         }
     }

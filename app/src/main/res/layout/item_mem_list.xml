@@ -70,11 +70,19 @@
                         android:textStyle="bold" />
 
                     <TextView
-                        android:id="@+id/subname"
+                        android:id="@+id/realHead"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
-                        android:text="Husband/Mother Name Not Found"
+                        android:text="Relation to Head Not Found"
+                        android:textAppearance="@style/TextAppearance.AppCompat.Medium" />
+
+                    <TextView
+                        android:id="@+id/motherName"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="Mother name Not Found"
                         android:textAppearance="@style/TextAppearance.AppCompat.Medium" />
 
                     <TextView
@@ -82,7 +90,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
-                        android:text="7 Months"
+                        android:text=""
                         android:textAppearance="@style/TextAppearance.AppCompat.Medium" />
 
                 </LinearLayout>

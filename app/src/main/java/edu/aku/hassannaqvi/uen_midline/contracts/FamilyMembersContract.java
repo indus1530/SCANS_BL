@@ -1,51 +1,29 @@
 package edu.aku.hassannaqvi.uen_midline.contracts;
 
 import android.database.Cursor;
-import android.os.Parcel;
-import android.os.Parcelable;
 import android.provider.BaseColumns;
 
 import org.json.JSONException;
 import org.json.JSONObject;
 
-public class FamilyMembersContract implements Parcelable {
+public class FamilyMembersContract {
     private String uid;
     private String uuid;
     private String formdate;
-    private String age;
     private String clusterno;
     private String hhno;
-    private String motherid;
-    private String name;
+
     private String serialno;
+    private String name;
+    private String relHH;
+    private String age;
     private String motherName;
-    private String type;
+    private String gender;
+    private String marital;
+    private String sD;
 
-    public static final Creator<FamilyMembersContract> CREATOR = new Creator<FamilyMembersContract>() {
-        @Override
-        public FamilyMembersContract createFromParcel(Parcel in) {
-            return new FamilyMembersContract(in);
-        }
-
-        @Override
-        public FamilyMembersContract[] newArray(int size) {
-            return new FamilyMembersContract[size];
-        }
-    };
-
-    public FamilyMembersContract(Parcel in) {
-        uid = in.readString();
-        uuid = in.readString();
-        formdate = in.readString();
-        age = in.readString();
-        clusterno = in.readString();
-        hhno = in.readString();
-        motherid = in.readString();
-        name = in.readString();
-        serialno = in.readString();
-        motherName = in.readString();
-        type = in.readString();
-    }
+    //Not required in db
+    private String mName, fName;
 
     public FamilyMembersContract() {
     }
@@ -57,11 +35,11 @@ public class FamilyMembersContract implements Parcelable {
         this.age = jsonObject.getString(singleMember.COLUMN_AGE);
         this.clusterno = jsonObject.getString(singleMember.COLUMN_CLUSTER_CODE);
         this.hhno = jsonObject.getString(singleMember.COLUMN_HHNO);
-        this.motherid = jsonObject.getString(singleMember.COLUMN_MOTHER_ID);
+        this.relHH = jsonObject.getString(singleMember.COLUMN_RELATION_HH);
         this.name = jsonObject.getString(singleMember.COLUMN_NAME);
         this.serialno = jsonObject.getString(singleMember.COLUMN_SERIAL_NO);
         this.motherName = jsonObject.getString(singleMember.COLUMN_MOMTHER_NAME);
-        this.type = jsonObject.getString(singleMember.COLUMN_TYPE);
+        this.sD = jsonObject.getString(singleMember.COLUMN_SD);
 
         return this;
     }
@@ -73,16 +51,13 @@ public class FamilyMembersContract implements Parcelable {
         this.age = cursor.getString(cursor.getColumnIndex(singleMember.COLUMN_AGE));
         this.clusterno = cursor.getString(cursor.getColumnIndex(singleMember.COLUMN_CLUSTER_CODE));
         this.hhno = cursor.getString(cursor.getColumnIndex(singleMember.COLUMN_HHNO));
-        this.motherid = cursor.getString(cursor.getColumnIndex(singleMember.COLUMN_MOTHER_ID));
+        this.relHH = cursor.getString(cursor.getColumnIndex(singleMember.COLUMN_RELATION_HH));
         this.name = cursor.getString(cursor.getColumnIndex(singleMember.COLUMN_NAME));
         this.serialno = cursor.getString(cursor.getColumnIndex(singleMember.COLUMN_SERIAL_NO));
         this.motherName = cursor.getString(cursor.getColumnIndex(singleMember.COLUMN_MOMTHER_NAME));
-        this.type = cursor.getString(cursor.getColumnIndex(singleMember.COLUMN_TYPE));
-
-
+        this.sD = cursor.getString(cursor.getColumnIndex(singleMember.COLUMN_SD));
         return this;
     }
-
 
     public String getUid() {
         return uid;
@@ -108,14 +83,6 @@ public class FamilyMembersContract implements Parcelable {
         this.formdate = formdate;
     }
 
-    public String getAge() {
-        return age;
-    }
-
-    public void setAge(String age) {
-        this.age = age;
-    }
-
     public String getClusterno() {
         return clusterno;
     }
@@ -132,12 +99,12 @@ public class FamilyMembersContract implements Parcelable {
         this.hhno = hhno;
     }
 
-    public String getMotherid() {
-        return motherid;
+    public String getSerialno() {
+        return serialno;
     }
 
-    public void setMotherid(String motherid) {
-        this.motherid = motherid;
+    public void setSerialno(String serialno) {
+        this.serialno = serialno;
     }
 
     public String getName() {
@@ -148,12 +115,20 @@ public class FamilyMembersContract implements Parcelable {
         this.name = name;
     }
 
-    public String getSerialno() {
-        return serialno;
+    public String getRelHH() {
+        return relHH;
     }
 
-    public void setSerialno(String serialno) {
-        this.serialno = serialno;
+    public void setRelHH(String relHH) {
+        this.relHH = relHH;
+    }
+
+    public String getAge() {
+        return age;
+    }
+
+    public void setAge(String age) {
+        this.age = age;
     }
 
     public String getMotherName() {
@@ -164,34 +139,45 @@ public class FamilyMembersContract implements Parcelable {
         this.motherName = motherName;
     }
 
-    public String getType() {
-        return type;
+    public String getsD() {
+        return sD;
     }
 
-    public void setType(String type) {
-        this.type = type;
+    public void setsD(String sD) {
+        this.sD = sD;
     }
 
-    @Override
-    public int describeContents() {
-        return 0;
+    public String getGender() {
+        return gender;
     }
 
-    @Override
-    public void writeToParcel(Parcel dest, int flags) {
-        dest.writeString(uid);
-        dest.writeString(uuid);
-        dest.writeString(formdate);
-        dest.writeString(age);
-        dest.writeString(clusterno);
-        dest.writeString(hhno);
-        dest.writeString(motherid);
-        dest.writeString(name);
-        dest.writeString(serialno);
-        dest.writeString(motherName);
-        dest.writeString(type);
+    public void setGender(String gender) {
+        this.gender = gender;
     }
 
+    public String getMarital() {
+        return marital;
+    }
+
+    public void setMarital(String marital) {
+        this.marital = marital;
+    }
+
+    public String getmName() {
+        return mName;
+    }
+
+    public void setmName(String mName) {
+        this.mName = mName;
+    }
+
+    public String getfName() {
+        return fName;
+    }
+
+    public void setfName(String fName) {
+        this.fName = fName;
+    }
 
     public static abstract class singleMember implements BaseColumns {
 
@@ -203,11 +189,13 @@ public class FamilyMembersContract implements Parcelable {
         public static final String COLUMN_AGE = "age";
         public static final String COLUMN_CLUSTER_CODE = "clusterno";
         public static final String COLUMN_HHNO = "hhno";
-        public static final String COLUMN_MOTHER_ID = "motherid";
+        public static final String COLUMN_RELATION_HH = "relHH";
         public static final String COLUMN_NAME = "name";
         public static final String COLUMN_SERIAL_NO = "serialno";
         public static final String COLUMN_MOMTHER_NAME = "mother_name";
-        public static final String COLUMN_TYPE = "type";
+        public static final String COLUMN_GENDER = "gender";
+        public static final String COLUMN_MARITAL = "marital";
+        public static final String COLUMN_SD = "sD";
         public static String _URL = "sosas.php";
     }
 }

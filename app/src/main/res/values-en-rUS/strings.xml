@@ -1994,4 +1994,6 @@
     <string name="istatusa">Complete</string>
     <string name="istatusb">Incomplete</string>
     <string name="dialog_text">Please add Info for second child.</string>
+    <string name="countNo">No</string>
+    <string name="countYes">Yes</string>
 </resources>

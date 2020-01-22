@@ -87,4 +87,7 @@ dependencies {
 
     implementation 'com.github.whalemare:sheetmenu:2.0.1'
 
+    implementation 'androidx.lifecycle:lifecycle-extensions:2.1.0'
+    implementation 'androidx.lifecycle:lifecycle-viewmodel-ktx:2.1.0'
+
 }

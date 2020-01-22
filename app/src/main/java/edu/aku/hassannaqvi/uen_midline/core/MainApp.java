@@ -39,7 +39,6 @@ import edu.aku.hassannaqvi.uen_midline.contracts.FamilyMembersContract;
 import edu.aku.hassannaqvi.uen_midline.contracts.FormsContract;
 import edu.aku.hassannaqvi.uen_midline.contracts.MotherContract;
 import edu.aku.hassannaqvi.uen_midline.contracts.ProblemContract;
-import edu.aku.hassannaqvi.uen_midline.databinding.AlertDialogLayoutBinding;
 import edu.aku.hassannaqvi.uen_midline.databinding.CountAlertDialogLayoutBinding;
 import edu.aku.hassannaqvi.uen_midline.ui.other.EndingActivity;
 
@@ -416,31 +415,23 @@ public class MainApp extends Application {
 //        bi.noBtn.setOnClickListener(v -> dialog.dismiss());
     }
 
-    public static void openDialog(Context context, FamilyMembersContract item, boolean isMother) {
+
+    public static void openDialog(Context context, FamilyMembersContract item) {
 
         AlertDialog.Builder builder = new AlertDialog.Builder(context);
         builder.setCancelable(false);
-        View view = LayoutInflater.from(context).inflate(R.layout.alert_dialog_layout, null);
-        AlertDialogLayoutBinding bi = DataBindingUtil.bind(view.getRootView());
+        View view = LayoutInflater.from(context).inflate(R.layout.count_alert_dialog_layout, null);
+        CountAlertDialogLayoutBinding bi = DataBindingUtil.bind(view.getRootView());
         builder.setView(view);
         AlertDialog dialog = builder.create();
         dialog.show();
 
-        bi.continueBtn.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                itemClick.itemClick();
-                dialog.dismiss();
-            }
+        bi.continueBtn.setOnClickListener(v -> {
+            itemClick.itemClick();
+            dialog.dismiss();
         });
 
-        bi.noBtn.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-
-                dialog.dismiss();
-            }
-        });
+        bi.noBtn.setOnClickListener(v -> dialog.dismiss());
     }
 
     public interface OnItemClick {

@@ -220,18 +220,20 @@ public class DatabaseHelper extends SQLiteOpenHelper {
             + ChildList.singleChildList.COLUMN_STUDY_ID + " TEXT );";
 
     private final String SQL_CREATE_FAMILY_MEMBERS = "CREATE TABLE " + singleMember.TABLE_NAME + "("
-            + singleMember._ID + " INTEGER PRIMARY KEY AUTOINCREMENT,"
+            + singleMember.COLUMN_ID + " INTEGER PRIMARY KEY AUTOINCREMENT,"
             + singleMember.COLUMN_UID + " TEXT,"
             + singleMember.COLUMN_UUID + " TEXT,"
             + singleMember.COLUMN_FORMDATE + " TEXT,"
-            + singleMember.COLUMN_AGE + " TEXT,"
             + singleMember.COLUMN_CLUSTER_CODE + " TEXT,"
             + singleMember.COLUMN_HHNO + " TEXT,"
-            + singleMember.COLUMN_MOTHER_ID + " TEXT,"
-            + singleMember.COLUMN_NAME + " TEXT,"
             + singleMember.COLUMN_SERIAL_NO + " TEXT,"
+            + singleMember.COLUMN_NAME + " TEXT,"
+            + singleMember.COLUMN_AGE + " TEXT,"
+            + singleMember.COLUMN_RELATION_HH + " TEXT,"
             + singleMember.COLUMN_MOMTHER_NAME + " TEXT,"
-            + singleMember.COLUMN_TYPE + " TEXT );";
+            + singleMember.COLUMN_MARITAL + " TEXT,"
+            + singleMember.COLUMN_GENDER + " TEXT,"
+            + singleMember.COLUMN_SD + " TEXT );";
 
 
     private final String TAG = "DatabaseHelper";
@@ -341,39 +343,6 @@ public class DatabaseHelper extends SQLiteOpenHelper {
 
         } catch (Exception e) {
 
-        }
-    }
-
-    public void syncFamilyMembers(JSONArray Areaslist) {
-        SQLiteDatabase db = this.getWritableDatabase();
-        db.delete(singleMember.TABLE_NAME, null, null);
-        try {
-            JSONArray jsonArray = Areaslist;
-            for (int i = 0; i < jsonArray.length(); i++) {
-                JSONObject jsonObjectCC = jsonArray.getJSONObject(i);
-
-                FamilyMembersContract Vc = new FamilyMembersContract();
-                Vc.Sync(jsonObjectCC);
-
-                ContentValues values = new ContentValues();
-
-                values.put(singleMember.COLUMN_UID, Vc.getUid());
-                values.put(singleMember.COLUMN_UUID, Vc.getUuid());
-                values.put(singleMember.COLUMN_FORMDATE, Vc.getFormdate());
-                values.put(singleMember.COLUMN_AGE, Vc.getAge());
-                values.put(singleMember.COLUMN_CLUSTER_CODE, Vc.getClusterno());
-                values.put(singleMember.COLUMN_HHNO, Vc.getHhno());
-                values.put(singleMember.COLUMN_MOTHER_ID, Vc.getMotherid());
-                values.put(singleMember.COLUMN_NAME, Vc.getName());
-                values.put(singleMember.COLUMN_MOMTHER_NAME, Vc.getMotherName());
-                values.put(singleMember.COLUMN_SERIAL_NO, Vc.getSerialno());
-                values.put(singleMember.COLUMN_TYPE, Vc.getType());
-
-                db.insert(singleMember.TABLE_NAME, null, values);
-            }
-        } catch (Exception e) {
-        } finally {
-            db.close();
         }
     }
 
@@ -1053,7 +1022,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         values.put(singleMother.COLUMN_luid, fc.getLuid());
         values.put(singleMother.COLUMN_DA, fc.getdA());
         values.put(singleMother.COLUMN_FORMDATE, fc.getFormdate());
-//        values.put(singleMother.COLUMN_MOTHER_ID, fc.getMotherId());
+//        values.put(singleMother.COLUMN_RELATION_HH, fc.getMotherId());
         values.put(singleMother.COLUMN_SERIAL_NO, fc.getSerialNo());
         values.put(singleMother.COLUMN_USER, fc.getUser());
         values.put(singleMother.COLUMN_DEVICEID, fc.getDeviceID());
@@ -1859,15 +1828,15 @@ public class DatabaseHelper extends SQLiteOpenHelper {
                 singleMember.COLUMN_AGE,
                 singleMember.COLUMN_CLUSTER_CODE,
                 singleMember.COLUMN_HHNO,
-                singleMember.COLUMN_MOTHER_ID,
+                singleMember.COLUMN_RELATION_HH,
                 singleMember.COLUMN_MOMTHER_NAME,
                 singleMember.COLUMN_NAME,
                 singleMember.COLUMN_SERIAL_NO,
-                singleMember.COLUMN_TYPE,
+                singleMember.COLUMN_SD,
         };
 
 
-        String whereClause = singleMember.COLUMN_HHNO + " = ? AND " + singleMember.COLUMN_CLUSTER_CODE + " = ? AND " + singleMember.COLUMN_TYPE + " = ?";
+        String whereClause = singleMember.COLUMN_HHNO + " = ? AND " + singleMember.COLUMN_CLUSTER_CODE + " = ? AND " + singleMember.COLUMN_SD + " = ?";
         String[] whereArgs = {hhNo, String.valueOf(clutserNo), "2"};
         String groupBy = null;
         String having = null;
@@ -1909,15 +1878,15 @@ public class DatabaseHelper extends SQLiteOpenHelper {
                 singleMember.COLUMN_AGE,
                 singleMember.COLUMN_CLUSTER_CODE,
                 singleMember.COLUMN_HHNO,
-                singleMember.COLUMN_MOTHER_ID,
+                singleMember.COLUMN_RELATION_HH,
                 singleMember.COLUMN_MOMTHER_NAME,
                 singleMember.COLUMN_NAME,
                 singleMember.COLUMN_SERIAL_NO,
-                singleMember.COLUMN_TYPE,
+                singleMember.COLUMN_SD,
         };
 
 
-        String whereClause = singleMember.COLUMN_HHNO + " = ? AND " + singleMember.COLUMN_CLUSTER_CODE + " = ? AND " + singleMember.COLUMN_MOTHER_ID + " = ? ";
+        String whereClause = singleMember.COLUMN_HHNO + " = ? AND " + singleMember.COLUMN_CLUSTER_CODE + " = ? AND " + singleMember.COLUMN_RELATION_HH + " = ? ";
         String[] whereArgs = {hhNo, String.valueOf(clutserNo), serialNo};
         String groupBy = null;
         String having = null;

@@ -49,9 +49,7 @@ import edu.aku.hassannaqvi.uen_midline.core.AndroidDatabaseManager;
 import edu.aku.hassannaqvi.uen_midline.core.DatabaseHelper;
 import edu.aku.hassannaqvi.uen_midline.core.MainApp;
 import edu.aku.hassannaqvi.uen_midline.databinding.ActivityMainBinding;
-import edu.aku.hassannaqvi.uen_midline.get.GetFamilyMembersData;
 import edu.aku.hassannaqvi.uen_midline.ui.sections.SectionDActivity;
-import edu.aku.hassannaqvi.uen_midline.ui.sections.SectionE2Activity;
 import edu.aku.hassannaqvi.uen_midline.ui.sync.SyncActivity;
 
 public class MainActivity extends AppCompatActivity {
@@ -346,7 +344,6 @@ public class MainActivity extends AppCompatActivity {
         if (networkInfo != null && networkInfo.isConnected()) {
 
             // Sync Random
-            new GetFamilyMembersData(this).execute();
             SharedPreferences syncPref = getSharedPreferences("SyncInfo", Context.MODE_PRIVATE);
             SharedPreferences.Editor editor = syncPref.edit();
             editor.putString("LastDownSyncServer", dtToday);

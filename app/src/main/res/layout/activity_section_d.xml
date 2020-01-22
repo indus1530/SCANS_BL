@@ -1,4 +1,5 @@
-<layout xmlns:android="http://schemas.android.com/apk/res/android">
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
 
     <data>
 
@@ -279,31 +280,13 @@
                             style="@style/i_textview"
                             android:text="@string/d106" />
 
-                        <RadioGroup
+                        <Spinner
                             android:id="@+id/d106"
+                            style="@style/spinner"
                             android:layout_width="match_parent"
-                            android:layout_height="match_parent">
+                            android:layout_height="wrap_content"
+                            android:layout_margin="10dp" />
 
-                            <RadioButton
-                                android:id="@+id/d106a"
-                                style="@style/radiobutton"
-                                android:text="@string/d106a" />
-
-                            <EditText
-                                android:id="@+id/d106at"
-                                style="@style/radiobutton"
-                                android:layout_width="match_parent"
-                                android:layout_height="wrap_content"
-                                android:hint="@string/d106a"
-                                android:tag="d106a"
-                                android:text='@{d106a.checked? d106at.getText().toString() : ""}'
-                                android:visibility='@{d106a.checked? View.VISIBLE : View.GONE}' />
-
-                            <RadioButton
-                                android:id="@+id/d106b"
-                                style="@style/radiobutton"
-                                android:text="@string/d106b" />
-                        </RadioGroup>
                     </LinearLayout>
                 </androidx.cardview.widget.CardView>
 
@@ -321,31 +304,13 @@
                             style="@style/i_textview"
                             android:text="@string/d107" />
 
-                        <RadioGroup
+                        <Spinner
                             android:id="@+id/d107"
+                            style="@style/spinner"
                             android:layout_width="match_parent"
-                            android:layout_height="match_parent">
+                            android:layout_height="wrap_content"
+                            android:layout_margin="10dp" />
 
-                            <RadioButton
-                                android:id="@+id/d107a"
-                                style="@style/radiobutton"
-                                android:text="@string/d107a" />
-
-                            <EditText
-                                android:id="@+id/d107at"
-                                style="@style/radiobutton"
-                                android:layout_width="match_parent"
-                                android:layout_height="wrap_content"
-                                android:hint="@string/d107a"
-                                android:tag="d107a"
-                                android:text='@{d107a.checked? d107at.getText().toString() : ""}'
-                                android:visibility='@{d107a.checked? View.VISIBLE : View.GONE}' />
-
-                            <RadioButton
-                                android:id="@+id/d107b"
-                                style="@style/radiobutton"
-                                android:text="@string/d107b" />
-                        </RadioGroup>
                     </LinearLayout>
                 </androidx.cardview.widget.CardView>
 
@@ -367,37 +332,52 @@
                             style="@style/textView3Head"
                             android:text="@string/d108a" />
 
-                        <EditText
+                        <com.edittextpicker.aliazaz.EditTextPicker
                             android:id="@+id/d108a"
-                            style="@style/textInputName"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:hint="@string/d108a"
-                            android:textColor="@android:color/black" />
+                            android:inputType="number"
+                            android:maxLength="2"
+                            android:textColor="@android:color/black"
+                            app:defaultValue="00"
+                            app:maxValue="30"
+                            app:minValue="1"
+                            app:type="range" />
 
                         <TextView
                             style="@style/textView3Head"
                             android:text="@string/d108b" />
 
-                        <EditText
+                        <com.edittextpicker.aliazaz.EditTextPicker
                             android:id="@+id/d108b"
-                            style="@style/textInputName"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:hint="@string/d108b"
-                            android:textColor="@android:color/black" />
+                            android:inputType="number"
+                            android:maxLength="2"
+                            android:textColor="@android:color/black"
+                            app:defaultValue="00"
+                            app:maxValue="11"
+                            app:minValue="1"
+                            app:type="range" />
 
                         <TextView
                             style="@style/textView3Head"
                             android:text="@string/d108c" />
 
-                        <EditText
+                        <com.edittextpicker.aliazaz.EditTextPicker
                             android:id="@+id/d108c"
-                            style="@style/textInputName"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:hint="@string/d108c"
-                            android:textColor="@android:color/black" />
+                            android:inputType="number"
+                            android:maxLength="4"
+                            android:textColor="@android:color/black"
+                            app:defaultValue="00"
+                            app:maxValue="2020"
+                            app:minValue="1950"
+                            app:type="range" />
                     </LinearLayout>
                 </androidx.cardview.widget.CardView>
 
@@ -417,39 +397,21 @@
 
                         <TextView
                             style="@style/textView3Head"
-                            android:text="@string/d109a" />
+                            android:text="@string/d108a" />
 
-                        <EditText
-                            android:id="@+id/d109a"
-                            style="@style/textInputName"
+                        <com.edittextpicker.aliazaz.EditTextPicker
+                            android:id="@+id/d109"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:hint="@string/d109a"
-                            android:textColor="@android:color/black" />
+                            android:enabled="false"
+                            android:hint="@string/d108a"
+                            android:inputType="number"
+                            android:maxLength="2"
+                            android:textColor="@android:color/black"
+                            app:maxValue="99"
+                            app:minValue="0"
+                            app:type="range" />
 
-                        <TextView
-                            style="@style/textView3Head"
-                            android:text="@string/d109b" />
-
-                        <EditText
-                            android:id="@+id/d109b"
-                            style="@style/textInputName"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:hint="@string/d109b"
-                            android:textColor="@android:color/black" />
-
-                        <TextView
-                            style="@style/textView3Head"
-                            android:text="@string/d109c" />
-
-                        <EditText
-                            android:id="@+id/d109c"
-                            style="@style/textInputName"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:hint="@string/d109c"
-                            android:textColor="@android:color/black" />
                     </LinearLayout>
                 </androidx.cardview.widget.CardView>
 
