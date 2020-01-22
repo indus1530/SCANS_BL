@@ -17,6 +17,20 @@
     <string name="permission_rationale">"Contacts permissions are needed for providing email completions." </string>
 
     <string name="taheading">SECTION A: HH Identification</string>
+    <string name="tdheading">SECTION D: HOUSEHOLD MEMBERS’ INFORMATION</string>
+    <string name="teheading">SECTION E: REPRODUCTIVE HEALTH (Complete this table for all married women aged 15-49 years in the household) </string>
+    <string name="te2heading">MATERNAL MORTALITY STATUS</string>
+    <string name="tfheading">SECTION F: ANTENATAL CARE</string>
+    <string name="tgheading">SECTION G: DELIVERY PREPAREDNESS AND EXPERIENCE</string>
+    <string name="thheading">SECTION H: NEWBORN HEALTH</string>
+    <string name="tiheading">SECTION I: CHILD HEALTH</string>
+    <string name="ti2heading">SECTION I2 : ACUTE RESPIRATORY INFECTION (ARI)</string>
+    <string name="tjheading">SECTION J: IMMUNIZATION</string>
+    <string name="tkheading">SECTION K: FAMILY PLANNING</string>
+    <string name="tlheading">SECTION L: WOMEN EMPOWERMENT</string>
+    <string name="tmheading">SECTION M: SOCIO ECONOMIC STATUS OF HOUSEHOLD</string>
+    <string name="tnheading">SECTION N: WATER AND SANITATION</string>
+    <string name="toheading">SECTION O: HANDWASHING</string>
 
     <string name="splashText">Supporting Women and Girls in Pakistan Scaling Up\n
     Empowerment and Care  Strategies  to Address Health and Survival\n
