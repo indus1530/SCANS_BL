@@ -22,13 +22,8 @@
         android:label="@string/app_name"
         android:screenOrientation="portrait"
         android:theme="@style/AppTheme">
-        <activity android:name=".ui.sections.SectionJ03Activity">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
 
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
-        </activity>
+
         <activity android:name=".ui.sections.SectionH2Activity" />
         <activity android:name=".ui.sections.SectionH1Activity" />
         <activity android:name=".ui.sections.SectionAActivity" />
@@ -40,6 +35,7 @@
         <activity android:name=".ui.sections.SectionLActivity" />
         <activity android:name=".ui.sections.SectionKActivity" />
         <activity android:name=".ui.sections.SectionJActivity" />
+        <activity android:name=".ui.sections.SectionJ03Activity" />
         <activity android:name=".ui.sections.SectionI2Activity" />
         <activity android:name=".ui.sections.SectionI1Activity" />
         <activity android:name=".ui.other.SplashscreenActivity" />
