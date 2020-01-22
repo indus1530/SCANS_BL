@@ -22,7 +22,14 @@
         android:label="@string/app_name"
         android:screenOrientation="portrait"
         android:theme="@style/AppTheme">
-        <activity android:name=".ui.sections.SectionH2Activity"></activity>
+        <activity android:name=".ui.sections.SectionJ03Activity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".ui.sections.SectionH2Activity" />
         <activity android:name=".ui.sections.SectionH1Activity" />
         <activity android:name=".ui.sections.SectionAActivity" />
         <activity android:name=".ui.sections.SectionF02Activity" />
@@ -40,7 +47,6 @@
         <activity android:name=".ui.sections.SectionEActivity" />
         <activity android:name=".ui.sections.SectionDActivity" />
         <activity android:name=".ui.other.EndingActivity" />
-
         <activity
             android:name=".ui.sections.SectionGActivity"
             android:screenOrientation="portrait">
@@ -50,7 +56,6 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-
         <activity
             android:name=".ui.other.LoginActivity"
             android:screenOrientation="portrait"

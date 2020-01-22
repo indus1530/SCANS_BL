@@ -11,18 +11,18 @@ import com.validatorcrawler.aliazaz.Validator;
 
 import edu.aku.hassannaqvi.uen_midline.R;
 import edu.aku.hassannaqvi.uen_midline.core.MainApp;
-import edu.aku.hassannaqvi.uen_midline.databinding.ActivitySectionJ02Binding;
+import edu.aku.hassannaqvi.uen_midline.databinding.ActivitySectionJ03Binding;
 
-public class SectionJ02Activity extends AppCompatActivity {
+public class SectionJ03Activity extends AppCompatActivity {
 
 
-    ActivitySectionJ02Binding bi;
+    ActivitySectionJ03Binding bi;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
-        bi = DataBindingUtil.setContentView(this, R.layout.activity_section_j02);
+        bi = DataBindingUtil.setContentView(this, R.layout.activity_section_j03);
         bi.setCallback(this);
     }
 
@@ -35,7 +35,7 @@ public class SectionJ02Activity extends AppCompatActivity {
             }
             if (UpdateDB()) {
                 finish();
-                startActivity(new Intent(this, SectionJ03Activity.class));
+                startActivity(new Intent(this, SectionKActivity.class));
             } else {
                 Toast.makeText(this, "Failed to Update Database!", Toast.LENGTH_SHORT).show();
             }
@@ -51,7 +51,7 @@ public class SectionJ02Activity extends AppCompatActivity {
 
     private boolean formValidation() {
 
-        return Validator.emptyCheckingContainer(this, bi.fldGrpSectionJ02);
+        return Validator.emptyCheckingContainer(this, bi.fldGrpSectionJ03);
     }
 
     public void BtnEnd() {
