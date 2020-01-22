@@ -87,7 +87,7 @@
     <string name="c101ba">Yes</string>
     <string name="c101bb">No</string>
 
-    <string name="d101">Member Serial Number : [Auto Generate Starting from 01]</string>
+    <string name="d101">Member Serial Number</string>
     <string name="d102">Name</string>
     <string name="d102a">Please give me the names of the persons who usually live in your household, starting with the head of the household.</string>
     <string name="d103">Relationship to Head of HH</string>
