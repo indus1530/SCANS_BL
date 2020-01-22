@@ -104,7 +104,8 @@ class FamilyMembersListActivity : AppCompatActivity() {
         mainVModel.childLstU5.observe(this, Observer { item -> Log.d("", item.size.toString()) })
         mainVModel.mwraLst.observe(this, Observer { item -> Log.d("", item.size.toString()) })
         mainVModel.familyMemLst.observe(this, Observer { item ->
-            setupRecyclerView(item)
+            //            setupRecyclerView(item)
+            adapter.notifyDataSetChanged()
         })
     }
 
