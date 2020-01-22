@@ -266,7 +266,7 @@ public class SectionGActivity extends AppCompatActivity {
         json.put("g110",
                 bi.g110a.isChecked() ? "1" :
                         bi.g110b.isChecked() ? "1" :
-                                bi.g110c.isChecked() ? "98" :
+                                bi.g11098.isChecked() ? "98" :
                                         "0");
 
         json.put("g111",
@@ -279,7 +279,7 @@ public class SectionGActivity extends AppCompatActivity {
         json.put("g113",
                 bi.g113a.isChecked() ? "1" :
                         bi.g113b.isChecked() ? "2" :
-                                bi.g113c.isChecked() ? "98" :
+                                bi.g11398.isChecked() ? "98" :
                                         "0");
 
         json.put("g114",
@@ -316,6 +316,7 @@ public class SectionGActivity extends AppCompatActivity {
                         bi.g119b.isChecked() ? "2" :
                                 bi.g119c.isChecked() ? "3" :
                                         "0");
+
         json.put("g120",
                 bi.g120a.isChecked() ? "1" :
                         bi.g120b.isChecked() ? "2" :
@@ -324,10 +325,11 @@ public class SectionGActivity extends AppCompatActivity {
                                                 bi.g120e.isChecked() ? "5" :
                                                         bi.g120f.isChecked() ? "6" :
                                                                 bi.g120g.isChecked() ? "7" :
-                                                                        bi.g120x.isChecked() ? "96" :
+                                                                        bi.g12096.isChecked() ? "96" :
                                                                                 "0");
 
-        json.put("g120xt", bi.g120xt.getText().toString());
+        json.put("g12096", bi.g12096x.getText().toString());
+
         json.put("g121",
                 bi.g121a.isChecked() ? "1" :
                         bi.g121b.isChecked() ? "2" :
@@ -337,25 +339,22 @@ public class SectionGActivity extends AppCompatActivity {
                                                         bi.g121f.isChecked() ? "6" :
                                                                 bi.g121g.isChecked() ? "7" :
                                                                         bi.g121h.isChecked() ? "8" :
-                                                                                bi.g121x.isChecked() ? "96" :
+                                                                                bi.g12196.isChecked() ? "96" :
                                                                                         "0");
-
-        json.put("g121xt", bi.g121xt.getText().toString());
+        json.put("g12196", bi.g12196x.getText().toString());
 
         json.put("g122",
                 bi.g122a.isChecked() ? "1" :
                         bi.g122b.isChecked() ? "2" :
                                 "0");
 
-        json.put("g123",
-                bi.g123a.isChecked() ? "1" :
-                        bi.g123b.isChecked() ? "2" :
-                                bi.g123c.isChecked() ? "3" :
-                                        bi.g123d.isChecked() ? "4" :
-                                                bi.g123e.isChecked() ? "5" :
-                                                        bi.g123f.isChecked() ? "6" :
-                                                                bi.g123g.isChecked() ? "7" :
-                                                                        "0");
+        json.put("g123a", bi.g123a.isChecked() ? "1" : "0");
+        json.put("g123b", bi.g123b.isChecked() ? "2" : "0");
+        json.put("g123c", bi.g123c.isChecked() ? "3" : "0");
+        json.put("g123d", bi.g123d.isChecked() ? "4" : "0");
+        json.put("g123e", bi.g123e.isChecked() ? "5" : "0");
+        json.put("g123f", bi.g123f.isChecked() ? "6" : "0");
+        json.put("g123g", bi.g123g.isChecked() ? "7" : "0");
 
         json.put("g124a", bi.g124a.isChecked() ? "1" : "0");
         json.put("g124b", bi.g124b.isChecked() ? "2" : "0");
@@ -379,7 +378,7 @@ public class SectionGActivity extends AppCompatActivity {
         json.put("g126",
                 bi.g126a.isChecked() ? "1" :
                         bi.g126b.isChecked() ? "2" :
-                                bi.g126c.isChecked() ? "3" :
+                                bi.g12697.isChecked() ? "97" :
                                         "0");
 
         json.put("g127",

@@ -46,12 +46,12 @@
                         <RadioButton
                             android:id="@+id/g101a"
                             style="@style/radiobutton"
-                            android:text="@string/g101a" />
+                            android:text="@string/yes" />
 
                         <RadioButton
                             android:id="@+id/g101b"
                             style="@style/radiobutton"
-                            android:text="@string/g101b" />
+                            android:text="@string/no" />
 
                     </RadioGroup>
 
@@ -102,8 +102,11 @@
                             android:id="@+id/g102e"
                             style="@style/radiobutton"
                             android:text="@string/g102e" />
+
                     </RadioGroup>
+
                 </LinearLayout>
+
             </androidx.cardview.widget.CardView>
 
             <!-- g103  Radio   -->
@@ -169,8 +172,11 @@
                             android:id="@+id/g103i"
                             style="@style/radiobutton"
                             android:text="@string/g103i" />
+
                     </RadioGroup>
+
                 </LinearLayout>
+
             </androidx.cardview.widget.CardView>
 
             <!-- g104  Radio   -->
@@ -216,8 +222,11 @@
                             android:id="@+id/g104e"
                             style="@style/radiobutton"
                             android:text="@string/g104e" />
+
                     </RadioGroup>
+
                 </LinearLayout>
+
             </androidx.cardview.widget.CardView>
 
             <!-- g105  Input-Numeric   -->
@@ -237,13 +246,11 @@
                     <com.edittextpicker.aliazaz.EditTextPicker
                         android:id="@+id/g105"
                         style="@style/EditTextAlphaNumeric"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:hint="@string/g105"
+                        android:hint="@string/km"
                         android:inputType="number"
-                        app:mask="##"
-                        app:maxValue="0"
-                        app:minValue="0"
+                        app:mask="###"
+                        app:maxValue="100"
+                        app:minValue="1"
                         app:type="range" />
 
                 </LinearLayout>
@@ -288,8 +295,11 @@
                             android:id="@+id/g106d"
                             style="@style/radiobutton"
                             android:text="@string/g106d" />
+
                     </RadioGroup>
+
                 </LinearLayout>
+
             </androidx.cardview.widget.CardView>
 
             <!-- g107  Input-Numeric   -->
@@ -309,13 +319,11 @@
                     <com.edittextpicker.aliazaz.EditTextPicker
                         android:id="@+id/g107"
                         style="@style/EditTextAlphaNumeric"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:hint="@string/g107"
+                        android:hint="@string/minutes"
                         android:inputType="number"
                         app:mask="##"
-                        app:maxValue="0"
-                        app:minValue="0"
+                        app:maxValue="59"
+                        app:minValue="1"
                         app:type="range" />
 
                 </LinearLayout>
@@ -344,14 +352,17 @@
                         <RadioButton
                             android:id="@+id/g108a"
                             style="@style/radiobutton"
-                            android:text="@string/g108a" />
+                            android:text="@string/yes" />
 
                         <RadioButton
                             android:id="@+id/g108b"
                             style="@style/radiobutton"
-                            android:text="@string/g108b" />
+                            android:text="@string/no" />
+
                     </RadioGroup>
+
                 </LinearLayout>
+
             </androidx.cardview.widget.CardView>
 
             <!-- g109  Radio   -->
@@ -392,8 +403,11 @@
                             android:id="@+id/g109d"
                             style="@style/radiobutton"
                             android:text="@string/g109d" />
+
                     </RadioGroup>
+
                 </LinearLayout>
+
             </androidx.cardview.widget.CardView>
 
             <!-- g110  Radio   -->
@@ -418,19 +432,22 @@
                         <RadioButton
                             android:id="@+id/g110a"
                             style="@style/radiobutton"
-                            android:text="@string/g110a" />
+                            android:text="@string/yes" />
 
                         <RadioButton
                             android:id="@+id/g110b"
                             style="@style/radiobutton"
-                            android:text="@string/g110b" />
+                            android:text="@string/no" />
 
                         <RadioButton
-                            android:id="@+id/g110c"
+                            android:id="@+id/g11098"
                             style="@style/radiobutton"
-                            android:text="@string/g110c" />
+                            android:text="@string/dkn" />
+
                     </RadioGroup>
+
                 </LinearLayout>
+
             </androidx.cardview.widget.CardView>
 
             <!-- g111  Radio   -->
@@ -455,14 +472,17 @@
                         <RadioButton
                             android:id="@+id/g111a"
                             style="@style/radiobutton"
-                            android:text="@string/g111a" />
+                            android:text="@string/yes" />
 
                         <RadioButton
                             android:id="@+id/g111b"
                             style="@style/radiobutton"
-                            android:text="@string/g111b" />
+                            android:text="@string/no" />
+
                     </RadioGroup>
+
                 </LinearLayout>
+
             </androidx.cardview.widget.CardView>
 
             <!-- g112  Input-Numeric   -->
@@ -482,8 +502,6 @@
                     <com.edittextpicker.aliazaz.EditTextPicker
                         android:id="@+id/g112"
                         style="@style/EditTextAlphaNumeric"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
                         android:hint="@string/rupees"
                         android:inputType="number"
                         app:mask="####"
@@ -525,7 +543,7 @@
                             android:text="@string/no" />
 
                         <RadioButton
-                            android:id="@+id/g113c"
+                            android:id="@+id/g11398"
                             style="@style/radiobutton"
                             android:text="@string/dkn" />
 
@@ -593,8 +611,11 @@
                             android:id="@+id/g114h"
                             style="@style/radiobutton"
                             android:text="@string/g114h" />
+
                     </RadioGroup>
+
                 </LinearLayout>
+
             </androidx.cardview.widget.CardView>
 
             <!-- g115  Radio   -->
@@ -619,14 +640,17 @@
                         <RadioButton
                             android:id="@+id/g115a"
                             style="@style/radiobutton"
-                            android:text="@string/g115a" />
+                            android:text="@string/yes" />
 
                         <RadioButton
                             android:id="@+id/g115b"
                             style="@style/radiobutton"
-                            android:text="@string/g115b" />
+                            android:text="@string/no" />
+
                     </RadioGroup>
+
                 </LinearLayout>
+
             </androidx.cardview.widget.CardView>
 
             <!-- g116  Radio   -->
@@ -672,8 +696,11 @@
                             android:id="@+id/g116e"
                             style="@style/radiobutton"
                             android:text="@string/g116e" />
+
                     </RadioGroup>
+
                 </LinearLayout>
+
             </androidx.cardview.widget.CardView>
 
             <!-- g117  Title   -->
@@ -753,12 +780,10 @@
                     <com.edittextpicker.aliazaz.EditTextPicker
                         android:id="@+id/g118"
                         style="@style/EditTextAlphaNumeric"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
                         android:hint="@string/rupees"
                         android:inputType="number"
-                        app:mask="######"
-                        app:maxValue="100000"
+                        app:mask="#####"
+                        app:maxValue="99999"
                         app:minValue="1"
                         app:type="range" />
 
@@ -861,21 +886,22 @@
                             android:text="@string/g120g" />
 
                         <RadioButton
-                            android:id="@+id/g120x"
+                            android:id="@+id/g12096"
                             style="@style/radiobutton"
-                            android:text="@string/g120x" />
+                            android:text="@string/other" />
 
                         <EditText
-                            android:id="@+id/g120xt"
-                            style="@style/radiobutton"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:hint="@string/g120x"
-                            android:tag="g120x"
-                            android:text='@{g120x.checked? g120xt.getText().toString() : ""}'
-                            android:visibility='@{g120x.checked? View.VISIBLE : View.GONE}' />
+                            android:id="@+id/g12096x"
+                            style="@style/EditTextAlphaNumeric"
+                            android:hint="@string/specify"
+                            android:tag="g12096"
+                            android:text='@{g12096.checked? g12096x.getText().toString() : ""}'
+                            android:visibility='@{g12096.checked? View.VISIBLE : View.GONE}' />
+
                     </RadioGroup>
+
                 </LinearLayout>
+
             </androidx.cardview.widget.CardView>
 
             <!-- g121  Radio   -->
@@ -938,21 +964,22 @@
                             android:text="@string/g121h" />
 
                         <RadioButton
-                            android:id="@+id/g121x"
+                            android:id="@+id/g12196"
                             style="@style/radiobutton"
-                            android:text="@string/g121x" />
+                            android:text="@string/other" />
 
                         <EditText
-                            android:id="@+id/g121xt"
-                            style="@style/radiobutton"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:hint="@string/g121x"
-                            android:tag="g121x"
-                            android:text='@{g121x.checked? g121xt.getText().toString() : ""}'
-                            android:visibility='@{g121x.checked? View.VISIBLE : View.GONE}' />
+                            android:id="@+id/g12196x"
+                            style="@style/EditTextAlphaNumeric"
+                            android:hint="@string/specify"
+                            android:tag="g12196"
+                            android:text='@{g12196.checked? g12196x.getText().toString() : ""}'
+                            android:visibility='@{g12196.checked? View.VISIBLE : View.GONE}' />
+
                     </RadioGroup>
+
                 </LinearLayout>
+
             </androidx.cardview.widget.CardView>
 
             <!-- g122  Radio   -->
@@ -977,17 +1004,20 @@
                         <RadioButton
                             android:id="@+id/g122a"
                             style="@style/radiobutton"
-                            android:text="@string/g122a" />
+                            android:text="@string/yes" />
 
                         <RadioButton
                             android:id="@+id/g122b"
                             style="@style/radiobutton"
-                            android:text="@string/g122b" />
+                            android:text="@string/no" />
+
                     </RadioGroup>
+
                 </LinearLayout>
+
             </androidx.cardview.widget.CardView>
 
-            <!-- g123  Radio   -->
+            <!-- g123  CheckBox   -->
             <androidx.cardview.widget.CardView
                 android:id="@+id/fldGrpCVg123"
                 style="@style/cardView">
@@ -1001,47 +1031,52 @@
                         style="@style/i_textview"
                         android:text="@string/g123" />
 
-                    <RadioGroup
-                        android:id="@+id/g123"
+                    <LinearLayout
+                        android:id="@+id/g123check"
                         android:layout_width="match_parent"
-                        android:layout_height="match_parent">
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:tag="0">
 
-                        <RadioButton
+                        <CheckBox
                             android:id="@+id/g123a"
-                            style="@style/radiobutton"
+                            style="@style/checkbox"
                             android:text="@string/g123a" />
 
-                        <RadioButton
+                        <CheckBox
                             android:id="@+id/g123b"
-                            style="@style/radiobutton"
+                            style="@style/checkbox"
                             android:text="@string/g123b" />
 
-                        <RadioButton
+                        <CheckBox
                             android:id="@+id/g123c"
-                            style="@style/radiobutton"
+                            style="@style/checkbox"
                             android:text="@string/g123c" />
 
-                        <RadioButton
+                        <CheckBox
                             android:id="@+id/g123d"
-                            style="@style/radiobutton"
+                            style="@style/checkbox"
                             android:text="@string/g123d" />
 
-                        <RadioButton
+                        <CheckBox
                             android:id="@+id/g123e"
-                            style="@style/radiobutton"
+                            style="@style/checkbox"
                             android:text="@string/g123e" />
 
-                        <RadioButton
+                        <CheckBox
                             android:id="@+id/g123f"
-                            style="@style/radiobutton"
+                            style="@style/checkbox"
                             android:text="@string/g123f" />
 
-                        <RadioButton
+                        <CheckBox
                             android:id="@+id/g123g"
-                            style="@style/radiobutton"
+                            style="@style/checkbox"
                             android:text="@string/g123g" />
-                    </RadioGroup>
+
+                    </LinearLayout>
+
                 </LinearLayout>
+
             </androidx.cardview.widget.CardView>
 
             <!-- g124  CheckBox   -->
@@ -1129,8 +1164,11 @@
                             android:id="@+id/g124m"
                             style="@style/checkbox"
                             android:text="@string/g124m" />
+
                     </LinearLayout>
+
                 </LinearLayout>
+
             </androidx.cardview.widget.CardView>
 
             <!-- g125  Radio   -->
@@ -1155,14 +1193,17 @@
                         <RadioButton
                             android:id="@+id/g125a"
                             style="@style/radiobutton"
-                            android:text="@string/g125a" />
+                            android:text="@string/yes" />
 
                         <RadioButton
                             android:id="@+id/g125b"
                             style="@style/radiobutton"
-                            android:text="@string/g125b" />
+                            android:text="@string/no" />
+
                     </RadioGroup>
+
                 </LinearLayout>
+
             </androidx.cardview.widget.CardView>
 
             <!-- g126  Radio   -->
@@ -1187,19 +1228,22 @@
                         <RadioButton
                             android:id="@+id/g126a"
                             style="@style/radiobutton"
-                            android:text="@string/g126a" />
+                            android:text="@string/yes" />
 
                         <RadioButton
                             android:id="@+id/g126b"
                             style="@style/radiobutton"
-                            android:text="@string/g126b" />
+                            android:text="@string/no" />
 
                         <RadioButton
-                            android:id="@+id/g126c"
+                            android:id="@+id/g12697"
                             style="@style/radiobutton"
-                            android:text="@string/g126c" />
+                            android:text="@string/na" />
+
                     </RadioGroup>
+
                 </LinearLayout>
+
             </androidx.cardview.widget.CardView>
 
             <!-- g127  Radio   -->
@@ -1224,14 +1268,17 @@
                         <RadioButton
                             android:id="@+id/g127a"
                             style="@style/radiobutton"
-                            android:text="@string/g127a" />
+                            android:text="@string/yes" />
 
                         <RadioButton
                             android:id="@+id/g127b"
                             style="@style/radiobutton"
-                            android:text="@string/g127b" />
+                            android:text="@string/no" />
+
                     </RadioGroup>
+
                 </LinearLayout>
+
             </androidx.cardview.widget.CardView>
 
             <!-- g128  Radio   -->
@@ -1256,14 +1303,17 @@
                         <RadioButton
                             android:id="@+id/g128a"
                             style="@style/radiobutton"
-                            android:text="@string/g128a" />
+                            android:text="@string/yes" />
 
                         <RadioButton
                             android:id="@+id/g128b"
                             style="@style/radiobutton"
-                            android:text="@string/g128b" />
+                            android:text="@string/no" />
+
                     </RadioGroup>
+
                 </LinearLayout>
+
             </androidx.cardview.widget.CardView>
 
             <!-- g129  Radio   -->
@@ -1288,14 +1338,17 @@
                         <RadioButton
                             android:id="@+id/g129a"
                             style="@style/radiobutton"
-                            android:text="@string/g129a" />
+                            android:text="@string/yes" />
 
                         <RadioButton
                             android:id="@+id/g129b"
                             style="@style/radiobutton"
-                            android:text="@string/g129b" />
+                            android:text="@string/no" />
+
                     </RadioGroup>
+
                 </LinearLayout>
+
             </androidx.cardview.widget.CardView>
 
             <LinearLayout

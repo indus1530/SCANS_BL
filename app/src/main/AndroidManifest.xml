@@ -42,6 +42,7 @@
         <activity android:name=".ui.sections.SectionLActivity" />
         <activity android:name=".ui.sections.SectionKActivity" />
         <activity android:name=".ui.sections.SectionJActivity" />
+        <activity android:name=".ui.sections.SectionJ02Activity" />
         <activity android:name=".ui.sections.SectionJ03Activity" />
         <activity android:name=".ui.sections.SectionI2Activity" />
         <activity android:name=".ui.sections.SectionI1Activity" />

@@ -15,6 +15,7 @@ import org.json.JSONObject;
 import edu.aku.hassannaqvi.uen_midline.R;
 import edu.aku.hassannaqvi.uen_midline.core.MainApp;
 import edu.aku.hassannaqvi.uen_midline.databinding.ActivitySectionJBinding;
+import edu.aku.hassannaqvi.uen_midline.validator.ClearClass;
 
 public class SectionJActivity extends AppCompatActivity {
 
@@ -23,9 +24,29 @@ public class SectionJActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-
         bi = DataBindingUtil.setContentView(this, R.layout.activity_section_j);
         bi.setCallback(this);
+
+        setlistener();
+    }
+
+    private void setlistener() {
+
+        bi.j101.setOnCheckedChangeListener(((radioGroup, i) -> {
+
+            if (i != bi.j101c.getId()) {
+                ClearClass.ClearAllFields(bi.fldGrpCVj102, null);
+            }
+
+        }));
+
+        bi.j102.setOnCheckedChangeListener(((radioGroup, i) -> {
+
+            if (i == bi.j102a.getId() || i == bi.j102b.getId()) {
+                ClearClass.ClearAllFields(bi.fldGrpSectionJ011, null);
+            }
+
+        }));
     }
 
     public void BtnContinue() {
@@ -184,6 +205,7 @@ public class SectionJActivity extends AppCompatActivity {
         j1.put("j10405b96x", bi.j10405b96x.getText().toString());
 
         j1.put("j10406", bi.j10406.getText().toString());
+
         j1.put("j10406a",
                 bi.j10406aa.isChecked() ? "1" :
                         bi.j10406ab.isChecked() ? "2" :
@@ -192,6 +214,7 @@ public class SectionJActivity extends AppCompatActivity {
                                                 bi.j10406ae.isChecked() ? "5" :
                                                         bi.j10406af.isChecked() ? "6" :
                                                                 "0");
+
         j1.put("j10406b",
                 bi.j10406ba.isChecked() ? "1" :
                         bi.j10406bb.isChecked() ? "2" :
@@ -200,9 +223,12 @@ public class SectionJActivity extends AppCompatActivity {
                                                 bi.j10406be.isChecked() ? "5" :
                                                         bi.j10406bf.isChecked() ? "6" :
                                                                 bi.j10406bg.isChecked() ? "7" :
-                                                                        bi.j10406bx.isChecked() ? "96" :
+                                                                        bi.j10406b96.isChecked() ? "96" :
                                                                                 "0");
+        j1.put("j10406b96x", bi.j10406b96x.getText().toString());
+
         j1.put("j10407", bi.j10407.getText().toString());
+
         j1.put("j10407a",
                 bi.j10407aa.isChecked() ? "1" :
                         bi.j10407ab.isChecked() ? "2" :
@@ -211,6 +237,7 @@ public class SectionJActivity extends AppCompatActivity {
                                                 bi.j10407ae.isChecked() ? "5" :
                                                         bi.j10407af.isChecked() ? "6" :
                                                                 "0");
+
         j1.put("j10407b",
                 bi.j10407ba.isChecked() ? "1" :
                         bi.j10407bb.isChecked() ? "2" :
@@ -219,9 +246,12 @@ public class SectionJActivity extends AppCompatActivity {
                                                 bi.j10407be.isChecked() ? "5" :
                                                         bi.j10407bf.isChecked() ? "6" :
                                                                 bi.j10407bg.isChecked() ? "7" :
-                                                                        bi.j10407bx.isChecked() ? "96" :
+                                                                        bi.j10407b96.isChecked() ? "96" :
                                                                                 "0");
+        j1.put("j10407b96x", bi.j10407b96x.getText().toString());
+
         j1.put("j10408", bi.j10408.getText().toString());
+
         j1.put("j10408a",
                 bi.j10408aa.isChecked() ? "1" :
                         bi.j10408ab.isChecked() ? "2" :
@@ -230,6 +260,7 @@ public class SectionJActivity extends AppCompatActivity {
                                                 bi.j10408ae.isChecked() ? "5" :
                                                         bi.j10408af.isChecked() ? "6" :
                                                                 "0");
+
         j1.put("j10408b",
                 bi.j10408ba.isChecked() ? "1" :
                         bi.j10408bb.isChecked() ? "2" :
@@ -238,13 +269,15 @@ public class SectionJActivity extends AppCompatActivity {
                                                 bi.j10408be.isChecked() ? "5" :
                                                         bi.j10408bf.isChecked() ? "6" :
                                                                 bi.j10408bg.isChecked() ? "7" :
-                                                                        bi.j10408bx.isChecked() ? "96" :
+                                                                        bi.j10408b96.isChecked() ? "96" :
                                                                                 "0");
+        j1.put("j10408b96x", bi.j10408b96x.getText().toString());
+
     }
 
     private boolean formValidation() {
 
-        return Validator.emptyCheckingContainer(this, bi.fldGrpSectionJ);
+        return Validator.emptyCheckingContainer(this, bi.fldGrpSectionJ01);
     }
 
     public void BtnEnd() {
