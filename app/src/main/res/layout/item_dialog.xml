@@ -6,8 +6,8 @@
 
     <androidx.cardview.widget.CardView
         android:id="@+id/parentLayout"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_width="300dp"
+        android:layout_height="450dp"
         android:layout_margin="8dp"
         android:elevation="1dp"
         app:cardCornerRadius="10dp">
@@ -15,222 +15,52 @@
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="match_parent"
             android:orientation="vertical">
-
-            <TextView
-                android:id="@+id/mainHeading"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center"
-                android:layout_margin="10dp"
-                android:text="You Have Selected a Mother"
-                android:textAppearance="@style/TextAppearance.AppCompat.Large"
-                android:textColor="@color/black" />
 
 
             <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal">
-
-
-                <View
-                    android:layout_width="16dp"
-                    android:layout_height="match_parent" />
-
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:background="@color/colorRedsub">
 
                 <ImageView
-                    android:id="@+id/genderImage"
-                    android:layout_width="100dp"
+                    android:layout_width="match_parent"
                     android:layout_height="100dp"
-                    android:layout_gravity="center_vertical"
-                    android:src="@drawable/mother_1" />
-
-
-                <LinearLayout
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="16dp"
-                    android:layout_weight="1"
-                    android:orientation="vertical"
-                    android:padding="16dp">
-
-                    <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:orientation="horizontal">
-
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:text="Name:"
-                            android:textAppearance="@style/TextAppearance.AppCompat.Medium"
-                            android:textColor="@color/black" />
-
-                        <TextView
-                            android:id="@+id/name"
-                            android:layout_width="0dp"
-                            android:layout_height="wrap_content"
-                            android:layout_marginStart="10dp"
-                            android:layout_weight="1"
-                            android:text="Mother Name Not Found"
-                            android:textAppearance="@style/TextAppearance.AppCompat.Medium" />
-
-                    </LinearLayout>
-
-                    <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:orientation="horizontal">
-
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:text="ID:"
-                            android:textAppearance="@style/TextAppearance.AppCompat.Medium"
-                            android:textColor="@color/black" />
-
-                        <TextView
-                            android:id="@+id/id"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_marginStart="10dp"
-                            android:layout_weight="1"
-                            android:text="Mother Id Not Found"
-                            android:textAppearance="@style/TextAppearance.AppCompat.Medium" />
-
-                    </LinearLayout>
-
-                    <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:orientation="horizontal">
-
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:text="Age:"
-                            android:textAppearance="@style/TextAppearance.AppCompat.Medium"
-                            android:textColor="@color/black" />
-
-                        <TextView
-                            android:id="@+id/dob"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_marginStart="10dp"
-                            android:layout_weight="1"
-                            android:text="7 Months"
-                            android:textAppearance="@style/TextAppearance.AppCompat.Medium" />
-
-                    </LinearLayout>
-
-
-                    <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:orientation="horizontal">
-
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:text="Household No:"
-                            android:textAppearance="@style/TextAppearance.AppCompat.Medium"
-                            android:textColor="@color/black" />
-
-                        <TextView
-                            android:id="@+id/hhNo"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_marginStart="10dp"
-                            android:layout_weight="1"
-                            android:text="Household Number"
-                            android:textAppearance="@style/TextAppearance.AppCompat.Medium" />
-
-                    </LinearLayout>
-
-
-                    <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:orientation="horizontal">
-
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:text="Cluster No:"
-                            android:textAppearance="@style/TextAppearance.AppCompat.Medium"
-                            android:textColor="@color/black" />
-
-                        <TextView
-                            android:id="@+id/clusterNo"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_marginStart="10dp"
-                            android:layout_weight="1"
-                            android:text="Cluster Number"
-                            android:textAppearance="@style/TextAppearance.AppCompat.Medium" />
-
-                    </LinearLayout>
-
-
-                </LinearLayout>
-
-                <View
-                    android:layout_width="10dp"
-                    android:layout_height="match_parent" />
-
-                <LinearLayout
-                    android:id="@+id/checkIcon"
-                    android:layout_width="0dp"
-                    android:layout_height="match_parent"
-                    android:layout_weight="0.3"
-                    android:gravity="center"
-                    android:visibility="gone">
-
-
-                    <ImageView
-                        android:layout_width="50dp"
-                        android:layout_height="50dp"
-                        android:src="@drawable/check" />
-
-                </LinearLayout>
-
-                <!--                <View-->
-                <!--                    android:layout_width="10dp"-->
-                <!--                    android:layout_height="match_parent" />-->
-
-
-                <!--                <LinearLayout-->
-                <!--                    android:layout_width="wrap_content"-->
-                <!--                    android:layout_height="match_parent"-->
-                <!--                    android:layout_alignParentEnd="true"-->
-                <!--                    android:orientation="vertical"-->
-                <!--                    android:padding="16dp">-->
-
-                <!--                    <TextView-->
-                <!--                        android:id="@+id/studyID"-->
-                <!--                        android:layout_width="match_parent"-->
-                <!--                        android:layout_height="wrap_content"-->
-                <!--                        android:layout_weight="1"-->
-                <!--                        android:gravity="end"-->
-                <!--                        android:textColor="@color/colorPrimary" />-->
-
-
-                <!--                    <TextView-->
-                <!--                        android:id="@+id/child_status"-->
-                <!--                        android:layout_width="match_parent"-->
-                <!--                        android:layout_height="wrap_content"-->
-                <!--                        android:background="@color/enrolled"-->
-                <!--                        android:gravity="center"-->
-                <!--                        android:padding="10dp"-->
-                <!--                        android:text="Selected"-->
-                <!--                        android:textColor="@color/black" />-->
-
-
-                <!--                </LinearLayout>-->
+                    android:layout_gravity="center_horizontal|center_vertical"
+                    android:src="@drawable/ic_info"
+                    android:tint="@color/white" />
 
             </LinearLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="10dp"
+                    android:gravity="center"
+                    android:padding="10dp"
+                    android:text="@string/dialog_text"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                    android:textColor="@color/dullBlack" />
+
+
+                <Button
+                    android:id="@+id/okBtn"
+                    android:layout_width="150dp"
+                    android:layout_height="50dp"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="130dp"
+                    android:background="@drawable/outline_btn"
+                    android:text="Okay!"
+                    android:textColor="@color/colorRedsub" />
+
+            </RelativeLayout>
 
 
         </LinearLayout>

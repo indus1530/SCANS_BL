@@ -2,7 +2,10 @@ package edu.aku.hassannaqvi.uen_midline.ui.sections;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.view.LayoutInflater;
+import android.view.View;
 
+import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.databinding.DataBindingUtil;
 
@@ -12,13 +15,16 @@ import org.json.JSONException;
 import org.json.JSONObject;
 
 import edu.aku.hassannaqvi.uen_midline.R;
+import edu.aku.hassannaqvi.uen_midline.core.MainApp;
 import edu.aku.hassannaqvi.uen_midline.databinding.ActivitySectionE2Binding;
+import edu.aku.hassannaqvi.uen_midline.databinding.ItemDialogBinding;
 import edu.aku.hassannaqvi.uen_midline.utils.Util;
 import edu.aku.hassannaqvi.uen_midline.validator.ClearClass;
 
 public class SectionE2Activity extends AppCompatActivity {
 
     ActivitySectionE2Binding bi;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -33,10 +39,9 @@ public class SectionE2Activity extends AppCompatActivity {
     private void setUIComponent() {
 
         bi.e105.setOnCheckedChangeListener(((radioGroup, i) -> {
-            if (i != bi.e105a.getId()) {
-                ClearClass.ClearAllFields(bi.fldGrp0612, null);
-            }
+            MainApp.twinFlag = i == bi.e105c.getId();
         }));
+
     }
 
     public void BtnContinue() {
@@ -46,11 +51,39 @@ public class SectionE2Activity extends AppCompatActivity {
             } catch (Exception e) {
                 e.printStackTrace();
             }
-            if (UpdateDB()) {
-                startActivity(new Intent(SectionE2Activity.this, SectionFActivity.class));
+            if (MainApp.twinFlag) {
+                if (UpdateDB()) {
+                    openDialog();
+                }
+            } else {
+                MainApp.counter++;
+                startActivity(new Intent(SectionE2Activity.this, SectionE2Activity.class));
             }
 
+
         }
+    }
+
+    private void openDialog() {
+        AlertDialog.Builder builder = new AlertDialog.Builder(this);
+        View view = LayoutInflater.from(this).inflate(R.layout.item_dialog, null);
+        ItemDialogBinding bin = DataBindingUtil.bind(view.getRootView());
+        builder.setView(view);
+        AlertDialog dialog = builder.create();
+        dialog.show();
+        bin.okBtn.setOnClickListener(view1 -> {
+            clearContainer();
+            dialog.dismiss();
+
+        });
+    }
+
+    private void clearContainer() {
+        ClearClass.ClearAllFields(bi.container1, null);
+        ClearClass.ClearAllFields(bi.mainContainer2, null);
+        bi.container1.requestFocus();
+        MainApp.twinFlag = false;
+
     }
 
     private boolean UpdateDB() {
@@ -123,40 +156,6 @@ public class SectionE2Activity extends AppCompatActivity {
                 bi.e115a.isChecked() ? "1" :
                         bi.e115b.isChecked() ? "2" :
                                 "0");
-
-        e2.put("e116",
-                bi.e116a.isChecked() ? "1" :
-                        bi.e116b.isChecked() ? "2" :
-                                "0");
-
-        e2.put("e117", bi.e117.getText().toString());
-
-        e2.put("e118", bi.e118.getText().toString());
-
-        e2.put("e119", bi.e119.getText().toString());
-
-        e2.put("e120", bi.e120.getText().toString());
-
-        e2.put("e121",
-                bi.e121a.isChecked() ? "1" :
-                        bi.e121b.isChecked() ? "2" :
-                                bi.e121c.isChecked() ? "3" :
-                                        bi.e121d.isChecked() ? "4" :
-                                                bi.e121e.isChecked() ? "5" :
-                                                        bi.e121f.isChecked() ? "6" :
-                                                                bi.e121g.isChecked() ? "7" :
-                                                                        bi.e121h.isChecked() ? "98" :
-                                                                                bi.e12196.isChecked() ? "96" :
-                                                                                        "0");
-        e2.put("e12196x", bi.e12196x.getText().toString());
-
-        e2.put("e122",
-                bi.e122a.isChecked() ? "1" :
-                        bi.e122b.isChecked() ? "2" :
-                                bi.e122c.isChecked() ? "3" :
-                                        bi.e122d.isChecked() ? "4" :
-                                                bi.e122e.isChecked() ? "5" :
-                                                        "0");
 
 
     }

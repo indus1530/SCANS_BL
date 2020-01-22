@@ -7,7 +7,7 @@
 
         <variable
             name="callback"
-            type="edu.aku.hassannaqvi.uen_midline.ui.sections.SectionEActivity" />
+            type="edu.aku.hassannaqvi.uen_midline.ui.sections.SectionE1Activity" />
     </data>
 
     <ScrollView
@@ -18,10 +18,10 @@
         tools:context=".ui.Myactivity">
 
         <LinearLayout
-            android:id="@+id/fldGrpSectionE"
-            android:layoutDirection="ltr"
+            android:id="@+id/fldGrpSectionE1"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layoutDirection="ltr"
             android:orientation="vertical">
 
             <!-- e101  Radio   -->

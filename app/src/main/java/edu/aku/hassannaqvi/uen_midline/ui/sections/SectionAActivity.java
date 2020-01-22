@@ -34,7 +34,7 @@ public class SectionAActivity extends AppCompatActivity {
                 e.printStackTrace();
             }
             if (UpdateDB()) {
-                startActivity(new Intent(SectionAActivity.this, SectionEActivity.class));
+                startActivity(new Intent(SectionAActivity.this, SectionE1Activity.class));
             }
 
         }

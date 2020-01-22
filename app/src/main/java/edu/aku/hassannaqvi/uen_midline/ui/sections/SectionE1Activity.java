@@ -12,18 +12,18 @@ import org.json.JSONException;
 import org.json.JSONObject;
 
 import edu.aku.hassannaqvi.uen_midline.R;
-import edu.aku.hassannaqvi.uen_midline.databinding.ActivitySectionEBinding;
+import edu.aku.hassannaqvi.uen_midline.databinding.ActivitySectionE1Binding;
 import edu.aku.hassannaqvi.uen_midline.utils.Util;
 
-public class SectionEActivity extends AppCompatActivity {
+public class SectionE1Activity extends AppCompatActivity {
 
-    ActivitySectionEBinding bi;
+    ActivitySectionE1Binding bi;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
-        bi = DataBindingUtil.setContentView(this, R.layout.activity_section_e);
+        bi = DataBindingUtil.setContentView(this, R.layout.activity_section_e1);
         bi.setCallback(this);
     }
 
@@ -35,7 +35,7 @@ public class SectionEActivity extends AppCompatActivity {
                 e.printStackTrace();
             }
             if (UpdateDB()) {
-                startActivity(new Intent(SectionEActivity.this, SectionE2Activity.class));
+                startActivity(new Intent(SectionE1Activity.this, SectionE2Activity.class));
             }
 
         }
@@ -50,23 +50,13 @@ public class SectionEActivity extends AppCompatActivity {
 
         JSONObject e1 = new JSONObject();
 
-        e1.put("e101",
-                bi.e101a.isChecked() ? "1" :
-                        bi.e101b.isChecked() ? "2" :
-                                "0");
 
-        e1.put("e102", bi.e102.getText().toString());
-
-        e1.put("e102a",
-                bi.e102aa.isChecked() ? "1" :
-                        bi.e102ab.isChecked() ? "2" :
-                                "0");
 
     }
 
     private boolean formValidation() {
 
-        return Validator.emptyCheckingContainer(this, bi.fldGrpSectionE);
+        return Validator.emptyCheckingContainer(this, bi.fldGrpSectionE1);
 
     }
 
