@@ -242,9 +242,10 @@
                         style="@style/i_textview"
                         android:text="@string/a106" />
 
-                    <Spinner
+                    <org.angmarch.views.NiceSpinner
                         android:id="@+id/a106"
-                        style="@style/spinner" />
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content" />
                 </LinearLayout>
             </androidx.cardview.widget.CardView>
 
@@ -262,9 +263,10 @@
                         style="@style/i_textview"
                         android:text="@string/a107" />
 
-                    <Spinner
+                    <org.angmarch.views.NiceSpinner
                         android:id="@+id/a107"
-                        style="@style/spinner" />
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content" />
                 </LinearLayout>
             </androidx.cardview.widget.CardView>
 

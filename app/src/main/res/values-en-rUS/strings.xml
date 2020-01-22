@@ -87,7 +87,7 @@
     <string name="c101ba">Yes</string>
     <string name="c101bb">No</string>
 
-    <string name="d101">Member Serial Number : [Auto Generate Starting from 01]</string>
+    <string name="d101">Member Serial Number</string>
     <string name="d102">Name</string>
     <string name="d102a">Please give me the names of the persons who usually live in your household, starting with the head of the household.</string>
     <string name="d103">Relationship to Head of HH</string>
@@ -173,7 +173,10 @@
     <string name="e105">Was the baby born alive, born dead or lost before birth?</string>
     <string name="e105a">Born alive (Live birth)</string>
     <string name="e105b">Born dead (Still birth)</string>
-    <string name="e105c">Lost before full term(Miscarriage)</string>
+    <string name="e105c">Twin Birth</string>
+    <string name="e105d">One Born One Dead</string>
+    <string name="e105e">Both Dead</string>
+    <string name="e105f">Lost before full term(Miscarriage)</string>
     <string name="e106">In what month and year was {NAME} born? : Probe: When is his/her birthday?</string>
     <string name="e106a">Days</string>
     <string name="e106b">Month</string>
@@ -1973,5 +1976,5 @@
     <string name="istatus">Interview Results</string>
     <string name="istatusa">Complete</string>
     <string name="istatusb">Incomplete</string>
-
+    <string name="dialog_text">Please add Info for second child.</string>
 </resources>

@@ -12,6 +12,7 @@ import com.validatorcrawler.aliazaz.Validator;
 import org.json.JSONException;
 
 import edu.aku.hassannaqvi.uen_midline.R;
+import edu.aku.hassannaqvi.uen_midline.core.MainApp;
 import edu.aku.hassannaqvi.uen_midline.databinding.ActivitySectionDBinding;
 import edu.aku.hassannaqvi.uen_midline.ui.other.EndingActivity;
 import edu.aku.hassannaqvi.uen_midline.utils.Util;
@@ -26,23 +27,32 @@ public class SectionDActivity extends AppCompatActivity {
 
         bi = DataBindingUtil.setContentView(this, R.layout.activity_section_d);
         bi.setCallback(this);
+
+        setUIComponent();
+    }
+
+    private void setUIComponent() {
+
+        MainApp.pragnantWoman.add("Test Woman 1");
+        MainApp.pragnantWoman.add("Test Woman 2");
     }
 
     public void BtnContinue() {
-        if (formValidation()) {
-            try {
-                SaveDraft();
-            } catch (Exception e) {
-                e.printStackTrace();
-            }
-            if (UpdateDB()) {
-                finish();
-                startActivity(new Intent(this, EndingActivity.class).putExtra("complete", true));
-            } else {
-                Toast.makeText(this, "Failed to Update Database!", Toast.LENGTH_SHORT).show();
-            }
-
+        if (UpdateDB()) {
+            finish();
+            startActivity(new Intent(this, SectionE1Activity.class));
+        } else {
+            Toast.makeText(this, "Failed to Update Database!", Toast.LENGTH_SHORT).show();
         }
+//        if (formValidation()) {
+//            try {
+//                SaveDraft();
+//            } catch (Exception e) {
+//                e.printStackTrace();
+//            }
+//
+//
+//        }
     }
 
     private boolean UpdateDB() {
