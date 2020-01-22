@@ -38,12 +38,14 @@ import android.view.inputmethod.EditorInfo;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ImageButton;
 import android.widget.ProgressBar;
 import android.widget.ScrollView;
 import android.widget.TextView;
 import android.widget.Toast;
 
 import androidx.annotation.NonNull;
+import androidx.appcompat.widget.AppCompatButton;
 import androidx.core.app.ActivityCompat;
 
 import com.github.amlcurran.showcaseview.ShowcaseView;
@@ -116,17 +118,10 @@ public class LoginActivity extends Activity implements LoaderCallbacks<Cursor> {
     @BindView(R.id.txtinstalldate)
     TextView txtinstalldate;
     @BindView(R.id.email_sign_in_button)
-    Button mEmailSignInButton;
-
-    @BindView(R.id.spTaluka)
-    NiceSpinner spTaluka;
-
-    @BindView(R.id.spUCs)
-    NiceSpinner spUCs;
-
+    AppCompatButton mEmailSignInButton;
 
     @BindView(R.id.syncData)
-    TextView syncData;
+    ImageButton syncData;
 
     SharedPreferences sharedPref;
     SharedPreferences.Editor editor;
@@ -172,31 +167,16 @@ public class LoginActivity extends Activity implements LoaderCallbacks<Cursor> {
                 .build();
 
 //        mPasswordView = findViewById(R.id.password);
-        mPasswordView.setOnEditorActionListener(new TextView.OnEditorActionListener() {
-            @Override
-            public boolean onEditorAction(TextView textView, int id, KeyEvent keyEvent) {
-                if (id == R.id.login || id == EditorInfo.IME_NULL) {
-                    attemptLogin();
-                    return true;
-                }
-                return false;
+        mPasswordView.setOnEditorActionListener((textView, id, keyEvent) -> {
+            if (id == R.id.login || id == EditorInfo.IME_NULL) {
+                attemptLogin();
+                return true;
             }
+            return false;
         });
 
 
-        mEmailSignInButton.setOnClickListener(new OnClickListener() {
-            @Override
-            public void onClick(View view) {
-
-                if (spTaluka.getSelectedIndex() != 0 && spUCs.getSelectedIndex() != 0) {
-                    attemptLogin();
-                } else {
-                    Toast.makeText(LoginActivity.this, "Please Sync Data Or Select UCs and Taluka before login", Toast.LENGTH_SHORT).show();
-                }
-
-
-            }
-        });
+        mEmailSignInButton.setOnClickListener(view -> attemptLogin());
 
         db = new DatabaseHelper(this);
 //        DB backup
@@ -699,52 +679,8 @@ public class LoginActivity extends Activity implements LoaderCallbacks<Cursor> {
 
     public void populateSpinner(Context context) {
 
-        final Context mContext = context;
-
-        // Populate Talukas list
-        TalukasList = db.getAllTalukas();
-
-        lablesTalukas = new ArrayList<>();
-        talukasMap = new HashMap<>();
-
-        lablesTalukas.add("-Select Taluka-");
-        for (TalukasContract taluka : TalukasList) {
-            lablesTalukas.add(taluka.getTaluka());
-            talukasMap.put(taluka.getTaluka(), taluka.getTalukacode());
-        }
-
-        spTaluka.attachDataSource(lablesTalukas);
-
-        spTaluka.setOnSpinnerItemSelectedListener(new OnSpinnerItemSelectedListener() {
-            @Override
-            public void onItemSelected(NiceSpinner parent, View view, int position, long id) {
-
-                if (position != 0) {
-                    MainApp.talukaCode = Integer.valueOf(talukasMap.get(parent.getItemAtPosition(position)));
-                    UcsList = db.getAllUCs(String.valueOf(MainApp.talukaCode));
-                    lablesUCs = new ArrayList<>();
-                    lablesUCs.add("-Select UC-");
-                    ucsMap = new HashMap<>();
-                    for (UCsContract ucs : UcsList) {
-                        lablesUCs.add(ucs.getUcs());
-                        ucsMap.put(ucs.getUcs(), ucs.getUccode());
-                    }
-                    spUCs.attachDataSource(lablesUCs);
-                }
-            }
-        });
 
 
-        spUCs.setOnSpinnerItemSelectedListener(new OnSpinnerItemSelectedListener() {
-            @Override
-            public void onItemSelected(NiceSpinner parent, View view, int position, long id) {
-
-                if (position != 0) {
-                    MainApp.ucCode = Integer.valueOf(ucsMap.get(parent.getItemAtPosition(position)));
-
-                }
-            }
-        });
 
     }
 

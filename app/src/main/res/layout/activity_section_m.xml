@@ -19,7 +19,7 @@
         tools:context=".ui.Myactivity">
 
         <LinearLayout
-            android:id="@+id/GrpName"
+            android:id="@+id/fldGrpSectionM"
             style="@style/linearlayout_view_wt_bound">
 
             <!-- m101  Radio   -->
