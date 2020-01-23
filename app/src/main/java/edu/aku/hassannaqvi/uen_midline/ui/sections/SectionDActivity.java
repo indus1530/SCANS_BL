@@ -279,8 +279,75 @@ public class SectionDActivity extends AppCompatActivity {
     }
 
     private void personInfoFunctionality(int calAge) {
-        if (calAge > 2) bi.fldGrpSectionD03.setVisibility(View.VISIBLE);
-        else bi.fldGrpSectionD03.setVisibility(View.GONE);
+
+        if (calAge > 0) bi.fldGrpSectionD03.setVisibility(View.VISIBLE);
+        else {
+            Clear.clearAllFields(bi.fldGrpSectionD03);
+            bi.fldGrpSectionD03.setVisibility(View.GONE);
+        }
+
+        if (calAge >= 10)
+            bi.fldGrpCVd105.setVisibility(View.VISIBLE);
+        else {
+            bi.d105.clearCheck();
+            bi.fldGrpCVd105.setVisibility(View.GONE);
+        }
+
+        Clear.clearAllFields(bi.d110, false);
+        Clear.clearAllFields(bi.d111, false);
+
+        if (calAge > 0 && calAge <= 2) {
+            bi.d110a.setEnabled(true);
+            bi.d110b.setEnabled(true);
+            bi.d110m.setEnabled(true);
+            bi.d111j.setEnabled(true);
+            bi.d111g.setEnabled(true);
+        }
+
+        if (calAge > 2 && calAge <= 5) {
+            bi.d110a.setEnabled(true);
+            bi.d110b.setEnabled(true);
+            bi.d110c.setEnabled(true);
+            bi.d110m.setEnabled(true);
+            bi.d111g.setEnabled(true);
+            bi.d111j.setEnabled(true);
+        }
+
+        if (calAge > 5 && calAge <= 10) {
+            bi.d110a.setEnabled(true);
+            bi.d110d.setEnabled(true);
+            bi.d110e.setEnabled(true);
+            bi.d110l.setEnabled(true);
+            bi.d110m.setEnabled(true);
+            bi.d111g.setEnabled(true);
+            bi.d111j.setEnabled(true);
+        }
+
+        if (calAge > 10 && calAge <= 20) {
+            bi.d110a.setEnabled(true);
+            bi.d110e.setEnabled(true);
+            bi.d110f.setEnabled(true);
+            bi.d110g.setEnabled(true);
+            bi.d110j.setEnabled(true);
+            bi.d110k.setEnabled(true);
+            bi.d110l.setEnabled(true);
+            bi.d110m.setEnabled(true);
+            bi.d111a.setEnabled(true);
+            bi.d111b.setEnabled(true);
+            bi.d111c.setEnabled(true);
+            bi.d111d.setEnabled(true);
+            bi.d111e.setEnabled(true);
+            bi.d111g.setEnabled(true);
+            bi.d111h.setEnabled(true);
+            bi.d111j.setEnabled(true);
+        }
+
+        if (calAge > 20) {
+            Clear.clearAllFields(bi.d110, true);
+            Clear.clearAllFields(bi.d111, true);
+
+        }
+
     }
 
     @Override
