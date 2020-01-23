@@ -118,7 +118,8 @@ class FamilyMembersListActivity : AppCompatActivity() {
                 holder.parentLayout.isEnabled = false
                 holder.parentLayout.checkIcon.visibility = View.VISIBLE
 
-                startActivityForResult(Intent(this, SectionDActivity::class.java).putExtra(SERIAL_EXTRA, item.serialno.toInt()), CONSTANTS.MEMBER_ITEM)
+                startActivityForResult(Intent(this, SectionDActivity::class.java)
+                        .putExtra(SERIAL_EXTRA, item.serialno.toInt()), CONSTANTS.MEMBER_ITEM)
 
             }
 
