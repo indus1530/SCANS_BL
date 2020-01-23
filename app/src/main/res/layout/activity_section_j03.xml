@@ -289,7 +289,7 @@
 
                             <com.edittextpicker.aliazaz.EditTextPicker
                                 android:id="@+id/j113"
-                                style="@style/EditTextAlphaNumeric"
+                                style="@style/EditTextAlpha"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:hint="@string/j113"
@@ -394,7 +394,7 @@
 
                         <com.edittextpicker.aliazaz.EditTextPicker
                             android:id="@+id/j116"
-                            style="@style/EditTextAlphaNumeric"
+                            style="@style/EditTextAlpha"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:hint="@string/j116"
@@ -460,7 +460,7 @@
 
                         <com.edittextpicker.aliazaz.EditTextPicker
                             android:id="@+id/j118"
-                            style="@style/EditTextAlphaNumeric"
+                            style="@style/EditTextAlpha"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:hint="@string/j118"
@@ -563,7 +563,7 @@
 
                         <com.edittextpicker.aliazaz.EditTextPicker
                             android:id="@+id/j121"
-                            style="@style/EditTextAlphaNumeric"
+                            style="@style/EditTextAlpha"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:hint="@string/j121"

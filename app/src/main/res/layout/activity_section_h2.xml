@@ -87,7 +87,7 @@
 
                         <com.edittextpicker.aliazaz.EditTextPicker
                             android:id="@+id/h201x"
-                            style="@style/EditTextAlphaNumeric"
+                            style="@style/EditTextAlpha"
                             android:hint="@string/h201"
                             android:inputType="number"
                             app:mask="##"
@@ -184,7 +184,7 @@
 
                         <com.edittextpicker.aliazaz.EditTextPicker
                             android:id="@+id/h203x"
-                            style="@style/EditTextAlphaNumeric"
+                            style="@style/EditTextAlpha"
                             android:hint="@string/h203"
                             android:inputType="number"
                             app:mask="##"
@@ -629,7 +629,7 @@
 
                     <com.edittextpicker.aliazaz.EditTextPicker
                         android:id="@+id/h212"
-                        style="@style/EditTextAlphaNumeric"
+                        style="@style/EditTextAlpha"
                         android:hint="@string/minutes"
                         android:inputType="number"
                         app:mask="###"
@@ -872,7 +872,7 @@
 
                         <EditText
                             android:id="@+id/h21796x"
-                            style="@style/EditTextAlphaNumeric"
+                            style="@style/EditTextAlpha"
                             android:hint="@string/specify"
                             android:tag="h21796"
                             android:text='@{h21796.checked? h21796x.getText().toString() : ""}'
@@ -980,7 +980,7 @@
 
                         <EditText
                             android:id="@+id/h21996x"
-                            style="@style/EditTextAlphaNumeric"
+                            style="@style/EditTextAlpha"
                             android:hint="@string/specify"
                             android:tag="h21996"
                             android:text='@{h21996.checked? h21996x.getText().toString() : ""}'
@@ -1048,7 +1048,7 @@
 
                         <EditText
                             android:id="@+id/h22096x"
-                            style="@style/EditTextAlphaNumeric"
+                            style="@style/EditTextAlpha"
                             android:hint="@string/specify"
                             android:tag="h22096"
                             android:text='@{h22096.checked? h22096x.getText().toString() : ""}'
@@ -1146,7 +1146,7 @@
 
                         <EditText
                             android:id="@+id/h22296x"
-                            style="@style/EditTextAlphaNumeric"
+                            style="@style/EditTextAlpha"
                             android:hint="@string/specify"
                             android:tag="h22296"
                             android:text='@{h22296.checked? h22296x.getText().toString() : ""}'

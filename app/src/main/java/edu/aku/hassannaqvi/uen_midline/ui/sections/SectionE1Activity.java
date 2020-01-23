@@ -111,9 +111,6 @@ public class SectionE1Activity extends AppCompatActivity {
                         next = new Intent(SectionE1Activity.this, SectionE3Activity.class);
                     }
                 }
-
-                MainApp.pragnantWoman.getFirst().remove(position - 1);
-                MainApp.pragnantWoman.getSecond().remove(position - 1);
                 startActivity(next);
             }
         }
@@ -136,6 +133,11 @@ public class SectionE1Activity extends AppCompatActivity {
                 bi.e102aa.isChecked() ? "1" :
                         bi.e102ab.isChecked() ? "2" :
                                 "0");
+
+
+        // Deleting item in list
+        MainApp.pragnantWoman.getFirst().remove(position - 1);
+        MainApp.pragnantWoman.getSecond().remove(position - 1);
 
     }
 

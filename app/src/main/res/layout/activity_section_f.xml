@@ -234,7 +234,7 @@
 
                     <com.edittextpicker.aliazaz.EditTextPicker
                         android:id="@+id/f104"
-                        style="@style/EditTextAlphaNumeric"
+                        style="@style/EditTextAlpha"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:hint="@string/f104"
@@ -300,7 +300,7 @@
 
                     <com.edittextpicker.aliazaz.EditTextPicker
                         android:id="@+id/f106"
-                        style="@style/EditTextAlphaNumeric"
+                        style="@style/EditTextAlpha"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:hint="@string/f106"
@@ -386,7 +386,7 @@
 
                         <com.edittextpicker.aliazaz.EditTextPicker
                             android:id="@+id/f108a"
-                            style="@style/EditTextAlphaNumeric"
+                            style="@style/EditTextAlpha"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:hint="@string/f108a"
@@ -402,7 +402,7 @@
 
                         <com.edittextpicker.aliazaz.EditTextPicker
                             android:id="@+id/f108b"
-                            style="@style/EditTextAlphaNumeric"
+                            style="@style/EditTextAlpha"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:hint="@string/f108b"
@@ -440,7 +440,7 @@
 
                     <com.edittextpicker.aliazaz.EditTextPicker
                         android:id="@+id/f109a"
-                        style="@style/EditTextAlphaNumeric"
+                        style="@style/EditTextAlpha"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:enabled='@{f109b.checked? true : false}'
@@ -965,7 +965,7 @@
 
                         <com.edittextpicker.aliazaz.EditTextPicker
                             android:id="@+id/f120"
-                            style="@style/EditTextAlphaNumeric"
+                            style="@style/EditTextAlpha"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:hint="@string/f120"

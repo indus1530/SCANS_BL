@@ -28,7 +28,7 @@
     <style name="textView3Head">
         <item name="android:layout_width">match_parent</item>
         <item name="android:layout_height">wrap_content</item>
-        <item name="android:textSize">20sp</item>
+        <item name="android:textSize">18sp</item>
         <item name="android:padding">20dp</item>
         <item name="android:textStyle">italic</item>
         <item name="android:textAlignment">center</item>
@@ -69,22 +69,10 @@
         <item name="android:paddingBottom">5sp</item>
     </style>
 
-    <style name="EditTextAlphaNumeric">
-        <item name="android:layout_width">match_parent</item>
-        <item name="android:layout_height">wrap_content</item>
-        <item name="android:background">@drawable/et_style</item>
-        <item name="android:layout_margin">10dp</item>
-        <item name="android:textSize">20sp</item>
+    <style name="EditTextAlpha" parent="@style/textInput">
         <item name="android:digits">abcdefghijklmnopqrstuvwxyz
-            ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789
+            ABCDEFGHIJKLMNOPQRSTUVWXYZ
         </item>
-        <item name="android:imeOptions">actionDone</item>
-        <item name="android:singleLine">true</item>
-        <item name="android:focusable">true</item>
-        <item name="android:clickable">true</item>
-        <item name="android:focusableInTouchMode">true</item>
-        <item name="android:textColorHint">@color/gray</item>
-        <item name="android:padding">10dp</item>
     </style>
 
     <style name="TestDisabled">
@@ -218,9 +206,9 @@
         <item name="android:background">@color/colorPrimary</item>
         <item name="android:textAppearance">?android:attr/textAppearanceLarge</item>
         <item name="android:textColor">@android:color/white</item>
-        <item name="android:textSize">25sp</item>
+        <item name="android:textSize">21sp</item>
         <item name="android:drawable">@drawable/textview_background_grad</item>
-        <item name="android:typeface">serif</item>
+        <item name="android:typeface">sans</item>
         <item name="android:padding">10dp</item>
         <item name="android:elevation">1dp</item>
         <!--        <item name="android:paddingStart">8dp</item>-->
@@ -253,7 +241,7 @@
     </style>
 
     <style name="radiobutton" parent="Widget.AppCompat.CompoundButton.RadioButton">
-        <item name="android:textSize">24sp</item>
+        <item name="android:textSize">20sp</item>
         <item name="android:layout_width">match_parent</item>
         <item name="android:layout_height">wrap_content</item>
         <item name="android:background">@color/white</item>
@@ -283,7 +271,7 @@
         <item name="android:layout_width">match_parent</item>
         <item name="android:layout_height">wrap_content</item>
         <item name="android:button">@null</item>
-        <item name="android:textSize">24sp</item>
+        <item name="android:textSize">20sp</item>
         <item name="android:typeface">serif</item>
         <item name="android:clickable">true</item>
         <item name="android:foreground">?android:attr/selectableItemBackground</item>

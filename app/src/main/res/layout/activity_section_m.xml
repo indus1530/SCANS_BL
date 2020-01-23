@@ -109,7 +109,7 @@
                             android:text="@string/m103a" />
 
                         <TextView
-                            style="@style/i_textview"
+                            style="@style/textView3Head"
                             android:text="@string/m103a_title" />
 
                         <RadioButton
@@ -138,7 +138,7 @@
                             android:text="@string/m103f" />
 
                         <TextView
-                            style="@style/i_textview"
+                            style="@style/textView3Head"
                             android:text="@string/m103f_title" />
 
                         <RadioButton
@@ -204,7 +204,7 @@
                         android:layout_height="match_parent">
 
                         <TextView
-                            style="@style/i_textview"
+                            style="@style/textView3Head"
                             android:text="@string/m104a_title" />
 
 
@@ -225,7 +225,7 @@
                             android:text="@string/m104c" />
 
                         <TextView
-                            style="@style/i_textview"
+                            style="@style/textView3Head"
                             android:text="@string/m104d_title" />
 
                         <RadioButton
@@ -250,7 +250,7 @@
                             android:text="@string/m104g" />
 
                         <TextView
-                            style="@style/i_textview"
+                            style="@style/textView3Head"
                             android:text="@string/m104h_title" />
 
                         <RadioButton
@@ -317,7 +317,7 @@
                         android:layout_height="match_parent">
 
                         <TextView
-                            style="@style/i_textview"
+                            style="@style/textView3Head"
                             android:text="@string/m105a_title" />
 
                         <RadioButton
@@ -347,7 +347,7 @@
                             android:text="@string/m105e" />
 
                         <TextView
-                            style="@style/i_textview"
+                            style="@style/textView3Head"
                             android:text="@string/m105f_title" />
 
                         <RadioButton
@@ -392,7 +392,7 @@
                             android:text="@string/m105m" />
 
                         <TextView
-                            style="@style/i_textview"
+                            style="@style/textView3Head"
                             android:text="@string/m105n_title" />
 
                         <RadioButton
@@ -455,7 +455,7 @@
 
                     <com.edittextpicker.aliazaz.EditTextPicker
                         android:id="@+id/m106"
-                        style="@style/EditTextAlphaNumeric"
+                        style="@style/EditTextAlpha"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:hint="@string/m106"
@@ -852,7 +852,7 @@
 
                         <com.edittextpicker.aliazaz.EditTextPicker
                             android:id="@+id/m110at"
-                            style="@style/EditTextAlphaNumeric"
+                            style="@style/EditTextAlpha"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:hint="@string/m110a"
@@ -868,7 +868,7 @@
 
                         <com.edittextpicker.aliazaz.EditTextPicker
                             android:id="@+id/m110bt"
-                            style="@style/EditTextAlphaNumeric"
+                            style="@style/EditTextAlpha"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:hint="@string/m110b"
@@ -936,7 +936,7 @@
 
                     <com.edittextpicker.aliazaz.EditTextPicker
                         android:id="@+id/m112a"
-                        style="@style/EditTextAlphaNumeric"
+                        style="@style/EditTextAlpha"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:hint="@string/m112a"
@@ -948,7 +948,7 @@
 
                     <com.edittextpicker.aliazaz.EditTextPicker
                         android:id="@+id/m112b"
-                        style="@style/EditTextAlphaNumeric"
+                        style="@style/EditTextAlpha"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:hint="@string/m112b"
@@ -960,7 +960,7 @@
 
                     <com.edittextpicker.aliazaz.EditTextPicker
                         android:id="@+id/m112c"
-                        style="@style/EditTextAlphaNumeric"
+                        style="@style/EditTextAlpha"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:hint="@string/m112c"
@@ -972,7 +972,7 @@
 
                     <com.edittextpicker.aliazaz.EditTextPicker
                         android:id="@+id/m112d"
-                        style="@style/EditTextAlphaNumeric"
+                        style="@style/EditTextAlpha"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:hint="@string/m112d"
@@ -984,7 +984,7 @@
 
                     <com.edittextpicker.aliazaz.EditTextPicker
                         android:id="@+id/m112e"
-                        style="@style/EditTextAlphaNumeric"
+                        style="@style/EditTextAlpha"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:hint="@string/m112e"
@@ -996,7 +996,7 @@
 
                     <com.edittextpicker.aliazaz.EditTextPicker
                         android:id="@+id/m112f"
-                        style="@style/EditTextAlphaNumeric"
+                        style="@style/EditTextAlpha"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:hint="@string/m112f"
@@ -1008,7 +1008,7 @@
 
                     <com.edittextpicker.aliazaz.EditTextPicker
                         android:id="@+id/m112g"
-                        style="@style/EditTextAlphaNumeric"
+                        style="@style/EditTextAlpha"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:hint="@string/m112g"

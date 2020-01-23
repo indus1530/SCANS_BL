@@ -169,7 +169,7 @@
 
                         <com.edittextpicker.aliazaz.EditTextPicker
                             android:id="@+id/j103a"
-                            style="@style/EditTextAlphaNumeric"
+                            style="@style/EditTextAlpha"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:hint="@string/j103a"
@@ -182,7 +182,7 @@
 
                         <com.edittextpicker.aliazaz.EditTextPicker
                             android:id="@+id/j103b"
-                            style="@style/EditTextAlphaNumeric"
+                            style="@style/EditTextAlpha"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:hint="@string/j103b"
@@ -195,7 +195,7 @@
 
                         <com.edittextpicker.aliazaz.EditTextPicker
                             android:id="@+id/j103c"
-                            style="@style/EditTextAlphaNumeric"
+                            style="@style/EditTextAlpha"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:hint="@string/j103c"
@@ -224,7 +224,7 @@
 
                         <io.blackbox_vision.datetimepickeredittext.view.DatePickerInputEditText
                             android:id="@+id/j10401"
-                            style="@style/EditTextAlphaNumeric"
+                            style="@style/EditTextAlpha"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:hint="@string/j10401"
@@ -345,7 +345,7 @@
 
                             <EditText
                                 android:id="@+id/j10401b96x"
-                                style="@style/EditTextAlphaNumeric"
+                                style="@style/EditTextAlpha"
                                 android:hint="@string/specify"
                                 android:tag="j10401b96"
                                 android:text='@{j10401b96.checked? j10401b96x.getText().toString() : ""}'
@@ -371,7 +371,7 @@
 
                         <io.blackbox_vision.datetimepickeredittext.view.DatePickerInputEditText
                             android:id="@+id/j10402"
-                            style="@style/EditTextAlphaNumeric"
+                            style="@style/EditTextAlpha"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:hint="@string/j10402"
@@ -492,7 +492,7 @@
 
                             <EditText
                                 android:id="@+id/j10402b96x"
-                                style="@style/EditTextAlphaNumeric"
+                                style="@style/EditTextAlpha"
                                 android:hint="@string/specify"
                                 android:tag="j10402b96"
                                 android:text='@{j10402b96.checked? j10401b96x.getText().toString() : ""}'
@@ -518,7 +518,7 @@
 
                         <io.blackbox_vision.datetimepickeredittext.view.DatePickerInputEditText
                             android:id="@+id/j10403"
-                            style="@style/EditTextAlphaNumeric"
+                            style="@style/EditTextAlpha"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:hint="@string/j10403"
@@ -639,7 +639,7 @@
 
                             <EditText
                                 android:id="@+id/j10403b96x"
-                                style="@style/EditTextAlphaNumeric"
+                                style="@style/EditTextAlpha"
                                 android:hint="@string/specify"
                                 android:tag="j10403b96"
                                 android:text='@{j10403b96.checked? j10401b96x.getText().toString() : ""}'
@@ -665,7 +665,7 @@
 
                         <io.blackbox_vision.datetimepickeredittext.view.DatePickerInputEditText
                             android:id="@+id/j10404"
-                            style="@style/EditTextAlphaNumeric"
+                            style="@style/EditTextAlpha"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:hint="@string/j10404"
@@ -786,7 +786,7 @@
 
                             <EditText
                                 android:id="@+id/j10404b96x"
-                                style="@style/EditTextAlphaNumeric"
+                                style="@style/EditTextAlpha"
                                 android:hint="@string/specify"
                                 android:tag="j10404b96"
                                 android:text='@{j10404b96.checked? j10404b96x.getText().toString() : ""}'
@@ -812,7 +812,7 @@
 
                         <io.blackbox_vision.datetimepickeredittext.view.DatePickerInputEditText
                             android:id="@+id/j10405"
-                            style="@style/EditTextAlphaNumeric"
+                            style="@style/EditTextAlpha"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:hint="@string/j10405"
@@ -933,7 +933,7 @@
 
                             <EditText
                                 android:id="@+id/j10405b96x"
-                                style="@style/EditTextAlphaNumeric"
+                                style="@style/EditTextAlpha"
                                 android:hint="@string/specify"
                                 android:tag="j10405b96"
                                 android:text='@{j10405b96.checked? j10405b96x.getText().toString() : ""}'
@@ -959,7 +959,7 @@
 
                         <io.blackbox_vision.datetimepickeredittext.view.DatePickerInputEditText
                             android:id="@+id/j10406"
-                            style="@style/EditTextAlphaNumeric"
+                            style="@style/EditTextAlpha"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:hint="@string/j10406"
@@ -1080,7 +1080,7 @@
 
                             <EditText
                                 android:id="@+id/j10406b96x"
-                                style="@style/EditTextAlphaNumeric"
+                                style="@style/EditTextAlpha"
                                 android:hint="@string/specify"
                                 android:tag="j10406b96"
                                 android:text='@{j10406b96.checked? j10406b96x.getText().toString() : ""}'
@@ -1105,7 +1105,7 @@
 
                         <io.blackbox_vision.datetimepickeredittext.view.DatePickerInputEditText
                             android:id="@+id/j10407"
-                            style="@style/EditTextAlphaNumeric"
+                            style="@style/EditTextAlpha"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:hint="@string/j10407"
@@ -1226,7 +1226,7 @@
 
                             <EditText
                                 android:id="@+id/j10407b96x"
-                                style="@style/EditTextAlphaNumeric"
+                                style="@style/EditTextAlpha"
                                 android:hint="@string/specify"
                                 android:tag="j10407b96"
                                 android:text='@{j10407b96.checked? j10407b96x.getText().toString() : ""}'
@@ -1251,7 +1251,7 @@
 
                         <io.blackbox_vision.datetimepickeredittext.view.DatePickerInputEditText
                             android:id="@+id/j10408"
-                            style="@style/EditTextAlphaNumeric"
+                            style="@style/EditTextAlpha"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:hint="@string/j10408"
@@ -1372,7 +1372,7 @@
 
                             <EditText
                                 android:id="@+id/j10408b96x"
-                                style="@style/EditTextAlphaNumeric"
+                                style="@style/EditTextAlpha"
                                 android:hint="@string/specify"
                                 android:tag="j10408b96"
                                 android:text='@{j10408b96.checked? j10408b96x.getText().toString() : ""}'

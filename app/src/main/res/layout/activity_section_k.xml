@@ -391,7 +391,7 @@
 
                         <com.edittextpicker.aliazaz.EditTextPicker
                             android:id="@+id/k105aaa"
-                            style="@style/EditTextAlphaNumeric"
+                            style="@style/EditTextAlpha"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:hint="@string/k105aaa"
@@ -407,7 +407,7 @@
 
                         <com.edittextpicker.aliazaz.EditTextPicker
                             android:id="@+id/k105aab"
-                            style="@style/EditTextAlphaNumeric"
+                            style="@style/EditTextAlpha"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:hint="@string/k105aab"

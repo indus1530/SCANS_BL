@@ -97,14 +97,13 @@
 
                         <com.edittextpicker.aliazaz.EditTextPicker
                             android:id="@+id/e117"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
+                            style="@style/textInput"
                             android:hint="@string/e117"
                             android:inputType="number"
                             android:maxLength="2"
                             android:textColor="@android:color/black"
                             app:maxValue="20"
-                            app:minValue="0"
+                            app:minValue="1"
                             app:type="range" />
 
                     </LinearLayout>

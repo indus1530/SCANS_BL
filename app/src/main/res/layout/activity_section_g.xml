@@ -245,7 +245,7 @@
 
                     <com.edittextpicker.aliazaz.EditTextPicker
                         android:id="@+id/g105"
-                        style="@style/EditTextAlphaNumeric"
+                        style="@style/EditTextAlpha"
                         android:hint="@string/km"
                         android:inputType="number"
                         app:mask="###"
@@ -318,7 +318,7 @@
 
                     <com.edittextpicker.aliazaz.EditTextPicker
                         android:id="@+id/g107"
-                        style="@style/EditTextAlphaNumeric"
+                        style="@style/EditTextAlpha"
                         android:hint="@string/minutes"
                         android:inputType="number"
                         app:mask="##"
@@ -501,7 +501,7 @@
 
                     <com.edittextpicker.aliazaz.EditTextPicker
                         android:id="@+id/g112"
-                        style="@style/EditTextAlphaNumeric"
+                        style="@style/EditTextAlpha"
                         android:hint="@string/rupees"
                         android:inputType="number"
                         app:mask="####"
@@ -723,7 +723,7 @@
 
                     <com.edittextpicker.aliazaz.EditTextPicker
                         android:id="@+id/g117a"
-                        style="@style/EditTextAlphaNumeric"
+                        style="@style/EditTextAlpha"
                         android:hint="@string/days"
                         android:inputType="number"
                         android:maxLength="1"
@@ -737,7 +737,7 @@
 
                     <com.edittextpicker.aliazaz.EditTextPicker
                         android:id="@+id/g117b"
-                        style="@style/EditTextAlphaNumeric"
+                        style="@style/EditTextAlpha"
                         android:hint="@string/hours"
                         android:inputType="number"
                         android:maxLength="2"
@@ -751,7 +751,7 @@
 
                     <com.edittextpicker.aliazaz.EditTextPicker
                         android:id="@+id/g117c"
-                        style="@style/EditTextAlphaNumeric"
+                        style="@style/EditTextAlpha"
                         android:hint="@string/minutes"
                         android:inputType="number"
                         android:maxLength="2"
@@ -779,7 +779,7 @@
 
                     <com.edittextpicker.aliazaz.EditTextPicker
                         android:id="@+id/g118"
-                        style="@style/EditTextAlphaNumeric"
+                        style="@style/EditTextAlpha"
                         android:hint="@string/rupees"
                         android:inputType="number"
                         app:mask="#####"
@@ -892,7 +892,7 @@
 
                         <EditText
                             android:id="@+id/g12096x"
-                            style="@style/EditTextAlphaNumeric"
+                            style="@style/EditTextAlpha"
                             android:hint="@string/specify"
                             android:tag="g12096"
                             android:text='@{g12096.checked? g12096x.getText().toString() : ""}'
@@ -970,7 +970,7 @@
 
                         <EditText
                             android:id="@+id/g12196x"
-                            style="@style/EditTextAlphaNumeric"
+                            style="@style/EditTextAlpha"
                             android:hint="@string/specify"
                             android:tag="g12196"
                             android:text='@{g12196.checked? g12196x.getText().toString() : ""}'

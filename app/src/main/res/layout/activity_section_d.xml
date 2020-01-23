@@ -322,7 +322,7 @@
 
                                 <TextView
                                     style="@style/textView3Head"
-                                    android:text="@string/d108a" />
+                                    android:text="@string/d108b" />
 
                                 <com.edittextpicker.aliazaz.EditTextPicker
                                     android:id="@+id/d108b"
@@ -346,7 +346,7 @@
 
                                 <TextView
                                     style="@style/textView3Head"
-                                    android:text="@string/d108a" />
+                                    android:text="@string/d108c" />
 
                                 <com.edittextpicker.aliazaz.EditTextPicker
                                     android:id="@+id/d108c"
