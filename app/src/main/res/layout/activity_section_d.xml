@@ -343,13 +343,15 @@
                             app:defaultValue="00"
                             app:maxValue="30"
                             app:minValue="1"
-                            app:type="range" />
+                            app:type="range"
+                            style="@style/textInput"/>
 
                         <TextView
                             style="@style/textView3Head"
                             android:text="@string/d108b" />
 
                         <com.edittextpicker.aliazaz.EditTextPicker
+                            style="@style/textInput"
                             android:id="@+id/d108b"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
@@ -367,6 +369,7 @@
                             android:text="@string/d108c" />
 
                         <com.edittextpicker.aliazaz.EditTextPicker
+                            style="@style/textInput"
                             android:id="@+id/d108c"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
@@ -400,6 +403,7 @@
                             android:text="@string/d108a" />
 
                         <com.edittextpicker.aliazaz.EditTextPicker
+                            style="@style/textInput"
                             android:id="@+id/d109"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
