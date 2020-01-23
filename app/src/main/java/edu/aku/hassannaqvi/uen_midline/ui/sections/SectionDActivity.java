@@ -161,9 +161,9 @@ public class SectionDActivity extends AppCompatActivity {
 
         JSONObject sd = new JSONObject();
 
-        sd.put("d106", menSLst.getFirst().size() != 0 ? mainVModel.getMemberInfo(menSLst.getFirst().get(bi.d106.getSelectedItemPosition() - 2)) : "97");
+        sd.put("d106", menSLst.getFirst().size() != 0 ? mainVModel.getMemberInfo(menSLst.getFirst().get(bi.d106.getSelectedItemPosition() - 1)) : "97");
         fmc.setmName(bi.d106.getSelectedItem().toString());
-        sd.put("d107", womenSLst.getFirst().size() != 0 ? mainVModel.getMemberInfo(womenSLst.getFirst().get(bi.d107.getSelectedItemPosition() - 2)) : "97");
+        sd.put("d107", womenSLst.getFirst().size() != 0 ? mainVModel.getMemberInfo(womenSLst.getFirst().get(bi.d107.getSelectedItemPosition() - 1)) : "97");
         fmc.setmName(bi.d107.getSelectedItem().toString());
         sd.put("d108a", bi.d108a.getText().toString());
         sd.put("d108b", bi.d108b.getText().toString());
