@@ -49,15 +49,6 @@ import edu.aku.hassannaqvi.uen_midline.ui.other.EndingActivity;
 
 public class MainApp extends Application {
 
-   /* public static final String _IP = "f49461"; // Test PHP server
-    public static final String _IP = "43.245.131.159"; // Test PHP server*/
-
-    /*VCOE1 LIVE SERVER*/
-   /* public static final String _IP = "vcoe1.aku.edu"; // .Net server
-    public static final Integer _PORT = 80; // Port - with colon (:)
-    public static final String _HOST_URL = "https://" + MainApp._IP + "/pulseox/api/";// .VOC server*/
-
-    /*F38158 TEST SERVER*/
     public static final String _IP = "vcoe1.aku.edu";// .TEST server
     public static final Integer _PORT = 80; // Port - with colon (:)
     public static final String _HOST_URL = "https://" + MainApp._IP + "/sosas/api/";// .TEST server;
@@ -85,12 +76,10 @@ public class MainApp extends Application {
 
     private static final long DAYS_IN_2_YEAR = 365 * 2;
     public static final long MILLISECONDS_IN_2Years = MILLIS_IN_SECOND * SECONDS_IN_MINUTE * MINUTES_IN_HOUR * HOURS_IN_DAY * DAYS_IN_2_YEAR;
-    //public static final long MILLISECONDS_IN_100_YEAR = MILLISECONDS_IN_YEAR * 100;
     public static String deviceId;
     public static OnItemClick itemClick;
     public static OnItemClick countItemClick;
     public static AppInfo appInfo;
-
     public static Boolean admin = false;
     public static FormsContract fc;
     public static DeceasedChildContract dcc;
@@ -101,142 +90,27 @@ public class MainApp extends Application {
     public static void setItemClick(OnItemClick itemClick) {
         MainApp.itemClick = itemClick;
     }
-
-    public static void setCountItemClick(OnItemClick itemClick) {
-        MainApp.countItemClick = itemClick;
-    }
-
-    public static int CounterDeceasedChild = 0;
-    public static int counter = 0;
     public static int mm = 1;
-    public static int imsCount = 1;
-    public static int totalImsCount = 0;
-    public static int sixMonthsCount = 0;
-    public static int positionIm = 0;
     public static boolean flag = true;
     public static int versionCode;
     public static String versionName;
-    public static String hh01txt = "0000";
-    public static String hh02txt;
-    public static int hh03txt = 1;
     public static int deathCount = 0;
     public static String DeviceURL = "devices.php";
     public static String IMEI;
-    public static String formtype;
-    public static String motherInfo = "motherInfo";
-    public static FamilyMembersContract motherData;
-    public static FamilyMembersContract childData;
     public static ProblemContract pc;
 
     public static SharedPreferences sharedPref;
-
-    //    public static Map<String, FamilyMembersContract> childsMap = new HashMap<>();
-    public static ArrayList<String> lstChild = new ArrayList<>();
-
-    public static int ageRdo = 0;
-
-    public static ArrayList<String> childList = new ArrayList<>();
-    public static ArrayList<String> motherList = new ArrayList<>();
-    public static ArrayList<Integer> motherSerial = new ArrayList<>();
-    public static HashMap<String, String> motherMap = new HashMap<>();
-    public static ArrayList<String> fatherList = new ArrayList<>();
-    public static ArrayList<Integer> fatherSerial = new ArrayList<>();
-    public static HashMap<String, String> fatherMap = new HashMap<>();
-
-
-    //    Ali
-    public static String regionDss = "";
-    //    public static List<FamilyMembersContract> familyMembersList;
-//    public static FamilyMembersContract fmc;
-//    public static DeceasedMotherContract dcM;
-//    public static DeceasedChildContract dcC;
-    public static MWRAContract mw;
-    //    public static SectionIIMContract ims;
     public static String TAG = "AppMain";
 
-    public static int memFlag = 0;
 
-    public static int selectedPos = -1;
-    public static int randID = 1;
-    public static Boolean isRsvp = false;
-    public static Boolean isHead = false;
-    public static int ucCode = 0;
-    public static int talukaCode = 0;
-    public static int areaCode = 0;
-    public static String cluster = "";
-    public static String hhno = "";
-    public static int BLRandomSize;
+
     public static int childCount = 0;
-    public static int problemType = 1;
-    public static int problemCount = 0;
     public static int noOfPragnencies = 0;
-    public static List<Integer> extLst;
     public static boolean twinFlag = false;
     public static List<String> pragnantWoman = new ArrayList<>();
 
-    /*
-     problem type
-     1 = eyes
-     2 = ears
-     3 = face
-     4 = neck
-     5 = head
-     6 = chest
-     7 = back
-     8 = abdomen
-     9 = buttocks/groin/genitalia
-     10 = fingers extremities
-     11 = thumb/hand extremities
-     12 = lower arm extremities
-     13 = upper arm extremities
-     14 = foot extremities
-     15 = lower leg extremities
-     16 = upper leg extremities
-     */
-
-    public static String lhwCode;
-    public static String lhwName;
-    public static String hh04txt;
-    public static String villageName;
-    public static String villageCode;
     protected static LocationManager locationManager;
 
-
-    public static int monthsBetweenDates(Date startDate, Date endDate) {
-
-        Calendar start = Calendar.getInstance();
-        start.setTime(startDate);
-
-        Calendar end = Calendar.getInstance();
-        end.setTime(endDate);
-
-        int monthsBetween = 0;
-        int dateDiff = end.get(Calendar.DAY_OF_MONTH) - start.get(Calendar.DAY_OF_MONTH);
-
-        if (dateDiff < 0) {
-            int borrrow = end.getActualMaximum(Calendar.DAY_OF_MONTH);
-            dateDiff = (end.get(Calendar.DAY_OF_MONTH) + borrrow) - start.get(Calendar.DAY_OF_MONTH);
-            monthsBetween--;
-
-            if (dateDiff > 0) {
-                monthsBetween++;
-            }
-        }
-
-        monthsBetween += end.get(Calendar.MONTH) - start.get(Calendar.MONTH);
-        monthsBetween += (end.get(Calendar.YEAR) - start.get(Calendar.YEAR)) * 12;
-        return monthsBetween;
-    }
-
-//    public static long ageInMonthsByDOB(String dateStr) {
-//        SimpleDateFormat sdf = new SimpleDateFormat("dd-MM-yyyy");
-//        Calendar cal = getCalendarDate(dateStr);
-//        Date dob = cal.getTime();
-//        Date today = new Date();
-//        Long diff = today.getTime() - dob.getTime();
-//        long ageInMonths = (diff / (24 * 60 * 60 * 1000)) / 30;
-//        return ageInMonths;
-//    }
 
     public static String[] relationHHLst = {"Head of HH", "Wife/Husband", "Son/Daughters", "Son in law/Daughter in law", "Grand child", "Parents", "Parents in law",
             "Brother/Sister", "Brother in law/Sister in law", "Niece/Nephew", "Grand Parents", "Aunts/Uncle", "Adopted/Step child", "Domestic Servant", "Don’t Know"};
@@ -275,75 +149,6 @@ public class MainApp extends Application {
 
     }
 
-    public static long ageInMonths(String year, String month) {
-        long ageInMonths = (Integer.valueOf(year) * 12) + Integer.valueOf(month);
-        return ageInMonths;
-    }
-
-    public static void errorCheck(final Context context, String error) {
-        AlertDialog.Builder alertDialogBuilder = new AlertDialog.Builder(
-                context);
-        alertDialogBuilder
-                .setMessage(error)
-                .setCancelable(false)
-                .setPositiveButton("Ok",
-                        new DialogInterface.OnClickListener() {
-                            public void onClick(DialogInterface dialog,
-                                                int id) {
-                                dialog.cancel();
-                            }
-                        });
-        AlertDialog alert = alertDialogBuilder.create();
-        alert.show();
-    }
-
-    public static void errorCountDialog(final Context context, final Activity activity, String error) {
-        AlertDialog.Builder alertDialogBuilder = new AlertDialog.Builder(
-                context);
-        alertDialogBuilder
-                .setMessage(error)
-                .setCancelable(false)
-                .setPositiveButton("Discard",
-                        new DialogInterface.OnClickListener() {
-                            public void onClick(DialogInterface dialog,
-                                                int id) {
-//                                MainApp.memFlag--;
-                                activity.finish();
-                            }
-                        });
-        alertDialogBuilder.setNegativeButton("Cancel",
-                new DialogInterface.OnClickListener() {
-                    public void onClick(DialogInterface dialog, int id) {
-                        dialog.cancel();
-                    }
-                });
-        AlertDialog alert = alertDialogBuilder.create();
-        alert.show();
-    }
-
-    public static void finishActivity(final Context context, final Activity activity) {
-        AlertDialog.Builder alertDialogBuilder = new AlertDialog.Builder(
-                context);
-        alertDialogBuilder
-                .setMessage("Do you want to Exit??")
-                .setCancelable(false)
-                .setPositiveButton("Yes",
-                        new DialogInterface.OnClickListener() {
-                            public void onClick(DialogInterface dialog,
-                                                int id) {
-                                activity.finish();
-                            }
-                        });
-        alertDialogBuilder.setNegativeButton("No",
-                new DialogInterface.OnClickListener() {
-                    public void onClick(DialogInterface dialog, int id) {
-                        dialog.cancel();
-                    }
-                });
-        AlertDialog alert = alertDialogBuilder.create();
-        alert.show();
-    }
-
     public static void endActivity(final Context context, final Activity activity) {
         AlertDialog.Builder alertDialogBuilder = new AlertDialog.Builder(
                 context);
@@ -370,54 +175,6 @@ public class MainApp extends Application {
         alert.show();
     }
 
-    public static String convertDateFormat(String dateStr) {
-        SimpleDateFormat sdf = new SimpleDateFormat("dd-MM-yyyy");
-        try {
-            Date d = sdf.parse(dateStr);
-            return new SimpleDateFormat("dd/MM/yyyy").format(d);
-        } catch (ParseException ex) {
-            ex.printStackTrace();
-        }
-
-        return "";
-    }
-
-    public static Boolean LHWExist(String lhwCode, String villageCode) {
-        Log.d(TAG, "LHWExist: " + lhwCode + " - villagecode " + villageCode);
-
-
-        MainApp.hh03txt = Integer.valueOf(sharedPref.getString(lhwCode, "0"));
-        Log.d(TAG, "LHWExist (Test): " + sharedPref.getString(lhwCode, "0"));
-
-        if (MainApp.hh03txt == 0) {
-            Log.d(TAG, "LHWExist (False): " + MainApp.hh03txt);
-
-            return false;
-        } else {
-            Log.d(TAG, "LHWExist (True): " + MainApp.hh03txt);
-
-            return true;
-        }
-    }
-
-    public static void openCountDialog(Context context, int count) {
-
-        AlertDialog.Builder builder = new AlertDialog.Builder(context);
-        builder.setCancelable(false);
-        View view = LayoutInflater.from(context).inflate(R.layout.count_alert_dialog_layout, null);
-        CountAlertDialogLayoutBinding bi = DataBindingUtil.bind(view.getRootView());
-        builder.setView(view);
-        AlertDialog dialog = builder.create();
-        dialog.show();
-//        bi.mainHeading.setText(context.getString(R.string.countAlertMsg) + ("(No:" + String.format("%2d", count) + ")"));
-//
-//        bi.continueBtn.setOnClickListener(v -> {
-//            countItemClick.itemClick();
-//            dialog.dismiss();
-//        });
-//
-//        bi.noBtn.setOnClickListener(v -> dialog.dismiss());
-    }
 
 
     public static void openDialog(Context context, FamilyMembersContract item) {
@@ -543,9 +300,6 @@ public class MainApp extends Application {
         } else return isNewer && !isSignificantlyLessAccurate && isFromSameProvider;
     }
 
-    /**
-     * Checks whether two providers are the same
-     */
     private boolean isSameProvider(String provider1, String provider2) {
         if (provider1 == null) {
             return provider2 == null;
@@ -553,29 +307,6 @@ public class MainApp extends Application {
         return provider1.equals(provider2);
     }
 
-    public static class deadMemberClass {
-
-        int position;
-        String DSSId;
-
-        public deadMemberClass(int i, String s) {
-            position = i;
-            DSSId = s;
-        }
-
-        public int getPosition() {
-            return position;
-        }
-
-        public void setPosition(int i) {
-            position = i;
-        }
-
-        public void setDSSId(String id) {
-            DSSId = id;
-        }
-
-    }
 
     public class GPSLocationListener implements LocationListener {
         public void onLocationChanged(Location location) {
