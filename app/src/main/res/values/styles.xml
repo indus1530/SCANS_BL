@@ -9,7 +9,7 @@
         <!-- Customize your theme here. -->
     </style>
 
-    <style name="AppTheme1" parent="Theme.AppCompat.Light.NoActionBar">
+    <style name="AppTheme1" parent="Theme.AppCompat.Light.DarkActionBar">
         <item name="colorPrimary">@color/colorPrimary</item>
         <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
         <item name="android:scrollViewStyle">@style/BackgroundStyle</item>
