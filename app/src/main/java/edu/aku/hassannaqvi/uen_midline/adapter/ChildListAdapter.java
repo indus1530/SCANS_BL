@@ -52,7 +52,7 @@ public class ChildListAdapter extends RecyclerView.Adapter<ChildListAdapter.View
         String gender = mList.get(i).getGender();
         holder.bi.genderImage.setImageResource(gender.equals("1") ? R.drawable.boy : R.drawable.mother);
         holder.bi.motherName.setText(mList.get(i).getmName());
-        holder.bi.parentLayout.setOnClickListener(v -> itemClicked.onItemClick(mList.get(i), i));
+        holder.bi.parentLayout.setOnClickListener(v -> itemClicked.onItemClick(mList.get(i), i, holder.bi));
         viewHolder = holder.bi;
     }
 
@@ -61,17 +61,13 @@ public class ChildListAdapter extends RecyclerView.Adapter<ChildListAdapter.View
         return mList.size();
     }
 
-    public ItemMemListBinding getHolder() {
-        return viewHolder;
-    }
-
     public void setMList(List<FamilyMembersContract> members) {
         mList = members;
         notifyDataSetChanged();
     }
 
     public interface OnItemClicked {
-        void onItemClick(FamilyMembersContract item, int position);
+        void onItemClick(FamilyMembersContract item, int position, ItemMemListBinding viewHolder);
     }
 
     class ViewHolder extends RecyclerView.ViewHolder {

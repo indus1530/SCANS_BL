@@ -10,6 +10,7 @@ import android.widget.Toast;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.databinding.DataBindingUtil;
 
+import com.validatorcrawler.aliazaz.Clear;
 import com.validatorcrawler.aliazaz.Validator;
 
 import org.json.JSONException;
@@ -91,6 +92,12 @@ public class SectionDActivity extends AppCompatActivity {
             bi.d107.setAdapter(new ArrayAdapter<>(this, android.R.layout.simple_dropdown_item_1line, womenLst));
         }
 
+        if (serial == 1) {
+            Clear.clearAllFields(bi.d103, false);
+            bi.d103a.setChecked(true);
+            bi.d109.setMinvalue(15);
+        }
+
     }
 
     public void BtnContinue() {
@@ -154,9 +161,9 @@ public class SectionDActivity extends AppCompatActivity {
 
         JSONObject sd = new JSONObject();
 
-        sd.put("d106", menSLst.getFirst().size() != 0 ? mainVModel.getMemberInfo(menSLst.getFirst().get(bi.d106.getSelectedItemPosition() + 1)) : "97");
+        sd.put("d106", menSLst.getFirst().size() != 0 ? mainVModel.getMemberInfo(menSLst.getFirst().get(bi.d106.getSelectedItemPosition() - 2)) : "97");
         fmc.setmName(bi.d106.getSelectedItem().toString());
-        sd.put("d107", womenSLst.getFirst().size() != 0 ? mainVModel.getMemberInfo(womenSLst.getFirst().get(bi.d107.getSelectedItemPosition() + 1)) : "97");
+        sd.put("d107", womenSLst.getFirst().size() != 0 ? mainVModel.getMemberInfo(womenSLst.getFirst().get(bi.d107.getSelectedItemPosition() - 2)) : "97");
         fmc.setmName(bi.d107.getSelectedItem().toString());
         sd.put("d108a", bi.d108a.getText().toString());
         sd.put("d108b", bi.d108b.getText().toString());
@@ -236,6 +243,15 @@ public class SectionDActivity extends AppCompatActivity {
             @Override
             public void afterTextChanged(Editable s) {
 
+            }
+        });
+
+        bi.d105.setOnCheckedChangeListener((group, checkedId) -> {
+            if (fmc.getGender().equals("2") && !bi.d105b.isChecked())
+                bi.d111a.setEnabled(true);
+            else {
+                bi.d111a.setEnabled(false);
+                bi.d111a.setChecked(false);
             }
         });
 
