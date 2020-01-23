@@ -62,7 +62,7 @@
 
     <string name="total">Total</string>
     <string name="mwra">MWRA</string>
-    <string name="under5">Under 5</string>
+    <string name="under5">Child Under 5</string>
 
     <string name="a101">Cluster number </string>
     <string name="a101a">This information will be based on the list of villages generated from the district. Each enumerator will be given a list of clusters that he/she will be visiting, and before starting the interview, this information will be entered from the same list.</string>
