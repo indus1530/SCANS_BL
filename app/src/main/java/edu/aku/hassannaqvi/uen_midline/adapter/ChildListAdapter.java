@@ -13,6 +13,7 @@ import java.util.List;
 import edu.aku.hassannaqvi.uen_midline.R;
 import edu.aku.hassannaqvi.uen_midline.contracts.FamilyMembersContract;
 import edu.aku.hassannaqvi.uen_midline.core.DatabaseHelper;
+import edu.aku.hassannaqvi.uen_midline.core.MainApp;
 import edu.aku.hassannaqvi.uen_midline.databinding.ItemMemListBinding;
 
 public class ChildListAdapter extends RecyclerView.Adapter<ChildListAdapter.ViewHolder> {
@@ -46,7 +47,7 @@ public class ChildListAdapter extends RecyclerView.Adapter<ChildListAdapter.View
     public void onBindViewHolder(@NonNull final ViewHolder holder, final int i) {
 
         holder.bi.name.setText(mList.get(i).getName());
-        holder.bi.realHead.setText(mList.get(i).getRelHH());
+        holder.bi.realHead.setText(MainApp.relationHHLst[Integer.valueOf(mList.get(i).getRelHH()) - 1]);
         holder.bi.dob.setText("Age: " + mList.get(i).getAge() + " Year(s)");
         holder.bi.index.setText(String.format("%02d", Integer.valueOf(mList.get(i).getSerialno())));
         String gender = mList.get(i).getGender();

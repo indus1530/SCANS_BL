@@ -227,6 +227,7 @@ public class SectionDActivity extends AppCompatActivity {
             @Override
             public void onTextChanged(CharSequence s, int start, int before, int count) {
                 bi.d109.setEnabled(false);
+                bi.d109.setText(null);
                 if (bi.d108c.getText().toString().isEmpty()) return;
                 if (bi.d108c.getText().toString().equals("00")) {
                     bi.d109.setEnabled(true);
@@ -255,6 +256,31 @@ public class SectionDActivity extends AppCompatActivity {
             }
         });
 
+        bi.d109.addTextChangedListener(new TextWatcher() {
+            @Override
+            public void beforeTextChanged(CharSequence s, int start, int count, int after) {
+
+            }
+
+            @Override
+            public void onTextChanged(CharSequence s, int start, int before, int count) {
+                if (bi.d109.getText().toString().isEmpty()) return;
+                int calAge = Integer.valueOf(bi.d109.getText().toString());
+                if (Integer.signum(calAge) == -1) return;
+                personInfoFunctionality(calAge);
+            }
+
+            @Override
+            public void afterTextChanged(Editable s) {
+
+            }
+        });
+
+    }
+
+    private void personInfoFunctionality(int calAge) {
+        if (calAge > 2) bi.fldGrpSectionD03.setVisibility(View.VISIBLE);
+        else bi.fldGrpSectionD03.setVisibility(View.GONE);
     }
 
     @Override
