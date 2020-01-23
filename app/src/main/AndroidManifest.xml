@@ -22,7 +22,9 @@
         android:label="@string/app_name"
         android:screenOrientation="portrait"
         android:theme="@style/AppTheme1">
-        <activity android:name=".ui.sections.SectionE4Activity"></activity>
+        <activity
+            android:name=".ui.sections.SectionE4Activity"
+            android:screenOrientation="portrait" />
         <activity
             android:name=".ui.other.LoginActivity"
             android:screenOrientation="portrait"
@@ -89,13 +91,13 @@
             android:screenOrientation="portrait" />
         <activity
             android:name=".ui.list_activity.FamilyMembersListActivity"
-            android:screenOrientation="portrait"></activity>
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme" />
         <activity
             android:name=".ui.sections.SectionDActivity"
             android:label="@string/tdheading"
             android:parentActivityName=".ui.list_activity.FamilyMembersListActivity"
-            android:screenOrientation="portrait"
-            android:theme="@style/AppTheme2">
+            android:screenOrientation="portrait">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="edu.aku.hassannaqvi.uen_midline.ui.list_activity.FamilyMembersListActivity" />
@@ -108,18 +110,15 @@
             android:screenOrientation="portrait" />
         <activity
             android:name=".ui.other.MainActivity"
-            android:screenOrientation="portrait"
-            android:theme="@style/AppTheme1" />
+            android:screenOrientation="portrait" />
         <activity
             android:name=".core.AndroidDatabaseManager"
             android:parentActivityName=".ui.other.MainActivity"
-            android:screenOrientation="portrait"
-            android:theme="@style/AppTheme1" />
+            android:screenOrientation="portrait" />
         <activity
             android:name=".ui.sync.SyncActivity"
             android:parentActivityName=".ui.other.MainActivity"
-            android:screenOrientation="portrait"
-            android:theme="@style/AppTheme1" />
+            android:screenOrientation="portrait" />
 
         <service android:name=".DownloadFileService" />
     </application>

@@ -10,19 +10,6 @@
     </style>
 
     <style name="AppTheme1" parent="Theme.AppCompat.Light.DarkActionBar">
-        <item name="colorPrimary">@color/colorPrimary</item>
-        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
-        <item name="android:scrollViewStyle">@style/BackgroundStyle</item>
-        <!--        <item name="android:textViewStyle">@style/labels</item>-->
-        <item name="android:editTextStyle">@style/textInput</item>
-        <item name="android:radioButtonStyle">@style/radiobutton</item>
-        <item name="checkboxStyle">@style/checkbox</item>
-        <item name="android:textColorHint">@color/colorPrimaryBeta</item>
-        <item name="android:typeface">serif</item>
-
-    </style>
-
-    <style name="AppTheme2" parent="Theme.AppCompat.Light.DarkActionBar">
         <item name="colorAccent">@color/colorAccent</item>
         <item name="colorPrimary">@color/colorPrimary</item>
         <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
