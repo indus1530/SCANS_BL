@@ -682,10 +682,9 @@
                 android:layout_height="wrap_content"
                 android:layout_gravity="end"
                 android:layout_marginTop="20dp"
-                android:layoutDirection="rtl"
                 android:orientation="horizontal">
 
-                <Button
+                <!--<Button
                     android:id="@+id/btnNext"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
@@ -709,7 +708,21 @@
                     android:text="@string/end_interview"
                     android:textColor="@color/white"
                     android:textSize="24sp"
-                    android:textStyle="bold" />
+                    android:textStyle="bold" />-->
+
+                <Button
+                    android:id="@+id/btnNext"
+                    style="@style/buttons_bottom"
+                    android:background="@android:color/holo_green_light"
+                    android:onClick="@{() -> callback.BtnContinue()}"
+                    android:text="@string/nextSection" />
+
+                <Button
+                    android:id="@+id/btnEnd"
+                    style="@style/buttons_bottom"
+                    android:background="@android:color/holo_red_light"
+                    android:onClick="@{() -> callback.BtnEnd()}"
+                    android:text="@string/end_interview" />
 
             </LinearLayout>
         </LinearLayout>

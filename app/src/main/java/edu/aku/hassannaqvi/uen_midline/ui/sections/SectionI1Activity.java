@@ -2,6 +2,7 @@ package edu.aku.hassannaqvi.uen_midline.ui.sections;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.widget.ArrayAdapter;
 import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
@@ -10,15 +11,25 @@ import androidx.databinding.DataBindingUtil;
 import org.json.JSONException;
 import org.json.JSONObject;
 
+import java.util.ArrayList;
+import java.util.List;
+
 import edu.aku.hassannaqvi.uen_midline.R;
+import edu.aku.hassannaqvi.uen_midline.contracts.FamilyMembersContract;
 import edu.aku.hassannaqvi.uen_midline.core.MainApp;
 import edu.aku.hassannaqvi.uen_midline.databinding.ActivitySectionI1Binding;
 import edu.aku.hassannaqvi.uen_midline.validator.ClearClass;
 import edu.aku.hassannaqvi.uen_midline.validator.ValidatorClass;
+import kotlin.Pair;
+
+import static edu.aku.hassannaqvi.uen_midline.ui.list_activity.FamilyMembersListActivity.mainVModel;
 
 public class SectionI1Activity extends AppCompatActivity {
 
     ActivitySectionI1Binding bi;
+    private FamilyMembersContract fmc;
+    private int serial = 0;
+    private Pair<List<Integer>, List<String>> womenSLst;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -26,9 +37,26 @@ public class SectionI1Activity extends AppCompatActivity {
         bi = DataBindingUtil.setContentView(this, R.layout.activity_section_i1);
         bi.setCallback(this);
 
+        setUIComponent();
         setlistener();
     }
 
+    private void setUIComponent() {
+
+        fmc = mainVModel.getMemberInfo(serial);
+
+        womenSLst = mainVModel.getAllMenWomenName02(2, Integer.valueOf(fmc.getSerialno()));
+
+        List<String> womenLst = new ArrayList<String>() {
+            {
+                add("....");
+                add("NA");
+                if (womenSLst != null) addAll(womenSLst.getSecond());
+            }
+        };
+
+        bi.i100.setAdapter(new ArrayAdapter<>(this, android.R.layout.simple_dropdown_item_1line, womenLst));
+    }
 
     private void setlistener() {
 
@@ -127,6 +155,9 @@ public class SectionI1Activity extends AppCompatActivity {
     private void SaveDraft() throws JSONException {
 
         JSONObject f1 = new JSONObject();
+
+        f1.put("i100", womenSLst.getFirst().size() != 0 ? mainVModel.getMemberInfo(womenSLst.getFirst().get(bi.i100.getSelectedItemPosition() + 1)) : "97");
+        fmc.setmName(bi.i100.getSelectedItem().toString());
 
         f1.put("i101", bi.i101a.isChecked() ? "1" :
                 bi.i101b.isChecked() ? "2" : "0");
