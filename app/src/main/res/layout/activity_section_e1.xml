@@ -23,13 +23,6 @@
             android:layoutDirection="ltr"
             android:orientation="vertical">
 
-            <TextView
-                android:id="@+id/heading"
-                style="@style/HeadingTitle"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="@string/teheading" />
-
             <androidx.cardview.widget.CardView
                 android:id="@+id/fldGrpCVe100"
                 style="@style/cardView">
