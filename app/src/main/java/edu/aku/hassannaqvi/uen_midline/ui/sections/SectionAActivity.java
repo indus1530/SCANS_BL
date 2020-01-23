@@ -1,11 +1,11 @@
 package edu.aku.hassannaqvi.uen_midline.ui.sections;
 
-import androidx.appcompat.app.AppCompatActivity;
-import androidx.databinding.DataBindingUtil;
-
 import android.content.Intent;
 import android.os.Bundle;
 import android.widget.ArrayAdapter;
+
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.databinding.DataBindingUtil;
 
 import com.validatorcrawler.aliazaz.Validator;
 
@@ -16,6 +16,7 @@ import java.util.List;
 
 import edu.aku.hassannaqvi.uen_midline.R;
 import edu.aku.hassannaqvi.uen_midline.databinding.ActivitySectionABinding;
+import edu.aku.hassannaqvi.uen_midline.ui.list_activity.FamilyMembersListActivity;
 import edu.aku.hassannaqvi.uen_midline.utils.Util;
 
 public class SectionAActivity extends AppCompatActivity {
@@ -61,7 +62,8 @@ public class SectionAActivity extends AppCompatActivity {
                 e.printStackTrace();
             }
             if (UpdateDB()) {
-                startActivity(new Intent(SectionAActivity.this, SectionDActivity.class));
+                finish();
+                startActivity(new Intent(SectionAActivity.this, FamilyMembersListActivity.class));
             }
 
         }

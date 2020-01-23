@@ -92,7 +92,7 @@
         <activity
             android:name=".ui.list_activity.FamilyMembersListActivity"
             android:screenOrientation="portrait"
-            android:theme="@style/AppTheme" />
+            android:theme="@style/AppTheme"></activity>
         <activity
             android:name=".ui.sections.SectionDActivity"
             android:label="@string/tdheading"
