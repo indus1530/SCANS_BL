@@ -18,7 +18,7 @@
 
     <string name="taheading">SECTION A: HH Identification</string>
     <string name="tdheading">SECTION D: HOUSEHOLD MEMBERS’ INFORMATION</string>
-    <string name="teheading">SECTION E: REPRODUCTIVE HEALTH (Complete this table for all married women aged 15-49 years in the household)</string>
+    <string name="teheading">SECTION E: REPRODUCTIVE HEALTH (Complete this table for all married women aged 15-49 years in the household) </string>
     <string name="te2heading">MATERNAL MORTALITY STATUS</string>
     <string name="tfheading">SECTION F: ANTENATAL CARE</string>
     <string name="tgheading">SECTION G: DELIVERY PREPAREDNESS AND EXPERIENCE</string>
@@ -87,12 +87,12 @@
     <string name="a105g">Sanghar </string>
     <string name="a105h">Qamber Shahdadkot </string>
     <string name="a106">Tehsil/Taluka </string>
-    <string name="a107">Union Council</string>
+    <string name="a107">Union Council </string>
     <string name="a108">Location</string>
     <string name="a108a">Urban </string>
     <string name="a108b">Rural </string>
     <string name="a109">Village</string>
-    <string name="a110">Block/mohalla </string>
+    <string name="a110">Block/mohalla</string>
     <string name="a111">Street</string>
     <string name="a112">House number/khandan number</string>
     <string name="a112a">Not Available</string>
@@ -117,7 +117,7 @@
     <string name="d103x">What is the relationship of [NAME] to the Head of the household?</string>
     <string name="d103a">Head of HH</string>
     <string name="d103b">Wife/Husband</string>
-    <string name="d103c">Son/DaughterS</string>
+    <string name="d103c">Son/Daughters</string>
     <string name="d103d">Son in law/Daughter in law</string>
     <string name="d103e">Grand child</string>
     <string name="d103f">Parents</string>
@@ -185,6 +185,7 @@
     <string name="d115a">Yes</string>
     <string name="d115b">No</string>
 
+    <string name="e100">Name Of Woman</string>
     <string name="e101">Have you ever been pregnant since your marriage?</string>
     <string name="e101a">Yes </string>
     <string name="e101b">No</string>
@@ -1995,9 +1996,9 @@
     <string name="o108x">Others (specify) </string>
 
 
-    <string name="end_interview"> اختتام </string>
+    <string name="end_interview"> End </string>
     <string name="start_interview"> انٹرویو شروع کریں </string>
-    <string name="nextSection"> اگلا حصہ </string>
+    <string name="nextSection"> Next </string>
 
     <string name="istatus">Interview Results</string>
     <string name="istatusa">Complete</string>
@@ -2005,4 +2006,6 @@
     <string name="dialog_text">Please add Info for second child.</string>
     <string name="countNo">No</string>
     <string name="countYes">Yes</string>
+    <string name="countAlertMsg">Are you sure to continue</string>
+
 </resources>

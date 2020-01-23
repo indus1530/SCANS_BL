@@ -1,4 +1,4 @@
-package edu.aku.hassannaqvi.uen_midline.ui.other;
+package edu.aku.hassannaqvi.uen_midline.otherClasses;
 
 public abstract class KishGrid {
 
