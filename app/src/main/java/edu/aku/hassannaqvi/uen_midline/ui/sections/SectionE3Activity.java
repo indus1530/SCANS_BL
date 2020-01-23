@@ -4,11 +4,13 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.text.Editable;
 import android.text.TextWatcher;
+import android.widget.RadioGroup;
 import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.databinding.DataBindingUtil;
 
+import com.validatorcrawler.aliazaz.Clear;
 import com.validatorcrawler.aliazaz.Validator;
 
 import org.json.JSONException;
@@ -35,6 +37,13 @@ public class SectionE3Activity extends AppCompatActivity {
 
     private void setUIComponent() {
 
+        bi.e116.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
+            @Override
+            public void onCheckedChanged(RadioGroup group, int checkedId) {
+                if (checkedId == bi.e116a.getId())
+                    Clear.clearAllFields(bi.fldGrpSectionE301);
+            }
+        });
 
         bi.e117.addTextChangedListener(new TextWatcher() {
             @Override
@@ -70,7 +79,7 @@ public class SectionE3Activity extends AppCompatActivity {
                     startActivity(new Intent(this, SectionE4Activity.class));
                 } else {
 
-                    startActivity(new Intent(this, SectionJ02Activity.class));
+                    startActivity(new Intent(this, SectionFActivity.class));
                 }
             } else {
                 Toast.makeText(this, "Failed to Update Database!", Toast.LENGTH_SHORT).show();
@@ -87,8 +96,8 @@ public class SectionE3Activity extends AppCompatActivity {
 
         JSONObject f1 = new JSONObject();
         f1.put("e116",
-                bi.e116a.isChecked() ?"1" :
-                        bi.e116b.isChecked() ?"2" :
+                bi.e116a.isChecked() ? "1" :
+                        bi.e116b.isChecked() ? "2" :
                                 "0");
         f1.put("e117", bi.e117.getText().toString());
     }
