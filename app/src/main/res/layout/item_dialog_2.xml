@@ -1,0 +1,84 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="270dp"
+    android:layout_height="wrap_content"
+    android:background="@android:color/white"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/orange600"
+        android:gravity="center"
+        android:minHeight="160dp"
+        android:orientation="vertical"
+        android:padding="20dp">
+
+        <ImageView
+            android:id="@+id/icon"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:layout_gravity="center"
+            android:tint="@android:color/white"
+            app:srcCompat="@drawable/ic_stop" />
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical|start"
+        android:orientation="vertical"
+        android:padding="20dp">
+
+        <TextView
+            android:id="@+id/content"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:text="Are You sure? \n You Want To Continue?"
+            android:textAlignment="center"
+            android:textAppearance="@style/TextAppearance.AppCompat.Subhead"
+            android:textColor="@color/dullBlack"
+            android:textSize="20sp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/lyt_action"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="15dp"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btnOk"
+            style="@style/Widget.AppCompat.Button.Borderless"
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:background="@drawable/outline_btn"
+            android:paddingLeft="20dp"
+            android:paddingRight="20dp"
+            android:text="Yes,Continue"
+            android:textColor="@color/greenInfo" />
+
+        <View
+            android:layout_width="0dp"
+            android:layout_height="10dp" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:layout_marginBottom="20dp"
+            android:id="@+id/btnNo"
+            style="@style/Widget.AppCompat.Button.Borderless"
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:background="@drawable/outline_btn"
+            android:paddingLeft="20dp"
+            android:paddingRight="20dp"
+            android:text="No"
+            android:textColor="@color/greenInfo" />
+
+    </LinearLayout>
+
+</LinearLayout>

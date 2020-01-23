@@ -3,9 +3,14 @@ package edu.aku.hassannaqvi.uen_midline.utils;
 import android.Manifest;
 import android.app.Activity;
 import android.app.AlertDialog;
+import android.app.Dialog;
 import android.content.Context;
 import android.content.DialogInterface;
+import android.content.Intent;
 import android.content.pm.PackageManager;
+import android.view.View;
+import android.view.Window;
+import android.view.WindowManager;
 
 import androidx.core.content.ContextCompat;
 
@@ -15,6 +20,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 import edu.aku.hassannaqvi.uen_midline.R;
+import edu.aku.hassannaqvi.uen_midline.ui.other.EndingActivity;
 
 public class Util {
 
@@ -50,33 +56,23 @@ public class Util {
 
 
     public static void openEndActivity(Activity activity) {
-        new AlertDialog.Builder(activity)
-                .setTitle("END INTERVIEW")
-                .setIcon(R.drawable.ic_power_settings_new_black_24dp)
-                .setCancelable(false)
-                .setCancelable(false)
-                .setMessage("Do you want to End Interview??")
-                .setPositiveButton("Yes", new DialogInterface.OnClickListener() {
-                    @Override
-                    public void onClick(DialogInterface dialogInterface, int i) {
-//                        try {
-//                            SaveDraft();
-//                        } catch (JSONException e) {
-//                            e.printStackTrace();
-//                        }
-//                        if (!UpdateDB()) {
-//                            return;
-//                        }
-//                        MainApp.endActivitySetRouting(SectionBActivity.this, SectionBActivity.this, EndingActivity.class, false, null);
-                    }
-                })
-                .setNegativeButton("No", new DialogInterface.OnClickListener() {
-                    @Override
-                    public void onClick(DialogInterface dialogInterface, int i) {
-                        dialogInterface.dismiss();
-                    }
-                })
-                .show();
+        Dialog dialog = new Dialog(activity);
+        dialog.requestWindowFeature(Window.FEATURE_NO_TITLE);
+        dialog.setContentView(R.layout.item_dialog_2);
+        dialog.setCancelable(false);
+        WindowManager.LayoutParams params = new WindowManager.LayoutParams();
+        params.copyFrom(dialog.getWindow().getAttributes());
+        params.width = WindowManager.LayoutParams.WRAP_CONTENT;
+        params.height = WindowManager.LayoutParams.WRAP_CONTENT;
+        dialog.show();
+        dialog.getWindow().setAttributes(params);
+
+        dialog.findViewById(R.id.btnOk).setOnClickListener(view -> {
+            activity.finish();
+            activity.startActivity(new Intent(activity, EndingActivity.class).putExtra("complete", false));
+        });
+        dialog.findViewById(R.id.btnNo).setOnClickListener(view -> dialog.dismiss());
+
     }
 
 
