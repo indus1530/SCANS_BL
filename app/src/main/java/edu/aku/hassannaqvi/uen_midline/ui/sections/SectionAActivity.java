@@ -5,10 +5,14 @@ import androidx.databinding.DataBindingUtil;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.widget.ArrayAdapter;
 
 import com.validatorcrawler.aliazaz.Validator;
 
 import org.json.JSONException;
+
+import java.util.ArrayList;
+import java.util.List;
 
 import edu.aku.hassannaqvi.uen_midline.R;
 import edu.aku.hassannaqvi.uen_midline.databinding.ActivitySectionABinding;
@@ -17,6 +21,8 @@ import edu.aku.hassannaqvi.uen_midline.utils.Util;
 public class SectionAActivity extends AppCompatActivity {
 
     ActivitySectionABinding bi;
+    List<String> tehsils;
+    List<String> ucs;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -24,6 +30,27 @@ public class SectionAActivity extends AppCompatActivity {
 
         bi = DataBindingUtil.setContentView(this, R.layout.activity_section_a);
         bi.setCallback(this);
+
+        setUIComponent();
+    }
+
+    private void setUIComponent() {
+
+        tehsils = new ArrayList<>();
+        ucs = new ArrayList<>();
+
+        tehsils.add("----");
+        tehsils.add("Test tehsil 1");
+        tehsils.add("Test tehsil 2");
+
+        ucs.add("----");
+        ucs.add("Test uc 1");
+        ucs.add("Test uc 2");
+
+        bi.a106.setAdapter(new ArrayAdapter<>(this, android.R.layout.simple_list_item_1, tehsils));
+        bi.a107.setAdapter(new ArrayAdapter<>(this, android.R.layout.simple_list_item_1, ucs));
+
+
     }
 
     public void BtnContinue() {
@@ -34,7 +61,7 @@ public class SectionAActivity extends AppCompatActivity {
                 e.printStackTrace();
             }
             if (UpdateDB()) {
-                startActivity(new Intent(SectionAActivity.this, SectionE1Activity.class));
+                startActivity(new Intent(SectionAActivity.this, SectionDActivity.class));
             }
 
         }
