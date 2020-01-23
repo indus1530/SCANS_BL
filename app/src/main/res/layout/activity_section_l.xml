@@ -19,9 +19,9 @@
 
         <LinearLayout
             android:id="@+id/fldGrpSectionL"
-            android:layoutDirection="ltr"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layoutDirection="ltr"
             android:orientation="vertical">
 
             <TextView
@@ -428,19 +428,19 @@
                             android:text="@string/l109c" />
 
                         <RadioButton
-                            android:id="@+id/l109d"
+                            android:id="@+id/l10996"
                             style="@style/radiobutton"
-                            android:text="@string/l109c" />
+                            android:text="@string/other" />
 
                         <EditText
-                            android:id="@+id/l109ct"
+                            android:id="@+id/l10996x"
                             style="@style/radiobutton"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:hint="@string/l109c"
                             android:tag="l109c"
-                            android:text='@{l109c.checked? l109ct.getText().toString() : ""}'
-                            android:visibility='@{l109c.checked? View.VISIBLE : View.GONE}' />
+                            android:text='@{l10996.checked? l10996x.getText().toString() : ""}'
+                            android:visibility='@{l10996.checked? View.VISIBLE : View.GONE}' />
                     </RadioGroup>
                 </LinearLayout>
             </androidx.cardview.widget.CardView>
