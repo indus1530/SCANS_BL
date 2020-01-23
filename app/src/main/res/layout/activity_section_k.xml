@@ -397,7 +397,7 @@
                             android:hint="@string/k105aaa"
                             android:inputType="number"
                             app:mask="##"
-                            app:maxValue="0"
+                            app:maxValue="10"
                             app:minValue="0"
                             app:type="range" />
 
@@ -413,7 +413,7 @@
                             android:hint="@string/k105aab"
                             android:inputType="number"
                             app:mask="##"
-                            app:maxValue="0"
+                            app:maxValue="10"
                             app:minValue="0"
                             app:type="range" />
 

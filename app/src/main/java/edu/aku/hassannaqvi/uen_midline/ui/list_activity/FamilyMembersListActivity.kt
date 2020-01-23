@@ -79,6 +79,8 @@ class FamilyMembersListActivity : AppCompatActivity() {
                                     startActivityForResult(Intent(this, SectionDActivity::class.java).putExtra(SERIAL_EXTRA, serial), CONSTANTS.MEMBER_ITEM)
                                 }
                                 1 -> {
+                                    if (memSelectedCounter == 0) return@run
+
                                     if (memSelectedCounter != serial) return@run
 
                                     MainApp.pragnantWoman = mainVModel.getAllWomenName()

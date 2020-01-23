@@ -295,7 +295,7 @@
                                 android:hint="@string/j113"
                                 android:inputType="number"
                                 app:mask="##"
-                                app:maxValue="0"
+                                app:maxValue="10"
                                 app:minValue="0"
                                 app:type="range" />
                         </LinearLayout>
@@ -400,7 +400,7 @@
                             android:hint="@string/j116"
                             android:inputType="number"
                             app:mask="##"
-                            app:maxValue="0"
+                            app:maxValue="10"
                             app:minValue="0"
                             app:type="range" />
                     </LinearLayout>
@@ -466,7 +466,7 @@
                             android:hint="@string/j118"
                             android:inputType="number"
                             app:mask="##"
-                            app:maxValue="0"
+                            app:maxValue="10"
                             app:minValue="0"
                             app:type="range" />
                     </LinearLayout>
@@ -569,7 +569,7 @@
                             android:hint="@string/j121"
                             android:inputType="number"
                             app:mask="##"
-                            app:maxValue="0"
+                            app:maxValue="10"
                             app:minValue="0"
                             app:type="range" />
                     </LinearLayout>

@@ -130,7 +130,7 @@
                         android:hint="@string/i202"
                         android:inputType="number"
                         app:mask="##"
-                        app:maxValue="0"
+                        app:maxValue="10"
                         app:minValue="0"
                         app:type="range" />
                 </LinearLayout>
@@ -198,7 +198,7 @@
                             android:hint="@string/i204"
                             android:inputType="number"
                             app:mask="##"
-                            app:maxValue="0"
+                            app:maxValue="10"
                             app:minValue="0"
                             app:type="range" />
                     </LinearLayout>
@@ -263,7 +263,7 @@
                             android:hint="@string/i206"
                             android:inputType="number"
                             app:mask="##"
-                            app:maxValue="0"
+                            app:maxValue="10"
                             app:minValue="0"
                             app:type="range" />
                     </LinearLayout>
@@ -489,7 +489,7 @@
                             android:hint="@string/i211"
                             android:inputType="number"
                             app:mask="##"
-                            app:maxValue="0"
+                            app:maxValue="10"
                             app:minValue="0"
                             app:type="range" />
                     </LinearLayout>
@@ -517,7 +517,7 @@
                             android:hint="@string/i212"
                             android:inputType="number"
                             app:mask="##"
-                            app:maxValue="0"
+                            app:maxValue="10"
                             app:minValue="0"
                             app:type="range" />
                     </LinearLayout>
@@ -661,7 +661,7 @@
                             android:hint="@string/i216"
                             android:inputType="number"
                             app:mask="##"
-                            app:maxValue="0"
+                            app:maxValue="10"
                             app:minValue="0"
                             app:type="range" />
                     </LinearLayout>
@@ -884,7 +884,7 @@
                             android:hint="@string/i221"
                             android:inputType="number"
                             app:mask="##"
-                            app:maxValue="0"
+                            app:maxValue="10"
                             app:minValue="0"
                             app:type="range" />
                     </LinearLayout>

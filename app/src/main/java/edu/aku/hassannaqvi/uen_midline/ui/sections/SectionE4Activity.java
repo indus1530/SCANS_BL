@@ -1,11 +1,11 @@
 package edu.aku.hassannaqvi.uen_midline.ui.sections;
 
-import androidx.appcompat.app.AppCompatActivity;
-import androidx.databinding.DataBindingUtil;
-
 import android.content.Intent;
 import android.os.Bundle;
 import android.widget.Toast;
+
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.databinding.DataBindingUtil;
 
 import com.validatorcrawler.aliazaz.Validator;
 
@@ -36,7 +36,7 @@ public class SectionE4Activity extends AppCompatActivity {
                 e.printStackTrace();
             }
             if (UpdateDB()) {
-                if (MainApp.childCount > 0) {
+                if (MainApp.deathCount > 0) {
                     finish();
                     startActivity(new Intent(this, SectionE4Activity.class));
                 } else {

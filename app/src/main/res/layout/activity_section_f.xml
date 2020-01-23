@@ -392,8 +392,8 @@
                             android:hint="@string/f108a"
                             android:inputType="number"
                             android:maxLength="2"
-                            app:maxValue="0"
-                            app:minValue="40"
+                            app:maxValue="40"
+                            app:minValue="1"
                             app:type="range" />
 
                         <TextView
@@ -408,8 +408,8 @@
                             android:hint="@string/f108b"
                             android:inputType="number"
                             android:maxLength="2"
-                            app:maxValue="0"
-                            app:minValue="9"
+                            app:maxValue="9"
+                            app:minValue="1"
                             app:type="range" />
 
                     <CheckBox
@@ -448,8 +448,8 @@
                         android:inputType="number"
                         android:maxLength="2"
                         android:text='@{f109b.checked? "" : f109a.getText().toString()}'
-                        app:maxValue="0"
-                        app:minValue="10"
+                        app:maxValue="10"
+                        app:minValue="1"
                         app:type="range" />
 
                     <CheckBox
@@ -972,8 +972,8 @@
                             android:inputType="number"
                             android:maxLength="2"
                             app:mask="##"
-                            app:maxValue="0"
-                            app:minValue="100"
+                            app:maxValue="100"
+                            app:minValue="1"
                             app:type="range" />
                     </LinearLayout>
                 </androidx.cardview.widget.CardView>
