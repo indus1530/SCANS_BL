@@ -193,9 +193,9 @@ public class SectionDActivity extends AppCompatActivity {
         fmc.setsD(String.valueOf(sd));
 
         // Update in ViewModel
-        mainVModel.setFamilyMembers(fmc);
+        mainVModel.updateFamilyMembers(fmc);
 
-        if (Integer.valueOf(fmc.getAge()) > 15 && Integer.valueOf(fmc.getAge()) < 49 && bi.d104b.isChecked() && !bi.d105b.isChecked())
+        if (Integer.valueOf(fmc.getAge()) > 15 && Integer.valueOf(fmc.getAge()) < 49 && fmc.getGender().equals("2") && !bi.d105b.isChecked())
             mainVModel.setMWRA(fmc);
         else if (Integer.valueOf(fmc.getAge()) < 5)
             mainVModel.setChildU5(fmc);

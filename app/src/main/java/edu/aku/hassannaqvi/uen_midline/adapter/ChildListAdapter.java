@@ -65,6 +65,11 @@ public class ChildListAdapter extends RecyclerView.Adapter<ChildListAdapter.View
         return viewHolder;
     }
 
+    public void setMList(List<FamilyMembersContract> members) {
+        mList = members;
+        notifyDataSetChanged();
+    }
+
     public interface OnItemClicked {
         void onItemClick(FamilyMembersContract item, int position);
     }

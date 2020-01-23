@@ -42,7 +42,7 @@ public class DateUtils {
         cal.add(Calendar.YEAR, year);
         Date dob = cal.getTime();
         Date today = new Date();
-        Long diff = today.getTime() - dob.getTime();
+        long diff = today.getTime() - dob.getTime();
         return (diff / (24 * 60 * 60 * 1000)) / 365;
     }
 

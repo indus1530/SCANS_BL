@@ -1,5 +1,6 @@
 package edu.aku.hassannaqvi.uen_midline.ui.list_activity
 
+import android.app.Activity
 import android.content.Intent
 import android.os.Bundle
 import android.util.Log
@@ -104,12 +105,12 @@ class FamilyMembersListActivity : AppCompatActivity() {
         mainVModel.childLstU5.observe(this, Observer { item -> Log.d("", item.size.toString()) })
         mainVModel.mwraLst.observe(this, Observer { item -> Log.d("", item.size.toString()) })
         mainVModel.familyMemLst.observe(this, Observer { item ->
-            //            setupRecyclerView(item)
-            adapter.notifyDataSetChanged()
+            adapter.setMList(item)
+//            adapter.notifyDataSetChanged()
         })
     }
 
-    fun setupRecyclerView(membersLst: MutableList<FamilyMembersContract>) {
+    private fun setupRecyclerView(membersLst: MutableList<FamilyMembersContract>) {
         adapter = ChildListAdapter(this, membersLst)
         bi.contentScroll.recyclerView.layoutManager = LinearLayoutManager(this)
         bi.contentScroll.recyclerView.adapter = adapter
@@ -120,7 +121,7 @@ class FamilyMembersListActivity : AppCompatActivity() {
                 adapter.holder.parentLayout.isEnabled = false
                 adapter.holder.parentLayout.checkIcon.visibility = View.VISIBLE
 
-                startActivityForResult(Intent(this, SectionDActivity::class.java).putExtra(SERIAL_EXTRA, serial), CONSTANTS.MEMBER_ITEM)
+                startActivityForResult(Intent(this, SectionDActivity::class.java).putExtra(SERIAL_EXTRA, item.serialno.toInt()), CONSTANTS.MEMBER_ITEM)
 
             }
 
@@ -128,14 +129,14 @@ class FamilyMembersListActivity : AppCompatActivity() {
 
     }
 
-/*    override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
+    override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
         super.onActivityResult(requestCode, resultCode, data)
 
         if (requestCode == CONSTANTS.MEMBER_ITEM) {
             if (resultCode == Activity.RESULT_OK)
                 adapter.notifyDataSetChanged()
         }
-    }*/
+    }
 
     companion object {
         var context: FamilyMembersListActivity? = null

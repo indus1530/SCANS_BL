@@ -20,6 +20,12 @@ class MainVModel : ViewModel() {
         familyMemLst.value = lst
     }
 
+    fun updateFamilyMembers(item: FamilyMembersContract) {
+        val lst = familyMemLst.value
+        lst?.map { if (it.serialno.toInt() == item.serialno.toInt()) item else it }
+        familyMemLst.value = lst
+    }
+
     fun setChildU5(item: FamilyMembersContract) {
         var lst = childLstU5.value
         if (lst.isNullOrEmpty())
