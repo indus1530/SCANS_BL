@@ -62,6 +62,9 @@
             android:name=".ui.sections.SectionJActivity"
             android:screenOrientation="portrait" />
         <activity
+            android:name=".ui.sections.SectionJ02Activity"
+            android:screenOrientation="portrait" />
+        <activity
             android:name=".ui.sections.SectionJ03Activity"
             android:screenOrientation="portrait" />
         <activity
@@ -73,7 +76,11 @@
         <activity
             android:name=".ui.other.SplashscreenActivity"
             android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
 
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
         </activity>
         <activity
             android:name=".ui.sections.SectionFActivity"
@@ -84,11 +91,7 @@
         <activity
             android:name=".ui.list_activity.FamilyMembersListActivity"
             android:screenOrientation="portrait">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
 
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
         </activity>
         <activity
             android:name=".ui.sections.SectionDActivity"
