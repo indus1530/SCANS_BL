@@ -95,16 +95,21 @@ public class SectionE1Activity extends AppCompatActivity {
             if (UpdateDB()) {
                 if (!bi.e101b.isChecked()) {
                     if (MainApp.pragnantWoman.size() > 0) {
+                        finish();
                         startActivity(new Intent(SectionE1Activity.this, SectionE2Activity.class));
                         MainApp.pragnantWoman.remove(position);
+
                     } else {
+                        finish();
                         startActivity(new Intent(SectionE1Activity.this, SectionE3Activity.class));
                     }
                 } else {
                     if (MainApp.pragnantWoman.size() > 0) {
+                        finish();
                         startActivity(new Intent(SectionE1Activity.this, SectionE1Activity.class));
                         MainApp.pragnantWoman.remove(position);
                     } else {
+                        finish();
                         startActivity(new Intent(SectionE1Activity.this, SectionE3Activity.class));
                     }
 
