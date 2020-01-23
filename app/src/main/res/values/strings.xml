@@ -60,6 +60,10 @@
     <string name="in"> Inches </string>
     <string name="rupees"> Rupees </string>
 
+    <string name="total">Total</string>
+    <string name="mwra">MWRA</string>
+    <string name="under5">Child Under 5</string>
+
     <string name="a101">Cluster number </string>
     <string name="a101a">This information will be based on the list of villages generated from the district. Each enumerator will be given a list of clusters that he/she will be visiting, and before starting the interview, this information will be entered from the same list.</string>
     <string name="a102">Cluster type</string>
@@ -175,6 +179,9 @@
     <string name="d112">Total members of household (Auto calculated)</string>
     <string name="d113">Total married women of Reproductive age in household (Auto calculated)</string>
     <string name="d114">Total children of under 5 years age in household (Auto calculated)</string>
+    <string name="d115">Is this Respondent are available at home ? </string>
+    <string name="d115a">Yes</string>
+    <string name="d115b">No</string>
 
     <string name="e100">Name Of Woman</string>
     <string name="e101">Have you ever been pregnant since your marriage?</string>
