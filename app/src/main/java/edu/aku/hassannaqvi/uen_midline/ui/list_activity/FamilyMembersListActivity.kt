@@ -1,6 +1,5 @@
 package edu.aku.hassannaqvi.uen_midline.ui.list_activity
 
-import android.app.Activity
 import android.content.Intent
 import android.os.Bundle
 import android.util.Log
@@ -96,9 +95,7 @@ class FamilyMembersListActivity : AppCompatActivity() {
     }
 
     private fun settingValue() {
-        context = this
         setupRecyclerView(mutableListOf())
-
         mainVModel = this.run {
             ViewModelProviders.of(this)[MainVModel::class.java]
         }
@@ -129,17 +126,16 @@ class FamilyMembersListActivity : AppCompatActivity() {
 
     }
 
-    override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
+/*    override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
         super.onActivityResult(requestCode, resultCode, data)
 
         if (requestCode == CONSTANTS.MEMBER_ITEM) {
             if (resultCode == Activity.RESULT_OK)
                 adapter.notifyDataSetChanged()
         }
-    }
+    }*/
 
     companion object {
-        var context: FamilyMembersListActivity? = null
         lateinit var mainVModel: MainVModel
     }
 }

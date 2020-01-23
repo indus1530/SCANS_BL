@@ -241,4 +241,20 @@ public class SectionDActivity extends AppCompatActivity {
 
     }
 
+    @Override
+    public boolean onSupportNavigateUp() {
+        if (fmcFLAG) {
+            serial--;
+            super.onBackPressed();
+            return true;
+        } else {
+            Toast.makeText(this, "You can't go back!!", Toast.LENGTH_SHORT).show();
+            return false;
+        }
+    }
+
+    @Override
+    public void onBackPressed() {
+        Toast.makeText(this, "Press top back button.", Toast.LENGTH_SHORT).show();
+    }
 }
