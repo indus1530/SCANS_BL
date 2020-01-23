@@ -432,17 +432,18 @@
                 android:orientation="horizontal">
 
                 <Button
-                    android:id="@+id/btn_End"
-                    style="@style/button"
-                    android:layout_marginRight="10dp"
-                    android:onClick="@{() -> callback.BtnEnd()}"
-                    android:text="Cancel" />
+                    android:id="@+id/btnNext"
+                    style="@style/buttons_bottom"
+                    android:background="@android:color/holo_green_light"
+                    android:onClick="@{() -> callback.BtnContinue()}"
+                    android:text="@string/nextSection" />
 
                 <Button
-                    android:id="@+id/btn_Continue"
-                    style="@style/button"
-                    android:onClick="@{() -> callback.BtnContinue()}"
-                    android:text="Save" />
+                    android:id="@+id/btnEnd"
+                    style="@style/buttons_bottom"
+                    android:background="@android:color/holo_red_light"
+                    android:onClick="@{() -> callback.BtnEnd()}"
+                    android:text="@string/end_interview" />
             </LinearLayout>
         </LinearLayout>
     </ScrollView>
