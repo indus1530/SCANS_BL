@@ -20,6 +20,7 @@
 
 
         <LinearLayout
+            android:layoutDirection="ltr"
             android:id="@+id/fldGrpSectionE4"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"

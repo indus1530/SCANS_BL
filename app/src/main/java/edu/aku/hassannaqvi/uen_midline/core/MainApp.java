@@ -119,6 +119,7 @@ public class MainApp extends Application {
     public static String hh01txt = "0000";
     public static String hh02txt;
     public static int hh03txt = 1;
+    public static int deathCount = 0;
     public static String DeviceURL = "devices.php";
     public static String IMEI;
     public static String formtype;
