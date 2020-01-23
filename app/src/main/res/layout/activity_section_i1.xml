@@ -24,13 +24,6 @@
             android:layout_height="wrap_content"
             android:orientation="vertical">
 
-            <TextView
-                android:id="@+id/heading"
-                style="@style/HeadingTitle"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="@string/tiheading" />
-
             <!-- i1.diarrhea  Title   -->
             <androidx.cardview.widget.CardView
                 android:id="@+id/fldGrpCVi1"
@@ -132,10 +125,7 @@
                             android:layout_height="wrap_content"
                             android:hint="@string/i102"
                             android:inputType="number"
-                            app:mask="##"
-                            app:maxValue="0"
-                            app:minValue="0"
-                            app:type="range" />
+                           />
                     </LinearLayout>
                 </androidx.cardview.widget.CardView>
 
@@ -160,10 +150,7 @@
                             android:layout_height="wrap_content"
                             android:hint="@string/i103"
                             android:inputType="number"
-                            app:mask="##"
-                            app:maxValue="0"
-                            app:minValue="0"
-                            app:type="range" />
+                            />
                     </LinearLayout>
                 </androidx.cardview.widget.CardView>
 
@@ -399,10 +386,7 @@
                             android:layout_height="wrap_content"
                             android:hint="@string/i109"
                             android:inputType="number"
-                            app:mask="##"
-                            app:maxValue="0"
-                            app:minValue="0"
-                            app:type="range" />
+                             />
                     </LinearLayout>
                 </androidx.cardview.widget.CardView>
 
@@ -427,10 +411,7 @@
                             android:layout_height="wrap_content"
                             android:hint="@string/i110"
                             android:inputType="number"
-                            app:mask="##"
-                            app:maxValue="0"
-                            app:minValue="0"
-                            app:type="range" />
+                            />
                     </LinearLayout>
                 </androidx.cardview.widget.CardView>
 
@@ -670,10 +651,7 @@
                                 android:layout_height="wrap_content"
                                 android:hint="@string/i115a"
                                 android:inputType="number"
-                                app:mask="##"
-                                app:maxValue="0"
-                                app:minValue="0"
-                                app:type="range" />
+                                />
 
                             <TextView
                                 style="@style/i_textview"
@@ -686,10 +664,7 @@
                                 android:layout_height="wrap_content"
                                 android:hint="@string/i115b"
                                 android:inputType="number"
-                                app:mask="##"
-                                app:maxValue="0"
-                                app:minValue="0"
-                                app:type="range" />
+                                />
                         </LinearLayout>
                     </androidx.cardview.widget.CardView>
 
@@ -931,10 +906,7 @@
                             android:layout_height="wrap_content"
                             android:hint="@string/i120"
                             android:inputType="number"
-                            app:mask="##"
-                            app:maxValue="0"
-                            app:minValue="0"
-                            app:type="range" />
+                           />
                     </LinearLayout>
                 </androidx.cardview.widget.CardView>
 
@@ -959,10 +931,7 @@
                             android:layout_height="wrap_content"
                             android:hint="@string/i121"
                             android:inputType="number"
-                            app:mask="##"
-                            app:maxValue="0"
-                            app:minValue="0"
-                            app:type="range" />
+                            />
                     </LinearLayout>
                 </androidx.cardview.widget.CardView>
 
