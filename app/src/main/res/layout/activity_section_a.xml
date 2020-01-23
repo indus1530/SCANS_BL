@@ -21,6 +21,7 @@
             android:id="@+id/fldGrpSectionA"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layoutDirection="ltr"
             android:orientation="vertical">
 
             <TextView
@@ -50,10 +51,11 @@
 
                     <EditText
                         android:id="@+id/a101"
-                        style="@style/textInputName"
+                        style="@style/textInput"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:hint="@string/a101"
+                        android:inputType="number"
                         android:maxLength="5"
                         android:textColor="@android:color/black" />
                 </LinearLayout>
@@ -248,7 +250,7 @@
                         style="@style/i_textview"
                         android:text="@string/a106" />
 
-                    <org.angmarch.views.NiceSpinner
+                    <Spinner
                         android:id="@+id/a106"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content" />
@@ -269,7 +271,7 @@
                         style="@style/i_textview"
                         android:text="@string/a107" />
 
-                    <org.angmarch.views.NiceSpinner
+                    <Spinner
                         android:id="@+id/a107"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content" />
@@ -401,10 +403,10 @@
                         style="@style/EditTextAlphaNumeric"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:enabled='@{a112a.checked? true : false}'
+                        android:enabled='@{a112a.checked? false : true}'
                         android:hint="@string/a112"
                         android:inputType="number"
-                        android:text='@{a112a.checked? "" : a112.getText().toString() }' />
+                        android:text='@{!a112a.checked? "" : a112.getText().toString() }' />
 
                     <CheckBox
                         android:id="@+id/a112a"

@@ -95,21 +95,19 @@ class FamilyMembersListActivity : AppCompatActivity() {
     }
 
     private fun settingValue() {
-        context = this
         setupRecyclerView(mutableListOf())
-
         mainVModel = this.run {
             ViewModelProviders.of(this)[MainVModel::class.java]
         }
         mainVModel.childLstU5.observe(this, Observer { item -> Log.d("", item.size.toString()) })
         mainVModel.mwraLst.observe(this, Observer { item -> Log.d("", item.size.toString()) })
         mainVModel.familyMemLst.observe(this, Observer { item ->
-            //            setupRecyclerView(item)
-            adapter.notifyDataSetChanged()
+            adapter.setMList(item)
+//            adapter.notifyDataSetChanged()
         })
     }
 
-    fun setupRecyclerView(membersLst: MutableList<FamilyMembersContract>) {
+    private fun setupRecyclerView(membersLst: MutableList<FamilyMembersContract>) {
         adapter = ChildListAdapter(this, membersLst)
         bi.contentScroll.recyclerView.layoutManager = LinearLayoutManager(this)
         bi.contentScroll.recyclerView.adapter = adapter
@@ -120,7 +118,7 @@ class FamilyMembersListActivity : AppCompatActivity() {
                 adapter.holder.parentLayout.isEnabled = false
                 adapter.holder.parentLayout.checkIcon.visibility = View.VISIBLE
 
-                startActivityForResult(Intent(this, SectionDActivity::class.java).putExtra(SERIAL_EXTRA, serial), CONSTANTS.MEMBER_ITEM)
+                startActivityForResult(Intent(this, SectionDActivity::class.java).putExtra(SERIAL_EXTRA, item.serialno.toInt()), CONSTANTS.MEMBER_ITEM)
 
             }
 
@@ -138,7 +136,6 @@ class FamilyMembersListActivity : AppCompatActivity() {
     }*/
 
     companion object {
-        var context: FamilyMembersListActivity? = null
         lateinit var mainVModel: MainVModel
     }
 }

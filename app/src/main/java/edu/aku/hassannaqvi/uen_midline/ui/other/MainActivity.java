@@ -49,6 +49,7 @@ import edu.aku.hassannaqvi.uen_midline.core.AndroidDatabaseManager;
 import edu.aku.hassannaqvi.uen_midline.core.DatabaseHelper;
 import edu.aku.hassannaqvi.uen_midline.core.MainApp;
 import edu.aku.hassannaqvi.uen_midline.databinding.ActivityMainBinding;
+import edu.aku.hassannaqvi.uen_midline.ui.sections.SectionAActivity;
 import edu.aku.hassannaqvi.uen_midline.ui.sections.SectionDActivity;
 import edu.aku.hassannaqvi.uen_midline.ui.sync.SyncActivity;
 
@@ -117,7 +118,7 @@ public class MainActivity extends AppCompatActivity {
 
     }
 
-    BroadcastReceiver broadcastReceiver = new BroadcastReceiver() {
+   /* BroadcastReceiver broadcastReceiver = new BroadcastReceiver() {
         @Override
         public void onReceive(Context context, Intent intent) {
             if (DownloadManager.ACTION_DOWNLOAD_COMPLETE.equals(intent.getAction())) {
@@ -148,7 +149,7 @@ public class MainActivity extends AppCompatActivity {
                 }
             }
         }
-    };
+    };*/
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -228,6 +229,7 @@ public class MainActivity extends AppCompatActivity {
         Log.d(TAG, "onCreate: " + rSumText);
         bi.recordSummary.setText(rSumText);
 
+/*
         sharedPrefDownload = getSharedPreferences("appDownload", MODE_PRIVATE);
         editorDownload = sharedPrefDownload.edit();
         versionAppContract = db.getVersionApp();
@@ -274,6 +276,7 @@ public class MainActivity extends AppCompatActivity {
             }
         }
         registerReceiver(broadcastReceiver, new IntentFilter(DownloadManager.ACTION_DOWNLOAD_COMPLETE));
+*/
 
 //        Testing visibility
         if (Integer.valueOf(MainApp.versionName.split("\\.")[0]) > 0) {
@@ -302,7 +305,7 @@ public class MainActivity extends AppCompatActivity {
     public void OpenFormFunc() {
         Intent oF = new Intent();
         if (!MainApp.userName.equals("0000")) {
-            oF = new Intent(MainActivity.this, SectionDActivity.class);
+            oF = new Intent(MainActivity.this, SectionAActivity.class);
             startActivity(oF);
         } else {
             Toast.makeText(getApplicationContext(), "Please login Again!", Toast.LENGTH_LONG).show();
@@ -398,7 +401,7 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onDestroy() {
         super.onDestroy();
-        unregisterReceiver(broadcastReceiver);
+
     }
 
     public static class MyDialogFragment extends DialogFragment {
