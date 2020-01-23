@@ -31,6 +31,7 @@ class FamilyMembersListActivity : AppCompatActivity() {
 
     //    private lateinit var mainVModel: MainVModel
     private var serial = 0
+    private var memSelectedCounter = 0
     private lateinit var adapter: ChildListAdapter
     private lateinit var bi: ActivityFamilyMembersListBinding
 
@@ -78,6 +79,10 @@ class FamilyMembersListActivity : AppCompatActivity() {
                                     startActivityForResult(Intent(this, SectionDActivity::class.java).putExtra(SERIAL_EXTRA, serial), CONSTANTS.MEMBER_ITEM)
                                 }
                                 1 -> {
+                                    if (memSelectedCounter != serial) return@run
+
+                                    MainApp.pragnantWoman = mainVModel.getAllWomenName()
+
                                     startActivity(Intent(this, SectionE1Activity::class.java))
                                 }
                                 else -> startActivity(Intent(this, EndingActivity::class.java)
@@ -114,6 +119,8 @@ class FamilyMembersListActivity : AppCompatActivity() {
         adapter.setItemClicked { item, position, holder ->
             openDialog(this, item)
             MainApp.setItemClick {
+
+                memSelectedCounter++
 
                 holder.parentLayout.isEnabled = false
                 holder.parentLayout.checkIcon.visibility = View.VISIBLE

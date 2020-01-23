@@ -16,6 +16,7 @@ import com.validatorcrawler.aliazaz.Validator;
 import org.json.JSONException;
 import org.json.JSONObject;
 
+import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
 
@@ -43,7 +44,14 @@ public class SectionE1Activity extends AppCompatActivity {
 
     private void setUIComponent() {
 
-        bi.womanSpinner.setAdapter(new ArrayAdapter<>(this, android.R.layout.simple_list_item_1, MainApp.pragnantWoman));
+        List<String> womenLst = new ArrayList<String>() {
+            {
+                add("....");
+                addAll(MainApp.pragnantWoman.getSecond());
+            }
+        };
+
+        bi.womanSpinner.setAdapter(new ArrayAdapter<>(this, android.R.layout.simple_list_item_1, womenLst));
 
         bi.womanSpinner.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
             @Override
@@ -88,31 +96,25 @@ public class SectionE1Activity extends AppCompatActivity {
                 e.printStackTrace();
             }
             if (UpdateDB()) {
-                if (!bi.e101b.isChecked()) {
-                    if (MainApp.pragnantWoman.size() > 0) {
-                        finish();
-                        startActivity(new Intent(SectionE1Activity.this, SectionE2Activity.class));
-                        MainApp.pragnantWoman.remove(position);
-
+                Intent next;
+                if (bi.e101a.isChecked()) {
+                    if (MainApp.pragnantWoman.getFirst().size() > 0) {
+                        next = new Intent(SectionE1Activity.this, SectionE2Activity.class);
                     } else {
-                        finish();
-                        startActivity(new Intent(SectionE1Activity.this, SectionE3Activity.class));
+                        next = new Intent(SectionE1Activity.this, SectionE3Activity.class);
                     }
                 } else {
-                    if (MainApp.pragnantWoman.size() > 0) {
-                        finish();
-                        startActivity(new Intent(SectionE1Activity.this, SectionE1Activity.class));
-                        MainApp.pragnantWoman.remove(position);
+                    if (MainApp.pragnantWoman.getFirst().size() > 0) {
+                        next = new Intent(SectionE1Activity.this, SectionE1Activity.class);
                     } else {
-                        finish();
-                        startActivity(new Intent(SectionE1Activity.this, SectionE3Activity.class));
+                        next = new Intent(SectionE1Activity.this, SectionE3Activity.class);
                     }
-
                 }
 
+                MainApp.pragnantWoman.getFirst().remove(position - 1);
+                MainApp.pragnantWoman.getSecond().remove(position - 1);
+                startActivity(next);
             }
-
-
         }
     }
 
@@ -125,13 +127,13 @@ public class SectionE1Activity extends AppCompatActivity {
 
         JSONObject f1 = new JSONObject();
         f1.put("e101",
-                bi.e101a.isChecked() ?"1" :
-                        bi.e101b.isChecked() ?"2" :
+                bi.e101a.isChecked() ? "1" :
+                        bi.e101b.isChecked() ? "2" :
                                 "0");
         f1.put("e102", bi.e102.getText().toString());
         f1.put("e102a",
-                bi.e102aa.isChecked() ?"1" :
-                        bi.e102ab.isChecked() ?"2" :
+                bi.e102aa.isChecked() ? "1" :
+                        bi.e102ab.isChecked() ? "2" :
                                 "0");
 
     }
