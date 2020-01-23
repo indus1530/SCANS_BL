@@ -16,10 +16,10 @@ import edu.aku.hassannaqvi.uen_midline.contracts.FamilyMembersContract
 import edu.aku.hassannaqvi.uen_midline.core.MainApp
 import edu.aku.hassannaqvi.uen_midline.core.MainApp.openDialog
 import edu.aku.hassannaqvi.uen_midline.databinding.ActivityFamilyMembersListBinding
-import edu.aku.hassannaqvi.uen_midline.ui.other.EndingActivity
 import edu.aku.hassannaqvi.uen_midline.ui.sections.SectionDActivity
 import edu.aku.hassannaqvi.uen_midline.ui.sections.SectionE1Activity
 import edu.aku.hassannaqvi.uen_midline.ui.sections.SectionE3Activity
+import edu.aku.hassannaqvi.uen_midline.utils.Util
 import edu.aku.hassannaqvi.uen_midline.viewmodel.MainVModel
 import kotlinx.android.synthetic.main.activity_family_members_list.*
 import kotlinx.android.synthetic.main.item_mem_list.view.*
@@ -83,11 +83,9 @@ class FamilyMembersListActivity : AppCompatActivity() {
 
                                     MainApp.pragnantWoman = mainVModel.getAllWomenName()
 
-                                    startActivity(Intent(this, if (bi.mwra.text.toString().toInt() > 0) SectionE1Activity::class.java else SectionE3Activity::class.java))
+                                    startActivity(Intent(this, if (bi.contentScroll.mwra.text.toString().toInt() > 0) SectionE1Activity::class.java else SectionE3Activity::class.java))
                                 }
-                                else -> startActivity(Intent(this, EndingActivity::class.java)
-                                        .setFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK).setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP).setFlags(Intent.FLAG_ACTIVITY_NEW_TASK)
-                                )
+                                else -> Util.openEndActivity(this)
                             }
                         }
 
@@ -104,10 +102,10 @@ class FamilyMembersListActivity : AppCompatActivity() {
         mainVModel = this.run {
             ViewModelProviders.of(this)[MainVModel::class.java]
         }
-        mainVModel.childLstU5.observe(this, Observer { item -> bi.under5.text = String.format("%02d", item.size) })
-        mainVModel.mwraLst.observe(this, Observer { item -> bi.mwra.text = String.format("%02d", item.size) })
+        mainVModel.childLstU5.observe(this, Observer { item -> bi.contentScroll.under5.text = String.format("%02d", item.size) })
+        mainVModel.mwraLst.observe(this, Observer { item -> bi.contentScroll.mwra.text = String.format("%02d", item.size) })
         mainVModel.familyMemLst.observe(this, Observer { item ->
-            bi.total.text = String.format("%02d", item.size)
+            bi.contentScroll.total.text = String.format("%02d", item.size)
             adapter.setMList(item)
         })
     }
