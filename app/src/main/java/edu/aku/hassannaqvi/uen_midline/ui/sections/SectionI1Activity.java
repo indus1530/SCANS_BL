@@ -20,6 +20,7 @@ import edu.aku.hassannaqvi.uen_midline.R;
 import edu.aku.hassannaqvi.uen_midline.contracts.FamilyMembersContract;
 import edu.aku.hassannaqvi.uen_midline.core.MainApp;
 import edu.aku.hassannaqvi.uen_midline.databinding.ActivitySectionI1Binding;
+import edu.aku.hassannaqvi.uen_midline.ui.list_activity.FamilyMembersListActivity;
 import edu.aku.hassannaqvi.uen_midline.validator.ClearClass;
 import edu.aku.hassannaqvi.uen_midline.validator.ValidatorClass;
 import kotlin.Pair;
@@ -30,7 +31,7 @@ public class SectionI1Activity extends AppCompatActivity {
 
     ActivitySectionI1Binding bi;
     private FamilyMembersContract fmc_child;
-    private Pair<List<Integer>, List<String>> childLst;
+    private Pair<List<Integer>, List<String>> childLst, resList;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -56,6 +57,19 @@ public class SectionI1Activity extends AppCompatActivity {
         bi.i100.setAdapter(new ArrayAdapter<>(this, android.R.layout.simple_dropdown_item_1line, childLst));
     }
 
+    private void populateRespondentSpinner() {
+        resList = mainVModel.getAllRespondent();
+        List<String> reponList = new ArrayList<String>() {
+            {
+                add("....");
+                addAll(SectionI1Activity.this.resList.getSecond());
+            }
+        };
+
+        bi.i10res.setAdapter(new ArrayAdapter<>(this, android.R.layout.simple_dropdown_item_1line, reponList));
+    }
+
+
     private void setListener() {
 
         bi.i100.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
@@ -63,6 +77,14 @@ public class SectionI1Activity extends AppCompatActivity {
             public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
                 if (position == 0) return;
                 fmc_child = mainVModel.getMemberInfo(childLst.getFirst().get(bi.i100.getSelectedItemPosition() - 1));
+                if (fmc_child.getMotherName().equals("NA")) {
+                    bi.respondentSpinner.setVisibility(View.VISIBLE);
+                    populateRespondentSpinner();
+                } else {
+                    bi.respondentSpinner.setVisibility(View.GONE);
+                }
+
+
             }
 
             @Override

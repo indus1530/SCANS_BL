@@ -22,7 +22,58 @@
             android:id="@+id/fldGrpSectioni02"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layoutDirection="ltr"
             android:orientation="vertical">
+
+            <!-- i200  Spinner   -->
+            <androidx.cardview.widget.CardView
+                android:id="@+id/fldGrpCVd107"
+                style="@style/cardView">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <TextView
+                        style="@style/i_textview"
+                        android:text="Child Name" />
+
+                    <Spinner
+                        android:id="@+id/i200"
+                        style="@style/spinner"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="10dp" />
+
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+            <!-- i20res  Spinner   -->
+            <androidx.cardview.widget.CardView
+                android:id="@+id/respondentSpinner"
+                style="@style/cardView"
+                android:visibility="gone">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <TextView
+                        style="@style/i_textview"
+                        android:text="Respondent Name" />
+
+                    <Spinner
+                        android:id="@+id/i20res"
+                        style="@style/spinner"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="10dp" />
+
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
 
             <!-- i201  Radio   -->
             <androidx.cardview.widget.CardView

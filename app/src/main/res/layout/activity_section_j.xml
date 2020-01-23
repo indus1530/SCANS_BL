@@ -23,6 +23,55 @@
             android:layout_height="wrap_content"
             android:orientation="vertical">
 
+            <!-- j100  Spinner   -->
+            <androidx.cardview.widget.CardView
+                android:id="@+id/fldGrpCVd107"
+                style="@style/cardView">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <TextView
+                        style="@style/i_textview"
+                        android:text="Child Name" />
+
+                    <Spinner
+                        android:id="@+id/j100"
+                        style="@style/spinner"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="10dp" />
+
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+            <!-- j100res  Spinner   -->
+            <androidx.cardview.widget.CardView
+                android:id="@+id/respondentSpinner"
+                style="@style/cardView"
+                android:visibility="gone">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <TextView
+                        style="@style/i_textview"
+                        android:text="Respondent Name" />
+
+                    <Spinner
+                        android:id="@+id/j100res"
+                        style="@style/spinner"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="10dp" />
+
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
             <!-- j101  Radio   -->
             <androidx.cardview.widget.CardView
                 android:id="@+id/fldGrpCVj101"
