@@ -41,6 +41,7 @@ import edu.aku.hassannaqvi.uen_midline.contracts.MotherContract;
 import edu.aku.hassannaqvi.uen_midline.contracts.ProblemContract;
 import edu.aku.hassannaqvi.uen_midline.databinding.CountAlertDialogLayoutBinding;
 import edu.aku.hassannaqvi.uen_midline.ui.other.EndingActivity;
+import kotlin.Pair;
 
 
 /**
@@ -107,7 +108,7 @@ public class MainApp extends Application {
     public static int childCount = 0;
     public static int noOfPragnencies = 0;
     public static boolean twinFlag = false;
-    public static List<String> pragnantWoman = new ArrayList<>();
+    public static Pair<List<Integer>, List<String>> pragnantWoman;
 
     protected static LocationManager locationManager;
 

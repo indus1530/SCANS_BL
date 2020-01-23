@@ -76,8 +76,13 @@ public class SectionE2Activity extends AppCompatActivity {
                     finish();
                     startActivity(new Intent(SectionE2Activity.this, SectionE2Activity.class));
                 } else {
-                    finish();
-                    startActivity(new Intent(SectionE2Activity.this, SectionE3Activity.class));
+                    if (MainApp.pragnantWoman.getFirst().size() > 0) {
+                        finish();
+                        startActivity(new Intent(SectionE2Activity.this, SectionE1Activity.class));
+                    } else {
+                        finish();
+                        startActivity(new Intent(SectionE2Activity.this, SectionE3Activity.class));
+                    }
                 }
 
             }

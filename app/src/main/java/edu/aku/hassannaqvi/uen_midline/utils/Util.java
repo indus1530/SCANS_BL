@@ -8,6 +8,7 @@ import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.pm.PackageManager;
+import android.graphics.drawable.Drawable;
 import android.view.View;
 import android.view.Window;
 import android.view.WindowManager;
@@ -77,6 +78,18 @@ public class Util {
         });
         dialog.findViewById(R.id.btnNo).setOnClickListener(view -> dialog.dismiss());
 
+    }
+
+
+    public static Drawable getIcon(Context context, int gender, int age) {
+        boolean memberType = age > 10;
+        if (memberType) {
+            return gender == 1 ? context.getResources().getDrawable(R.drawable.ctr_male)
+                    : context.getResources().getDrawable(R.drawable.ctr_female);
+        } else {
+            return gender == 1 ? context.getResources().getDrawable(R.drawable.ctr_childboy)
+                    : context.getResources().getDrawable(R.drawable.ctr_childgirl);
+        }
     }
 
 
