@@ -2,6 +2,9 @@ package edu.aku.hassannaqvi.uen_midline.ui.sections;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.view.View;
+import android.widget.AdapterView;
+import android.widget.ArrayAdapter;
 import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
@@ -12,14 +15,23 @@ import com.validatorcrawler.aliazaz.Validator;
 import org.json.JSONException;
 import org.json.JSONObject;
 
+import java.util.ArrayList;
+import java.util.List;
+
 import edu.aku.hassannaqvi.uen_midline.R;
+import edu.aku.hassannaqvi.uen_midline.contracts.FamilyMembersContract;
 import edu.aku.hassannaqvi.uen_midline.core.MainApp;
 import edu.aku.hassannaqvi.uen_midline.databinding.ActivitySectionJBinding;
 import edu.aku.hassannaqvi.uen_midline.validator.ClearClass;
+import kotlin.Pair;
+
+import static edu.aku.hassannaqvi.uen_midline.ui.list_activity.FamilyMembersListActivity.mainVModel;
 
 public class SectionJActivity extends AppCompatActivity {
 
     ActivitySectionJBinding bi;
+    private FamilyMembersContract fmc_child;
+    private Pair<List<Integer>, List<String>> childLst, resList;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -27,10 +39,60 @@ public class SectionJActivity extends AppCompatActivity {
         bi = DataBindingUtil.setContentView(this, R.layout.activity_section_j);
         bi.setCallback(this);
 
+        setUIComponent();
         setlistener();
+
+    }
+
+    private void setUIComponent() {
+
+        childLst = mainVModel.getAllUnder5();
+
+        List<String> childLst = new ArrayList<String>() {
+            {
+                add("....");
+                addAll(SectionJActivity.this.childLst.getSecond());
+            }
+        };
+
+        bi.j100.setAdapter(new ArrayAdapter<>(this, android.R.layout.simple_dropdown_item_1line, childLst));
+    }
+
+    private void populateRespondentSpinner() {
+        resList = mainVModel.getAllRespondent();
+        List<String> reponList = new ArrayList<String>() {
+            {
+                add("....");
+                addAll(SectionJActivity.this.resList.getSecond());
+            }
+        };
+
+        bi.j100res.setAdapter(new ArrayAdapter<>(this, android.R.layout.simple_dropdown_item_1line, reponList));
     }
 
     private void setlistener() {
+
+        bi.j100.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+            @Override
+            public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
+                if (position == 0) return;
+                fmc_child = mainVModel.getMemberInfo(childLst.getFirst().get(bi.j100.getSelectedItemPosition() - 1));
+                if (fmc_child.getMotherName().equals("NA")) {
+                    bi.respondentSpinner.setVisibility(View.VISIBLE);
+                    populateRespondentSpinner();
+                } else {
+                    bi.respondentSpinner.setVisibility(View.GONE);
+                }
+
+
+            }
+
+            @Override
+            public void onNothingSelected(AdapterView<?> parent) {
+
+            }
+        });
+
 
         bi.j101.setOnCheckedChangeListener(((radioGroup, i) -> {
 

@@ -52,10 +52,35 @@
 
                     <TextView
                         style="@style/i_textview"
-                        android:text="IMMUNIZATION" />
+                        android:text="Child Name" />
 
                     <Spinner
                         android:id="@+id/i100"
+                        style="@style/spinner"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="10dp" />
+
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+            <!-- i10res  Spinner   -->
+            <androidx.cardview.widget.CardView
+                android:id="@+id/respondentSpinner"
+                style="@style/cardView"
+                android:visibility="gone">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <TextView
+                        style="@style/i_textview"
+                        android:text="Respondent Name" />
+
+                    <Spinner
+                        android:id="@+id/i10res"
                         style="@style/spinner"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
@@ -124,8 +149,7 @@
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:hint="@string/i102"
-                            android:inputType="number"
-                           />
+                            android:inputType="number" />
                     </LinearLayout>
                 </androidx.cardview.widget.CardView>
 
@@ -149,8 +173,7 @@
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:hint="@string/i103"
-                            android:inputType="number"
-                            />
+                            android:inputType="number" />
                     </LinearLayout>
                 </androidx.cardview.widget.CardView>
 
@@ -385,8 +408,7 @@
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:hint="@string/i109"
-                            android:inputType="number"
-                             />
+                            android:inputType="number" />
                     </LinearLayout>
                 </androidx.cardview.widget.CardView>
 
@@ -410,8 +432,7 @@
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:hint="@string/i110"
-                            android:inputType="number"
-                            />
+                            android:inputType="number" />
                     </LinearLayout>
                 </androidx.cardview.widget.CardView>
 
@@ -650,8 +671,7 @@
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:hint="@string/i115a"
-                                android:inputType="number"
-                                />
+                                android:inputType="number" />
 
                             <TextView
                                 style="@style/i_textview"
@@ -663,8 +683,7 @@
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:hint="@string/i115b"
-                                android:inputType="number"
-                                />
+                                android:inputType="number" />
                         </LinearLayout>
                     </androidx.cardview.widget.CardView>
 
@@ -905,8 +924,7 @@
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:hint="@string/i120"
-                            android:inputType="number"
-                           />
+                            android:inputType="number" />
                     </LinearLayout>
                 </androidx.cardview.widget.CardView>
 
@@ -930,8 +948,7 @@
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:hint="@string/i121"
-                            android:inputType="number"
-                            />
+                            android:inputType="number" />
                     </LinearLayout>
                 </androidx.cardview.widget.CardView>
 
