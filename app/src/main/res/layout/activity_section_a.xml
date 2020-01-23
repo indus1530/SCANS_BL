@@ -24,13 +24,6 @@
             android:layoutDirection="ltr"
             android:orientation="vertical">
 
-            <TextView
-                android:id="@+id/heading"
-                style="@style/HeadingTitle"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="@string/taheading" />
-
             <!-- a101  Input   -->
             <androidx.cardview.widget.CardView
                 android:id="@+id/fldGrpCVa101"
@@ -402,6 +395,7 @@
                         android:id="@+id/a112"
                         style="@style/EditTextAlphaNumeric"
                         android:layout_width="match_parent"
+
                         android:layout_height="wrap_content"
                         android:enabled='@{a112a.checked? false : true}'
                         android:hint="@string/a112"
@@ -427,19 +421,19 @@
                 android:orientation="horizontal">
 
                 <Button
-                    android:id="@+id/btnNext"
-                    style="@style/buttons_bottom"
-                    android:background="@android:color/holo_green_light"
-                    android:onClick="@{() -> callback.BtnContinue()}"
-                    android:text="@string/nextSection" />
-
-                <Button
                     android:id="@+id/btnEnd"
                     style="@style/buttons_bottom"
                     android:background="@android:color/holo_red_light"
                     android:onClick="@{() -> callback.BtnEnd()}"
                     android:text="@string/end_interview" />
                 <!--'onClick' for btn_End will NOT change and always call 'endInterview'-->
+
+                <Button
+                    android:id="@+id/btnNext"
+                    style="@style/buttons_bottom"
+                    android:background="@android:color/holo_green_light"
+                    android:onClick="@{() -> callback.BtnContinue()}"
+                    android:text="@string/nextSection" />
             </LinearLayout>
         </LinearLayout>
     </ScrollView>
