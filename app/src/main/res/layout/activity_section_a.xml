@@ -25,6 +25,21 @@
             android:orientation="vertical">
 
             <!-- a101  Input   -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <TextView
+                    style="@style/i_textview"
+                    android:text="@string/a101" />
+
+                <TextView
+                    style="@style/textView3Head"
+                    android:text="@string/a101a" />
+
+            </LinearLayout>
+
             <androidx.cardview.widget.CardView
                 android:id="@+id/fldGrpCVa101"
                 style="@style/cardView">
@@ -32,17 +47,9 @@
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:orientation="vertical">
+                    android:orientation="horizontal">
 
-                    <TextView
-                        style="@style/i_textview"
-                        android:text="@string/a101" />
-
-                    <TextView
-                        style="@style/textView3Head"
-                        android:text="@string/a101a" />
-
-                    <EditText
+                    <!--<EditText
                         android:id="@+id/a101"
                         style="@style/textInput"
                         android:layout_width="match_parent"
@@ -50,11 +57,222 @@
                         android:hint="@string/a101"
                         android:inputType="number"
                         android:maxLength="5"
-                        android:textColor="@android:color/black" />
+                        android:textColor="@android:color/black" />-->
+
+                    <EditText
+                        android:id="@+id/a101"
+                        style="@style/textInput"
+                        android:layout_width="0dp"
+                        android:layout_marginTop="5dp"
+                        android:layout_marginEnd="10dp"
+                        android:layout_weight="20"
+                        android:digits="0123456789-"
+                        android:hint="@string/a101"
+                        android:inputType="number"
+                        android:layoutDirection="ltr"
+                        android:maxLength="5"
+                        android:textDirection="ltr" />
+
+                    <Button
+                        android:id="@+id/checkHHBtn1"
+                        style="@style/Widget.AppCompat.Button.Colored"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        android:layout_weight="20"
+                        android:background="@drawable/button_bg"
+                        android:elevation="5dp"
+                        android:onClick="@{() -> callback.BtnCheckHH()}"
+                        android:text="CHECK"
+                        android:textColor="@color/colorPrimaryDark" />
+
                 </LinearLayout>
             </androidx.cardview.widget.CardView>
 
-            <!-- a102  Radio   -->
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <!--a104-->
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="16dp"
+                        android:layout_marginBottom="4dp"
+                        android:layout_weight="2"
+                        android:background="@color/colorPrimary"
+                        android:gravity="center_horizontal|center_vertical"
+                        android:text="@string/a104"
+                        android:textAppearance="?android:attr/textAppearanceLarge"
+                        android:textColor="@android:color/white" />
+
+
+                    <TextView
+                        android:id="@+id/a104"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="13dp"
+                        android:layout_marginBottom="4dp"
+                        android:layout_weight="3"
+                        android:background="@color/pink_100"
+                        android:gravity="center_horizontal|center_vertical"
+                        android:text="Balochistan"
+                        android:textColor="@color/colorPrimaryDark"
+                        android:textSize="16sp" />
+
+                    <!--a105-->
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="16dp"
+                        android:layout_marginBottom="8dp"
+                        android:layout_weight="2"
+                        android:background="@color/colorPrimary"
+                        android:gravity="center_horizontal|center_vertical"
+                        android:text="@string/a105"
+                        android:textAppearance="?android:attr/textAppearanceLarge"
+                        android:textColor="@android:color/white" />
+
+
+                    <TextView
+                        android:id="@+id/a105"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="13dp"
+                        android:layout_marginBottom="4dp"
+                        android:layout_weight="3"
+                        android:background="@color/pink_100"
+                        android:gravity="center_horizontal|center_vertical"
+                        android:text="Jafferabad"
+                        android:textColor="@color/colorPrimaryDark"
+                        android:textSize="16sp" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <!--a106-->
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="16dp"
+                        android:layout_marginBottom="8dp"
+                        android:layout_weight="2"
+                        android:background="@color/colorPrimary"
+                        android:gravity="center_horizontal|center_vertical"
+                        android:text="@string/a106"
+                        android:textAppearance="?android:attr/textAppearanceLarge"
+                        android:textColor="@android:color/white" />
+
+
+                    <TextView
+                        android:id="@+id/a106"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="16dp"
+                        android:layout_marginBottom="4dp"
+                        android:layout_weight="3"
+                        android:background="@color/pink_100"
+                        android:gravity="center_horizontal|center_vertical"
+                        android:text="Test"
+                        android:textColor="@color/colorPrimaryDark"
+                        android:textSize="16sp" />
+
+                    <!--a107-->
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="16dp"
+                        android:layout_marginBottom="8dp"
+                        android:layout_weight="2"
+                        android:background="@color/colorPrimary"
+                        android:gravity="center_horizontal|center_vertical"
+                        android:text="@string/a107"
+                        android:textAppearance="?android:attr/textAppearanceLarge"
+                        android:textColor="@android:color/white" />
+
+
+                    <TextView
+                        android:id="@+id/a107"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="13dp"
+                        android:layout_marginBottom="8dp"
+                        android:layout_weight="3"
+                        android:background="@color/pink_100"
+                        android:gravity="center_horizontal|center_vertical"
+                        android:text="Test"
+                        android:textColor="@color/colorPrimaryDark"
+                        android:textSize="16sp" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <!--a112-->
+            <TextView
+                style="@style/i_textview"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:background="@color/colorPrimary"
+                android:text="@string/a112"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:textColor="@android:color/white" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <EditText
+                    android:id="@+id/a112"
+                    style="@style/textInput"
+                    android:layout_width="0dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginEnd="10dp"
+                    android:layout_weight="60"
+                    android:digits="0123456789-"
+                    android:hint="@string/a112"
+                    android:inputType="number"
+                    android:layoutDirection="ltr"
+                    android:maxLength="8"
+                    android:textDirection="ltr" />
+
+                <Button
+                    android:id="@+id/checkHHBtn2"
+                    style="@style/Widget.AppCompat.Button.Colored"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:layout_weight="30"
+                    android:background="@drawable/button_bg"
+                    android:elevation="5dp"
+                    android:onClick="@{() -> callback.BtnCheckHH()}"
+                    android:text="CHECK"
+                    android:textColor="@color/colorPrimaryDark" />
+
+            </LinearLayout>
+
+
+            <!--&lt;!&ndash; a102  Radio   delt&ndash;&gt;
             <androidx.cardview.widget.CardView
                 android:id="@+id/fldGrpCVa102"
                 style="@style/cardView">
@@ -86,35 +304,7 @@
                 </LinearLayout>
             </androidx.cardview.widget.CardView>
 
-            <!--            &lt;!&ndash; a103  Input-Numeric   &ndash;&gt;-->
-            <!--            <androidx.cardview.widget.CardView-->
-            <!--                android:id="@+id/fldGrpCVa103"-->
-            <!--                style="@style/cardView">-->
-
-            <!--                <LinearLayout-->
-            <!--                    android:layout_width="match_parent"-->
-            <!--                    android:layout_height="wrap_content"-->
-            <!--                    android:orientation="vertical">-->
-
-            <!--                    <TextView-->
-            <!--                        style="@style/i_textview"-->
-            <!--                        android:text="@string/a103" />-->
-
-            <!--                    <com.edittextpicker.aliazaz.EditTextPicker-->
-            <!--                        android:id="@+id/a103"-->
-            <!--                        style="@style/EditTextAlphaNumeric"-->
-            <!--                        android:layout_width="match_parent"-->
-            <!--                        android:layout_height="wrap_content"-->
-            <!--                        android:hint="@string/a103"-->
-            <!--                        android:inputType="number"-->
-            <!--                        app:mask="##"-->
-            <!--                        app:maxValue="0"-->
-            <!--                        app:minValue="0"-->
-            <!--                        app:type="range" />-->
-            <!--                </LinearLayout>-->
-            <!--            </androidx.cardview.widget.CardView>-->
-
-            <!-- a104  Radio   -->
+            &lt;!&ndash; a104  Radio   &ndash;&gt;
             <androidx.cardview.widget.CardView
                 android:id="@+id/fldGrpCVa104"
                 style="@style/cardView">
@@ -151,7 +341,7 @@
                 </LinearLayout>
             </androidx.cardview.widget.CardView>
 
-            <!-- a105  Radio   -->
+            &lt;!&ndash; a105  Radio   &ndash;&gt;
             <androidx.cardview.widget.CardView
                 android:id="@+id/fldGrpCVa105"
                 style="@style/cardView">
@@ -229,7 +419,7 @@
                 </LinearLayout>
             </androidx.cardview.widget.CardView>
 
-            <!-- a106  Input   -->
+            &lt;!&ndash; a106  Input   &ndash;&gt;
             <androidx.cardview.widget.CardView
                 android:id="@+id/fldGrpCVa106"
                 style="@style/cardView">
@@ -250,7 +440,7 @@
                 </LinearLayout>
             </androidx.cardview.widget.CardView>
 
-            <!-- a107  Input   -->
+            &lt;!&ndash; a107  Input   delt&ndash;&gt;
             <androidx.cardview.widget.CardView
                 android:id="@+id/fldGrpCVa107"
                 style="@style/cardView">
@@ -269,9 +459,9 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content" />
                 </LinearLayout>
-            </androidx.cardview.widget.CardView>
+            </androidx.cardview.widget.CardView>-->
 
-            <!-- a108  Radio   -->
+            <!--&lt;!&ndash; a108  Radio   &ndash;&gt;
             <androidx.cardview.widget.CardView
                 android:id="@+id/fldGrpCVa108"
                 style="@style/cardView">
@@ -301,7 +491,52 @@
                             android:text="@string/a108b" />
                     </RadioGroup>
                 </LinearLayout>
-            </androidx.cardview.widget.CardView>
+            </androidx.cardview.widget.CardView>-->
+
+            <!-- a112  Input-Numeric   -->
+            <!--<androidx.cardview.widget.CardView
+                android:id="@+id/fldGrpCVa112"
+                style="@style/cardView">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <CheckBox
+                        android:id="@+id/a112a"
+                        style="@style/checkbox"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:tag="-1"
+                        android:text="@string/a112a" />
+
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>-->
+
+            <LinearLayout
+                android:id="@+id/fldGrpcih110"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:visibility="gone"
+                tools:visibility="visible">
+
+                <TextView
+                    android:id="@+id/hhName"
+                    style="@style/textView3Head"
+                    android:padding="10dp"
+                    android:textAlignment="center" />
+
+                <CheckBox
+                    android:id="@+id/checkHHHeadpresent"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/cardview_default_elevation"
+                    android:text="@string/checkHHpresent"
+                    android:visibility="gone" />
+
+            </LinearLayout>
 
             <!-- a109  Input   -->
             <androidx.cardview.widget.CardView
@@ -377,41 +612,6 @@
                 </LinearLayout>
             </androidx.cardview.widget.CardView>
 
-            <!-- a112  Input-Numeric   -->
-            <androidx.cardview.widget.CardView
-                android:id="@+id/fldGrpCVa112"
-                style="@style/cardView">
-
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:orientation="vertical">
-
-                    <TextView
-                        style="@style/i_textview"
-                        android:text="@string/a112" />
-
-                    <com.edittextpicker.aliazaz.EditTextPicker
-                        android:id="@+id/a112"
-                        style="@style/EditTextAlphaNumeric"
-                        android:layout_width="match_parent"
-
-                        android:layout_height="wrap_content"
-                        android:enabled='@{a112a.checked? false : true}'
-                        android:hint="@string/a112"
-                        android:inputType="number"
-                        android:text='@{!a112a.checked? "" : a112.getText().toString() }' />
-
-                    <CheckBox
-                        android:id="@+id/a112a"
-                        style="@style/checkbox"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:tag="-1"
-                        android:text="@string/a112a" />
-
-                </LinearLayout>
-            </androidx.cardview.widget.CardView>
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -435,6 +635,7 @@
                     android:onClick="@{() -> callback.BtnContinue()}"
                     android:text="@string/nextSection" />
             </LinearLayout>
+
         </LinearLayout>
     </ScrollView>
 </layout>

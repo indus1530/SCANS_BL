@@ -2,7 +2,6 @@ package edu.aku.hassannaqvi.uen_midline.ui.sections;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.widget.ArrayAdapter;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.databinding.DataBindingUtil;
@@ -48,8 +47,8 @@ public class SectionAActivity extends AppCompatActivity {
         ucs.add("Test uc 1");
         ucs.add("Test uc 2");
 
-        bi.a106.setAdapter(new ArrayAdapter<>(this, android.R.layout.simple_list_item_1, tehsils));
-        bi.a107.setAdapter(new ArrayAdapter<>(this, android.R.layout.simple_list_item_1, ucs));
+        /*bi.a106.setAdapter(new ArrayAdapter<>(this, android.R.layout.simple_list_item_1, tehsils));
+        bi.a107.setAdapter(new ArrayAdapter<>(this, android.R.layout.simple_list_item_1, ucs));*/
 
 
     }

@@ -70,11 +70,11 @@
     <string name="a102a">LHW covered </string>
     <string name="a102b">LHW uncovered </string>
     <string name="a103">Form Serial Number : Auto generated </string>
-    <string name="a104">Name of Province</string>
+    <string name="a104">Province</string>
     <string name="a104a">Balochistan </string>
     <string name="a104b">Punjab </string>
     <string name="a104c">Sindh </string>
-    <string name="a105">Name of District</string>
+    <string name="a105">District</string>
     <string name="a105a">Jafferabad </string>
     <string name="a105a_title">Balochistan</string>
     <string name="a105b">Nasirabad </string>
@@ -86,8 +86,8 @@
     <string name="a105f_title">Sindh</string>
     <string name="a105g">Sanghar </string>
     <string name="a105h">Qamber Shahdadkot </string>
-    <string name="a106">Name of Tehsil/Taluka </string>
-    <string name="a107">Name of Union Council</string>
+    <string name="a106">Tehsil/Taluka </string>
+    <string name="a107">Union Council</string>
     <string name="a108">Location</string>
     <string name="a108a">Urban </string>
     <string name="a108b">Rural </string>
@@ -96,6 +96,8 @@
     <string name="a111">Street</string>
     <string name="a112">House number/khandan number</string>
     <string name="a112a">Not Available</string>
+
+    <string name="checkHHpresent"> Selected Head name present (A/C Line listing) </string>
 
     <string name="b101">Latitude (Example: 24.861462) </string>
     <string name="b102">Longitude (Example:67.009939)</string>
