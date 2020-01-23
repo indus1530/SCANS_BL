@@ -401,7 +401,7 @@
 
                         <TextView
                             style="@style/textView3Head"
-                            android:text="@string/d108a" />
+                            android:text="@string/d109a" />
 
                         <com.edittextpicker.aliazaz.EditTextPicker
                             android:id="@+id/d109"
@@ -409,7 +409,7 @@
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:enabled="false"
-                            android:hint="@string/d108a"
+                            android:hint="@string/d109a"
                             android:inputType="number"
                             android:maxLength="2"
                             android:textColor="@android:color/black"

@@ -143,7 +143,7 @@
     <string name="d108b">Month</string>
     <string name="d108c">Year</string>
     <string name="d109">Age - If date of birth recorded then age will be automatically calculated from D.O.I and D.O.B</string>
-    <string name="d109a">Days</string>
+    <string name="d109a">Age</string>
     <string name="d109b">Months</string>
     <string name="d109c">Years</string>
     <string name="d110">Education What is the highest class (NAME) completed</string>
