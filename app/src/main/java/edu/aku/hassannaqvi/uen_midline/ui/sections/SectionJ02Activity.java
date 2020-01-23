@@ -235,6 +235,11 @@ public class SectionJ02Activity extends AppCompatActivity {
         return true;
     }
 
+    @Override
+    public void onBackPressed() {
+        Toast.makeText(this, "You can't go back", Toast.LENGTH_SHORT).show();
+    }
+
     public void BtnEnd() {
         MainApp.endActivity(this, this);
     }

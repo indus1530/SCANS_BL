@@ -15,6 +15,7 @@ import edu.aku.hassannaqvi.uen_midline.contracts.FamilyMembersContract;
 import edu.aku.hassannaqvi.uen_midline.core.DatabaseHelper;
 import edu.aku.hassannaqvi.uen_midline.core.MainApp;
 import edu.aku.hassannaqvi.uen_midline.databinding.ItemMemListBinding;
+import edu.aku.hassannaqvi.uen_midline.utils.Util;
 
 public class ChildListAdapter extends RecyclerView.Adapter<ChildListAdapter.ViewHolder> {
 
@@ -51,10 +52,9 @@ public class ChildListAdapter extends RecyclerView.Adapter<ChildListAdapter.View
         holder.bi.dob.setText("Age: " + mList.get(i).getAge() + " Year(s)");
         holder.bi.index.setText(String.format("%02d", Integer.valueOf(mList.get(i).getSerialno())));
         String gender = mList.get(i).getGender();
-        holder.bi.genderImage.setImageResource(gender.equals("1") ? R.drawable.boy : R.drawable.mother);
-        holder.bi.motherName.setText(mList.get(i).getmName());
+        holder.bi.genderImage.setImageResource(Util.getMemberIcon(mContext, Integer.valueOf(mList.get(i).getGender()), mList.get(i).getAge()));
+        holder.bi.motherName.setText(mList.get(i).getMotherName());
         holder.bi.parentLayout.setOnClickListener(v -> itemClicked.onItemClick(mList.get(i), i, holder.bi));
-        viewHolder = holder.bi;
     }
 
     @Override

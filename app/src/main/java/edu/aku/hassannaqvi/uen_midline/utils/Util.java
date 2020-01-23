@@ -2,25 +2,16 @@ package edu.aku.hassannaqvi.uen_midline.utils;
 
 import android.Manifest;
 import android.app.Activity;
-import android.app.AlertDialog;
 import android.app.Dialog;
 import android.content.Context;
-import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.pm.PackageManager;
-import android.graphics.drawable.Drawable;
-import android.view.View;
 import android.view.Window;
 import android.view.WindowManager;
 
 import androidx.core.content.ContextCompat;
 
-import org.json.JSONException;
-
-import java.time.LocalDate;
-import java.time.Period;
 import java.util.ArrayList;
-import java.util.Calendar;
 import java.util.List;
 
 import edu.aku.hassannaqvi.uen_midline.R;
@@ -74,22 +65,20 @@ public class Util {
 
         dialog.findViewById(R.id.btnOk).setOnClickListener(view -> {
             activity.finish();
-            activity.startActivity(new Intent(activity, EndingActivity.class).putExtra("complete", false));
+            activity.startActivity(new Intent(activity, EndingActivity.class).putExtra("complete", false)
+                    .setFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK).setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP).setFlags(Intent.FLAG_ACTIVITY_NEW_TASK));
         });
         dialog.findViewById(R.id.btnNo).setOnClickListener(view -> dialog.dismiss());
 
     }
 
 
-    public static Drawable getIcon(Context context, int gender, int age) {
-        boolean memberType = age > 10;
-        if (memberType) {
-            return gender == 1 ? context.getResources().getDrawable(R.drawable.ctr_male)
-                    : context.getResources().getDrawable(R.drawable.ctr_female);
-        } else {
-            return gender == 1 ? context.getResources().getDrawable(R.drawable.ctr_childboy)
-                    : context.getResources().getDrawable(R.drawable.ctr_childgirl);
-        }
+    public static Integer getMemberIcon(Context context, int gender, String age) {
+        int memAge = age.isEmpty() ? 0 : Integer.valueOf(age);
+        if (memAge == 0) return R.drawable.boy;
+        else if (memAge > 10) return gender == 1 ? R.drawable.ctr_male : R.drawable.ctr_female;
+        else return gender == 1 ? R.drawable.ctr_childboy : R.drawable.ctr_childgirl;
+
     }
 
 
