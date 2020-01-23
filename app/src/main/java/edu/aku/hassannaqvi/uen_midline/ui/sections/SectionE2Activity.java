@@ -73,8 +73,10 @@ public class SectionE2Activity extends AppCompatActivity {
                 }
             } else {
                 if (MainApp.noOfPragnencies > 0) {
+                    finish();
                     startActivity(new Intent(SectionE2Activity.this, SectionE2Activity.class));
                 } else {
+                    finish();
                     startActivity(new Intent(SectionE2Activity.this, SectionE3Activity.class));
                 }
 

@@ -238,7 +238,7 @@ public class SectionDActivity extends AppCompatActivity {
                 int month = bi.d108b.getText().toString().isEmpty() ? 0 : Integer.valueOf(bi.d108b.getText().toString());
                 int year = bi.d108c.getText().toString().isEmpty() ? 0 : Integer.valueOf(bi.d108c.getText().toString());
 
-                bi.d109.setText(String.valueOf((int) DateUtils.ageInYears(day, month, year)));
+                bi.d109.setText(DateUtils.ageInYears(day, month, year));
             }
 
             @Override
