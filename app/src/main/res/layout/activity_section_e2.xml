@@ -472,6 +472,7 @@
                             android:text="@string/e113" />
 
                         <EditText
+                            android:inputType="number"
                             android:id="@+id/e113"
                             style="@style/textInputName"
                             android:layout_width="match_parent"
@@ -496,6 +497,7 @@
                             android:text="@string/e114" />
 
                         <EditText
+                            android:inputType="number"
                             android:id="@+id/e114"
                             style="@style/textInputName"
                             android:layout_width="match_parent"

@@ -56,6 +56,12 @@ public class SectionE2Activity extends AppCompatActivity {
 
         bi.e107.setOnCheckedChangeListener(((radioGroup, i) -> {
 
+            if (i == bi.e107b.getId()) {
+                bi.mainContainer2.setVisibility(View.VISIBLE);
+            } else {
+                bi.mainContainer2.setVisibility(View.GONE);
+                ClearClass.ClearAllFields(bi.mainContainer2, null);
+            }
         }));
 
     }
