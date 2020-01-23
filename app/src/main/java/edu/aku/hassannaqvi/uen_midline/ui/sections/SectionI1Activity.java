@@ -2,6 +2,8 @@ package edu.aku.hassannaqvi.uen_midline.ui.sections;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.view.View;
+import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.Toast;
 
@@ -27,9 +29,8 @@ import static edu.aku.hassannaqvi.uen_midline.ui.list_activity.FamilyMembersList
 public class SectionI1Activity extends AppCompatActivity {
 
     ActivitySectionI1Binding bi;
-    private FamilyMembersContract fmc;
-    private int serial = 0;
-    private Pair<List<Integer>, List<String>> womenSLst;
+    private FamilyMembersContract fmc_child;
+    private Pair<List<Integer>, List<String>> childLst;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -38,27 +39,37 @@ public class SectionI1Activity extends AppCompatActivity {
         bi.setCallback(this);
 
         setUIComponent();
-        setlistener();
+        setListener();
     }
 
     private void setUIComponent() {
 
-        fmc = mainVModel.getMemberInfo(serial);
+        childLst = mainVModel.getAllUnder5();
 
-        womenSLst = mainVModel.getAllMenWomenName02(2, Integer.valueOf(fmc.getSerialno()));
-
-        List<String> womenLst = new ArrayList<String>() {
+        List<String> childLst = new ArrayList<String>() {
             {
                 add("....");
-                add("NA");
-                if (womenSLst != null) addAll(womenSLst.getSecond());
+                addAll(SectionI1Activity.this.childLst.getSecond());
             }
         };
 
-        bi.i100.setAdapter(new ArrayAdapter<>(this, android.R.layout.simple_dropdown_item_1line, womenLst));
+        bi.i100.setAdapter(new ArrayAdapter<>(this, android.R.layout.simple_dropdown_item_1line, childLst));
     }
 
-    private void setlistener() {
+    private void setListener() {
+
+        bi.i100.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+            @Override
+            public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
+                if (position == 0) return;
+                fmc_child = mainVModel.getMemberInfo(childLst.getFirst().get(bi.i100.getSelectedItemPosition() - 1));
+            }
+
+            @Override
+            public void onNothingSelected(AdapterView<?> parent) {
+
+            }
+        });
 
 
         bi.i101.setOnCheckedChangeListener(((radioGroup, i) -> {
@@ -156,8 +167,7 @@ public class SectionI1Activity extends AppCompatActivity {
 
         JSONObject f1 = new JSONObject();
 
-        f1.put("i100", womenSLst.getFirst().size() != 0 ? mainVModel.getMemberInfo(womenSLst.getFirst().get(bi.i100.getSelectedItemPosition() + 1)) : "97");
-        fmc.setmName(bi.i100.getSelectedItem().toString());
+        f1.put("i100", fmc_child.getSerialno());
 
         f1.put("i101", bi.i101a.isChecked() ? "1" :
                 bi.i101b.isChecked() ? "2" : "0");

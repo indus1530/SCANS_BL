@@ -2,7 +2,6 @@ package edu.aku.hassannaqvi.uen_midline.ui.list_activity
 
 import android.content.Intent
 import android.os.Bundle
-import android.util.Log
 import android.view.View
 import androidx.appcompat.app.AppCompatActivity
 import androidx.databinding.DataBindingUtil
@@ -20,6 +19,7 @@ import edu.aku.hassannaqvi.uen_midline.databinding.ActivityFamilyMembersListBind
 import edu.aku.hassannaqvi.uen_midline.ui.other.EndingActivity
 import edu.aku.hassannaqvi.uen_midline.ui.sections.SectionDActivity
 import edu.aku.hassannaqvi.uen_midline.ui.sections.SectionE1Activity
+import edu.aku.hassannaqvi.uen_midline.ui.sections.SectionE3Activity
 import edu.aku.hassannaqvi.uen_midline.viewmodel.MainVModel
 import kotlinx.android.synthetic.main.activity_family_members_list.*
 import kotlinx.android.synthetic.main.item_mem_list.view.*
@@ -83,7 +83,7 @@ class FamilyMembersListActivity : AppCompatActivity() {
 
                                     MainApp.pragnantWoman = mainVModel.getAllWomenName()
 
-                                    startActivity(Intent(this, SectionE1Activity::class.java))
+                                    startActivity(Intent(this, if (bi.mwra.text.toString().toInt() > 0) SectionE1Activity::class.java else SectionE3Activity::class.java))
                                 }
                                 else -> startActivity(Intent(this, EndingActivity::class.java)
                                         .setFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK).setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP).setFlags(Intent.FLAG_ACTIVITY_NEW_TASK)
@@ -104,11 +104,11 @@ class FamilyMembersListActivity : AppCompatActivity() {
         mainVModel = this.run {
             ViewModelProviders.of(this)[MainVModel::class.java]
         }
-        mainVModel.childLstU5.observe(this, Observer { item -> Log.d("", item.size.toString()) })
-        mainVModel.mwraLst.observe(this, Observer { item -> Log.d("", item.size.toString()) })
+        mainVModel.childLstU5.observe(this, Observer { item -> bi.under5.text = String.format("%02d", item.size) })
+        mainVModel.mwraLst.observe(this, Observer { item -> bi.mwra.text = String.format("%02d", item.size) })
         mainVModel.familyMemLst.observe(this, Observer { item ->
+            bi.total.text = String.format("%02d", item.size)
             adapter.setMList(item)
-//            adapter.notifyDataSetChanged()
         })
     }
 
