@@ -77,11 +77,7 @@
         <activity
             android:name=".ui.other.SplashscreenActivity"
             android:screenOrientation="portrait">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
 
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
         </activity>
         <activity
             android:name=".ui.sections.SectionFActivity"
@@ -92,7 +88,13 @@
         <activity
             android:name=".ui.list_activity.FamilyMembersListActivity"
             android:screenOrientation="portrait"
-            android:theme="@style/AppTheme"></activity>
+            android:theme="@style/AppTheme">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
         <activity
             android:name=".ui.sections.SectionDActivity"
             android:label="@string/tdheading"

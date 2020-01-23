@@ -111,12 +111,12 @@ class FamilyMembersListActivity : AppCompatActivity() {
         adapter = ChildListAdapter(this, membersLst)
         bi.contentScroll.recyclerView.layoutManager = LinearLayoutManager(this)
         bi.contentScroll.recyclerView.adapter = adapter
-        adapter.setItemClicked { item, position ->
+        adapter.setItemClicked { item, position, holder ->
             openDialog(this, item)
             MainApp.setItemClick {
 
-                adapter.holder.parentLayout.isEnabled = false
-                adapter.holder.parentLayout.checkIcon.visibility = View.VISIBLE
+                holder.parentLayout.isEnabled = false
+                holder.parentLayout.checkIcon.visibility = View.VISIBLE
 
                 startActivityForResult(Intent(this, SectionDActivity::class.java).putExtra(SERIAL_EXTRA, item.serialno.toInt()), CONSTANTS.MEMBER_ITEM)
 
