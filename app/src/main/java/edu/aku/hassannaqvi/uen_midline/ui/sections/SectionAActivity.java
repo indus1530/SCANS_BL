@@ -86,4 +86,8 @@ public class SectionAActivity extends AppCompatActivity {
 
         Util.openEndActivity(this);
     }
+
+    public void BtnCheckHH() {
+
+    }
 }
