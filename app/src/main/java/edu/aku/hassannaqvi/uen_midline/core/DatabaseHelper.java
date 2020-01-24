@@ -55,9 +55,9 @@ public class DatabaseHelper extends SQLiteOpenHelper {
             + UsersContract.singleUser.ROW_PASSWORD + " TEXT,"
             + UsersContract.singleUser.FULL_NAME + " TEXT"
             + " );";
-    public static final String DATABASE_NAME = "rsvStudy.db";
-    public static final String DB_NAME = "rsvStudy_copy.db";
-    public static final String PROJECT_NAME = "DMU-RSVSTUDY";
+    public static final String DATABASE_NAME = "uen_ml20.db";
+    public static final String DB_NAME = "uen_ml20_copy.db";
+    public static final String PROJECT_NAME = "DMU-UENML2020";
     private static final int DATABASE_VERSION = 1;
     private static final String SQL_CREATE_FORMS = "CREATE TABLE "
             + FormsTable.TABLE_NAME + "("
@@ -1836,22 +1836,36 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         return count;
     }
 
-    public int updatesSA() {
+    //Generic update FormColumn
+    public int updatesFormColumn(String column, String value) {
         SQLiteDatabase db = this.getReadableDatabase();
 
-// New value for one column
         ContentValues values = new ContentValues();
-        values.put(FormsTable.COLUMN_SA, MainApp.fc.getsA());
+        values.put(column, value);
 
-// Which row to update, based on the ID
         String selection = FormsTable._ID + " =? ";
         String[] selectionArgs = {String.valueOf(MainApp.fc.get_ID())};
 
-        int count = db.update(FormsTable.TABLE_NAME,
+        return db.update(FormsTable.TABLE_NAME,
                 values,
                 selection,
                 selectionArgs);
-        return count;
+    }
+
+    //Generic update MWRAColumn
+    public int updatesMWRAColumn(String column, String value) {
+        SQLiteDatabase db = this.getReadableDatabase();
+
+        ContentValues values = new ContentValues();
+        values.put(column, value);
+
+        String selection = FormsTable._ID + " =? ";
+        String[] selectionArgs = {String.valueOf(MainApp.fc.get_ID())};
+
+        return db.update(FormsTable.TABLE_NAME,
+                values,
+                selection,
+                selectionArgs);
     }
 
     // ANDROID DATABASE MANAGER
