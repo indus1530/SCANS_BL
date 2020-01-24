@@ -6,6 +6,8 @@ import java.util.Calendar;
 import java.util.Date;
 import java.util.concurrent.TimeUnit;
 
+import edu.aku.hassannaqvi.uen_midline.CONSTANTS;
+
 public class DateUtils {
 
     public static int monthsBetweenDates(Date startDate, Date endDate) {
@@ -38,7 +40,10 @@ public class DateUtils {
         Calendar dob = Calendar.getInstance();
         Calendar today = Calendar.getInstance();
 
+        if (year == 0 || year < CONSTANTS.MINYEAR) return "0";
+
         dob.set(year, month, day);
+
 
         int age = today.get(Calendar.YEAR) - dob.get(Calendar.YEAR);
 
