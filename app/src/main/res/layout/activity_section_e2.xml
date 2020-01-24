@@ -207,7 +207,7 @@
                                         android:textColor="@android:color/black"
                                         app:defaultValue="00"
                                         app:maxValue="0"
-                                        app:minValue="1950"
+                                        app:minValue="0"
                                         app:type="range" />
 
                                 </LinearLayout>
@@ -321,61 +321,6 @@
                     android:layout_height="wrap_content"
                     android:orientation="vertical">
 
-                    <!--&lt;!&ndash; e110  Title   &ndash;&gt;
-                    <androidx.cardview.widget.CardView
-                        android:id="@+id/fldGrpCVe110"
-                        style="@style/cardView">
-
-                        <LinearLayout
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:orientation="vertical">
-
-                            <TextView
-                                style="@style/i_textview"
-                                android:text="@string/e110" />
-
-                            <TextView
-                                style="@style/textView3Head"
-                                android:text="@string/e110a" />
-
-                            <EditText
-                                android:id="@+id/e110a"
-                                style="@style/textInput"
-                                android:layout_width="match_parent"
-                                android:layout_height="wrap_content"
-                                android:hint="@string/e110a"
-                                android:inputType="number"
-                                android:textColor="@android:color/black" />
-
-                            <TextView
-                                style="@style/textView3Head"
-                                android:text="@string/e110b" />
-
-                            <EditText
-                                android:id="@+id/e110b"
-                                style="@style/textInput"
-                                android:layout_width="match_parent"
-                                android:layout_height="wrap_content"
-                                android:hint="@string/e110b"
-                                android:inputType="number"
-                                android:textColor="@android:color/black" />
-
-                            <TextView
-                                style="@style/textView3Head"
-                                android:text="@string/e110c" />
-
-                            <EditText
-                                android:id="@+id/e110c"
-                                style="@style/textInput"
-                                android:layout_width="match_parent"
-                                android:layout_height="wrap_content"
-                                android:hint="@string/e110c"
-                                android:inputType="number"
-                                android:textColor="@android:color/black" />
-                        </LinearLayout>
-                    </androidx.cardview.widget.CardView>-->
-
                     <!-- e110  Title   -->
                     <androidx.cardview.widget.CardView
                         android:id="@+id/fldGrpCVe110"
@@ -462,7 +407,7 @@
                                         android:textColor="@android:color/black"
                                         app:defaultValue="00"
                                         app:maxValue="0"
-                                        app:minValue="1950"
+                                        app:minValue="0"
                                         app:type="range" />
 
                                 </LinearLayout>
@@ -656,7 +601,7 @@
                                     android:textColor="@android:color/black"
                                     app:defaultValue="00"
                                     app:maxValue="0"
-                                    app:minValue="1950"
+                                    app:minValue="0"
                                     app:type="range" />
 
                             </LinearLayout>

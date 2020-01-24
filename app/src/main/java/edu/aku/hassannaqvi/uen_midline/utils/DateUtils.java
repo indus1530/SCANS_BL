@@ -40,7 +40,7 @@ public class DateUtils {
         Calendar dob = Calendar.getInstance();
         Calendar today = Calendar.getInstance();
 
-        if (year == 0 || year < CONSTANTS.MAXYEAR) return "0";
+        if (year == 0 || year < CONSTANTS.MINYEAR) return "0";
 
         dob.set(year, month, day);
 

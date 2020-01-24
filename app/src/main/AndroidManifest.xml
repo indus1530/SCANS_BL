@@ -26,7 +26,12 @@
         <activity
             android:name=".ui.sections.SectionE4Activity"
             android:label="@string/teheading"
-            android:screenOrientation="portrait" />
+            android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
 
         <activity
             android:name=".ui.other.LoginActivity"
@@ -148,10 +153,7 @@
             android:name=".ui.other.SplashscreenActivity"
             android:label="@string/tgheading"
             android:screenOrientation="portrait" >
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
+
         </activity>
 
         <activity
