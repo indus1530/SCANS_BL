@@ -124,7 +124,7 @@
 
                     <com.edittextpicker.aliazaz.EditTextPicker
                         android:id="@+id/i202"
-                        style="@style/EditTextAlpha"
+                        style="@style/EditTextNum"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:hint="@string/i202"
@@ -257,7 +257,7 @@
 
                         <com.edittextpicker.aliazaz.EditTextPicker
                             android:id="@+id/i206"
-                            style="@style/EditTextAlpha"
+                            style="@style/EditTextNum"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:hint="@string/i206"
@@ -483,14 +483,15 @@
 
                         <com.edittextpicker.aliazaz.EditTextPicker
                             android:id="@+id/i211"
-                            style="@style/EditTextAlpha"
+                            style="@style/EditTextNum"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:hint="@string/i211"
                             android:inputType="number"
+                            android:maxLength="2"
                             app:mask="##"
-                            app:maxValue="10"
-                            app:minValue="0"
+                            app:maxValue="99"
+                            app:minValue="1"
                             app:type="range" />
                     </LinearLayout>
                 </androidx.cardview.widget.CardView>
@@ -511,14 +512,15 @@
 
                         <com.edittextpicker.aliazaz.EditTextPicker
                             android:id="@+id/i212"
-                            style="@style/EditTextAlpha"
+                            style="@style/EditTextNum"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:hint="@string/i212"
                             android:inputType="number"
+                            android:maxLength="2"
                             app:mask="##"
-                            app:maxValue="10"
-                            app:minValue="0"
+                            app:maxValue="59"
+                            app:minValue="1"
                             app:type="range" />
                     </LinearLayout>
                 </androidx.cardview.widget.CardView>
@@ -655,13 +657,14 @@
 
                         <com.edittextpicker.aliazaz.EditTextPicker
                             android:id="@+id/i216"
-                            style="@style/EditTextAlpha"
+                            style="@style/EditTextNum"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:hint="@string/i216"
                             android:inputType="number"
+                            android:maxLength="2"
                             app:mask="##"
-                            app:maxValue="10"
+                            app:maxValue="30"
                             app:minValue="0"
                             app:type="range" />
                     </LinearLayout>
@@ -878,13 +881,14 @@
 
                         <com.edittextpicker.aliazaz.EditTextPicker
                             android:id="@+id/i221"
-                            style="@style/EditTextAlpha"
+                            style="@style/EditTextNum"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:hint="@string/i221"
                             android:inputType="number"
+                            android:maxLength="4"
                             app:mask="##"
-                            app:maxValue="10"
+                            app:maxValue="9999"
                             app:minValue="0"
                             app:type="range" />
                     </LinearLayout>

@@ -1,5 +1,6 @@
 package edu.aku.hassannaqvi.uen_midline.ui.list_activity
 
+import android.app.Activity
 import android.content.Intent
 import android.os.Bundle
 import android.view.View
@@ -16,6 +17,7 @@ import edu.aku.hassannaqvi.uen_midline.contracts.FamilyMembersContract
 import edu.aku.hassannaqvi.uen_midline.core.MainApp
 import edu.aku.hassannaqvi.uen_midline.core.MainApp.openDialog
 import edu.aku.hassannaqvi.uen_midline.databinding.ActivityFamilyMembersListBinding
+import edu.aku.hassannaqvi.uen_midline.databinding.ItemMemListBinding
 import edu.aku.hassannaqvi.uen_midline.ui.sections.SectionDActivity
 import edu.aku.hassannaqvi.uen_midline.ui.sections.SectionE1Activity
 import edu.aku.hassannaqvi.uen_midline.ui.sections.SectionE3Activity
@@ -30,10 +32,11 @@ import ru.whalemare.sheetmenu.layout.GridLayoutProvider
 class FamilyMembersListActivity : AppCompatActivity() {
 
     //    private lateinit var mainVModel: MainVModel
-    private var serial = 0
+    private var serial = 1
     private var memSelectedCounter = 0
     private lateinit var adapter: ChildListAdapter
     private lateinit var bi: ActivityFamilyMembersListBinding
+    private var viewHolder: ItemMemListBinding? = null
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -75,13 +78,13 @@ class FamilyMembersListActivity : AppCompatActivity() {
                         run {
                             when (item.id) {
                                 0 -> {
-                                    serial++
+//                                    serial++
                                     startActivityForResult(Intent(this, SectionDActivity::class.java).putExtra(SERIAL_EXTRA, serial), CONSTANTS.MEMBER_ITEM)
                                 }
                                 1 -> {
                                     if (memSelectedCounter == 0) return@run
 
-                                    if (memSelectedCounter != serial) return@run
+                                    if (memSelectedCounter != serial - 1) return@run
 
                                     MainApp.pragnantWoman = mainVModel.getAllWomenName()
 
@@ -121,9 +124,7 @@ class FamilyMembersListActivity : AppCompatActivity() {
             MainApp.setItemClick {
 
                 memSelectedCounter++
-
-                holder.parentLayout.isEnabled = false
-                holder.parentLayout.checkIcon.visibility = View.VISIBLE
+                viewHolder = holder
 
                 startActivityForResult(Intent(this, SectionDActivity::class.java)
                         .putExtra(SERIAL_EXTRA, item.serialno.toInt()), CONSTANTS.MEMBER_ITEM)
@@ -134,14 +135,29 @@ class FamilyMembersListActivity : AppCompatActivity() {
 
     }
 
-/*    override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
+    override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
         super.onActivityResult(requestCode, resultCode, data)
 
         if (requestCode == CONSTANTS.MEMBER_ITEM) {
-            if (resultCode == Activity.RESULT_OK)
-                adapter.notifyDataSetChanged()
+            when (resultCode) {
+                Activity.RESULT_OK -> {
+                    data?.let { serial = data.getIntExtra(SERIAL_EXTRA, 0) }
+                    handlingHolder(false)
+                }
+                Activity.RESULT_CANCELED -> {
+                    handlingHolder(true)
+                }
+            }
         }
-    }*/
+    }
+
+    private fun handlingHolder(flag: Boolean) {
+        viewHolder?.let {
+            viewHolder!!.parentLayout.isEnabled = flag
+            viewHolder!!.parentLayout.checkIcon.visibility = if (flag) View.GONE else View.VISIBLE
+            viewHolder = null
+        }
+    }
 
     companion object {
         lateinit var mainVModel: MainVModel

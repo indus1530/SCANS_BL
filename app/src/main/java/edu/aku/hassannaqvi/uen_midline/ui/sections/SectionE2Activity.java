@@ -16,6 +16,7 @@ import com.validatorcrawler.aliazaz.Validator;
 import org.json.JSONException;
 import org.json.JSONObject;
 
+import edu.aku.hassannaqvi.uen_midline.CONSTANTS;
 import edu.aku.hassannaqvi.uen_midline.R;
 import edu.aku.hassannaqvi.uen_midline.core.MainApp;
 import edu.aku.hassannaqvi.uen_midline.databinding.ActivitySectionE2Binding;
@@ -64,6 +65,15 @@ public class SectionE2Activity extends AppCompatActivity {
                 ClearClass.ClearAllFields(bi.mainContainer2, null);
             }
         }));
+
+        bi.e106c.setMaxvalue(CONSTANTS.MAXYEAR);
+        bi.e106c.setMinvalue(CONSTANTS.MINYEAR);
+
+        bi.e110c.setMaxvalue(CONSTANTS.MAXYEAR);
+        bi.e110c.setMinvalue(CONSTANTS.MINYEAR);
+
+        bi.e113y.setMaxvalue(CONSTANTS.MAXYEAR);
+        bi.e113y.setMinvalue(CONSTANTS.MINYEAR);
 
     }
 

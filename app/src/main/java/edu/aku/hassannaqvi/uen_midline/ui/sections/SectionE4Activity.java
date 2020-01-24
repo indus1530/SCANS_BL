@@ -2,6 +2,8 @@ package edu.aku.hassannaqvi.uen_midline.ui.sections;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.text.Editable;
+import android.text.TextWatcher;
 import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
@@ -12,9 +14,11 @@ import com.validatorcrawler.aliazaz.Validator;
 import org.json.JSONException;
 import org.json.JSONObject;
 
+import edu.aku.hassannaqvi.uen_midline.CONSTANTS;
 import edu.aku.hassannaqvi.uen_midline.R;
 import edu.aku.hassannaqvi.uen_midline.core.MainApp;
 import edu.aku.hassannaqvi.uen_midline.databinding.ActivitySectionE4Binding;
+import edu.aku.hassannaqvi.uen_midline.utils.DateUtils;
 
 public class SectionE4Activity extends AppCompatActivity {
 
@@ -23,9 +27,66 @@ public class SectionE4Activity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-
         bi = DataBindingUtil.setContentView(this, R.layout.activity_section_e4);
         bi.setCallback(this);
+
+        setListeners();
+
+
+    }
+
+    private void setListeners() {
+        bi.e119c.addTextChangedListener(new TextWatcher() {
+            @Override
+            public void beforeTextChanged(CharSequence s, int start, int count, int after) {
+
+            }
+
+            @Override
+            public void onTextChanged(CharSequence s, int start, int before, int count) {
+                bi.e120.setEnabled(false);
+                bi.e120.setText(null);
+                if (bi.e119c.getText().toString().isEmpty()) return;
+                if (bi.e119c.getText().toString().equals("00")) {
+                    bi.e120.setEnabled(true);
+                    return;
+                }
+
+                int day = bi.e119a.getText().toString().isEmpty() ? 0 : Integer.valueOf(bi.e119a.getText().toString());
+                int month = bi.e119b.getText().toString().isEmpty() ? 0 : Integer.valueOf(bi.e119b.getText().toString());
+                int year = bi.e119c.getText().toString().isEmpty() ? 0 : Integer.valueOf(bi.e119c.getText().toString());
+
+                bi.e120.setText(DateUtils.ageInYears(day, month, year));
+            }
+
+            @Override
+            public void afterTextChanged(Editable s) {
+
+            }
+        });
+
+        bi.e120.addTextChangedListener(new TextWatcher() {
+            @Override
+            public void beforeTextChanged(CharSequence s, int start, int count, int after) {
+
+            }
+
+            @Override
+            public void onTextChanged(CharSequence s, int start, int before, int count) {
+                if (bi.e120.getText().toString().isEmpty()) return;
+                int calAge = Integer.valueOf(bi.e120.getText().toString());
+                if (Integer.signum(calAge) == -1) return;
+            }
+
+            @Override
+            public void afterTextChanged(Editable s) {
+
+            }
+        });
+
+        bi.e119c.setMaxvalue(CONSTANTS.MAXYEAR);
+        bi.e119c.setMinvalue(CONSTANTS.MINYEAR);
+
     }
 
     public void BtnContinue() {
@@ -60,7 +121,9 @@ public class SectionE4Activity extends AppCompatActivity {
 
         JSONObject f1 = new JSONObject();
         f1.put("e118", bi.e118.getText().toString());
-        f1.put("e119", bi.e119.getText().toString());
+        f1.put("e119a", bi.e119a.getText().toString());
+        f1.put("e119b", bi.e119b.getText().toString());
+        f1.put("e119c", bi.e119c.getText().toString());
         f1.put("e120", bi.e120.getText().toString());
         f1.put("e121",
                 bi.e121a.isChecked() ? "1" :

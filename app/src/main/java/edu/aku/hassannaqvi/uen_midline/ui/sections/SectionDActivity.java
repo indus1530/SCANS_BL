@@ -1,5 +1,6 @@
 package edu.aku.hassannaqvi.uen_midline.ui.sections;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.text.Editable;
 import android.text.TextWatcher;
@@ -63,7 +64,7 @@ public class SectionDActivity extends AppCompatActivity {
             bi.fldGrpSectionD02.setVisibility(View.GONE);
             fmc = new FamilyMembersContract();
         } else {
-            bi.d102Name.setText(fmc.getName().toUpperCase());
+            bi.d102Name.setText(fmc.getName().toUpperCase() + "\n" + getResources().getString(R.string.d101) + ":" + fmc.getSerialno());
             bi.fldGrpSectionD01.setVisibility(View.GONE);
             bi.fldGrpSectionD02.setVisibility(View.VISIBLE);
 
@@ -108,7 +109,8 @@ public class SectionDActivity extends AppCompatActivity {
             e.printStackTrace();
         }
         if (UpdateDB()) {
-            setResult(RESULT_OK);
+            if (fmcFLAG) setResult(RESULT_OK, new Intent().putExtra(SERIAL_EXTRA, serial));
+            else setResult(RESULT_OK);
             finish();
         } else {
             Toast.makeText(this, "Failed to Update Database!", Toast.LENGTH_SHORT).show();
@@ -149,6 +151,7 @@ public class SectionDActivity extends AppCompatActivity {
 
             // Update in ViewModel
             mainVModel.setFamilyMembers(fmc);
+            serial++;
             return;
         }
 
@@ -352,14 +355,21 @@ public class SectionDActivity extends AppCompatActivity {
 
     @Override
     public boolean onSupportNavigateUp() {
-        if (fmcFLAG) {
+        /*if (fmcFLAG) {
             serial--;
-            super.onBackPressed();
+            setResult(RESULT_CANCELED, new Intent().putExtra(SERIAL_EXTRA, serial));
+            finish();
             return true;
         } else {
             Toast.makeText(this, "You can't go back!!", Toast.LENGTH_SHORT).show();
             return false;
-        }
+        }*/
+
+        setResult(RESULT_CANCELED);
+        finish();
+
+        return true;
+
     }
 
     @Override
