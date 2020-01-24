@@ -35,7 +35,7 @@
 
         <activity
             android:name=".ui.sections.SectionH2Activity"
-            android:label="@string/thheading"
+            android:label="@string/th2heading"
             android:screenOrientation="portrait" />
 
         <activity
@@ -45,7 +45,7 @@
 
         <activity
             android:name=".ui.sections.SectionH1Activity"
-            android:label="@string/thheading"
+            android:label="@string/th1heading"
             android:screenOrientation="portrait" />
 
         <activity
@@ -109,7 +109,8 @@
             android:screenOrientation="portrait" />
 
         <activity
-            android:name=".ui.sections.SectionGActivity"
+            android:name=".ui.other.SplashscreenActivity"
+            android:label="@string/tgheading"
             android:screenOrientation="portrait">
 
 
@@ -145,7 +146,7 @@
             android:screenOrientation="portrait" />
 
         <activity
-            android:name=".ui.other.SplashscreenActivity"
+            android:name=".ui.sections.SectionGActivity"
             android:label="@string/tgheading"
             android:screenOrientation="portrait" >
             <intent-filter>
