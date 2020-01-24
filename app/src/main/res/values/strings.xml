@@ -675,7 +675,7 @@
     <string name="h114d"> Colostrum is harmful for newborn </string>
     <string name="h114e"> It is dirty </string>
     <string name="h114f"> It causes diarrhea </string>
-    <string name="h114g"> It causes diarrhea </string>
+    <string name="h114g"> It is heavy </string>
     <string name="h114h"> Cultural/Religious reason </string>
 
     <string name="h115"> H115:\t In the last 24 hours what was given to {NAME} to eat or drink ? </string>
@@ -730,7 +730,8 @@
     <string name="h124e"> Very small </string>
     <string name="h124f"> Don’t Know </string>
 
-    <string name="h125"> H125:\t Now I would like to ask few questions on (name)’s health check-ups after birth.   After {NAME} was born, did anyone check on {NAME}’s health ? </string>
+    <string name="h125"> H125:\t Now I would like to ask few questions on (name)’s health check-ups after birth. </string>
+    <string name="h125hint"> After {NAME} was born, did anyone check on {NAME}’s health ? </string>
     <string name="h125a"> Yes </string>
     <string name="h125b"> No </string>
 
