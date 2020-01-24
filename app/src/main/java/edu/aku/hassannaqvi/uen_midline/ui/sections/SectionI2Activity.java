@@ -10,6 +10,8 @@ import android.widget.Toast;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.databinding.DataBindingUtil;
 
+import com.validatorcrawler.aliazaz.Validator;
+
 import org.json.JSONException;
 import org.json.JSONObject;
 
@@ -18,11 +20,9 @@ import java.util.List;
 
 import edu.aku.hassannaqvi.uen_midline.R;
 import edu.aku.hassannaqvi.uen_midline.contracts.FamilyMembersContract;
-import edu.aku.hassannaqvi.uen_midline.core.MainApp;
 import edu.aku.hassannaqvi.uen_midline.databinding.ActivitySectionI2Binding;
 import edu.aku.hassannaqvi.uen_midline.utils.Util;
 import edu.aku.hassannaqvi.uen_midline.validator.ClearClass;
-import edu.aku.hassannaqvi.uen_midline.validator.ValidatorClass;
 import kotlin.Pair;
 
 import static edu.aku.hassannaqvi.uen_midline.ui.list_activity.FamilyMembersListActivity.mainVModel;
@@ -319,7 +319,7 @@ public class SectionI2Activity extends AppCompatActivity {
 
 
     private boolean formValidation() {
-        return ValidatorClass.EmptyCheckingContainer(this, bi.fldGrpSectioni02);
+        return Validator.emptyCheckingContainer(this, bi.fldGrpSectioni02);
 
     }
 
