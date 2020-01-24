@@ -14,6 +14,7 @@ import org.json.JSONObject;
 import edu.aku.hassannaqvi.uen_midline.R;
 import edu.aku.hassannaqvi.uen_midline.core.MainApp;
 import edu.aku.hassannaqvi.uen_midline.databinding.ActivitySectionH1Binding;
+import edu.aku.hassannaqvi.uen_midline.utils.Util;
 import edu.aku.hassannaqvi.uen_midline.validator.ClearClass;
 import edu.aku.hassannaqvi.uen_midline.validator.ValidatorClass;
 
@@ -151,7 +152,8 @@ public class SectionH1Activity extends AppCompatActivity {
         //h12298
         bi.h12298.setOnCheckedChangeListener((compoundButton, b) -> {
             if (b) {
-                ClearClass.ClearAllFields(bi.h122, null);
+                //ClearClass.ClearAllFields(bi.h122, null);
+                bi.h122.setText("");
                 ClearClass.ClearAllFields(bi.fldGrpCVh123, null);
                 bi.h122.setVisibility(View.GONE);
                 bi.fldGrpCVh123.setVisibility(View.GONE);
@@ -282,9 +284,9 @@ public class SectionH1Activity extends AppCompatActivity {
 
 
     public void BtnEnd() {
-        MainApp.endActivity(this, this);
-    }
 
+        Util.openEndActivity(this);
+    }
 
     private boolean UpdateDB() {
 
@@ -469,7 +471,9 @@ public class SectionH1Activity extends AppCompatActivity {
                         bi.h128b.isChecked() ? "2" :
                                 bi.h128c.isChecked() ? "3" :
                                         bi.h128d.isChecked() ? "4" :
-                                                "0");
+                                                bi.h128e.isChecked() ? "5" :
+                                                        bi.h128f.isChecked() ? "6" :
+                                                                "0");
 
         json.put("h129a",
                 bi.h129aa.isChecked() ? "1" :

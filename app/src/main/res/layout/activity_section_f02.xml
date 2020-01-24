@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 
-<layout>
+<layout xmlns:app="http://schemas.android.com/apk/res-auto">
 
     <data>
 
@@ -80,12 +80,16 @@
 
                         <com.edittextpicker.aliazaz.EditTextPicker
                             android:id="@+id/f122"
-                            style="@style/EditTextAlpha"
+                            style="@style/EditTextNum"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:hint="@string/f122"
                             android:inputType="number"
-                            android:maxLength="2" />
+                            android:maxLength="2"
+                            app:defaultValue="00"
+                            app:maxValue="24"
+                            app:minValue="1"
+                            app:type="range" />
                     </LinearLayout>
                 </androidx.cardview.widget.CardView>
 

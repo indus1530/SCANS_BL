@@ -15,6 +15,7 @@ import org.json.JSONObject;
 import edu.aku.hassannaqvi.uen_midline.R;
 import edu.aku.hassannaqvi.uen_midline.core.MainApp;
 import edu.aku.hassannaqvi.uen_midline.databinding.ActivitySectionJ02Binding;
+import edu.aku.hassannaqvi.uen_midline.utils.Util;
 
 public class SectionJ02Activity extends AppCompatActivity {
 
@@ -241,6 +242,6 @@ public class SectionJ02Activity extends AppCompatActivity {
     }
 
     public void BtnEnd() {
-        MainApp.endActivity(this, this);
-    }
-}
+
+        Util.openEndActivity(this);
+    }}

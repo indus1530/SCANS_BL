@@ -24,10 +24,12 @@
         android:theme="@style/AppTheme1">
 
         <activity
-            android:name=".ui.sections.SectionE4Activity"
-            android:label="@string/teheading"
+            android:name=".ui.other.SplashscreenActivity"
             android:screenOrientation="portrait">
-
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
         </activity>
 
         <activity
@@ -36,105 +38,9 @@
             android:theme="@style/AppTheme" />
 
         <activity
-            android:name=".ui.sections.SectionH2Activity"
-            android:label="@string/thheading"
-            android:screenOrientation="portrait" />
-
-        <activity
-            android:name=".ui.sections.SectionE3Activity"
-            android:label="@string/teheading"
-            android:screenOrientation="portrait" />
-
-        <activity
-            android:name=".ui.sections.SectionH1Activity"
-            android:label="@string/thheading"
-            android:screenOrientation="portrait" />
-
-        <activity
             android:name=".ui.sections.SectionAActivity"
             android:label="@string/taheading"
             android:screenOrientation="portrait" />
-
-        <activity
-            android:name=".ui.sections.SectionF02Activity"
-            android:label="@string/tfheading"
-            android:screenOrientation="portrait" />
-
-        <activity
-            android:name=".ui.sections.SectionE2Activity"
-            android:label="@string/teheading"
-            android:screenOrientation="portrait" />
-
-        <activity
-            android:name=".ui.sections.SectionOActivity"
-            android:label="@string/toheading"
-            android:screenOrientation="portrait" />
-
-        <activity
-            android:name=".ui.sections.SectionNActivity"
-            android:label="@string/tnheading"
-            android:screenOrientation="portrait" />
-
-        <activity
-            android:name=".ui.sections.SectionMActivity"
-            android:label="@string/tmheading"
-            android:screenOrientation="portrait" />
-
-        <activity
-            android:name=".ui.sections.SectionLActivity"
-            android:label="@string/tlheading"
-            android:screenOrientation="portrait" />
-
-        <activity
-            android:name=".ui.sections.SectionKActivity"
-            android:label="@string/tkheading"
-            android:screenOrientation="portrait" />
-
-        <activity
-            android:name=".ui.sections.SectionJActivity"
-            android:label="@string/tjheading"
-            android:screenOrientation="portrait" />
-
-        <activity
-            android:name=".ui.sections.SectionJ03Activity"
-            android:label="@string/tjheading"
-            android:screenOrientation="portrait" />
-
-        <activity
-            android:name=".ui.sections.SectionI2Activity"
-            android:label="@string/tiheading"
-            android:screenOrientation="portrait" />
-
-        <activity
-            android:name=".ui.sections.SectionI1Activity"
-            android:label="@string/tiheading"
-            android:screenOrientation="portrait" />
-
-        <activity
-            android:name=".ui.sections.SectionGActivity"
-            android:label="@string/tgheading"
-            android:screenOrientation="portrait">
-
-
-        </activity>
-
-        <activity
-            android:name=".ui.sections.SectionFActivity"
-            android:label="@string/tfheading"
-            android:screenOrientation="portrait">
-        </activity>
-
-        <activity
-            android:name=".ui.sections.SectionE1Activity"
-            android:label="@string/teheading"
-            android:screenOrientation="portrait" />
-
-        <activity
-            android:name=".ui.list_activity.FamilyMembersListActivity"
-            android:screenOrientation="portrait"
-            android:theme="@style/AppTheme">
-
-        </activity>
 
         <activity
             android:name=".ui.sections.SectionDActivity"
@@ -147,17 +53,108 @@
         </activity>
 
         <activity
-            android:name=".ui.other.EndingActivity"
+            android:name=".ui.sections.SectionE1Activity"
+            android:label="@string/teheading"
             android:screenOrientation="portrait" />
 
         <activity
-            android:name=".ui.other.SplashscreenActivity"
-            android:screenOrientation="portrait" >
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
-        </activity>
+            android:name=".ui.sections.SectionE2Activity"
+            android:label="@string/teheading"
+            android:screenOrientation="portrait" />
+
+        <activity
+            android:name=".ui.sections.SectionE3Activity"
+            android:label="@string/teheading"
+            android:screenOrientation="portrait" />
+
+        <activity
+            android:name=".ui.sections.SectionE4Activity"
+            android:label="@string/teheading"
+            android:screenOrientation="portrait" />
+
+        <activity
+            android:name=".ui.sections.SectionFActivity"
+            android:label="@string/tfheading"
+            android:screenOrientation="portrait" />
+
+        <activity
+            android:name=".ui.sections.SectionF02Activity"
+            android:label="@string/tfheading"
+            android:screenOrientation="portrait" />
+
+        <activity
+            android:name=".ui.sections.SectionGActivity"
+            android:label="@string/tgheading"
+            android:screenOrientation="portrait" />
+
+        <activity
+            android:name=".ui.sections.SectionH1Activity"
+            android:label="@string/th1heading"
+            android:screenOrientation="portrait" />
+
+        <activity
+            android:name=".ui.sections.SectionH2Activity"
+            android:label="@string/th2heading"
+            android:screenOrientation="portrait" />
+
+        <activity
+            android:name=".ui.sections.SectionI1Activity"
+            android:label="@string/tiheading"
+            android:screenOrientation="portrait" />
+
+        <activity
+            android:name=".ui.sections.SectionI2Activity"
+            android:label="@string/tiheading"
+            android:screenOrientation="portrait" />
+
+        <activity
+            android:name=".ui.sections.SectionJActivity"
+            android:label="@string/tjheading"
+            android:screenOrientation="portrait" />
+
+        <activity
+            android:name=".ui.sections.SectionJ02Activity"
+            android:label="@string/tjheading"
+            android:screenOrientation="portrait" />
+
+        <activity
+            android:name=".ui.sections.SectionJ03Activity"
+            android:label="@string/tjheading"
+            android:screenOrientation="portrait" />
+
+        <activity
+            android:name=".ui.sections.SectionKActivity"
+            android:label="@string/tkheading"
+            android:screenOrientation="portrait" />
+
+        <activity
+            android:name=".ui.sections.SectionLActivity"
+            android:label="@string/tlheading"
+            android:screenOrientation="portrait" />
+
+        <activity
+            android:name=".ui.sections.SectionMActivity"
+            android:label="@string/tmheading"
+            android:screenOrientation="portrait" />
+
+        <activity
+            android:name=".ui.sections.SectionNActivity"
+            android:label="@string/tnheading"
+            android:screenOrientation="portrait" />
+
+        <activity
+            android:name=".ui.sections.SectionOActivity"
+            android:label="@string/toheading"
+            android:screenOrientation="portrait" />
+
+        <activity
+            android:name=".ui.list_activity.FamilyMembersListActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme" />
+
+        <activity
+            android:name=".ui.other.EndingActivity"
+            android:screenOrientation="portrait" />
 
         <activity
             android:name=".ui.other.MainActivity"

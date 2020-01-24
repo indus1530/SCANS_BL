@@ -22,6 +22,7 @@ import edu.aku.hassannaqvi.uen_midline.R;
 import edu.aku.hassannaqvi.uen_midline.contracts.FamilyMembersContract;
 import edu.aku.hassannaqvi.uen_midline.core.MainApp;
 import edu.aku.hassannaqvi.uen_midline.databinding.ActivitySectionJBinding;
+import edu.aku.hassannaqvi.uen_midline.utils.Util;
 import edu.aku.hassannaqvi.uen_midline.validator.ClearClass;
 import kotlin.Pair;
 
@@ -348,6 +349,6 @@ public class SectionJActivity extends AppCompatActivity {
     }
 
     public void BtnEnd() {
-        MainApp.endActivity(this, this);
-    }
-}
+
+        Util.openEndActivity(this);
+    }}

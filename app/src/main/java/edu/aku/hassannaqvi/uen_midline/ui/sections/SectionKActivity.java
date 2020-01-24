@@ -13,6 +13,7 @@ import org.json.JSONObject;
 import edu.aku.hassannaqvi.uen_midline.R;
 import edu.aku.hassannaqvi.uen_midline.core.MainApp;
 import edu.aku.hassannaqvi.uen_midline.databinding.ActivitySectionKBinding;
+import edu.aku.hassannaqvi.uen_midline.utils.Util;
 import edu.aku.hassannaqvi.uen_midline.validator.ClearClass;
 import edu.aku.hassannaqvi.uen_midline.validator.ValidatorClass;
 
@@ -68,9 +69,9 @@ public class SectionKActivity extends AppCompatActivity {
 
 
     public void BtnEnd() {
-        MainApp.endActivity(this, this);
-    }
 
+        Util.openEndActivity(this);
+    }
 
     private boolean UpdateDB() {
 

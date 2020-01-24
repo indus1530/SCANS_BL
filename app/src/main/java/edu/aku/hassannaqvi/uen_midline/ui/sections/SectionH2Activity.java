@@ -14,6 +14,7 @@ import org.json.JSONObject;
 import edu.aku.hassannaqvi.uen_midline.R;
 import edu.aku.hassannaqvi.uen_midline.core.MainApp;
 import edu.aku.hassannaqvi.uen_midline.databinding.ActivitySectionH2Binding;
+import edu.aku.hassannaqvi.uen_midline.utils.Util;
 import edu.aku.hassannaqvi.uen_midline.validator.ClearClass;
 import edu.aku.hassannaqvi.uen_midline.validator.ValidatorClass;
 
@@ -143,9 +144,9 @@ public class SectionH2Activity extends AppCompatActivity {
 
 
     public void BtnEnd() {
-        MainApp.endActivity(this, this);
-    }
 
+        Util.openEndActivity(this);
+    }
 
     private boolean UpdateDB() {
 
