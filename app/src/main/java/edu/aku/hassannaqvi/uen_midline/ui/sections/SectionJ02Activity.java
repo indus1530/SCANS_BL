@@ -12,6 +12,7 @@ import com.validatorcrawler.aliazaz.Validator;
 import org.json.JSONException;
 import org.json.JSONObject;
 
+import edu.aku.hassannaqvi.uen_midline.CONSTANTS;
 import edu.aku.hassannaqvi.uen_midline.R;
 import edu.aku.hassannaqvi.uen_midline.databinding.ActivitySectionJ02Binding;
 import edu.aku.hassannaqvi.uen_midline.utils.Util;
@@ -26,6 +27,36 @@ public class SectionJ02Activity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         bi = DataBindingUtil.setContentView(this, R.layout.activity_section_j02);
         bi.setCallback(this);
+
+        setUIComponent();
+
+    }
+
+    private void setUIComponent() {
+
+        bi.j10409y.setMaxvalue(CONSTANTS.MAXYEAR);
+        bi.j10409y.setMinvalue(CONSTANTS.MINYEAR_IM);
+
+        bi.j10410y.setMaxvalue(CONSTANTS.MAXYEAR);
+        bi.j10410y.setMinvalue(CONSTANTS.MINYEAR_IM);
+
+        bi.j10411y.setMaxvalue(CONSTANTS.MAXYEAR);
+        bi.j10411y.setMinvalue(CONSTANTS.MINYEAR_IM);
+
+        bi.j10412y.setMaxvalue(CONSTANTS.MAXYEAR);
+        bi.j10412y.setMinvalue(CONSTANTS.MINYEAR_IM);
+
+        bi.j10413y.setMaxvalue(CONSTANTS.MAXYEAR);
+        bi.j10413y.setMinvalue(CONSTANTS.MINYEAR_IM);
+
+        bi.j10414y.setMaxvalue(CONSTANTS.MAXYEAR);
+        bi.j10414y.setMinvalue(CONSTANTS.MINYEAR_IM);
+
+        bi.j10415y.setMaxvalue(CONSTANTS.MAXYEAR);
+        bi.j10415y.setMinvalue(CONSTANTS.MINYEAR_IM);
+
+        bi.j10416y.setMaxvalue(CONSTANTS.MAXYEAR);
+        bi.j10416y.setMinvalue(CONSTANTS.MINYEAR_IM);
 
     }
 
@@ -53,7 +84,9 @@ public class SectionJ02Activity extends AppCompatActivity {
 
         JSONObject j2 = new JSONObject();
 
-        j2.put("j10409", bi.j10409.getText().toString());
+        j2.put("j10409d", bi.j10409d.getText().toString());
+        j2.put("j10409m", bi.j10409m.getText().toString());
+        j2.put("j10409y", bi.j10409y.getText().toString());
         j2.put("j10409a",
                 bi.j10409aa.isChecked() ? "1" :
                         bi.j10409ab.isChecked() ? "2" :
@@ -74,7 +107,9 @@ public class SectionJ02Activity extends AppCompatActivity {
                                                                                 "0");
         j2.put("j10409b96x", bi.j10409b96x.getText().toString());
 
-        j2.put("j10410", bi.j10410.getText().toString());
+        j2.put("j10410d", bi.j10410d.getText().toString());
+        j2.put("j10410m", bi.j10410m.getText().toString());
+        j2.put("j10410y", bi.j10410y.getText().toString());
 
         j2.put("j10410a",
                 bi.j10410aa.isChecked() ? "1" :
@@ -96,7 +131,9 @@ public class SectionJ02Activity extends AppCompatActivity {
                                                                                 "0");
         j2.put("j10410b96x", bi.j10410b96x.getText().toString());
 
-        j2.put("j10411", bi.j10411.getText().toString());
+        j2.put("j10411d", bi.j10411d.getText().toString());
+        j2.put("j10411m", bi.j10411m.getText().toString());
+        j2.put("j10411y", bi.j10411y.getText().toString());
 
         j2.put("j10411a",
                 bi.j10411aa.isChecked() ? "1" :
@@ -118,7 +155,10 @@ public class SectionJ02Activity extends AppCompatActivity {
                                                                                 "0");
         j2.put("j10411b96x", bi.j10411b96x.getText().toString());
 
-        j2.put("j10412", bi.j10412.getText().toString());
+        j2.put("j10412d", bi.j10412d.getText().toString());
+        j2.put("j10412m", bi.j10412m.getText().toString());
+        j2.put("j10412y", bi.j10412y.getText().toString());
+
         j2.put("j10412a",
                 bi.j10412aa.isChecked() ? "1" :
                         bi.j10412ab.isChecked() ? "2" :
@@ -139,7 +179,9 @@ public class SectionJ02Activity extends AppCompatActivity {
                                                                                 "0");
         j2.put("j10412b96x", bi.j10412b96x.getText().toString());
 
-        j2.put("j10413", bi.j10413.getText().toString());
+        j2.put("j10413d", bi.j10413d.getText().toString());
+        j2.put("j10413m", bi.j10413m.getText().toString());
+        j2.put("j10413y", bi.j10413y.getText().toString());
 
         j2.put("j10413a",
                 bi.j10413aa.isChecked() ? "1" :
@@ -161,7 +203,9 @@ public class SectionJ02Activity extends AppCompatActivity {
                                                                                 "0");
         j2.put("j10413b96x", bi.j10413b96x.getText().toString());
 
-        j2.put("j10414", bi.j10414.getText().toString());
+        j2.put("j10414d", bi.j10414d.getText().toString());
+        j2.put("j10414m", bi.j10414m.getText().toString());
+        j2.put("j10414y", bi.j10414y.getText().toString());
 
         j2.put("j10414a",
                 bi.j10414aa.isChecked() ? "1" :
@@ -183,7 +227,9 @@ public class SectionJ02Activity extends AppCompatActivity {
                                                                                 "0");
         j2.put("j10414b96x", bi.j10414b96x.getText().toString());
 
-        j2.put("j10415", bi.j10415.getText().toString());
+        j2.put("j10415d", bi.j10415d.getText().toString());
+        j2.put("j10415m", bi.j10415m.getText().toString());
+        j2.put("j10415y", bi.j10415y.getText().toString());
 
         j2.put("j10415a",
                 bi.j10415aa.isChecked() ? "1" :
@@ -205,7 +251,9 @@ public class SectionJ02Activity extends AppCompatActivity {
                                                                                 "0");
         j2.put("j10415b96x", bi.j10415b96x.getText().toString());
 
-        j2.put("j10416", bi.j10416.getText().toString());
+        j2.put("j10416d", bi.j10416d.getText().toString());
+        j2.put("j10416m", bi.j10416m.getText().toString());
+        j2.put("j10416y", bi.j10416y.getText().toString());
 
         j2.put("j10416a",
                 bi.j10416aa.isChecked() ? "1" :
