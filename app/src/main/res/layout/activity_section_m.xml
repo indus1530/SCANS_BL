@@ -463,8 +463,8 @@
                         android:hint="@string/m106"
                         android:inputType="number"
                         android:maxLength="2"
-                        app:maxvalue="20"
-                        app:minvalue="1"
+                        app:maxValue="20"
+                        app:minValue="1"
                         app:type="range" />
                 </LinearLayout>
             </androidx.cardview.widget.CardView>
@@ -863,8 +863,8 @@
                             android:hint="@string/m110a"
                             android:inputType="number"
                             android:maxLength="3"
-                            app:maxvalue="100"
-                            app:minvalue="1"
+                            app:maxValue="100"
+                            app:minValue="1"
                             app:type="range"
                             android:text='@{m110a.checked? m110at.getText().toString() : ""}'
                             android:visibility='@{m110a.checked? View.VISIBLE : View.GONE}' />
@@ -883,8 +883,8 @@
                             android:hint="@string/m110b"
                             android:inputType="number"
                             android:maxLength="3"
-                            app:maxvalue="100"
-                            app:minvalue="1"
+                            app:maxValue="100"
+                            app:minValue="1"
                             app:type="range"
                             android:text='@{m110b.checked? m110bt.getText().toString() : ""}'
                             android:visibility='@{m110b.checked? View.VISIBLE : View.GONE}' />
