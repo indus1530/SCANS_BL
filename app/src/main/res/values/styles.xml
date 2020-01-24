@@ -74,7 +74,9 @@
     </style>
 
     <style name="EditTextAlphaNmeric" parent="@style/textInput">
-        <item name="android:digits">abcdefghijklmnopqrstuvwxyz ABCDEFGHIJKLMNOPQRSTUVWXYZ 0123456789</item>
+        <item name="android:digits">abcdefghijklmnopqrstuvwxyz ABCDEFGHIJKLMNOPQRSTUVWXYZ
+            0123456789
+        </item>
     </style>
 
     <style name="EditTextNum" parent="@style/textInput">
@@ -273,19 +275,17 @@
         <item name="android:background">@color/colorPrimaryDark</item>
     </style>
 
-    <style name="checkbox" parent="android:Widget.Material.Light.CompoundButton.CheckBox">
+    <style name="checkbox">
         <item name="android:layout_width">match_parent</item>
         <item name="android:layout_height">wrap_content</item>
-        <!--        <item name="android:button">@null</item>-->
-        <item name="android:textSize">20sp</item>
-        <item name="android:typeface">serif</item>
-        <item name="android:foreground">?android:attr/selectableItemBackground</item>
-        <item name="android:background">@color/white</item>
-
-        <item name="android:drawablePadding">12dp</item>
+        <item name="android:textSize">24sp</item>
+        <!--        <item name="android:typeface">serif</item>-->
+        <!--        <item name="android:clickable">true</item>-->
+        <item name="android:layout_marginBottom">1dp</item>
+        <!--        <item name="android:foreground">?android:attr/selectableItemBackground</item>-->
         <item name="android:padding">10dp</item>
-
-
+        <item name="android:background">@color/white</item>
+        <!--        <item name="android:elevation">1dp</item>-->
     </style>
 
     <!-- <style name="CustomShowcaseTheme" parent="ShowcaseView.Light">
