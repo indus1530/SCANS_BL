@@ -593,6 +593,7 @@
                         android:layout_height="wrap_content"
                         android:hint="@string/a110"
                         android:textColor="@android:color/black" />
+
                 </LinearLayout>
             </androidx.cardview.widget.CardView>
 
@@ -617,6 +618,7 @@
                         android:layout_height="wrap_content"
                         android:hint="@string/a111"
                         android:textColor="@android:color/black" />
+
                 </LinearLayout>
             </androidx.cardview.widget.CardView>
 
@@ -643,6 +645,7 @@
                     android:background="@android:color/holo_green_light"
                     android:onClick="@{() -> callback.BtnContinue()}"
                     android:text="@string/nextSection" />
+
             </LinearLayout>
 
         </LinearLayout>
