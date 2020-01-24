@@ -75,6 +75,7 @@
                             android:layout_height="wrap_content"
                             android:hint="@string/d102"
                             android:textColor="@android:color/black" />
+
                     </LinearLayout>
                 </androidx.cardview.widget.CardView>
 
@@ -283,7 +284,6 @@
                 </androidx.cardview.widget.CardView>
 
                 <!-- d108  Title   -->
-
                 <androidx.cardview.widget.CardView style="@style/cardView">
 
                     <LinearLayout
