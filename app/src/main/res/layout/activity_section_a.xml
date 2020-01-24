@@ -107,9 +107,9 @@
                         android:layout_marginTop="16dp"
                         android:layout_marginBottom="4dp"
                         android:layout_weight="2"
-                        android:padding="15dp"
                         android:background="@color/colorPrimary"
                         android:gravity="center_horizontal|center_vertical"
+                        android:padding="15dp"
                         android:text="@string/a104"
                         android:textAppearance="?android:attr/textAppearanceLarge"
                         android:textColor="@android:color/white" />
@@ -122,9 +122,9 @@
                         android:layout_marginTop="13dp"
                         android:layout_marginBottom="4dp"
                         android:layout_weight="3"
-                        android:padding="15dp"
                         android:background="@color/pink_100"
                         android:gravity="center_horizontal|center_vertical"
+                        android:padding="15dp"
                         android:text="Balochistan"
                         android:textColor="@color/colorPrimaryDark"
                         android:textSize="16sp" />
@@ -136,9 +136,9 @@
                         android:layout_marginTop="16dp"
                         android:layout_marginBottom="8dp"
                         android:layout_weight="2"
-                        android:padding="15dp"
                         android:background="@color/colorPrimary"
                         android:gravity="center_horizontal|center_vertical"
+                        android:padding="15dp"
                         android:text="@string/a105"
                         android:textAppearance="?android:attr/textAppearanceLarge"
                         android:textColor="@android:color/white" />
@@ -151,9 +151,9 @@
                         android:layout_marginTop="13dp"
                         android:layout_marginBottom="4dp"
                         android:layout_weight="3"
-                        android:padding="15dp"
                         android:background="@color/pink_100"
                         android:gravity="center_horizontal|center_vertical"
+                        android:padding="15dp"
                         android:text="Jafferabad"
                         android:textColor="@color/colorPrimaryDark"
                         android:textSize="16sp" />
@@ -179,9 +179,9 @@
                         android:layout_marginTop="16dp"
                         android:layout_marginBottom="8dp"
                         android:layout_weight="2"
-                        android:padding="15dp"
                         android:background="@color/colorPrimary"
                         android:gravity="center_horizontal|center_vertical"
+                        android:padding="15dp"
                         android:text="@string/a106"
                         android:textAppearance="?android:attr/textAppearanceLarge"
                         android:textColor="@android:color/white" />
@@ -194,9 +194,9 @@
                         android:layout_marginTop="16dp"
                         android:layout_marginBottom="4dp"
                         android:layout_weight="3"
-                        android:padding="15dp"
                         android:background="@color/pink_100"
                         android:gravity="center_horizontal|center_vertical"
+                        android:padding="15dp"
                         android:text="Test"
                         android:textColor="@color/colorPrimaryDark"
                         android:textSize="16sp" />
@@ -208,9 +208,9 @@
                         android:layout_marginTop="16dp"
                         android:layout_marginBottom="8dp"
                         android:layout_weight="2"
-                        android:padding="15dp"
                         android:background="@color/colorPrimary"
                         android:gravity="center_horizontal|center_vertical"
+                        android:padding="15dp"
                         android:text="@string/a107"
                         android:textAppearance="?android:attr/textAppearanceLarge"
                         android:textColor="@android:color/white" />
@@ -223,9 +223,9 @@
                         android:layout_marginTop="13dp"
                         android:layout_marginBottom="8dp"
                         android:layout_weight="3"
-                        android:padding="15dp"
                         android:background="@color/pink_100"
                         android:gravity="center_horizontal|center_vertical"
+                        android:padding="15dp"
                         android:text="Test"
                         android:textColor="@color/colorPrimaryDark"
                         android:textSize="16sp" />
@@ -588,7 +588,7 @@
 
                     <EditText
                         android:id="@+id/a110"
-                        style="@style/textInputName"
+                        style="@style/EditTextAlphaNmeric"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:hint="@string/a110"
@@ -612,7 +612,7 @@
 
                     <EditText
                         android:id="@+id/a111"
-                        style="@style/textInputName"
+                        style="@style/EditTextAlphaNmeric"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:hint="@string/a111"
