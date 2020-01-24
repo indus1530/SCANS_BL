@@ -16,6 +16,7 @@ import org.json.JSONObject;
 import edu.aku.hassannaqvi.uen_midline.R;
 import edu.aku.hassannaqvi.uen_midline.core.MainApp;
 import edu.aku.hassannaqvi.uen_midline.databinding.ActivitySectionGBinding;
+import edu.aku.hassannaqvi.uen_midline.utils.Util;
 import edu.aku.hassannaqvi.uen_midline.validator.ClearClass;
 
 public class SectionGActivity extends AppCompatActivity {
@@ -181,9 +182,9 @@ public class SectionGActivity extends AppCompatActivity {
 
 
     public void BtnEnd() {
-        MainApp.endActivity(this, this);
-    }
 
+        Util.openEndActivity(this);
+    }
 
     private boolean UpdateDB() {
 
@@ -404,6 +405,7 @@ public class SectionGActivity extends AppCompatActivity {
         return Validator.emptyCheckingContainer(this, bi.GrpName);
 
     }
+
 
 
     @Override
