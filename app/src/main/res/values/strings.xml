@@ -2090,8 +2090,20 @@
     <string name="nextSection"> Next </string>
 
     <string name="istatus">Interview Results</string>
-    <string name="istatusa">Complete</string>
-    <string name="istatusb">Incomplete</string>
+    <string name="istatusa"> مکمل </string>
+    <string name="istatusb"> گھر پر موجود نہیں </string>
+    <string name="istatusc"> انکار </string>
+    <string name="istatusd"> جزوی مکمل </string>
+    <string name="istatuse"> جواب دینے سے قاصر </string>
+    <string name="istatusf"> گھر نہیں ملا </string>
+    <string name="istatusg"> عمر کی وجہ سے نااہل </string>
+    <string name="istatusha"> مکمل </string>
+    <string name="istatushb"> گھرانے کا کوئی فرد یا باصلاحیت جواب دہندہ گھر پر موجود نہیں تھا </string>
+    <string name="istatushc"> گھرانہ کے تمام افراد لمبے عرصے کے لئیے گھر سے غیر حاضر تھے </string>
+    <string name="istatushd"> انکار کردیا </string>
+    <string name="istatushe"> خالی گھر/گھر کا پتہ نہ تھا </string>
+    <string name="istatushf"> گھر نہیں ملا </string>
+    <string name="istatushg"> جزوی مکمل </string>
     <string name="dialog_text">Please add Info for second child.</string>
     <string name="countNo">No</string>
     <string name="countYes">Yes</string>
