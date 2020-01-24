@@ -52,7 +52,7 @@ public class ChildListAdapter extends RecyclerView.Adapter<ChildListAdapter.View
         holder.bi.dob.setText("Age: " + mList.get(i).getAge() + " Year(s)");
         holder.bi.index.setText(String.format("%02d", Integer.valueOf(mList.get(i).getSerialno())));
         String gender = mList.get(i).getGender();
-        holder.bi.genderImage.setImageResource(Util.getMemberIcon(mContext, Integer.valueOf(mList.get(i).getGender()), mList.get(i).getAge()));
+        holder.bi.genderImage.setImageResource(Util.getMemberIcon(Integer.valueOf(mList.get(i).getGender()), mList.get(i).getAge()));
         holder.bi.motherName.setText(mList.get(i).getMotherName());
         holder.bi.parentLayout.setOnClickListener(v -> itemClicked.onItemClick(mList.get(i), i, holder.bi));
     }

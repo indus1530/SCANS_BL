@@ -79,7 +79,6 @@ public class SectionE3Activity extends AppCompatActivity {
                 if (!bi.e116b.isChecked()) {
                     startActivity(new Intent(this, SectionE4Activity.class));
                 } else {
-
                     startActivity(new Intent(this, SectionFActivity.class));
                 }
             } else {
