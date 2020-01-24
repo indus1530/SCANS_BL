@@ -12,7 +12,7 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import edu.aku.hassannaqvi.uen_midline.CONSTANTS
 import edu.aku.hassannaqvi.uen_midline.CONSTANTS.Companion.SERIAL_EXTRA
 import edu.aku.hassannaqvi.uen_midline.R
-import edu.aku.hassannaqvi.uen_midline.adapter.ChildListAdapter
+import edu.aku.hassannaqvi.uen_midline.adapter.FamilyMemberListAdapter
 import edu.aku.hassannaqvi.uen_midline.contracts.FamilyMembersContract
 import edu.aku.hassannaqvi.uen_midline.core.MainApp
 import edu.aku.hassannaqvi.uen_midline.core.MainApp.openDialog
@@ -34,7 +34,7 @@ class FamilyMembersListActivity : AppCompatActivity() {
     //    private lateinit var mainVModel: MainVModel
     private var serial = 1
     private var memSelectedCounter = 0
-    private lateinit var adapter: ChildListAdapter
+    private lateinit var adapter: FamilyMemberListAdapter
     private lateinit var bi: ActivityFamilyMembersListBinding
     private var viewHolder: ItemMemListBinding? = null
 
@@ -116,7 +116,7 @@ class FamilyMembersListActivity : AppCompatActivity() {
     }
 
     private fun setupRecyclerView(membersLst: MutableList<FamilyMembersContract>) {
-        adapter = ChildListAdapter(this, membersLst)
+        adapter = FamilyMemberListAdapter(this, membersLst)
         bi.contentScroll.recyclerView.layoutManager = LinearLayoutManager(this)
         bi.contentScroll.recyclerView.adapter = adapter
         adapter.setItemClicked { item, position, holder ->
