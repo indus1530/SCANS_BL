@@ -99,11 +99,7 @@ public class SectionE1Activity extends AppCompatActivity {
             if (UpdateDB()) {
                 Intent next;
                 if (bi.e101a.isChecked()) {
-                    if (MainApp.pragnantWoman.getFirst().size() > 0) {
-                        next = new Intent(SectionE1Activity.this, SectionE2Activity.class);
-                    } else {
-                        next = new Intent(SectionE1Activity.this, SectionE3Activity.class);
-                    }
+                    next = new Intent(SectionE1Activity.this, SectionE2Activity.class);
                 } else {
                     if (MainApp.pragnantWoman.getFirst().size() > 0) {
                         next = new Intent(SectionE1Activity.this, SectionE1Activity.class);

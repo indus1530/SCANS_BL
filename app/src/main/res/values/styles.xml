@@ -47,7 +47,7 @@
         <item name="android:textColorHint">@color/gray</item>
         <item name="android:background">@drawable/et_style</item>
         <item name="android:digits">abcdefghijklmnopqrstuvwxyz ABCDEFGHIJKLMNOPQRSTUVWXYZ</item>
-        <item name="android:padding">5dp</item>
+        <item name="android:padding">10dp</item>
         <item name="android:radius">2dp</item>
     </style>
 
