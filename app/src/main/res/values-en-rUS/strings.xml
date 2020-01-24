@@ -447,7 +447,8 @@
     <string name="g102d"> NGO health facility </string>
     <string name="g102e"> On the way to the health care Facility </string>
 
-    <string name="g103"> G103:\t Why didn’t you deliver {NAME} in a health facility?   If delivery take place at home Probe to identify any other reason Record all mentioned. </string>
+    <string name="g103"> G103:\t Why didn’t you deliver {NAME} in a health facility ? </string>
+    <string name="g103hint"> If delivery take place at home Probe to identify any other reason Record all mentioned. </string>
     <string name="g103a"> No transportation </string>
     <string name="g103b"> Poor attitude of staff </string>
     <string name="g103c"> Facility not functional </string>
@@ -568,7 +569,8 @@
     <string name="g123f"> Dai/TBA (Traditional Birth Attendant) </string>
     <string name="g123g"> TV/Radio/News Paper/Mobile </string>
 
-    <string name="g124"> G124:\t Could you please name any danger signs/problems during labour and delivery?  Select all that apply. DO NOT READ LIST OR PROMPT with any suggestions. </string>
+    <string name="g124"> G124:\t Could you please name any danger signs/problems during labour and delivery ? </string>
+    <string name="g124hint"> DO NOT READ LIST OR PROMPT with any suggestions. </string>
     <string name="g124a"> Vaginal bleeding </string>
     <string name="g124b"> Convulsions/fits </string>
     <string name="g124c"> Severe headaches </string>

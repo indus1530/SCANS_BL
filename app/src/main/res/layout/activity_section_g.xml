@@ -132,6 +132,10 @@
                             style="@style/i_textview"
                             android:text="@string/g103" />
 
+                        <TextView
+                            style="@style/i_textviewhint"
+                            android:text="@string/g103hint" />
+
                         <RadioGroup
                             android:id="@+id/g103"
                             style="@style/radiogroup">
@@ -1113,6 +1117,10 @@
                         <TextView
                             style="@style/i_textview"
                             android:text="@string/g124" />
+
+                        <TextView
+                            style="@style/i_textviewhint"
+                            android:text="@string/g124hint" />
 
                         <LinearLayout
                             android:id="@+id/g124check"
