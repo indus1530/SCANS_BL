@@ -23,32 +23,32 @@
             android:layoutDirection="ltr"
             android:orientation="vertical">
 
-            <!-- d101  Input-Numeric   -->
-            <androidx.cardview.widget.CardView
-                android:id="@+id/fldGrpCVd101"
-                style="@style/cardView">
-
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:orientation="vertical">
-
-                    <TextView
-                        style="@style/i_textview"
-                        android:text="@string/d101" />
-
-
-                    <TextView
-                        android:id="@+id/d101"
-                        style="@style/textInput"
-                        android:text="@string/d101" />
-
-                </LinearLayout>
-            </androidx.cardview.widget.CardView>
-
             <LinearLayout
                 android:id="@+id/fldGrpSectionD01"
                 style="@style/linearlayout_view_wt_bound">
+
+                <!-- d101  Input-Numeric   -->
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/fldGrpCVd101"
+                    style="@style/cardView">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <TextView
+                            style="@style/i_textview"
+                            android:text="@string/d101" />
+
+
+                        <TextView
+                            android:id="@+id/d101"
+                            style="@style/textInput"
+                            android:text="@string/d101" />
+
+                    </LinearLayout>
+                </androidx.cardview.widget.CardView>
 
                 <!-- d102  Input   -->
                 <androidx.cardview.widget.CardView

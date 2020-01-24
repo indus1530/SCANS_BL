@@ -64,7 +64,7 @@ public class SectionDActivity extends AppCompatActivity {
             bi.fldGrpSectionD02.setVisibility(View.GONE);
             fmc = new FamilyMembersContract();
         } else {
-            bi.d102Name.setText(fmc.getName().toUpperCase());
+            bi.d102Name.setText(fmc.getName().toUpperCase() + "\n" + getResources().getString(R.string.d101) + ":" + fmc.getSerialno());
             bi.fldGrpSectionD01.setVisibility(View.GONE);
             bi.fldGrpSectionD02.setVisibility(View.VISIBLE);
 
