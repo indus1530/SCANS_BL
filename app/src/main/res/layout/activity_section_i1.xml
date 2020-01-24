@@ -946,11 +946,15 @@
 
                         <com.edittextpicker.aliazaz.EditTextPicker
                             android:id="@+id/i120"
-                            style="@style/EditTextAlpha"
+                            style="@style/EditTextNum"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:hint="@string/i120"
-                            android:inputType="number" />
+                            android:inputType="number"
+                            android:maxLength="4"
+                            app:maxValue="9999"
+                            app:minValue="1"
+                            app:type="range" />
                     </LinearLayout>
                 </androidx.cardview.widget.CardView>
 
@@ -970,11 +974,15 @@
 
                         <com.edittextpicker.aliazaz.EditTextPicker
                             android:id="@+id/i121"
-                            style="@style/EditTextAlpha"
+                            style="@style/EditTextNum"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:hint="@string/i121"
-                            android:inputType="number" />
+                            android:inputType="number"
+                            android:maxLength="4"
+                            app:maxValue="9999"
+                            app:minValue="1"
+                            app:type="range" />
                     </LinearLayout>
                 </androidx.cardview.widget.CardView>
 
@@ -1191,7 +1199,7 @@
 
                         <RadioButton
                             android:id="@+id/i126b"
-                            style="@style/checkbox"
+                            style="@style/radiobutton"
                             android:text="@string/i126b" />
 
                         <RadioButton
