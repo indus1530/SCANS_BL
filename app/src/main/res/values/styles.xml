@@ -79,6 +79,7 @@
 
     <style name="EditTextNum" parent="@style/textInput">
         <item name="android:inputType">number</item>
+
     </style>
 
     <style name="TestDisabled">
