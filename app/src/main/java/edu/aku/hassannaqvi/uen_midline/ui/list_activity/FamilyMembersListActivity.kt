@@ -4,6 +4,7 @@ import android.app.Activity
 import android.content.Intent
 import android.os.Bundle
 import android.view.View
+import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import androidx.databinding.DataBindingUtil
 import androidx.lifecycle.Observer
@@ -156,10 +157,15 @@ class FamilyMembersListActivity : AppCompatActivity() {
             viewHolder!!.parentLayout.isEnabled = flag
             viewHolder!!.parentLayout.checkIcon.visibility = if (flag) View.GONE else View.VISIBLE
             viewHolder = null
+            if (flag) memSelectedCounter--
         }
     }
 
     companion object {
         lateinit var mainVModel: MainVModel
+    }
+
+    override fun onBackPressed() {
+        Toast.makeText(this, "Press top back button.", Toast.LENGTH_SHORT).show()
     }
 }
