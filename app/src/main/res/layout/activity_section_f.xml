@@ -918,7 +918,7 @@
                                 android:maxLength="2"
                                 android:textColor="@android:color/black"
                                 app:defaultValue="00"
-                                app:maxValue="11"
+                                app:maxValue="9"
                                 app:minValue="1"
                                 app:type="range"
                                 android:text='@{f118a.checked? f118ax.getText().toString() : ""}'
