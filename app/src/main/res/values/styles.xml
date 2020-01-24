@@ -279,51 +279,51 @@
         <item name="android:layout_width">match_parent</item>
         <item name="android:layout_height">wrap_content</item>
         <item name="android:textSize">24sp</item>
-<!--        <item name="android:typeface">serif</item>-->
-<!--        <item name="android:clickable">true</item>-->
+        <!--        <item name="android:typeface">serif</item>-->
+        <!--        <item name="android:clickable">true</item>-->
         <item name="android:layout_marginBottom">1dp</item>
-<!--        <item name="android:foreground">?android:attr/selectableItemBackground</item>-->
+        <!--        <item name="android:foreground">?android:attr/selectableItemBackground</item>-->
         <item name="android:padding">10dp</item>
         <item name="android:background">@color/white</item>
-<!--        <item name="android:elevation">1dp</item>-->
+        <!--        <item name="android:elevation">1dp</item>-->
     </style>
 
-        <!-- <style name="CustomShowcaseTheme" parent="ShowcaseView.Light">
-             <item name="sv_backgroundColor">#33b78ff7</item>
-             <item name="sv_showcaseColor">@color/colorPrimaryDark</item>
-             <item name="sv_buttonText">OK</item>
-             <item name="sv_titleTextAppearance">@style/CustomTitle</item>
-             <item name="sv_detailTextAppearance">@style/CustomTitle</item>
+    <!-- <style name="CustomShowcaseTheme" parent="ShowcaseView.Light">
+         <item name="sv_backgroundColor">#33b78ff7</item>
+         <item name="sv_showcaseColor">@color/colorPrimaryDark</item>
+         <item name="sv_buttonText">OK</item>
+         <item name="sv_titleTextAppearance">@style/CustomTitle</item>
+         <item name="sv_detailTextAppearance">@style/CustomTitle</item>
 
-         </style>
+     </style>
 
-         <style name="CustomShowcaseTheme2" parent="ShowcaseView">
-             <item name="sv_backgroundColor">#e51249d9</item>
-             <item name="sv_showcaseColor">#25467A</item>
-             <item name="sv_buttonText">Close</item>
-             <item name="sv_titleTextAppearance">@style/CustomTitle2</item>
-             <item name="sv_detailTextAppearance">@style/CustomText2</item>
-         </style>
+     <style name="CustomShowcaseTheme2" parent="ShowcaseView">
+         <item name="sv_backgroundColor">#e51249d9</item>
+         <item name="sv_showcaseColor">#25467A</item>
+         <item name="sv_buttonText">Close</item>
+         <item name="sv_titleTextAppearance">@style/CustomTitle2</item>
+         <item name="sv_detailTextAppearance">@style/CustomText2</item>
+     </style>
 
-         <style name="CustomTitle2" parent="TextAppearance.ShowcaseView.Title.Light">
-             <item name="android:textColor">@color/colorPrimaryDark</item>
-         </style>
+     <style name="CustomTitle2" parent="TextAppearance.ShowcaseView.Title.Light">
+         <item name="android:textColor">@color/colorPrimaryDark</item>
+     </style>
 
-         <style name="CustomeButton" parent="ShowcaseButton">
-             <item name="android:buttonTintMode">@color/colorPrimaryDark</item>
-         </style>
+     <style name="CustomeButton" parent="ShowcaseButton">
+         <item name="android:buttonTintMode">@color/colorPrimaryDark</item>
+     </style>
 
 
-         <style name="CustomTitle" parent="TextAppearance.ShowcaseView.Title">
-             <item name="android:textColor">@android:color/black</item>
-             <item name="android:textSize">30sp</item>
-             <item name="android:textStyle">bold</item>
-             <item name="android:textAppearance">?android:attr/textAppearanceLarge</item>
-         </style>
+     <style name="CustomTitle" parent="TextAppearance.ShowcaseView.Title">
+         <item name="android:textColor">@android:color/black</item>
+         <item name="android:textSize">30sp</item>
+         <item name="android:textStyle">bold</item>
+         <item name="android:textAppearance">?android:attr/textAppearanceLarge</item>
+     </style>
 
-         <style name="CustomText2" parent="TextAppearance.ShowcaseView.Detail.Light">
-             <item name="android:textColor">#8affffff</item>
-         </style>-->
+     <style name="CustomText2" parent="TextAppearance.ShowcaseView.Detail.Light">
+         <item name="android:textColor">#8affffff</item>
+     </style>-->
 
     <style name="AppTheme.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
 
