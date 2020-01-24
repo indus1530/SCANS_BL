@@ -4,5 +4,6 @@ class CONSTANTS {
     companion object {
         const val MEMBER_ITEM = 101
         const val SERIAL_EXTRA = "key"
+        const val MAXYEAR = 1940
     }
 }

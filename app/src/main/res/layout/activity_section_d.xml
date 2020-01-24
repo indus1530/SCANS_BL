@@ -219,6 +219,22 @@
                 android:id="@+id/fldGrpSectionD02"
                 style="@style/linearlayout_view_wt_bound">
 
+                <androidx.cardview.widget.CardView
+                    style="@style/cardView">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/d102Name"
+                            style="@style/textView3Head"
+                            android:text="@string/d102" />
+
+                    </LinearLayout>
+                </androidx.cardview.widget.CardView>
+
                 <!-- d106  Radio   -->
                 <androidx.cardview.widget.CardView
                     android:id="@+id/fldGrpCVd106"

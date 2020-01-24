@@ -53,7 +53,6 @@ public class SectionDActivity extends AppCompatActivity {
     private void setUIComponent() {
 //        mainVModel = ViewModelProviders.of(FamilyMembersListActivity.Companion.getContext()).get(MainVModel.class);
         mainVModel = FamilyMembersListActivity.Companion.getMainVModel();
-
         serial = getIntent().getIntExtra(SERIAL_EXTRA, 0);
         bi.d101.setText(String.valueOf(serial));
         fmc = mainVModel.getMemberInfo(serial);
@@ -64,6 +63,7 @@ public class SectionDActivity extends AppCompatActivity {
             bi.fldGrpSectionD02.setVisibility(View.GONE);
             fmc = new FamilyMembersContract();
         } else {
+            bi.d102Name.setText(fmc.getName().toUpperCase());
             bi.fldGrpSectionD01.setVisibility(View.GONE);
             bi.fldGrpSectionD02.setVisibility(View.VISIBLE);
 
