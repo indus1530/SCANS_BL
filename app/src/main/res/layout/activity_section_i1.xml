@@ -1,4 +1,5 @@
 <layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools">
 
     <data>
@@ -145,7 +146,7 @@
 
                         <com.edittextpicker.aliazaz.EditTextPicker
                             android:id="@+id/i102"
-                            style="@style/EditTextAlpha"
+                            style="@style/EditTextNum"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:hint="@string/i102"
@@ -169,11 +170,16 @@
 
                         <com.edittextpicker.aliazaz.EditTextPicker
                             android:id="@+id/i103"
-                            style="@style/EditTextAlpha"
+                            style="@style/EditTextNum"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:hint="@string/i103"
-                            android:inputType="number" />
+                            android:inputType="number"
+                            android:maxLength="2"
+                            app:defaultValue="00"
+                            app:maxValue="30"
+                            app:minValue="1"
+                            app:type="range" />
                     </LinearLayout>
                 </androidx.cardview.widget.CardView>
 
@@ -404,11 +410,16 @@
 
                         <com.edittextpicker.aliazaz.EditTextPicker
                             android:id="@+id/i109"
-                            style="@style/EditTextAlpha"
+                            style="@style/EditTextNum"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:hint="@string/i109"
-                            android:inputType="number" />
+                            android:inputType="number"
+                            android:maxLength="3"
+                            app:defaultValue="00"
+                            app:maxValue="100"
+                            app:minValue="1"
+                            app:type="range" />
                     </LinearLayout>
                 </androidx.cardview.widget.CardView>
 
@@ -428,11 +439,16 @@
 
                         <com.edittextpicker.aliazaz.EditTextPicker
                             android:id="@+id/i110"
-                            style="@style/EditTextAlpha"
+                            style="@style/EditTextNum"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:hint="@string/i110"
-                            android:inputType="number" />
+                            android:inputType="number"
+                            android:maxLength="2"
+                            app:defaultValue="00"
+                            app:maxValue="59"
+                            app:minValue="1"
+                            app:type="range" />
                     </LinearLayout>
                 </androidx.cardview.widget.CardView>
 
@@ -667,11 +683,16 @@
 
                             <com.edittextpicker.aliazaz.EditTextPicker
                                 android:id="@+id/i115a"
-                                style="@style/EditTextAlpha"
+                                style="@style/EditTextNum"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:hint="@string/i115a"
-                                android:inputType="number" />
+                                android:inputType="number"
+                                android:maxLength="2"
+                                app:defaultValue="00"
+                                app:maxValue="24"
+                                app:minValue="1"
+                                app:type="range" />
 
                             <TextView
                                 style="@style/i_textview"
@@ -679,11 +700,16 @@
 
                             <com.edittextpicker.aliazaz.EditTextPicker
                                 android:id="@+id/i115b"
-                                style="@style/EditTextAlpha"
+                                style="@style/EditTextNum"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:hint="@string/i115b"
-                                android:inputType="number" />
+                                android:inputType="number"
+                                android:maxLength="2"
+                                app:defaultValue="00"
+                                app:maxValue="30"
+                                app:minValue="1"
+                                app:type="range" />
                         </LinearLayout>
                     </androidx.cardview.widget.CardView>
 
