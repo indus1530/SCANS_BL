@@ -27,10 +27,7 @@
             android:name=".ui.sections.SectionE4Activity"
             android:label="@string/teheading"
             android:screenOrientation="portrait">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
+
         </activity>
 
         <activity
@@ -123,7 +120,12 @@
         <activity
             android:name=".ui.sections.SectionFActivity"
             android:label="@string/tfheading"
-            android:screenOrientation="portrait" />
+            android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
 
         <activity
             android:name=".ui.sections.SectionE1Activity"
