@@ -167,13 +167,15 @@ public class SectionDActivity extends AppCompatActivity {
 
         sd.put("d106", menSLst.getFirst().size() != 0 && bi.d106.getSelectedItemPosition() != 1
                 ? mainVModel.getMemberInfo(menSLst.getFirst().get(bi.d106.getSelectedItemPosition() - 2)).getSerialno() : "97");
-        fmc.setMotherName(bi.d106.getSelectedItem().toString());
+        fmc.setMother_name(bi.d106.getSelectedItem().toString());
 
         motherFMC = womenSLst.getFirst().size() != 0 && bi.d107.getSelectedItemPosition() != 1
                 ? mainVModel.getMemberInfo(womenSLst.getFirst().get(bi.d107.getSelectedItemPosition() - 2)) : null;
-        sd.put("d107", womenSLst.getFirst().size() != 0 && bi.d107.getSelectedItemPosition() != 1
-                ? mainVModel.getMemberInfo(womenSLst.getFirst().get(bi.d107.getSelectedItemPosition() - 2)).getSerialno() : "97");
+        String motherSerial = womenSLst.getFirst().size() != 0 && bi.d107.getSelectedItemPosition() != 1
+                ? mainVModel.getMemberInfo(womenSLst.getFirst().get(bi.d107.getSelectedItemPosition() - 2)).getSerialno() : "97";
+        sd.put("d107", motherSerial);
         fmc.setfName(bi.d107.getSelectedItem().toString());
+        fmc.setMother_serial(motherSerial);
 
         sd.put("d108a", bi.d108a.getText().toString());
         sd.put("d108b", bi.d108b.getText().toString());

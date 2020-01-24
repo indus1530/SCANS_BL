@@ -1,6 +1,5 @@
 package edu.aku.hassannaqvi.uen_midline.ui.other;
 
-import android.app.ActivityManager;
 import android.app.AlertDialog;
 import android.app.Dialog;
 import android.app.DialogFragment;
@@ -8,18 +7,14 @@ import android.app.DownloadManager;
 import android.app.Fragment;
 import android.app.FragmentTransaction;
 import android.app.ProgressDialog;
-import android.content.BroadcastReceiver;
 import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
-import android.content.IntentFilter;
 import android.content.SharedPreferences;
-import android.database.Cursor;
 import android.net.ConnectivityManager;
 import android.net.NetworkInfo;
 import android.net.Uri;
 import android.os.Bundle;
-import android.os.Environment;
 import android.os.Handler;
 import android.text.InputType;
 import android.util.Log;
@@ -38,7 +33,6 @@ import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Collection;
 import java.util.Date;
-import java.util.List;
 import java.util.Map;
 
 import edu.aku.hassannaqvi.uen_midline.R;
@@ -50,7 +44,6 @@ import edu.aku.hassannaqvi.uen_midline.core.DatabaseHelper;
 import edu.aku.hassannaqvi.uen_midline.core.MainApp;
 import edu.aku.hassannaqvi.uen_midline.databinding.ActivityMainBinding;
 import edu.aku.hassannaqvi.uen_midline.ui.sections.SectionAActivity;
-import edu.aku.hassannaqvi.uen_midline.ui.sections.SectionDActivity;
 import edu.aku.hassannaqvi.uen_midline.ui.sync.SyncActivity;
 
 public class MainActivity extends AppCompatActivity {
@@ -198,7 +191,7 @@ public class MainActivity extends AppCompatActivity {
                     iStatus = "N/A";
                 }
 
-                rSumText += fc.getDSSID();
+                rSumText += fc.getLuid();
                 rSumText += "\t\t\t\t\t";
 
                 rSumText += iStatus;

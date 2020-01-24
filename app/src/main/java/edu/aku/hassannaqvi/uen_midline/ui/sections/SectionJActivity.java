@@ -20,7 +20,6 @@ import java.util.List;
 
 import edu.aku.hassannaqvi.uen_midline.R;
 import edu.aku.hassannaqvi.uen_midline.contracts.FamilyMembersContract;
-import edu.aku.hassannaqvi.uen_midline.core.MainApp;
 import edu.aku.hassannaqvi.uen_midline.databinding.ActivitySectionJBinding;
 import edu.aku.hassannaqvi.uen_midline.utils.Util;
 import edu.aku.hassannaqvi.uen_midline.validator.ClearClass;
@@ -78,7 +77,7 @@ public class SectionJActivity extends AppCompatActivity {
             public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
                 if (position == 0) return;
                 fmc_child = mainVModel.getMemberInfo(childLst.getFirst().get(bi.j100.getSelectedItemPosition() - 1));
-                if (fmc_child.getMotherName().equals("NA")) {
+                if (fmc_child.getMother_name().equals("NA")) {
                     bi.respondentSpinner.setVisibility(View.VISIBLE);
                     populateRespondentSpinner();
                 } else {
