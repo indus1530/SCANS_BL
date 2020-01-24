@@ -1229,6 +1229,9 @@
     <string name="j103c">YEAR</string>
     <string name="j103d">Don\'t Know(98)</string>
     <string name="j10401">BCG (Date _ Month_  Year)</string>
+    <string name="j10401d">DAY</string>
+    <string name="j10401m">MONTH</string>
+    <string name="j10401y">YEAR</string>
     <string name="j10401a">Where (Name) received vaccination for BCG?</string>
     <string name="j10401aa">Government Facility</string>
     <string name="j10401ab">Private Facility</string>
@@ -1246,6 +1249,9 @@
     <string name="j10401bg">Dispenser/Compounder</string>
     <string name="j10401bx">Other (specify)</string>
     <string name="j10402">Oral Polio Vaccine dose at birth_OPV-0 (Day_Month_Year)</string>
+    <string name="j10402d">DAY</string>
+    <string name="j10402m">MONTH</string>
+    <string name="j10402y">YEAR</string>
     <string name="j10402a">Where (Name) received vaccination for OPV-O?</string>
     <string name="j10402aa">Government Facility</string>
     <string name="j10402ab">Private Facility</string>
@@ -1263,6 +1269,9 @@
     <string name="j10402bg">Dispenser/Compounder</string>
     <string name="j10402bx">Other (specify)</string>
     <string name="j10403">OPV-1_Oral Polio Vaccine first dose_(Day_Month_Year)</string>
+    <string name="j10403d">DAY</string>
+    <string name="j10403m">MONTH</string>
+    <string name="j10403y">YEAR</string>
     <string name="j10403a">Where (Name) received vaccination for OPV-1?</string>
     <string name="j10403aa">Government Facility</string>
     <string name="j10403ab">Private Facility</string>
@@ -1280,6 +1289,9 @@
     <string name="j10403bg">Dispenser/Compounder</string>
     <string name="j10403bx">Other (specify)</string>
     <string name="j10404">PENTA-1_(Date _ Month_  Year)</string>
+    <string name="j10404d">DAY</string>
+    <string name="j10404m">MONTH</string>
+    <string name="j10404y">YEAR</string>
     <string name="j10404a">Where (Name) received vaccination for Penta-1?</string>
     <string name="j10404aa">Government Facility</string>
     <string name="j10404ab">Private Facility</string>
@@ -1297,6 +1309,9 @@
     <string name="j10404bg">Dispenser/Compounder</string>
     <string name="j10404bx">Other (specify)</string>
     <string name="j10405">PCV-1_	Pneumococcal Conjugate Vaccine 1st dose_(Date _ Month_  Year)  	</string>
+    <string name="j10405d">DAY</string>
+    <string name="j10405m">MONTH</string>
+    <string name="j10405y">YEAR</string>
     <string name="j10405a">Where (Name) received vaccination for PCV-1?</string>
     <string name="j10405aa">Government Facility</string>
     <string name="j10405ab">Private Facility</string>
@@ -1314,6 +1329,9 @@
     <string name="j10405bg">Dispenser/Compounder</string>
     <string name="j10405bx">Other (specify)</string>
     <string name="j10406">OPV-2_	Oral Polio vaccine 2nd dose 	_(Date _ Month_  Year)  	</string>
+    <string name="j10406d">DAY</string>
+    <string name="j10406m">MONTH</string>
+    <string name="j10406y">YEAR</string>
     <string name="j10406a">Where (Name) received vaccination for OPV-2?</string>
     <string name="j10406aa">Government Facility</string>
     <string name="j10406ab">Private Facility</string>
@@ -1331,6 +1349,9 @@
     <string name="j10406bg">Dispenser/Compounder</string>
     <string name="j10406bx">Other (specify)</string>
     <string name="j10407">PENTA-2_	Pentavalent 2 (DPTHepBHib) 	_(Date _ Month_  Year) </string>
+    <string name="j10407d">DAY</string>
+    <string name="j10407m">MONTH</string>
+    <string name="j10407y">YEAR</string>
     <string name="j10407a">Where (Name) received vaccination for Penta-2?</string>
     <string name="j10407aa">Government Facility</string>
     <string name="j10407ab">Private Facility</string>
@@ -1348,6 +1369,9 @@
     <string name="j10407bg">Dispenser/Compounder</string>
     <string name="j10407bx">Other (specify)</string>
     <string name="j10408">PCV-2_	Pneumococcal Conjugate Vaccine 2nd dose  _(Date _ Month_  Year) </string>
+    <string name="j10408d">DAY</string>
+    <string name="j10408m">MONTH</string>
+    <string name="j10408y">YEAR</string>
     <string name="j10408a">Where (Name) received vaccination for PCV-2?</string>
     <string name="j10408aa">Government Facility</string>
     <string name="j10408ab">Private Facility</string>
@@ -1365,6 +1389,9 @@
     <string name="j10408bg">Dispenser/Compounder</string>
     <string name="j10408bx">Other (specify)</string>
     <string name="j10409">OPV-3_	Oral Polio vaccine 3rd dose _(Date _ Month_  Year) 	</string>
+    <string name="j10409d">DAY</string>
+    <string name="j10409m">MONTH</string>
+    <string name="j10409y">YEAR</string>
     <string name="j10409a">Where (Name) received vaccination for OPV-3?</string>
     <string name="j10409aa">Government Facility</string>
     <string name="j10409ab">Private Facility</string>
@@ -1382,6 +1409,9 @@
     <string name="j10409bg">Dispenser/Compounder</string>
     <string name="j10409bx">Other (specify)</string>
     <string name="j10410">PENTA-3_	Pentavalent 3 (DPTHepBHib)  _(Date _ Month_  Year) 	</string>
+    <string name="j10410d">DAY</string>
+    <string name="j10410m">MONTH</string>
+    <string name="j10410y">YEAR</string>
     <string name="j10410a">Where (Name) received vaccination for Penta-3?</string>
     <string name="j10410aa">Government Facility</string>
     <string name="j10410ab">Private Facility</string>
@@ -1399,6 +1429,9 @@
     <string name="j10410bg">Dispenser/Compounder</string>
     <string name="j10410bx">Other (specify)</string>
     <string name="j10411">PCV-3_	Pneumococcal Conjugate Vaccine 3rd dose  _(Date _ Month_  Year) 	</string>
+    <string name="j10411d">DAY</string>
+    <string name="j10411m">MONTH</string>
+    <string name="j10411y">YEAR</string>
     <string name="j10411a">Where (Name) received vaccination for PCV-3?</string>
     <string name="j10411aa">Government Facility</string>
     <string name="j10411ab">Private Facility</string>
@@ -1416,6 +1449,9 @@
     <string name="j10411bg">Dispenser/Compounder</string>
     <string name="j10411bx">Other (specify)</string>
     <string name="j10412">IPV_	IPV (Injectable Polio Vaccine)  _(Date _ Month_  Year) 		</string>
+    <string name="j10412d">DAY</string>
+    <string name="j10412m">MONTH</string>
+    <string name="j10412y">YEAR</string>
     <string name="j10412a">Where (Name) received vaccination for IPV?</string>
     <string name="j10412aa">Government Facility</string>
     <string name="j10412ab">Private Facility</string>
@@ -1433,6 +1469,9 @@
     <string name="j10412bg">Dispenser/Compounder</string>
     <string name="j10412bx">Other (specify)</string>
     <string name="j10413">MEASLES-1_	Measles vaccine 2nd dose _(Date _ Month_  Year) 	</string>
+    <string name="j10413d">DAY</string>
+    <string name="j10413m">MONTH</string>
+    <string name="j10413y">YEAR</string>
     <string name="j10413a">Where (Name) received vaccination for Measles-1?</string>
     <string name="j10413aa">Government Facility</string>
     <string name="j10413ab">Private Facility</string>
@@ -1450,6 +1489,9 @@
     <string name="j10413bg">Dispenser/Compounder</string>
     <string name="j10413bx">Other (specify)</string>
     <string name="j10414">MEASLES-2_	Measles vaccine 2nd dose _(Date _ Month_  Year) 	</string>
+    <string name="j10414d">DAY</string>
+    <string name="j10414m">MONTH</string>
+    <string name="j10414y">YEAR</string>
     <string name="j10414a">Where (Name) received vaccination for Measles-2?</string>
     <string name="j10414aa">Government Facility</string>
     <string name="j10414ab">Private Facility</string>
@@ -1467,6 +1509,9 @@
     <string name="j10414bg">Dispenser/Compounder</string>
     <string name="j10414bx">Other (specify)</string>
     <string name="j10415">RV-1_	Rota virus Vaccine 1st dose 	_(Date _ Month_  Year) 	</string>
+    <string name="j10415d">DAY</string>
+    <string name="j10415m">MONTH</string>
+    <string name="j10415y">YEAR</string>
     <string name="j10415a">Where (Name) received vaccination for RV1?</string>
     <string name="j10415aa">Government Facility</string>
     <string name="j10415ab">Private Facility</string>
@@ -1484,6 +1529,9 @@
     <string name="j10415bg">Dispenser/Compounder</string>
     <string name="j10415bx">Other (specify)</string>
     <string name="j10416">RV-2_	Rota virus Vaccine 2nd dose  _(Date _ Month_  Year) 	</string>
+    <string name="j10416d">DAY</string>
+    <string name="j10416m">MONTH</string>
+    <string name="j10416y">YEAR</string>
     <string name="j10416a">Where (Name) received vaccination for -RV2?</string>
     <string name="j10416aa">Government Facility</string>
     <string name="j10416ab">Private Facility</string>
