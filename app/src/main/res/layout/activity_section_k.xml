@@ -19,6 +19,7 @@
         tools:context=".ui.Myactivity">
 
         <LinearLayout
+            android:layoutDirection="ltr"
             android:id="@+id/fldGrpSectionk01"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -497,7 +498,7 @@
 
                         <EditText
                             android:id="@+id/k10696x"
-                            style="@style/radiobutton"
+                            style="@style/EditTextAlpha"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:hint="@string/k106x"

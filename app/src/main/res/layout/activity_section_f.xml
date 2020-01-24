@@ -20,9 +20,9 @@
 
         <LinearLayout
             android:id="@+id/fldGrpSectionF"
-            android:layoutDirection="ltr"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layoutDirection="ltr"
             android:orientation="vertical">
 
             <!-- f101  Radio   -->
@@ -355,7 +355,7 @@
 
                         <EditText
                             android:id="@+id/f10796x"
-                            style="@style/radiobutton"
+                            style="@style/EditTextAlpha"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:hint="@string/f107x"
@@ -380,42 +380,47 @@
                         style="@style/i_textview"
                         android:text="@string/f108" />
 
-                        <TextView
-                            style="@style/i_textview"
-                            android:text="@string/f108a" />
+                    <TextView
+                        style="@style/i_textview"
+                        android:text="@string/f108a" />
 
-                        <com.edittextpicker.aliazaz.EditTextPicker
-                            android:id="@+id/f108a"
-                            style="@style/EditTextAlpha"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:hint="@string/f108a"
-                            android:inputType="number"
-                            android:maxLength="2"
-                            app:maxValue="40"
-                            app:minValue="1"
-                            app:type="range" />
+                    <com.edittextpicker.aliazaz.EditTextPicker
+                        android:id="@+id/f108a"
+                        style="@style/EditTextNum"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:enabled='@{f108c.checked?  false : true}'
+                        android:hint="@string/f108a"
+                        android:inputType="number"
+                        android:maxLength="2"
+                        android:text='@{f108c.checked? "" : f108a.getText().toString()}'
+                        app:maxValue="40"
+                        app:minValue="1"
+                        app:type="range" />
 
-                        <TextView
-                            style="@style/i_textview"
-                            android:text="@string/f108b" />
+                    <TextView
+                        style="@style/i_textview"
+                        android:text="@string/f108b" />
 
-                        <com.edittextpicker.aliazaz.EditTextPicker
-                            android:id="@+id/f108b"
-                            style="@style/EditTextAlpha"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:hint="@string/f108b"
-                            android:inputType="number"
-                            android:maxLength="2"
-                            app:maxValue="9"
-                            app:minValue="1"
-                            app:type="range" />
+                    <com.edittextpicker.aliazaz.EditTextPicker
+                        android:id="@+id/f108b"
+                        style="@style/EditTextNum"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:enabled='@{f108c.checked?  false : true}'
+                        android:hint="@string/f108b"
+                        android:inputType="number"
+                        android:maxLength="2"
+                        android:text='@{f108c.checked? "" : f108b.getText().toString()}'
+                        app:maxValue="9"
+                        app:minValue="1"
+                        app:type="range" />
 
                     <CheckBox
-                            android:id="@+id/f108c"
+                        android:id="@+id/f108c"
                         style="@style/checkbox"
-                            android:text="@string/f108c" />
+                        android:tag="-1"
+                        android:text="@string/f108c" />
 
                 </LinearLayout>
             </androidx.cardview.widget.CardView>
@@ -440,7 +445,7 @@
 
                     <com.edittextpicker.aliazaz.EditTextPicker
                         android:id="@+id/f109a"
-                        style="@style/EditTextAlpha"
+                        style="@style/EditTextNum"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:enabled='@{f109b.checked? true : false}'
@@ -533,7 +538,7 @@
 
                         <EditText
                             android:id="@+id/f11096x"
-                            style="@style/radiobutton"
+                            style="@style/EditTextAlpha"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:hint="@string/f110x"
@@ -641,7 +646,7 @@
 
                         <EditText
                             android:id="@+id/f113ax"
-                            style="@style/radiobutton"
+                            style="@style/EditTextNum"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:hint="@string/f113a"
@@ -891,7 +896,7 @@
 
                             <EditText
                                 android:id="@+id/f118ax"
-                                style="@style/radiobutton"
+                                style="@style/EditTextNum"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:hint="@string/f118a"
@@ -906,7 +911,7 @@
 
                             <EditText
                                 android:id="@+id/f118bx"
-                                style="@style/radiobutton"
+                                style="@style/EditTextNum"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:hint="@string/f118b"

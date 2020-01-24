@@ -38,7 +38,6 @@ public class SectionGActivity extends AppCompatActivity {
 
         //g102
         bi.g102.setOnCheckedChangeListener((group, checkedId) -> {
-
             ClearClass.ClearAllFields(bi.fldGrpCVg103, null);
             ClearClass.ClearAllFields(bi.fldGrpCVg104, null);
             ClearClass.ClearAllFields(bi.fldGrpCVg105, null);
