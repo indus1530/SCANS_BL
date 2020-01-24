@@ -18,6 +18,7 @@
         tools:context=".ui.Myactivity">
 
         <LinearLayout
+            android:layoutDirection="ltr"
             android:id="@+id/fldGrpSectionM"
             style="@style/linearlayout_view_wt_bound">
 

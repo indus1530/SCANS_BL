@@ -18,6 +18,7 @@
         tools:context=".ui.Myactivity">
 
         <LinearLayout
+            android:layoutDirection="ltr"
             android:id="@+id/fldGrpSectionN"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -304,11 +305,12 @@
 
                         <EditText
                             android:id="@+id/n104at"
-                            style="@style/radiobutton"
+                            style="@style/EditTextAlpha"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:hint="@string/n104a"
                             android:maxLength="2"
+                            android:inputType="number"
                             android:tag="n104a"
                             android:text='@{n104a.checked? n104at.getText().toString() : ""}'
                             android:visibility='@{n104a.checked? View.VISIBLE : View.GONE}' />

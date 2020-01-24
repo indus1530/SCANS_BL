@@ -20,6 +20,7 @@
 
 
         <LinearLayout
+            android:layoutDirection="ltr"
             android:id="@+id/fldGrpSectionJ03"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -727,7 +728,7 @@
 
                         <EditText
                             android:id="@+id/j12396x"
-                            style="@style/radiobutton"
+                            style="@style/EditTextAlpha"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:hint="@string/j123x"
