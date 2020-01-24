@@ -39,6 +39,7 @@ public class SectionDActivity extends AppCompatActivity {
     private int serial = 0;
     private Pair<List<Integer>, List<String>> menSLst;
     private Pair<List<Integer>, List<String>> womenSLst;
+    private FamilyMembersContract motherFMC;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -164,10 +165,16 @@ public class SectionDActivity extends AppCompatActivity {
 
         JSONObject sd = new JSONObject();
 
-        sd.put("d106", menSLst.getFirst().size() != 0 && bi.d106.getSelectedItemPosition() != 1 ? mainVModel.getMemberInfo(menSLst.getFirst().get(bi.d106.getSelectedItemPosition() - 2)) : "97");
+        sd.put("d106", menSLst.getFirst().size() != 0 && bi.d106.getSelectedItemPosition() != 1
+                ? mainVModel.getMemberInfo(menSLst.getFirst().get(bi.d106.getSelectedItemPosition() - 2)).getSerialno() : "97");
         fmc.setMotherName(bi.d106.getSelectedItem().toString());
-        sd.put("d107", womenSLst.getFirst().size() != 0 && bi.d107.getSelectedItemPosition() != 1 ? mainVModel.getMemberInfo(womenSLst.getFirst().get(bi.d107.getSelectedItemPosition() - 2)) : "97");
+
+        motherFMC = womenSLst.getFirst().size() != 0 && bi.d107.getSelectedItemPosition() != 1
+                ? mainVModel.getMemberInfo(womenSLst.getFirst().get(bi.d107.getSelectedItemPosition() - 2)) : null;
+        sd.put("d107", womenSLst.getFirst().size() != 0 && bi.d107.getSelectedItemPosition() != 1
+                ? mainVModel.getMemberInfo(womenSLst.getFirst().get(bi.d107.getSelectedItemPosition() - 2)).getSerialno() : "97");
         fmc.setfName(bi.d107.getSelectedItem().toString());
+
         sd.put("d108a", bi.d108a.getText().toString());
         sd.put("d108b", bi.d108b.getText().toString());
         sd.put("d108c", bi.d108c.getText().toString());
@@ -200,15 +207,23 @@ public class SectionDActivity extends AppCompatActivity {
                                                                                 bi.d111i.isChecked() ? "9" :
                                                                                         bi.d111j.isChecked() ? "99" :
                                                                                                 "0");
+        sd.put("d115",
+                bi.d115a.isChecked() ? "1" :
+                        bi.d115b.isChecked() ? "2" : "0");
+
         fmc.setsD(String.valueOf(sd));
 
         // Update in ViewModel
         mainVModel.updateFamilyMembers(fmc);
 
-        if (Integer.valueOf(fmc.getAge()) > 15 && Integer.valueOf(fmc.getAge()) < 49 && fmc.getGender().equals("2") && !bi.d105b.isChecked())
+        if (Integer.valueOf(fmc.getAge()) >= 15 && Integer.valueOf(fmc.getAge()) <= 49 && fmc.getGender().equals("2") && !bi.d105b.isChecked())
             mainVModel.setMWRA(fmc);
-        else if (Integer.valueOf(fmc.getAge()) < 5)
+        else if (Integer.valueOf(fmc.getAge()) < 5) {
             mainVModel.setChildU5(fmc);
+            if (motherFMC == null || bi.d115b.isChecked()) return;
+            if (Integer.valueOf(motherFMC.getAge()) >= 15 && Integer.valueOf(motherFMC.getAge()) <= 49)
+                mainVModel.setMwraChildU5(motherFMC);
+        }
 
     }
 
