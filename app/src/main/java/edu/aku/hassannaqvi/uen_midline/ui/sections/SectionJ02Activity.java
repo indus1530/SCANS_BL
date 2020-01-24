@@ -13,7 +13,6 @@ import org.json.JSONException;
 import org.json.JSONObject;
 
 import edu.aku.hassannaqvi.uen_midline.R;
-import edu.aku.hassannaqvi.uen_midline.core.MainApp;
 import edu.aku.hassannaqvi.uen_midline.databinding.ActivitySectionJ02Binding;
 import edu.aku.hassannaqvi.uen_midline.utils.Util;
 
@@ -230,10 +229,10 @@ public class SectionJ02Activity extends AppCompatActivity {
 
     }
 
-    private boolean formValidation() {
 
-//        re
-        return true;
+    private boolean formValidation() {
+        return Validator.emptyCheckingContainer(this, bi.fldGrpSectionJ02);
+
     }
 
     @Override
