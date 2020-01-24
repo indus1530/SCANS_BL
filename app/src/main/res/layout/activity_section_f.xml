@@ -664,6 +664,11 @@
                             android:layout_height="wrap_content"
                             android:hint="@string/f113a"
                             android:tag="f113a"
+                            android:maxLength="2"
+                            app:defaultValue="00"
+                            app:maxValue="20"
+                            app:minValue="1"
+                            app:type="range"
                             android:text='@{f113a.checked? f113ax.getText().toString() : ""}'
                             android:visibility='@{f113a.checked? View.VISIBLE : View.GONE}' />
 
@@ -1002,7 +1007,7 @@
                             android:layout_height="wrap_content"
                             android:hint="@string/f120"
                             android:inputType="number"
-                            android:maxLength="2"
+                            android:maxLength="3"
                             app:mask="##"
                             app:maxValue="100"
                             app:minValue="1"
