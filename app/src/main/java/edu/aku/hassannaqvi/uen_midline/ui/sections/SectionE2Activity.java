@@ -192,7 +192,8 @@ public class SectionE2Activity extends AppCompatActivity {
                                                 bi.e112e.isChecked() ? "5" :
                                                         "0");
 
-        e2.put("e113", bi.e113.getText().toString());
+        e2.put("e113m", bi.e113m.getText().toString());
+        e2.put("e113y", bi.e113y.getText().toString());
 
         e2.put("e114", bi.e114.getText().toString());
 
