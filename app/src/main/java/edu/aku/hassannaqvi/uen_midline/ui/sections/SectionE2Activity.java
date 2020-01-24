@@ -135,6 +135,9 @@ public class SectionE2Activity extends AppCompatActivity {
     private void clearContainer() {
         ClearClass.ClearAllFields(bi.container1, null);
         ClearClass.ClearAllFields(bi.mainContainer2, null);
+        ClearClass.ClearAllFields(bi.e104015, false);
+        bi.e104b.setChecked(true);
+        bi.e105c.setChecked(true);
         bi.container1.requestFocus();
         MainApp.twinFlag = false;
 

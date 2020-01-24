@@ -19,6 +19,7 @@ import edu.aku.hassannaqvi.uen_midline.R;
 import edu.aku.hassannaqvi.uen_midline.core.MainApp;
 import edu.aku.hassannaqvi.uen_midline.databinding.ActivitySectionE4Binding;
 import edu.aku.hassannaqvi.uen_midline.utils.DateUtils;
+import edu.aku.hassannaqvi.uen_midline.utils.Util;
 
 public class SectionE4Activity extends AppCompatActivity {
 
@@ -155,9 +156,9 @@ public class SectionE4Activity extends AppCompatActivity {
     }
 
     public void BtnEnd() {
-        MainApp.endActivity(this, this);
-    }
 
+        Util.openEndActivity(this);
+    }
     @Override
     public void onBackPressed() {
         Toast.makeText(this, "You can't go back", Toast.LENGTH_SHORT).show();
