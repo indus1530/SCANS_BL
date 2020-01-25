@@ -13,6 +13,9 @@ import org.json.JSONException;
 import org.json.JSONObject;
 
 import edu.aku.hassannaqvi.uen_midline.R;
+import edu.aku.hassannaqvi.uen_midline.contracts.FormsContract;
+import edu.aku.hassannaqvi.uen_midline.core.DatabaseHelper;
+import edu.aku.hassannaqvi.uen_midline.core.MainApp;
 import edu.aku.hassannaqvi.uen_midline.databinding.ActivitySectionMBinding;
 import edu.aku.hassannaqvi.uen_midline.utils.Util;
 import edu.aku.hassannaqvi.uen_midline.validator.ClearClass;
@@ -67,21 +70,29 @@ public class SectionMActivity extends AppCompatActivity {
 
     private boolean UpdateDB() {
 
-        return true;
+        DatabaseHelper db = new DatabaseHelper(this);
+        int updcount = db.updatesFormColumn(FormsContract.FormsTable.COLUMN_SM, MainApp.fc.getsM());
+        if (updcount == 1) {
+            return true;
+        } else {
+            Toast.makeText(this, "Updating Database... ERROR!", Toast.LENGTH_SHORT).show();
+            return false;
+        }
+
     }
 
     private void SaveDraft() throws JSONException {
-        JSONObject f1 = new JSONObject();
-        f1.put("m101",
+        JSONObject json = new JSONObject();
+        json.put("m101",
                 bi.m101a.isChecked() ? "1" :
                         bi.m101b.isChecked() ? "2" :
                                 bi.m101c.isChecked() ? "3" :
                                         "0");
-        f1.put("m102",
+        json.put("m102",
                 bi.m102a.isChecked() ? "1" :
                         bi.m102b.isChecked() ? "2" :
                                 "0");
-        f1.put("m103",
+        json.put("m103",
                 bi.m103a.isChecked() ? "1" :
                         bi.m103b.isChecked() ? "2" :
                                 bi.m103c.isChecked() ? "3" :
@@ -97,7 +108,7 @@ public class SectionMActivity extends AppCompatActivity {
                                                                                                                 bi.m103m.isChecked() ? "13" :
                                                                                                                         bi.m103n.isChecked() ? "14" :
                                                                                                                                 "0");
-        f1.put("m104",
+        json.put("m104",
                 bi.m104a.isChecked() ? "1" :
                         bi.m104b.isChecked() ? "2" :
                                 bi.m104c.isChecked() ? "3" :
@@ -114,7 +125,7 @@ public class SectionMActivity extends AppCompatActivity {
                                                                                                                         bi.m104n.isChecked() ? "14" :
                                                                                                                                 bi.m104o.isChecked() ? "15" :
                                                                                                                                         "0");
-        f1.put("m105",
+        json.put("m105",
                 bi.m105a.isChecked() ? "1" :
                         bi.m105b.isChecked() ? "2" :
                                 bi.m105c.isChecked() ? "3" :
@@ -137,141 +148,141 @@ public class SectionMActivity extends AppCompatActivity {
                                                                                                                                                                         bi.m105t.isChecked() ? "20" :
                                                                                                                                                                                 bi.m105u.isChecked() ? "21" :
                                                                                                                                                                                         "0");
-        f1.put("m106", bi.m106.getText().toString());
-        f1.put("m107a",
+        json.put("m106", bi.m106.getText().toString());
+        json.put("m107a",
                 bi.m107aa.isChecked() ? "1" :
                         bi.m107ab.isChecked() ? "2" :
                                 "0");
-        f1.put("m107b",
+        json.put("m107b",
                 bi.m107ba.isChecked() ? "1" :
                         bi.m107bb.isChecked() ? "2" :
                                 "0");
-        f1.put("m107c",
+        json.put("m107c",
                 bi.m107ca.isChecked() ? "1" :
                         bi.m107cb.isChecked() ? "2" :
                                 "0");
-        f1.put("m107e",
+        json.put("m107e",
                 bi.m108ea.isChecked() ? "1" :
                         bi.m108eb.isChecked() ? "2" :
                                 "0");
-        f1.put("m107f",
+        json.put("m107f",
                 bi.m107fa.isChecked() ? "1" :
                         bi.m107fb.isChecked() ? "2" :
                                 "0");
-        f1.put("m107g",
+        json.put("m107g",
                 bi.m107ga.isChecked() ? "1" :
                         bi.m107gb.isChecked() ? "2" :
                                 "0");
-        f1.put("m107h",
+        json.put("m107h",
                 bi.m107ha.isChecked() ? "1" :
                         bi.m107hb.isChecked() ? "2" :
                                 "0");
-        f1.put("m107i",
+        json.put("m107i",
                 bi.m107ia.isChecked() ? "1" :
                         bi.m107ib.isChecked() ? "2" :
                                 "0");
-        f1.put("m108",
+        json.put("m108",
                 bi.m108a.isChecked() ? "1" :
                         bi.m108b.isChecked() ? "2" :
                                 "0");
-        f1.put("m109",
+        json.put("m109",
                 bi.m109a.isChecked() ? "1" :
                         bi.m109b.isChecked() ? "2" :
                                 "0");
-        f1.put("m110",
+        json.put("m110",
                 bi.m110a.isChecked() ? "1" :
                         bi.m110b.isChecked() ? "2" :
                                 bi.m110c.isChecked() ? "98" :
                                         "0");
-        f1.put("m110at", bi.m110at.getText().toString());
-        f1.put("m110bt", bi.m110bt.getText().toString());
-        f1.put("m111",
+        json.put("m110at", bi.m110at.getText().toString());
+        json.put("m110bt", bi.m110bt.getText().toString());
+        json.put("m111",
                 bi.m111a.isChecked() ? "1" :
                         bi.m111b.isChecked() ? "2" :
                                 "0");
-        f1.put("m112a", bi.m112a.getText().toString());
-        f1.put("m112b", bi.m112b.getText().toString());
-        f1.put("m112c", bi.m112c.getText().toString());
-        f1.put("m112d", bi.m112d.getText().toString());
-        f1.put("m112e", bi.m112e.getText().toString());
-        f1.put("m112f", bi.m112f.getText().toString());
-        f1.put("m112g", bi.m112g.getText().toString());
-        f1.put("m113",
+        json.put("m112a", bi.m112a.getText().toString());
+        json.put("m112b", bi.m112b.getText().toString());
+        json.put("m112c", bi.m112c.getText().toString());
+        json.put("m112d", bi.m112d.getText().toString());
+        json.put("m112e", bi.m112e.getText().toString());
+        json.put("m112f", bi.m112f.getText().toString());
+        json.put("m112g", bi.m112g.getText().toString());
+        json.put("m113",
                 bi.m113a.isChecked() ? "1" :
                         bi.m113b.isChecked() ? "2" :
                                 "0");
-        f1.put("m114a",
+        json.put("m114a",
                 bi.m114aa.isChecked() ? "1" :
                         bi.m114ab.isChecked() ? "2" :
                                 "0");
-        f1.put("m114b",
+        json.put("m114b",
                 bi.m114ba.isChecked() ? "1" :
                         bi.m114bb.isChecked() ? "2" :
                                 "0");
-        f1.put("m114c",
+        json.put("m114c",
                 bi.m114ca.isChecked() ? "1" :
                         bi.m114cb.isChecked() ? "2" :
                                 "0");
-        f1.put("m114d",
+        json.put("m114d",
                 bi.m114da.isChecked() ? "1" :
                         "0");
-        f1.put("m114e",
+        json.put("m114e",
                 bi.m114ea.isChecked() ? "1" :
                         bi.m114eb.isChecked() ? "2" :
                                 "0");
-        f1.put("m114f",
+        json.put("m114f",
                 bi.m114fa.isChecked() ? "1" :
                         bi.m114fb.isChecked() ? "2" :
                                 "0");
-        f1.put("m114g",
+        json.put("m114g",
                 bi.m114ga.isChecked() ? "1" :
                         bi.m114gb.isChecked() ? "2" :
                                 "0");
-        f1.put("m114h",
+        json.put("m114h",
                 bi.m114ha.isChecked() ? "1" :
                         bi.m114hb.isChecked() ? "2" :
                                 "0");
-        f1.put("m114i",
+        json.put("m114i",
                 bi.m114ia.isChecked() ? "1" :
                         bi.m114ib.isChecked() ? "2" :
                                 "0");
-        f1.put("m114j",
+        json.put("m114j",
                 bi.m114ja.isChecked() ? "1" :
                         bi.m114jb.isChecked() ? "2" :
                                 "0");
-        f1.put("m114k",
+        json.put("m114k",
                 bi.m114ka.isChecked() ? "1" :
                         bi.m114kb.isChecked() ? "2" :
                                 "0");
-        f1.put("m114l",
+        json.put("m114l",
                 bi.m114la.isChecked() ? "1" :
                         bi.m114lb.isChecked() ? "2" :
                                 "0");
-        f1.put("m114m",
+        json.put("m114m",
                 bi.m114ma.isChecked() ? "1" :
                         bi.m114mb.isChecked() ? "2" :
                                 "0");
-        f1.put("m114n",
+        json.put("m114n",
                 bi.m114na.isChecked() ? "1" :
                         bi.m114nb.isChecked() ? "2" :
                                 "0");
-        f1.put("m114o",
+        json.put("m114o",
                 bi.m114oa.isChecked() ? "1" :
                         bi.m114ob.isChecked() ? "2" :
                                 "0");
-        f1.put("m114p",
+        json.put("m114p",
                 bi.m114pa.isChecked() ? "1" :
                         bi.m114pb.isChecked() ? "2" :
                                 "0");
-        f1.put("m114q",
+        json.put("m114q",
                 bi.m114qa.isChecked() ? "1" :
                         bi.m114qb.isChecked() ? "2" :
                                 "0");
-        f1.put("m114r",
+        json.put("m114r",
                 bi.m114ra.isChecked() ? "1" :
                         bi.m114rb.isChecked() ? "2" :
                                 "0");
-        f1.put("m115",
+        json.put("m115",
                 bi.m115a.isChecked() ? "1" :
                         bi.m115b.isChecked() ? "2" :
                                 bi.m115c.isChecked() ? "3" :
@@ -284,7 +295,7 @@ public class SectionMActivity extends AppCompatActivity {
                                                                                         bi.m115j.isChecked() ? "10" :
                                                                                                 bi.m115k.isChecked() ? "11" :
                                                                                                         "0");
-        f1.put("m116",
+        json.put("m116",
                 bi.m116a.isChecked() ? "1" :
                         bi.m116b.isChecked() ? "2" :
                                 bi.m116c.isChecked() ? "3" :
@@ -294,6 +305,8 @@ public class SectionMActivity extends AppCompatActivity {
                                                                 bi.m116g.isChecked() ? "7" :
                                                                         bi.m116h.isChecked() ? "8" :
                                                                                 "0");
+
+        MainApp.fc.setsM(String.valueOf(json));
 
     }
 

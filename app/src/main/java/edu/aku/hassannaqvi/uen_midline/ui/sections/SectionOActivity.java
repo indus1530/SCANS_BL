@@ -13,6 +13,9 @@ import org.json.JSONException;
 import org.json.JSONObject;
 
 import edu.aku.hassannaqvi.uen_midline.R;
+import edu.aku.hassannaqvi.uen_midline.contracts.FormsContract;
+import edu.aku.hassannaqvi.uen_midline.core.DatabaseHelper;
+import edu.aku.hassannaqvi.uen_midline.core.MainApp;
 import edu.aku.hassannaqvi.uen_midline.databinding.ActivitySectionOBinding;
 import edu.aku.hassannaqvi.uen_midline.ui.other.EndingActivity;
 import edu.aku.hassannaqvi.uen_midline.utils.Util;
@@ -72,51 +75,58 @@ public class SectionOActivity extends AppCompatActivity {
 
     private boolean UpdateDB() {
 
-        return true;
+        DatabaseHelper db = new DatabaseHelper(this);
+        int updcount = db.updatesFormColumn(FormsContract.FormsTable.COLUMN_SO, MainApp.fc.getsO());
+        if (updcount == 1) {
+            return true;
+        } else {
+            Toast.makeText(this, "Updating Database... ERROR!", Toast.LENGTH_SHORT).show();
+            return false;
+        }
     }
 
     private void SaveDraft() throws JSONException {
 
+        JSONObject json = new JSONObject();
 
-        JSONObject f1 = new JSONObject();
-        f1.put("o101",
+        json.put("o101",
                 bi.o101a.isChecked() ?"1" :
                         bi.o101b.isChecked() ?"2" :
                                 bi.o101c.isChecked() ?"3" :
                                         bi.o10196.isChecked() ? "96" :
                                                 "0");
-        f1.put("o10196x", bi.o10196x.getText().toString());
-        f1.put("o102",
+        json.put("o10196x", bi.o10196x.getText().toString());
+        json.put("o102",
                 bi.o102a.isChecked() ?"1" :
                         bi.o102b.isChecked() ?"2" :
                                 "0");
-        f1.put("o103",
+        json.put("o103",
                 bi.o103a.isChecked() ?"1" :
                         bi.o103b.isChecked() ?"2" :
                                 "0");
-        f1.put("o104a",bi.o104a.isChecked() ?"1" :"0");
-        f1.put("o104b",bi.o104b.isChecked() ?"2" :"0");
-        f1.put("o104c",bi.o104c.isChecked() ?"3" :"0");
-        f1.put("o104d",bi.o104d.isChecked() ?"4" :"0");
+        json.put("o104a", bi.o104a.isChecked() ? "1" : "0");
+        json.put("o104b", bi.o104b.isChecked() ? "2" : "0");
+        json.put("o104c", bi.o104c.isChecked() ? "3" : "0");
+        json.put("o104d", bi.o104d.isChecked() ? "4" : "0");
         /*f1.put("o104x",bi.o104x.isChecked() ?"96" :"0");
         f1.put("o104xt", bi.o104xt.getText().toString());*/
 
-        f1.put("o105",
+        json.put("o105",
                 bi.o105a.isChecked() ? "1" :
                         bi.o105b.isChecked() ? "2" :
                                 "0");
 
-        f1.put("o106",
+        json.put("o106",
                 bi.o106a.isChecked() ?"1" :
                         bi.o106b.isChecked() ?"2" :
                                 "0");
 
-        f1.put("o107a",bi.o107a.isChecked() ?"1" :"0");
-        f1.put("o107b",bi.o107b.isChecked() ?"2" :"0");
-        f1.put("o107c",bi.o107c.isChecked() ?"3" :"0");
-        f1.put("o107d",bi.o107d.isChecked() ?"4" :"0");
+        json.put("o107a", bi.o107a.isChecked() ? "1" : "0");
+        json.put("o107b", bi.o107b.isChecked() ? "2" : "0");
+        json.put("o107c", bi.o107c.isChecked() ? "3" : "0");
+        json.put("o107d", bi.o107d.isChecked() ? "4" : "0");
 
-        f1.put("o108",
+        json.put("o108",
                 bi.o108a.isChecked() ?"1" :
                         bi.o108b.isChecked() ?"2" :
                                 bi.o108c.isChecked() ?"3" :
@@ -126,7 +136,9 @@ public class SectionOActivity extends AppCompatActivity {
                                                                 bi.o108g.isChecked() ?"7" :
                                                                         bi.o108x.isChecked() ?"96" :
                                                                                 "0");
-        f1.put("o108xt", bi.o108xt.getText().toString());
+        json.put("o108xt", bi.o108xt.getText().toString());
+
+        MainApp.fc.setsO(String.valueOf(json));
 
     }
 
