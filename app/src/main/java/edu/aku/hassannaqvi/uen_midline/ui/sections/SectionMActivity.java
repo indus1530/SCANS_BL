@@ -1,11 +1,11 @@
 package edu.aku.hassannaqvi.uen_midline.ui.sections;
 
-import androidx.appcompat.app.AppCompatActivity;
-import androidx.databinding.DataBindingUtil;
-
 import android.content.Intent;
 import android.os.Bundle;
 import android.widget.Toast;
+
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.databinding.DataBindingUtil;
 
 import com.validatorcrawler.aliazaz.Validator;
 
@@ -36,7 +36,7 @@ public class SectionMActivity extends AppCompatActivity {
 
         bi.m109.setOnCheckedChangeListener(((radioGroup, i) -> {
 
-            if (i != bi.m109a.getId()) {
+            if (i == bi.m109b.getId()) {
                 ClearClass.ClearAllFields(bi.fldGrpCVm110, null);
             }
         }));
