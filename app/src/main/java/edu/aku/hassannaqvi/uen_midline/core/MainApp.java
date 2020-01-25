@@ -26,7 +26,6 @@ import androidx.databinding.DataBindingUtil;
 import java.util.List;
 
 import edu.aku.hassannaqvi.uen_midline.R;
-import edu.aku.hassannaqvi.uen_midline.contracts.AppInfo;
 import edu.aku.hassannaqvi.uen_midline.contracts.FamilyMembersContract;
 import edu.aku.hassannaqvi.uen_midline.contracts.FormsContract;
 import edu.aku.hassannaqvi.uen_midline.contracts.MotherContract;

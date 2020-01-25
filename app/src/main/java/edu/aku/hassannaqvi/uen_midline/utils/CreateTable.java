@@ -15,8 +15,7 @@ import edu.aku.hassannaqvi.uen_midline.contracts.UsersContract;
 import edu.aku.hassannaqvi.uen_midline.contracts.VersionAppContract;
 import edu.aku.hassannaqvi.uen_midline.contracts.VillagesContract;
 
-public class CreateTable {
-
+public final class CreateTable {
 
     public static final String DATABASE_NAME = "uen_ml20.db";
     public static final String DB_NAME = "uen_ml20_copy.db";
