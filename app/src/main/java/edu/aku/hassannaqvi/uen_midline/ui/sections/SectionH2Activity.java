@@ -328,8 +328,7 @@ public class SectionH2Activity extends AppCompatActivity {
                                         bi.h223d.isChecked() ? "5" :
                                                 "0");
 
-
-        MainApp.fc.setsInfo(String.valueOf(json));
+        MainApp.kish.setsH2(String.valueOf(json));
 
     }
 

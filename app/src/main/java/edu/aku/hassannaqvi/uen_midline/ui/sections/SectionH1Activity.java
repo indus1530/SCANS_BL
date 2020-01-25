@@ -577,8 +577,7 @@ public class SectionH1Activity extends AppCompatActivity {
                                                                                 "0");
         json.put("h137bb96x", bi.h137bb96x.getText().toString());
 
-        //MainApp.fc.set(String.valueOf(json));
-
+        MainApp.kish.setsH1(String.valueOf(json));
     }
 
 
