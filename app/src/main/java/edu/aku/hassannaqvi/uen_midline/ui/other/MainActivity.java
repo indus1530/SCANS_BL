@@ -272,7 +272,7 @@ public class MainActivity extends AppCompatActivity {
 */
 
 //        Testing visibility
-        if (Integer.valueOf(MainApp.versionName.split("\\.")[0]) > 0) {
+        if (Integer.valueOf(MainApp.appInfo.getVersionName().split("\\.")[0]) > 0) {
             bi.testing.setVisibility(View.GONE);
         } else {
             bi.testing.setVisibility(View.VISIBLE);
@@ -310,14 +310,6 @@ public class MainActivity extends AppCompatActivity {
     public void openDB() {
         Intent dbmanager = new Intent(getApplicationContext(), AndroidDatabaseManager.class);
         startActivity(dbmanager);
-    }
-
-
-    public void CheckCluster(View v) {
-//        Intent cluster_list = new Intent(getApplicationContext(), FormsList.class);
-//        cluster_list.putExtra("dssid", MainApp.regionDss);
-//        startActivity(cluster_list);
-
     }
 
     public void syncServer() {

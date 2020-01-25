@@ -19,6 +19,12 @@ public class BLRandomContract {
     private String hh;
     private String hhhead;
     private String randomDT;
+    private String contact;
+    private String selStructure;
+    private String sno;
+
+    private String rndType;
+    private String assignHH;
 
     public BLRandomContract() {
     }
@@ -32,34 +38,43 @@ public class BLRandomContract {
         this.hh = rnd.getHh();
         this.hhhead = rnd.getHhhead();
         this.randomDT = rnd.getRandomDT();
+        this.contact = rnd.getContact();
+        this.selStructure = rnd.getSelStructure();
+        this.sno = rnd.getSno();
     }
 
     public BLRandomContract Sync(JSONObject jsonObject) throws JSONException {
-        this._ID = jsonObject.getString(singleChild.COLUMN_ID);
-        this.LUID = jsonObject.getString(singleChild.COLUMN_LUID);
-        this.subVillageCode = jsonObject.getString(singleChild.COLUMN_SUB_VILLAGE_CODE);
-        this.structure = jsonObject.getString(singleChild.COLUMN_STRUCTURE_NO);
-
+        this._ID = jsonObject.getString(singleRandomHH.COLUMN_ID);
+        this.LUID = jsonObject.getString(singleRandomHH.COLUMN_LUID);
+        this.subVillageCode = jsonObject.getString(singleRandomHH.COLUMN_ENUM_BLOCK_CODE);
+        this.structure = jsonObject.getString(singleRandomHH.COLUMN_STRUCTURE_NO);
         this.structure = String.format("%04d", Integer.valueOf(this.structure));
 
-        this.extension = jsonObject.getString(singleChild.COLUMN_FAMILY_EXT_CODE);
-        this.hh = jsonObject.getString(singleChild.COLUMN_STRUCTURE_NO)
-                + "-" + jsonObject.getString(singleChild.COLUMN_FAMILY_EXT_CODE);
-        this.randomDT = jsonObject.getString(singleChild.COLUMN_RANDOMDT);
-        this.hhhead = jsonObject.getString(singleChild.COLUMN_HH_HEAD);
+        this.extension = jsonObject.getString(singleRandomHH.COLUMN_FAMILY_EXT_CODE);
+        this.extension = String.format("%03d", Integer.valueOf(this.extension));
+
+        this.hh = structure + "-" + extension;
+        this.randomDT = jsonObject.getString(singleRandomHH.COLUMN_RANDOMDT);
+        this.hhhead = jsonObject.getString(singleRandomHH.COLUMN_HH_HEAD);
+        this.contact = jsonObject.getString(singleRandomHH.COLUMN_CONTACT);
+        this.selStructure = jsonObject.getString(singleRandomHH.COLUMN_HH_SELECTED_STRUCT);
+        this.sno = jsonObject.getString(singleRandomHH.COLUMN_SNO_HH);
 
         return this;
     }
 
     public BLRandomContract Hydrate(Cursor cursor) {
-        this._ID = cursor.getString(cursor.getColumnIndex(singleChild.COLUMN_ID));
-        this.LUID = cursor.getString(cursor.getColumnIndex(singleChild.COLUMN_LUID));
-        this.subVillageCode = cursor.getString(cursor.getColumnIndex(singleChild.COLUMN_SUB_VILLAGE_CODE));
-        this.structure = cursor.getString(cursor.getColumnIndex(singleChild.COLUMN_STRUCTURE_NO));
-        this.extension = cursor.getString(cursor.getColumnIndex(singleChild.COLUMN_FAMILY_EXT_CODE));
-        this.hh = cursor.getString(cursor.getColumnIndex(singleChild.COLUMN_HH));
-        this.randomDT = cursor.getString(cursor.getColumnIndex(singleChild.COLUMN_RANDOMDT));
-        this.hhhead = cursor.getString(cursor.getColumnIndex(singleChild.COLUMN_HH_HEAD));
+        this._ID = cursor.getString(cursor.getColumnIndex(singleRandomHH.COLUMN_ID));
+        this.LUID = cursor.getString(cursor.getColumnIndex(singleRandomHH.COLUMN_LUID));
+        this.subVillageCode = cursor.getString(cursor.getColumnIndex(singleRandomHH.COLUMN_ENUM_BLOCK_CODE));
+        this.structure = cursor.getString(cursor.getColumnIndex(singleRandomHH.COLUMN_STRUCTURE_NO));
+        this.extension = cursor.getString(cursor.getColumnIndex(singleRandomHH.COLUMN_FAMILY_EXT_CODE));
+        this.hh = cursor.getString(cursor.getColumnIndex(singleRandomHH.COLUMN_HH));
+        this.randomDT = cursor.getString(cursor.getColumnIndex(singleRandomHH.COLUMN_RANDOMDT));
+        this.hhhead = cursor.getString(cursor.getColumnIndex(singleRandomHH.COLUMN_HH_HEAD));
+        this.contact = cursor.getString(cursor.getColumnIndex(singleRandomHH.COLUMN_CONTACT));
+        this.selStructure = cursor.getString(cursor.getColumnIndex(singleRandomHH.COLUMN_HH_SELECTED_STRUCT));
+        this.sno = cursor.getString(cursor.getColumnIndex(singleRandomHH.COLUMN_SNO_HH));
 
         return this;
     }
@@ -128,31 +143,66 @@ public class BLRandomContract {
         this.hhhead = hhhead;
     }
 
-    public JSONObject toJSONObject() throws JSONException {
-        JSONObject json = new JSONObject();
-
-        json.put(singleChild.COLUMN_ID, this._ID);
-        json.put(singleChild.COLUMN_LUID, this.LUID);
-        json.put(singleChild.COLUMN_SUB_VILLAGE_CODE, this.subVillageCode);
-        json.put(singleChild.COLUMN_HH, this.hh);
-        json.put(singleChild.COLUMN_RANDOMDT, this.randomDT);
-        json.put(singleChild.COLUMN_HH_HEAD, this.hhhead);
-
-        return json;
+    public String getContact() {
+        return contact;
     }
 
-    public static abstract class singleChild implements BaseColumns {
+    public void setContact(String contact) {
+        this.contact = contact;
+    }
+
+    public String getSelStructure() {
+        return selStructure;
+    }
+
+    public void setSelStructure(String selStructure) {
+        this.selStructure = selStructure;
+    }
+
+    public String getAssignHH() {
+        return assignHH;
+    }
+
+    public void setAssignHH(String assignHH) {
+        this.assignHH = assignHH;
+    }
+
+    public String getRndType() {
+        return rndType;
+    }
+
+    public void setRndType(String rndType) {
+        this.rndType = rndType;
+    }
+
+    public String getSno() {
+        return sno;
+    }
+
+    public void setSno(String sno) {
+        this.sno = sno;
+    }
+
+    public static abstract class singleRandomHH implements BaseColumns {
 
         public static final String TABLE_NAME = "BLRandom";
         public static final String COLUMN_ID = "_id";
         public static final String COLUMN_RANDOMDT = "randDT";
         public static final String COLUMN_LUID = "UID";
-        public static final String COLUMN_SUB_VILLAGE_CODE = "hh02";
+        public static final String COLUMN_ENUM_BLOCK_CODE = "hh02";
         public static final String COLUMN_STRUCTURE_NO = "hh03";
         public static final String COLUMN_FAMILY_EXT_CODE = "hh07";
         public static final String COLUMN_HH = "hh";
         public static final String COLUMN_HH_HEAD = "hh08";
-        public static String _URIGET = "bl_random.php";
+        public static final String COLUMN_CONTACT = "hh09";
+        public static final String COLUMN_HH_SELECTED_STRUCT = "hhss";
+
+        public static final String COLUMN_SNO_HH = "sno";
+
+        public static final String COLUMN_RANDOM_TYPE = "rndtype";
+        public static final String COLUMN_ASSIGNED_HH = "rndAssign";
+
+        public static String _URI = "bl_random.php";
     }
 
 }

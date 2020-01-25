@@ -22,6 +22,8 @@ import java.util.List;
 
 import edu.aku.hassannaqvi.uen_midline.R;
 import edu.aku.hassannaqvi.uen_midline.contracts.FamilyMembersContract;
+import edu.aku.hassannaqvi.uen_midline.core.DatabaseHelper;
+import edu.aku.hassannaqvi.uen_midline.core.MainApp;
 import edu.aku.hassannaqvi.uen_midline.databinding.ActivitySectionDBinding;
 import edu.aku.hassannaqvi.uen_midline.ui.list_activity.FamilyMembersListActivity;
 import edu.aku.hassannaqvi.uen_midline.utils.DateUtils;
@@ -87,9 +89,6 @@ public class SectionDActivity extends AppCompatActivity {
                 }
             };
 
-            /*List<FamilyMembersContract> allMen = mainVModel.getAllMenWomen(1);
-            List<FamilyMembersContract> allWomen = mainVModel.getAllMenWomen(2);*/
-
             bi.d106.setAdapter(new ArrayAdapter<>(this, android.R.layout.simple_dropdown_item_1line, menLst));
             bi.d107.setAdapter(new ArrayAdapter<>(this, android.R.layout.simple_dropdown_item_1line, womenLst));
         }
@@ -109,16 +108,32 @@ public class SectionDActivity extends AppCompatActivity {
         } catch (JSONException e) {
             e.printStackTrace();
         }
-        if (UpdateDB()) {
-            if (fmcFLAG) setResult(RESULT_OK, new Intent().putExtra(SERIAL_EXTRA, serial));
-            else setResult(RESULT_OK);
+        if (fmcFLAG) {
+            setResult(RESULT_OK, new Intent().putExtra(SERIAL_EXTRA, serial));
             finish();
         } else {
-            Toast.makeText(this, "Failed to Update Database!", Toast.LENGTH_SHORT).show();
+            if (UpdateDB()) {
+                setResult(RESULT_OK);
+                finish();
+            } else {
+                Toast.makeText(this, "Failed to Update Database!", Toast.LENGTH_SHORT).show();
+            }
         }
+
     }
 
     private boolean UpdateDB() {
+        DatabaseHelper db = new DatabaseHelper(this);
+        long updcount = db.addFamilyMember(fmc);
+        fmc.set_id(String.valueOf(updcount));
+        if (updcount != 0) {
+            fmc.setUid(MainApp.deviceId + fmc.get_id());
+            db.updatesFamilyMemberColumn(FamilyMembersContract.singleMember.COLUMN_UID, fmc.getUid(), fmc.get_id());
+            return true;
+        } else {
+            Toast.makeText(this, "Updating Database... ERROR!", Toast.LENGTH_SHORT).show();
+
+        }
 
         return true;
     }

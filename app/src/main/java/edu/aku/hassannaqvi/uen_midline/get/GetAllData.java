@@ -7,9 +7,11 @@ import android.util.Log;
 
 import org.json.JSONArray;
 import org.json.JSONException;
+import org.json.JSONObject;
 
 import java.io.BufferedInputStream;
 import java.io.BufferedReader;
+import java.io.DataOutputStream;
 import java.io.InputStream;
 import java.io.InputStreamReader;
 import java.net.HttpURLConnection;
@@ -17,12 +19,10 @@ import java.net.URL;
 import java.util.List;
 
 import edu.aku.hassannaqvi.uen_midline.adapter.SyncListAdapter;
-import edu.aku.hassannaqvi.uen_midline.contracts.AreasContract;
-import edu.aku.hassannaqvi.uen_midline.contracts.TalukasContract;
-import edu.aku.hassannaqvi.uen_midline.contracts.UCsContract;
+import edu.aku.hassannaqvi.uen_midline.contracts.BLRandomContract;
+import edu.aku.hassannaqvi.uen_midline.contracts.EnumBlockContract;
 import edu.aku.hassannaqvi.uen_midline.contracts.UsersContract;
 import edu.aku.hassannaqvi.uen_midline.contracts.VersionAppContract;
-import edu.aku.hassannaqvi.uen_midline.contracts.VillagesContract;
 import edu.aku.hassannaqvi.uen_midline.core.DatabaseHelper;
 import edu.aku.hassannaqvi.uen_midline.core.MainApp;
 import edu.aku.hassannaqvi.uen_midline.otherClasses.SyncModel;
@@ -56,23 +56,20 @@ public class GetAllData extends AsyncTask<String, String, String> {
         this.list = list;
         TAG = "Get" + syncClass;
         switch (syncClass) {
-            case "Talukas":
+            case "EnumBlock":
                 position = 0;
                 break;
-            case "UCs":
+            case "User":
                 position = 1;
                 break;
-            case "Areas":
+            case "BLRandom":
                 position = 2;
                 break;
-            case "Villages":
+            case "VersionApp":
                 position = 3;
                 break;
-            case "Users":
+            case "FamilyMembers":
                 position = 4;
-                break;
-            case "VersionApp":
-                position = 5;
                 break;
         }
         list.get(position).settableName(syncClass);
@@ -96,23 +93,20 @@ public class GetAllData extends AsyncTask<String, String, String> {
     protected void onProgressUpdate(String... values) {
         super.onProgressUpdate(values);
         switch (values[0]) {
-            case "Talukas":
+            case "EnumBlock":
                 position = 0;
                 break;
-            case "UCs":
+            case "User":
                 position = 1;
                 break;
-            case "Areas":
+            case "BLRandom":
                 position = 2;
                 break;
-            case "Villages":
+            case "VersionApp":
                 position = 3;
                 break;
-            case "Users":
+            case "FamilyMembers":
                 position = 4;
-                break;
-            case "VersionApp":
-                position = 5;
                 break;
         }
         list.get(position).setstatus("Syncing");
@@ -129,57 +123,60 @@ public class GetAllData extends AsyncTask<String, String, String> {
         URL url = null;
         try {
             switch (syncClass) {
-                case "Talukas":
-                    url = new URL(MainApp._HOST_URL + TalukasContract.singleTalukas._URI);
+                case "EnumBlock":
+                    url = new URL(MainApp._HOST_URL + EnumBlockContract.EnumBlockTable._URI);
                     position = 0;
                     break;
-                case "UCs":
-                    url = new URL(MainApp._HOST_URL + UCsContract.singleUCs._URI);
+                case "User":
+                    url = new URL(MainApp._HOST_URL + UsersContract.singleUser._URI);
                     position = 1;
                     break;
-                case "Areas":
-                    url = new URL(MainApp._HOST_URL + AreasContract.singleAreas._URI);
+                case "BLRandom":
+                    url = new URL(MainApp._HOST_URL + BLRandomContract.singleRandomHH._URI);
                     position = 2;
-                    break;
-                case "Villages":
-                    url = new URL(MainApp._HOST_URL + VillagesContract.singleVillage._URI);
-                    position = 3;
-                    break;
-                case "Users":
-                    url = new URL(MainApp._HOST_URL + UsersContract.singleUser._URI);
-                    position = 4;
                     break;
                 case "VersionApp":
                     url = new URL(MainApp._UPDATE_URL + VersionAppContract.VersionAppTable._URI);
-                    position = 5;
+                    position = 3;
                     break;
-
             }
 
             urlConnection = (HttpURLConnection) url.openConnection();
             urlConnection.setReadTimeout(100000 /* milliseconds */);
             urlConnection.setConnectTimeout(150000 /* milliseconds */);
 
-/*            urlConnection.setRequestMethod("POST");
-            urlConnection.setDoOutput(true);
-            urlConnection.setDoInput(true);
-            urlConnection.setRequestProperty("Content-Type", "application/json");
-            urlConnection.setRequestProperty("charset", "utf-8");
-            urlConnection.setUseCaches(false);
+            switch (syncClass) {
+                case "EnumBlock":
+                case "User":
+                case "BLRandom":
 
-            // Starts the query
-            urlConnection.connect();
-            DataOutputStream wr = new DataOutputStream(urlConnection.getOutputStream());
-            JSONObject json = new JSONObject();
-            try {
-                json.put("user", "test1234");
-            } catch (JSONException e1) {
-                e1.printStackTrace();
+                    if (args[0] != null && !args[0].equals("")) {
+                        if (Integer.valueOf(args[0]) > 0) {
+                            urlConnection.setRequestMethod("POST");
+                            urlConnection.setDoOutput(true);
+                            urlConnection.setDoInput(true);
+                            urlConnection.setRequestProperty("Content-Type", "application/json");
+                            urlConnection.setRequestProperty("charset", "utf-8");
+                            urlConnection.setUseCaches(false);
+
+                            // Starts the query
+                            urlConnection.connect();
+                            JSONArray jsonSync = new JSONArray();
+                            DataOutputStream wr = new DataOutputStream(urlConnection.getOutputStream());
+                            JSONObject json = new JSONObject();
+                            try {
+                                json.put("dist_id", args[0]);
+                            } catch (JSONException e1) {
+                                e1.printStackTrace();
+                            }
+                            Log.d(TAG, "downloadUrl: " + json.toString());
+                            wr.writeBytes(json.toString());
+                            wr.flush();
+                            wr.close();
+                        }
+                    }
+                    break;
             }
-            Log.d(TAG, "downloadUrl: " + json.toString());
-            wr.writeBytes(json.toString());
-            wr.flush();
-            wr.close();*/
 
 
             Log.d(TAG, "doInBackground: " + urlConnection.getResponseCode());
@@ -221,31 +218,23 @@ public class GetAllData extends AsyncTask<String, String, String> {
                     JSONArray jsonArray = new JSONArray(json);
 
                     switch (syncClass) {
-
-                        case "Talukas":
-                            db.syncTalukas(jsonArray);
+                        case "EnumBlock":
+                            db.syncEnumBlocks(jsonArray);
                             position = 0;
                             break;
-                        case "UCs":
-                            db.syncUCs(jsonArray);
+                        case "User":
+                            db.syncUser(jsonArray);
                             position = 1;
                             break;
-                        case "Areas":
-                            db.syncAreas(jsonArray);
+                        case "BLRandom":
+                            db.syncBLRandom(jsonArray);
                             position = 2;
-                            break;
-                        case "Villages":
-                            db.syncVillages(jsonArray);
-                            position = 3;
-                            break;
-                        case "Users":
-                            db.syncUser(jsonArray);
-                            position = 4;
                             break;
                         case "VersionApp":
                             db.syncVersionApp(jsonArray);
-                            position = 5;
+                            position = 3;
                             break;
+
                     }
 
                     pd.setMessage("Received: " + jsonArray.length());

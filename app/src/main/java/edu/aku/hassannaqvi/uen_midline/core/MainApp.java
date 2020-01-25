@@ -28,7 +28,6 @@ import java.util.List;
 import edu.aku.hassannaqvi.uen_midline.R;
 import edu.aku.hassannaqvi.uen_midline.contracts.FamilyMembersContract;
 import edu.aku.hassannaqvi.uen_midline.contracts.FormsContract;
-import edu.aku.hassannaqvi.uen_midline.contracts.MotherContract;
 import edu.aku.hassannaqvi.uen_midline.databinding.CountAlertDialogLayoutBinding;
 import edu.aku.hassannaqvi.uen_midline.ui.other.EndingActivity;
 import kotlin.Pair;
@@ -71,11 +70,7 @@ public class MainApp extends Application {
     public static AppInfo appInfo;
     public static Boolean admin = false;
     public static FormsContract fc;
-    public static MotherContract mc;
     public static String userName = "0000";
-    public static boolean flag = true;
-    public static int versionCode;
-    public static String versionName;
     public static int deathCount = 0;
     public static String DeviceURL = "devices.php";
     public static String IMEI;
@@ -115,10 +110,8 @@ public class MainApp extends Application {
             MainApp.fc.setGpsLat(GPSPref.getString("Latitude", "0"));
             MainApp.fc.setGpsLng(GPSPref.getString("Longitude", "0"));
             MainApp.fc.setGpsAcc(GPSPref.getString("Accuracy", "0"));
-//            AppMain.fc.setGpsTime(GPSPref.getString(date, "0")); // Timestamp is converted to date above
+//            MainApp.fc.setGpsTime(GPSPref.getString(date, "0")); // Timestamp is converted to date above
             MainApp.fc.setGpsDT(date); // Timestamp is converted to date above
-
-            Toast.makeText(activity, "GPS set", Toast.LENGTH_SHORT).show();
 
         } catch (Exception e) {
             Log.e("GPS", "setGPS: " + e.getMessage());
