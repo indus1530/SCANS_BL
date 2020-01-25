@@ -14,6 +14,8 @@ import org.json.JSONException;
 import org.json.JSONObject;
 
 import edu.aku.hassannaqvi.uen_midline.R;
+import edu.aku.hassannaqvi.uen_midline.contracts.KishMWRAContract;
+import edu.aku.hassannaqvi.uen_midline.core.DatabaseHelper;
 import edu.aku.hassannaqvi.uen_midline.core.MainApp;
 import edu.aku.hassannaqvi.uen_midline.databinding.ActivitySectionH2Binding;
 import edu.aku.hassannaqvi.uen_midline.utils.Util;
@@ -145,25 +147,20 @@ public class SectionH2Activity extends AppCompatActivity {
 
 
     public void BtnEnd() {
-
         Util.openEndActivity(this);
     }
 
+
     private boolean UpdateDB() {
 
-        /*DatabaseHelper db = new DatabaseHelper(this);
-
-        int updcount = db.updateSB();
-
+        DatabaseHelper db = new DatabaseHelper(this);
+        int updcount = db.updatesKishMWRAColumn(KishMWRAContract.SingleKishMWRA.COLUMN_SH2, MainApp.kish.getsH2());
         if (updcount == 1) {
-            Toast.makeText(this, "Updating Database... Successful!", Toast.LENGTH_SHORT).show();
             return true;
         } else {
             Toast.makeText(this, "Updating Database... ERROR!", Toast.LENGTH_SHORT).show();
             return false;
-        }*/
-
-        return true;
+        }
     }
 
 
@@ -331,8 +328,7 @@ public class SectionH2Activity extends AppCompatActivity {
                                         bi.h223d.isChecked() ? "5" :
                                                 "0");
 
-
-        MainApp.fc.setsInfo(String.valueOf(json));
+        MainApp.kish.setsH2(String.valueOf(json));
 
     }
 
