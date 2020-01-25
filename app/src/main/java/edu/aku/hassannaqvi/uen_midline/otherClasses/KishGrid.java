@@ -2,7 +2,7 @@ package edu.aku.hassannaqvi.uen_midline.otherClasses;
 
 public abstract class KishGrid {
 
-    static int[][] grid = new int[][]{
+    private static int[][] grid = new int[][]{
             {1, 1, 1, 1, 1, 1, 1, 1},
             {1, 2, 2, 2, 2, 2, 2, 2},
             {1, 1, 3, 3, 3, 3, 3, 3},
@@ -15,7 +15,7 @@ public abstract class KishGrid {
             {1, 2, 1, 2, 5, 4, 3, 2}
     };
 
-    public static int KishGridProcess(int hh, int tot) {
+    public static int kishGridProcess(int hh, int tot) {
 
         int a = hh, b = tot - 1;
 
@@ -28,9 +28,7 @@ public abstract class KishGrid {
             b = 7;
         }
 
-        int res = grid[a][b];
-
-        return res;
+        return grid[a][b];
     }
 
 }

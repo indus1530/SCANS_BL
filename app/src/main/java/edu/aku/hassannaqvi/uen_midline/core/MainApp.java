@@ -28,6 +28,7 @@ import java.util.List;
 import edu.aku.hassannaqvi.uen_midline.R;
 import edu.aku.hassannaqvi.uen_midline.contracts.FamilyMembersContract;
 import edu.aku.hassannaqvi.uen_midline.contracts.FormsContract;
+import edu.aku.hassannaqvi.uen_midline.contracts.KishMWRAContract;
 import edu.aku.hassannaqvi.uen_midline.databinding.CountAlertDialogLayoutBinding;
 import edu.aku.hassannaqvi.uen_midline.ui.other.EndingActivity;
 import kotlin.Pair;
@@ -70,6 +71,7 @@ public class MainApp extends Application {
     public static AppInfo appInfo;
     public static Boolean admin = false;
     public static FormsContract fc;
+    public static KishMWRAContract kish;
     public static String userName = "0000";
     public static int deathCount = 0;
     public static String DeviceURL = "devices.php";

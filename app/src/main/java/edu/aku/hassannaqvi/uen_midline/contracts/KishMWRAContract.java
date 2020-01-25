@@ -155,7 +155,6 @@ public class KishMWRAContract {
     }
 
 
-
     public KishMWRAContract hydrate(Cursor cursor) {
         this._ID = cursor.getString(cursor.getColumnIndex(SingleKishMWRA.COLUMN__ID));
         this.UID = cursor.getString(cursor.getColumnIndex(SingleKishMWRA.COLUMN_UID));
@@ -218,8 +217,7 @@ public class KishMWRAContract {
 
     }
 
-    public static abstract class SingleKishMWRA
-            implements BaseColumns {
+    public static abstract class SingleKishMWRA implements BaseColumns {
 
         public static final String TABLE_NAME = "kish_mwra";
         public static final String COLUMN__ID = "_id";

@@ -25,6 +25,7 @@ import edu.aku.hassannaqvi.uen_midline.contracts.FamilyMembersContract;
 import edu.aku.hassannaqvi.uen_midline.contracts.FamilyMembersContract.singleMember;
 import edu.aku.hassannaqvi.uen_midline.contracts.FormsContract;
 import edu.aku.hassannaqvi.uen_midline.contracts.FormsContract.FormsTable;
+import edu.aku.hassannaqvi.uen_midline.contracts.KishMWRAContract.SingleKishMWRA;
 import edu.aku.hassannaqvi.uen_midline.contracts.MWRAContract;
 import edu.aku.hassannaqvi.uen_midline.contracts.MWRAContract.MWRATable;
 import edu.aku.hassannaqvi.uen_midline.contracts.MWRA_PREContract;
@@ -1143,6 +1144,22 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         String[] selectionArgs = {String.valueOf(mortality.get_ID())};
 
         return db.update(SingleMortality.TABLE_NAME,
+                values,
+                selection,
+                selectionArgs);
+    }
+
+    //Generic update KishMWRAColumn
+    public int updatesKishMWRAColumn(String column, String value) {
+        SQLiteDatabase db = this.getReadableDatabase();
+
+        ContentValues values = new ContentValues();
+        values.put(column, value);
+
+        String selection = SingleKishMWRA._ID + " =? ";
+        String[] selectionArgs = {String.valueOf(MainApp.kish.get_ID())};
+
+        return db.update(SingleKishMWRA.TABLE_NAME,
                 values,
                 selection,
                 selectionArgs);

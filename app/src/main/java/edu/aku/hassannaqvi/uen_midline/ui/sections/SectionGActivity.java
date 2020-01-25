@@ -14,6 +14,8 @@ import org.json.JSONException;
 import org.json.JSONObject;
 
 import edu.aku.hassannaqvi.uen_midline.R;
+import edu.aku.hassannaqvi.uen_midline.contracts.KishMWRAContract;
+import edu.aku.hassannaqvi.uen_midline.core.DatabaseHelper;
 import edu.aku.hassannaqvi.uen_midline.core.MainApp;
 import edu.aku.hassannaqvi.uen_midline.databinding.ActivitySectionGBinding;
 import edu.aku.hassannaqvi.uen_midline.utils.Util;
@@ -188,19 +190,14 @@ public class SectionGActivity extends AppCompatActivity {
 
     private boolean UpdateDB() {
 
-        /*DatabaseHelper db = new DatabaseHelper(this);
-
-        int updcount = db.updateSB();
-
+        DatabaseHelper db = new DatabaseHelper(this);
+        int updcount = db.updatesKishMWRAColumn(KishMWRAContract.SingleKishMWRA.COLUMN_SG, MainApp.kish.getsG());
         if (updcount == 1) {
-            Toast.makeText(this, "Updating Database... Successful!", Toast.LENGTH_SHORT).show();
             return true;
         } else {
             Toast.makeText(this, "Updating Database... ERROR!", Toast.LENGTH_SHORT).show();
             return false;
-        }*/
-
-        return true;
+        }
     }
 
 
@@ -395,7 +392,7 @@ public class SectionGActivity extends AppCompatActivity {
                         bi.g129b.isChecked() ? "2" :
                                 "0");
 
-        MainApp.fc.setsInfo(String.valueOf(json));
+        MainApp.kish.setsG(String.valueOf(json));
 
     }
 
@@ -404,7 +401,6 @@ public class SectionGActivity extends AppCompatActivity {
         return Validator.emptyCheckingContainer(this, bi.GrpName);
 
     }
-
 
 
     @Override
