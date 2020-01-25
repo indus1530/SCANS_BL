@@ -63,7 +63,6 @@ public class MainApp extends Application {
     public static final long MILLISECONDS_IN_5Years = MILLIS_IN_SECOND * SECONDS_IN_MINUTE * MINUTES_IN_HOUR * HOURS_IN_DAY * DAYS_IN_5_YEAR;
     private static final long DAYS_IN_MONTH = 30;
     public static final long MILLISECONDS_IN_MONTH = MILLIS_IN_SECOND * SECONDS_IN_MINUTE * MINUTES_IN_HOUR * HOURS_IN_DAY * DAYS_IN_MONTH;
-
     private static final long DAYS_IN_2_YEAR = 365 * 2;
     public static final long MILLISECONDS_IN_2Years = MILLIS_IN_SECOND * SECONDS_IN_MINUTE * MINUTES_IN_HOUR * HOURS_IN_DAY * DAYS_IN_2_YEAR;
     public static String deviceId;
@@ -74,33 +73,25 @@ public class MainApp extends Application {
     public static FormsContract fc;
     public static MotherContract mc;
     public static String userName = "0000";
-
-    public static void setItemClick(OnItemClick itemClick) {
-        MainApp.itemClick = itemClick;
-    }
-
-    public static int mm = 1;
     public static boolean flag = true;
     public static int versionCode;
     public static String versionName;
     public static int deathCount = 0;
     public static String DeviceURL = "devices.php";
     public static String IMEI;
-
     public static SharedPreferences sharedPref;
     public static String TAG = "AppMain";
-
-
-    public static int childCount = 0;
     public static int noOfPragnencies = 0;
     public static boolean twinFlag = false;
     public static Pair<List<Integer>, List<String>> pragnantWoman;
-
     protected static LocationManager locationManager;
-
 
     public static String[] relationHHLst = {"Head of HH", "Wife/Husband", "Son/Daughters", "Son in law/Daughter in law", "Grand child", "Parents", "Parents in law",
             "Brother/Sister", "Brother in law/Sister in law", "Niece/Nephew", "Grand Parents", "Aunts/Uncle", "Adopted/Step child", "Domestic Servant", "Don’t Know"};
+
+    public static void setItemClick(OnItemClick itemClick) {
+        MainApp.itemClick = itemClick;
+    }
 
     public static void setGPS(Activity activity) {
         SharedPreferences GPSPref = activity.getSharedPreferences("GPSCoordinates", Context.MODE_PRIVATE);
@@ -161,7 +152,6 @@ public class MainApp extends Application {
         AlertDialog alert = alertDialogBuilder.create();
         alert.show();
     }
-
 
     public static void openDialog(Context context, FamilyMembersContract item) {
 
@@ -292,7 +282,6 @@ public class MainApp extends Application {
         }
         return provider1.equals(provider2);
     }
-
 
     public class GPSLocationListener implements LocationListener {
         public void onLocationChanged(Location location) {

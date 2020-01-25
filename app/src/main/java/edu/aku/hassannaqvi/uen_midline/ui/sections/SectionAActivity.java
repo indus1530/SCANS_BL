@@ -10,9 +10,6 @@ import com.validatorcrawler.aliazaz.Validator;
 
 import org.json.JSONException;
 
-import java.util.ArrayList;
-import java.util.List;
-
 import edu.aku.hassannaqvi.uen_midline.R;
 import edu.aku.hassannaqvi.uen_midline.databinding.ActivitySectionABinding;
 import edu.aku.hassannaqvi.uen_midline.ui.list_activity.FamilyMembersListActivity;
@@ -21,8 +18,6 @@ import edu.aku.hassannaqvi.uen_midline.utils.Util;
 public class SectionAActivity extends AppCompatActivity {
 
     ActivitySectionABinding bi;
-    List<String> tehsils;
-    List<String> ucs;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -35,21 +30,6 @@ public class SectionAActivity extends AppCompatActivity {
     }
 
     private void setUIComponent() {
-
-        tehsils = new ArrayList<>();
-        ucs = new ArrayList<>();
-
-        tehsils.add("----");
-        tehsils.add("Test tehsil 1");
-        tehsils.add("Test tehsil 2");
-
-        ucs.add("----");
-        ucs.add("Test uc 1");
-        ucs.add("Test uc 2");
-
-        /*bi.a106.setAdapter(new ArrayAdapter<>(this, android.R.layout.simple_list_item_1, tehsils));
-        bi.a107.setAdapter(new ArrayAdapter<>(this, android.R.layout.simple_list_item_1, ucs));*/
-
 
     }
 
@@ -64,7 +44,6 @@ public class SectionAActivity extends AppCompatActivity {
                 finish();
                 startActivity(new Intent(SectionAActivity.this, FamilyMembersListActivity.class));
             }
-
         }
     }
 
@@ -77,13 +56,10 @@ public class SectionAActivity extends AppCompatActivity {
     }
 
     private boolean formValidation() {
-
         return Validator.emptyCheckingContainer(this, bi.fldGrpSectionA);
-
     }
 
     public void BtnEnd() {
-
         Util.openEndActivity(this);
     }
 
