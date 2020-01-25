@@ -71,7 +71,6 @@ public class DatabaseHelper extends SQLiteOpenHelper {
     private static final String SQL_DELETE_UCS = "DROP TABLE IF EXISTS " + UCsContract.singleUCs.TABLE_NAME;
     private static final String SQL_DELETE_AREAS = "DROP TABLE IF EXISTS " + singleAreas.TABLE_NAME;
 
-
     private final String TAG = "DatabaseHelper";
 
     public String spDateT = new SimpleDateFormat("dd-MM-yy").format(new Date().getTime());
@@ -113,7 +112,6 @@ public class DatabaseHelper extends SQLiteOpenHelper {
 
 
     }
-
 
     public void syncVillages(JSONArray pcList) {
         SQLiteDatabase db = this.getWritableDatabase();
@@ -361,7 +359,6 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         }
         return allDC;
     }
-
 
     public Collection<AreasContract> getAllAreas(int UCCode) {
         SQLiteDatabase db = this.getReadableDatabase();
@@ -626,7 +623,6 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         return newRowId;
     }
 
-
     public Long addMotherForm(MotherContract fc) {
 
         // Gets the data repository in write mode
@@ -651,7 +647,6 @@ public class DatabaseHelper extends SQLiteOpenHelper {
                 values);
         return newRowId;
     }
-
 
     public FormsContract isDataExists(String studyId) {
         SQLiteDatabase db = getReadableDatabase();
@@ -715,7 +710,6 @@ public class DatabaseHelper extends SQLiteOpenHelper {
                 whereArgs);
     }
 
-
     public void updateMWRAs(String id) {
         SQLiteDatabase db = this.getReadableDatabase();
 
@@ -770,7 +764,6 @@ public class DatabaseHelper extends SQLiteOpenHelper {
                 selectionArgs);
         return count;
     }
-
 
     public Collection<FormsContract> getAllForms() {
         SQLiteDatabase db = this.getReadableDatabase();
@@ -1050,7 +1043,6 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         }
         return allFC;
     }
-
 
     public Collection<FormsContract> getTodayForms() {
         SQLiteDatabase db = this.getReadableDatabase();

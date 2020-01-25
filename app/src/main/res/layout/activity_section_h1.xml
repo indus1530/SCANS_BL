@@ -265,7 +265,7 @@
                             android:id="@+id/h106"
                             style="@style/EditTextNum"
                             android:hint="@string/minutes"
-                            app:mask="##"
+                            android:maxLength="2"
                             app:maxValue="59"
                             app:minValue="1"
                             app:type="range" />
@@ -490,7 +490,7 @@
                             android:id="@+id/h111"
                             style="@style/EditTextNum"
                             android:hint="@string/minutes"
-                            app:mask="##"
+                            android:maxLength="2"
                             app:maxValue="59"
                             app:minValue="1"
                             app:type="range" />
@@ -517,7 +517,7 @@
                             android:id="@+id/h112"
                             style="@style/EditTextNum"
                             android:hint="@string/minutes"
-                            app:mask="##"
+                            android:maxLength="2"
                             app:maxValue="59"
                             app:minValue="1"
                             app:type="range" />
@@ -753,7 +753,7 @@
                             android:id="@+id/h117"
                             style="@style/EditTextNum"
                             android:hint="@string/month"
-                            app:mask="#"
+                            android:maxLength="1"
                             app:maxValue="6"
                             app:minValue="1"
                             app:type="range" />
@@ -939,7 +939,7 @@
                             android:id="@+id/h122"
                             style="@style/EditTextNum"
                             android:hint="@string/kg"
-                            app:mask="#"
+                            android:maxLength="1"
                             app:maxValue="5"
                             app:minValue="1"
                             app:type="range" />
@@ -1404,23 +1404,23 @@
 
                             <RadioButton
                                 android:id="@+id/h129da"
-                                style="@style/radiobutton"
                                 android:layout_width="0dp"
                                 android:layout_weight="1"
+                                style="@style/radiobutton"
                                 android:text="@string/yes" />
 
                             <RadioButton
                                 android:id="@+id/h129db"
-                                style="@style/radiobutton"
                                 android:layout_width="0dp"
                                 android:layout_weight="1"
+                                style="@style/radiobutton"
                                 android:text="@string/no" />
 
                             <RadioButton
                                 android:id="@+id/h129d98"
-                                style="@style/radiobutton"
                                 android:layout_width="0dp"
                                 android:layout_weight="1"
+                                style="@style/radiobutton"
                                 android:text="@string/dkn" />
 
                         </RadioGroup>
@@ -1451,23 +1451,23 @@
 
                             <RadioButton
                                 android:id="@+id/h129ea"
-                                style="@style/radiobutton"
                                 android:layout_width="0dp"
                                 android:layout_weight="1"
+                                style="@style/radiobutton"
                                 android:text="@string/yes" />
 
                             <RadioButton
                                 android:id="@+id/h129eb"
-                                style="@style/radiobutton"
                                 android:layout_width="0dp"
                                 android:layout_weight="1"
+                                style="@style/radiobutton"
                                 android:text="@string/no" />
 
                             <RadioButton
                                 android:id="@+id/h129e98"
-                                style="@style/radiobutton"
                                 android:layout_width="0dp"
                                 android:layout_weight="1"
+                                style="@style/radiobutton"
                                 android:text="@string/dkn" />
 
                         </RadioGroup>
@@ -1497,16 +1497,16 @@
 
                             <RadioButton
                                 android:id="@+id/h130a"
-                                style="@style/radiobutton"
                                 android:layout_width="0dp"
                                 android:layout_weight="1"
+                                style="@style/radiobutton"
                                 android:text="@string/yes" />
 
                             <RadioButton
                                 android:id="@+id/h130b"
-                                style="@style/radiobutton"
                                 android:layout_width="0dp"
                                 android:layout_weight="1"
+                                style="@style/radiobutton"
                                 android:text="@string/no" />
 
                         </RadioGroup>
@@ -1536,16 +1536,16 @@
 
                             <RadioButton
                                 android:id="@+id/h131a"
-                                style="@style/radiobutton"
                                 android:layout_width="0dp"
                                 android:layout_weight="1"
+                                style="@style/radiobutton"
                                 android:text="@string/yes" />
 
                             <RadioButton
                                 android:id="@+id/h131b"
-                                style="@style/radiobutton"
                                 android:layout_width="0dp"
                                 android:layout_weight="1"
+                                style="@style/radiobutton"
                                 android:text="@string/no" />
 
                         </RadioGroup>
@@ -1678,16 +1678,16 @@
 
                             <RadioButton
                                 android:id="@+id/h134a"
-                                style="@style/radiobutton"
                                 android:layout_width="0dp"
                                 android:layout_weight="1"
+                                style="@style/radiobutton"
                                 android:text="@string/yes" />
 
                             <RadioButton
                                 android:id="@+id/h134b"
-                                style="@style/radiobutton"
                                 android:layout_width="0dp"
                                 android:layout_weight="1"
+                                style="@style/radiobutton"
                                 android:text="@string/no" />
 
                         </RadioGroup>
@@ -1852,16 +1852,16 @@
 
                             <RadioButton
                                 android:id="@+id/h137a"
-                                style="@style/radiobutton"
                                 android:layout_width="0dp"
                                 android:layout_weight="1"
+                                style="@style/radiobutton"
                                 android:text="@string/yes" />
 
                             <RadioButton
                                 android:id="@+id/h137b"
-                                style="@style/radiobutton"
                                 android:layout_width="0dp"
                                 android:layout_weight="1"
+                                style="@style/radiobutton"
                                 android:text="@string/no" />
 
                         </RadioGroup>

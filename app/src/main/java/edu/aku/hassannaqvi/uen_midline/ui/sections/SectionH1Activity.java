@@ -14,7 +14,6 @@ import org.json.JSONException;
 import org.json.JSONObject;
 
 import edu.aku.hassannaqvi.uen_midline.R;
-import edu.aku.hassannaqvi.uen_midline.core.MainApp;
 import edu.aku.hassannaqvi.uen_midline.databinding.ActivitySectionH1Binding;
 import edu.aku.hassannaqvi.uen_midline.utils.Util;
 import edu.aku.hassannaqvi.uen_midline.validator.ClearClass;
@@ -580,8 +579,7 @@ public class SectionH1Activity extends AppCompatActivity {
                                                                                 "0");
         json.put("h137bb96x", bi.h137bb96x.getText().toString());
 
-
-        MainApp.fc.setsInfo(String.valueOf(json));
+        //MainApp.fc.set(String.valueOf(json));
 
     }
 
