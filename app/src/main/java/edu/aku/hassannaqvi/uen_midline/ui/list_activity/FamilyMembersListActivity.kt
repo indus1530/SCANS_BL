@@ -19,6 +19,7 @@ import edu.aku.hassannaqvi.uen_midline.core.MainApp
 import edu.aku.hassannaqvi.uen_midline.core.MainApp.openDialog
 import edu.aku.hassannaqvi.uen_midline.databinding.ActivityFamilyMembersListBinding
 import edu.aku.hassannaqvi.uen_midline.databinding.ItemMemListBinding
+import edu.aku.hassannaqvi.uen_midline.otherClasses.KishGrid
 import edu.aku.hassannaqvi.uen_midline.ui.sections.SectionDActivity
 import edu.aku.hassannaqvi.uen_midline.ui.sections.SectionE1Activity
 import edu.aku.hassannaqvi.uen_midline.ui.sections.SectionE3Activity
@@ -89,7 +90,7 @@ class FamilyMembersListActivity : AppCompatActivity() {
 
                                     MainApp.pragnantWoman = mainVModel.getAllWomenName()
 
-                                    //startActivity(Intent(this, SectionI1Activity::class.java))
+                                    MainApp.selectedKishMWRA = mainVModel.mwraChildU5Lst.value?.get(kishSelectedMWRA(5, mainVModel.mwraChildU5Lst.value!!.size))
 
                                     startActivity(Intent(this, if (bi.contentScroll.mwra.text.toString().toInt() > 0) SectionE1Activity::class.java else SectionE3Activity::class.java))
                                 }
@@ -161,6 +162,10 @@ class FamilyMembersListActivity : AppCompatActivity() {
             viewHolder = null
             if (flag) memSelectedCounter--
         }
+    }
+
+    private fun kishSelectedMWRA(sno: Int, size: Int): Int {
+        return KishGrid.kishGridProcess(sno, size)
     }
 
     companion object {

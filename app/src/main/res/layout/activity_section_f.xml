@@ -25,6 +25,21 @@
             android:layoutDirection="ltr"
             android:orientation="vertical">
 
+            <androidx.cardview.widget.CardView style="@style/cardView">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/f101Name"
+                        style="@style/textView3Head"
+                        android:text="@string/d102" />
+
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
             <!-- f101  Radio   -->
             <androidx.cardview.widget.CardView
                 android:id="@+id/fldGrpCVf101"
@@ -663,14 +678,14 @@
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:hint="@string/f113a"
-                            android:tag="f113a"
                             android:maxLength="2"
+                            android:tag="f113a"
+                            android:text='@{f113a.checked? f113ax.getText().toString() : ""}'
+                            android:visibility='@{f113a.checked? View.VISIBLE : View.GONE}'
                             app:defaultValue="00"
                             app:maxValue="20"
                             app:minValue="1"
-                            app:type="range"
-                            android:text='@{f113a.checked? f113ax.getText().toString() : ""}'
-                            android:visibility='@{f113a.checked? View.VISIBLE : View.GONE}' />
+                            app:type="range" />
 
                         <RadioButton
                             android:id="@+id/f113b"
@@ -918,16 +933,16 @@
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:hint="@string/f118a"
-                                android:tag="f118a"
                                 android:inputType="number"
                                 android:maxLength="2"
+                                android:tag="f118a"
+                                android:text='@{f118a.checked? f118ax.getText().toString() : ""}'
                                 android:textColor="@android:color/black"
+                                android:visibility='@{f118a.checked? View.VISIBLE : View.GONE}'
                                 app:defaultValue="00"
                                 app:maxValue="9"
                                 app:minValue="1"
-                                app:type="range"
-                                android:text='@{f118a.checked? f118ax.getText().toString() : ""}'
-                                android:visibility='@{f118a.checked? View.VISIBLE : View.GONE}' />
+                                app:type="range" />
 
                             <RadioButton
                                 android:id="@+id/f118b"
@@ -940,16 +955,16 @@
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:hint="@string/f118b"
-                                android:tag="f118b"
                                 android:inputType="number"
                                 android:maxLength="2"
+                                android:tag="f118b"
+                                android:text='@{f118b.checked? f118bx.getText().toString() : ""}'
                                 android:textColor="@android:color/black"
+                                android:visibility='@{f118b.checked? View.VISIBLE : View.GONE}'
                                 app:defaultValue="00"
                                 app:maxValue="30"
                                 app:minValue="1"
-                                app:type="range"
-                                android:text='@{f118b.checked? f118bx.getText().toString() : ""}'
-                                android:visibility='@{f118b.checked? View.VISIBLE : View.GONE}' />
+                                app:type="range" />
                         </RadioGroup>
                     </LinearLayout>
                 </androidx.cardview.widget.CardView>
