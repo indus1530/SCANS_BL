@@ -26,6 +26,7 @@ import androidx.databinding.DataBindingUtil;
 import java.util.List;
 
 import edu.aku.hassannaqvi.uen_midline.R;
+import edu.aku.hassannaqvi.uen_midline.contracts.ChildContract;
 import edu.aku.hassannaqvi.uen_midline.contracts.FamilyMembersContract;
 import edu.aku.hassannaqvi.uen_midline.contracts.FormsContract;
 import edu.aku.hassannaqvi.uen_midline.contracts.KishMWRAContract;
@@ -72,6 +73,7 @@ public class MainApp extends Application {
     public static Boolean admin = false;
     public static FormsContract fc;
     public static KishMWRAContract kish;
+    public static ChildContract child;
     public static String userName = "0000";
     public static int deathCount = 0;
     public static String DeviceURL = "devices.php";

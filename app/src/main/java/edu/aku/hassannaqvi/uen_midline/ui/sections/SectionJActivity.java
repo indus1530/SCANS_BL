@@ -20,7 +20,10 @@ import java.util.List;
 
 import edu.aku.hassannaqvi.uen_midline.CONSTANTS;
 import edu.aku.hassannaqvi.uen_midline.R;
+import edu.aku.hassannaqvi.uen_midline.contracts.ChildContract;
 import edu.aku.hassannaqvi.uen_midline.contracts.FamilyMembersContract;
+import edu.aku.hassannaqvi.uen_midline.core.DatabaseHelper;
+import edu.aku.hassannaqvi.uen_midline.core.MainApp;
 import edu.aku.hassannaqvi.uen_midline.databinding.ActivitySectionJBinding;
 import edu.aku.hassannaqvi.uen_midline.utils.Util;
 import edu.aku.hassannaqvi.uen_midline.validator.ClearClass;
@@ -157,34 +160,41 @@ public class SectionJActivity extends AppCompatActivity {
     }
 
     private boolean UpdateDB() {
-        return true;
+        DatabaseHelper db = new DatabaseHelper(this);
+        int updcount = db.updatesChildColumn(ChildContract.SingleChild.COLUMN_SJ, MainApp.child.getsJ());
+        if (updcount == 1) {
+            return true;
+        } else {
+            Toast.makeText(this, "Updating Database... ERROR!", Toast.LENGTH_SHORT).show();
+            return false;
+        }
     }
 
     private void SaveDraft() throws JSONException {
 
-        JSONObject j1 = new JSONObject();
+        JSONObject json = new JSONObject();
 
-        j1.put("j101",
+        json.put("j101",
                 bi.j101a.isChecked() ? "1" :
                         bi.j101b.isChecked() ? "2" :
                                 bi.j101c.isChecked() ? "3" :
                                         "0");
 
-        j1.put("j102",
+        json.put("j102",
                 bi.j102a.isChecked() ? "1" :
                         bi.j102b.isChecked() ? "2" :
                                 "0");
 
-        j1.put("j103d", bi.j103d.isChecked() ? "98" : "0");
-        j1.put("j103a", bi.j103a.getText().toString());
-        j1.put("j103b", bi.j103b.getText().toString());
-        j1.put("j103c", bi.j103c.getText().toString());
+        json.put("j103d", bi.j103d.isChecked() ? "98" : "0");
+        json.put("j103a", bi.j103a.getText().toString());
+        json.put("j103b", bi.j103b.getText().toString());
+        json.put("j103c", bi.j103c.getText().toString());
 
-        j1.put("j10401d", bi.j10401d.getText().toString());
-        j1.put("j10401m", bi.j10401m.getText().toString());
-        j1.put("j10401y", bi.j10401y.getText().toString());
+        json.put("j10401d", bi.j10401d.getText().toString());
+        json.put("j10401m", bi.j10401m.getText().toString());
+        json.put("j10401y", bi.j10401y.getText().toString());
 
-        j1.put("j10401a",
+        json.put("j10401a",
                 bi.j10401aa.isChecked() ? "1" :
                         bi.j10401ab.isChecked() ? "2" :
                                 bi.j10401ac.isChecked() ? "3" :
@@ -193,7 +203,7 @@ public class SectionJActivity extends AppCompatActivity {
                                                         bi.j10401af.isChecked() ? "6" :
                                                                 "0");
 
-        j1.put("j10401b",
+        json.put("j10401b",
                 bi.j10401ba.isChecked() ? "1" :
                         bi.j10401bb.isChecked() ? "2" :
                                 bi.j10401bc.isChecked() ? "3" :
@@ -203,13 +213,13 @@ public class SectionJActivity extends AppCompatActivity {
                                                                 bi.j10401bg.isChecked() ? "7" :
                                                                         bi.j10401b96.isChecked() ? "96" :
                                                                                 "0");
-        j1.put("j10401b96x", bi.j10401b96x.getText().toString());
+        json.put("j10401b96x", bi.j10401b96x.getText().toString());
 
-        j1.put("j10402d", bi.j10402d.getText().toString());
-        j1.put("j10402m", bi.j10402m.getText().toString());
-        j1.put("j10402y", bi.j10402y.getText().toString());
+        json.put("j10402d", bi.j10402d.getText().toString());
+        json.put("j10402m", bi.j10402m.getText().toString());
+        json.put("j10402y", bi.j10402y.getText().toString());
 
-        j1.put("j10402a",
+        json.put("j10402a",
                 bi.j10402aa.isChecked() ? "1" :
                         bi.j10402ab.isChecked() ? "2" :
                                 bi.j10402ac.isChecked() ? "3" :
@@ -218,7 +228,7 @@ public class SectionJActivity extends AppCompatActivity {
                                                         bi.j10402af.isChecked() ? "6" :
                                                                 "0");
 
-        j1.put("j10402b",
+        json.put("j10402b",
                 bi.j10402ba.isChecked() ? "1" :
                         bi.j10402bb.isChecked() ? "2" :
                                 bi.j10402bc.isChecked() ? "3" :
@@ -228,13 +238,13 @@ public class SectionJActivity extends AppCompatActivity {
                                                                 bi.j10402bg.isChecked() ? "7" :
                                                                         bi.j10402b96.isChecked() ? "96" :
                                                                                 "0");
-        j1.put("j10402b96x", bi.j10402b96x.getText().toString());
+        json.put("j10402b96x", bi.j10402b96x.getText().toString());
 
-        j1.put("j10403d", bi.j10403d.getText().toString());
-        j1.put("j10403m", bi.j10403m.getText().toString());
-        j1.put("j10403y", bi.j10403y.getText().toString());
+        json.put("j10403d", bi.j10403d.getText().toString());
+        json.put("j10403m", bi.j10403m.getText().toString());
+        json.put("j10403y", bi.j10403y.getText().toString());
 
-        j1.put("j10403a",
+        json.put("j10403a",
                 bi.j10403aa.isChecked() ? "1" :
                         bi.j10403ab.isChecked() ? "2" :
                                 bi.j10403ac.isChecked() ? "3" :
@@ -243,7 +253,7 @@ public class SectionJActivity extends AppCompatActivity {
                                                         bi.j10403af.isChecked() ? "6" :
                                                                 "0");
 
-        j1.put("j10403b",
+        json.put("j10403b",
                 bi.j10403ba.isChecked() ? "1" :
                         bi.j10403bb.isChecked() ? "2" :
                                 bi.j10403bc.isChecked() ? "3" :
@@ -253,13 +263,13 @@ public class SectionJActivity extends AppCompatActivity {
                                                                 bi.j10403bg.isChecked() ? "7" :
                                                                         bi.j10403b96.isChecked() ? "96" :
                                                                                 "0");
-        j1.put("j10403b96x", bi.j10403b96x.getText().toString());
+        json.put("j10403b96x", bi.j10403b96x.getText().toString());
 
-        j1.put("j10404d", bi.j10404d.getText().toString());
-        j1.put("j10404m", bi.j10404m.getText().toString());
-        j1.put("j10404y", bi.j10404y.getText().toString());
+        json.put("j10404d", bi.j10404d.getText().toString());
+        json.put("j10404m", bi.j10404m.getText().toString());
+        json.put("j10404y", bi.j10404y.getText().toString());
 
-        j1.put("j10404a",
+        json.put("j10404a",
                 bi.j10404aa.isChecked() ? "1" :
                         bi.j10404ab.isChecked() ? "2" :
                                 bi.j10404ac.isChecked() ? "3" :
@@ -268,7 +278,7 @@ public class SectionJActivity extends AppCompatActivity {
                                                         bi.j10404af.isChecked() ? "6" :
                                                                 "0");
 
-        j1.put("j10404b",
+        json.put("j10404b",
                 bi.j10404ba.isChecked() ? "1" :
                         bi.j10404bb.isChecked() ? "2" :
                                 bi.j10404bc.isChecked() ? "3" :
@@ -278,13 +288,13 @@ public class SectionJActivity extends AppCompatActivity {
                                                                 bi.j10404bg.isChecked() ? "7" :
                                                                         bi.j10405b96.isChecked() ? "96" :
                                                                                 "0");
-        j1.put("j10405b96x", bi.j10405b96x.getText().toString());
+        json.put("j10405b96x", bi.j10405b96x.getText().toString());
 
-        j1.put("j10405d", bi.j10405d.getText().toString());
-        j1.put("j10405m", bi.j10405m.getText().toString());
-        j1.put("j10405y", bi.j10405y.getText().toString());
+        json.put("j10405d", bi.j10405d.getText().toString());
+        json.put("j10405m", bi.j10405m.getText().toString());
+        json.put("j10405y", bi.j10405y.getText().toString());
 
-        j1.put("j10405a",
+        json.put("j10405a",
                 bi.j10405aa.isChecked() ? "1" :
                         bi.j10405ab.isChecked() ? "2" :
                                 bi.j10405ac.isChecked() ? "3" :
@@ -294,7 +304,7 @@ public class SectionJActivity extends AppCompatActivity {
                                                                 "0");
 
 
-        j1.put("j10405b",
+        json.put("j10405b",
                 bi.j10405ba.isChecked() ? "1" :
                         bi.j10405bb.isChecked() ? "2" :
                                 bi.j10405bc.isChecked() ? "3" :
@@ -304,13 +314,13 @@ public class SectionJActivity extends AppCompatActivity {
                                                                 bi.j10405bg.isChecked() ? "7" :
                                                                         bi.j10405b96.isChecked() ? "96" :
                                                                                 "0");
-        j1.put("j10405b96x", bi.j10405b96x.getText().toString());
+        json.put("j10405b96x", bi.j10405b96x.getText().toString());
 
-        j1.put("j10406d", bi.j10406d.getText().toString());
-        j1.put("j10406m", bi.j10406m.getText().toString());
-        j1.put("j10406y", bi.j10406y.getText().toString());
+        json.put("j10406d", bi.j10406d.getText().toString());
+        json.put("j10406m", bi.j10406m.getText().toString());
+        json.put("j10406y", bi.j10406y.getText().toString());
 
-        j1.put("j10406a",
+        json.put("j10406a",
                 bi.j10406aa.isChecked() ? "1" :
                         bi.j10406ab.isChecked() ? "2" :
                                 bi.j10406ac.isChecked() ? "3" :
@@ -319,7 +329,7 @@ public class SectionJActivity extends AppCompatActivity {
                                                         bi.j10406af.isChecked() ? "6" :
                                                                 "0");
 
-        j1.put("j10406b",
+        json.put("j10406b",
                 bi.j10406ba.isChecked() ? "1" :
                         bi.j10406bb.isChecked() ? "2" :
                                 bi.j10406bc.isChecked() ? "3" :
@@ -329,13 +339,13 @@ public class SectionJActivity extends AppCompatActivity {
                                                                 bi.j10406bg.isChecked() ? "7" :
                                                                         bi.j10406b96.isChecked() ? "96" :
                                                                                 "0");
-        j1.put("j10406b96x", bi.j10406b96x.getText().toString());
+        json.put("j10406b96x", bi.j10406b96x.getText().toString());
 
-        j1.put("j10407d", bi.j10407d.getText().toString());
-        j1.put("j10407m", bi.j10407m.getText().toString());
-        j1.put("j10407y", bi.j10407y.getText().toString());
+        json.put("j10407d", bi.j10407d.getText().toString());
+        json.put("j10407m", bi.j10407m.getText().toString());
+        json.put("j10407y", bi.j10407y.getText().toString());
 
-        j1.put("j10407a",
+        json.put("j10407a",
                 bi.j10407aa.isChecked() ? "1" :
                         bi.j10407ab.isChecked() ? "2" :
                                 bi.j10407ac.isChecked() ? "3" :
@@ -344,7 +354,7 @@ public class SectionJActivity extends AppCompatActivity {
                                                         bi.j10407af.isChecked() ? "6" :
                                                                 "0");
 
-        j1.put("j10407b",
+        json.put("j10407b",
                 bi.j10407ba.isChecked() ? "1" :
                         bi.j10407bb.isChecked() ? "2" :
                                 bi.j10407bc.isChecked() ? "3" :
@@ -354,13 +364,13 @@ public class SectionJActivity extends AppCompatActivity {
                                                                 bi.j10407bg.isChecked() ? "7" :
                                                                         bi.j10407b96.isChecked() ? "96" :
                                                                                 "0");
-        j1.put("j10407b96x", bi.j10407b96x.getText().toString());
+        json.put("j10407b96x", bi.j10407b96x.getText().toString());
 
-        j1.put("j10408d", bi.j10408d.getText().toString());
-        j1.put("j10408m", bi.j10408m.getText().toString());
-        j1.put("j10408y", bi.j10408y.getText().toString());
+        json.put("j10408d", bi.j10408d.getText().toString());
+        json.put("j10408m", bi.j10408m.getText().toString());
+        json.put("j10408y", bi.j10408y.getText().toString());
 
-        j1.put("j10408a",
+        json.put("j10408a",
                 bi.j10408aa.isChecked() ? "1" :
                         bi.j10408ab.isChecked() ? "2" :
                                 bi.j10408ac.isChecked() ? "3" :
@@ -369,7 +379,7 @@ public class SectionJActivity extends AppCompatActivity {
                                                         bi.j10408af.isChecked() ? "6" :
                                                                 "0");
 
-        j1.put("j10408b",
+        json.put("j10408b",
                 bi.j10408ba.isChecked() ? "1" :
                         bi.j10408bb.isChecked() ? "2" :
                                 bi.j10408bc.isChecked() ? "3" :
@@ -379,7 +389,10 @@ public class SectionJActivity extends AppCompatActivity {
                                                                 bi.j10408bg.isChecked() ? "7" :
                                                                         bi.j10408b96.isChecked() ? "96" :
                                                                                 "0");
-        j1.put("j10408b96x", bi.j10408b96x.getText().toString());
+        json.put("j10408b96x", bi.j10408b96x.getText().toString());
+
+
+        MainApp.child.setsJ(String.valueOf(json));
 
     }
 
@@ -396,4 +409,5 @@ public class SectionJActivity extends AppCompatActivity {
     public void BtnEnd() {
 
         Util.openEndActivity(this);
-    }}
+    }
+}

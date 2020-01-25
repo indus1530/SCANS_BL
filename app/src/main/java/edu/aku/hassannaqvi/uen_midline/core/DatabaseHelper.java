@@ -20,6 +20,7 @@ import java.util.Date;
 import edu.aku.hassannaqvi.uen_midline.contracts.AreasContract;
 import edu.aku.hassannaqvi.uen_midline.contracts.AreasContract.singleAreas;
 import edu.aku.hassannaqvi.uen_midline.contracts.BLRandomContract;
+import edu.aku.hassannaqvi.uen_midline.contracts.ChildContract.SingleChild;
 import edu.aku.hassannaqvi.uen_midline.contracts.EnumBlockContract;
 import edu.aku.hassannaqvi.uen_midline.contracts.FamilyMembersContract;
 import edu.aku.hassannaqvi.uen_midline.contracts.FamilyMembersContract.singleMember;
@@ -1160,6 +1161,22 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         String[] selectionArgs = {String.valueOf(MainApp.kish.get_ID())};
 
         return db.update(SingleKishMWRA.TABLE_NAME,
+                values,
+                selection,
+                selectionArgs);
+    }
+
+    //Generic update ChildColumn
+    public int updatesChildColumn(String column, String value) {
+        SQLiteDatabase db = this.getReadableDatabase();
+
+        ContentValues values = new ContentValues();
+        values.put(column, value);
+
+        String selection = SingleChild._ID + " =? ";
+        String[] selectionArgs = {String.valueOf(MainApp.child.get_ID())};
+
+        return db.update(SingleChild.TABLE_NAME,
                 values,
                 selection,
                 selectionArgs);
