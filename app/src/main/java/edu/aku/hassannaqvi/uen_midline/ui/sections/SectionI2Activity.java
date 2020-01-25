@@ -76,7 +76,7 @@ public class SectionI2Activity extends AppCompatActivity {
             public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
                 if (position == 0) return;
                 fmc_child = mainVModel.getMemberInfo(childLst.getFirst().get(bi.i200.getSelectedItemPosition() - 1));
-                if (fmc_child.getMotherName().equals("NA")) {
+                if (fmc_child.getMother_name().equals("NA")) {
                     bi.respondentSpinner.setVisibility(View.VISIBLE);
                     populateRespondentSpinner();
                 } else {

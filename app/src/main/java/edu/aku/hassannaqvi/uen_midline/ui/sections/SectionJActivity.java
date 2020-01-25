@@ -18,9 +18,9 @@ import org.json.JSONObject;
 import java.util.ArrayList;
 import java.util.List;
 
+import edu.aku.hassannaqvi.uen_midline.CONSTANTS;
 import edu.aku.hassannaqvi.uen_midline.R;
 import edu.aku.hassannaqvi.uen_midline.contracts.FamilyMembersContract;
-import edu.aku.hassannaqvi.uen_midline.core.MainApp;
 import edu.aku.hassannaqvi.uen_midline.databinding.ActivitySectionJBinding;
 import edu.aku.hassannaqvi.uen_midline.utils.Util;
 import edu.aku.hassannaqvi.uen_midline.validator.ClearClass;
@@ -57,6 +57,31 @@ public class SectionJActivity extends AppCompatActivity {
         };
 
         bi.j100.setAdapter(new ArrayAdapter<>(this, android.R.layout.simple_dropdown_item_1line, childLst));
+
+        bi.j10401y.setMaxvalue(CONSTANTS.MAXYEAR);
+        bi.j10401y.setMinvalue(CONSTANTS.MINYEAR_IM);
+
+        bi.j10402y.setMaxvalue(CONSTANTS.MAXYEAR);
+        bi.j10402y.setMinvalue(CONSTANTS.MINYEAR_IM);
+
+        bi.j10403y.setMaxvalue(CONSTANTS.MAXYEAR);
+        bi.j10403y.setMinvalue(CONSTANTS.MINYEAR_IM);
+
+        bi.j10404y.setMaxvalue(CONSTANTS.MAXYEAR);
+        bi.j10404y.setMinvalue(CONSTANTS.MINYEAR_IM);
+
+        bi.j10405y.setMaxvalue(CONSTANTS.MAXYEAR);
+        bi.j10405y.setMinvalue(CONSTANTS.MINYEAR_IM);
+
+        bi.j10406y.setMaxvalue(CONSTANTS.MAXYEAR);
+        bi.j10406y.setMinvalue(CONSTANTS.MINYEAR_IM);
+
+        bi.j10407y.setMaxvalue(CONSTANTS.MAXYEAR);
+        bi.j10407y.setMinvalue(CONSTANTS.MINYEAR_IM);
+
+        bi.j10408y.setMaxvalue(CONSTANTS.MAXYEAR);
+        bi.j10408y.setMinvalue(CONSTANTS.MINYEAR_IM);
+
     }
 
     private void populateRespondentSpinner() {
@@ -78,7 +103,7 @@ public class SectionJActivity extends AppCompatActivity {
             public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
                 if (position == 0) return;
                 fmc_child = mainVModel.getMemberInfo(childLst.getFirst().get(bi.j100.getSelectedItemPosition() - 1));
-                if (fmc_child.getMotherName().equals("NA")) {
+                if (fmc_child.getMother_name().equals("NA")) {
                     bi.respondentSpinner.setVisibility(View.VISIBLE);
                     populateRespondentSpinner();
                 } else {
@@ -151,7 +176,9 @@ public class SectionJActivity extends AppCompatActivity {
         j1.put("j103b", bi.j103b.getText().toString());
         j1.put("j103c", bi.j103c.getText().toString());
 
-        j1.put("j10401", bi.j10401.getText().toString());
+        j1.put("j10401d", bi.j10401d.getText().toString());
+        j1.put("j10401m", bi.j10401m.getText().toString());
+        j1.put("j10401y", bi.j10401y.getText().toString());
 
         j1.put("j10401a",
                 bi.j10401aa.isChecked() ? "1" :
@@ -174,7 +201,9 @@ public class SectionJActivity extends AppCompatActivity {
                                                                                 "0");
         j1.put("j10401b96x", bi.j10401b96x.getText().toString());
 
-        j1.put("j10402", bi.j10402.getText().toString());
+        j1.put("j10402d", bi.j10402d.getText().toString());
+        j1.put("j10402m", bi.j10402m.getText().toString());
+        j1.put("j10402y", bi.j10402y.getText().toString());
 
         j1.put("j10402a",
                 bi.j10402aa.isChecked() ? "1" :
@@ -197,7 +226,9 @@ public class SectionJActivity extends AppCompatActivity {
                                                                                 "0");
         j1.put("j10402b96x", bi.j10402b96x.getText().toString());
 
-        j1.put("j10403", bi.j10403.getText().toString());
+        j1.put("j10403d", bi.j10403d.getText().toString());
+        j1.put("j10403m", bi.j10403m.getText().toString());
+        j1.put("j10403y", bi.j10403y.getText().toString());
 
         j1.put("j10403a",
                 bi.j10403aa.isChecked() ? "1" :
@@ -220,7 +251,9 @@ public class SectionJActivity extends AppCompatActivity {
                                                                                 "0");
         j1.put("j10403b96x", bi.j10403b96x.getText().toString());
 
-        j1.put("j10404", bi.j10404.getText().toString());
+        j1.put("j10404d", bi.j10404d.getText().toString());
+        j1.put("j10404m", bi.j10404m.getText().toString());
+        j1.put("j10404y", bi.j10404y.getText().toString());
 
         j1.put("j10404a",
                 bi.j10404aa.isChecked() ? "1" :
@@ -243,7 +276,9 @@ public class SectionJActivity extends AppCompatActivity {
                                                                                 "0");
         j1.put("j10405b96x", bi.j10405b96x.getText().toString());
 
-        j1.put("j10405", bi.j10405.getText().toString());
+        j1.put("j10405d", bi.j10405d.getText().toString());
+        j1.put("j10405m", bi.j10405m.getText().toString());
+        j1.put("j10405y", bi.j10405y.getText().toString());
 
         j1.put("j10405a",
                 bi.j10405aa.isChecked() ? "1" :
@@ -267,7 +302,9 @@ public class SectionJActivity extends AppCompatActivity {
                                                                                 "0");
         j1.put("j10405b96x", bi.j10405b96x.getText().toString());
 
-        j1.put("j10406", bi.j10406.getText().toString());
+        j1.put("j10406d", bi.j10406d.getText().toString());
+        j1.put("j10406m", bi.j10406m.getText().toString());
+        j1.put("j10406y", bi.j10406y.getText().toString());
 
         j1.put("j10406a",
                 bi.j10406aa.isChecked() ? "1" :
@@ -290,7 +327,9 @@ public class SectionJActivity extends AppCompatActivity {
                                                                                 "0");
         j1.put("j10406b96x", bi.j10406b96x.getText().toString());
 
-        j1.put("j10407", bi.j10407.getText().toString());
+        j1.put("j10407d", bi.j10407d.getText().toString());
+        j1.put("j10407m", bi.j10407m.getText().toString());
+        j1.put("j10407y", bi.j10407y.getText().toString());
 
         j1.put("j10407a",
                 bi.j10407aa.isChecked() ? "1" :
@@ -313,7 +352,9 @@ public class SectionJActivity extends AppCompatActivity {
                                                                                 "0");
         j1.put("j10407b96x", bi.j10407b96x.getText().toString());
 
-        j1.put("j10408", bi.j10408.getText().toString());
+        j1.put("j10408d", bi.j10408d.getText().toString());
+        j1.put("j10408m", bi.j10408m.getText().toString());
+        j1.put("j10408y", bi.j10408y.getText().toString());
 
         j1.put("j10408a",
                 bi.j10408aa.isChecked() ? "1" :

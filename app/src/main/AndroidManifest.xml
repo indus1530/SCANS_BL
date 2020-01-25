@@ -115,12 +115,15 @@
         <activity
             android:name=".ui.sections.SectionJActivity"
             android:label="@string/tjheading"
-            android:screenOrientation="portrait" />
+            android:screenOrientation="portrait">
+
+        </activity>
 
         <activity
             android:name=".ui.sections.SectionJ02Activity"
             android:label="@string/tjheading"
-            android:screenOrientation="portrait" />
+            android:screenOrientation="portrait">
+        </activity>
 
         <activity
             android:name=".ui.sections.SectionJ03Activity"

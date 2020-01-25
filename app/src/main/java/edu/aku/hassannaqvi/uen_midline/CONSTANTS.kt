@@ -7,5 +7,8 @@ class CONSTANTS {
         const val MINYEAR = 1940
         const val MAXYEAR = 2020
 
+        //For J Section
+        const val MINYEAR_IM = 2018
+
     }
 }
