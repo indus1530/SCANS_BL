@@ -89,6 +89,8 @@ class FamilyMembersListActivity : AppCompatActivity() {
 
                                     MainApp.pragnantWoman = mainVModel.getAllWomenName()
 
+                                    //startActivity(Intent(this, SectionI1Activity::class.java))
+
                                     startActivity(Intent(this, if (bi.contentScroll.mwra.text.toString().toInt() > 0) SectionE1Activity::class.java else SectionE3Activity::class.java))
                                 }
                                 else -> Util.openEndActivity(this)
