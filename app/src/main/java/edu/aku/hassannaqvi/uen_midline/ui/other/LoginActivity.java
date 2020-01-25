@@ -31,12 +31,8 @@ import android.text.TextUtils;
 import android.text.format.DateFormat;
 import android.text.method.PasswordTransformationMethod;
 import android.util.Log;
-import android.view.KeyEvent;
 import android.view.View;
-import android.view.View.OnClickListener;
 import android.view.inputmethod.EditorInfo;
-import android.widget.ArrayAdapter;
-import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageButton;
 import android.widget.ProgressBar;
@@ -52,9 +48,6 @@ import com.github.amlcurran.showcaseview.ShowcaseView;
 import com.github.amlcurran.showcaseview.targets.Target;
 import com.github.amlcurran.showcaseview.targets.ViewTarget;
 
-import org.angmarch.views.NiceSpinner;
-import org.angmarch.views.OnSpinnerItemSelectedListener;
-
 import java.io.File;
 import java.io.FileInputStream;
 import java.io.FileOutputStream;
@@ -62,22 +55,17 @@ import java.io.IOException;
 import java.io.OutputStream;
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
-import java.util.Collection;
 import java.util.Date;
-import java.util.HashMap;
 import java.util.List;
-import java.util.Map;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
 import butterknife.OnClick;
-import edu.aku.hassannaqvi.uen_midline.contracts.TalukasContract;
-import edu.aku.hassannaqvi.uen_midline.contracts.UCsContract;
+import edu.aku.hassannaqvi.uen_midline.R;
+import edu.aku.hassannaqvi.uen_midline.core.AppInfo;
 import edu.aku.hassannaqvi.uen_midline.core.DatabaseHelper;
 import edu.aku.hassannaqvi.uen_midline.core.MainApp;
 import edu.aku.hassannaqvi.uen_midline.ui.sync.SyncActivity;
-import edu.aku.hassannaqvi.uen_midline.R;
-import edu.aku.hassannaqvi.uen_midline.contracts.AppInfo;
 import edu.aku.hassannaqvi.uen_midline.utils.Util;
 
 import static edu.aku.hassannaqvi.uen_midline.utils.Constants.DUMMY_CREDENTIALS;
@@ -86,6 +74,9 @@ import static edu.aku.hassannaqvi.uen_midline.utils.Constants.MINIMUM_TIME_BETWE
 import static edu.aku.hassannaqvi.uen_midline.utils.Constants.MY_PERMISSIONS_REQUEST_READ_CONTACTS;
 import static edu.aku.hassannaqvi.uen_midline.utils.Constants.MY_PERMISSIONS_REQUEST_READ_PHONE_STATE;
 import static edu.aku.hassannaqvi.uen_midline.utils.Constants.TWO_MINUTES;
+import static edu.aku.hassannaqvi.uen_midline.utils.CreateTable.DATABASE_NAME;
+import static edu.aku.hassannaqvi.uen_midline.utils.CreateTable.DB_NAME;
+import static edu.aku.hassannaqvi.uen_midline.utils.CreateTable.PROJECT_NAME;
 import static java.lang.Thread.sleep;
 
 
@@ -94,17 +85,7 @@ import static java.lang.Thread.sleep;
  */
 public class LoginActivity extends Activity implements LoaderCallbacks<Cursor> {
 
-    ArrayAdapter<String> dataAdapter;
-
-    ArrayList<String> lablesTalukas;
-    Collection<TalukasContract> TalukasList;
-    Map<String, String> talukasMap;
-
-    ArrayList<String> lablesUCs;
-    Collection<UCsContract> UcsList;
-    Map<String, String> ucsMap;
     protected static LocationManager locationManager;
-
 
     // UI references.
     @BindView(R.id.login_progress)
@@ -138,7 +119,7 @@ public class LoginActivity extends Activity implements LoaderCallbacks<Cursor> {
         setContentView(R.layout.activity_login);
         ButterKnife.bind(this);
 
-        MainApp.appInfo = new AppInfo(this, getPackageName());
+        MainApp.appInfo = new AppInfo(this);
         txtinstalldate.setText(MainApp.appInfo.getAppInfo());
 
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
@@ -211,13 +192,12 @@ public class LoginActivity extends Activity implements LoaderCallbacks<Cursor> {
 
             String dt = sharedPref.getString("dt", new SimpleDateFormat("dd-MM-yy").format(new Date()));
 
-            if (dt != new SimpleDateFormat("dd-MM-yy").format(new Date())) {
+            if (!dt.equals(new SimpleDateFormat("dd-MM-yy").format(new Date()))) {
                 editor.putString("dt", new SimpleDateFormat("dd-MM-yy").format(new Date()));
-
-                editor.commit();
+                editor.apply();
             }
 
-            File folder = new File(Environment.getExternalStorageDirectory() + File.separator + DatabaseHelper.PROJECT_NAME);
+            File folder = new File(Environment.getExternalStorageDirectory() + File.separator + PROJECT_NAME);
             boolean success = true;
             if (!folder.exists()) {
                 success = folder.mkdirs();
@@ -232,12 +212,9 @@ public class LoginActivity extends Activity implements LoaderCallbacks<Cursor> {
                 if (success) {
 
                     try {
-                        File dbFile = new File(this.getDatabasePath(DatabaseHelper.DATABASE_NAME).getPath());
+                        File dbFile = new File(this.getDatabasePath(DATABASE_NAME).getPath());
                         FileInputStream fis = new FileInputStream(dbFile);
-
-                        String outFileName = DirectoryName + File.separator +
-                                DatabaseHelper.DB_NAME;
-
+                        String outFileName = DirectoryName + File.separator + DB_NAME;
                         // Open the empty db as the output stream
                         OutputStream output = new FileOutputStream(outFileName);
 
@@ -350,32 +327,25 @@ public class LoginActivity extends Activity implements LoaderCallbacks<Cursor> {
         // On Honeycomb MR2 we have the ViewPropertyAnimator APIs, which allow
         // for very easy animations. If available, use these APIs to fade-in
         // the progress spinner.
-        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.HONEYCOMB_MR2) {
-            int shortAnimTime = getResources().getInteger(android.R.integer.config_shortAnimTime);
+        int shortAnimTime = getResources().getInteger(android.R.integer.config_shortAnimTime);
 
-            mLoginFormView.setVisibility(show ? View.GONE : View.VISIBLE);
-            mLoginFormView.animate().setDuration(shortAnimTime).alpha(
-                    show ? 0 : 1).setListener(new AnimatorListenerAdapter() {
-                @Override
-                public void onAnimationEnd(Animator animation) {
-                    mLoginFormView.setVisibility(show ? View.GONE : View.VISIBLE);
-                }
-            });
+        mLoginFormView.setVisibility(show ? View.GONE : View.VISIBLE);
+        mLoginFormView.animate().setDuration(shortAnimTime).alpha(
+                show ? 0 : 1).setListener(new AnimatorListenerAdapter() {
+            @Override
+            public void onAnimationEnd(Animator animation) {
+                mLoginFormView.setVisibility(show ? View.GONE : View.VISIBLE);
+            }
+        });
 
-            mProgressView.setVisibility(show ? View.VISIBLE : View.GONE);
-            mProgressView.animate().setDuration(shortAnimTime).alpha(
-                    show ? 1 : 0).setListener(new AnimatorListenerAdapter() {
-                @Override
-                public void onAnimationEnd(Animator animation) {
-                    mProgressView.setVisibility(show ? View.VISIBLE : View.GONE);
-                }
-            });
-        } else {
-            // The ViewPropertyAnimator APIs are not available, so simply show
-            // and hide the relevant UI components.
-            mProgressView.setVisibility(show ? View.VISIBLE : View.GONE);
-            mLoginFormView.setVisibility(show ? View.GONE : View.VISIBLE);
-        }
+        mProgressView.setVisibility(show ? View.VISIBLE : View.GONE);
+        mProgressView.animate().setDuration(shortAnimTime).alpha(
+                show ? 1 : 0).setListener(new AnimatorListenerAdapter() {
+            @Override
+            public void onAnimationEnd(Animator animation) {
+                mProgressView.setVisibility(show ? View.VISIBLE : View.GONE);
+            }
+        });
     }
 
     @Override
@@ -680,8 +650,6 @@ public class LoginActivity extends Activity implements LoaderCallbacks<Cursor> {
     public void populateSpinner(Context context) {
 
 
-
-
     }
 
     /**
@@ -761,11 +729,7 @@ public class LoginActivity extends Activity implements LoaderCallbacks<Cursor> {
                                     }
                                 });
                 alertDialogBuilder.setNegativeButton("Cancel",
-                        new DialogInterface.OnClickListener() {
-                            public void onClick(DialogInterface dialog, int id) {
-                                dialog.cancel();
-                            }
-                        });
+                        (dialog, id) -> dialog.cancel());
                 AlertDialog alert = alertDialogBuilder.create();
                 alert.show();
 

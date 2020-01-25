@@ -28,7 +28,6 @@ import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
 
-import edu.aku.hassannaqvi.uen_midline.get.GetAllData;
 import edu.aku.hassannaqvi.uen_midline.R;
 import edu.aku.hassannaqvi.uen_midline.adapter.SyncListAdapter;
 import edu.aku.hassannaqvi.uen_midline.adapter.UploadListAdapter;
@@ -36,8 +35,13 @@ import edu.aku.hassannaqvi.uen_midline.contracts.FormsContract;
 import edu.aku.hassannaqvi.uen_midline.core.DatabaseHelper;
 import edu.aku.hassannaqvi.uen_midline.core.MainApp;
 import edu.aku.hassannaqvi.uen_midline.databinding.ActivitySyncBinding;
+import edu.aku.hassannaqvi.uen_midline.get.GetAllData;
 import edu.aku.hassannaqvi.uen_midline.otherClasses.SyncModel;
 import edu.aku.hassannaqvi.uen_midline.sync.SyncAllData;
+
+import static edu.aku.hassannaqvi.uen_midline.utils.CreateTable.DATABASE_NAME;
+import static edu.aku.hassannaqvi.uen_midline.utils.CreateTable.DB_NAME;
+import static edu.aku.hassannaqvi.uen_midline.utils.CreateTable.PROJECT_NAME;
 
 public class SyncActivity extends AppCompatActivity {
     SharedPreferences.Editor editor;
@@ -216,7 +220,7 @@ public class SyncActivity extends AppCompatActivity {
                 editor.commit();
             }
 
-            File folder = new File(Environment.getExternalStorageDirectory() + File.separator + DatabaseHelper.PROJECT_NAME);
+            File folder = new File(Environment.getExternalStorageDirectory() + File.separator + PROJECT_NAME);
             boolean success = true;
             if (!folder.exists()) {
                 success = folder.mkdirs();
@@ -230,11 +234,10 @@ public class SyncActivity extends AppCompatActivity {
                 if (success) {
 
                     try {
-                        File dbFile = new File(this.getDatabasePath(DatabaseHelper.DATABASE_NAME).getPath());
+                        File dbFile = new File(this.getDatabasePath(DATABASE_NAME).getPath());
                         FileInputStream fis = new FileInputStream(dbFile);
 
-                        String outFileName = DirectoryName + File.separator +
-                                DatabaseHelper.DB_NAME;
+                        String outFileName = DirectoryName + File.separator + DB_NAME;
 
                         // Open the empty db as the output stream
                         OutputStream output = new FileOutputStream(outFileName);
