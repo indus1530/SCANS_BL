@@ -34,6 +34,128 @@ public class KishMWRAContract {
     * fm_serial
     * */
 
+    public String get_ID() {
+        return _ID;
+    }
+
+    public void set_ID(String _ID) {
+        this._ID = _ID;
+    }
+
+    public String getUID() {
+        return UID;
+    }
+
+    public void setUID(String UID) {
+        this.UID = UID;
+    }
+
+    public String get_UUID() {
+        return _UUID;
+    }
+
+    public void set_UUID(String _UUID) {
+        this._UUID = _UUID;
+    }
+
+    public String getDeviceId() {
+        return deviceId;
+    }
+
+    public void setDeviceId(String deviceId) {
+        this.deviceId = deviceId;
+    }
+
+    public String getFormDate() {
+        return formDate;
+    }
+
+    public void setFormDate(String formDate) {
+        this.formDate = formDate;
+    }
+
+    public String getUser() {
+        return user;
+    }
+
+    public void setUser(String user) {
+        this.user = user;
+    }
+
+    public String getsF() {
+        return sF;
+    }
+
+    public void setsF(String sF) {
+        this.sF = sF;
+    }
+
+    public String getsG() {
+        return sG;
+    }
+
+    public void setsG(String sG) {
+        this.sG = sG;
+    }
+
+    public String getsH1() {
+        return sH1;
+    }
+
+    public void setsH1(String sH1) {
+        this.sH1 = sH1;
+    }
+
+    public String getsH2() {
+        return sH2;
+    }
+
+    public void setsH2(String sH2) {
+        this.sH2 = sH2;
+    }
+
+    public String getsK() {
+        return sK;
+    }
+
+    public void setsK(String sK) {
+        this.sK = sK;
+    }
+
+    public String getsL() {
+        return sL;
+    }
+
+    public void setsL(String sL) {
+        this.sL = sL;
+    }
+
+    public String getDevicetagID() {
+        return devicetagID;
+    }
+
+    public void setDevicetagID(String devicetagID) {
+        this.devicetagID = devicetagID;
+    }
+
+    public String getSynced() {
+        return synced;
+    }
+
+    public void setSynced(String synced) {
+        this.synced = synced;
+    }
+
+    public String getSynced_date() {
+        return synced_date;
+    }
+
+    public void setSynced_date(String synced_date) {
+        this.synced_date = synced_date;
+    }
+
+
+
     public KishMWRAContract hydrate(Cursor cursor) {
         this._ID = cursor.getString(cursor.getColumnIndex(SingleKishMWRA.COLUMN__ID));
         this.UID = cursor.getString(cursor.getColumnIndex(SingleKishMWRA.COLUMN_UID));
@@ -99,6 +221,7 @@ public class KishMWRAContract {
     public static abstract class SingleKishMWRA
             implements BaseColumns {
 
+        public static final String TABLE_NAME = "kish_mwra";
         public static final String COLUMN__ID = "_id";
         public static final String COLUMN_UID = "uid";
         public static final String COLUMN__UUID = "_uuid";

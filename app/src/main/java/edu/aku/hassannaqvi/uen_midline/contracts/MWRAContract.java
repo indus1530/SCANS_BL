@@ -31,10 +31,6 @@ public class MWRAContract {
     fm_serial
     hhno
     cluster
-
-     x
-
-
     * */
 
 
@@ -183,7 +179,6 @@ public class MWRAContract {
 
         public static final String TABLE_NAME = "mother";
         public static final String COLUMN_NAME_NULLABLE = "NULLHACK";
-
         public static final String COLUMN_PROJECT_NAME = "project_name";
         public static final String COLUMN_ID = "_id";
         public static final String COLUMN_UID = "uid";

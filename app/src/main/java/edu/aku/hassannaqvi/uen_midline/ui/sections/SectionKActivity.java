@@ -19,7 +19,9 @@ import edu.aku.hassannaqvi.uen_midline.validator.ClearClass;
 
 public class SectionKActivity extends AppCompatActivity {
 
+
     ActivitySectionKBinding bi;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

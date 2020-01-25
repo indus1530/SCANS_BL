@@ -185,6 +185,7 @@ public class ChildContract {
 
     public static abstract class SingleChild implements BaseColumns {
 
+        public static final String TABLE_NAME = "child_table";
         public static final String COLUMN__ID = "_id";
         public static final String COLUMN_UID = "uid";
         public static final String COLUMN__UUID = "_uuid";

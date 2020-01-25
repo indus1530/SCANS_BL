@@ -24,6 +24,11 @@ import edu.aku.hassannaqvi.uen_midline.contracts.FamilyMembersContract.singleMem
 import edu.aku.hassannaqvi.uen_midline.contracts.FormsContract;
 import edu.aku.hassannaqvi.uen_midline.contracts.FormsContract.FormsTable;
 import edu.aku.hassannaqvi.uen_midline.contracts.MWRAContract;
+import edu.aku.hassannaqvi.uen_midline.contracts.MWRAContract.MWRATable;
+import edu.aku.hassannaqvi.uen_midline.contracts.MWRA_PREContract;
+import edu.aku.hassannaqvi.uen_midline.contracts.MWRA_PREContract.SingleMWRAPRE;
+import edu.aku.hassannaqvi.uen_midline.contracts.MortalityContract;
+import edu.aku.hassannaqvi.uen_midline.contracts.MortalityContract.SingleMortality;
 import edu.aku.hassannaqvi.uen_midline.contracts.MotherContract;
 import edu.aku.hassannaqvi.uen_midline.contracts.MotherContract.singleMother;
 import edu.aku.hassannaqvi.uen_midline.contracts.TalukasContract;
@@ -33,6 +38,23 @@ import edu.aku.hassannaqvi.uen_midline.contracts.VersionAppContract;
 import edu.aku.hassannaqvi.uen_midline.contracts.VillagesContract;
 import edu.aku.hassannaqvi.uen_midline.contracts.VillagesContract.singleVillage;
 
+import static edu.aku.hassannaqvi.uen_midline.utils.CreateTable.DATABASE_NAME;
+import static edu.aku.hassannaqvi.uen_midline.utils.CreateTable.DATABASE_VERSION;
+import static edu.aku.hassannaqvi.uen_midline.utils.CreateTable.SQL_CREATE_AREAS;
+import static edu.aku.hassannaqvi.uen_midline.utils.CreateTable.SQL_CREATE_CHILD_TABLE;
+import static edu.aku.hassannaqvi.uen_midline.utils.CreateTable.SQL_CREATE_FAMILY_MEMBERS;
+import static edu.aku.hassannaqvi.uen_midline.utils.CreateTable.SQL_CREATE_FORMS;
+import static edu.aku.hassannaqvi.uen_midline.utils.CreateTable.SQL_CREATE_MWRAPRE_TABLE;
+import static edu.aku.hassannaqvi.uen_midline.utils.CreateTable.SQL_CREATE_MWRA_TABLE;
+import static edu.aku.hassannaqvi.uen_midline.utils.CreateTable.SQL_CREATE_PSU_TABLE;
+import static edu.aku.hassannaqvi.uen_midline.utils.CreateTable.SQL_CREATE_TALUKAS;
+import static edu.aku.hassannaqvi.uen_midline.utils.CreateTable.SQL_CREATE_UCS;
+import static edu.aku.hassannaqvi.uen_midline.utils.CreateTable.SQL_CREATE_USERS;
+import static edu.aku.hassannaqvi.uen_midline.utils.CreateTable.SQL_CREATE_VERSIONAPP;
+import static edu.aku.hassannaqvi.uen_midline.utils.CreateTable.SQL_CREATE__KISH_TABLE;
+import static edu.aku.hassannaqvi.uen_midline.utils.CreateTable.SQL_CREATE__MORTALITY;
+import static edu.aku.hassannaqvi.uen_midline.utils.CreateTable.SQL_CREATE__MOTHER_TABLE;
+
 
 /**
  * Created by hassan.naqvi on 11/30/2016.
@@ -40,114 +62,12 @@ import edu.aku.hassannaqvi.uen_midline.contracts.VillagesContract.singleVillage;
 
 public class DatabaseHelper extends SQLiteOpenHelper {
 
-    public static final String SQL_CREATE_USERS = "CREATE TABLE " + UsersContract.singleUser.TABLE_NAME + "("
-            + UsersContract.singleUser._ID + " INTEGER PRIMARY KEY AUTOINCREMENT,"
-            + UsersContract.singleUser.ROW_USERNAME + " TEXT,"
-            + UsersContract.singleUser.ROW_PASSWORD + " TEXT,"
-            + UsersContract.singleUser.FULL_NAME + " TEXT"
-            + " );";
-    public static final String DATABASE_NAME = "uen_ml20.db";
-    public static final String DB_NAME = "uen_ml20_copy.db";
-    public static final String PROJECT_NAME = "DMU-UENML2020";
-    private static final int DATABASE_VERSION = 1;
-    private static final String SQL_CREATE_FORMS = "CREATE TABLE "
-            + FormsTable.TABLE_NAME + "("
-            + FormsTable.COLUMN_ID + " INTEGER PRIMARY KEY AUTOINCREMENT,"
-            + FormsTable.COLUMN_PROJECT_NAME + " TEXT,"
-            + FormsTable.COLUMN_UID + " TEXT,"
-            + FormsTable.COLUMN_FORMDATE + " TEXT,"
-            + FormsTable.COLUMN_APPVERSION + " TEXT,"
-            + FormsTable.COLUMN_CLUSTERCODE + " TEXT,"
-            + FormsTable.COLUMN_HHNO + " TEXT,"
-            + FormsTable.COLUMN_FORMTYPE + " TEXT,"
-            + FormsTable.COLUMN_DSSID + " TEXT,"
-            + FormsTable.COLUMN_USER + " TEXT,"
-            + FormsTable.COLUMN_SINFO + " TEXT,"
-            + FormsTable.COLUMN_SE + " TEXT,"
-            + FormsTable.COLUMN_SM + " TEXT,"
-            + FormsTable.COLUMN_SN + " TEXT,"
-            + FormsTable.COLUMN_SO + " TEXT,"
-            + FormsTable.COLUMN_ISTATUS + " TEXT,"
-            + FormsTable.COLUMN_ISTATUS88x + " TEXT,"
-            + FormsTable.COLUMN_ENDINGDATETIME + " TEXT,"
-            + FormsTable.COLUMN_GPSLAT + " TEXT,"
-            + FormsTable.COLUMN_GPSLNG + " TEXT,"
-            + FormsTable.COLUMN_GPSDATE + " TEXT,"
-            + FormsTable.COLUMN_GPSACC + " TEXT,"
-            + FormsTable.COLUMN_DEVICEID + " TEXT,"
-            + FormsTable.COLUMN_DEVICETAGID + " TEXT,"
-            + FormsTable.COLUMN_SYNCED + " TEXT,"
-            + FormsTable.COLUMN_SYNCED_DATE + " TEXT"
-            + " );";
+
     private static final String SQL_DELETE_VILLAGES = "DROP TABLE IF EXISTS " + singleVillage.TABLE_NAME;
     private static final String SQL_DELETE_TALUKAS = "DROP TABLE IF EXISTS " + TalukasContract.singleTalukas.TABLE_NAME;
     private static final String SQL_DELETE_UCS = "DROP TABLE IF EXISTS " + UCsContract.singleUCs.TABLE_NAME;
     private static final String SQL_DELETE_AREAS = "DROP TABLE IF EXISTS " + singleAreas.TABLE_NAME;
 
-    private final String SQL_CREATE_VERSIONAPP = "CREATE TABLE " + VersionAppContract.VersionAppTable.TABLE_NAME + " (" +
-            VersionAppContract.VersionAppTable._ID + " INTEGER PRIMARY KEY AUTOINCREMENT," +
-            VersionAppContract.VersionAppTable.COLUMN_VERSION_CODE + " TEXT, " +
-            VersionAppContract.VersionAppTable.COLUMN_VERSION_NAME + " TEXT, " +
-            VersionAppContract.VersionAppTable.COLUMN_PATH_NAME + " TEXT " +
-            ");";
-
-    private final String SQL_CREATE_TALUKAS = "CREATE TABLE " + TalukasContract.singleTalukas.TABLE_NAME + "("
-            + TalukasContract.singleTalukas._ID + " INTEGER PRIMARY KEY AUTOINCREMENT,"
-            + TalukasContract.singleTalukas.COLUMN_TALUKA_CODE + " TEXT,"
-            + TalukasContract.singleTalukas.COLUMN_TALUKA + " TEXT );";
-    private final String SQL_CREATE_UCS = "CREATE TABLE " + UCsContract.singleUCs.TABLE_NAME + "("
-            + UCsContract.singleUCs._ID + " INTEGER PRIMARY KEY AUTOINCREMENT,"
-            + UCsContract.singleUCs.COLUMN_UCCODE + " TEXT,"
-            + UCsContract.singleUCs.COLUMN_TALUKA_CODE + " TEXT,"
-            + UCsContract.singleUCs.COLUMN_UCS + " TEXT );";
-    private final String SQL_CREATE_AREAS = "CREATE TABLE " + singleAreas.TABLE_NAME + "("
-            + singleAreas._ID + " INTEGER PRIMARY KEY AUTOINCREMENT,"
-            + singleAreas.COLUMN_AREACODE + " TEXT,"
-            + singleAreas.COLUMN_UC_CODE + " TEXT,"
-            + singleAreas.COLUMN_AREA + " TEXT );";
-
-
-
-    private final String SQL_CREATE_PSU_TABLE = "CREATE TABLE " + singleVillage.TABLE_NAME + " (" +
-            singleVillage._ID + " INTEGER PRIMARY KEY AUTOINCREMENT," +
-            singleVillage.COLUMN_AREA_CODE + " TEXT, " +
-            singleVillage.COLUMN_VILLAGE_CODE + " TEXT, " +
-            singleVillage.COLUMN_VILLAGE_NAME + " TEXT " +
-            ");";
-
-
-
-    private final String SQL_CREATE__MOTHER_TABLE = "CREATE TABLE " + singleMother.TABLE_NAME + "("
-            + singleMother._ID + " INTEGER PRIMARY KEY AUTOINCREMENT,"
-            + singleMother.COLUMN_luid + " TEXT,"
-            + singleMother.COLUMN_UID + " TEXT,"
-            + singleMother.COLUMN_MOTHER_ID + " TEXT,"
-            + singleMother.COLUMN_SERIAL_NO + " TEXT,"
-            + singleMother.COLUMN_DA + " TEXT,"
-            + singleMother.COLUMN_FORMDATE + " TEXT,"
-            + singleMother.COLUMN_USER + " TEXT,"
-            + singleMother.COLUMN_DEVICEID + " TEXT,"
-            + singleMother.COLUMN_DEVICETAGID + " TEXT,"
-            + singleMother.COLUMN_SYNCED + " TEXT,"
-            + singleMother.COLUMN_SYNCED_DATE + " TEXT );";
-
-
-    private final String SQL_CREATE_FAMILY_MEMBERS = "CREATE TABLE " + singleMember.TABLE_NAME + "("
-            + singleMember.COLUMN_ID + " INTEGER PRIMARY KEY AUTOINCREMENT," +
-            singleMember.COLUMN_UID + " TEXT," +
-            singleMember.COLUMN_UUID + " TEXT," +
-            singleMember.COLUMN_FORMDATE + " TEXT," +
-            singleMember.COLUMN_CLUSTERNO + " TEXT," +
-            singleMember.COLUMN_HHNO + " TEXT," +
-            singleMember.COLUMN_SERIAL_NO + " TEXT," +
-            singleMember.COLUMN_NAME + " TEXT," +
-            singleMember.COLUMN_RELATION_HH + " TEXT," +
-            singleMember.COLUMN_AGE + " TEXT," +
-            singleMember.COLUMN_MOTHER_NAME + " TEXT," +
-            singleMember.COLUMN_MOTHER_SERIAL + " TEXT," +
-            singleMember.COLUMN_GENDER + " TEXT," +
-            singleMember.COLUMN_MARITAL + " TEXT," +
-            singleMember.COLUMN_SD + " TEXT" + ");";
 
     private final String TAG = "DatabaseHelper";
 
@@ -169,6 +89,11 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         db.execSQL(SQL_CREATE_VERSIONAPP);
         db.execSQL(SQL_CREATE_FAMILY_MEMBERS);
         db.execSQL(SQL_CREATE__MOTHER_TABLE);
+        db.execSQL(SQL_CREATE__KISH_TABLE);
+        db.execSQL(SQL_CREATE_MWRA_TABLE);
+        db.execSQL(SQL_CREATE_MWRAPRE_TABLE);
+        db.execSQL(SQL_CREATE_CHILD_TABLE);
+        db.execSQL(SQL_CREATE__MORTALITY);
     }
 
     @Override
@@ -640,7 +565,6 @@ public class DatabaseHelper extends SQLiteOpenHelper {
     }
 
 
-
     public Long addMotherForm(MotherContract fc) {
 
         // Gets the data repository in write mode
@@ -728,8 +652,6 @@ public class DatabaseHelper extends SQLiteOpenHelper {
                 where,
                 whereArgs);
     }
-
-
 
 
     public void updateMWRAs(String id) {
@@ -1068,8 +990,6 @@ public class DatabaseHelper extends SQLiteOpenHelper {
     }
 
 
-
-
     public Collection<FormsContract> getTodayForms() {
         SQLiteDatabase db = this.getReadableDatabase();
         Cursor c = null;
@@ -1160,16 +1080,48 @@ public class DatabaseHelper extends SQLiteOpenHelper {
     }
 
     //Generic update MWRAColumn
-    public int updatesMWRAColumn(String column, String value) {
+    public int updatesMWRAColumn(String column, String value, MWRAContract mwra) {
         SQLiteDatabase db = this.getReadableDatabase();
 
         ContentValues values = new ContentValues();
         values.put(column, value);
 
-        String selection = FormsTable._ID + " =? ";
-        String[] selectionArgs = {String.valueOf(MainApp.fc.get_ID())};
+        String selection = MWRATable._ID + " =? ";
+        String[] selectionArgs = {String.valueOf(mwra.get_ID())};
 
-        return db.update(FormsTable.TABLE_NAME,
+        return db.update(MWRATable.TABLE_NAME,
+                values,
+                selection,
+                selectionArgs);
+    }
+
+    //Generic update MWRAPREColumn
+    public int updatesMWRAPREColumn(String column, String value, MWRA_PREContract mwra_pre) {
+        SQLiteDatabase db = this.getReadableDatabase();
+
+        ContentValues values = new ContentValues();
+        values.put(column, value);
+
+        String selection = SingleMWRAPRE._ID + " =? ";
+        String[] selectionArgs = {String.valueOf(mwra_pre.get_ID())};
+
+        return db.update(SingleMWRAPRE.TABLE_NAME,
+                values,
+                selection,
+                selectionArgs);
+    }
+
+    //Generic update MortalityColumn
+    public int updatesMortalityColumn(String column, String value, MortalityContract mortality) {
+        SQLiteDatabase db = this.getReadableDatabase();
+
+        ContentValues values = new ContentValues();
+        values.put(column, value);
+
+        String selection = SingleMortality._ID + " =? ";
+        String[] selectionArgs = {String.valueOf(mortality.get_ID())};
+
+        return db.update(SingleMortality.TABLE_NAME,
                 values,
                 selection,
                 selectionArgs);

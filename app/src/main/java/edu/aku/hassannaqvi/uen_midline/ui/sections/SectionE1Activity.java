@@ -107,6 +107,7 @@ public class SectionE1Activity extends AppCompatActivity {
                         next = new Intent(SectionE1Activity.this, SectionE3Activity.class);
                     }
                 }
+                finish();
                 startActivity(next);
             }
         }
@@ -130,7 +131,7 @@ public class SectionE1Activity extends AppCompatActivity {
                         bi.e102ab.isChecked() ? "2" :
                                 "0");
 
-        MainApp.fc.setsE(String.valueOf(json));
+//        MainApp.fc.setsE(String.valueOf(json));
 
 
         // Deleting item in list
