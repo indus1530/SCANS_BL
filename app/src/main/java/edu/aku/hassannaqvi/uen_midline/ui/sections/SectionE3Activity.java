@@ -94,12 +94,13 @@ public class SectionE3Activity extends AppCompatActivity {
 
     private void SaveDraft() throws JSONException {
 
-        JSONObject f1 = new JSONObject();
-        f1.put("e116",
+        JSONObject json = new JSONObject();
+
+        json.put("e116",
                 bi.e116a.isChecked() ? "1" :
                         bi.e116b.isChecked() ? "2" :
                                 "0");
-        f1.put("e117", bi.e117.getText().toString());
+        json.put("e117", bi.e117.getText().toString());
     }
 
     private boolean formValidation() {
