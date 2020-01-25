@@ -24,6 +24,11 @@ import edu.aku.hassannaqvi.uen_midline.contracts.FamilyMembersContract.singleMem
 import edu.aku.hassannaqvi.uen_midline.contracts.FormsContract;
 import edu.aku.hassannaqvi.uen_midline.contracts.FormsContract.FormsTable;
 import edu.aku.hassannaqvi.uen_midline.contracts.MWRAContract;
+import edu.aku.hassannaqvi.uen_midline.contracts.MWRAContract.MWRATable;
+import edu.aku.hassannaqvi.uen_midline.contracts.MWRA_PREContract;
+import edu.aku.hassannaqvi.uen_midline.contracts.MWRA_PREContract.SingleMWRAPRE;
+import edu.aku.hassannaqvi.uen_midline.contracts.MortalityContract;
+import edu.aku.hassannaqvi.uen_midline.contracts.MortalityContract.SingleMortality;
 import edu.aku.hassannaqvi.uen_midline.contracts.MotherContract;
 import edu.aku.hassannaqvi.uen_midline.contracts.MotherContract.singleMother;
 import edu.aku.hassannaqvi.uen_midline.contracts.TalukasContract;
@@ -640,7 +645,6 @@ public class DatabaseHelper extends SQLiteOpenHelper {
     }
 
 
-
     public Long addMotherForm(MotherContract fc) {
 
         // Gets the data repository in write mode
@@ -1160,16 +1164,48 @@ public class DatabaseHelper extends SQLiteOpenHelper {
     }
 
     //Generic update MWRAColumn
-    public int updatesMWRAColumn(String column, String value) {
+    public int updatesMWRAColumn(String column, String value, MWRAContract mwra) {
         SQLiteDatabase db = this.getReadableDatabase();
 
         ContentValues values = new ContentValues();
         values.put(column, value);
 
-        String selection = FormsTable._ID + " =? ";
-        String[] selectionArgs = {String.valueOf(MainApp.fc.get_ID())};
+        String selection = MWRATable._ID + " =? ";
+        String[] selectionArgs = {String.valueOf(mwra.get_ID())};
 
-        return db.update(FormsTable.TABLE_NAME,
+        return db.update(MWRATable.TABLE_NAME,
+                values,
+                selection,
+                selectionArgs);
+    }
+
+    //Generic update MWRAPREColumn
+    public int updatesMWRAPREColumn(String column, String value, MWRA_PREContract mwra_pre) {
+        SQLiteDatabase db = this.getReadableDatabase();
+
+        ContentValues values = new ContentValues();
+        values.put(column, value);
+
+        String selection = SingleMWRAPRE._ID + " =? ";
+        String[] selectionArgs = {String.valueOf(mwra_pre.get_ID())};
+
+        return db.update(SingleMWRAPRE.TABLE_NAME,
+                values,
+                selection,
+                selectionArgs);
+    }
+
+    //Generic update MortalityColumn
+    public int updatesMortalityColumn(String column, String value, MortalityContract mortality) {
+        SQLiteDatabase db = this.getReadableDatabase();
+
+        ContentValues values = new ContentValues();
+        values.put(column, value);
+
+        String selection = SingleMortality._ID + " =? ";
+        String[] selectionArgs = {String.valueOf(mortality.get_ID())};
+
+        return db.update(SingleMortality.TABLE_NAME,
                 values,
                 selection,
                 selectionArgs);
