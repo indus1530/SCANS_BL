@@ -2,6 +2,7 @@ package edu.aku.hassannaqvi.uen_midline.ui.sections;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.provider.Settings;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.databinding.DataBindingUtil;
@@ -11,7 +12,11 @@ import com.validatorcrawler.aliazaz.Validator;
 import org.json.JSONException;
 import org.json.JSONObject;
 
+import java.text.SimpleDateFormat;
+import java.util.Date;
+
 import edu.aku.hassannaqvi.uen_midline.R;
+import edu.aku.hassannaqvi.uen_midline.contracts.FormsContract;
 import edu.aku.hassannaqvi.uen_midline.core.MainApp;
 import edu.aku.hassannaqvi.uen_midline.databinding.ActivitySectionABinding;
 import edu.aku.hassannaqvi.uen_midline.ui.list_activity.FamilyMembersListActivity;
@@ -20,6 +25,7 @@ import edu.aku.hassannaqvi.uen_midline.utils.Util;
 public class SectionAActivity extends AppCompatActivity {
 
     ActivitySectionABinding bi;
+    String dtToday = new SimpleDateFormat("dd-MM-yy HH:mm").format(new Date().getTime());
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -31,9 +37,10 @@ public class SectionAActivity extends AppCompatActivity {
         setUIComponent();
     }
 
-    private void setUIComponent() {
 
+    private void setUIComponent() {
     }
+
 
     public void BtnContinue() {
         if (formValidation()) {
@@ -49,49 +56,25 @@ public class SectionAActivity extends AppCompatActivity {
         }
     }
 
-    private boolean UpdateDB() {
 
+    private boolean UpdateDB() {
         return true;
     }
 
+
     private void SaveDraft() throws JSONException {
 
+        MainApp.fc = new FormsContract();
+        MainApp.fc.setFormDate(dtToday);
+        MainApp.fc.setUser(MainApp.userName);
+        MainApp.fc.setDeviceID(Settings.Secure.getString(getApplicationContext().getContentResolver(),
+                Settings.Secure.ANDROID_ID));
+        MainApp.fc.setAppversion(MainApp.versionName + "." + MainApp.versionCode);
+        MainApp.fc.setClusterCode(bi.a101.getText().toString());
+
+        //setGPS(); // Set GPS
+
         JSONObject json = new JSONObject();
-
-        json.put("a101", bi.a101.getText().toString());
-
-        /*json.put("a102",
-                bi.a102a.isChecked() ?"1" :
-                        bi.a102b.isChecked() ?"2" :
-                                "0");
-
-        json.put("a103", bi.a103.getText().toString());
-
-        json.put("a104",
-                bi.a104a.isChecked() ?"1" :
-                        bi.a104b.isChecked() ?"2" :
-                                bi.a104c.isChecked() ?"3" :
-                                        "0");
-
-        json.put("a105",
-                bi.a105a.isChecked() ?"1" :
-                        bi.a105b.isChecked() ?"2" :
-                                bi.a105c.isChecked() ?"3" :
-                                        bi.a105d.isChecked() ?"4" :
-                                                bi.a105e.isChecked() ?"5" :
-                                                        bi.a105f.isChecked() ?"6" :
-                                                                bi.a105g.isChecked() ?"7" :
-                                                                        bi.a105h.isChecked() ?"8" :
-                                                                                "0");
-
-        json.put("a106", bi.a106.getText().toString());
-
-        json.put("a107", bi.a107.getText().toString());
-
-        json.put("a108",
-                bi.a108a.isChecked() ?"1" :
-                        bi.a108b.isChecked() ?"2" :
-                                "0");*/
 
         json.put("a109", bi.a109.getText().toString());
         json.put("a110", bi.a110.getText().toString());
