@@ -290,7 +290,7 @@
 
                             <com.edittextpicker.aliazaz.EditTextPicker
                                 android:id="@+id/j113"
-                                style="@style/EditTextAlpha"
+                                style="@style/EditTextNum"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:hint="@string/j113"

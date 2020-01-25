@@ -949,11 +949,15 @@
 
                     <com.edittextpicker.aliazaz.EditTextPicker
                         android:id="@+id/m112a"
-                        style="@style/EditTextAlpha"
+                        style="@style/EditTextNum"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:hint="@string/m112a"
-                        android:inputType="number" />
+                        android:inputType="number"
+                        app:defaultValue="00"
+                        app:maxValue="10"
+                        app:minValue="0"
+                        app:type="range" />
 
                     <TextView
                         style="@style/i_textview"
@@ -961,11 +965,15 @@
 
                     <com.edittextpicker.aliazaz.EditTextPicker
                         android:id="@+id/m112b"
-                        style="@style/EditTextAlpha"
+                        style="@style/EditTextNum"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:hint="@string/m112b"
-                        android:inputType="number" />
+                        android:inputType="number"
+                        app:defaultValue="00"
+                        app:maxValue="10"
+                        app:minValue="0"
+                        app:type="range" />
 
                     <TextView
                         style="@style/i_textview"
@@ -973,11 +981,15 @@
 
                     <com.edittextpicker.aliazaz.EditTextPicker
                         android:id="@+id/m112c"
-                        style="@style/EditTextAlpha"
+                        style="@style/EditTextNum"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:hint="@string/m112c"
-                        android:inputType="number" />
+                        android:inputType="number"
+                        app:defaultValue="00"
+                        app:maxValue="10"
+                        app:minValue="0"
+                        app:type="range" />
 
                     <TextView
                         style="@style/i_textview"
@@ -985,11 +997,15 @@
 
                     <com.edittextpicker.aliazaz.EditTextPicker
                         android:id="@+id/m112d"
-                        style="@style/EditTextAlpha"
+                        style="@style/EditTextNum"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:hint="@string/m112d"
-                        android:inputType="number" />
+                        android:inputType="number"
+                        app:defaultValue="00"
+                        app:maxValue="10"
+                        app:minValue="0"
+                        app:type="range" />
 
                     <TextView
                         style="@style/i_textview"
@@ -997,11 +1013,15 @@
 
                     <com.edittextpicker.aliazaz.EditTextPicker
                         android:id="@+id/m112e"
-                        style="@style/EditTextAlpha"
+                        style="@style/EditTextNum"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:hint="@string/m112e"
-                        android:inputType="number" />
+                        android:inputType="number"
+                        app:defaultValue="00"
+                        app:maxValue="10"
+                        app:minValue="0"
+                        app:type="range" />
 
                     <TextView
                         style="@style/i_textview"
@@ -1009,11 +1029,15 @@
 
                     <com.edittextpicker.aliazaz.EditTextPicker
                         android:id="@+id/m112f"
-                        style="@style/EditTextAlpha"
+                        style="@style/EditTextNum"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:hint="@string/m112f"
-                        android:inputType="number" />
+                        android:inputType="number"
+                        app:defaultValue="00"
+                        app:maxValue="10"
+                        app:minValue="0"
+                        app:type="range" />
 
                     <TextView
                         style="@style/i_textview"
@@ -1021,11 +1045,15 @@
 
                     <com.edittextpicker.aliazaz.EditTextPicker
                         android:id="@+id/m112g"
-                        style="@style/EditTextAlpha"
+                        style="@style/EditTextNum"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:hint="@string/m112g"
-                        android:inputType="number" />
+                        android:inputType="number"
+                        app:defaultValue="00"
+                        app:maxValue="10"
+                        app:minValue="0"
+                        app:type="range" />
                 </LinearLayout>
             </androidx.cardview.widget.CardView>
 
@@ -1196,6 +1224,11 @@
                             android:id="@+id/m114da"
                             style="@style/radiobutton"
                             android:text="@string/m114da" />
+
+                        <RadioButton
+                            android:id="@+id/m114db"
+                            style="@style/radiobutton"
+                            android:text="@string/m114db" />
                     </RadioGroup>
                 </LinearLayout>
             </androidx.cardview.widget.CardView>
