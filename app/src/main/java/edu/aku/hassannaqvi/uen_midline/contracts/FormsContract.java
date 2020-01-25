@@ -17,7 +17,7 @@ import java.util.Date;
 
 public class FormsContract {
 
-    private final String projectName = "UEN HHS Midline";
+    private final String projectName = "uen_mdline2020";
     private String _ID = "";
     private String _UID = "";
     private String formType = "";
@@ -394,7 +394,7 @@ public class FormsContract {
 
         public static final String TABLE_NAME = "forms";
         public static final String COLUMN_NAME_NULLABLE = "NULLHACK";
-        public static final String COLUMN_PROJECT_NAME = "projectname";
+        public static final String COLUMN_PROJECT_NAME = "uen_mdline2020";
         public static final String COLUMN_ID = "_id";
         public static final String COLUMN_UID = "_uid";
         public static final String COLUMN_FORMDATE = "formdate";
