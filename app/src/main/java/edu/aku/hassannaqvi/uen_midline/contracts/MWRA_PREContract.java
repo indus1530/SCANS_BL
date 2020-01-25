@@ -30,6 +30,87 @@ public class MWRA_PREContract {
     * counter
     * */
 
+
+    public String get_ID() {
+        return _ID;
+    }
+
+    public void set_ID(String _ID) {
+        this._ID = _ID;
+    }
+
+    public String getUID() {
+        return UID;
+    }
+
+    public void setUID(String UID) {
+        this.UID = UID;
+    }
+
+    public String get_UUID() {
+        return _UUID;
+    }
+
+    public void set_UUID(String _UUID) {
+        this._UUID = _UUID;
+    }
+
+    public String getDeviceId() {
+        return deviceId;
+    }
+
+    public void setDeviceId(String deviceId) {
+        this.deviceId = deviceId;
+    }
+
+    public String getFormDate() {
+        return formDate;
+    }
+
+    public void setFormDate(String formDate) {
+        this.formDate = formDate;
+    }
+
+    public String getUser() {
+        return user;
+    }
+
+    public void setUser(String user) {
+        this.user = user;
+    }
+
+    public String getsE2() {
+        return sE2;
+    }
+
+    public void setsE2(String sE2) {
+        this.sE2 = sE2;
+    }
+
+    public String getDevicetagID() {
+        return devicetagID;
+    }
+
+    public void setDevicetagID(String devicetagID) {
+        this.devicetagID = devicetagID;
+    }
+
+    public String getSynced() {
+        return synced;
+    }
+
+    public void setSynced(String synced) {
+        this.synced = synced;
+    }
+
+    public String getSynced_date() {
+        return synced_date;
+    }
+
+    public void setSynced_date(String synced_date) {
+        this.synced_date = synced_date;
+    }
+
     public MWRA_PREContract hydrate(Cursor cursor) {
         this._ID = cursor.getString(cursor.getColumnIndex(SingleMWRAPRE.COLUMN__ID));
         this.UID = cursor.getString(cursor.getColumnIndex(SingleMWRAPRE.COLUMN_UID));
@@ -71,6 +152,7 @@ public class MWRA_PREContract {
 
     public static abstract class SingleMWRAPRE implements BaseColumns {
 
+        public static final String TABLE_NAME = "mwra_preg";
         public static final String COLUMN__ID = "_id";
         public static final String COLUMN_UID = "uid";
         public static final String COLUMN__UUID = "_uuid";
