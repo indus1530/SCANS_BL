@@ -70,14 +70,20 @@ public class SectionAActivity extends AppCompatActivity {
         MainApp.fc.setDeviceID(Settings.Secure.getString(getApplicationContext().getContentResolver(), Settings.Secure.ANDROID_ID));
         MainApp.fc.setAppversion(MainApp.appInfo.getVersionName() + "." + MainApp.appInfo.getVersionCode());
         MainApp.fc.setClusterCode(bi.a101.getText().toString());
+        MainApp.fc.setHhno(bi.a112.getText().toString());
         MainApp.setGPS(this); // Set GPS
 
         JSONObject json = new JSONObject();
 
+        json.put("a104", bi.a104.getText().toString());
+        json.put("a105", bi.a105.getText().toString());
+        json.put("a106", bi.a106.getText().toString());
+        json.put("a107", bi.a107.getText().toString());
         json.put("a109", bi.a109.getText().toString());
         json.put("a110", bi.a110.getText().toString());
         json.put("a111", bi.a111.getText().toString());
-        json.put("a112", bi.a112.getText().toString());
+        json.put("hhheadpresent", bi.checkHHHeadpresent.isChecked() ? "1" : "2");
+        //json.put("hhheadpresentnew", bi.newHHheadname.getText().toString());
 
         MainApp.fc.setsInfo(String.valueOf(json));
 
