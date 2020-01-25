@@ -16,12 +16,17 @@ import com.validatorcrawler.aliazaz.Validator;
 import org.json.JSONException;
 import org.json.JSONObject;
 
+import java.util.List;
+
 import edu.aku.hassannaqvi.uen_midline.R;
+import edu.aku.hassannaqvi.uen_midline.contracts.FamilyMembersContract;
 import edu.aku.hassannaqvi.uen_midline.contracts.FormsContract;
 import edu.aku.hassannaqvi.uen_midline.core.DatabaseHelper;
 import edu.aku.hassannaqvi.uen_midline.core.MainApp;
 import edu.aku.hassannaqvi.uen_midline.databinding.ActivitySectionE3Binding;
 import edu.aku.hassannaqvi.uen_midline.utils.Util;
+
+import static edu.aku.hassannaqvi.uen_midline.ui.list_activity.FamilyMembersListActivity.mainVModel;
 
 public class SectionE3Activity extends AppCompatActivity {
 
@@ -81,7 +86,9 @@ public class SectionE3Activity extends AppCompatActivity {
                 if (!bi.e116b.isChecked()) {
                     startActivity(new Intent(this, SectionE4Activity.class));
                 } else {
-                    startActivity(new Intent(this, SectionFActivity.class));
+                    List<FamilyMembersContract> lstU5 = mainVModel.getChildLstU5().getValue();
+                    Class nextClass = lstU5 != null ? lstU5.size() > 0 ? SectionI1Activity.class : SectionMActivity.class : SectionMActivity.class;
+                    startActivity(new Intent(this, MainApp.selectedKishMWRA != null ? SectionFActivity.class : nextClass));
                 }
             } else {
                 Toast.makeText(this, "Failed to Update Database!", Toast.LENGTH_SHORT).show();

@@ -220,6 +220,7 @@ public class KishMWRAContract {
     public static abstract class SingleKishMWRA implements BaseColumns {
 
         public static final String TABLE_NAME = "kish_mwra";
+        public static final String COLUMN_NAME_NULLABLE = "NULLHACK";
         public static final String COLUMN__ID = "_id";
         public static final String COLUMN_UID = "uid";
         public static final String COLUMN__UUID = "_uuid";

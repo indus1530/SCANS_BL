@@ -26,6 +26,7 @@ import edu.aku.hassannaqvi.uen_midline.contracts.FamilyMembersContract;
 import edu.aku.hassannaqvi.uen_midline.contracts.FamilyMembersContract.singleMember;
 import edu.aku.hassannaqvi.uen_midline.contracts.FormsContract;
 import edu.aku.hassannaqvi.uen_midline.contracts.FormsContract.FormsTable;
+import edu.aku.hassannaqvi.uen_midline.contracts.KishMWRAContract;
 import edu.aku.hassannaqvi.uen_midline.contracts.KishMWRAContract.SingleKishMWRA;
 import edu.aku.hassannaqvi.uen_midline.contracts.MWRAContract;
 import edu.aku.hassannaqvi.uen_midline.contracts.MWRAContract.MWRATable;
@@ -615,6 +616,70 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         newRowId = db.insert(
                 FormsTable.TABLE_NAME,
                 FormsTable.COLUMN_NAME_NULLABLE,
+                values);
+        return newRowId;
+    }
+
+    public Long addMortality(MortalityContract morc) {
+
+        // Gets the data repository in write mode
+        SQLiteDatabase db = this.getWritableDatabase();
+
+        // Create a new map of values, where column names are the keys
+        ContentValues values = new ContentValues();
+/*        values.put(singleMember.COLUMN_ID, morc.get_id());
+        values.put(singleMember.COLUMN_UID, morc.getUid());
+        values.put(singleMember.COLUMN_UUID, morc.getUuid());
+        values.put(singleMember.COLUMN_FORMDATE, morc.getFormdate());
+        values.put(singleMember.COLUMN_CLUSTERNO, morc.getClusterno());
+        values.put(singleMember.COLUMN_HHNO, morc.getHhno());
+        values.put(singleMember.COLUMN_SERIAL_NO, morc.getSerialno());
+        values.put(singleMember.COLUMN_NAME, morc.getName());
+        values.put(singleMember.COLUMN_RELATION_HH, morc.getRelHH());
+        values.put(singleMember.COLUMN_AGE, morc.getAge());
+        values.put(singleMember.COLUMN_MOTHER_NAME, morc.getMother_name());
+        values.put(singleMember.COLUMN_MOTHER_SERIAL, morc.getMother_serial());
+        values.put(singleMember.COLUMN_GENDER, morc.getGender());
+        values.put(singleMember.COLUMN_MARITAL, morc.getMarital());
+        values.put(singleMember.COLUMN_SD, morc.getsD());*/
+
+        // Insert the new row, returning the primary key value of the new row
+        long newRowId;
+        newRowId = db.insert(
+                SingleMortality.TABLE_NAME,
+                SingleMortality.COLUMN_NAME_NULLABLE,
+                values);
+        return newRowId;
+    }
+
+    public Long addKishMWRA(KishMWRAContract kishmwra) {
+
+        // Gets the data repository in write mode
+        SQLiteDatabase db = this.getWritableDatabase();
+
+        // Create a new map of values, where column names are the keys
+        ContentValues values = new ContentValues();
+/*        values.put(singleMember.COLUMN_ID, morc.get_id());
+        values.put(singleMember.COLUMN_UID, morc.getUid());
+        values.put(singleMember.COLUMN_UUID, morc.getUuid());
+        values.put(singleMember.COLUMN_FORMDATE, morc.getFormdate());
+        values.put(singleMember.COLUMN_CLUSTERNO, morc.getClusterno());
+        values.put(singleMember.COLUMN_HHNO, morc.getHhno());
+        values.put(singleMember.COLUMN_SERIAL_NO, morc.getSerialno());
+        values.put(singleMember.COLUMN_NAME, morc.getName());
+        values.put(singleMember.COLUMN_RELATION_HH, morc.getRelHH());
+        values.put(singleMember.COLUMN_AGE, morc.getAge());
+        values.put(singleMember.COLUMN_MOTHER_NAME, morc.getMother_name());
+        values.put(singleMember.COLUMN_MOTHER_SERIAL, morc.getMother_serial());
+        values.put(singleMember.COLUMN_GENDER, morc.getGender());
+        values.put(singleMember.COLUMN_MARITAL, morc.getMarital());
+        values.put(singleMember.COLUMN_SD, morc.getsD());*/
+
+        // Insert the new row, returning the primary key value of the new row
+        long newRowId;
+        newRowId = db.insert(
+                SingleKishMWRA.TABLE_NAME,
+                SingleKishMWRA.COLUMN_NAME_NULLABLE,
                 values);
         return newRowId;
     }

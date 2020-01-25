@@ -14,16 +14,24 @@ import com.validatorcrawler.aliazaz.Validator;
 import org.json.JSONException;
 import org.json.JSONObject;
 
+import java.util.List;
+
 import edu.aku.hassannaqvi.uen_midline.CONSTANTS;
 import edu.aku.hassannaqvi.uen_midline.R;
+import edu.aku.hassannaqvi.uen_midline.contracts.FamilyMembersContract;
+import edu.aku.hassannaqvi.uen_midline.contracts.MortalityContract;
+import edu.aku.hassannaqvi.uen_midline.core.DatabaseHelper;
 import edu.aku.hassannaqvi.uen_midline.core.MainApp;
 import edu.aku.hassannaqvi.uen_midline.databinding.ActivitySectionE4Binding;
 import edu.aku.hassannaqvi.uen_midline.utils.DateUtils;
 import edu.aku.hassannaqvi.uen_midline.utils.Util;
 
+import static edu.aku.hassannaqvi.uen_midline.ui.list_activity.FamilyMembersListActivity.mainVModel;
+
 public class SectionE4Activity extends AppCompatActivity {
 
     ActivitySectionE4Binding bi;
+    private MortalityContract morc;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -103,7 +111,9 @@ public class SectionE4Activity extends AppCompatActivity {
                     startActivity(new Intent(this, SectionE4Activity.class));
                 } else {
                     finish();
-                    startActivity(new Intent(this, SectionFActivity.class));
+                    List<FamilyMembersContract> lstU5 = mainVModel.getChildLstU5().getValue();
+                    Class nextClass = lstU5 != null ? lstU5.size() > 0 ? SectionI1Activity.class : SectionMActivity.class : SectionMActivity.class;
+                    startActivity(new Intent(this, MainApp.selectedKishMWRA != null ? SectionFActivity.class : nextClass));
                 }
 
 
@@ -114,11 +124,22 @@ public class SectionE4Activity extends AppCompatActivity {
     }
 
     private boolean UpdateDB() {
-
-        return true;
+        DatabaseHelper db = new DatabaseHelper(this);
+        long updcount = db.addMortality(morc);
+        morc.set_ID(String.valueOf(updcount));
+        if (updcount != 0) {
+            morc.setUID(morc.getDeviceId() + morc.get_ID());
+            db.updatesMortalityColumn(FamilyMembersContract.singleMember.COLUMN_UID, morc.getUID(), morc);
+            return true;
+        } else {
+            Toast.makeText(this, "Updating Database... ERROR!", Toast.LENGTH_SHORT).show();
+        }
+        return false;
     }
 
     private void SaveDraft() throws JSONException {
+
+        morc = new MortalityContract();
 
         JSONObject f1 = new JSONObject();
         f1.put("e118", bi.e118.getText().toString());
@@ -146,6 +167,7 @@ public class SectionE4Activity extends AppCompatActivity {
                                                 bi.e122e.isChecked() ? "5" :
                                                         "0");
 
+        morc.setsE3(String.valueOf(f1));
 
         --MainApp.deathCount;
     }
@@ -159,6 +181,7 @@ public class SectionE4Activity extends AppCompatActivity {
 
         Util.openEndActivity(this);
     }
+
     @Override
     public void onBackPressed() {
         Toast.makeText(this, "You can't go back", Toast.LENGTH_SHORT).show();

@@ -13,6 +13,9 @@ import org.json.JSONException;
 import org.json.JSONObject;
 
 import edu.aku.hassannaqvi.uen_midline.R;
+import edu.aku.hassannaqvi.uen_midline.contracts.KishMWRAContract;
+import edu.aku.hassannaqvi.uen_midline.core.DatabaseHelper;
+import edu.aku.hassannaqvi.uen_midline.core.MainApp;
 import edu.aku.hassannaqvi.uen_midline.databinding.ActivitySectionFBinding;
 import edu.aku.hassannaqvi.uen_midline.utils.Util;
 import edu.aku.hassannaqvi.uen_midline.validator.ClearClass;
@@ -32,6 +35,11 @@ public class SectionFActivity extends AppCompatActivity {
     }
 
     void setUIComponent() {
+
+        bi.f101Name.setText(MainApp.selectedKishMWRA.getName().toUpperCase() + "\n"
+                + getResources().getString(R.string.d101)
+                + ":"
+                + MainApp.selectedKishMWRA.getSerialno());
 
         bi.f101.setOnCheckedChangeListener(((radioGroup, i) -> {
             if (i == bi.f101a.getId()) {
@@ -68,11 +76,22 @@ public class SectionFActivity extends AppCompatActivity {
     }
 
     private boolean UpdateDB() {
-
-        return true;
+        DatabaseHelper db = new DatabaseHelper(this);
+        long updcount = db.addKishMWRA(MainApp.kish);
+        MainApp.kish.set_ID(String.valueOf(updcount));
+        if (updcount != 0) {
+            MainApp.kish.setUID(MainApp.kish.getDeviceId() + MainApp.kish.get_ID());
+            db.updatesKishMWRAColumn(KishMWRAContract.SingleKishMWRA.COLUMN_UID, MainApp.kish.getUID());
+            return true;
+        } else {
+            Toast.makeText(this, "Updating Database... ERROR!", Toast.LENGTH_SHORT).show();
+        }
+        return false;
     }
 
     private void SaveDraft() throws JSONException {
+
+        MainApp.kish = new KishMWRAContract();
 
         JSONObject f1 = new JSONObject();
 
@@ -205,6 +224,8 @@ public class SectionFActivity extends AppCompatActivity {
                                 "0");
 
         f1.put("f120", bi.f120.getText().toString());
+
+        MainApp.kish.setsF(String.valueOf(f1));
 
     }
 
