@@ -1,11 +1,11 @@
 package edu.aku.hassannaqvi.uen_midline.ui.sections;
 
-import androidx.appcompat.app.AppCompatActivity;
-import androidx.databinding.DataBindingUtil;
-
 import android.content.Intent;
 import android.os.Bundle;
 import android.widget.Toast;
+
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.databinding.DataBindingUtil;
 
 import com.validatorcrawler.aliazaz.Validator;
 
@@ -41,7 +41,7 @@ public class SectionOActivity extends AppCompatActivity {
         }));
 
         bi.o103.setOnCheckedChangeListener(((radioGroup, i) -> {
-            if (i != bi.o103a.getId()) {
+            if (i == bi.o103b.getId()) {
                 ClearClass.ClearAllFields(bi.fldGrpCVo104, null);
             }
         }));
@@ -83,9 +83,9 @@ public class SectionOActivity extends AppCompatActivity {
                 bi.o101a.isChecked() ?"1" :
                         bi.o101b.isChecked() ?"2" :
                                 bi.o101c.isChecked() ?"3" :
-                                        bi.o101x.isChecked() ?"96" :
+                                        bi.o10196.isChecked() ? "96" :
                                                 "0");
-        f1.put("o101xt", bi.o101xt.getText().toString());
+        f1.put("o10196x", bi.o10196x.getText().toString());
         f1.put("o102",
                 bi.o102a.isChecked() ?"1" :
                         bi.o102b.isChecked() ?"2" :
@@ -98,18 +98,24 @@ public class SectionOActivity extends AppCompatActivity {
         f1.put("o104b",bi.o104b.isChecked() ?"2" :"0");
         f1.put("o104c",bi.o104c.isChecked() ?"3" :"0");
         f1.put("o104d",bi.o104d.isChecked() ?"4" :"0");
-        f1.put("o104x",bi.o104x.isChecked() ?"96" :"0");
-        f1.put("o104xt", bi.o104xt.getText().toString());
-        f1.put("o105a",bi.o105a.isChecked() ?"1" :"0");
-        f1.put("o105b",bi.o105b.isChecked() ?"2" :"0");
+        /*f1.put("o104x",bi.o104x.isChecked() ?"96" :"0");
+        f1.put("o104xt", bi.o104xt.getText().toString());*/
+
+        f1.put("o105",
+                bi.o105a.isChecked() ? "1" :
+                        bi.o105b.isChecked() ? "2" :
+                                "0");
+
         f1.put("o106",
                 bi.o106a.isChecked() ?"1" :
                         bi.o106b.isChecked() ?"2" :
                                 "0");
+
         f1.put("o107a",bi.o107a.isChecked() ?"1" :"0");
         f1.put("o107b",bi.o107b.isChecked() ?"2" :"0");
         f1.put("o107c",bi.o107c.isChecked() ?"3" :"0");
         f1.put("o107d",bi.o107d.isChecked() ?"4" :"0");
+
         f1.put("o108",
                 bi.o108a.isChecked() ?"1" :
                         bi.o108b.isChecked() ?"2" :

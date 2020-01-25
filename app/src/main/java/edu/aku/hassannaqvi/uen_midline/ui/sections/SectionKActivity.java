@@ -123,10 +123,8 @@ public class SectionKActivity extends AppCompatActivity {
                         bi.k102b.isChecked() ? "2" :
                                 "0");
 
-        k1.put("k103",
-                bi.k103a.isChecked() ? "1" :
-                        bi.k103b.isChecked() ? "2" :
-                                "0");
+        k1.put("k103", bi.k103a.isChecked() ? "1" :
+                bi.k103b.isChecked() ? "2" : "0");
 
         k1.put("k104a", bi.k104a.isChecked() ? "1" : "0");
         k1.put("k104b", bi.k104b.isChecked() ? "2" : "0");
