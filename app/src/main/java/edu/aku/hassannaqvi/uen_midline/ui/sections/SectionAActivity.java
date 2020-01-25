@@ -67,12 +67,10 @@ public class SectionAActivity extends AppCompatActivity {
         MainApp.fc = new FormsContract();
         MainApp.fc.setFormDate(dtToday);
         MainApp.fc.setUser(MainApp.userName);
-        MainApp.fc.setDeviceID(Settings.Secure.getString(getApplicationContext().getContentResolver(),
-                Settings.Secure.ANDROID_ID));
-        MainApp.fc.setAppversion(MainApp.versionName + "." + MainApp.versionCode);
+        MainApp.fc.setDeviceID(Settings.Secure.getString(getApplicationContext().getContentResolver(), Settings.Secure.ANDROID_ID));
+        MainApp.fc.setAppversion(MainApp.appInfo.getVersionName() + "." + MainApp.appInfo.getVersionCode());
         MainApp.fc.setClusterCode(bi.a101.getText().toString());
-
-        //setGPS(); // Set GPS
+        MainApp.setGPS(this); // Set GPS
 
         JSONObject json = new JSONObject();
 

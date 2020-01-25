@@ -17,7 +17,6 @@ import java.io.DataOutputStream;
 import java.io.IOException;
 import java.io.InputStreamReader;
 import java.net.HttpURLConnection;
-import java.net.MalformedURLException;
 import java.net.URL;
 import java.nio.charset.StandardCharsets;
 
@@ -27,13 +26,12 @@ import edu.aku.hassannaqvi.uen_midline.core.MainApp;
 import static android.content.Context.MODE_PRIVATE;
 
 public class SyncDevice extends AsyncTask<Void, Integer, String> {
-    public SyncDevicInterface delegate;
-    Context context;
-
-    SharedPreferences sharedPref;
-    SharedPreferences.Editor editor;
-    boolean flag;
-    private String TAG = "";
+    private SyncDevicInterface delegate;
+    private Context context;
+    private SharedPreferences sharedPref;
+    private SharedPreferences.Editor editor;
+    private boolean flag;
+    private String TAG = SyncDevice.class.getName();
 
     public SyncDevice(Context context, boolean flag) {
         this.context = context;
@@ -86,7 +84,7 @@ public class SyncDevice extends AsyncTask<Void, Integer, String> {
 
                 try {
                     jsonObject.addProperty("imei", MainApp.IMEI);
-                    jsonObject.addProperty("appversion", MainApp.versionName + "." + MainApp.versionCode);
+                    jsonObject.addProperty("appversion", MainApp.appInfo.getVersionName() + "." + MainApp.appInfo.getVersionCode());
                     jsonObject.addProperty("appname", context.getString(R.string.app_name));
 
                 } catch (Exception e) {
@@ -111,10 +109,7 @@ public class SyncDevice extends AsyncTask<Void, Integer, String> {
                 System.out.println(connection.getResponseMessage());
                 return connection.getResponseMessage();
             }
-        } catch (MalformedURLException e) {
-            e.printStackTrace();
         } catch (IOException e) {
-
             e.printStackTrace();
         } finally {
             if (connection != null)

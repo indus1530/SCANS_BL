@@ -8,7 +8,6 @@ import edu.aku.hassannaqvi.uen_midline.contracts.KishMWRAContract.SingleKishMWRA
 import edu.aku.hassannaqvi.uen_midline.contracts.MWRAContract.MWRATable;
 import edu.aku.hassannaqvi.uen_midline.contracts.MWRA_PREContract.SingleMWRAPRE;
 import edu.aku.hassannaqvi.uen_midline.contracts.MortalityContract.SingleMortality;
-import edu.aku.hassannaqvi.uen_midline.contracts.MotherContract;
 import edu.aku.hassannaqvi.uen_midline.contracts.TalukasContract;
 import edu.aku.hassannaqvi.uen_midline.contracts.UCsContract;
 import edu.aku.hassannaqvi.uen_midline.contracts.UsersContract;

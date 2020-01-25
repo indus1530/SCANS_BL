@@ -31,15 +31,12 @@ import edu.aku.hassannaqvi.uen_midline.contracts.MWRA_PREContract;
 import edu.aku.hassannaqvi.uen_midline.contracts.MWRA_PREContract.SingleMWRAPRE;
 import edu.aku.hassannaqvi.uen_midline.contracts.MortalityContract;
 import edu.aku.hassannaqvi.uen_midline.contracts.MortalityContract.SingleMortality;
-import edu.aku.hassannaqvi.uen_midline.contracts.MotherContract;
-import edu.aku.hassannaqvi.uen_midline.contracts.MotherContract.singleMother;
 import edu.aku.hassannaqvi.uen_midline.contracts.TalukasContract;
 import edu.aku.hassannaqvi.uen_midline.contracts.UCsContract;
 import edu.aku.hassannaqvi.uen_midline.contracts.UsersContract;
 import edu.aku.hassannaqvi.uen_midline.contracts.VersionAppContract;
 import edu.aku.hassannaqvi.uen_midline.contracts.VillagesContract;
 import edu.aku.hassannaqvi.uen_midline.contracts.VillagesContract.singleVillage;
-import edu.aku.hassannaqvi.uen_midline.otherClasses.familyMembers;
 
 import static edu.aku.hassannaqvi.uen_midline.utils.CreateTable.DATABASE_NAME;
 import static edu.aku.hassannaqvi.uen_midline.utils.CreateTable.DATABASE_VERSION;
@@ -1128,6 +1125,22 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         String[] selectionArgs = {String.valueOf(MainApp.fc.get_ID())};
 
         return db.update(FormsTable.TABLE_NAME,
+                values,
+                selection,
+                selectionArgs);
+    }
+
+    //Generic update FamilyMemberColumn
+    public int updatesFamilyMemberColumn(String column, String value, String valueID) {
+        SQLiteDatabase db = this.getReadableDatabase();
+
+        ContentValues values = new ContentValues();
+        values.put(column, value);
+
+        String selection = singleMember._ID + " =? ";
+        String[] selectionArgs = {String.valueOf(valueID)};
+
+        return db.update(singleMember.TABLE_NAME,
                 values,
                 selection,
                 selectionArgs);
