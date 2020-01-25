@@ -38,6 +38,7 @@ import edu.aku.hassannaqvi.uen_midline.databinding.ActivitySyncBinding;
 import edu.aku.hassannaqvi.uen_midline.get.GetAllData;
 import edu.aku.hassannaqvi.uen_midline.otherClasses.SyncModel;
 import edu.aku.hassannaqvi.uen_midline.sync.SyncAllData;
+import edu.aku.hassannaqvi.uen_midline.sync.SyncDevice;
 
 import static edu.aku.hassannaqvi.uen_midline.utils.CreateTable.DATABASE_NAME;
 import static edu.aku.hassannaqvi.uen_midline.utils.CreateTable.DB_NAME;
@@ -95,7 +96,7 @@ public class SyncActivity extends AppCompatActivity {
                 getSystemService(Context.CONNECTIVITY_SERVICE);
         NetworkInfo networkInfo = connMgr.getActiveNetworkInfo();
         if (networkInfo != null && networkInfo.isConnected()) {
-            new syncData(SyncActivity.this).execute();
+            new SyncDevice(SyncActivity.this, true).execute();
         } else {
             Toast.makeText(this, "No network connection available.", Toast.LENGTH_SHORT).show();
         }
@@ -164,6 +165,7 @@ public class SyncActivity extends AppCompatActivity {
             DatabaseHelper db = new DatabaseHelper(this);
             //syncStatus.setText(null);
 //            new SyncDevice(this).execute();
+            new SyncDevice(this, false).execute();
 //  *******************************************************Forms*********************************
             Toast.makeText(getApplicationContext(), "Syncing Forms", Toast.LENGTH_SHORT).show();
             if (uploadlistActivityCreated) {
@@ -268,9 +270,11 @@ public class SyncActivity extends AppCompatActivity {
     public class syncData extends AsyncTask<String, String, String> {
 
         private Context mContext;
+        String distID;
 
-        public syncData(Context mContext) {
+        public syncData(Context mContext, String districtId) {
             this.mContext = mContext;
+            this.distID = districtId;
         }
 
         @Override
@@ -279,6 +283,8 @@ public class SyncActivity extends AppCompatActivity {
 
                 @Override
                 public void run() {
+
+
                     Toast.makeText(SyncActivity.this, "Sync Talukas", Toast.LENGTH_SHORT).show();
 
                     if (listActivityCreated) {
@@ -286,55 +292,37 @@ public class SyncActivity extends AppCompatActivity {
                         model.setstatusID(0);
                         list.add(model);
                     }
-                    new GetAllData(mContext, "Talukas", syncListAdapter, list).execute();
+                    new GetAllData(mContext, "EnumBlock", syncListAdapter, list).execute(distID);
                     bi.noItem.setVisibility(View.GONE);
 
-//                  getting UCs!!
-                    Toast.makeText(SyncActivity.this, "Sync UCs", Toast.LENGTH_SHORT).show();
+//                  getting Users!!
+//                    Toast.makeText(SyncActivity.this, "Sync Users", Toast.LENGTH_SHORT).show();
 
                     if (listActivityCreated) {
                         model = new SyncModel();
                         model.setstatusID(0);
                         list.add(model);
                     }
-                    new GetAllData(mContext, "UCs", syncListAdapter, list).execute();
+                    new GetAllData(mContext, "User", syncListAdapter, list).execute(distID);
 
-//                   getting Areas
-                    Toast.makeText(SyncActivity.this, "Sync Areas", Toast.LENGTH_SHORT).show();
+//                   getting BL Random
+//                    Toast.makeText(SyncActivity.this, "Sync BL Random", Toast.LENGTH_SHORT).show();
                     if (listActivityCreated) {
                         model = new SyncModel();
                         model.setstatusID(0);
                         list.add(model);
                     }
-                    new GetAllData(mContext, "Areas", syncListAdapter, list).execute();
-
-//                   getting Villages
-                    Toast.makeText(SyncActivity.this, "Sync Villages", Toast.LENGTH_SHORT).show();
-                    if (listActivityCreated) {
-                        model = new SyncModel();
-                        model.setstatusID(0);
-                        list.add(model);
-                    }
-                    new GetAllData(mContext, "Villages", syncListAdapter, list).execute();
-
-//                   getting User
-                    Toast.makeText(SyncActivity.this, "Sync Users", Toast.LENGTH_SHORT).show();
-                    if (listActivityCreated) {
-                        model = new SyncModel();
-                        model.setstatusID(0);
-                        list.add(model);
-                    }
-                    new GetAllData(mContext, "Users", syncListAdapter, list).execute();
+                    new GetAllData(mContext, "BLRandom", syncListAdapter, list).execute(distID);
 
 //                    Getting App Version
-                    Toast.makeText(SyncActivity.this, "Sync VersionApp", Toast.LENGTH_SHORT).show();
+//                    Toast.makeText(SyncActivity.this, "Sync App Version", Toast.LENGTH_SHORT).show();
                     if (listActivityCreated) {
                         model = new SyncModel();
                         model.setstatusID(0);
                         list.add(model);
                     }
                     new GetAllData(mContext, "VersionApp", syncListAdapter, list).execute();
-//                    new GetAllData(mContext, "FamilyMembers").execute();
+
                     listActivityCreated = false;
                 }
             });
