@@ -19,6 +19,8 @@ import java.util.Date;
 
 import edu.aku.hassannaqvi.uen_midline.contracts.AreasContract;
 import edu.aku.hassannaqvi.uen_midline.contracts.AreasContract.singleAreas;
+import edu.aku.hassannaqvi.uen_midline.contracts.BLRandomContract;
+import edu.aku.hassannaqvi.uen_midline.contracts.EnumBlockContract;
 import edu.aku.hassannaqvi.uen_midline.contracts.FamilyMembersContract;
 import edu.aku.hassannaqvi.uen_midline.contracts.FamilyMembersContract.singleMember;
 import edu.aku.hassannaqvi.uen_midline.contracts.FormsContract;
@@ -37,6 +39,7 @@ import edu.aku.hassannaqvi.uen_midline.contracts.UsersContract;
 import edu.aku.hassannaqvi.uen_midline.contracts.VersionAppContract;
 import edu.aku.hassannaqvi.uen_midline.contracts.VillagesContract;
 import edu.aku.hassannaqvi.uen_midline.contracts.VillagesContract.singleVillage;
+import edu.aku.hassannaqvi.uen_midline.otherClasses.familyMembers;
 
 import static edu.aku.hassannaqvi.uen_midline.utils.CreateTable.DATABASE_NAME;
 import static edu.aku.hassannaqvi.uen_midline.utils.CreateTable.DATABASE_VERSION;
@@ -139,6 +142,31 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         }
     }
 
+    public void syncEnumBlocks(JSONArray Enumlist) {
+        SQLiteDatabase db = this.getWritableDatabase();
+        db.delete(EnumBlockContract.EnumBlockTable.TABLE_NAME, null, null);
+        try {
+            JSONArray jsonArray = Enumlist;
+            for (int i = 0; i < jsonArray.length(); i++) {
+                JSONObject jsonObjectCC = jsonArray.getJSONObject(i);
+
+                EnumBlockContract Vc = new EnumBlockContract();
+                Vc.Sync(jsonObjectCC);
+
+                ContentValues values = new ContentValues();
+
+                values.put(EnumBlockContract.EnumBlockTable.COLUMN_COUNTRY_ID, Vc.getEbcode());
+                values.put(EnumBlockContract.EnumBlockTable.COLUMN_GEO_AREA, Vc.getGeoarea());
+                values.put(EnumBlockContract.EnumBlockTable.COLUMN_CLUSTER_AREA, Vc.getCluster());
+
+                db.insert(EnumBlockContract.EnumBlockTable.TABLE_NAME, null, values);
+            }
+        } catch (Exception e) {
+        } finally {
+            db.close();
+        }
+    }
+
     public void syncTalukas(JSONArray Talukaslist) {
         SQLiteDatabase db = this.getWritableDatabase();
         db.delete(TalukasContract.singleTalukas.TABLE_NAME, null, null);
@@ -162,6 +190,40 @@ public class DatabaseHelper extends SQLiteOpenHelper {
             db.close();
         }
     }
+
+    public void syncBLRandom(JSONArray BLlist) {
+        SQLiteDatabase db = this.getWritableDatabase();
+        db.delete(BLRandomContract.singleRandomHH.TABLE_NAME, null, null);
+        try {
+            JSONArray jsonArray = BLlist;
+            for (int i = 0; i < jsonArray.length(); i++) {
+                JSONObject jsonObjectCC = jsonArray.getJSONObject(i);
+
+                BLRandomContract Vc = new BLRandomContract();
+                Vc.Sync(jsonObjectCC);
+
+                ContentValues values = new ContentValues();
+
+                values.put(BLRandomContract.singleRandomHH.COLUMN_ID, Vc.get_ID());
+                values.put(BLRandomContract.singleRandomHH.COLUMN_LUID, Vc.getLUID());
+                values.put(BLRandomContract.singleRandomHH.COLUMN_STRUCTURE_NO, Vc.getStructure());
+                values.put(BLRandomContract.singleRandomHH.COLUMN_FAMILY_EXT_CODE, Vc.getExtension());
+                values.put(BLRandomContract.singleRandomHH.COLUMN_HH, Vc.getHh());
+                values.put(BLRandomContract.singleRandomHH.COLUMN_ENUM_BLOCK_CODE, Vc.getSubVillageCode());
+                values.put(BLRandomContract.singleRandomHH.COLUMN_RANDOMDT, Vc.getRandomDT());
+                values.put(BLRandomContract.singleRandomHH.COLUMN_HH_HEAD, Vc.getHhhead());
+                values.put(BLRandomContract.singleRandomHH.COLUMN_CONTACT, Vc.getContact());
+                values.put(BLRandomContract.singleRandomHH.COLUMN_HH_SELECTED_STRUCT, Vc.getSelStructure());
+                values.put(BLRandomContract.singleRandomHH.COLUMN_SNO_HH, Vc.getSno());
+
+                db.insert(BLRandomContract.singleRandomHH.TABLE_NAME, null, values);
+            }
+        } catch (Exception e) {
+        } finally {
+            db.close();
+        }
+    }
+
 
     public void syncUCs(JSONArray UCslist) {
         SQLiteDatabase db = this.getWritableDatabase();
