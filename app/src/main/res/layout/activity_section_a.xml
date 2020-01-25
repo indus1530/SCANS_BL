@@ -103,7 +103,7 @@
                     <!--a104-->
                     <TextView
                         android:layout_width="0dp"
-                        android:layout_height="wrap_content"
+                        android:layout_height="60sp"
                         android:layout_marginTop="16dp"
                         android:layout_marginBottom="4dp"
                         android:layout_weight="2"
@@ -112,13 +112,14 @@
                         android:padding="15dp"
                         android:text="@string/a104"
                         android:textAppearance="?android:attr/textAppearanceLarge"
+                        android:elevation="3sp"
                         android:textColor="@android:color/white" />
 
 
                     <TextView
                         android:id="@+id/a104"
                         android:layout_width="0dp"
-                        android:layout_height="wrap_content"
+                        android:layout_height="60sp"
                         android:layout_marginTop="13dp"
                         android:layout_marginBottom="4dp"
                         android:layout_weight="3"
@@ -132,7 +133,7 @@
                     <!--a105-->
                     <TextView
                         android:layout_width="0dp"
-                        android:layout_height="wrap_content"
+                        android:layout_height="60sp"
                         android:layout_marginTop="16dp"
                         android:layout_marginBottom="8dp"
                         android:layout_weight="2"
@@ -141,13 +142,14 @@
                         android:padding="15dp"
                         android:text="@string/a105"
                         android:textAppearance="?android:attr/textAppearanceLarge"
+                        android:elevation="3sp"
                         android:textColor="@android:color/white" />
 
 
                     <TextView
                         android:id="@+id/a105"
                         android:layout_width="0dp"
-                        android:layout_height="wrap_content"
+                        android:layout_height="60sp"
                         android:layout_marginTop="13dp"
                         android:layout_marginBottom="4dp"
                         android:layout_weight="3"
