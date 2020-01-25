@@ -17,6 +17,8 @@ import org.json.JSONException;
 import org.json.JSONObject;
 
 import edu.aku.hassannaqvi.uen_midline.R;
+import edu.aku.hassannaqvi.uen_midline.contracts.FormsContract;
+import edu.aku.hassannaqvi.uen_midline.core.DatabaseHelper;
 import edu.aku.hassannaqvi.uen_midline.core.MainApp;
 import edu.aku.hassannaqvi.uen_midline.databinding.ActivitySectionE3Binding;
 import edu.aku.hassannaqvi.uen_midline.utils.Util;
@@ -88,8 +90,14 @@ public class SectionE3Activity extends AppCompatActivity {
     }
 
     private boolean UpdateDB() {
-
-        return true;
+        DatabaseHelper db = new DatabaseHelper(this);
+        int updcount = db.updatesFormColumn(FormsContract.FormsTable.COLUMN_SE, MainApp.fc.getsE());
+        if (updcount == 1) {
+            return true;
+        } else {
+            Toast.makeText(this, "Updating Database... ERROR!", Toast.LENGTH_SHORT).show();
+            return false;
+        }
     }
 
     private void SaveDraft() throws JSONException {
@@ -100,6 +108,8 @@ public class SectionE3Activity extends AppCompatActivity {
                         bi.e116b.isChecked() ? "2" :
                                 "0");
         f1.put("e117", bi.e117.getText().toString());
+
+        MainApp.fc.setsE(String.valueOf(f1));
     }
 
     private boolean formValidation() {

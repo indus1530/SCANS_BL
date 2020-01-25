@@ -3,6 +3,7 @@ package edu.aku.hassannaqvi.uen_midline.ui.sections;
 import android.content.Intent;
 import android.os.Bundle;
 import android.provider.Settings;
+import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.databinding.DataBindingUtil;
@@ -17,6 +18,7 @@ import java.util.Date;
 
 import edu.aku.hassannaqvi.uen_midline.R;
 import edu.aku.hassannaqvi.uen_midline.contracts.FormsContract;
+import edu.aku.hassannaqvi.uen_midline.core.DatabaseHelper;
 import edu.aku.hassannaqvi.uen_midline.core.MainApp;
 import edu.aku.hassannaqvi.uen_midline.databinding.ActivitySectionABinding;
 import edu.aku.hassannaqvi.uen_midline.ui.list_activity.FamilyMembersListActivity;
@@ -25,7 +27,8 @@ import edu.aku.hassannaqvi.uen_midline.utils.Util;
 public class SectionAActivity extends AppCompatActivity {
 
     ActivitySectionABinding bi;
-    String dtToday = new SimpleDateFormat("dd-MM-yy HH:mm").format(new Date().getTime());
+    private String dtToday = new SimpleDateFormat("dd-MM-yy HH:mm").format(new Date().getTime());
+    private DatabaseHelper db;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -33,6 +36,7 @@ public class SectionAActivity extends AppCompatActivity {
 
         bi = DataBindingUtil.setContentView(this, R.layout.activity_section_a);
         bi.setCallback(this);
+        db = new DatabaseHelper(this);
 
         setUIComponent();
     }
@@ -58,7 +62,16 @@ public class SectionAActivity extends AppCompatActivity {
 
 
     private boolean UpdateDB() {
-        return true;
+        long updcount = db.addForm(MainApp.fc);
+        MainApp.fc.set_ID(String.valueOf(updcount));
+        if (updcount != 0) {
+            MainApp.fc.set_UID(MainApp.fc.getDeviceID() + MainApp.fc.get_ID());
+            db.updatesFormColumn(FormsContract.FormsTable.COLUMN_UID, MainApp.fc.get_UID());
+            return true;
+        } else {
+            Toast.makeText(this, "Updating Database... ERROR!", Toast.LENGTH_SHORT).show();
+        }
+        return false;
     }
 
 
