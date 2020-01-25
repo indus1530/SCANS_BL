@@ -22,11 +22,11 @@
     <string name="te2heading">MATERNAL MORTALITY STATUS</string>
     <string name="tfheading">SECTION F: ANTENATAL CARE</string>
     <string name="tiheading">SECTION I: CHILD HEALTH</string>
-    <string name="ti2heading">SECTION I2 : ACUTE RESPIRATORY INFECTION (ARI)</string>
+    <string name="ti2heading">SECTION I2: ACUTE RESPIRATORY INFECTION (ARI)</string>
     <string name="tjheading">SECTION J: IMMUNIZATION</string>
     <string name="tkheading">SECTION K: FAMILY PLANNING</string>
     <string name="tlheading">SECTION L: WOMEN EMPOWERMENT</string>
-    <string name="tmheading">SECTION M: SOCIO ECONOMIC STATUS OF HOUSEHOLD</string>
+    <string name="tmheading">SECTION M: SOCIOL ECONOMIC STATUS OF HOUSEHOLD</string>
     <string name="tnheading">SECTION N: WATER AND SANITATION</string>
     <string name="toheading">SECTION O: HANDWASHING</string>
 
@@ -2112,9 +2112,9 @@
     <string name="o104b">Detergent (Powder/Liquid/Paste)</string>
     <string name="o104c">Liquid soap </string>
     <string name="o104d">Ash/Mud/Sand</string>
-    <string name="o104e">None/Never</string>
+    <!--<string name="o104e">None/Never</string>
     <string name="o10499">Refused</string>
-    <string name="o104x">Other</string>
+    <string name="o104x">Other</string>-->
     <string name="o105">Do you have any soap or detergent or ash/mud/sand in your house for washing hands?</string>
     <string name="o105a">Yes</string>
     <string name="o105b">No</string>
