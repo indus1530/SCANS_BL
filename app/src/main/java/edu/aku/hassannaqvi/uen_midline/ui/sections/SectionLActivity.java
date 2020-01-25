@@ -16,6 +16,9 @@ import java.util.List;
 
 import edu.aku.hassannaqvi.uen_midline.R;
 import edu.aku.hassannaqvi.uen_midline.contracts.FamilyMembersContract;
+import edu.aku.hassannaqvi.uen_midline.contracts.KishMWRAContract;
+import edu.aku.hassannaqvi.uen_midline.core.DatabaseHelper;
+import edu.aku.hassannaqvi.uen_midline.core.MainApp;
 import edu.aku.hassannaqvi.uen_midline.databinding.ActivitySectionLBinding;
 import edu.aku.hassannaqvi.uen_midline.utils.Util;
 import edu.aku.hassannaqvi.uen_midline.validator.ClearClass;
@@ -69,7 +72,15 @@ public class SectionLActivity extends AppCompatActivity {
 
     private boolean UpdateDB() {
 
-        return true;
+        DatabaseHelper db = new DatabaseHelper(this);
+        int updcount = db.updatesKishMWRAColumn(KishMWRAContract.SingleKishMWRA.COLUMN_SL, MainApp.kish.getsL());
+        if (updcount == 1) {
+            return true;
+        } else {
+            Toast.makeText(this, "Updating Database... ERROR!", Toast.LENGTH_SHORT).show();
+            return false;
+        }
+
     }
 
     private void SaveDraft() throws JSONException {
