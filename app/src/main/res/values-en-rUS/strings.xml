@@ -37,7 +37,7 @@
 
     <string name="title_activity_family_members_list">Family Members List</string>
 
-    <string name="uc">UC</string>
+    <string name="sM">UC</string>
     <string name="yes"> Yes </string>
     <string name="no"> No </string>
     <string name="dkn"> Don\'t Know </string>
@@ -931,7 +931,7 @@
     <string name="h215d"> Philanthropists, external </string>
     <string name="h215e"> No Community Support for health care </string>
 
-    <string name="h216"> H216:\t Has a male member from your household ever participated in the village health committee meetings? </string>
+    <string name="h216"> H216:\t Has a male member from your household ever participated in the sN health committee meetings? </string>
     <string name="h216a"> Yes </string>
     <string name="h216b"> No </string>
     <string name="h216c"> Never heard about it </string>

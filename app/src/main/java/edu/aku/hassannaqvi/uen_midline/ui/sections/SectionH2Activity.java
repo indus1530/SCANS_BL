@@ -332,7 +332,7 @@ public class SectionH2Activity extends AppCompatActivity {
                                                 "0");
 
 
-        MainApp.fc.setsA(String.valueOf(json));
+        MainApp.fc.setsInfo(String.valueOf(json));
 
     }
 

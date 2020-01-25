@@ -64,10 +64,10 @@ public class DatabaseHelper extends SQLiteOpenHelper {
             + FormsTable.COLUMN_ID + " INTEGER PRIMARY KEY AUTOINCREMENT,"
             + FormsTable.COLUMN_PROJECT_NAME + " TEXT,"
             + FormsTable.COLUMN_UID + " TEXT,"
-            + FormsTable.COLUMN_TALUKA_CODE + " TEXT,"
-            + FormsTable.COLUMN_UC_CODE + " TEXT,"
+            + FormsTable.COLUMN_SO + " TEXT,"
+            + FormsTable.COLUMN_SM + " TEXT,"
             + FormsTable.COLUMN_AREA_CODE + " TEXT,"
-            + FormsTable.COLUMN_VILLAGE_CODE + " TEXT," +
+            + FormsTable.COLUMN_SN + " TEXT," +
             FormsTable.COLUMN_FORMDATE + " TEXT," +
             FormsTable.COLUMN_APPVERSION + " TEXT," +
             FormsTable.COLUMN_STATUS + " TEXT," +
@@ -75,9 +75,9 @@ public class DatabaseHelper extends SQLiteOpenHelper {
             FormsTable.COLUMN_HHNO + " TEXT," +
             FormsTable.COLUMN_FORMTYPE + " TEXT," +
             FormsTable.COLUMN_DSSID + " TEXT," +
-            FormsTable.COLUMN_NEXT_VISIT + " TEXT," +
+            FormsTable.COLUMN_SE + " TEXT," +
             FormsTable.COLUMN_USER + " TEXT," +
-            FormsTable.COLUMN_SA + " TEXT," +
+            FormsTable.COLUMN_SINFO + " TEXT," +
             FormsTable.COLUMN_ISTATUS + " TEXT," +
             FormsTable.COLUMN_ISTATUS88x + " TEXT," +
             FormsTable.COLUMN_ENDINGDATETIME + " TEXT," +
@@ -534,12 +534,12 @@ public class DatabaseHelper extends SQLiteOpenHelper {
                 FormsTable.COLUMN_FORMTYPE,
                 FormsTable.COLUMN_ISTATUS,
                 FormsTable.COLUMN_DSSID,
-                FormsTable.COLUMN_NEXT_VISIT,
+                FormsTable.COLUMN_SE,
                 FormsTable.COLUMN_FORMDATE,
-                FormsTable.COLUMN_SA,
+                FormsTable.COLUMN_SINFO,
         };
 
-        String whereClause = FormsTable.COLUMN_FORMTYPE + " =? AND " + FormsTable.COLUMN_DSSID + " =? AND " + FormsTable.COLUMN_NEXT_VISIT + "=? AND " + FormsTable.COLUMN_ISTATUS + "=?";
+        String whereClause = FormsTable.COLUMN_FORMTYPE + " =? AND " + FormsTable.COLUMN_DSSID + " =? AND " + FormsTable.COLUMN_SE + "=? AND " + FormsTable.COLUMN_ISTATUS + "=?";
         String[] whereArgs = {sType, codeLhw, refId, "1"};
         String groupBy = null;
         String having = null;
@@ -913,16 +913,16 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         values.put(FormsTable.COLUMN_UID, fc.get_UID());
         values.put(FormsTable.COLUMN_FORMDATE, fc.getFormDate());
         values.put(FormsTable.COLUMN_DSSID, fc.getLuid());
-        values.put(FormsTable.COLUMN_NEXT_VISIT, fc.getNextVisit());
+        values.put(FormsTable.COLUMN_SE, fc.getsE());
         values.put(FormsTable.COLUMN_USER, fc.getUser());
         values.put(FormsTable.COLUMN_ISTATUS, fc.getIstatus());
         values.put(FormsTable.COLUMN_ISTATUS88x, fc.getIstatus88x());
         values.put(FormsTable.COLUMN_ENDINGDATETIME, fc.getEndingdatetime());
-        values.put(FormsTable.COLUMN_SA, fc.getsA());
-        values.put(FormsTable.COLUMN_TALUKA_CODE, fc.getTalukdaCode());
-        values.put(FormsTable.COLUMN_UC_CODE, fc.getUc());
+        values.put(FormsTable.COLUMN_SINFO, fc.getsInfo());
+        values.put(FormsTable.COLUMN_SO, fc.getsO());
+        values.put(FormsTable.COLUMN_SM, fc.getsM());
         values.put(FormsTable.COLUMN_AREA_CODE, fc.getAreaCode());
-        values.put(FormsTable.COLUMN_VILLAGE_CODE, fc.getVillage());
+        values.put(FormsTable.COLUMN_SN, fc.getsN());
         values.put(FormsTable.COLUMN_GPSLAT, fc.getGpsLat());
         values.put(FormsTable.COLUMN_GPSLNG, fc.getGpsLng());
         values.put(FormsTable.COLUMN_GPSDATE, fc.getGpsDT());
@@ -1316,7 +1316,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
                 FormsTable.COLUMN_FORMDATE,
                 FormsTable.COLUMN_USER,
                 FormsTable.COLUMN_ISTATUS,
-                FormsTable.COLUMN_SA,
+                FormsTable.COLUMN_SINFO,
                 FormsTable.COLUMN_GPSLAT,
                 FormsTable.COLUMN_GPSLNG,
                 FormsTable.COLUMN_GPSDATE,
@@ -1427,7 +1427,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
                 FormsTable.COLUMN_FORMDATE,
                 FormsTable.COLUMN_USER,
                 FormsTable.COLUMN_ISTATUS,
-                FormsTable.COLUMN_SA,
+                FormsTable.COLUMN_SINFO,
                 FormsTable.COLUMN_GPSLAT,
                 FormsTable.COLUMN_GPSLNG,
                 FormsTable.COLUMN_GPSDATE,
@@ -1533,13 +1533,13 @@ public class DatabaseHelper extends SQLiteOpenHelper {
                 FormsTable.COLUMN_ISTATUS,
                 FormsTable.COLUMN_ISTATUS88x,
                 FormsTable.COLUMN_DSSID,
-                FormsTable.COLUMN_NEXT_VISIT,
+                FormsTable.COLUMN_SE,
                 FormsTable.COLUMN_ENDINGDATETIME,
-                FormsTable.COLUMN_SA,
-                FormsTable.COLUMN_TALUKA_CODE,
-                FormsTable.COLUMN_UC_CODE,
+                FormsTable.COLUMN_SINFO,
+                FormsTable.COLUMN_SO,
+                FormsTable.COLUMN_SM,
                 FormsTable.COLUMN_AREA_CODE,
-                FormsTable.COLUMN_VILLAGE_CODE,
+                FormsTable.COLUMN_SN,
                 FormsTable.COLUMN_GPSLAT,
                 FormsTable.COLUMN_GPSLNG,
                 FormsTable.COLUMN_GPSDATE,
@@ -1820,7 +1820,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         ContentValues values = new ContentValues();
         values.put(FormsTable.COLUMN_ISTATUS, MainApp.fc.getIstatus());
         values.put(FormsTable.COLUMN_ISTATUS88x, MainApp.fc.getIstatus88x());
-//        values.put(FormsTable.COLUMN_NEXT_VISIT, MainApp.fc.getNextVisit());
+//        values.put(FormsTable.COLUMN_SE, MainApp.fc.getsE());
 //        values.put(FormsTable.COLUMN_STATUS, MainApp.fc.getStatus());
         values.put(FormsTable.COLUMN_ENDINGDATETIME, MainApp.fc.getEndingdatetime());
 

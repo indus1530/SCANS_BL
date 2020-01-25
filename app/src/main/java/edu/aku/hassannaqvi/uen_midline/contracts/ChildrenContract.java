@@ -91,10 +91,10 @@ public class ChildrenContract {
         this.formType = cursor.getString(cursor.getColumnIndex(FormsContract.FormsTable.COLUMN_FORMTYPE));
         this.iStatus = cursor.getString(cursor.getColumnIndex(FormsContract.FormsTable.COLUMN_ISTATUS));
         this.lhw_code = cursor.getString(cursor.getColumnIndex(FormsContract.FormsTable.COLUMN_DSSID));
-        this.caseid = cursor.getString(cursor.getColumnIndex(FormsContract.FormsTable.COLUMN_NEXT_VISIT));
+        this.caseid = cursor.getString(cursor.getColumnIndex(FormsContract.FormsTable.COLUMN_SE));
         this.ref_date = cursor.getString(cursor.getColumnIndex(FormsContract.FormsTable.COLUMN_FORMDATE));
 
-        CrfChild formSa = new Gson().fromJson(cursor.getString(cursor.getColumnIndex(FormsContract.FormsTable.COLUMN_SA)), CrfChild.class);
+        CrfChild formSa = new Gson().fromJson(cursor.getString(cursor.getColumnIndex(FormsContract.FormsTable.COLUMN_SINFO)), CrfChild.class);
 
 
         this.child_name = formSa.getPocfa09();

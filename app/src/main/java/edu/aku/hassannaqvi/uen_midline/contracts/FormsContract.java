@@ -39,46 +39,53 @@ public class FormsContract {
     private String clusterCode = "";
     private String hhno = "";
 
-    private String sA = "";
-    private String NextVisit = "";
-    private String uc = "";
-    private String village = "";
-    private String talukdaCode = "";
-    private String areaCode = "";
-
-    public String getAreaCode() {
-        return areaCode;
-    }
-
-    public void setAreaCode(String areaCode) {
-        this.areaCode = areaCode;
-    }
+    private String sInfo = "";
+    private String sE = "";
+    private String sM = "";
+    private String sN = "";
+    private String sO = "";
 
     private String status = "";
 
 
-    public String getUc() {
-        return uc;
+    public String getsInfo() {
+        return sInfo;
     }
 
-    public void setUc(String uc) {
-        this.uc = uc;
+    public void setsInfo(String sInfo) {
+        this.sInfo = sInfo;
     }
 
-    public String getVillage() {
-        return village;
+    public String getsE() {
+        return sE;
     }
 
-    public void setVillage(String village) {
-        this.village = village;
+    public void setsE(String sE) {
+        this.sE = sE;
     }
 
-    public String getTalukdaCode() {
-        return talukdaCode;
+    public String getsM() {
+        return sM;
     }
 
-    public void setTalukdaCode(String talukdaCode) {
-        this.talukdaCode = talukdaCode;
+    public void setsM(String sM) {
+        this.sM = sM;
+    }
+
+    public String getsN() {
+        return sN;
+    }
+
+    public void setsN(String sN) {
+        this.sN = sN;
+    }
+
+    public String getsO() {
+        return sO;
+    }
+
+    public void setsO(String sO) {
+        this.sO = sO;
     }
 
 
@@ -134,9 +141,7 @@ public class FormsContract {
         this.istatus = jsonObject.getString(FormsTable.COLUMN_ISTATUS);
         this.istatus88x = jsonObject.getString(FormsTable.COLUMN_ISTATUS88x);
         this.luid = jsonObject.getString(FormsTable.COLUMN_DSSID);
-        this.NextVisit = jsonObject.getString(FormsTable.COLUMN_NEXT_VISIT);
         this.endingdatetime = jsonObject.getString(FormsTable.COLUMN_ENDINGDATETIME);
-        this.sA = jsonObject.getString(FormsTable.COLUMN_SA);
         this.gpsLat = jsonObject.getString(FormsTable.COLUMN_GPSLAT);
         this.gpsLng = jsonObject.getString(FormsTable.COLUMN_GPSLNG);
         this.gpsDT = jsonObject.getString(FormsTable.COLUMN_GPSDATE);
@@ -149,6 +154,11 @@ public class FormsContract {
         this.formType = jsonObject.getString(FormsTable.COLUMN_FORMTYPE);
         this.clusterCode = jsonObject.getString(FormsTable.COLUMN_CLUSTERCODE);
         this.hhno = jsonObject.getString(FormsTable.COLUMN_HHNO);
+        this.sInfo = jsonObject.getString(FormsTable.COLUMN_SINFO);
+        this.sE = jsonObject.getString(FormsTable.COLUMN_SE);
+        this.sM = jsonObject.getString(FormsTable.COLUMN_SM);
+        this.sN = jsonObject.getString(FormsTable.COLUMN_SN);
+        this.sO = jsonObject.getString(FormsTable.COLUMN_SO);
 
         return this;
 
@@ -162,9 +172,7 @@ public class FormsContract {
         this.istatus = cursor.getString(cursor.getColumnIndex(FormsTable.COLUMN_ISTATUS));
         this.istatus88x = cursor.getString(cursor.getColumnIndex(FormsTable.COLUMN_ISTATUS88x));
         this.luid = cursor.getString(cursor.getColumnIndex(FormsTable.COLUMN_DSSID));
-        this.NextVisit = cursor.getString(cursor.getColumnIndex(FormsTable.COLUMN_NEXT_VISIT));
         this.endingdatetime = cursor.getString(cursor.getColumnIndex(FormsTable.COLUMN_ENDINGDATETIME));
-        this.sA = cursor.getString(cursor.getColumnIndex(FormsTable.COLUMN_SA));
         this.gpsLat = cursor.getString(cursor.getColumnIndex(FormsTable.COLUMN_GPSLAT));
         this.gpsLng = cursor.getString(cursor.getColumnIndex(FormsTable.COLUMN_GPSLNG));
         this.gpsDT = cursor.getString(cursor.getColumnIndex(FormsTable.COLUMN_GPSDATE));
@@ -174,12 +182,13 @@ public class FormsContract {
         this.appversion = cursor.getString(cursor.getColumnIndex(FormsTable.COLUMN_APPVERSION));
         this.status = cursor.getString(cursor.getColumnIndex(FormsTable.COLUMN_STATUS));
         this.formType = cursor.getString(cursor.getColumnIndex(FormsTable.COLUMN_FORMTYPE));
-        this.areaCode = cursor.getString(cursor.getColumnIndex(FormsTable.COLUMN_AREA_CODE));
-        this.uc = cursor.getString(cursor.getColumnIndex(FormsTable.COLUMN_UC_CODE));
-        this.village = cursor.getString(cursor.getColumnIndex(FormsTable.COLUMN_VILLAGE_CODE));
-        this.talukdaCode = cursor.getString(cursor.getColumnIndex(FormsTable.COLUMN_TALUKA_CODE));
         this.clusterCode = cursor.getString(cursor.getColumnIndex(FormsTable.COLUMN_CLUSTERCODE));
         this.hhno = cursor.getString(cursor.getColumnIndex(FormsTable.COLUMN_HHNO));
+        this.sInfo = cursor.getString(cursor.getColumnIndex(FormsTable.COLUMN_SINFO));
+        this.sE = cursor.getString(cursor.getColumnIndex(FormsTable.COLUMN_SE));
+        this.sM = cursor.getString(cursor.getColumnIndex(FormsTable.COLUMN_SM));
+        this.sN = cursor.getString(cursor.getColumnIndex(FormsTable.COLUMN_SN));
+        this.sO = cursor.getString(cursor.getColumnIndex(FormsTable.COLUMN_SO));
 
         return this;
     }
@@ -196,11 +205,10 @@ public class FormsContract {
         json.put(FormsTable.COLUMN_ISTATUS, this.istatus == null ? JSONObject.NULL : this.istatus);
         json.put(FormsTable.COLUMN_ISTATUS88x, this.istatus88x == null ? JSONObject.NULL : this.istatus88x);
         json.put(FormsTable.COLUMN_DSSID, this.luid == null ? JSONObject.NULL : this.luid);
-        json.put(FormsTable.COLUMN_NEXT_VISIT, this.NextVisit == null ? JSONObject.NULL : this.NextVisit);
         json.put(FormsTable.COLUMN_ENDINGDATETIME, this.endingdatetime == null ? JSONObject.NULL : this.endingdatetime);
 
-        if (!this.sA.equals("")) {
-            json.put(FormsTable.COLUMN_SA, this.sA.equals("") ? JSONObject.NULL : new JSONObject(this.sA));
+        if (!this.sInfo.equals("")) {
+            json.put(FormsTable.COLUMN_SINFO, this.sInfo.equals("") ? JSONObject.NULL : new JSONObject(this.sInfo));
         }
 
         json.put(FormsTable.COLUMN_GPSLAT, this.gpsLat == null ? JSONObject.NULL : this.gpsLat);
@@ -212,10 +220,10 @@ public class FormsContract {
         json.put(FormsTable.COLUMN_APPVERSION, this.appversion == null ? JSONObject.NULL : this.appversion);
         json.put(FormsTable.COLUMN_STATUS, this.status == null ? JSONObject.NULL : this.status);
         json.put(FormsTable.COLUMN_FORMTYPE, this.formType == null ? JSONObject.NULL : this.formType);
-        json.put(FormsTable.COLUMN_AREA_CODE, this.areaCode == null ? JSONObject.NULL : this.areaCode);
-        json.put(FormsTable.COLUMN_UC_CODE, this.uc == null ? JSONObject.NULL : this.uc);
-        json.put(FormsTable.COLUMN_TALUKA_CODE, this.talukdaCode == null ? JSONObject.NULL : this.talukdaCode);
-        json.put(FormsTable.COLUMN_VILLAGE_CODE, this.village == null ? JSONObject.NULL : this.village);
+        json.put(FormsTable.COLUMN_SE, this.sE == null ? JSONObject.NULL : this.sE);
+        json.put(FormsTable.COLUMN_SM, this.sM == null ? JSONObject.NULL : this.sM);
+        json.put(FormsTable.COLUMN_SN, this.sN == null ? JSONObject.NULL : this.sN);
+        json.put(FormsTable.COLUMN_SO, this.sO == null ? JSONObject.NULL : this.sO);
         json.put(FormsTable.COLUMN_CLUSTERCODE, this.clusterCode == null ? JSONObject.NULL : this.clusterCode);
         json.put(FormsTable.COLUMN_HHNO, this.hhno == null ? JSONObject.NULL : this.hhno);
 
@@ -288,22 +296,6 @@ public class FormsContract {
 
     public void setLuid(String Study_Id) {
         this.luid = Study_Id;
-    }
-
-    public String getNextVisit() {
-        return NextVisit;
-    }
-
-    public void setNextVisit(String NextVisit) {
-        this.NextVisit = NextVisit;
-    }
-
-    public String getsA() {
-        return sA;
-    }
-
-    public void setsA(String sA) {
-        this.sA = sA;
     }
 
 
@@ -380,9 +372,6 @@ public class FormsContract {
 
     }
 
-    public void setsE(String valueOf) {
-    }
-
     public void setsC(String valueOf) {
     }
 
@@ -409,19 +398,13 @@ public class FormsContract {
         public static final String COLUMN_PROJECT_NAME = "projectname";
         public static final String COLUMN_ID = "_id";
         public static final String COLUMN_UID = "_uid";
-        public static final String COLUMN_UC_CODE = "uc";
-        public static final String COLUMN_TALUKA_CODE = "taluka";
-        public static final String COLUMN_VILLAGE_CODE = "village";
-        public static final String COLUMN_AREA_CODE = "area";
         public static final String COLUMN_FORMDATE = "formdate";
         public static final String COLUMN_FORMTYPE = "formtype";
         public static final String COLUMN_USER = "username";
         public static final String COLUMN_ISTATUS = "istatus";
         public static final String COLUMN_ISTATUS88x = "istatus88x";
         public static final String COLUMN_DSSID = "luid";
-        public static final String COLUMN_NEXT_VISIT = "NextVisit";
         public static final String COLUMN_ENDINGDATETIME = "endingdatetime";
-        public static final String COLUMN_SA = "sA";
         public static final String COLUMN_GPSLAT = "gpslat";
         public static final String COLUMN_GPSLNG = "gpslng";
         public static final String COLUMN_GPSDATE = "gpsdate";
@@ -434,6 +417,11 @@ public class FormsContract {
         public static final String COLUMN_STATUS = "status";
         public static final String COLUMN_CLUSTERCODE = "cluster_code";
         public static final String COLUMN_HHNO = "hhno";
+        public static final String COLUMN_SINFO = "sInfo";
+        public static final String COLUMN_SE = "sE";
+        public static final String COLUMN_SM = "sM";
+        public static final String COLUMN_SN = "sN";
+        public static final String COLUMN_SO = "sO";
 
         public static String _URL = "sync.php";
     }

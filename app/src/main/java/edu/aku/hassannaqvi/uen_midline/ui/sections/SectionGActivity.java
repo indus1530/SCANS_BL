@@ -396,7 +396,7 @@ public class SectionGActivity extends AppCompatActivity {
                         bi.g129b.isChecked() ? "2" :
                                 "0");
 
-        MainApp.fc.setsA(String.valueOf(json));
+        MainApp.fc.setsInfo(String.valueOf(json));
 
     }
 
