@@ -119,16 +119,18 @@ public class SectionE1Activity extends AppCompatActivity {
 
     private void SaveDraft() throws JSONException {
 
-        JSONObject f1 = new JSONObject();
-        f1.put("e101",
+        JSONObject json = new JSONObject();
+        json.put("e101",
                 bi.e101a.isChecked() ? "1" :
                         bi.e101b.isChecked() ? "2" :
                                 "0");
-        f1.put("e102", bi.e102.getText().toString());
-        f1.put("e102a",
+        json.put("e102", bi.e102.getText().toString());
+        json.put("e102a",
                 bi.e102aa.isChecked() ? "1" :
                         bi.e102ab.isChecked() ? "2" :
                                 "0");
+
+        MainApp.fc.setsE(String.valueOf(json));
 
 
         // Deleting item in list
@@ -138,9 +140,7 @@ public class SectionE1Activity extends AppCompatActivity {
     }
 
     private boolean formValidation() {
-
         return Validator.emptyCheckingContainer(this, bi.fldGrpSectionE1);
-
     }
 
     public void BtnEnd() {
