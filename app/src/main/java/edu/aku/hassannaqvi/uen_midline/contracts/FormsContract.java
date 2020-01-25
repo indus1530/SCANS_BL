@@ -45,8 +45,6 @@ public class FormsContract {
     private String sN = "";
     private String sO = "";
 
-    private String status = "";
-
 
     public String getsInfo() {
         return sInfo;
@@ -86,15 +84,6 @@ public class FormsContract {
 
     public void setsO(String sO) {
         this.sO = sO;
-    }
-
-
-    public String getStatus() {
-        return status;
-    }
-
-    public void setStatus(String status) {
-        this.status = status;
     }
 
 
@@ -180,7 +169,6 @@ public class FormsContract {
         this.deviceID = cursor.getString(cursor.getColumnIndex(FormsTable.COLUMN_DEVICEID));
         this.devicetagID = cursor.getString(cursor.getColumnIndex(FormsTable.COLUMN_DEVICETAGID));
         this.appversion = cursor.getString(cursor.getColumnIndex(FormsTable.COLUMN_APPVERSION));
-        this.status = cursor.getString(cursor.getColumnIndex(FormsTable.COLUMN_STATUS));
         this.formType = cursor.getString(cursor.getColumnIndex(FormsTable.COLUMN_FORMTYPE));
         this.clusterCode = cursor.getString(cursor.getColumnIndex(FormsTable.COLUMN_CLUSTERCODE));
         this.hhno = cursor.getString(cursor.getColumnIndex(FormsTable.COLUMN_HHNO));
@@ -211,6 +199,22 @@ public class FormsContract {
             json.put(FormsTable.COLUMN_SINFO, this.sInfo.equals("") ? JSONObject.NULL : new JSONObject(this.sInfo));
         }
 
+        if (!this.sE.equals("")) {
+            json.put(FormsTable.COLUMN_SE, this.sE.equals("") ? JSONObject.NULL : new JSONObject(this.sE));
+        }
+
+        if (!this.sM.equals("")) {
+            json.put(FormsTable.COLUMN_SM, this.sM.equals("") ? JSONObject.NULL : new JSONObject(this.sM));
+        }
+
+        if (!this.sN.equals("")) {
+            json.put(FormsTable.COLUMN_SN, this.sN.equals("") ? JSONObject.NULL : new JSONObject(this.sN));
+        }
+
+        if (!this.sO.equals("")) {
+            json.put(FormsTable.COLUMN_SO, this.sO.equals("") ? JSONObject.NULL : new JSONObject(this.sO));
+        }
+
         json.put(FormsTable.COLUMN_GPSLAT, this.gpsLat == null ? JSONObject.NULL : this.gpsLat);
         json.put(FormsTable.COLUMN_GPSLNG, this.gpsLng == null ? JSONObject.NULL : this.gpsLng);
         json.put(FormsTable.COLUMN_GPSDATE, this.gpsDT == null ? JSONObject.NULL : this.gpsDT);
@@ -218,12 +222,7 @@ public class FormsContract {
         json.put(FormsTable.COLUMN_DEVICEID, this.deviceID == null ? JSONObject.NULL : this.deviceID);
         json.put(FormsTable.COLUMN_DEVICETAGID, this.devicetagID == null ? JSONObject.NULL : this.devicetagID);
         json.put(FormsTable.COLUMN_APPVERSION, this.appversion == null ? JSONObject.NULL : this.appversion);
-        json.put(FormsTable.COLUMN_STATUS, this.status == null ? JSONObject.NULL : this.status);
         json.put(FormsTable.COLUMN_FORMTYPE, this.formType == null ? JSONObject.NULL : this.formType);
-        json.put(FormsTable.COLUMN_SE, this.sE == null ? JSONObject.NULL : this.sE);
-        json.put(FormsTable.COLUMN_SM, this.sM == null ? JSONObject.NULL : this.sM);
-        json.put(FormsTable.COLUMN_SN, this.sN == null ? JSONObject.NULL : this.sN);
-        json.put(FormsTable.COLUMN_SO, this.sO == null ? JSONObject.NULL : this.sO);
         json.put(FormsTable.COLUMN_CLUSTERCODE, this.clusterCode == null ? JSONObject.NULL : this.clusterCode);
         json.put(FormsTable.COLUMN_HHNO, this.hhno == null ? JSONObject.NULL : this.hhno);
 
@@ -414,7 +413,6 @@ public class FormsContract {
         public static final String COLUMN_SYNCED = "synced";
         public static final String COLUMN_SYNCED_DATE = "synced_date";
         public static final String COLUMN_APPVERSION = "appversion";
-        public static final String COLUMN_STATUS = "status";
         public static final String COLUMN_CLUSTERCODE = "cluster_code";
         public static final String COLUMN_HHNO = "hhno";
         public static final String COLUMN_SINFO = "sInfo";

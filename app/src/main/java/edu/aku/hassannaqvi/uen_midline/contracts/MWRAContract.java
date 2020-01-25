@@ -20,10 +20,22 @@ public class MWRAContract {
     private String deviceId = "";
     private String formDate = ""; // Date
     private String user = ""; // Interviewer
-    private String sD = "";
+    private String sE1 = "";
     private String devicetagID = "";
     private String synced = "";
     private String synced_date = "";
+    /*
+    saved in JSON
+    =============
+    fmuid
+    fm_serial
+    hhno
+    cluster
+
+     x
+
+
+    * */
 
 
     public MWRAContract() {
@@ -66,12 +78,12 @@ public class MWRAContract {
         this.deviceId = deviceId;
     }
 
-    public String getsD() {
-        return sD;
+    public String getsE1() {
+        return sE1;
     }
 
-    public void setsD(String sD) {
-        this.sD = sD;
+    public void setsE1(String sE1) {
+        this.sE1 = sE1;
     }
 
     public String getDevicetagID() {
@@ -123,7 +135,7 @@ public class MWRAContract {
         this.formDate = jsonObject.getString(MWRATable.COLUMN_FORMDATE);
         this.deviceId = jsonObject.getString(MWRATable.COLUMN_DEVICEID);
         this.user = jsonObject.getString(MWRATable.COLUMN_USER);
-        this.sD = jsonObject.getString(MWRATable.COLUMN_SD);
+        this.sE1 = jsonObject.getString(MWRATable.COLUMN_SD);
         this.synced = jsonObject.getString(MWRATable.COLUMN_SYNCED);
         this.synced_date = jsonObject.getString(MWRATable.COLUMN_SYNCED_DATE);
         this.devicetagID = jsonObject.getString(MWRATable.COLUMN_DEVICETAGID);
@@ -140,7 +152,7 @@ public class MWRAContract {
         this.formDate = cursor.getString(cursor.getColumnIndex(MWRATable.COLUMN_FORMDATE));
         this.deviceId = cursor.getString(cursor.getColumnIndex(MWRATable.COLUMN_DEVICEID));
         this.user = cursor.getString(cursor.getColumnIndex(MWRATable.COLUMN_USER));
-        this.sD = cursor.getString(cursor.getColumnIndex(MWRATable.COLUMN_SD));
+        this.sE1 = cursor.getString(cursor.getColumnIndex(MWRATable.COLUMN_SD));
         this.devicetagID = cursor.getString(cursor.getColumnIndex(MWRATable.COLUMN_DEVICETAGID));
 
         return this;
@@ -158,9 +170,9 @@ public class MWRAContract {
         json.put(MWRATable.COLUMN_FORMDATE, this.formDate == null ? JSONObject.NULL : this.formDate);
         json.put(MWRATable.COLUMN_DEVICEID, this.deviceId == null ? JSONObject.NULL : this.deviceId);
         json.put(MWRATable.COLUMN_USER, this.user == null ? JSONObject.NULL : this.user);
-        if (!this.sD.equals("")) {
+        if (!this.sE1.equals("")) {
 
-            json.put(MWRATable.COLUMN_SD, this.sD.equals("") ? JSONObject.NULL : new JSONObject(this.sD));
+            json.put(MWRATable.COLUMN_SD, this.sE1.equals("") ? JSONObject.NULL : new JSONObject(this.sE1));
         }
         json.put(MWRATable.COLUMN_DEVICETAGID, this.devicetagID == null ? JSONObject.NULL : this.devicetagID);
 

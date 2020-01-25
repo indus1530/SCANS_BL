@@ -27,7 +27,7 @@ import java.util.List;
 
 import edu.aku.hassannaqvi.uen_midline.R;
 import edu.aku.hassannaqvi.uen_midline.contracts.AppInfo;
-import edu.aku.hassannaqvi.uen_midline.contracts.ChildContract;
+import edu.aku.hassannaqvi.uen_midline.contracts.ChildContract2;
 import edu.aku.hassannaqvi.uen_midline.contracts.DeceasedChildContract;
 import edu.aku.hassannaqvi.uen_midline.contracts.FamilyMembersContract;
 import edu.aku.hassannaqvi.uen_midline.contracts.FormsContract;
@@ -78,7 +78,7 @@ public class MainApp extends Application {
     public static FormsContract fc;
     public static DeceasedChildContract dcc;
     public static MotherContract mc;
-    public static ChildContract cc;
+    public static ChildContract2 cc;
     public static String userName = "0000";
 
     public static void setItemClick(OnItemClick itemClick) {

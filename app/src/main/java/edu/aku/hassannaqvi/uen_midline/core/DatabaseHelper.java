@@ -20,8 +20,8 @@ import java.util.List;
 
 import edu.aku.hassannaqvi.uen_midline.contracts.AreasContract;
 import edu.aku.hassannaqvi.uen_midline.contracts.AreasContract.singleAreas;
-import edu.aku.hassannaqvi.uen_midline.contracts.ChildContract;
-import edu.aku.hassannaqvi.uen_midline.contracts.ChildContract.singleChild;
+import edu.aku.hassannaqvi.uen_midline.contracts.ChildContract2;
+import edu.aku.hassannaqvi.uen_midline.contracts.ChildContract2.singleChild;
 import edu.aku.hassannaqvi.uen_midline.contracts.ChildList;
 import edu.aku.hassannaqvi.uen_midline.contracts.ChildrenContract;
 import edu.aku.hassannaqvi.uen_midline.contracts.DeceasedChildContract;
@@ -64,31 +64,29 @@ public class DatabaseHelper extends SQLiteOpenHelper {
             + FormsTable.COLUMN_ID + " INTEGER PRIMARY KEY AUTOINCREMENT,"
             + FormsTable.COLUMN_PROJECT_NAME + " TEXT,"
             + FormsTable.COLUMN_UID + " TEXT,"
-            + FormsTable.COLUMN_SO + " TEXT,"
+            + FormsTable.COLUMN_FORMDATE + " TEXT,"
+            + FormsTable.COLUMN_APPVERSION + " TEXT,"
+            + FormsTable.COLUMN_CLUSTERCODE + " TEXT,"
+            + FormsTable.COLUMN_HHNO + " TEXT,"
+            + FormsTable.COLUMN_FORMTYPE + " TEXT,"
+            + FormsTable.COLUMN_DSSID + " TEXT,"
+            + FormsTable.COLUMN_USER + " TEXT,"
+            + FormsTable.COLUMN_SINFO + " TEXT,"
+            + FormsTable.COLUMN_SE + " TEXT,"
             + FormsTable.COLUMN_SM + " TEXT,"
-            + FormsTable.COLUMN_AREA_CODE + " TEXT,"
-            + FormsTable.COLUMN_SN + " TEXT," +
-            FormsTable.COLUMN_FORMDATE + " TEXT," +
-            FormsTable.COLUMN_APPVERSION + " TEXT," +
-            FormsTable.COLUMN_STATUS + " TEXT," +
-            FormsTable.COLUMN_CLUSTERCODE + " TEXT," +
-            FormsTable.COLUMN_HHNO + " TEXT," +
-            FormsTable.COLUMN_FORMTYPE + " TEXT," +
-            FormsTable.COLUMN_DSSID + " TEXT," +
-            FormsTable.COLUMN_SE + " TEXT," +
-            FormsTable.COLUMN_USER + " TEXT," +
-            FormsTable.COLUMN_SINFO + " TEXT," +
-            FormsTable.COLUMN_ISTATUS + " TEXT," +
-            FormsTable.COLUMN_ISTATUS88x + " TEXT," +
-            FormsTable.COLUMN_ENDINGDATETIME + " TEXT," +
-            FormsTable.COLUMN_GPSLAT + " TEXT," +
-            FormsTable.COLUMN_GPSLNG + " TEXT," +
-            FormsTable.COLUMN_GPSDATE + " TEXT," +
-            FormsTable.COLUMN_GPSACC + " TEXT," +
-            FormsTable.COLUMN_DEVICEID + " TEXT," +
-            FormsTable.COLUMN_DEVICETAGID + " TEXT," +
-            FormsTable.COLUMN_SYNCED + " TEXT," +
-            FormsTable.COLUMN_SYNCED_DATE + " TEXT"
+            + FormsTable.COLUMN_SN + " TEXT,"
+            + FormsTable.COLUMN_SO + " TEXT,"
+            + FormsTable.COLUMN_ISTATUS + " TEXT,"
+            + FormsTable.COLUMN_ISTATUS88x + " TEXT,"
+            + FormsTable.COLUMN_ENDINGDATETIME + " TEXT,"
+            + FormsTable.COLUMN_GPSLAT + " TEXT,"
+            + FormsTable.COLUMN_GPSLNG + " TEXT,"
+            + FormsTable.COLUMN_GPSDATE + " TEXT,"
+            + FormsTable.COLUMN_GPSACC + " TEXT,"
+            + FormsTable.COLUMN_DEVICEID + " TEXT,"
+            + FormsTable.COLUMN_DEVICETAGID + " TEXT,"
+            + FormsTable.COLUMN_SYNCED + " TEXT,"
+            + FormsTable.COLUMN_SYNCED_DATE + " TEXT"
             + " );";
     private static final String SQL_DELETE_CHILDREN = "DROP TABLE IF EXISTS " + ChildrenContract.singleChild.TABLE_NAME;
     private static final String SQL_DELETE_CHILDLIST = "DROP TABLE IF EXISTS " + ChildList.singleChildList.TABLE_NAME;
@@ -913,16 +911,15 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         values.put(FormsTable.COLUMN_UID, fc.get_UID());
         values.put(FormsTable.COLUMN_FORMDATE, fc.getFormDate());
         values.put(FormsTable.COLUMN_DSSID, fc.getLuid());
-        values.put(FormsTable.COLUMN_SE, fc.getsE());
         values.put(FormsTable.COLUMN_USER, fc.getUser());
         values.put(FormsTable.COLUMN_ISTATUS, fc.getIstatus());
         values.put(FormsTable.COLUMN_ISTATUS88x, fc.getIstatus88x());
         values.put(FormsTable.COLUMN_ENDINGDATETIME, fc.getEndingdatetime());
         values.put(FormsTable.COLUMN_SINFO, fc.getsInfo());
-        values.put(FormsTable.COLUMN_SO, fc.getsO());
+        values.put(FormsTable.COLUMN_SE, fc.getsE());
         values.put(FormsTable.COLUMN_SM, fc.getsM());
-        values.put(FormsTable.COLUMN_AREA_CODE, fc.getAreaCode());
         values.put(FormsTable.COLUMN_SN, fc.getsN());
+        values.put(FormsTable.COLUMN_SO, fc.getsO());
         values.put(FormsTable.COLUMN_GPSLAT, fc.getGpsLat());
         values.put(FormsTable.COLUMN_GPSLNG, fc.getGpsLng());
         values.put(FormsTable.COLUMN_GPSDATE, fc.getGpsDT());
@@ -930,7 +927,6 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         values.put(FormsTable.COLUMN_DEVICETAGID, fc.getDevicetagID());
         values.put(FormsTable.COLUMN_DEVICEID, fc.getDeviceID());
         values.put(FormsTable.COLUMN_APPVERSION, fc.getAppversion());
-        values.put(FormsTable.COLUMN_STATUS, fc.getStatus());
         values.put(FormsTable.COLUMN_CLUSTERCODE, fc.getClusterCode());
         values.put(FormsTable.COLUMN_HHNO, fc.getHhno());
         values.put(FormsTable.COLUMN_FORMTYPE, fc.getFormType());
@@ -1002,7 +998,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         return newRowId;
     }
 
-    public Long addChildForm(ChildContract fc) {
+    public Long addChildForm(ChildContract2 fc) {
 
         // Gets the data repository in write mode
         SQLiteDatabase db = this.getWritableDatabase();
@@ -1085,7 +1081,6 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         String[] columns = {
                 FormsTable.COLUMN_DSSID,
                 FormsTable.COLUMN_ISTATUS,
-                FormsTable.COLUMN_STATUS,
 
         };
 
@@ -1107,7 +1102,6 @@ public class DatabaseHelper extends SQLiteOpenHelper {
             while (c.moveToNext()) {
                 allFC.setLuid(c.getString(c.getColumnIndex(FormsTable.COLUMN_DSSID)));
                 allFC.setIstatus(c.getString(c.getColumnIndex(FormsTable.COLUMN_ISTATUS)));
-                allFC.setStatus(c.getString(c.getColumnIndex(FormsTable.COLUMN_STATUS)));
             }
         } finally {
             if (c != null) {
@@ -1326,7 +1320,6 @@ public class DatabaseHelper extends SQLiteOpenHelper {
                 FormsTable.COLUMN_APPVERSION,
                 FormsTable.COLUMN_CLUSTERCODE,
                 FormsTable.COLUMN_HHNO,
-                FormsTable.COLUMN_STATUS,
                 FormsTable.COLUMN_FORMTYPE,
 
         };
@@ -1437,7 +1430,6 @@ public class DatabaseHelper extends SQLiteOpenHelper {
                 FormsTable.COLUMN_APPVERSION,
                 FormsTable.COLUMN_CLUSTERCODE,
                 FormsTable.COLUMN_HHNO,
-                FormsTable.COLUMN_STATUS,
                 FormsTable.COLUMN_FORMTYPE,
 
         };
@@ -1533,13 +1525,12 @@ public class DatabaseHelper extends SQLiteOpenHelper {
                 FormsTable.COLUMN_ISTATUS,
                 FormsTable.COLUMN_ISTATUS88x,
                 FormsTable.COLUMN_DSSID,
-                FormsTable.COLUMN_SE,
                 FormsTable.COLUMN_ENDINGDATETIME,
                 FormsTable.COLUMN_SINFO,
-                FormsTable.COLUMN_SO,
+                FormsTable.COLUMN_SE,
                 FormsTable.COLUMN_SM,
-                FormsTable.COLUMN_AREA_CODE,
                 FormsTable.COLUMN_SN,
+                FormsTable.COLUMN_SO,
                 FormsTable.COLUMN_GPSLAT,
                 FormsTable.COLUMN_GPSLNG,
                 FormsTable.COLUMN_GPSDATE,
@@ -1549,7 +1540,6 @@ public class DatabaseHelper extends SQLiteOpenHelper {
                 FormsTable.COLUMN_APPVERSION,
                 FormsTable.COLUMN_CLUSTERCODE,
                 FormsTable.COLUMN_HHNO,
-                FormsTable.COLUMN_STATUS,
                 FormsTable.COLUMN_FORMTYPE
         };
 
@@ -1590,7 +1580,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         return allFC;
     }
 
-    public Collection<ChildContract> getUnsyncedChildForms() {
+    public Collection<ChildContract2> getUnsyncedChildForms() {
         SQLiteDatabase db = this.getReadableDatabase();
         Cursor c = null;
         String[] columns = {
@@ -1621,7 +1611,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         String orderBy =
                 singleChild._ID + " ASC";
 
-        Collection<ChildContract> allFC = new ArrayList<ChildContract>();
+        Collection<ChildContract2> allFC = new ArrayList<ChildContract2>();
         try {
             c = db.query(
                     singleChild.TABLE_NAME,  // The table to query
@@ -1633,7 +1623,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
                     orderBy                    // The sort order
             );
             while (c.moveToNext()) {
-                ChildContract fc = new ChildContract();
+                ChildContract2 fc = new ChildContract2();
                 allFC.add(fc.hydrate(c));
             }
         } finally {

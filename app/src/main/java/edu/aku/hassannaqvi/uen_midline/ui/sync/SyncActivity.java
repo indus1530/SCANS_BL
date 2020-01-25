@@ -32,7 +32,7 @@ import edu.aku.hassannaqvi.uen_midline.get.GetAllData;
 import edu.aku.hassannaqvi.uen_midline.R;
 import edu.aku.hassannaqvi.uen_midline.adapter.SyncListAdapter;
 import edu.aku.hassannaqvi.uen_midline.adapter.UploadListAdapter;
-import edu.aku.hassannaqvi.uen_midline.contracts.ChildContract;
+import edu.aku.hassannaqvi.uen_midline.contracts.ChildContract2;
 import edu.aku.hassannaqvi.uen_midline.contracts.DeceasedChildContract;
 import edu.aku.hassannaqvi.uen_midline.contracts.FormsContract;
 import edu.aku.hassannaqvi.uen_midline.contracts.ProblemContract;
@@ -190,9 +190,9 @@ public class SyncActivity extends AppCompatActivity {
                     this,
                     "Child",
                     "updateSyncedChildForm",
-                    ChildContract.class,
+                    ChildContract2.class,
                     MainApp._HOST_URL + MainApp._SERVER_URL,
-                    ChildContract.singleChild.TABLE_NAME,
+                    ChildContract2.singleChild.TABLE_NAME,
                     db.getUnsyncedChildForms(), 1, uploadListAdapter, uploadlist
             ).execute();
 

@@ -8,26 +8,123 @@ import org.json.JSONObject;
 
 public class ChildContract {
 
-    private String luid;
-    private String uid;
-    private String uuid;
-    private String serialNo;
-    private String dA;
-    private String formdate;
-    private String synced;
-    private String syncedDate;
-    private String _id;
-    private String motherId;
-    private String user = ""; // Interviewer
-    private String deviceID = "";
-    private String devicetagID = "";
 
-    public String getUuid() {
-        return uuid;
+    private String _ID = "";
+    private String UID = "";
+    private String _UUID = "";
+    private String deviceId = "";
+    private String formDate = ""; // Date
+    private String user = ""; // Interviewer
+    private String sI1 = "";
+    private String sI2 = "";
+    private String sJ = "";
+    private String devicetagID = "";
+    private String synced = "";
+    private String synced_date = "";
+
+     /*
+    saved in JSON
+    =============
+    * hhno
+    * cluster
+    * i1_fm_uid
+    * i1_fm_serial
+    * i1_res_fm_uid
+    * i1_res_fm_serial
+    * i2_fm_uid
+    * i2_fm_serial
+    * i2_res_fm_uid
+    * i2_res_fm_serial
+    * j_fm_uid
+    * j_fm_serial
+    * j_res_fm_uid
+    * j_res_fm_serial
+    * */
+
+
+    public ChildContract hydrate(Cursor cursor) {
+        this._ID = cursor.getString(cursor.getColumnIndex(SingleChild.COLUMN__ID));
+        this.UID = cursor.getString(cursor.getColumnIndex(SingleChild.COLUMN_UID));
+        this._UUID = cursor.getString(cursor.getColumnIndex(SingleChild.COLUMN__UUID));
+        this.deviceId = cursor.getString(cursor.getColumnIndex(SingleChild.COLUMN_DEVICEID));
+        this.formDate = cursor.getString(cursor.getColumnIndex(SingleChild.COLUMN_FORMDATE));
+        this.user = cursor.getString(cursor.getColumnIndex(SingleChild.COLUMN_USER));
+        this.sI1 = cursor.getString(cursor.getColumnIndex(SingleChild.COLUMN_SI1));
+        this.sI2 = cursor.getString(cursor.getColumnIndex(SingleChild.COLUMN_SI2));
+        this.sJ = cursor.getString(cursor.getColumnIndex(SingleChild.COLUMN_SJ));
+        this.devicetagID = cursor.getString(cursor.getColumnIndex(SingleChild.COLUMN_DEVICETAGID));
+        this.synced = cursor.getString(cursor.getColumnIndex(SingleChild.COLUMN_SYNCED));
+        this.synced_date = cursor.getString(cursor.getColumnIndex(SingleChild.COLUMN_SYNCED_DATE));
+
+        return this;
+
     }
 
-    public void setUuid(String uuid) {
-        this.uuid = uuid;
+    public JSONObject toJSONObject() throws JSONException {
+
+        JSONObject json = new JSONObject();
+        json.put(SingleChild.COLUMN__ID, this._ID == null ? JSONObject.NULL : this._ID);
+        json.put(SingleChild.COLUMN_UID, this.UID == null ? JSONObject.NULL : this.UID);
+        json.put(SingleChild.COLUMN__UUID, this._UUID == null ? JSONObject.NULL : this._UUID);
+        json.put(SingleChild.COLUMN_DEVICEID, this.deviceId == null ? JSONObject.NULL : this.deviceId);
+        json.put(SingleChild.COLUMN_FORMDATE, this.formDate == null ? JSONObject.NULL : this.formDate);
+        json.put(SingleChild.COLUMN_USER, this.user == null ? JSONObject.NULL : this.user);
+
+        if (!this.sI1.equals("")) {
+            json.put(SingleChild.COLUMN_SI1, this.sI1.equals("") ? JSONObject.NULL : new JSONObject(this.sI1));
+        }
+        if (!this.sI2.equals("")) {
+            json.put(SingleChild.COLUMN_SI2, this.sI2.equals("") ? JSONObject.NULL : new JSONObject(this.sI2));
+        }
+        if (!this.sJ.equals("")) {
+            json.put(SingleChild.COLUMN_SJ, this.sJ.equals("") ? JSONObject.NULL : new JSONObject(this.sJ));
+        }
+        json.put(SingleChild.COLUMN_DEVICETAGID, this.devicetagID == null ? JSONObject.NULL : this.devicetagID);
+        json.put(SingleChild.COLUMN_SYNCED, this.synced == null ? JSONObject.NULL : this.synced);
+        json.put(SingleChild.COLUMN_SYNCED_DATE, this.synced_date == null ? JSONObject.NULL : this.synced_date);
+
+        return json;
+
+    }
+
+    public String get_ID() {
+        return _ID;
+    }
+
+    public void set_ID(String _ID) {
+        this._ID = _ID;
+    }
+
+    public String getUID() {
+        return UID;
+    }
+
+    public void setUID(String UID) {
+        this.UID = UID;
+    }
+
+    public String get_UUID() {
+        return _UUID;
+    }
+
+    public void set_UUID(String _UUID) {
+        this._UUID = _UUID;
+    }
+
+    public String getDeviceId() {
+        return deviceId;
+    }
+
+    public void setDeviceId(String deviceId) {
+        this.deviceId = deviceId;
+    }
+
+    public String getFormDate() {
+        return formDate;
+    }
+
+    public void setFormDate(String formDate) {
+        this.formDate = formDate;
     }
 
     public String getUser() {
@@ -38,12 +135,28 @@ public class ChildContract {
         this.user = user;
     }
 
-    public String getDeviceID() {
-        return deviceID;
+    public String getsI1() {
+        return sI1;
     }
 
-    public void setDeviceID(String deviceID) {
-        this.deviceID = deviceID;
+    public void setsI1(String sI1) {
+        this.sI1 = sI1;
+    }
+
+    public String getsI2() {
+        return sI2;
+    }
+
+    public void setsI2(String sI2) {
+        this.sI2 = sI2;
+    }
+
+    public String getsJ() {
+        return sJ;
+    }
+
+    public void setsJ(String sJ) {
+        this.sJ = sJ;
     }
 
     public String getDevicetagID() {
@@ -54,98 +167,6 @@ public class ChildContract {
         this.devicetagID = devicetagID;
     }
 
-    public ChildContract hydrate(Cursor cursor) {
-        this.luid = cursor.getString(cursor.getColumnIndex(singleChild.COLUMN_luid));
-        this.uid = cursor.getString(cursor.getColumnIndex(singleChild.COLUMN_UID));
-        this.serialNo = cursor.getString(cursor.getColumnIndex(singleChild.COLUMN_SERIAL_NO));
-        this.dA = cursor.getString(cursor.getColumnIndex(singleChild.COLUMN_DA));
-        this.formdate = cursor.getString(cursor.getColumnIndex(singleChild.COLUMN_FORMDATE));
-        this.synced = cursor.getString(cursor.getColumnIndex(singleChild.COLUMN_SYNCED));
-        this.syncedDate = cursor.getString(cursor.getColumnIndex(singleChild.COLUMN_SYNCED_DATE));
-        this.motherId = cursor.getString(cursor.getColumnIndex(singleChild.COLUMN_MOTHER_ID));
-        this._id = cursor.getString(cursor.getColumnIndex(singleChild._ID));
-        this.user = cursor.getString(cursor.getColumnIndex(singleChild.COLUMN_USER));
-        this.deviceID = cursor.getString(cursor.getColumnIndex(singleChild.COLUMN_DEVICEID));
-        this.devicetagID = cursor.getString(cursor.getColumnIndex(singleChild.COLUMN_DEVICETAGID));
-        this.uuid = cursor.getString(cursor.getColumnIndex(singleChild.COLUMN_UUID));
-
-        return this;
-    }
-
-    public JSONObject toJSONObject() throws JSONException {
-
-        JSONObject json = new JSONObject();
-
-        json.put(singleChild.COLUMN_luid, this.luid == null ? JSONObject.NULL : this.luid);
-        json.put(singleChild.COLUMN_UID, this.uid == null ? JSONObject.NULL : this.uid);
-        json.put(singleChild.COLUMN_SERIAL_NO, this.serialNo == null ? JSONObject.NULL : this.serialNo);
-
-        if (!this.dA.equals("")) {
-            json.put(singleChild.COLUMN_DA, this.dA.equals("") ? JSONObject.NULL : new JSONObject(this.dA));
-        }
-        json.put(singleChild.COLUMN_FORMDATE, this.formdate == null ? JSONObject.NULL : this.formdate);
-        json.put(singleChild.COLUMN_SYNCED, this.synced == null ? JSONObject.NULL : this.synced);
-        json.put(singleChild.COLUMN_SYNCED_DATE, this.syncedDate == null ? JSONObject.NULL : this.syncedDate);
-        json.put(singleChild.COLUMN_MOTHER_ID, this.motherId == null ? JSONObject.NULL : this.motherId);
-        json.put(singleChild._ID, this._id == null ? JSONObject.NULL : this._id);
-        json.put(singleChild.COLUMN_USER, this.user == null ? JSONObject.NULL : this.user);
-        json.put(singleChild.COLUMN_DEVICEID, this.deviceID == null ? JSONObject.NULL : this.deviceID);
-        json.put(singleChild.COLUMN_DEVICETAGID, this.devicetagID == null ? JSONObject.NULL : this.devicetagID);
-        json.put(singleChild.COLUMN_UUID, this.uuid == null ? JSONObject.NULL : this.uuid);
-
-
-        return json;
-    }
-
-    public String getMotherId() {
-        return motherId;
-    }
-
-    public void setMotherId(String motherId) {
-        this.motherId = motherId;
-    }
-
-
-    public String getLuid() {
-        return luid;
-    }
-
-    public void setLuid(String luid) {
-        this.luid = luid;
-    }
-
-    public String getUid() {
-        return uid;
-    }
-
-    public void setUid(String uid) {
-        this.uid = uid;
-    }
-
-    public String getSerialNo() {
-        return serialNo;
-    }
-
-    public void setSerialNo(String serialNo) {
-        this.serialNo = serialNo;
-    }
-
-    public String getdA() {
-        return dA;
-    }
-
-    public void setdA(String dA) {
-        this.dA = dA;
-    }
-
-    public String getFormdate() {
-        return formdate;
-    }
-
-    public void setFormdate(String formdate) {
-        this.formdate = formdate;
-    }
-
     public String getSynced() {
         return synced;
     }
@@ -154,39 +175,31 @@ public class ChildContract {
         this.synced = synced;
     }
 
-    public String getSyncedDate() {
-        return syncedDate;
+    public String getSynced_date() {
+        return synced_date;
     }
 
-    public void setSyncedDate(String syncedDate) {
-        this.syncedDate = syncedDate;
+    public void setSynced_date(String synced_date) {
+        this.synced_date = synced_date;
     }
 
-    public String get_id() {
-        return _id;
-    }
+    public static abstract class SingleChild implements BaseColumns {
 
-    public void set_id(String _id) {
-        this._id = _id;
-    }
-
-
-    public static abstract class singleChild implements BaseColumns {
-
-        public static final String TABLE_NAME = "child_table";
-        public static final String _ID = "_id";
-        public static final String COLUMN_UID = "_uid";
-        public static final String COLUMN_UUID = "_uuid";
-        public static final String COLUMN_luid = "luid";
-        public static final String COLUMN_SERIAL_NO = "serial_no";
-        public static final String COLUMN_MOTHER_ID = "mother_id";
-        public static final String COLUMN_DA = "dA";
-        public static final String COLUMN_FORMDATE = "formdate";
-        public static final String COLUMN_SYNCED = "synced";
-        public static final String COLUMN_SYNCED_DATE = "syncedDate";
-        public static final String COLUMN_USER = "username";
+        public static final String COLUMN__ID = "_id";
+        public static final String COLUMN_UID = "uid";
+        public static final String COLUMN__UUID = "_uuid";
         public static final String COLUMN_DEVICEID = "deviceid";
-        public static final String COLUMN_DEVICETAGID = "tagid";
+        public static final String COLUMN_FORMDATE = "formdate";
+        public static final String COLUMN_USER = "user";
+        public static final String COLUMN_SI1 = "si1";
+        public static final String COLUMN_SI2 = "si2";
+        public static final String COLUMN_SJ = "sj";
+        public static final String COLUMN_DEVICETAGID = "devicetagid";
+        public static final String COLUMN_SYNCED = "synced";
+        public static final String COLUMN_SYNCED_DATE = "synced_date";
+
 
     }
+
+
 }
