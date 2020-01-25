@@ -118,7 +118,8 @@
 
                 </androidx.cardview.widget.CardView>
 
-                <!-- g103  Radio   -->
+
+                <!-- g103  CheckBox   -->
                 <androidx.cardview.widget.CardView
                     android:id="@+id/fldGrpCVg103"
                     style="@style/cardView">
@@ -132,60 +133,59 @@
                             style="@style/i_textview"
                             android:text="@string/g103" />
 
-                        <TextView
-                            style="@style/i_textviewhint"
-                            android:text="@string/g103hint" />
+                        <LinearLayout
+                            android:id="@+id/g103check"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical"
+                            android:tag="0">
 
-                        <RadioGroup
-                            android:id="@+id/g103"
-                            style="@style/radiogroup">
-
-                            <RadioButton
+                            <CheckBox
                                 android:id="@+id/g103a"
-                                style="@style/radiobutton"
+                                style="@style/checkbox"
                                 android:text="@string/g103a" />
 
-                            <RadioButton
+                            <CheckBox
                                 android:id="@+id/g103b"
-                                style="@style/radiobutton"
+                                style="@style/checkbox"
                                 android:text="@string/g103b" />
 
-                            <RadioButton
+                            <CheckBox
                                 android:id="@+id/g103c"
-                                style="@style/radiobutton"
+                                style="@style/checkbox"
                                 android:text="@string/g103c" />
 
-                            <RadioButton
+                            <CheckBox
                                 android:id="@+id/g103d"
-                                style="@style/radiobutton"
+                                style="@style/checkbox"
                                 android:text="@string/g103d" />
 
-                            <RadioButton
+                            <CheckBox
                                 android:id="@+id/g103e"
-                                style="@style/radiobutton"
+                                style="@style/checkbox"
                                 android:text="@string/g103e" />
 
-                            <RadioButton
+                            <CheckBox
                                 android:id="@+id/g103f"
-                                style="@style/radiobutton"
+                                style="@style/checkbox"
                                 android:text="@string/g103f" />
 
-                            <RadioButton
+                            <CheckBox
                                 android:id="@+id/g103g"
-                                style="@style/radiobutton"
+                                style="@style/checkbox"
                                 android:text="@string/g103g" />
 
-                            <RadioButton
+                            <CheckBox
                                 android:id="@+id/g103h"
-                                style="@style/radiobutton"
+                                style="@style/checkbox"
                                 android:text="@string/g103h" />
 
-                            <RadioButton
+                            <CheckBox
                                 android:id="@+id/g103i"
-                                style="@style/radiobutton"
+                                style="@style/checkbox"
                                 android:text="@string/g103i" />
 
-                        </RadioGroup>
+                        </LinearLayout>
 
                     </LinearLayout>
 
@@ -258,7 +258,7 @@
                             android:id="@+id/g105"
                             style="@style/EditTextNum"
                             android:hint="@string/km"
-                            app:mask="###"
+                            android:maxLength="3"
                             app:maxValue="100"
                             app:minValue="1"
                             app:type="range" />
@@ -329,7 +329,7 @@
                             android:id="@+id/g107"
                             style="@style/EditTextNum"
                             android:hint="@string/minutes"
-                            app:mask="##"
+                            android:maxLength="2"
                             app:maxValue="59"
                             app:minValue="1"
                             app:type="range" />
@@ -359,16 +359,16 @@
 
                             <RadioButton
                                 android:id="@+id/g108a"
-                                style="@style/radiobutton"
                                 android:layout_width="0dp"
                                 android:layout_weight="1"
+                                style="@style/radiobutton"
                                 android:text="@string/yes" />
 
                             <RadioButton
                                 android:id="@+id/g108b"
-                                style="@style/radiobutton"
                                 android:layout_width="0dp"
                                 android:layout_weight="1"
+                                style="@style/radiobutton"
                                 android:text="@string/no" />
 
                         </RadioGroup>
@@ -488,16 +488,16 @@
 
                             <RadioButton
                                 android:id="@+id/g111a"
-                                style="@style/radiobutton"
                                 android:layout_width="0dp"
                                 android:layout_weight="1"
+                                style="@style/radiobutton"
                                 android:text="@string/yes" />
 
                             <RadioButton
                                 android:id="@+id/g111b"
-                                style="@style/radiobutton"
                                 android:layout_width="0dp"
                                 android:layout_weight="1"
+                                style="@style/radiobutton"
                                 android:text="@string/no" />
 
                         </RadioGroup>
@@ -524,7 +524,7 @@
                             android:id="@+id/g112"
                             style="@style/EditTextNum"
                             android:hint="@string/rupees"
-                            app:mask="####"
+                            android:maxLength="4"
                             app:maxValue="1000"
                             app:minValue="1"
                             app:type="range" />
@@ -554,23 +554,23 @@
 
                             <RadioButton
                                 android:id="@+id/g113a"
-                                style="@style/radiobutton"
                                 android:layout_width="0dp"
                                 android:layout_weight="1"
+                                style="@style/radiobutton"
                                 android:text="@string/yes" />
 
                             <RadioButton
                                 android:id="@+id/g113b"
-                                style="@style/radiobutton"
                                 android:layout_width="0dp"
                                 android:layout_weight="1"
+                                style="@style/radiobutton"
                                 android:text="@string/no" />
 
                             <RadioButton
                                 android:id="@+id/g11398"
-                                style="@style/radiobutton"
                                 android:layout_width="0dp"
                                 android:layout_weight="1"
+                                style="@style/radiobutton"
                                 android:text="@string/dkn" />
 
                         </RadioGroup>
@@ -664,16 +664,16 @@
 
                             <RadioButton
                                 android:id="@+id/g115a"
-                                style="@style/radiobutton"
                                 android:layout_width="0dp"
                                 android:layout_weight="1"
+                                style="@style/radiobutton"
                                 android:text="@string/yes" />
 
                             <RadioButton
                                 android:id="@+id/g115b"
-                                style="@style/radiobutton"
                                 android:layout_width="0dp"
                                 android:layout_weight="1"
+                                style="@style/radiobutton"
                                 android:text="@string/no" />
 
                         </RadioGroup>
@@ -747,6 +747,7 @@
 
                         <TextView
                             style="@style/i_textview"
+                            android:textAlignment="center"
                             android:text="@string/days" />
 
                         <com.edittextpicker.aliazaz.EditTextPicker
@@ -760,6 +761,7 @@
 
                         <TextView
                             style="@style/i_textview"
+                            android:textAlignment="center"
                             android:text="@string/hours" />
 
                         <com.edittextpicker.aliazaz.EditTextPicker
@@ -773,6 +775,7 @@
 
                         <TextView
                             style="@style/i_textview"
+                            android:textAlignment="center"
                             android:text="@string/minutes" />
 
                         <com.edittextpicker.aliazaz.EditTextPicker
@@ -806,7 +809,7 @@
                             android:id="@+id/g118"
                             style="@style/EditTextNum"
                             android:hint="@string/rupees"
-                            app:mask="#####"
+                            android:maxLength="5"
                             app:maxValue="99999"
                             app:minValue="1"
                             app:type="range" />
@@ -1338,16 +1341,16 @@
 
                             <RadioButton
                                 android:id="@+id/g128a"
-                                style="@style/radiobutton"
                                 android:layout_width="0dp"
                                 android:layout_weight="1"
+                                style="@style/radiobutton"
                                 android:text="@string/yes" />
 
                             <RadioButton
                                 android:id="@+id/g128b"
-                                style="@style/radiobutton"
                                 android:layout_width="0dp"
                                 android:layout_weight="1"
+                                style="@style/radiobutton"
                                 android:text="@string/no" />
 
                         </RadioGroup>
@@ -1377,16 +1380,16 @@
 
                             <RadioButton
                                 android:id="@+id/g129a"
-                                style="@style/radiobutton"
                                 android:layout_width="0dp"
                                 android:layout_weight="1"
+                                style="@style/radiobutton"
                                 android:text="@string/yes" />
 
                             <RadioButton
                                 android:id="@+id/g129b"
-                                style="@style/radiobutton"
                                 android:layout_width="0dp"
                                 android:layout_weight="1"
+                                style="@style/radiobutton"
                                 android:text="@string/no" />
 
                         </RadioGroup>
