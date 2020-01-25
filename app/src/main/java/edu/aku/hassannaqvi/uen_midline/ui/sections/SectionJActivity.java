@@ -58,6 +58,9 @@ public class SectionJActivity extends AppCompatActivity {
 
         bi.j100.setAdapter(new ArrayAdapter<>(this, android.R.layout.simple_dropdown_item_1line, childLst));
 
+        bi.j103c.setMaxvalue(CONSTANTS.MAXYEAR);
+        bi.j103c.setMinvalue(CONSTANTS.MINYEAR_IM);
+
         bi.j10401y.setMaxvalue(CONSTANTS.MAXYEAR);
         bi.j10401y.setMinvalue(CONSTANTS.MINYEAR_IM);
 
@@ -172,6 +175,7 @@ public class SectionJActivity extends AppCompatActivity {
                         bi.j102b.isChecked() ? "2" :
                                 "0");
 
+        j1.put("j103d", bi.j103d.isChecked() ? "98" : "0");
         j1.put("j103a", bi.j103a.getText().toString());
         j1.put("j103b", bi.j103b.getText().toString());
         j1.put("j103c", bi.j103c.getText().toString());

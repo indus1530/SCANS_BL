@@ -124,7 +124,7 @@ public class SectionFActivity extends AppCompatActivity {
                                         "0");
         f1.put("f10796x", bi.f10796x.getText().toString());
 
-        f1.put("f108c", bi.f108c.isChecked() ? "1" : "0");
+        f1.put("f108c", bi.f108c.isChecked() ? "98" : "0");
         f1.put("f108a", bi.f108a.getText().toString());
         f1.put("f108b", bi.f108b.getText().toString());
 

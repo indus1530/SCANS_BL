@@ -150,9 +150,8 @@
                 android:orientation="vertical"
                 android:visibility='@{j102a.checked || j102b.checked ? View.GONE : View.VISIBLE}'>
 
-                <!-- j103  Input-Numeric   -->
+                <!-- j103  (d/m/y)Title   -->
                 <androidx.cardview.widget.CardView
-                    android:id="@+id/fldGrpCVj103"
                     style="@style/cardView">
 
                     <LinearLayout
@@ -164,48 +163,98 @@
                             style="@style/i_textview"
                             android:text="@string/j103" />
 
-                        <TextView
-                            style="@style/textView3Head"
-                            android:text="@string/j103a" />
+                        <LinearLayout
+                            android:id="@+id/fldGrpCVj103"
+                            style="@style/linearlayout_view_wt_bound"
+                            android:orientation="horizontal">
 
-                        <com.edittextpicker.aliazaz.EditTextPicker
-                            android:id="@+id/j103a"
-                            style="@style/EditTextNum"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:hint="@string/j103a"
-                            android:inputType="number"
-                            android:maxLength="2" />
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:orientation="vertical">
 
-                        <TextView
-                            style="@style/textView3Head"
-                            android:text="@string/j103b" />
+                                <TextView
+                                    style="@style/textView3Head"
+                                    android:text="@string/j103a" />
 
-                        <com.edittextpicker.aliazaz.EditTextPicker
-                            android:id="@+id/j103b"
-                            style="@style/EditTextNum"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:hint="@string/j103b"
-                            android:inputType="number"
-                            android:maxLength="2" />
+                                <com.edittextpicker.aliazaz.EditTextPicker
+                                    android:id="@+id/j103a"
+                                    style="@style/textInput"
+                                    android:enabled='@{j103d.checked?  false : true}'
+                                    android:hint="@string/j103a"
+                                    android:inputType="number"
+                                    android:maxLength="2"
+                                    android:text='@{j103d.checked? "" : j103a.getText().toString()}'
+                                    android:textColor="@android:color/black"
+                                    app:defaultValue="00"
+                                    app:maxValue="30"
+                                    app:minValue="0"
+                                    app:type="range" />
 
-                        <TextView
-                            style="@style/textView3Head"
-                            android:text="@string/j103c" />
+                            </LinearLayout>
 
-                        <com.edittextpicker.aliazaz.EditTextPicker
-                            android:id="@+id/j103c"
-                            style="@style/EditTextNum"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:hint="@string/j103c"
-                            android:inputType="number"
-                            android:maxLength="4" />
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:orientation="vertical">
 
-                        <!--  <TextView
-                              style="@style/i_textview"
-                              android:text="@string/j103d" />-->
+                                <TextView
+                                    style="@style/textView3Head"
+                                    android:text="@string/j103b" />
+
+                                <com.edittextpicker.aliazaz.EditTextPicker
+                                    android:id="@+id/j103b"
+                                    style="@style/textInput"
+                                    android:enabled='@{j103d.checked?  false : true}'
+                                    android:hint="@string/j103b"
+                                    android:inputType="number"
+                                    android:maxLength="2"
+                                    android:text='@{j103d.checked? "" : j103b.getText().toString()}'
+                                    android:textColor="@android:color/black"
+                                    app:defaultValue="00"
+                                    app:maxValue="30"
+                                    app:minValue="0"
+                                    app:type="range" />
+
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:orientation="vertical">
+
+                                <TextView
+                                    style="@style/textView3Head"
+                                    android:text="@string/j103c" />
+
+                                <com.edittextpicker.aliazaz.EditTextPicker
+                                    android:id="@+id/j103c"
+                                    style="@style/textInput"
+                                    android:digits="0123456789"
+                                    android:enabled='@{j103d.checked?  false : true}'
+                                    android:hint="@string/j103c"
+                                    android:inputType="number"
+                                    android:maxLength="4"
+                                    android:text='@{j103d.checked? "" : j103c.getText().toString()}'
+                                    android:textColor="@android:color/black"
+                                    app:defaultValue="00"
+                                    app:maxValue="0"
+                                    app:minValue="0"
+                                    app:type="range" />
+
+                            </LinearLayout>
+
+                        </LinearLayout>
+
+                        <CheckBox
+                            android:id="@+id/j103d"
+                            style="@style/checkbox"
+                            android:tag="-1"
+                            android:text="@string/j103d" />
+
                     </LinearLayout>
                 </androidx.cardview.widget.CardView>
 
