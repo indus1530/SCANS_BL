@@ -1188,7 +1188,7 @@
     <string name="i220b">No</string>
     <string name="i221">How much did it cost you for {NAME}’s treatment of symptoms of fever, cough and fast breathing? (Rupees)</string>
     <string name="i222">Do you know any danger sign of pneumonia?</string>
-    <string name="i222a">es</string>
+    <string name="i222a">Yes</string>
     <string name="i222b">No</string>
     <string name="i223">Could you please tell what danger signs may occur in pneumonia?</string>
     <string name="i223a">Chest In drawing</string>

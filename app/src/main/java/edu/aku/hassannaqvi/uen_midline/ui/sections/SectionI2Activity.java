@@ -107,6 +107,30 @@ public class SectionI2Activity extends AppCompatActivity {
             }
         }));
 
+        bi.i207.setOnCheckedChangeListener(((radioGroup, i) -> {
+            if (i == bi.i207a.getId()) {
+                ClearClass.ClearAllFields(bi.fldGrpCVi208, null);
+            }
+        }));
+
+        bi.i207.setOnCheckedChangeListener(((radioGroup, i) -> {
+            if (i == bi.i207b.getId()) {
+                ClearClass.ClearAllFields(bi.fldGrpi025, null);
+            }
+        }));
+
+        bi.i209.setOnCheckedChangeListener(((radioGroup, i) -> {
+            if (i == bi.i209a.getId()) {
+                ClearClass.ClearAllFields(bi.fldGrpi023, null);
+            }
+        }));
+
+        bi.i214.setOnCheckedChangeListener(((radioGroup, i) -> {
+            if (i == bi.i214b.getId()) {
+                ClearClass.ClearAllFields(bi.fldGrpi024, null);
+            }
+        }));
+
         bi.i222.setOnCheckedChangeListener(((radioGroup, i) -> {
 
             if (i == bi.i222b.getId()) {
