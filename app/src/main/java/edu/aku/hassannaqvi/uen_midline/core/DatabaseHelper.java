@@ -16,16 +16,10 @@ import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Collection;
 import java.util.Date;
-import java.util.List;
 
 import edu.aku.hassannaqvi.uen_midline.contracts.AreasContract;
 import edu.aku.hassannaqvi.uen_midline.contracts.AreasContract.singleAreas;
-import edu.aku.hassannaqvi.uen_midline.contracts.ChildContract2;
-import edu.aku.hassannaqvi.uen_midline.contracts.ChildContract2.singleChild;
-import edu.aku.hassannaqvi.uen_midline.contracts.ChildList;
 import edu.aku.hassannaqvi.uen_midline.contracts.ChildrenContract;
-import edu.aku.hassannaqvi.uen_midline.contracts.DeceasedChildContract;
-import edu.aku.hassannaqvi.uen_midline.contracts.DeceasedChildContract.singleDeceasedChild;
 import edu.aku.hassannaqvi.uen_midline.contracts.FamilyMembersContract;
 import edu.aku.hassannaqvi.uen_midline.contracts.FamilyMembersContract.singleMember;
 import edu.aku.hassannaqvi.uen_midline.contracts.FormsContract;
@@ -33,8 +27,6 @@ import edu.aku.hassannaqvi.uen_midline.contracts.FormsContract.FormsTable;
 import edu.aku.hassannaqvi.uen_midline.contracts.MWRAContract;
 import edu.aku.hassannaqvi.uen_midline.contracts.MotherContract;
 import edu.aku.hassannaqvi.uen_midline.contracts.MotherContract.singleMother;
-import edu.aku.hassannaqvi.uen_midline.contracts.ProblemContract;
-import edu.aku.hassannaqvi.uen_midline.contracts.ProblemContract.singleProblem;
 import edu.aku.hassannaqvi.uen_midline.contracts.TalukasContract;
 import edu.aku.hassannaqvi.uen_midline.contracts.UCsContract;
 import edu.aku.hassannaqvi.uen_midline.contracts.UsersContract;
@@ -89,7 +81,6 @@ public class DatabaseHelper extends SQLiteOpenHelper {
             + FormsTable.COLUMN_SYNCED_DATE + " TEXT"
             + " );";
     private static final String SQL_DELETE_CHILDREN = "DROP TABLE IF EXISTS " + ChildrenContract.singleChild.TABLE_NAME;
-    private static final String SQL_DELETE_CHILDLIST = "DROP TABLE IF EXISTS " + ChildList.singleChildList.TABLE_NAME;
     private static final String SQL_DELETE_VILLAGES = "DROP TABLE IF EXISTS " + singleVillage.TABLE_NAME;
     private static final String SQL_DELETE_TALUKAS = "DROP TABLE IF EXISTS " + TalukasContract.singleTalukas.TABLE_NAME;
     private static final String SQL_DELETE_UCS = "DROP TABLE IF EXISTS " + UCsContract.singleUCs.TABLE_NAME;
@@ -134,37 +125,6 @@ public class DatabaseHelper extends SQLiteOpenHelper {
             singleVillage.COLUMN_VILLAGE_NAME + " TEXT " +
             ");";
 
-    private final String SQL_CREATE_DECEASED_CHILD = "CREATE TABLE " + DeceasedChildContract.singleDeceasedChild.TABLE_NAME + "("
-            + singleDeceasedChild._ID + " INTEGER PRIMARY KEY AUTOINCREMENT,"
-            + singleDeceasedChild.COLUMN_luid + " TEXT,"
-            + singleDeceasedChild.COLUMN_UID + " TEXT,"
-            + singleDeceasedChild.COLUMN_UUID + " TEXT,"
-            + singleDeceasedChild.COLUMN_MUID + " TEXT,"
-            + singleDeceasedChild.COLUMN_MOTHER_ID + " TEXT,"
-            + singleDeceasedChild.COLUMN_SERIAL_NO + " TEXT,"
-            + singleDeceasedChild.COLUMN_DA + " TEXT,"
-            + singleDeceasedChild.COLUMN_FORMDATE + " TEXT,"
-            + singleDeceasedChild.COLUMN_USER + " TEXT,"
-            + singleDeceasedChild.COLUMN_DEVICEID + " TEXT,"
-            + singleDeceasedChild.COLUMN_DEVICETAGID + " TEXT,"
-            + singleDeceasedChild.COLUMN_SYNCED + " TEXT,"
-            + singleDeceasedChild.COLUMN_SYNCED_DATE + " TEXT );";
-
-
-    private final String SQL_CREATE__CHILD_TABLE = "CREATE TABLE " + singleChild.TABLE_NAME + "("
-            + singleChild._ID + " INTEGER PRIMARY KEY AUTOINCREMENT,"
-            + singleChild.COLUMN_luid + " TEXT,"
-            + singleChild.COLUMN_UID + " TEXT,"
-            + singleChild.COLUMN_UUID + " TEXT,"
-            + singleChild.COLUMN_MOTHER_ID + " TEXT,"
-            + singleChild.COLUMN_SERIAL_NO + " TEXT,"
-            + singleChild.COLUMN_DA + " TEXT,"
-            + singleChild.COLUMN_FORMDATE + " TEXT,"
-            + singleChild.COLUMN_USER + " TEXT,"
-            + singleChild.COLUMN_DEVICEID + " TEXT,"
-            + singleChild.COLUMN_DEVICETAGID + " TEXT,"
-            + singleChild.COLUMN_SYNCED + " TEXT,"
-            + singleChild.COLUMN_SYNCED_DATE + " TEXT );";
 
 
     private final String SQL_CREATE__MOTHER_TABLE = "CREATE TABLE " + singleMother.TABLE_NAME + "("
@@ -181,31 +141,6 @@ public class DatabaseHelper extends SQLiteOpenHelper {
             + singleMother.COLUMN_SYNCED + " TEXT,"
             + singleMother.COLUMN_SYNCED_DATE + " TEXT );";
 
-    private final String SQL_CREATE__PROBLEM_TABLE = "CREATE TABLE " + singleProblem.TABLE_NAME + "("
-            + singleProblem._ID + " INTEGER PRIMARY KEY AUTOINCREMENT,"
-            + singleProblem.COLUMN_UID + " TEXT,"
-            + singleProblem.COLUMN_UUID + " TEXT,"
-            + singleProblem.COLUMN_CUID + " TEXT,"
-            + singleProblem.COLUMN_PROBLEM_TYPE + " TEXT,"
-            + singleProblem.COLUMN_DA + " TEXT,"
-            + singleProblem.COLUMN_FORMDATE + " TEXT,"
-            + singleProblem.COLUMN_USER + " TEXT,"
-            + singleProblem.COLUMN_DEVICEID + " TEXT,"
-            + singleProblem.COLUMN_DEVICETAGID + " TEXT,"
-            + singleProblem.COLUMN_SYNCED + " TEXT,"
-            + singleProblem.COLUMN_SYNCED_DATE + " TEXT );";
-
-
-    private final String SQL_CREATE_CHILDLIST = "CREATE TABLE " + ChildList.singleChildList.TABLE_NAME + "("
-            + ChildList.singleChildList._ID + " INTEGER PRIMARY KEY AUTOINCREMENT,"
-            + ChildList.singleChildList.COLUMN_DSSID + " TEXT,"
-            + ChildList.singleChildList.COLUMN_MOTHER_NAME + " TEXT,"
-            + ChildList.singleChildList.COLUMN_FATHER_NAME + " TEXT, "
-            + ChildList.singleChildList.COLUMN_HHHEAD + " TEXT,"
-            + ChildList.singleChildList.COLUMN_DOB + " TEXT,"
-            + ChildList.singleChildList.COLUMN_GENDER + " TEXT,"
-            + ChildList.singleChildList.COLUMN_AREACODE + " TEXT,"
-            + ChildList.singleChildList.COLUMN_STUDY_ID + " TEXT );";
 
     private final String SQL_CREATE_FAMILY_MEMBERS = "CREATE TABLE " + singleMember.TABLE_NAME + "("
             + singleMember.COLUMN_ID + " INTEGER PRIMARY KEY AUTOINCREMENT," +
@@ -240,14 +175,10 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         db.execSQL(SQL_CREATE_TALUKAS);
         db.execSQL(SQL_CREATE_UCS);
         db.execSQL(SQL_CREATE_CHILDREN);
-        db.execSQL(SQL_CREATE_CHILDLIST);
-        db.execSQL(SQL_CREATE_DECEASED_CHILD);
         db.execSQL(SQL_CREATE_PSU_TABLE);
         db.execSQL(SQL_CREATE_AREAS);
         db.execSQL(SQL_CREATE_VERSIONAPP);
         db.execSQL(SQL_CREATE_FAMILY_MEMBERS);
-        db.execSQL(SQL_CREATE__CHILD_TABLE);
-        db.execSQL(SQL_CREATE__PROBLEM_TABLE);
         db.execSQL(SQL_CREATE__MOTHER_TABLE);
     }
 
@@ -298,39 +229,6 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         }
     }
 
-    public void syncChildlist(JSONArray cList) {
-        SQLiteDatabase db = this.getWritableDatabase();
-        db.delete(ChildList.singleChildList.TABLE_NAME, null, null);
-
-        try {
-            JSONArray jsonArray = cList;
-
-            for (int i = 0; i < jsonArray.length(); i++) {
-                JSONObject jsonObjectCL = jsonArray.getJSONObject(i);
-
-                ChildList cl = new ChildList();
-                cl.sync(jsonObjectCL);
-                Log.i(TAG, "syncChildlist: " + jsonObjectCL.toString());
-
-                ContentValues values = new ContentValues();
-
-                values.put(ChildList.singleChildList.COLUMN_DSSID, cl.getDssid());
-                values.put(ChildList.singleChildList.COLUMN_MOTHER_NAME, cl.getMother_name());
-                values.put(ChildList.singleChildList.COLUMN_FATHER_NAME, cl.getFather_name());
-                values.put(ChildList.singleChildList.COLUMN_HHHEAD, cl.getHhhead());
-                values.put(ChildList.singleChildList.COLUMN_STUDY_ID, cl.getStudy_id());
-                values.put(ChildList.singleChildList.COLUMN_DOB, cl.getDob());
-                values.put(ChildList.singleChildList.COLUMN_GENDER, cl.getGender());
-                values.put(ChildList.singleChildList.COLUMN_AREACODE, cl.getAreacode());
-
-                db.insert(ChildList.singleChildList.TABLE_NAME, null, values);
-            }
-            db.close();
-
-        } catch (Exception e) {
-
-        }
-    }
 
     public void syncVillages(JSONArray pcList) {
         SQLiteDatabase db = this.getWritableDatabase();
@@ -613,101 +511,6 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         return allDC;
     }
 
-    public List<ChildList> getChildList(String areaCode) {
-        SQLiteDatabase db = this.getReadableDatabase();
-        Cursor c = null;
-        String[] columns = {
-                ChildList.singleChildList.COLUMN_DSSID,
-                ChildList.singleChildList.COLUMN_GENDER,
-                ChildList.singleChildList.COLUMN_STUDY_ID,
-                ChildList.singleChildList.COLUMN_DOB,
-                ChildList.singleChildList.COLUMN_FATHER_NAME,
-                ChildList.singleChildList.COLUMN_MOTHER_NAME,
-                ChildList.singleChildList.COLUMN_AREACODE,
-                ChildList.singleChildList.COLUMN_HHHEAD,
-
-        };
-
-
-        String whereClause = ChildList.singleChildList.COLUMN_AREACODE + " = ? ";
-        String[] whereArgs = new String[]{areaCode};
-        String groupBy = null;
-        String having = null;
-        String orderBy = null;
-
-        List<ChildList> allDC = new ArrayList<>();
-        try {
-            c = db.query(
-                    ChildList.singleChildList.TABLE_NAME,  // The table to query
-                    columns,                   // The columns to return
-                    whereClause,               // The columns for the WHERE clause
-                    whereArgs,                 // The values for the WHERE clause
-                    groupBy,                   // don't group the rows
-                    having,                    // don't filter by row groups
-                    orderBy                    // The sort order
-            );
-            while (c.moveToNext()) {
-                ChildList dc = new ChildList();
-                allDC.add(dc.hydrate(c));
-            }
-        } finally {
-            if (c != null) {
-                c.close();
-            }
-            if (db != null) {
-                db.close();
-            }
-        }
-        return allDC;
-    }
-
-    public List<ChildList> getList(String areaCode) {
-        SQLiteDatabase db = this.getReadableDatabase();
-        Cursor c = null;
-        String[] columns = {
-                ChildList.singleChildList.COLUMN_DSSID,
-                ChildList.singleChildList.COLUMN_GENDER,
-                ChildList.singleChildList.COLUMN_STUDY_ID,
-                ChildList.singleChildList.COLUMN_DOB,
-                ChildList.singleChildList.COLUMN_FATHER_NAME,
-                ChildList.singleChildList.COLUMN_MOTHER_NAME,
-                ChildList.singleChildList.COLUMN_AREACODE,
-                ChildList.singleChildList.COLUMN_HHHEAD,
-
-        };
-
-
-        String whereClause = ChildList.singleChildList.COLUMN_AREACODE + " = ? ";
-        String[] whereArgs = new String[]{areaCode};
-        String groupBy = null;
-        String having = null;
-        String orderBy = null;
-
-        List<ChildList> allDC = new ArrayList<>();
-        try {
-            c = db.query(
-                    ChildList.singleChildList.TABLE_NAME,  // The table to query
-                    columns,                   // The columns to return
-                    whereClause,               // The columns for the WHERE clause
-                    whereArgs,                 // The values for the WHERE clause
-                    groupBy,                   // don't group the rows
-                    having,                    // don't filter by row groups
-                    orderBy                    // The sort order
-            );
-            while (c.moveToNext()) {
-                ChildList dc = new ChildList();
-                allDC.add(dc.hydrate(c));
-            }
-        } finally {
-            if (c != null) {
-                c.close();
-            }
-            if (db != null) {
-                db.close();
-            }
-        }
-        return allDC;
-    }
 
     public Collection<AreasContract> getAllAreas(int UCCode) {
         SQLiteDatabase db = this.getReadableDatabase();
@@ -972,56 +775,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         return newRowId;
     }
 
-    public Long addChildDeceaseForm(DeceasedChildContract fc) {
 
-        // Gets the data repository in write mode
-        SQLiteDatabase db = this.getWritableDatabase();
-
-// Create a new map of values, where column names are the keys
-        ContentValues values = new ContentValues();
-        values.put(DeceasedChildContract.singleDeceasedChild.COLUMN_luid, fc.getLuid());
-        values.put(singleDeceasedChild.COLUMN_DA, fc.getdA());
-        values.put(singleDeceasedChild.COLUMN_FORMDATE, fc.getFormdate());
-        values.put(singleDeceasedChild.COLUMN_MOTHER_ID, fc.getMotherId());
-        values.put(singleDeceasedChild.COLUMN_SERIAL_NO, fc.getSerialNo());
-        values.put(singleDeceasedChild.COLUMN_USER, fc.getUser());
-        values.put(singleDeceasedChild.COLUMN_DEVICEID, fc.getDeviceID());
-        values.put(singleDeceasedChild.COLUMN_DEVICETAGID, fc.getDevicetagID());
-        values.put(singleDeceasedChild.COLUMN_UUID, fc.getUuid());
-        values.put(singleDeceasedChild.COLUMN_MUID, fc.getMuid());
-        // Insert the new row, returning the primary key value of the new row
-        long newRowId;
-        newRowId = db.insert(
-                DeceasedChildContract.singleDeceasedChild.TABLE_NAME,
-                FormsTable.COLUMN_NAME_NULLABLE,
-                values);
-        return newRowId;
-    }
-
-    public Long addChildForm(ChildContract2 fc) {
-
-        // Gets the data repository in write mode
-        SQLiteDatabase db = this.getWritableDatabase();
-
-// Create a new map of values, where column names are the keys
-        ContentValues values = new ContentValues();
-        values.put(singleChild.COLUMN_luid, fc.getLuid());
-        values.put(singleChild.COLUMN_DA, fc.getdA());
-        values.put(singleChild.COLUMN_FORMDATE, fc.getFormdate());
-        values.put(singleChild.COLUMN_MOTHER_ID, fc.getMotherId());
-        values.put(singleChild.COLUMN_SERIAL_NO, fc.getSerialNo());
-        values.put(singleChild.COLUMN_USER, fc.getUser());
-        values.put(singleChild.COLUMN_DEVICEID, fc.getDeviceID());
-        values.put(singleChild.COLUMN_DEVICETAGID, fc.getDevicetagID());
-        values.put(singleChild.COLUMN_UUID, fc.getUuid());
-        // Insert the new row, returning the primary key value of the new row
-        long newRowId;
-        newRowId = db.insert(
-                singleChild.TABLE_NAME,
-                FormsTable.COLUMN_NAME_NULLABLE,
-                values);
-        return newRowId;
-    }
 
     public Long addMotherForm(MotherContract fc) {
 
@@ -1048,30 +802,6 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         return newRowId;
     }
 
-    public Long addProblems(ProblemContract fc) {
-
-        // Gets the data repository in write mode
-        SQLiteDatabase db = this.getWritableDatabase();
-
-// Create a new map of values, where column names are the keys
-        ContentValues values = new ContentValues();
-        values.put(singleProblem.COLUMN_UUID, fc.getUuid());
-        values.put(singleProblem.COLUMN_CUID, fc.getCuid());
-        values.put(singleProblem.COLUMN_FORMDATE, fc.getFormdate());
-        values.put(singleProblem.COLUMN_DA, fc.getdA());
-        values.put(singleProblem.COLUMN_PROBLEM_TYPE, fc.getProblemType());
-        values.put(singleProblem.COLUMN_USER, fc.getUser());
-        values.put(singleProblem.COLUMN_DEVICEID, fc.getDeviceID());
-        values.put(singleProblem.COLUMN_DEVICETAGID, fc.getDevicetagID());
-        values.put(singleProblem.COLUMN_UUID, fc.getUuid());
-        // Insert the new row, returning the primary key value of the new row
-        long newRowId;
-        newRowId = db.insert(
-                singleProblem.TABLE_NAME,
-                FormsTable.COLUMN_NAME_NULLABLE,
-                values);
-        return newRowId;
-    }
 
     public FormsContract isDataExists(String studyId) {
         SQLiteDatabase db = getReadableDatabase();
@@ -1135,62 +865,8 @@ public class DatabaseHelper extends SQLiteOpenHelper {
                 whereArgs);
     }
 
-    public void updateSyncedChildForm(String id) {
-        SQLiteDatabase db = this.getReadableDatabase();
 
-// New value for one column
-        ContentValues values = new ContentValues();
-        values.put(singleChild.COLUMN_SYNCED, true);
-        values.put(singleChild.COLUMN_SYNCED_DATE, new Date().toString());
 
-// Which row to update, based on the title
-        String where = singleChild._ID + " = ?";
-        String[] whereArgs = {id};
-
-        int count = db.update(
-                singleChild.TABLE_NAME,
-                values,
-                where,
-                whereArgs);
-    }
-
-    public void updateSyncedProblemsForm(String id) {
-        SQLiteDatabase db = this.getReadableDatabase();
-
-// New value for one column
-        ContentValues values = new ContentValues();
-        values.put(singleProblem.COLUMN_SYNCED, true);
-        values.put(singleProblem.COLUMN_SYNCED_DATE, new Date().toString());
-
-// Which row to update, based on the title
-        String where = singleProblem._ID + " = ?";
-        String[] whereArgs = {id};
-
-        int count = db.update(
-                singleProblem.TABLE_NAME,
-                values,
-                where,
-                whereArgs);
-    }
-
-    public void updateSyncedDeceasedChildForm(String id) {
-        SQLiteDatabase db = this.getReadableDatabase();
-
-// New value for one column
-        ContentValues values = new ContentValues();
-        values.put(singleDeceasedChild.COLUMN_SYNCED, true);
-        values.put(singleDeceasedChild.COLUMN_SYNCED_DATE, new Date().toString());
-
-// Which row to update, based on the title
-        String where = singleDeceasedChild._ID + " = ?";
-        String[] whereArgs = {id};
-
-        int count = db.update(
-                singleDeceasedChild.TABLE_NAME,
-                values,
-                where,
-                whereArgs);
-    }
 
     public void updateMWRAs(String id) {
         SQLiteDatabase db = this.getReadableDatabase();
@@ -1229,42 +905,6 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         return count;
     }
 
-    public int updateChildDeceaseFormID() {
-        SQLiteDatabase db = this.getReadableDatabase();
-
-// New value for one column
-        ContentValues values = new ContentValues();
-        values.put(singleDeceasedChild.COLUMN_UID, MainApp.dcc.getUid());
-
-// Which row to update, based on the ID
-        String selection = singleDeceasedChild._ID + " = ?";
-        String[] selectionArgs = {String.valueOf(MainApp.dcc.get_id())};
-
-        int count = db.update(singleDeceasedChild.TABLE_NAME,
-                values,
-                selection,
-                selectionArgs);
-        return count;
-    }
-
-    public int updateChildFormID() {
-        SQLiteDatabase db = this.getReadableDatabase();
-
-// New value for one column
-        ContentValues values = new ContentValues();
-        values.put(singleChild.COLUMN_UID, MainApp.cc.getUid());
-
-// Which row to update, based on the ID
-        String selection = singleChild._ID + " = ?";
-        String[] selectionArgs = {String.valueOf(MainApp.cc.get_id())};
-
-        int count = db.update(singleChild.TABLE_NAME,
-                values,
-                selection,
-                selectionArgs);
-        return count;
-    }
-
     public int updateMotherFormID() {
         SQLiteDatabase db = this.getReadableDatabase();
 
@@ -1283,23 +923,6 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         return count;
     }
 
-    public int updateProblemFormID() {
-        SQLiteDatabase db = this.getReadableDatabase();
-
-// New value for one column
-        ContentValues values = new ContentValues();
-        values.put(singleProblem.COLUMN_UID, MainApp.pc.getUid());
-
-// Which row to update, based on the ID
-        String selection = singleProblem._ID + " = ?";
-        String[] selectionArgs = {String.valueOf(MainApp.pc.get_id())};
-
-        int count = db.update(singleProblem.TABLE_NAME,
-                values,
-                selection,
-                selectionArgs);
-        return count;
-    }
 
     public Collection<FormsContract> getAllForms() {
         SQLiteDatabase db = this.getReadableDatabase();
@@ -1580,178 +1203,8 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         return allFC;
     }
 
-    public Collection<ChildContract2> getUnsyncedChildForms() {
-        SQLiteDatabase db = this.getReadableDatabase();
-        Cursor c = null;
-        String[] columns = {
-                singleChild._ID,
-                singleChild.COLUMN_UID,
-                singleChild.COLUMN_UUID,
-                singleChild.COLUMN_luid,
-                singleChild.COLUMN_SERIAL_NO,
-                singleChild.COLUMN_MOTHER_ID,
-                singleChild.COLUMN_DA,
-                singleChild.COLUMN_FORMDATE,
-                singleChild.COLUMN_SYNCED,
-                singleChild.COLUMN_SYNCED_DATE,
-                singleChild.COLUMN_USER,
-                singleChild.COLUMN_DEVICEID,
-                singleChild.COLUMN_DEVICETAGID,
-
-        };
 
 
-        String whereClause = singleChild.COLUMN_SYNCED + " is null";
-
-        String[] whereArgs = null;
-
-        String groupBy = null;
-        String having = null;
-
-        String orderBy =
-                singleChild._ID + " ASC";
-
-        Collection<ChildContract2> allFC = new ArrayList<ChildContract2>();
-        try {
-            c = db.query(
-                    singleChild.TABLE_NAME,  // The table to query
-                    columns,                   // The columns to return
-                    whereClause,               // The columns for the WHERE clause
-                    whereArgs,                 // The values for the WHERE clause
-                    groupBy,                   // don't group the rows
-                    having,                    // don't filter by row groups
-                    orderBy                    // The sort order
-            );
-            while (c.moveToNext()) {
-                ChildContract2 fc = new ChildContract2();
-                allFC.add(fc.hydrate(c));
-            }
-        } finally {
-            if (c != null) {
-                c.close();
-            }
-            if (db != null) {
-                db.close();
-            }
-        }
-        return allFC;
-    }
-
-    public Collection<ProblemContract> getUnsyncedProblemForms() {
-        SQLiteDatabase db = this.getReadableDatabase();
-        Cursor c = null;
-        String[] columns = {
-                singleProblem._ID,
-                singleProblem.COLUMN_UID,
-                singleProblem.COLUMN_UUID,
-                singleProblem.COLUMN_CUID,
-                singleProblem.COLUMN_PROBLEM_TYPE,
-                singleProblem.COLUMN_SYNCED,
-                singleProblem.COLUMN_SYNCED_DATE,
-                singleProblem.COLUMN_DA,
-                singleProblem.COLUMN_FORMDATE,
-                singleProblem.COLUMN_USER,
-                singleProblem.COLUMN_DEVICEID,
-                singleProblem.COLUMN_DEVICETAGID,
-
-
-        };
-
-
-        String whereClause = singleProblem.COLUMN_SYNCED + " is null";
-
-        String[] whereArgs = null;
-
-        String groupBy = null;
-        String having = null;
-
-        String orderBy =
-                singleProblem._ID + " ASC";
-
-        Collection<ProblemContract> allFC = new ArrayList<ProblemContract>();
-        try {
-            c = db.query(
-                    singleProblem.TABLE_NAME,  // The table to query
-                    columns,                   // The columns to return
-                    whereClause,               // The columns for the WHERE clause
-                    whereArgs,                 // The values for the WHERE clause
-                    groupBy,                   // don't group the rows
-                    having,                    // don't filter by row groups
-                    orderBy                    // The sort order
-            );
-            while (c.moveToNext()) {
-                ProblemContract fc = new ProblemContract();
-                allFC.add(fc.hydrate(c));
-            }
-        } finally {
-            if (c != null) {
-                c.close();
-            }
-            if (db != null) {
-                db.close();
-            }
-        }
-        return allFC;
-    }
-
-    public Collection<DeceasedChildContract> getUnsyncedDeceasedChildForms() {
-        SQLiteDatabase db = this.getReadableDatabase();
-        Cursor c = null;
-        String[] columns = {
-                singleDeceasedChild._ID,
-                singleDeceasedChild.COLUMN_luid,
-                singleDeceasedChild.COLUMN_UID,
-                singleDeceasedChild.COLUMN_SERIAL_NO,
-                singleDeceasedChild.COLUMN_DA,
-                singleDeceasedChild.COLUMN_FORMDATE,
-                singleDeceasedChild.COLUMN_SYNCED,
-                singleDeceasedChild.COLUMN_SYNCED_DATE,
-                singleDeceasedChild.COLUMN_MOTHER_ID,
-                singleDeceasedChild.COLUMN_USER,
-                singleDeceasedChild.COLUMN_DEVICEID,
-                singleDeceasedChild.COLUMN_DEVICETAGID,
-                singleDeceasedChild.COLUMN_UUID,
-                singleDeceasedChild.COLUMN_MUID,
-
-
-        };
-
-
-        String whereClause = singleDeceasedChild.COLUMN_SYNCED + " is null";
-
-        String[] whereArgs = null;
-
-        String groupBy = null;
-        String having = null;
-
-        String orderBy =
-                singleProblem._ID + " ASC";
-
-        Collection<DeceasedChildContract> allFC = new ArrayList<DeceasedChildContract>();
-        try {
-            c = db.query(
-                    singleDeceasedChild.TABLE_NAME,  // The table to query
-                    columns,                   // The columns to return
-                    whereClause,               // The columns for the WHERE clause
-                    whereArgs,                 // The values for the WHERE clause
-                    groupBy,                   // don't group the rows
-                    having,                    // don't filter by row groups
-                    orderBy                    // The sort order
-            );
-            while (c.moveToNext()) {
-                DeceasedChildContract fc = new DeceasedChildContract();
-                allFC.add(fc.hydrate(c));
-            }
-        } finally {
-            if (c != null) {
-                c.close();
-            }
-            if (db != null) {
-                db.close();
-            }
-        }
-        return allFC;
-    }
 
     public Collection<FormsContract> getTodayForms() {
         SQLiteDatabase db = this.getReadableDatabase();

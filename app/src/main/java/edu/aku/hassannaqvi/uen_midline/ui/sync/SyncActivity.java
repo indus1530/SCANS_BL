@@ -32,10 +32,7 @@ import edu.aku.hassannaqvi.uen_midline.get.GetAllData;
 import edu.aku.hassannaqvi.uen_midline.R;
 import edu.aku.hassannaqvi.uen_midline.adapter.SyncListAdapter;
 import edu.aku.hassannaqvi.uen_midline.adapter.UploadListAdapter;
-import edu.aku.hassannaqvi.uen_midline.contracts.ChildContract2;
-import edu.aku.hassannaqvi.uen_midline.contracts.DeceasedChildContract;
 import edu.aku.hassannaqvi.uen_midline.contracts.FormsContract;
-import edu.aku.hassannaqvi.uen_midline.contracts.ProblemContract;
 import edu.aku.hassannaqvi.uen_midline.core.DatabaseHelper;
 import edu.aku.hassannaqvi.uen_midline.core.MainApp;
 import edu.aku.hassannaqvi.uen_midline.databinding.ActivitySyncBinding;
@@ -186,46 +183,7 @@ public class SyncActivity extends AppCompatActivity {
                 uploadmodel.setstatusID(0);
                 uploadlist.add(uploadmodel);
             }
-            new SyncAllData(
-                    this,
-                    "Child",
-                    "updateSyncedChildForm",
-                    ChildContract2.class,
-                    MainApp._HOST_URL + MainApp._SERVER_URL,
-                    ChildContract2.singleChild.TABLE_NAME,
-                    db.getUnsyncedChildForms(), 1, uploadListAdapter, uploadlist
-            ).execute();
 
-            if (uploadlistActivityCreated) {
-                uploadmodel = new SyncModel();
-                uploadmodel.setstatusID(0);
-                uploadlist.add(uploadmodel);
-            }
-            new SyncAllData(
-                    this,
-                    "Problems",
-                    "updateSyncedProblemsForm",
-                    ProblemContract.class,
-                    MainApp._HOST_URL + MainApp._SERVER_URL,
-                    ProblemContract.singleProblem.TABLE_NAME,
-                    db.getUnsyncedProblemForms(), 2, uploadListAdapter, uploadlist
-            ).execute();
-
-
-            if (uploadlistActivityCreated) {
-                uploadmodel = new SyncModel();
-                uploadmodel.setstatusID(0);
-                uploadlist.add(uploadmodel);
-            }
-            new SyncAllData(
-                    this,
-                    "Deceased Child",
-                    "updateSyncedDeceasedChildForm",
-                    DeceasedChildContract.class,
-                    MainApp._HOST_URL + MainApp._SERVER_URL,
-                    DeceasedChildContract.singleDeceasedChild.TABLE_NAME,
-                    db.getUnsyncedDeceasedChildForms(), 3, uploadListAdapter, uploadlist
-            ).execute();
 
             bi.noDataItem.setVisibility(View.GONE);
 

@@ -27,12 +27,9 @@ import java.util.List;
 
 import edu.aku.hassannaqvi.uen_midline.R;
 import edu.aku.hassannaqvi.uen_midline.contracts.AppInfo;
-import edu.aku.hassannaqvi.uen_midline.contracts.ChildContract2;
-import edu.aku.hassannaqvi.uen_midline.contracts.DeceasedChildContract;
 import edu.aku.hassannaqvi.uen_midline.contracts.FamilyMembersContract;
 import edu.aku.hassannaqvi.uen_midline.contracts.FormsContract;
 import edu.aku.hassannaqvi.uen_midline.contracts.MotherContract;
-import edu.aku.hassannaqvi.uen_midline.contracts.ProblemContract;
 import edu.aku.hassannaqvi.uen_midline.databinding.CountAlertDialogLayoutBinding;
 import edu.aku.hassannaqvi.uen_midline.ui.other.EndingActivity;
 import kotlin.Pair;
@@ -76,9 +73,7 @@ public class MainApp extends Application {
     public static AppInfo appInfo;
     public static Boolean admin = false;
     public static FormsContract fc;
-    public static DeceasedChildContract dcc;
     public static MotherContract mc;
-    public static ChildContract2 cc;
     public static String userName = "0000";
 
     public static void setItemClick(OnItemClick itemClick) {
@@ -92,7 +87,6 @@ public class MainApp extends Application {
     public static int deathCount = 0;
     public static String DeviceURL = "devices.php";
     public static String IMEI;
-    public static ProblemContract pc;
 
     public static SharedPreferences sharedPref;
     public static String TAG = "AppMain";
