@@ -17,7 +17,7 @@ import edu.aku.hassannaqvi.uen_midline.core.MainApp;
 import edu.aku.hassannaqvi.uen_midline.databinding.ItemMemListBinding;
 import edu.aku.hassannaqvi.uen_midline.utils.Util;
 
-public class ChildListAdapter extends RecyclerView.Adapter<ChildListAdapter.ViewHolder> {
+public class FamilyMemberListAdapter extends RecyclerView.Adapter<FamilyMemberListAdapter.ViewHolder> {
 
 
     OnItemClicked itemClicked;
@@ -26,7 +26,7 @@ public class ChildListAdapter extends RecyclerView.Adapter<ChildListAdapter.View
     DatabaseHelper db;
     private ItemMemListBinding viewHolder;
 
-    public ChildListAdapter(Context mContext, List<FamilyMembersContract> mList) {
+    public FamilyMemberListAdapter(Context mContext, List<FamilyMembersContract> mList) {
         this.mContext = mContext;
         this.mList = mList;
         db = new DatabaseHelper(mContext);
@@ -52,8 +52,8 @@ public class ChildListAdapter extends RecyclerView.Adapter<ChildListAdapter.View
         holder.bi.dob.setText("Age: " + mList.get(i).getAge() + " Year(s)");
         holder.bi.index.setText(String.format("%02d", Integer.valueOf(mList.get(i).getSerialno())));
         String gender = mList.get(i).getGender();
-        holder.bi.genderImage.setImageResource(Util.getMemberIcon(mContext, Integer.valueOf(mList.get(i).getGender()), mList.get(i).getAge()));
-        holder.bi.motherName.setText(mList.get(i).getMotherName());
+        holder.bi.genderImage.setImageResource(Util.getMemberIcon(Integer.valueOf(mList.get(i).getGender()), mList.get(i).getAge()));
+        holder.bi.motherName.setText(mList.get(i).getMother_name());
         holder.bi.parentLayout.setOnClickListener(v -> itemClicked.onItemClick(mList.get(i), i, holder.bi));
     }
 

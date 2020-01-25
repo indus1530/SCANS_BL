@@ -25,9 +25,7 @@ public class FormsContract {
     private String user = ""; // Interviewer
     private String istatus = ""; // Interview Status
     private String istatus88x = ""; // Interview Status
-    private String DSSID = "";
-    private String sA = "";
-    private String NextVisit = "";
+    private String luid = "";
     private String endingdatetime = "";
     private String gpsLat = "";
     private String gpsLng = "";
@@ -38,55 +36,54 @@ public class FormsContract {
     private String synced = "";
     private String synced_date = "";
     private String appversion = "";
-    private String uc = "";
-    private String village = "";
-    private String talukdaCode = "";
-    private String areaCode = "";
     private String clusterCode = "";
     private String hhno = "";
 
-    public String getAreaCode() {
-        return areaCode;
+    private String sInfo = "";
+    private String sE = "";
+    private String sM = "";
+    private String sN = "";
+    private String sO = "";
+
+
+    public String getsInfo() {
+        return sInfo;
     }
 
-    public void setAreaCode(String areaCode) {
-        this.areaCode = areaCode;
+    public void setsInfo(String sInfo) {
+        this.sInfo = sInfo;
     }
 
-    private String status = "";
-
-
-    public String getUc() {
-        return uc;
+    public String getsE() {
+        return sE;
     }
 
-    public void setUc(String uc) {
-        this.uc = uc;
+    public void setsE(String sE) {
+        this.sE = sE;
     }
 
-    public String getVillage() {
-        return village;
+    public String getsM() {
+        return sM;
     }
 
-    public void setVillage(String village) {
-        this.village = village;
+    public void setsM(String sM) {
+        this.sM = sM;
     }
 
-    public String getTalukdaCode() {
-        return talukdaCode;
+    public String getsN() {
+        return sN;
     }
 
-    public void setTalukdaCode(String talukdaCode) {
-        this.talukdaCode = talukdaCode;
+    public void setsN(String sN) {
+        this.sN = sN;
     }
 
-
-    public String getStatus() {
-        return status;
+    public String getsO() {
+        return sO;
     }
 
-    public void setStatus(String status) {
-        this.status = status;
+    public void setsO(String sO) {
+        this.sO = sO;
     }
 
 
@@ -132,10 +129,8 @@ public class FormsContract {
         this.user = jsonObject.getString(FormsTable.COLUMN_USER);
         this.istatus = jsonObject.getString(FormsTable.COLUMN_ISTATUS);
         this.istatus88x = jsonObject.getString(FormsTable.COLUMN_ISTATUS88x);
-        this.DSSID = jsonObject.getString(FormsTable.COLUMN_DSSID);
-        this.NextVisit = jsonObject.getString(FormsTable.COLUMN_NEXT_VISIT);
+        this.luid = jsonObject.getString(FormsTable.COLUMN_DSSID);
         this.endingdatetime = jsonObject.getString(FormsTable.COLUMN_ENDINGDATETIME);
-        this.sA = jsonObject.getString(FormsTable.COLUMN_SA);
         this.gpsLat = jsonObject.getString(FormsTable.COLUMN_GPSLAT);
         this.gpsLng = jsonObject.getString(FormsTable.COLUMN_GPSLNG);
         this.gpsDT = jsonObject.getString(FormsTable.COLUMN_GPSDATE);
@@ -148,6 +143,11 @@ public class FormsContract {
         this.formType = jsonObject.getString(FormsTable.COLUMN_FORMTYPE);
         this.clusterCode = jsonObject.getString(FormsTable.COLUMN_CLUSTERCODE);
         this.hhno = jsonObject.getString(FormsTable.COLUMN_HHNO);
+        this.sInfo = jsonObject.getString(FormsTable.COLUMN_SINFO);
+        this.sE = jsonObject.getString(FormsTable.COLUMN_SE);
+        this.sM = jsonObject.getString(FormsTable.COLUMN_SM);
+        this.sN = jsonObject.getString(FormsTable.COLUMN_SN);
+        this.sO = jsonObject.getString(FormsTable.COLUMN_SO);
 
         return this;
 
@@ -160,10 +160,8 @@ public class FormsContract {
         this.user = cursor.getString(cursor.getColumnIndex(FormsTable.COLUMN_USER));
         this.istatus = cursor.getString(cursor.getColumnIndex(FormsTable.COLUMN_ISTATUS));
         this.istatus88x = cursor.getString(cursor.getColumnIndex(FormsTable.COLUMN_ISTATUS88x));
-        this.DSSID = cursor.getString(cursor.getColumnIndex(FormsTable.COLUMN_DSSID));
-        this.NextVisit = cursor.getString(cursor.getColumnIndex(FormsTable.COLUMN_NEXT_VISIT));
+        this.luid = cursor.getString(cursor.getColumnIndex(FormsTable.COLUMN_DSSID));
         this.endingdatetime = cursor.getString(cursor.getColumnIndex(FormsTable.COLUMN_ENDINGDATETIME));
-        this.sA = cursor.getString(cursor.getColumnIndex(FormsTable.COLUMN_SA));
         this.gpsLat = cursor.getString(cursor.getColumnIndex(FormsTable.COLUMN_GPSLAT));
         this.gpsLng = cursor.getString(cursor.getColumnIndex(FormsTable.COLUMN_GPSLNG));
         this.gpsDT = cursor.getString(cursor.getColumnIndex(FormsTable.COLUMN_GPSDATE));
@@ -171,14 +169,14 @@ public class FormsContract {
         this.deviceID = cursor.getString(cursor.getColumnIndex(FormsTable.COLUMN_DEVICEID));
         this.devicetagID = cursor.getString(cursor.getColumnIndex(FormsTable.COLUMN_DEVICETAGID));
         this.appversion = cursor.getString(cursor.getColumnIndex(FormsTable.COLUMN_APPVERSION));
-        this.status = cursor.getString(cursor.getColumnIndex(FormsTable.COLUMN_STATUS));
         this.formType = cursor.getString(cursor.getColumnIndex(FormsTable.COLUMN_FORMTYPE));
-        this.areaCode = cursor.getString(cursor.getColumnIndex(FormsTable.COLUMN_AREA_CODE));
-        this.uc = cursor.getString(cursor.getColumnIndex(FormsTable.COLUMN_UC_CODE));
-        this.village = cursor.getString(cursor.getColumnIndex(FormsTable.COLUMN_VILLAGE_CODE));
-        this.talukdaCode = cursor.getString(cursor.getColumnIndex(FormsTable.COLUMN_TALUKA_CODE));
         this.clusterCode = cursor.getString(cursor.getColumnIndex(FormsTable.COLUMN_CLUSTERCODE));
         this.hhno = cursor.getString(cursor.getColumnIndex(FormsTable.COLUMN_HHNO));
+        this.sInfo = cursor.getString(cursor.getColumnIndex(FormsTable.COLUMN_SINFO));
+        this.sE = cursor.getString(cursor.getColumnIndex(FormsTable.COLUMN_SE));
+        this.sM = cursor.getString(cursor.getColumnIndex(FormsTable.COLUMN_SM));
+        this.sN = cursor.getString(cursor.getColumnIndex(FormsTable.COLUMN_SN));
+        this.sO = cursor.getString(cursor.getColumnIndex(FormsTable.COLUMN_SO));
 
         return this;
     }
@@ -194,12 +192,27 @@ public class FormsContract {
         json.put(FormsTable.COLUMN_USER, this.user == null ? JSONObject.NULL : this.user);
         json.put(FormsTable.COLUMN_ISTATUS, this.istatus == null ? JSONObject.NULL : this.istatus);
         json.put(FormsTable.COLUMN_ISTATUS88x, this.istatus88x == null ? JSONObject.NULL : this.istatus88x);
-        json.put(FormsTable.COLUMN_DSSID, this.DSSID == null ? JSONObject.NULL : this.DSSID);
-        json.put(FormsTable.COLUMN_NEXT_VISIT, this.NextVisit == null ? JSONObject.NULL : this.NextVisit);
+        json.put(FormsTable.COLUMN_DSSID, this.luid == null ? JSONObject.NULL : this.luid);
         json.put(FormsTable.COLUMN_ENDINGDATETIME, this.endingdatetime == null ? JSONObject.NULL : this.endingdatetime);
 
-        if (!this.sA.equals("")) {
-            json.put(FormsTable.COLUMN_SA, this.sA.equals("") ? JSONObject.NULL : new JSONObject(this.sA));
+        if (!this.sInfo.equals("")) {
+            json.put(FormsTable.COLUMN_SINFO, this.sInfo.equals("") ? JSONObject.NULL : new JSONObject(this.sInfo));
+        }
+
+        if (!this.sE.equals("")) {
+            json.put(FormsTable.COLUMN_SE, this.sE.equals("") ? JSONObject.NULL : new JSONObject(this.sE));
+        }
+
+        if (!this.sM.equals("")) {
+            json.put(FormsTable.COLUMN_SM, this.sM.equals("") ? JSONObject.NULL : new JSONObject(this.sM));
+        }
+
+        if (!this.sN.equals("")) {
+            json.put(FormsTable.COLUMN_SN, this.sN.equals("") ? JSONObject.NULL : new JSONObject(this.sN));
+        }
+
+        if (!this.sO.equals("")) {
+            json.put(FormsTable.COLUMN_SO, this.sO.equals("") ? JSONObject.NULL : new JSONObject(this.sO));
         }
 
         json.put(FormsTable.COLUMN_GPSLAT, this.gpsLat == null ? JSONObject.NULL : this.gpsLat);
@@ -209,12 +222,7 @@ public class FormsContract {
         json.put(FormsTable.COLUMN_DEVICEID, this.deviceID == null ? JSONObject.NULL : this.deviceID);
         json.put(FormsTable.COLUMN_DEVICETAGID, this.devicetagID == null ? JSONObject.NULL : this.devicetagID);
         json.put(FormsTable.COLUMN_APPVERSION, this.appversion == null ? JSONObject.NULL : this.appversion);
-        json.put(FormsTable.COLUMN_STATUS, this.status == null ? JSONObject.NULL : this.status);
         json.put(FormsTable.COLUMN_FORMTYPE, this.formType == null ? JSONObject.NULL : this.formType);
-        json.put(FormsTable.COLUMN_AREA_CODE, this.areaCode == null ? JSONObject.NULL : this.areaCode);
-        json.put(FormsTable.COLUMN_UC_CODE, this.uc == null ? JSONObject.NULL : this.uc);
-        json.put(FormsTable.COLUMN_TALUKA_CODE, this.talukdaCode == null ? JSONObject.NULL : this.talukdaCode);
-        json.put(FormsTable.COLUMN_VILLAGE_CODE, this.village == null ? JSONObject.NULL : this.village);
         json.put(FormsTable.COLUMN_CLUSTERCODE, this.clusterCode == null ? JSONObject.NULL : this.clusterCode);
         json.put(FormsTable.COLUMN_HHNO, this.hhno == null ? JSONObject.NULL : this.hhno);
 
@@ -281,28 +289,12 @@ public class FormsContract {
         this.istatus88x = istatus88x;
     }
 
-    public String getDSSID() {
-        return DSSID;
+    public String getLuid() {
+        return luid;
     }
 
-    public void setDSSID(String Study_Id) {
-        this.DSSID = Study_Id;
-    }
-
-    public String getNextVisit() {
-        return NextVisit;
-    }
-
-    public void setNextVisit(String NextVisit) {
-        this.NextVisit = NextVisit;
-    }
-
-    public String getsA() {
-        return sA;
-    }
-
-    public void setsA(String sA) {
-        this.sA = sA;
+    public void setLuid(String Study_Id) {
+        this.luid = Study_Id;
     }
 
 
@@ -379,9 +371,6 @@ public class FormsContract {
 
     }
 
-    public void setsE(String valueOf) {
-    }
-
     public void setsC(String valueOf) {
     }
 
@@ -408,19 +397,13 @@ public class FormsContract {
         public static final String COLUMN_PROJECT_NAME = "projectname";
         public static final String COLUMN_ID = "_id";
         public static final String COLUMN_UID = "_uid";
-        public static final String COLUMN_UC_CODE = "uc";
-        public static final String COLUMN_TALUKA_CODE = "taluka";
-        public static final String COLUMN_VILLAGE_CODE = "village";
-        public static final String COLUMN_AREA_CODE = "area";
         public static final String COLUMN_FORMDATE = "formdate";
         public static final String COLUMN_FORMTYPE = "formtype";
         public static final String COLUMN_USER = "username";
         public static final String COLUMN_ISTATUS = "istatus";
         public static final String COLUMN_ISTATUS88x = "istatus88x";
-        public static final String COLUMN_DSSID = "DSSID";
-        public static final String COLUMN_NEXT_VISIT = "NextVisit";
+        public static final String COLUMN_DSSID = "luid";
         public static final String COLUMN_ENDINGDATETIME = "endingdatetime";
-        public static final String COLUMN_SA = "sA";
         public static final String COLUMN_GPSLAT = "gpslat";
         public static final String COLUMN_GPSLNG = "gpslng";
         public static final String COLUMN_GPSDATE = "gpsdate";
@@ -430,9 +413,13 @@ public class FormsContract {
         public static final String COLUMN_SYNCED = "synced";
         public static final String COLUMN_SYNCED_DATE = "synced_date";
         public static final String COLUMN_APPVERSION = "appversion";
-        public static final String COLUMN_STATUS = "status";
         public static final String COLUMN_CLUSTERCODE = "cluster_code";
         public static final String COLUMN_HHNO = "hhno";
+        public static final String COLUMN_SINFO = "sInfo";
+        public static final String COLUMN_SE = "sE";
+        public static final String COLUMN_SM = "sM";
+        public static final String COLUMN_SN = "sN";
+        public static final String COLUMN_SO = "sO";
 
         public static String _URL = "sync.php";
     }

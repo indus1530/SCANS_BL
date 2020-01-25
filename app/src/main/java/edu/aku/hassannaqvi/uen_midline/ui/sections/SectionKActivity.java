@@ -7,15 +7,15 @@ import android.widget.Toast;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.databinding.DataBindingUtil;
 
+import com.validatorcrawler.aliazaz.Validator;
+
 import org.json.JSONException;
 import org.json.JSONObject;
 
 import edu.aku.hassannaqvi.uen_midline.R;
-import edu.aku.hassannaqvi.uen_midline.core.MainApp;
 import edu.aku.hassannaqvi.uen_midline.databinding.ActivitySectionKBinding;
 import edu.aku.hassannaqvi.uen_midline.utils.Util;
 import edu.aku.hassannaqvi.uen_midline.validator.ClearClass;
-import edu.aku.hassannaqvi.uen_midline.validator.ValidatorClass;
 
 public class SectionKActivity extends AppCompatActivity {
 
@@ -188,7 +188,7 @@ public class SectionKActivity extends AppCompatActivity {
 
 
     private boolean formValidation() {
-        return ValidatorClass.EmptyCheckingContainer(this, bi.fldGrpSectionk01);
+        return Validator.emptyCheckingContainer(this, bi.fldGrpSectionk01);
 
     }
 

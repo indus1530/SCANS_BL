@@ -150,7 +150,12 @@
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:hint="@string/i102"
-                            android:inputType="number" />
+                            android:inputType="number"
+                            android:maxLength="2"
+                            app:defaultValue="00"
+                            app:maxValue="10"
+                            app:minValue="0"
+                            app:type="range" />
                     </LinearLayout>
                 </androidx.cardview.widget.CardView>
 
@@ -446,7 +451,7 @@
                             android:inputType="number"
                             android:maxLength="2"
                             app:defaultValue="00"
-                            app:maxValue="59"
+                            app:maxValue="60"
                             app:minValue="1"
                             app:type="range" />
                     </LinearLayout>
@@ -952,7 +957,8 @@
                             android:hint="@string/i120"
                             android:inputType="number"
                             android:maxLength="4"
-                            app:maxValue="9999"
+                            app:defaultValue="00"
+                            app:maxValue="5000"
                             app:minValue="1"
                             app:type="range" />
                     </LinearLayout>
@@ -980,7 +986,8 @@
                             android:hint="@string/i121"
                             android:inputType="number"
                             android:maxLength="4"
-                            app:maxValue="9999"
+                            app:defaultValue="00"
+                            app:maxValue="5000"
                             app:minValue="1"
                             app:type="range" />
                     </LinearLayout>

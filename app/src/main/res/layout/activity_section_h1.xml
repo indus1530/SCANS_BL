@@ -1061,6 +1061,10 @@
                             style="@style/i_textview"
                             android:text="@string/h125" />
 
+                        <TextView
+                            style="@style/i_textviewhint"
+                            android:text="@string/h125hint" />
+
                         <RadioGroup
                             android:id="@+id/h125"
                             style="@style/radiogroup"
@@ -1245,12 +1249,12 @@
 
                         <TextView
                             style="@style/i_textview"
-                            android:text="@string/h129"
-                            android:textAlignment="center" />
+                            android:text="@string/h129" />
 
                         <TextView
                             style="@style/i_textview"
-                            android:text="@string/h129a" />
+                            android:text="@string/h129a"
+                            android:textAlignment="center" />
 
                         <RadioGroup
                             android:id="@+id/h129a"
@@ -1296,7 +1300,8 @@
 
                         <TextView
                             style="@style/i_textview"
-                            android:text="@string/h129b" />
+                            android:text="@string/h129b"
+                            android:textAlignment="center" />
 
                         <RadioGroup
                             android:id="@+id/h129b"
@@ -1342,7 +1347,8 @@
 
                         <TextView
                             style="@style/i_textview"
-                            android:text="@string/h129c" />
+                            android:text="@string/h129c"
+                            android:textAlignment="center" />
 
                         <RadioGroup
                             android:id="@+id/h129c"
@@ -1388,7 +1394,8 @@
 
                         <TextView
                             style="@style/i_textview"
-                            android:text="@string/h129d" />
+                            android:text="@string/h129d"
+                            android:textAlignment="center" />
 
                         <RadioGroup
                             android:id="@+id/h129d"
@@ -1434,7 +1441,8 @@
 
                         <TextView
                             style="@style/i_textview"
-                            android:text="@string/h129e" />
+                            android:text="@string/h129e"
+                            android:textAlignment="center" />
 
                         <RadioGroup
                             android:id="@+id/h129e"

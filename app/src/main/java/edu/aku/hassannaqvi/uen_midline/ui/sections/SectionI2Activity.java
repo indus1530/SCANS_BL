@@ -10,6 +10,8 @@ import android.widget.Toast;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.databinding.DataBindingUtil;
 
+import com.validatorcrawler.aliazaz.Validator;
+
 import org.json.JSONException;
 import org.json.JSONObject;
 
@@ -18,11 +20,9 @@ import java.util.List;
 
 import edu.aku.hassannaqvi.uen_midline.R;
 import edu.aku.hassannaqvi.uen_midline.contracts.FamilyMembersContract;
-import edu.aku.hassannaqvi.uen_midline.core.MainApp;
 import edu.aku.hassannaqvi.uen_midline.databinding.ActivitySectionI2Binding;
 import edu.aku.hassannaqvi.uen_midline.utils.Util;
 import edu.aku.hassannaqvi.uen_midline.validator.ClearClass;
-import edu.aku.hassannaqvi.uen_midline.validator.ValidatorClass;
 import kotlin.Pair;
 
 import static edu.aku.hassannaqvi.uen_midline.ui.list_activity.FamilyMembersListActivity.mainVModel;
@@ -76,7 +76,7 @@ public class SectionI2Activity extends AppCompatActivity {
             public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
                 if (position == 0) return;
                 fmc_child = mainVModel.getMemberInfo(childLst.getFirst().get(bi.i200.getSelectedItemPosition() - 1));
-                if (fmc_child.getMotherName().equals("NA")) {
+                if (fmc_child.getMother_name().equals("NA")) {
                     bi.respondentSpinner.setVisibility(View.VISIBLE);
                     populateRespondentSpinner();
                 } else {
@@ -104,6 +104,30 @@ public class SectionI2Activity extends AppCompatActivity {
         bi.i203.setOnCheckedChangeListener(((radioGroup, i) -> {
             if (i == bi.i203b.getId()) {
                 ClearClass.ClearAllFields(bi.fldGrpi021, null);
+            }
+        }));
+
+        bi.i207.setOnCheckedChangeListener(((radioGroup, i) -> {
+            if (i == bi.i207a.getId()) {
+                ClearClass.ClearAllFields(bi.fldGrpCVi208, null);
+            }
+        }));
+
+        bi.i207.setOnCheckedChangeListener(((radioGroup, i) -> {
+            if (i == bi.i207b.getId()) {
+                ClearClass.ClearAllFields(bi.fldGrpi025, null);
+            }
+        }));
+
+        bi.i209.setOnCheckedChangeListener(((radioGroup, i) -> {
+            if (i == bi.i209a.getId()) {
+                ClearClass.ClearAllFields(bi.fldGrpi023, null);
+            }
+        }));
+
+        bi.i214.setOnCheckedChangeListener(((radioGroup, i) -> {
+            if (i == bi.i214b.getId()) {
+                ClearClass.ClearAllFields(bi.fldGrpi024, null);
             }
         }));
 
@@ -319,7 +343,7 @@ public class SectionI2Activity extends AppCompatActivity {
 
 
     private boolean formValidation() {
-        return ValidatorClass.EmptyCheckingContainer(this, bi.fldGrpSectioni02);
+        return Validator.emptyCheckingContainer(this, bi.fldGrpSectioni02);
 
     }
 

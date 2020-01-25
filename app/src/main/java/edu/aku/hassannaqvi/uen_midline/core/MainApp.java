@@ -44,12 +44,11 @@ import kotlin.Pair;
 
 public class MainApp extends Application {
 
-    public static final String _IP = "vcoe1.aku.edu";// .TEST server
-    public static final Integer _PORT = 80; // Port - with colon (:)
-    public static final String _HOST_URL = "https://" + MainApp._IP + "/sosas/api/";// .TEST server;
+    //    public static final String _IP = "https://vcoe1.aku.edu";// .LIVE server
+    public static final String _IP = "http://f38158";// .TEST server
+    public static final String _HOST_URL = MainApp._IP + "/uen_ml/api/";// .TEST server;
     public static final String _SERVER_URL = "sync.php";
-    public static final String _UPDATE_URL = "https://" + MainApp._IP + "/sosas/app/";
-    public static final String _APP_UPDATE_URL = "https://" + MainApp._IP + "/rsv/app/baseline/";
+    public static final String _UPDATE_URL = MainApp._IP + "/uen_ml/app/";
     public static final Integer MONTHS_LIMIT = 11;
     public static final Integer DAYS_LIMIT = 29;
     //public static final long MILLISECONDS_IN_5YEAR = (MILLISECONDS_IN_YEAR + MILLISECONDS_IN_YEAR + MILLISECONDS_IN_YEAR + MILLISECONDS_IN_YEAR + MILLISECONDS_IN_YEAR);
@@ -85,6 +84,7 @@ public class MainApp extends Application {
     public static void setItemClick(OnItemClick itemClick) {
         MainApp.itemClick = itemClick;
     }
+
     public static int mm = 1;
     public static boolean flag = true;
     public static int versionCode;
@@ -96,7 +96,6 @@ public class MainApp extends Application {
 
     public static SharedPreferences sharedPref;
     public static String TAG = "AppMain";
-
 
 
     public static int childCount = 0;
@@ -169,7 +168,6 @@ public class MainApp extends Application {
         AlertDialog alert = alertDialogBuilder.create();
         alert.show();
     }
-
 
 
     public static void openDialog(Context context, FamilyMembersContract item) {

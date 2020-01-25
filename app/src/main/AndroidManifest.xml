@@ -43,6 +43,11 @@
             android:screenOrientation="portrait" />
 
         <activity
+            android:name=".ui.list_activity.FamilyMembersListActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme" />
+
+        <activity
             android:name=".ui.sections.SectionDActivity"
             android:label="@string/tdheading"
             android:parentActivityName=".ui.list_activity.FamilyMembersListActivity"
@@ -115,7 +120,8 @@
         <activity
             android:name=".ui.sections.SectionJ02Activity"
             android:label="@string/tjheading"
-            android:screenOrientation="portrait" />
+            android:screenOrientation="portrait">
+        </activity>
 
         <activity
             android:name=".ui.sections.SectionJ03Activity"
@@ -146,11 +152,6 @@
             android:name=".ui.sections.SectionOActivity"
             android:label="@string/toheading"
             android:screenOrientation="portrait" />
-
-        <activity
-            android:name=".ui.list_activity.FamilyMembersListActivity"
-            android:screenOrientation="portrait"
-            android:theme="@style/AppTheme" />
 
         <activity
             android:name=".ui.other.EndingActivity"

@@ -8,6 +8,8 @@ import android.widget.Toast;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.databinding.DataBindingUtil;
 
+import com.validatorcrawler.aliazaz.Validator;
+
 import org.json.JSONException;
 import org.json.JSONObject;
 
@@ -16,7 +18,6 @@ import edu.aku.hassannaqvi.uen_midline.core.MainApp;
 import edu.aku.hassannaqvi.uen_midline.databinding.ActivitySectionH1Binding;
 import edu.aku.hassannaqvi.uen_midline.utils.Util;
 import edu.aku.hassannaqvi.uen_midline.validator.ClearClass;
-import edu.aku.hassannaqvi.uen_midline.validator.ValidatorClass;
 
 public class SectionH1Activity extends AppCompatActivity {
 
@@ -580,13 +581,13 @@ public class SectionH1Activity extends AppCompatActivity {
         json.put("h137bb96x", bi.h137bb96x.getText().toString());
 
 
-        MainApp.fc.setsA(String.valueOf(json));
+        MainApp.fc.setsInfo(String.valueOf(json));
 
     }
 
 
     private boolean formValidation() {
-        return ValidatorClass.EmptyCheckingContainer(this, bi.GrpName);
+        return Validator.emptyCheckingContainer(this, bi.GrpName);
 
     }
 

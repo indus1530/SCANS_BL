@@ -4,6 +4,7 @@ import android.app.Activity
 import android.content.Intent
 import android.os.Bundle
 import android.view.View
+import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import androidx.databinding.DataBindingUtil
 import androidx.lifecycle.Observer
@@ -12,7 +13,7 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import edu.aku.hassannaqvi.uen_midline.CONSTANTS
 import edu.aku.hassannaqvi.uen_midline.CONSTANTS.Companion.SERIAL_EXTRA
 import edu.aku.hassannaqvi.uen_midline.R
-import edu.aku.hassannaqvi.uen_midline.adapter.ChildListAdapter
+import edu.aku.hassannaqvi.uen_midline.adapter.FamilyMemberListAdapter
 import edu.aku.hassannaqvi.uen_midline.contracts.FamilyMembersContract
 import edu.aku.hassannaqvi.uen_midline.core.MainApp
 import edu.aku.hassannaqvi.uen_midline.core.MainApp.openDialog
@@ -34,7 +35,7 @@ class FamilyMembersListActivity : AppCompatActivity() {
     //    private lateinit var mainVModel: MainVModel
     private var serial = 1
     private var memSelectedCounter = 0
-    private lateinit var adapter: ChildListAdapter
+    private lateinit var adapter: FamilyMemberListAdapter
     private lateinit var bi: ActivityFamilyMembersListBinding
     private var viewHolder: ItemMemListBinding? = null
 
@@ -88,6 +89,8 @@ class FamilyMembersListActivity : AppCompatActivity() {
 
                                     MainApp.pragnantWoman = mainVModel.getAllWomenName()
 
+                                    //startActivity(Intent(this, SectionI1Activity::class.java))
+
                                     startActivity(Intent(this, if (bi.contentScroll.mwra.text.toString().toInt() > 0) SectionE1Activity::class.java else SectionE3Activity::class.java))
                                 }
                                 else -> Util.openEndActivity(this)
@@ -116,7 +119,7 @@ class FamilyMembersListActivity : AppCompatActivity() {
     }
 
     private fun setupRecyclerView(membersLst: MutableList<FamilyMembersContract>) {
-        adapter = ChildListAdapter(this, membersLst)
+        adapter = FamilyMemberListAdapter(this, membersLst)
         bi.contentScroll.recyclerView.layoutManager = LinearLayoutManager(this)
         bi.contentScroll.recyclerView.adapter = adapter
         adapter.setItemClicked { item, position, holder ->
@@ -156,10 +159,15 @@ class FamilyMembersListActivity : AppCompatActivity() {
             viewHolder!!.parentLayout.isEnabled = flag
             viewHolder!!.parentLayout.checkIcon.visibility = if (flag) View.GONE else View.VISIBLE
             viewHolder = null
+            if (flag) memSelectedCounter--
         }
     }
 
     companion object {
         lateinit var mainVModel: MainVModel
+    }
+
+    override fun onBackPressed() {
+        Toast.makeText(this, "Press top back button.", Toast.LENGTH_SHORT).show()
     }
 }
