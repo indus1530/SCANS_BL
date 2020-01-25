@@ -57,6 +57,8 @@
     <string name="cm"> Centimeters </string>
     <string name="in"> Inches </string>
     <string name="rupees"> Rupees </string>
+    <string name="num"> Number </string>
+    <string name="name"> Name </string>
 
     <string name="total">Total</string>
     <string name="mwra">MWRA</string>
@@ -212,7 +214,8 @@
     <string name="e108">Is {NAME} a boy or a girl?</string>
     <string name="e108a">Boy</string>
     <string name="e108b">Girl</string>
-    <string name="e109">What was the name given to the child?  [Record Baby 1, Baby 2 In case no name was given?</string>
+    <string name="e109"> E109:\t What was the name given to the child ? </string>
+    <string name="e109hint"> Record Baby 1, Baby 2 In case no name was given </string>
     <string name="e110">How old was {NAME} when he/she died?</string>
     <string name="e110a">Days </string>
     <string name="e110b">Months</string>

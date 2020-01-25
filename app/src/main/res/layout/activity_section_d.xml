@@ -197,20 +197,27 @@
 
                         <RadioGroup
                             android:id="@+id/d104"
-                            android:layout_width="match_parent"
-                            android:layout_height="match_parent">
+                            style="@style/radiogroup"
+                            android:orientation="horizontal">
 
                             <RadioButton
                                 android:id="@+id/d104a"
+                                android:layout_width="0dp"
+                                android:layout_weight="1"
                                 style="@style/radiobutton"
                                 android:text="@string/d104a" />
 
                             <RadioButton
                                 android:id="@+id/d104b"
+                                android:layout_width="0dp"
+                                android:layout_weight="1"
                                 style="@style/radiobutton"
                                 android:text="@string/d104b" />
+
                         </RadioGroup>
+
                     </LinearLayout>
+
                 </androidx.cardview.widget.CardView>
 
             </LinearLayout>
@@ -717,20 +724,27 @@
 
                         <RadioGroup
                             android:id="@+id/d115"
-                            android:layout_width="match_parent"
-                            android:layout_height="match_parent">
+                            style="@style/radiogroup"
+                            android:orientation="horizontal">
 
                             <RadioButton
                                 android:id="@+id/d115a"
+                                android:layout_width="0dp"
+                                android:layout_weight="1"
                                 style="@style/radiobutton"
                                 android:text="@string/d115a" />
 
                             <RadioButton
                                 android:id="@+id/d115b"
+                                android:layout_width="0dp"
+                                android:layout_weight="1"
                                 style="@style/radiobutton"
                                 android:text="@string/d115b" />
+
                         </RadioGroup>
+
                     </LinearLayout>
+
                 </androidx.cardview.widget.CardView>
 
             </LinearLayout>
@@ -757,7 +771,11 @@
                     android:background="@android:color/holo_green_light"
                     android:onClick="@{() -> callback.BtnContinue()}"
                     android:text="@string/nextSection" />
+
             </LinearLayout>
+
         </LinearLayout>
+
     </ScrollView>
+
 </layout>
