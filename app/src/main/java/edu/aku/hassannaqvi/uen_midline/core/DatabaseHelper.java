@@ -20,8 +20,8 @@ import java.util.List;
 
 import edu.aku.hassannaqvi.uen_midline.contracts.AreasContract;
 import edu.aku.hassannaqvi.uen_midline.contracts.AreasContract.singleAreas;
-import edu.aku.hassannaqvi.uen_midline.contracts.ChildContract;
-import edu.aku.hassannaqvi.uen_midline.contracts.ChildContract.singleChild;
+import edu.aku.hassannaqvi.uen_midline.contracts.ChildContract2;
+import edu.aku.hassannaqvi.uen_midline.contracts.ChildContract2.singleChild;
 import edu.aku.hassannaqvi.uen_midline.contracts.ChildList;
 import edu.aku.hassannaqvi.uen_midline.contracts.ChildrenContract;
 import edu.aku.hassannaqvi.uen_midline.contracts.DeceasedChildContract;
@@ -987,7 +987,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         return newRowId;
     }
 
-    public Long addChildForm(ChildContract fc) {
+    public Long addChildForm(ChildContract2 fc) {
 
         // Gets the data repository in write mode
         SQLiteDatabase db = this.getWritableDatabase();
@@ -1525,7 +1525,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         return allFC;
     }
 
-    public Collection<ChildContract> getUnsyncedChildForms() {
+    public Collection<ChildContract2> getUnsyncedChildForms() {
         SQLiteDatabase db = this.getReadableDatabase();
         Cursor c = null;
         String[] columns = {
@@ -1556,7 +1556,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         String orderBy =
                 singleChild._ID + " ASC";
 
-        Collection<ChildContract> allFC = new ArrayList<ChildContract>();
+        Collection<ChildContract2> allFC = new ArrayList<ChildContract2>();
         try {
             c = db.query(
                     singleChild.TABLE_NAME,  // The table to query
@@ -1568,7 +1568,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
                     orderBy                    // The sort order
             );
             while (c.moveToNext()) {
-                ChildContract fc = new ChildContract();
+                ChildContract2 fc = new ChildContract2();
                 allFC.add(fc.hydrate(c));
             }
         } finally {

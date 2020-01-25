@@ -23,17 +23,11 @@ import android.widget.Toast;
 import androidx.core.app.ActivityCompat;
 import androidx.databinding.DataBindingUtil;
 
-import java.text.ParseException;
-import java.text.SimpleDateFormat;
-import java.util.ArrayList;
-import java.util.Calendar;
-import java.util.Date;
-import java.util.HashMap;
 import java.util.List;
 
 import edu.aku.hassannaqvi.uen_midline.R;
 import edu.aku.hassannaqvi.uen_midline.contracts.AppInfo;
-import edu.aku.hassannaqvi.uen_midline.contracts.ChildContract;
+import edu.aku.hassannaqvi.uen_midline.contracts.ChildContract2;
 import edu.aku.hassannaqvi.uen_midline.contracts.DeceasedChildContract;
 import edu.aku.hassannaqvi.uen_midline.contracts.FamilyMembersContract;
 import edu.aku.hassannaqvi.uen_midline.contracts.FormsContract;
@@ -85,7 +79,7 @@ public class MainApp extends Application {
     public static FormsContract fc;
     public static DeceasedChildContract dcc;
     public static MotherContract mc;
-    public static ChildContract cc;
+    public static ChildContract2 cc;
     public static String userName = "0000";
 
     public static void setItemClick(OnItemClick itemClick) {
