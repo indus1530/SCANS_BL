@@ -1,15 +1,10 @@
 package edu.aku.hassannaqvi.uen_midline.contracts;
 
 import android.database.Cursor;
-import android.net.Uri;
 import android.provider.BaseColumns;
 
 import org.json.JSONException;
 import org.json.JSONObject;
-
-import java.text.ParseException;
-import java.text.SimpleDateFormat;
-import java.util.Date;
 
 /**
  * Created by hassan.naqvi on 11/30/2016.
@@ -86,32 +81,11 @@ public class FormsContract {
         this.sO = sO;
     }
 
-
-    public static final String DATE_FORMAT = "yyyy-mm-dd";
-
     public static final String CONTENT_AUTHORITY = "edu.aku.hassannaqvi.rsvstudy";
-
-    public static final Uri BASE_CONTENT_URI = Uri.parse("content://" + CONTENT_AUTHORITY);
 
     public static final String PATH_FORMS = "forms";
 
     public FormsContract() {
-    }
-
-    public static String getDbDateString(Date date) {
-
-        SimpleDateFormat sdf = new SimpleDateFormat(DATE_FORMAT);
-        return sdf.format(date);
-    }
-
-    public static Date getDateFromDb(String dateText) {
-        SimpleDateFormat dbDateFormat = new SimpleDateFormat(DATE_FORMAT);
-        try {
-            return dbDateFormat.parse(dateText);
-        } catch (ParseException e) {
-            e.printStackTrace();
-            return null;
-        }
     }
 
     public String getAppversion() {

@@ -92,23 +92,7 @@ public final class CreateTable {
             VillagesContract.singleVillage.COLUMN_VILLAGE_NAME + " TEXT " +
             ");";
 
-
-    public static final String SQL_CREATE__MOTHER_TABLE = "CREATE TABLE " + MotherContract.singleMother.TABLE_NAME + "("
-            + MotherContract.singleMother._ID + " INTEGER PRIMARY KEY AUTOINCREMENT,"
-            + MotherContract.singleMother.COLUMN_luid + " TEXT,"
-            + MotherContract.singleMother.COLUMN_UID + " TEXT,"
-            + MotherContract.singleMother.COLUMN_MOTHER_ID + " TEXT,"
-            + MotherContract.singleMother.COLUMN_SERIAL_NO + " TEXT,"
-            + MotherContract.singleMother.COLUMN_DA + " TEXT,"
-            + MotherContract.singleMother.COLUMN_FORMDATE + " TEXT,"
-            + MotherContract.singleMother.COLUMN_USER + " TEXT,"
-            + MotherContract.singleMother.COLUMN_DEVICEID + " TEXT,"
-            + MotherContract.singleMother.COLUMN_DEVICETAGID + " TEXT,"
-            + MotherContract.singleMother.COLUMN_SYNCED + " TEXT,"
-            + MotherContract.singleMother.COLUMN_SYNCED_DATE + " TEXT );";
-
-
-    public static final String SQL_CREATE__KISH_TABLE = "CREATE TABLE " + SingleKishMWRA.TABLE_NAME + "("
+    public static final String SQL_CREATE_KISH_TABLE = "CREATE TABLE " + SingleKishMWRA.TABLE_NAME + "("
             + SingleKishMWRA._ID + " INTEGER PRIMARY KEY AUTOINCREMENT,"
             + SingleKishMWRA.COLUMN_UID + " TEXT,"
             + SingleKishMWRA.COLUMN__UUID + " TEXT,"
@@ -164,7 +148,7 @@ public final class CreateTable {
             + SingleChild.COLUMN_SYNCED_DATE + " TEXT );";
 
 
-    public static final String SQL_CREATE__MORTALITY = "CREATE TABLE " + SingleMortality.TABLE_NAME + "("
+    public static final String SQL_CREATE_MORTALITY = "CREATE TABLE " + SingleMortality.TABLE_NAME + "("
             + SingleMortality._ID + " INTEGER PRIMARY KEY AUTOINCREMENT,"
             + SingleMortality.COLUMN_UID + " TEXT,"
             + SingleMortality.COLUMN__UUID + " TEXT,"

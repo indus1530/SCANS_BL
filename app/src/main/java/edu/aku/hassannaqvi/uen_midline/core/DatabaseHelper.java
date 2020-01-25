@@ -44,6 +44,8 @@ import static edu.aku.hassannaqvi.uen_midline.utils.CreateTable.SQL_CREATE_AREAS
 import static edu.aku.hassannaqvi.uen_midline.utils.CreateTable.SQL_CREATE_CHILD_TABLE;
 import static edu.aku.hassannaqvi.uen_midline.utils.CreateTable.SQL_CREATE_FAMILY_MEMBERS;
 import static edu.aku.hassannaqvi.uen_midline.utils.CreateTable.SQL_CREATE_FORMS;
+import static edu.aku.hassannaqvi.uen_midline.utils.CreateTable.SQL_CREATE_KISH_TABLE;
+import static edu.aku.hassannaqvi.uen_midline.utils.CreateTable.SQL_CREATE_MORTALITY;
 import static edu.aku.hassannaqvi.uen_midline.utils.CreateTable.SQL_CREATE_MWRAPRE_TABLE;
 import static edu.aku.hassannaqvi.uen_midline.utils.CreateTable.SQL_CREATE_MWRA_TABLE;
 import static edu.aku.hassannaqvi.uen_midline.utils.CreateTable.SQL_CREATE_PSU_TABLE;
@@ -51,9 +53,6 @@ import static edu.aku.hassannaqvi.uen_midline.utils.CreateTable.SQL_CREATE_TALUK
 import static edu.aku.hassannaqvi.uen_midline.utils.CreateTable.SQL_CREATE_UCS;
 import static edu.aku.hassannaqvi.uen_midline.utils.CreateTable.SQL_CREATE_USERS;
 import static edu.aku.hassannaqvi.uen_midline.utils.CreateTable.SQL_CREATE_VERSIONAPP;
-import static edu.aku.hassannaqvi.uen_midline.utils.CreateTable.SQL_CREATE__KISH_TABLE;
-import static edu.aku.hassannaqvi.uen_midline.utils.CreateTable.SQL_CREATE__MORTALITY;
-import static edu.aku.hassannaqvi.uen_midline.utils.CreateTable.SQL_CREATE__MOTHER_TABLE;
 
 
 /**
@@ -87,12 +86,11 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         db.execSQL(SQL_CREATE_AREAS);
         db.execSQL(SQL_CREATE_VERSIONAPP);
         db.execSQL(SQL_CREATE_FAMILY_MEMBERS);
-        db.execSQL(SQL_CREATE__MOTHER_TABLE);
-        db.execSQL(SQL_CREATE__KISH_TABLE);
+        db.execSQL(SQL_CREATE_KISH_TABLE);
         db.execSQL(SQL_CREATE_MWRA_TABLE);
         db.execSQL(SQL_CREATE_MWRAPRE_TABLE);
         db.execSQL(SQL_CREATE_CHILD_TABLE);
-        db.execSQL(SQL_CREATE__MORTALITY);
+        db.execSQL(SQL_CREATE_MORTALITY);
     }
 
     @Override
@@ -220,7 +218,6 @@ public class DatabaseHelper extends SQLiteOpenHelper {
             db.close();
         }
     }
-
 
     public void syncUCs(JSONArray UCslist) {
         SQLiteDatabase db = this.getWritableDatabase();
@@ -620,31 +617,6 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         return newRowId;
     }
 
-    public Long addMotherForm(MotherContract fc) {
-
-        // Gets the data repository in write mode
-        SQLiteDatabase db = this.getWritableDatabase();
-
-// Create a new map of values, where column names are the keys
-        ContentValues values = new ContentValues();
-        values.put(singleMother.COLUMN_luid, fc.getLuid());
-        values.put(singleMother.COLUMN_DA, fc.getdA());
-        values.put(singleMother.COLUMN_FORMDATE, fc.getFormdate());
-//        values.put(singleMother.COLUMN_RELATION_HH, fc.getMotherId());
-        values.put(singleMother.COLUMN_SERIAL_NO, fc.getSerialNo());
-        values.put(singleMother.COLUMN_USER, fc.getUser());
-        values.put(singleMother.COLUMN_DEVICEID, fc.getDeviceID());
-        values.put(singleMother.COLUMN_DEVICETAGID, fc.getDevicetagID());
-//        values.put(singleMother.COLUMN_UUID, fc.getUuid());
-        // Insert the new row, returning the primary key value of the new row
-        long newRowId;
-        newRowId = db.insert(
-                singleMother.TABLE_NAME,
-                FormsTable.COLUMN_NAME_NULLABLE,
-                values);
-        return newRowId;
-    }
-
     public FormsContract isDataExists(String studyId) {
         SQLiteDatabase db = getReadableDatabase();
         Cursor c = null;
@@ -738,24 +710,6 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         String[] selectionArgs = {String.valueOf(MainApp.fc.get_ID())};
 
         int count = db.update(FormsTable.TABLE_NAME,
-                values,
-                selection,
-                selectionArgs);
-        return count;
-    }
-
-    public int updateMotherFormID() {
-        SQLiteDatabase db = this.getReadableDatabase();
-
-// New value for one column
-        ContentValues values = new ContentValues();
-        values.put(singleMother.COLUMN_UID, MainApp.mc.getUid());
-
-// Which row to update, based on the ID
-        String selection = singleMother._ID + " = ?";
-        String[] selectionArgs = {String.valueOf(MainApp.mc.get_id())};
-
-        int count = db.update(singleMother.TABLE_NAME,
                 values,
                 selection,
                 selectionArgs);
