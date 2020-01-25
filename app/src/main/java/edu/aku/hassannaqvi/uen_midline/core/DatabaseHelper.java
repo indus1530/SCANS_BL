@@ -555,7 +555,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         values.put(FormsTable.COLUMN_PROJECT_NAME, fc.getProjectName());
         values.put(FormsTable.COLUMN_UID, fc.get_UID());
         values.put(FormsTable.COLUMN_FORMDATE, fc.getFormDate());
-        values.put(FormsTable.COLUMN_DSSID, fc.getLuid());
+        values.put(FormsTable.COLUMN_LUID, fc.getLuid());
         values.put(FormsTable.COLUMN_USER, fc.getUser());
         values.put(FormsTable.COLUMN_ISTATUS, fc.getIstatus());
         values.put(FormsTable.COLUMN_ISTATUS88x, fc.getIstatus88x());
@@ -623,13 +623,13 @@ public class DatabaseHelper extends SQLiteOpenHelper {
 
 // New value for one column
         String[] columns = {
-                FormsTable.COLUMN_DSSID,
+                FormsTable.COLUMN_LUID,
                 FormsTable.COLUMN_ISTATUS,
 
         };
 
 // Which row to update, based on the ID
-        String selection = FormsTable.COLUMN_DSSID + " = ? AND "
+        String selection = FormsTable.COLUMN_LUID + " = ? AND "
                 + FormsTable.COLUMN_ISTATUS + " = ?";
         String[] selectionArgs = new String[]{studyId, "1"};
 
@@ -644,7 +644,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
                     null);                   // The sort order
 
             while (c.moveToNext()) {
-                allFC.setLuid(c.getString(c.getColumnIndex(FormsTable.COLUMN_DSSID)));
+                allFC.setLuid(c.getString(c.getColumnIndex(FormsTable.COLUMN_LUID)));
                 allFC.setIstatus(c.getString(c.getColumnIndex(FormsTable.COLUMN_ISTATUS)));
             }
         } finally {
@@ -939,7 +939,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
                 FormsTable.COLUMN_USER,
                 FormsTable.COLUMN_ISTATUS,
                 FormsTable.COLUMN_ISTATUS88x,
-                FormsTable.COLUMN_DSSID,
+                FormsTable.COLUMN_LUID,
                 FormsTable.COLUMN_ENDINGDATETIME,
                 FormsTable.COLUMN_SINFO,
                 FormsTable.COLUMN_SE,
@@ -1000,7 +1000,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         Cursor c = null;
         String[] columns = {
                 FormsTable._ID,
-                FormsTable.COLUMN_DSSID,
+                FormsTable.COLUMN_LUID,
                 FormsTable.COLUMN_FORMDATE,
                 FormsTable.COLUMN_ISTATUS,
                 FormsTable.COLUMN_SYNCED,
@@ -1028,7 +1028,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
             while (c.moveToNext()) {
                 FormsContract fc = new FormsContract();
                 fc.set_ID(c.getString(c.getColumnIndex(FormsTable.COLUMN_ID)));
-                fc.setLuid(c.getString(c.getColumnIndex(FormsTable.COLUMN_DSSID)));
+                fc.setLuid(c.getString(c.getColumnIndex(FormsTable.COLUMN_LUID)));
                 fc.setFormDate(c.getString(c.getColumnIndex(FormsTable.COLUMN_FORMDATE)));
                 fc.setIstatus(c.getString(c.getColumnIndex(FormsTable.COLUMN_ISTATUS)));
                 fc.setSynced(c.getString(c.getColumnIndex(FormsTable.COLUMN_SYNCED)));

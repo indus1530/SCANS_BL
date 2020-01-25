@@ -132,10 +132,8 @@ public class SectionDActivity extends AppCompatActivity {
             return true;
         } else {
             Toast.makeText(this, "Updating Database... ERROR!", Toast.LENGTH_SHORT).show();
-
         }
-
-        return true;
+        return false;
     }
 
     private void SaveDraft() throws JSONException {
