@@ -48,7 +48,7 @@
                             android:id="@+id/h101"
                             style="@style/EditTextNum"
                             android:hint="@string/month"
-                            app:mask="#"
+                            android:maxLength="1"
                             app:maxValue="9"
                             app:minValue="1"
                             app:type="range" />
@@ -819,7 +819,7 @@
                             android:id="@+id/h119"
                             style="@style/EditTextNum"
                             android:hint="@string/month"
-                            app:mask="##"
+                            android:maxLength="2"
                             app:maxValue="30"
                             app:minValue="1"
                             app:type="range" />

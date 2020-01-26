@@ -51,16 +51,16 @@
 
                             <RadioButton
                                 android:id="@+id/g101a"
-                                style="@style/radiobutton"
                                 android:layout_width="0dp"
                                 android:layout_weight="1"
+                                style="@style/radiobutton"
                                 android:text="@string/yes" />
 
                             <RadioButton
                                 android:id="@+id/g101b"
-                                style="@style/radiobutton"
                                 android:layout_width="0dp"
                                 android:layout_weight="1"
+                                style="@style/radiobutton"
                                 android:text="@string/no" />
 
                         </RadioGroup>
@@ -442,23 +442,23 @@
 
                             <RadioButton
                                 android:id="@+id/g110a"
-                                style="@style/radiobutton"
                                 android:layout_width="0dp"
                                 android:layout_weight="1"
+                                style="@style/radiobutton"
                                 android:text="@string/yes" />
 
                             <RadioButton
                                 android:id="@+id/g110b"
-                                style="@style/radiobutton"
                                 android:layout_width="0dp"
                                 android:layout_weight="1"
+                                style="@style/radiobutton"
                                 android:text="@string/no" />
 
                             <RadioButton
                                 android:id="@+id/g11098"
-                                style="@style/radiobutton"
                                 android:layout_width="0dp"
                                 android:layout_weight="1"
+                                style="@style/radiobutton"
                                 android:text="@string/dkn" />
 
                         </RadioGroup>
