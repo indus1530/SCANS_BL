@@ -28,38 +28,6 @@
             android:orientation="vertical">
 
             <!-- e116  Radio   -->
-            <androidx.cardview.widget.CardView
-                android:id="@+id/fldGrpCVe116"
-                style="@style/cardView">
-
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:orientation="vertical">
-
-                    <TextView
-                        style="@style/i_textview"
-                        android:text="@string/e116" />
-
-                    <RadioGroup
-                        android:id="@+id/e116"
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent">
-
-                        <RadioButton
-                            android:id="@+id/e116a"
-                            style="@style/radiobutton"
-                            android:text="@string/e116a" />
-
-                        <RadioButton
-                            android:id="@+id/e116b"
-                            style="@style/radiobutton"
-                            android:text="@string/e116b" />
-                    </RadioGroup>
-                </LinearLayout>
-            </androidx.cardview.widget.CardView>
-
-            <!-- e116_title  Title   -->
             <LinearLayout
                 android:id="@+id/fldGrpSectionE301"
                 android:layout_width="match_parent"
@@ -98,9 +66,8 @@
 
                         <com.edittextpicker.aliazaz.EditTextPicker
                             android:id="@+id/e117"
-                            style="@style/textInput"
-                            android:hint="@string/e117"
-                            android:inputType="number"
+                            style="@style/EditTextNum"
+                            android:hint="@string/num"
                             android:maxLength="2"
                             android:textColor="@android:color/black"
                             app:maxValue="20"
@@ -110,6 +77,45 @@
                     </LinearLayout>
                 </androidx.cardview.widget.CardView>
             </LinearLayout>
+
+            <!-- e116_title  Title   -->
+            <androidx.cardview.widget.CardView
+                android:id="@+id/fldGrpCVe116"
+                style="@style/cardView">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <TextView
+                        style="@style/i_textview"
+                        android:text="@string/e116" />
+
+                    <RadioGroup
+                        android:id="@+id/e116"
+                        style="@style/radiogroup"
+                        android:orientation="horizontal">
+
+                        <RadioButton
+                            android:id="@+id/e116a"
+                            android:layout_width="0dp"
+                            android:layout_weight="1"
+                            style="@style/radiobutton"
+                            android:text="@string/yes" />
+
+                        <RadioButton
+                            android:id="@+id/e116b"
+                            android:layout_width="0dp"
+                            android:layout_weight="1"
+                            style="@style/radiobutton"
+                            android:text="@string/no" />
+
+                    </RadioGroup>
+
+                </LinearLayout>
+
+            </androidx.cardview.widget.CardView>
 
 
             <LinearLayout
