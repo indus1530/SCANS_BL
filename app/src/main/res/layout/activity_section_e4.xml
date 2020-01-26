@@ -44,8 +44,6 @@
                     <EditText
                         android:id="@+id/e118"
                         style="@style/textInputName"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
                         android:hint="@string/e118"
                         android:textColor="@android:color/black" />
                 </LinearLayout>
@@ -81,9 +79,8 @@
 
                             <com.edittextpicker.aliazaz.EditTextPicker
                                 android:id="@+id/e119a"
-                                style="@style/textInput"
+                                style="@style/EditTextNum"
                                 android:hint="@string/d108a"
-                                android:inputType="number"
                                 android:maxLength="2"
                                 android:textColor="@android:color/black"
                                 app:defaultValue="00"
@@ -105,9 +102,8 @@
 
                             <com.edittextpicker.aliazaz.EditTextPicker
                                 android:id="@+id/e119b"
-                                style="@style/textInput"
+                                style="@style/EditTextNum"
                                 android:hint="@string/d108b"
-                                android:inputType="number"
                                 android:maxLength="2"
                                 android:textColor="@android:color/black"
                                 app:defaultValue="00"
@@ -129,10 +125,8 @@
 
                             <com.edittextpicker.aliazaz.EditTextPicker
                                 android:id="@+id/e119c"
-                                style="@style/textInput"
-                                android:digits="0123456789"
+                                style="@style/EditTextNum"
                                 android:hint="@string/d108c"
-                                android:inputType="number"
                                 android:maxLength="4"
                                 android:textColor="@android:color/black"
                                 app:defaultValue="00"
@@ -167,12 +161,9 @@
 
                     <com.edittextpicker.aliazaz.EditTextPicker
                         android:id="@+id/e120"
-                        style="@style/textInput"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
+                        style="@style/EditTextNum"
                         android:enabled="false"
                         android:hint="@string/d109a"
-                        android:inputType="number"
                         android:maxLength="2"
                         android:textColor="@android:color/black"
                         app:maxValue="99"
@@ -198,8 +189,7 @@
 
                     <RadioGroup
                         android:id="@+id/e121"
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent">
+                        style="@style/radiogroup">
 
                         <RadioButton
                             android:id="@+id/e121a"
@@ -241,20 +231,18 @@
                             style="@style/radiobutton"
                             android:text="@string/e121h" />
 
-                        <RadioButton
-                            android:id="@+id/e12196"
-                            style="@style/radiobutton"
-                            android:text="@string/e121x" />
-
                         <EditText
                             android:id="@+id/e12196x"
-                            style="@style/radiobutton"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:hint="@string/e121x"
+                            style="@style/EditTextAlpha"
+                            android:hint="@string/specify"
                             android:tag="e12196"
                             android:text='@{e12196.checked? e12196x.getText().toString() : ""}'
                             android:visibility='@{e12196.checked? View.VISIBLE : View.GONE}' />
+
+                        <RadioButton
+                            android:id="@+id/e12196"
+                            style="@style/radiobutton"
+                            android:text="@string/other" />
 
                     </RadioGroup>
                 </LinearLayout>
@@ -276,8 +264,7 @@
 
                     <RadioGroup
                         android:id="@+id/e122"
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent">
+                        style="@style/radiogroup">
 
                         <RadioButton
                             android:id="@+id/e122a"
