@@ -10,7 +10,7 @@ import java.util.Date;
 
 import static android.content.Context.MODE_PRIVATE;
 
-public class AppInfo {
+public final class AppInfo {
 
     private String versionName;
     private Long installedOn;

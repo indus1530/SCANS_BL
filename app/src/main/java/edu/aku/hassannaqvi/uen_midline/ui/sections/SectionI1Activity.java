@@ -30,7 +30,7 @@ import static edu.aku.hassannaqvi.uen_midline.ui.list_activity.FamilyMembersList
 public class SectionI1Activity extends AppCompatActivity {
 
     ActivitySectionI1Binding bi;
-    private FamilyMembersContract fmc_child;
+    private FamilyMembersContract fmc_child, res_child;
     private Pair<List<Integer>, List<String>> childLst, resList;
 
     @Override
@@ -82,9 +82,23 @@ public class SectionI1Activity extends AppCompatActivity {
                     populateRespondentSpinner();
                 } else {
                     bi.respondentSpinner.setVisibility(View.GONE);
+                    res_child = mainVModel.getMemberInfo(Integer.valueOf(fmc_child.getSerialno()));
                 }
 
+            }
 
+            @Override
+            public void onNothingSelected(AdapterView<?> parent) {
+
+            }
+        });
+
+
+        bi.i10res.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+            @Override
+            public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
+                if (position == 0) return;
+                res_child = mainVModel.getMemberInfo(resList.getFirst().get(bi.i10res.getSelectedItemPosition() - 1));
             }
 
             @Override
