@@ -225,6 +225,8 @@ public class SectionDActivity extends AppCompatActivity {
                 bi.d115a.isChecked() ? "1" :
                         bi.d115b.isChecked() ? "2" : "0");
 
+        fmc.setAvailable(bi.d115a.isChecked() ? "1" : bi.d115b.isChecked() ? "2" : "0");
+
         fmc.setsD(String.valueOf(sd));
 
         // Update in ViewModel
@@ -234,8 +236,8 @@ public class SectionDActivity extends AppCompatActivity {
             mainVModel.setMWRA(fmc);
         else if (Integer.valueOf(fmc.getAge()) < 5) {
             mainVModel.setChildU5(fmc);
-            if (motherFMC == null || bi.d115b.isChecked()) return;
-            if (Integer.valueOf(motherFMC.getAge()) >= 15 && Integer.valueOf(motherFMC.getAge()) <= 49)
+            if (motherFMC == null) return;
+            if (Integer.valueOf(motherFMC.getAge()) >= 15 && Integer.valueOf(motherFMC.getAge()) <= 49 && motherFMC.getAvailable().equals("1"))
                 mainVModel.setMwraChildU5(motherFMC);
         }
 

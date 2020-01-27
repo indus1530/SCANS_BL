@@ -42,9 +42,14 @@ class MainVModel : ViewModel() {
 
     fun setMwraChildU5(item: FamilyMembersContract) {
         var lst = mwraChildU5Lst.value
-        if (lst.isNullOrEmpty())
+        if (lst.isNullOrEmpty()) {
             lst = mutableListOf()
-        lst.add(item)
+            lst.add(item)
+        } else {
+            val fmc = mwraChildU5Lst.value?.find { it.serialno.toInt() == item.serialno.toInt() }
+            fmc?.let { lst.map { if (it.serialno.toInt() == fmc.serialno.toInt()) item else it } }
+                    ?: lst.add(item)
+        }
         mwraChildU5Lst.value = lst
     }
 
