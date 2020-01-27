@@ -96,6 +96,10 @@
                         style="@style/i_textview"
                         android:text="@string/f101a" />
 
+                    <TextView
+                        style="@style/i_textviewhint"
+                        android:text="@string/f101ahint" />
+
                     <LinearLayout
                         android:id="@+id/f101acheck"
                         android:layout_width="match_parent"
@@ -469,6 +473,14 @@
                         style="@style/i_textview"
                         android:text="@string/f109" />
 
+                    <TextView
+                        style="@style/i_textviewhint"
+                        android:text="@string/f109hint" />
+
+                    <TextView
+                        style="@style/i_textviewhint"
+                        android:text="@string/f109hint1" />
+
                     <LinearLayout
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
@@ -514,6 +526,10 @@
                     <TextView
                         style="@style/i_textview"
                         android:text="@string/f110" />
+
+                    <TextView
+                        style="@style/i_textviewhint"
+                        android:text="@string/f110hint" />
 
                     <LinearLayout
                         android:id="@+id/f110check"
@@ -599,6 +615,14 @@
                     <TextView
                         style="@style/i_textview"
                         android:text="@string/f111" />
+
+                    <TextView
+                        style="@style/i_textviewhint"
+                        android:text="@string/f111hint" />
+
+                    <TextView
+                        style="@style/i_textviewhint"
+                        android:text="@string/f111hint1" />
 
                     <RadioGroup
                         android:id="@+id/f111"
@@ -691,10 +715,10 @@
                             style="@style/EditTextNum"
                             android:layout_width="0dp"
                             android:layout_weight="2"
-                            android:enabled='@{f11398.checked? false : true}'
                             android:hint="@string/f113a"
                             android:maxLength="2"
                             android:text='@{f11398.checked? f113.getText().toString() : ""}'
+                            android:enabled='@{f11398.checked ? false : true}'
                             app:defaultValue="00"
                             app:maxValue="20"
                             app:minValue="1"
