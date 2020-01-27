@@ -109,5 +109,8 @@ public class SectionAActivity extends AppCompatActivity {
 
     public void BtnCheckHH() {
 
+//        if (Validator.emptyTextBox(this,))
+
+
     }
 }

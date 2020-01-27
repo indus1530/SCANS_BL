@@ -39,6 +39,7 @@ class FamilyMembersListActivity : AppCompatActivity() {
     private lateinit var adapter: FamilyMemberListAdapter
     private lateinit var bi: ActivityFamilyMembersListBinding
     private var viewHolder: ItemMemListBinding? = null
+    private var currentFM: FamilyMembersContract? = null
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -107,7 +108,6 @@ class FamilyMembersListActivity : AppCompatActivity() {
     }
 
     private fun settingValue() {
-        setupRecyclerView(mutableListOf())
         mainVModel = this.run {
             ViewModelProviders.of(this)[MainVModel::class.java]
         }
@@ -117,10 +117,11 @@ class FamilyMembersListActivity : AppCompatActivity() {
             bi.contentScroll.total.text = String.format("%02d", item.size)
             adapter.setMList(item)
         })
+        setupRecyclerView(mutableListOf())
     }
 
     private fun setupRecyclerView(membersLst: MutableList<FamilyMembersContract>) {
-        adapter = FamilyMemberListAdapter(this, membersLst)
+        adapter = FamilyMemberListAdapter(this, membersLst, mainVModel)
         bi.contentScroll.recyclerView.layoutManager = LinearLayoutManager(this)
         bi.contentScroll.recyclerView.adapter = adapter
         adapter.setItemClicked { item, position, holder ->
@@ -129,6 +130,8 @@ class FamilyMembersListActivity : AppCompatActivity() {
 
                 memSelectedCounter++
                 viewHolder = holder
+
+                currentFM = item
 
                 startActivityForResult(Intent(this, SectionDActivity::class.java)
                         .putExtra(SERIAL_EXTRA, item.serialno.toInt()), CONSTANTS.MEMBER_ITEM)
@@ -156,11 +159,20 @@ class FamilyMembersListActivity : AppCompatActivity() {
     }
 
     private fun handlingHolder(flag: Boolean) {
-        viewHolder?.let {
+        /*viewHolder?.let {
             viewHolder!!.parentLayout.isEnabled = flag
             viewHolder!!.parentLayout.checkIcon.visibility = if (flag) View.GONE else View.VISIBLE
             viewHolder = null
             if (flag) memSelectedCounter--
+        }*/
+
+        currentFM?.let {
+            mainVModel.getHolder(currentFM!!)?.let {
+                viewHolder!!.parentLayout.isEnabled = flag
+                viewHolder!!.parentLayout.checkIcon.visibility = if (flag) View.GONE else View.VISIBLE
+                viewHolder = null
+                if (flag) memSelectedCounter--
+            }
         }
     }
 

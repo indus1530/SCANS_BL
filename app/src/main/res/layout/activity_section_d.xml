@@ -44,7 +44,7 @@
 
                         <TextView
                             android:id="@+id/d101"
-                            style="@style/textInput"
+                            style="@style/textView3Head"
                             android:text="@string/d101" />
 
                     </LinearLayout>

@@ -12,24 +12,22 @@ import java.util.List;
 
 import edu.aku.hassannaqvi.uen_midline.R;
 import edu.aku.hassannaqvi.uen_midline.contracts.FamilyMembersContract;
-import edu.aku.hassannaqvi.uen_midline.core.DatabaseHelper;
 import edu.aku.hassannaqvi.uen_midline.core.MainApp;
 import edu.aku.hassannaqvi.uen_midline.databinding.ItemMemListBinding;
 import edu.aku.hassannaqvi.uen_midline.utils.Util;
+import edu.aku.hassannaqvi.uen_midline.viewmodel.MainVModel;
 
 public class FamilyMemberListAdapter extends RecyclerView.Adapter<FamilyMemberListAdapter.ViewHolder> {
-
 
     private OnItemClicked itemClicked;
     private Context mContext;
     private List<FamilyMembersContract> mList;
-    private DatabaseHelper db;
+    private MainVModel vModel;
 
-    public FamilyMemberListAdapter(Context mContext, List<FamilyMembersContract> mList) {
+    public FamilyMemberListAdapter(Context mContext, List<FamilyMembersContract> mList, MainVModel vModel) {
         this.mContext = mContext;
         this.mList = mList;
-        db = new DatabaseHelper(mContext);
-
+        this.vModel = vModel;
     }
 
     public void setItemClicked(OnItemClicked itemClicked) {
@@ -52,10 +50,9 @@ public class FamilyMemberListAdapter extends RecyclerView.Adapter<FamilyMemberLi
         holder.bi.index.setText(String.format("%02d", Integer.valueOf(mList.get(i).getSerialno())));
         holder.bi.genderImage.setImageResource(Util.getMemberIcon(Integer.valueOf(mList.get(i).getGender()), mList.get(i).getAge()));
         holder.bi.motherName.setText(mList.get(i).getMother_name());
+        holder.bi.parentLayout.setOnClickListener(v -> itemClicked.onItemClick(mList.get(i), i, holder.bi));
 
-        ItemMemListBinding viewHolder = holder.bi;
-
-        holder.bi.parentLayout.setOnClickListener(v -> itemClicked.onItemClick(mList.get(i), i, viewHolder));
+        vModel.setHolderValues(Integer.valueOf(mList.get(i).getSerialno()), holder.bi);
     }
 
     @Override
