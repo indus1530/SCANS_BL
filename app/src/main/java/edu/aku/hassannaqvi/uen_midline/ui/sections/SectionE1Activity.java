@@ -1,9 +1,7 @@
 package edu.aku.hassannaqvi.uen_midline.ui.sections;
 
 import android.content.Intent;
-import android.content.SharedPreferences;
 import android.os.Bundle;
-import android.provider.Settings;
 import android.text.Editable;
 import android.text.TextWatcher;
 import android.view.View;
@@ -19,9 +17,7 @@ import com.validatorcrawler.aliazaz.Validator;
 import org.json.JSONException;
 import org.json.JSONObject;
 
-import java.text.SimpleDateFormat;
 import java.util.ArrayList;
-import java.util.Date;
 import java.util.List;
 import java.util.Map;
 
@@ -139,13 +135,12 @@ public class SectionE1Activity extends AppCompatActivity {
 
     private void SaveDraft() throws JSONException {
 
-        SharedPreferences preferences = getSharedPreferences("tagName", MODE_PRIVATE);
         mwra = new MWRAContract();
         mwra.set_UUID(MainApp.fc.get_UID());
-        mwra.setDeviceId(Settings.Secure.getString(getApplicationContext().getContentResolver(), Settings.Secure.ANDROID_ID));
-        mwra.setFormDate(new SimpleDateFormat("dd-MM-yy HH:mm").format(new Date().getTime()));
+        mwra.setDeviceId(MainApp.appInfo.getDeviceID());
+        mwra.setFormDate(MainApp.appInfo.getDtToday());
         mwra.setUser(MainApp.userName);
-        mwra.setDevicetagID(preferences.getString("tagName", null));
+        mwra.setDevicetagID(MainApp.appInfo.getTagName());
 
         JSONObject json = new JSONObject();
         json.put("fmuid", MainApp.selectedKishMWRA.getUid());

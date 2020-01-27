@@ -1191,28 +1191,12 @@ public class DatabaseHelper extends SQLiteOpenHelper {
                 selectionArgs);
     }
 
-    //Generic update MWRAColumn
-    public int updatesMWRAColumn(String column, String value, MWRAContract mwra) {
-        SQLiteDatabase db = this.getReadableDatabase();
-
-        ContentValues values = new ContentValues();
-        values.put(column, value);
-
-        String selection = MWRATable._ID + " =? ";
-        String[] selectionArgs = {String.valueOf(mwra.get_ID())};
-
-        return db.update(MWRATable.TABLE_NAME,
-                values,
-                selection,
-                selectionArgs);
-    }
-
     //Generic update MWRAPREColumn
-    public int updatesMWRAPREColumn(String column, String value, MWRA_PREContract mwra_pre) {
+    public int updatesMWRAPREColumn(MWRA_PREContract mwra_pre) {
         SQLiteDatabase db = this.getReadableDatabase();
 
         ContentValues values = new ContentValues();
-        values.put(column, value);
+        values.put(SingleMWRAPRE.COLUMN_UID, mwra_pre.getUID());
 
         String selection = SingleMWRAPRE._ID + " =? ";
         String[] selectionArgs = {String.valueOf(mwra_pre.get_ID())};
