@@ -44,7 +44,7 @@ import static edu.aku.hassannaqvi.uen_midline.utils.CreateTable.DATABASE_NAME;
 import static edu.aku.hassannaqvi.uen_midline.utils.CreateTable.DB_NAME;
 import static edu.aku.hassannaqvi.uen_midline.utils.CreateTable.PROJECT_NAME;
 
-public class SyncActivity extends AppCompatActivity {
+public class SyncActivity extends AppCompatActivity implements SyncDevice.SyncDevicInterface {
     SharedPreferences.Editor editor;
     SharedPreferences sharedPref;
     String DirectoryName;
@@ -267,6 +267,11 @@ public class SyncActivity extends AppCompatActivity {
 
     }
 
+    @Override
+    public void processFinish(boolean flag) {
+        new syncData(SyncActivity.this, "").execute();
+    }
+
     public class syncData extends AsyncTask<String, String, String> {
 
         private Context mContext;
@@ -279,45 +284,41 @@ public class SyncActivity extends AppCompatActivity {
 
         @Override
         protected String doInBackground(String... strings) {
-            runOnUiThread(new Runnable() {
+            runOnUiThread(() -> {
 
-                @Override
-                public void run() {
-
-                    if (listActivityCreated) {
-                        model = new SyncModel();
-                        model.setstatusID(0);
-                        list.add(model);
-                    }
-                    new GetAllData(mContext, "EnumBlock", syncListAdapter, list).execute(distID);
-                    bi.noItem.setVisibility(View.GONE);
+                if (listActivityCreated) {
+                    model = new SyncModel();
+                    model.setstatusID(0);
+                    list.add(model);
+                }
+                new GetAllData(mContext, "EnumBlock", syncListAdapter, list).execute(distID);
+                bi.noItem.setVisibility(View.GONE);
 
 //                  getting Users!!
-                    if (listActivityCreated) {
-                        model = new SyncModel();
-                        model.setstatusID(0);
-                        list.add(model);
-                    }
-                    new GetAllData(mContext, "User", syncListAdapter, list).execute(distID);
+                if (listActivityCreated) {
+                    model = new SyncModel();
+                    model.setstatusID(0);
+                    list.add(model);
+                }
+                new GetAllData(mContext, "User", syncListAdapter, list).execute(distID);
 
 //                   getting BL Random
-                    if (listActivityCreated) {
-                        model = new SyncModel();
-                        model.setstatusID(0);
-                        list.add(model);
-                    }
-                    new GetAllData(mContext, "BLRandom", syncListAdapter, list).execute(distID);
+                if (listActivityCreated) {
+                    model = new SyncModel();
+                    model.setstatusID(0);
+                    list.add(model);
+                }
+                new GetAllData(mContext, "BLRandom", syncListAdapter, list).execute(distID);
 
 //                    Getting App Version
-                    if (listActivityCreated) {
-                        model = new SyncModel();
-                        model.setstatusID(0);
-                        list.add(model);
-                    }
-                    new GetAllData(mContext, "VersionApp", syncListAdapter, list).execute();
-
-                    listActivityCreated = false;
+                if (listActivityCreated) {
+                    model = new SyncModel();
+                    model.setstatusID(0);
+                    list.add(model);
                 }
+                new GetAllData(mContext, "VersionApp", syncListAdapter, list).execute();
+
+                listActivityCreated = false;
             });
 
             return null;

@@ -2,17 +2,23 @@ package edu.aku.hassannaqvi.uen_midline.ui.sections;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.text.Editable;
+import android.text.TextWatcher;
+import android.view.View;
 import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.databinding.DataBindingUtil;
 
+import com.validatorcrawler.aliazaz.Clear;
 import com.validatorcrawler.aliazaz.Validator;
 
 import org.json.JSONException;
 import org.json.JSONObject;
 
 import edu.aku.hassannaqvi.uen_midline.R;
+import edu.aku.hassannaqvi.uen_midline.contracts.BLRandomContract;
+import edu.aku.hassannaqvi.uen_midline.contracts.EnumBlockContract;
 import edu.aku.hassannaqvi.uen_midline.contracts.FormsContract;
 import edu.aku.hassannaqvi.uen_midline.core.DatabaseHelper;
 import edu.aku.hassannaqvi.uen_midline.core.MainApp;
@@ -24,6 +30,7 @@ public class SectionAActivity extends AppCompatActivity {
 
     ActivitySectionABinding bi;
     private DatabaseHelper db;
+    private BLRandomContract bl;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -38,6 +45,40 @@ public class SectionAActivity extends AppCompatActivity {
 
 
     private void setUIComponent() {
+        bi.a101.addTextChangedListener(new TextWatcher() {
+            @Override
+            public void beforeTextChanged(CharSequence s, int start, int count, int after) {
+
+            }
+
+            @Override
+            public void onTextChanged(CharSequence s, int start, int before, int count) {
+                Clear.clearAllFields(bi.fldGrpSectionA01);
+                bi.fldGrpSectionA01.setVisibility(View.GONE);
+            }
+
+            @Override
+            public void afterTextChanged(Editable s) {
+
+            }
+        });
+        bi.a112.addTextChangedListener(new TextWatcher() {
+            @Override
+            public void beforeTextChanged(CharSequence s, int start, int count, int after) {
+
+            }
+
+            @Override
+            public void onTextChanged(CharSequence s, int start, int before, int count) {
+                Clear.clearAllFields(bi.fldGrpSectionA02);
+                bi.fldGrpSectionA02.setVisibility(View.GONE);
+            }
+
+            @Override
+            public void afterTextChanged(Editable s) {
+
+            }
+        });
     }
 
 
@@ -59,7 +100,7 @@ public class SectionAActivity extends AppCompatActivity {
     private boolean UpdateDB() {
         long updcount = db.addForm(MainApp.fc);
         MainApp.fc.set_ID(String.valueOf(updcount));
-        if (updcount != 0) {
+        if (updcount > 0) {
             MainApp.fc.set_UID(MainApp.fc.getDeviceID() + MainApp.fc.get_ID());
             db.updatesFormColumn(FormsContract.FormsTable.COLUMN_UID, MainApp.fc.get_UID());
             return true;
@@ -78,7 +119,7 @@ public class SectionAActivity extends AppCompatActivity {
         MainApp.fc.setUser(MainApp.userName);
         MainApp.fc.setDeviceID(MainApp.appInfo.getDeviceID());
         MainApp.fc.setDevicetagID(MainApp.appInfo.getTagName());
-        MainApp.fc.setAppversion(MainApp.appInfo.getVersionName() + "." + MainApp.appInfo.getVersionCode());
+        MainApp.fc.setAppversion(MainApp.appInfo.getAppVersion());
         MainApp.fc.setClusterCode(bi.a101.getText().toString());
         MainApp.fc.setHhno(bi.a112.getText().toString());
         MainApp.setGPS(this); // Set GPS
@@ -93,7 +134,7 @@ public class SectionAActivity extends AppCompatActivity {
         json.put("a110", bi.a110.getText().toString());
         json.put("a111", bi.a111.getText().toString());
         json.put("hhheadpresent", bi.checkHHHeadpresent.isChecked() ? "1" : "2");
-        //json.put("hhheadpresentnew", bi.newHHheadname.getText().toString());
+        json.put("hhheadpresentnew", bi.newHHheadname.getText().toString());
 
         MainApp.fc.setsInfo(String.valueOf(json));
 
@@ -107,10 +148,43 @@ public class SectionAActivity extends AppCompatActivity {
         Util.openEndActivity(this);
     }
 
+    public void BtnCheckCluster() {
+
+        if (!Validator.emptyTextBox(this, bi.a101)) return;
+
+        EnumBlockContract enumBlockContract = db.getEnumBlock(bi.a101.getText().toString());
+        if (enumBlockContract != null) {
+            String selected = enumBlockContract.getGeoarea();
+            if (!selected.equals("")) {
+
+                String[] selSplit = selected.split("\\|");
+
+                bi.a104.setText(selSplit[0]);
+                bi.a105.setText(selSplit[1].equals("") ? "----" : selSplit[1]);
+                bi.a106.setText(selSplit[2].equals("") ? "----" : selSplit[2]);
+                bi.a107.setText(selSplit[3]);
+                bi.fldGrpSectionA01.setVisibility(View.VISIBLE);
+            }
+        } else {
+            Toast.makeText(this, "Sorry cluster not found!!", Toast.LENGTH_SHORT).show();
+        }
+
+    }
+
     public void BtnCheckHH() {
+        if (!Validator.emptyTextBox(this, bi.a112)) return;
 
-//        if (Validator.emptyTextBox(this,))
+        bl = MainApp.appInfo.getDbHelper().getHHFromBLRandom(bi.a101.getText().toString(), bi.a112.getText().toString().toUpperCase());
 
+        if (bl != null) {
+            Toast.makeText(this, "Household found!", Toast.LENGTH_SHORT).show();
+            bi.hhName.setText(bl.getHhhead().toUpperCase());
+            bi.fldGrpSectionA02.setVisibility(View.VISIBLE);
+
+        } else {
+            bi.fldGrpSectionA02.setVisibility(View.GONE);
+            Toast.makeText(this, "No Household found!", Toast.LENGTH_SHORT).show();
+        }
 
     }
 }

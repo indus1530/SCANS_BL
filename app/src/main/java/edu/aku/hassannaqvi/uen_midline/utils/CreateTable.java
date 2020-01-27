@@ -161,21 +161,21 @@ public final class CreateTable {
             + SingleMortality.COLUMN_SYNCED_DATE + " TEXT );";
 
 
-    public static final String SQL_CREATE_FAMILY_MEMBERS = "CREATE TABLE " + FamilyMembersContract.singleMember.TABLE_NAME + "("
-            + FamilyMembersContract.singleMember.COLUMN_ID + " INTEGER PRIMARY KEY AUTOINCREMENT," +
-            FamilyMembersContract.singleMember.COLUMN_UID + " TEXT," +
-            FamilyMembersContract.singleMember.COLUMN_UUID + " TEXT," +
-            FamilyMembersContract.singleMember.COLUMN_FORMDATE + " TEXT," +
-            FamilyMembersContract.singleMember.COLUMN_CLUSTERNO + " TEXT," +
-            FamilyMembersContract.singleMember.COLUMN_HHNO + " TEXT," +
-            FamilyMembersContract.singleMember.COLUMN_SERIAL_NO + " TEXT," +
-            FamilyMembersContract.singleMember.COLUMN_NAME + " TEXT," +
-            FamilyMembersContract.singleMember.COLUMN_RELATION_HH + " TEXT," +
-            FamilyMembersContract.singleMember.COLUMN_AGE + " TEXT," +
-            FamilyMembersContract.singleMember.COLUMN_MOTHER_NAME + " TEXT," +
-            FamilyMembersContract.singleMember.COLUMN_MOTHER_SERIAL + " TEXT," +
-            FamilyMembersContract.singleMember.COLUMN_GENDER + " TEXT," +
-            FamilyMembersContract.singleMember.COLUMN_MARITAL + " TEXT," +
-            FamilyMembersContract.singleMember.COLUMN_SD + " TEXT" + ");";
+    public static final String SQL_CREATE_FAMILY_MEMBERS = "CREATE TABLE " + FamilyMembersContract.SingleMember.TABLE_NAME + "("
+            + FamilyMembersContract.SingleMember.COLUMN_ID + " INTEGER PRIMARY KEY AUTOINCREMENT," +
+            FamilyMembersContract.SingleMember.COLUMN_UID + " TEXT," +
+            FamilyMembersContract.SingleMember.COLUMN_UUID + " TEXT," +
+            FamilyMembersContract.SingleMember.COLUMN_FORMDATE + " TEXT," +
+            FamilyMembersContract.SingleMember.COLUMN_CLUSTERNO + " TEXT," +
+            FamilyMembersContract.SingleMember.COLUMN_HHNO + " TEXT," +
+            FamilyMembersContract.SingleMember.COLUMN_SERIAL_NO + " TEXT," +
+            FamilyMembersContract.SingleMember.COLUMN_NAME + " TEXT," +
+            FamilyMembersContract.SingleMember.COLUMN_RELATION_HH + " TEXT," +
+            FamilyMembersContract.SingleMember.COLUMN_AGE + " TEXT," +
+            FamilyMembersContract.SingleMember.COLUMN_MOTHER_NAME + " TEXT," +
+            FamilyMembersContract.SingleMember.COLUMN_MOTHER_SERIAL + " TEXT," +
+            FamilyMembersContract.SingleMember.COLUMN_GENDER + " TEXT," +
+            FamilyMembersContract.SingleMember.COLUMN_MARITAL + " TEXT," +
+            FamilyMembersContract.SingleMember.COLUMN_SD + " TEXT" + ");";
 
 }

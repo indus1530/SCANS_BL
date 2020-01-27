@@ -26,7 +26,7 @@ import edu.aku.hassannaqvi.uen_midline.contracts.ChildContract.SingleChild;
 import edu.aku.hassannaqvi.uen_midline.contracts.EnumBlockContract;
 import edu.aku.hassannaqvi.uen_midline.contracts.EnumBlockContract.EnumBlockTable;
 import edu.aku.hassannaqvi.uen_midline.contracts.FamilyMembersContract;
-import edu.aku.hassannaqvi.uen_midline.contracts.FamilyMembersContract.singleMember;
+import edu.aku.hassannaqvi.uen_midline.contracts.FamilyMembersContract.SingleMember;
 import edu.aku.hassannaqvi.uen_midline.contracts.FormsContract;
 import edu.aku.hassannaqvi.uen_midline.contracts.FormsContract.FormsTable;
 import edu.aku.hassannaqvi.uen_midline.contracts.KishMWRAContract;
@@ -597,21 +597,21 @@ public class DatabaseHelper extends SQLiteOpenHelper {
 
 // Create a new map of values, where column names are the keys
         ContentValues values = new ContentValues();
-        values.put(singleMember.COLUMN_ID, fmc.get_id());
-        values.put(singleMember.COLUMN_UID, fmc.getUid());
-        values.put(singleMember.COLUMN_UUID, fmc.getUuid());
-        values.put(singleMember.COLUMN_FORMDATE, fmc.getFormdate());
-        values.put(singleMember.COLUMN_CLUSTERNO, fmc.getClusterno());
-        values.put(singleMember.COLUMN_HHNO, fmc.getHhno());
-        values.put(singleMember.COLUMN_SERIAL_NO, fmc.getSerialno());
-        values.put(singleMember.COLUMN_NAME, fmc.getName());
-        values.put(singleMember.COLUMN_RELATION_HH, fmc.getRelHH());
-        values.put(singleMember.COLUMN_AGE, fmc.getAge());
-        values.put(singleMember.COLUMN_MOTHER_NAME, fmc.getMother_name());
-        values.put(singleMember.COLUMN_MOTHER_SERIAL, fmc.getMother_serial());
-        values.put(singleMember.COLUMN_GENDER, fmc.getGender());
-        values.put(singleMember.COLUMN_MARITAL, fmc.getMarital());
-        values.put(singleMember.COLUMN_SD, fmc.getsD());
+        values.put(SingleMember.COLUMN_ID, fmc.get_id());
+        values.put(SingleMember.COLUMN_UID, fmc.getUid());
+        values.put(SingleMember.COLUMN_UUID, fmc.getUuid());
+        values.put(FamilyMembersContract.SingleMember.COLUMN_FORMDATE, fmc.getFormdate());
+        values.put(FamilyMembersContract.SingleMember.COLUMN_CLUSTERNO, fmc.getClusterno());
+        values.put(FamilyMembersContract.SingleMember.COLUMN_HHNO, fmc.getHhno());
+        values.put(FamilyMembersContract.SingleMember.COLUMN_SERIAL_NO, fmc.getSerialno());
+        values.put(SingleMember.COLUMN_NAME, fmc.getName());
+        values.put(SingleMember.COLUMN_RELATION_HH, fmc.getRelHH());
+        values.put(SingleMember.COLUMN_AGE, fmc.getAge());
+        values.put(SingleMember.COLUMN_MOTHER_NAME, fmc.getMother_name());
+        values.put(SingleMember.COLUMN_MOTHER_SERIAL, fmc.getMother_serial());
+        values.put(FamilyMembersContract.SingleMember.COLUMN_GENDER, fmc.getGender());
+        values.put(SingleMember.COLUMN_MARITAL, fmc.getMarital());
+        values.put(SingleMember.COLUMN_SD, fmc.getsD());
 
         // Insert the new row, returning the primary key value of the new row
         long newRowId;
@@ -651,21 +651,21 @@ public class DatabaseHelper extends SQLiteOpenHelper {
 
         // Create a new map of values, where column names are the keys
         ContentValues values = new ContentValues();
-/*        values.put(singleMember.COLUMN_ID, morc.get_id());
-        values.put(singleMember.COLUMN_UID, morc.getUid());
-        values.put(singleMember.COLUMN_UUID, morc.getUuid());
-        values.put(singleMember.COLUMN_FORMDATE, morc.getFormdate());
-        values.put(singleMember.COLUMN_CLUSTERNO, morc.getClusterno());
-        values.put(singleMember.COLUMN_HHNO, morc.getHhno());
-        values.put(singleMember.COLUMN_SERIAL_NO, morc.getSerialno());
-        values.put(singleMember.COLUMN_NAME, morc.getName());
-        values.put(singleMember.COLUMN_RELATION_HH, morc.getRelHH());
-        values.put(singleMember.COLUMN_AGE, morc.getAge());
-        values.put(singleMember.COLUMN_MOTHER_NAME, morc.getMother_name());
-        values.put(singleMember.COLUMN_MOTHER_SERIAL, morc.getMother_serial());
-        values.put(singleMember.COLUMN_GENDER, morc.getGender());
-        values.put(singleMember.COLUMN_MARITAL, morc.getMarital());
-        values.put(singleMember.COLUMN_SE1, morc.getsD());*/
+/*        values.put(SingleMember.COLUMN_ID, morc.get_id());
+        values.put(SingleMember.COLUMN_UID, morc.getUid());
+        values.put(SingleMember.COLUMN_UUID, morc.getUuid());
+        values.put(SingleMember.COLUMN_FORMDATE, morc.getFormdate());
+        values.put(SingleMember.COLUMN_CLUSTERNO, morc.getClusterno());
+        values.put(SingleMember.COLUMN_HHNO, morc.getHhno());
+        values.put(SingleMember.COLUMN_SERIAL_NO, morc.getSerialno());
+        values.put(SingleMember.COLUMN_NAME, morc.getName());
+        values.put(SingleMember.COLUMN_RELATION_HH, morc.getRelHH());
+        values.put(SingleMember.COLUMN_AGE, morc.getAge());
+        values.put(SingleMember.COLUMN_MOTHER_NAME, morc.getMother_name());
+        values.put(SingleMember.COLUMN_MOTHER_SERIAL, morc.getMother_serial());
+        values.put(SingleMember.COLUMN_GENDER, morc.getGender());
+        values.put(SingleMember.COLUMN_MARITAL, morc.getMarital());
+        values.put(SingleMember.COLUMN_SE1, morc.getsD());*/
 
         // Insert the new row, returning the primary key value of the new row
         long newRowId;
@@ -908,21 +908,21 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         SQLiteDatabase db = this.getReadableDatabase();
         Cursor c = null;
         String[] columns = {
-                singleMember.COLUMN_ID,
-                singleMember.COLUMN_UID,
-                singleMember.COLUMN_UUID,
-                singleMember.COLUMN_FORMDATE,
-                singleMember.COLUMN_CLUSTERNO,
-                singleMember.COLUMN_HHNO,
-                singleMember.COLUMN_SERIAL_NO,
-                singleMember.COLUMN_NAME,
-                singleMember.COLUMN_RELATION_HH,
-                singleMember.COLUMN_AGE,
-                singleMember.COLUMN_MOTHER_NAME,
-                singleMember.COLUMN_MOTHER_SERIAL,
-                singleMember.COLUMN_GENDER,
-                singleMember.COLUMN_MARITAL,
-                singleMember.COLUMN_SD,
+                FamilyMembersContract.SingleMember.COLUMN_ID,
+                SingleMember.COLUMN_UID,
+                SingleMember.COLUMN_UUID,
+                FamilyMembersContract.SingleMember.COLUMN_FORMDATE,
+                FamilyMembersContract.SingleMember.COLUMN_CLUSTERNO,
+                SingleMember.COLUMN_HHNO,
+                SingleMember.COLUMN_SERIAL_NO,
+                SingleMember.COLUMN_NAME,
+                SingleMember.COLUMN_RELATION_HH,
+                SingleMember.COLUMN_AGE,
+                FamilyMembersContract.SingleMember.COLUMN_MOTHER_NAME,
+                SingleMember.COLUMN_MOTHER_SERIAL,
+                SingleMember.COLUMN_GENDER,
+                FamilyMembersContract.SingleMember.COLUMN_MARITAL,
+                FamilyMembersContract.SingleMember.COLUMN_SD,
         };
         String whereClause = null;
         String[] whereArgs = null;
@@ -1317,10 +1317,10 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         ContentValues values = new ContentValues();
         values.put(column, value);
 
-        String selection = singleMember._ID + " =? ";
+        String selection = SingleMember._ID + " =? ";
         String[] selectionArgs = {String.valueOf(valueID)};
 
-        return db.update(singleMember.TABLE_NAME,
+        return db.update(FamilyMembersContract.SingleMember.TABLE_NAME,
                 values,
                 selection,
                 selectionArgs);

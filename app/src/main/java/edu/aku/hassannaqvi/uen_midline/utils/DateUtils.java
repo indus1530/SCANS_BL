@@ -40,7 +40,7 @@ public class DateUtils {
         Calendar dob = Calendar.getInstance();
         Calendar today = Calendar.getInstance();
 
-        if (year == 0 || year < CONSTANTS.MINYEAR) return "0";
+        if (year < CONSTANTS.MINYEAR) return "0";
 
         dob.set(year, month, day);
 
@@ -51,15 +51,13 @@ public class DateUtils {
             age--;
         }
 
-        Integer ageInt = new Integer(age);
-        String ageS = ageInt.toString();
+        int ageInt = age;
 
-        return ageS;
+        return Integer.toString(ageInt);
     }
 
     public static long ageInMonths(String year, String month) {
-        long ageInMonths = (Integer.valueOf(year) * 12) + Integer.valueOf(month);
-        return ageInMonths;
+        return (long) ((Integer.valueOf(year) * 12) + Integer.valueOf(month));
     }
 
     public static String convertDateFormat(String dateStr) {
@@ -152,9 +150,8 @@ public class DateUtils {
         Calendar cal = getCalendarDate(dateStr);
         Date dob = cal.getTime();
         Date today = new Date();
-        Long diff = today.getTime() - dob.getTime();
-        long ageInYears = (diff / (24 * 60 * 60 * 1000)) / 365;
-        return ageInYears;
+        long diff = today.getTime() - dob.getTime();
+        return (diff / (24 * 60 * 60 * 1000)) / 365;
     }
 
     public static long getDateDiff(Date date1, Date date2, TimeUnit timeUnit) {
@@ -165,28 +162,25 @@ public class DateUtils {
     public static long ageInMonthsByDOB(Calendar cal) {
         Date dob = cal.getTime();
         Date today = new Date();
-        Long diff = today.getTime() - dob.getTime();
+        long diff = today.getTime() - dob.getTime();
         double ageInMonths = (diff / (24 * 60 * 60 * 1000)) / 30.4375;
-        long age = (long) Math.floor(ageInMonths);
-        return age;
+        return (long) Math.floor(ageInMonths);
     }
 
     public static long dobDiff(Calendar cal, Calendar cal2) {
         Date dob = cal.getTime();
         Date visitDate = cal2.getTime();
-        Long diff = visitDate.getTime() - dob.getTime();
+        long diff = visitDate.getTime() - dob.getTime();
         double ageInMonths = (diff / (24 * 60 * 60 * 1000)) / 30.4375;
-        long age = (long) Math.floor(ageInMonths);
-        return age;
+        return (long) Math.floor(ageInMonths);
     }
 
     public static long ageInDaysByDOB(String dateStr) {
         Calendar cal = getCalDate(dateStr);
         Date dob = cal.getTime();
         Date today = new Date();
-        Long diff = today.getTime() - dob.getTime();
-        long ageInDays = TimeUnit.DAYS.convert(diff, TimeUnit.MILLISECONDS);
-        return ageInDays;
+        long diff = today.getTime() - dob.getTime();
+        return TimeUnit.DAYS.convert(diff, TimeUnit.MILLISECONDS);
     }
 
     public static Calendar getCalDate(String value) {

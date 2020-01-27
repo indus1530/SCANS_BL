@@ -125,9 +125,9 @@ public class SectionDActivity extends AppCompatActivity {
         DatabaseHelper db = MainApp.appInfo.getDbHelper();
         long updcount = db.addFamilyMember(fmc);
         fmc.set_id(String.valueOf(updcount));
-        if (updcount != 0) {
+        if (updcount > 0) {
             fmc.setUid(MainApp.deviceId + fmc.get_id());
-            db.updatesFamilyMemberColumn(FamilyMembersContract.singleMember.COLUMN_UID, fmc.getUid(), fmc.get_id());
+            db.updatesFamilyMemberColumn(FamilyMembersContract.SingleMember.COLUMN_UID, fmc.getUid(), fmc.get_id());
             return true;
         } else {
             Toast.makeText(this, "Updating Database... ERROR!", Toast.LENGTH_SHORT).show();
@@ -244,7 +244,8 @@ public class SectionDActivity extends AppCompatActivity {
     }
 
     private boolean formValidation() {
-        return Validator.emptyCheckingContainer(this, bi.fldGrpSectionD);
+        if (!Validator.emptyCheckingContainer(this, bi.fldGrpSectionD)) return false;
+        return Validator.emptyEditTextPicker(this, bi.d109);
     }
 
     public void BtnEnd() {

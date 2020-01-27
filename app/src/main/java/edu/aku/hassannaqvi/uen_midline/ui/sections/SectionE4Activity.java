@@ -127,9 +127,9 @@ public class SectionE4Activity extends AppCompatActivity {
         DatabaseHelper db = MainApp.appInfo.getDbHelper();
         long updcount = db.addMortality(morc);
         morc.set_ID(String.valueOf(updcount));
-        if (updcount != 0) {
+        if (updcount > 0) {
             morc.setUID(morc.getDeviceId() + morc.get_ID());
-            db.updatesMortalityColumn(FamilyMembersContract.singleMember.COLUMN_UID, morc.getUID(), morc);
+            db.updatesMortalityColumn(MortalityContract.SingleMortality.COLUMN_UID, morc.getUID(), morc);
             return true;
         } else {
             Toast.makeText(this, "Updating Database... ERROR!", Toast.LENGTH_SHORT).show();

@@ -32,21 +32,21 @@ public class FamilyMembersContract {
     }
 
     public FamilyMembersContract hydrate(Cursor cursor) {
-        this._id = cursor.getString(cursor.getColumnIndex(singleMember.COLUMN_ID));
-        this.uid = cursor.getString(cursor.getColumnIndex(singleMember.COLUMN_UID));
-        this.uuid = cursor.getString(cursor.getColumnIndex(singleMember.COLUMN_UUID));
-        this.formdate = cursor.getString(cursor.getColumnIndex(singleMember.COLUMN_FORMDATE));
-        this.clusterno = cursor.getString(cursor.getColumnIndex(singleMember.COLUMN_CLUSTERNO));
-        this.hhno = cursor.getString(cursor.getColumnIndex(singleMember.COLUMN_HHNO));
-        this.serialno = cursor.getString(cursor.getColumnIndex(singleMember.COLUMN_SERIAL_NO));
-        this.name = cursor.getString(cursor.getColumnIndex(singleMember.COLUMN_NAME));
-        this.relHH = cursor.getString(cursor.getColumnIndex(singleMember.COLUMN_RELATION_HH));
-        this.age = cursor.getString(cursor.getColumnIndex(singleMember.COLUMN_AGE));
-        this.mother_name = cursor.getString(cursor.getColumnIndex(singleMember.COLUMN_MOTHER_NAME));
-        this.mother_serial = cursor.getString(cursor.getColumnIndex(singleMember.COLUMN_MOTHER_SERIAL));
-        this.gender = cursor.getString(cursor.getColumnIndex(singleMember.COLUMN_GENDER));
-        this.marital = cursor.getString(cursor.getColumnIndex(singleMember.COLUMN_MARITAL));
-        this.sD = cursor.getString(cursor.getColumnIndex(singleMember.COLUMN_SD));
+        this._id = cursor.getString(cursor.getColumnIndex(SingleMember.COLUMN_ID));
+        this.uid = cursor.getString(cursor.getColumnIndex(SingleMember.COLUMN_UID));
+        this.uuid = cursor.getString(cursor.getColumnIndex(SingleMember.COLUMN_UUID));
+        this.formdate = cursor.getString(cursor.getColumnIndex(SingleMember.COLUMN_FORMDATE));
+        this.clusterno = cursor.getString(cursor.getColumnIndex(SingleMember.COLUMN_CLUSTERNO));
+        this.hhno = cursor.getString(cursor.getColumnIndex(SingleMember.COLUMN_HHNO));
+        this.serialno = cursor.getString(cursor.getColumnIndex(SingleMember.COLUMN_SERIAL_NO));
+        this.name = cursor.getString(cursor.getColumnIndex(SingleMember.COLUMN_NAME));
+        this.relHH = cursor.getString(cursor.getColumnIndex(SingleMember.COLUMN_RELATION_HH));
+        this.age = cursor.getString(cursor.getColumnIndex(SingleMember.COLUMN_AGE));
+        this.mother_name = cursor.getString(cursor.getColumnIndex(SingleMember.COLUMN_MOTHER_NAME));
+        this.mother_serial = cursor.getString(cursor.getColumnIndex(SingleMember.COLUMN_MOTHER_SERIAL));
+        this.gender = cursor.getString(cursor.getColumnIndex(SingleMember.COLUMN_GENDER));
+        this.marital = cursor.getString(cursor.getColumnIndex(SingleMember.COLUMN_MARITAL));
+        this.sD = cursor.getString(cursor.getColumnIndex(SingleMember.COLUMN_SD));
 
         return this;
     }
@@ -54,23 +54,23 @@ public class FamilyMembersContract {
     public JSONObject toJSONObject() throws JSONException {
 
         JSONObject json = new JSONObject();
-        json.put(singleMember.COLUMN_ID, this._id == null ? JSONObject.NULL : this._id);
-        json.put(singleMember.COLUMN_UID, this.uid == null ? JSONObject.NULL : this.uid);
-        json.put(singleMember.COLUMN_UUID, this.uuid == null ? JSONObject.NULL : this.uuid);
-        json.put(singleMember.COLUMN_FORMDATE, this.formdate == null ? JSONObject.NULL : this.formdate);
-        json.put(singleMember.COLUMN_CLUSTERNO, this.clusterno == null ? JSONObject.NULL : this.clusterno);
-        json.put(singleMember.COLUMN_HHNO, this.hhno == null ? JSONObject.NULL : this.hhno);
-        json.put(singleMember.COLUMN_SERIAL_NO, this.serialno == null ? JSONObject.NULL : this.serialno);
-        json.put(singleMember.COLUMN_NAME, this.name == null ? JSONObject.NULL : this.name);
-        json.put(singleMember.COLUMN_RELATION_HH, this.relHH == null ? JSONObject.NULL : this.relHH);
-        json.put(singleMember.COLUMN_AGE, this.age == null ? JSONObject.NULL : this.age);
-        json.put(singleMember.COLUMN_MOTHER_NAME, this.mother_name == null ? JSONObject.NULL : this.mother_name);
-        json.put(singleMember.COLUMN_MOTHER_SERIAL, this.mother_serial == null ? JSONObject.NULL : this.mother_serial);
-        json.put(singleMember.COLUMN_GENDER, this.gender == null ? JSONObject.NULL : this.gender);
-        json.put(singleMember.COLUMN_MARITAL, this.marital == null ? JSONObject.NULL : this.marital);
+        json.put(SingleMember.COLUMN_ID, this._id == null ? JSONObject.NULL : this._id);
+        json.put(SingleMember.COLUMN_UID, this.uid == null ? JSONObject.NULL : this.uid);
+        json.put(SingleMember.COLUMN_UUID, this.uuid == null ? JSONObject.NULL : this.uuid);
+        json.put(SingleMember.COLUMN_FORMDATE, this.formdate == null ? JSONObject.NULL : this.formdate);
+        json.put(SingleMember.COLUMN_CLUSTERNO, this.clusterno == null ? JSONObject.NULL : this.clusterno);
+        json.put(SingleMember.COLUMN_HHNO, this.hhno == null ? JSONObject.NULL : this.hhno);
+        json.put(SingleMember.COLUMN_SERIAL_NO, this.serialno == null ? JSONObject.NULL : this.serialno);
+        json.put(SingleMember.COLUMN_NAME, this.name == null ? JSONObject.NULL : this.name);
+        json.put(SingleMember.COLUMN_RELATION_HH, this.relHH == null ? JSONObject.NULL : this.relHH);
+        json.put(SingleMember.COLUMN_AGE, this.age == null ? JSONObject.NULL : this.age);
+        json.put(SingleMember.COLUMN_MOTHER_NAME, this.mother_name == null ? JSONObject.NULL : this.mother_name);
+        json.put(SingleMember.COLUMN_MOTHER_SERIAL, this.mother_serial == null ? JSONObject.NULL : this.mother_serial);
+        json.put(SingleMember.COLUMN_GENDER, this.gender == null ? JSONObject.NULL : this.gender);
+        json.put(SingleMember.COLUMN_MARITAL, this.marital == null ? JSONObject.NULL : this.marital);
 
         if (!this.sD.equals("")) {
-            json.put(singleMember.COLUMN_SD, this.sD.equals("") ? JSONObject.NULL : new JSONObject(this.sD));
+            json.put(SingleMember.COLUMN_SD, this.sD.equals("") ? JSONObject.NULL : new JSONObject(this.sD));
         }
 
         return json;
@@ -212,7 +212,7 @@ public class FamilyMembersContract {
         this.available = available;
     }
 
-    public static abstract class singleMember implements BaseColumns {
+    public static abstract class SingleMember implements BaseColumns {
 
         public static final String TABLE_NAME = "familymembers";
         public static final String COLUMN_ID = "_id";

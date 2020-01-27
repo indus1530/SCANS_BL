@@ -79,7 +79,7 @@ public class SectionFActivity extends AppCompatActivity {
         DatabaseHelper db = MainApp.appInfo.getDbHelper();
         long updcount = db.addKishMWRA(MainApp.kish);
         MainApp.kish.set_ID(String.valueOf(updcount));
-        if (updcount != 0) {
+        if (updcount > 0) {
             MainApp.kish.setUID(MainApp.kish.getDeviceId() + MainApp.kish.get_ID());
             db.updatesKishMWRAColumn(KishMWRAContract.SingleKishMWRA.COLUMN_UID, MainApp.kish.getUID());
             return true;
