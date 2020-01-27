@@ -50,14 +50,14 @@
                             style="@style/radiobutton"
                             android:layout_width="0dp"
                             android:layout_weight="1"
-                            android:text="@string/f121a" />
+                            android:text="@string/yes" />
 
                         <RadioButton
                             android:id="@+id/f121b"
                             style="@style/radiobutton"
                             android:layout_width="0dp"
                             android:layout_weight="1"
-                            android:text="@string/f121b" />
+                            android:text="@string/no" />
 
                     </RadioGroup>
 
@@ -427,8 +427,11 @@
                                 android:id="@+id/f128g"
                                 style="@style/checkbox"
                                 android:text="@string/f128g" />
+
                         </LinearLayout>
+
                     </LinearLayout>
+
                 </androidx.cardview.widget.CardView>
 
                 <!-- f129  Radio   -->
@@ -717,8 +720,11 @@
                             android:id="@+id/f134g"
                             style="@style/checkbox"
                             android:text="@string/f134g" />
+
                     </LinearLayout>
+
                 </LinearLayout>
+
             </androidx.cardview.widget.CardView>
 
 

@@ -16,7 +16,7 @@
     <string name="error_field_required">This field is required</string>
     <string name="permission_rationale">"Contacts permissions are needed for providing email completions." </string>
 
-    <string name="taheading">SECTION A: HH Identification</string>
+
     <string name="tdheading">SECTION D: HOUSEHOLD MEMBERS’ INFORMATION</string>
     <string name="teheading">SECTION E: REPRODUCTIVE HEALTH (Complete this table for all married women aged 15-49 years in the household) </string>
     <string name="te2heading">MATERNAL MORTALITY STATUS</string>
@@ -64,16 +64,22 @@
     <string name="mwra">MWRA</string>
     <string name="under5">Child Under 5</string>
 
-    <string name="a101">Cluster number </string>
-    <string name="a101a">This information will be based on the list of villages generated from the district. Each enumerator will be given a list of clusters that he/she will be visiting, and before starting the interview, this information will be entered from the same list.</string>
-    <string name="a102">Cluster type</string>
-    <string name="a102a">LHW covered </string>
-    <string name="a102b">LHW uncovered </string>
-    <string name="a103">Form Serial Number : Auto generated </string>
+
+    <string name="taheading">SECTION A: HH Identification</string>
+    <string name="a101"> A101:\t Cluster number </string>
+    <string name="a101a"> This information will be based on the list of villages generated from the district. Each enumerator will be given a list of clusters that he/she will be visiting, and before starting the interview, this information will be entered from the same list. </string>
+
+    <string name="a102"> A102:\t Cluster type </string>
+    <string name="a102a"> LHW covered </string>
+    <string name="a102b"> LHW uncovered </string>
+
+    <string name="a103"> A103:\t Form Serial Number : Auto generated </string>
+
     <string name="a104">Province</string>
     <string name="a104a">Balochistan </string>
     <string name="a104b">Punjab </string>
     <string name="a104c">Sindh </string>
+
     <string name="a105">District</string>
     <string name="a105a">Jafferabad </string>
     <string name="a105a_title">Balochistan</string>
@@ -86,15 +92,23 @@
     <string name="a105f_title">Sindh</string>
     <string name="a105g">Sanghar </string>
     <string name="a105h">Qamber Shahdadkot </string>
+
     <string name="a106">Tehsil/Taluka </string>
+
     <string name="a107">Union Council </string>
+
     <string name="a108">Location</string>
     <string name="a108a">Urban </string>
     <string name="a108b">Rural </string>
+
     <string name="a109">Village</string>
+
     <string name="a110">Block/mohalla</string>
+
     <string name="a111">Street</string>
+
     <string name="a112">House number/khandan number</string>
+
     <string name="a112a">Not Available</string>
 
     <string name="checkHHpresent"> Selected Head name present (A/C Line listing) </string>
@@ -111,8 +125,10 @@
     <string name="c101bb">No</string>
 
     <string name="d101">Member Serial Number</string>
+
     <string name="d102">Name</string>
     <string name="d102a">Please give me the names of the persons who usually live in your household, starting with the head of the household.</string>
+
     <string name="d103">Relationship to Head of HH</string>
     <string name="d103x">What is the relationship of [NAME] to the Head of the household?</string>
     <string name="d103a">Head of HH</string>
@@ -130,73 +146,95 @@
     <string name="d103m">Adopted/Step child</string>
     <string name="d103n">Domestic Servant</string>
     <string name="d103o">Don’t Know</string>
-    <string name="d104">Sex : Is [NAME] male or female?</string>
+
+    <string name="d104"> D104:\t Is [NAME] male or female?</string>
     <string name="d104a">Male</string>
     <string name="d104b">Female</string>
+
     <string name="d105">Marital Status</string>
     <string name="d105a">Married</string>
     <string name="d105b">Unmarried</string>
     <string name="d105c">Widowed</string>
     <string name="d105d">Divorced/Separated</string>
+
     <string name="d106">Serial no of Father   If father’s relation is “Not Available” in the members list then record code “NA”</string>
     <string name="d106a">Serial no of Father</string>
     <string name="d106b">NA</string>
+
     <string name="d107">Serial no. of Mother If mother’s relation is “Not Available” in the members list then record code “NA”</string>
     <string name="d107a">Serial no. of Mother</string>
     <string name="d107b">NA</string>
+
     <string name="d108">Date of Birth - If date of birth is not available record “00” and record age</string>
     <string name="d108a">Day</string>
     <string name="d108b">Month</string>
     <string name="d108c">Year</string>
-    <string name="d109">Age &#8212; If date of birth recorded then age will be automatically calculated from D.O.I and D.O.B</string>
-    <string name="d109a">Age</string>
-    <string name="d109b">Months</string>
-    <string name="d109c">Years</string>
-    <string name="d110">Education What is the highest class (NAME) completed</string>
-    <string name="d110a">None</string>
-    <string name="d110b">Pre-Primary</string>
-    <string name="d110c">Primary(1 &#8211; 5)</string>
-    <string name="d110d">Middle (6 &#8211; 8)</string>
-    <string name="d110e">Secondary(9 &#8211; 10)</string>
-    <string name="d110f">Intermediate</string>
-    <string name="d110g">Graduation</string>
-    <string name="d110h">Masters</string>
-    <string name="d110i">PhD</string>
-    <string name="d110j">Diploma (IT/Electric,Mechanical,civil)</string>
-    <string name="d110k">Religious Education (Hafiz/Aalim)</string>
-    <string name="d110l">Don\'t Know</string>
-    <string name="d110m">Not Applicable</string>
-    <string name="d111">Occupation</string>
-    <string name="d111x">For children less than five years, this variable will not be visible, and an auto generated NA code will appear.</string>
-    <string name="d111a">Housewife </string>
-    <string name="d111b">Unskilled Manual Labor</string>
-    <string name="d111c">Skilled Manual labor</string>
-    <string name="d111d">Agriculture</string>
-    <string name="d111e">Sales/Service</string>
-    <string name="d111f">Professional</string>
-    <string name="d111g">Student </string>
-    <string name="d111h">Unemployed</string>
-    <string name="d111i">Retired</string>
-    <string name="d111j">Not Applicable</string>
-    <string name="d112">Total members of household (Auto calculated)</string>
-    <string name="d113">Total married women of Reproductive age in household (Auto calculated)</string>
-    <string name="d114">Total children of under 5 years age in household (Auto calculated)</string>
-    <string name="d115">Is this Respondent are available at home ? </string>
-    <string name="d115a">Yes</string>
-    <string name="d115b">No</string>
 
-    <string name="e100">Name Of Woman</string>
-    <string name="e101">Have you ever been pregnant since your marriage?</string>
-    <string name="e101a">Yes </string>
-    <string name="e101b">No</string>
-    <string name="e102">How many times have you been pregnant since your marriage?</string>
-    <string name="e102a">Are you currently pregnant?</string>
-    <string name="e102aa">Yes</string>
-    <string name="e102ab">No</string>
-    <string name="e103">Pregnancy history number (Auto generate, depending on the number of pregnancies starting from 1)</string>
-    <string name="e104">Thinking back to your pregnancies, was this pregnancy single or multiple? (Similar fields will appear for the following pregnancies. The remaining pregnancies should be identified with the name of the pregnancy.  For example, “thinking back to the pregnancy after {name of the eldest child}……”)</string>
+    <string name="d109"> D109:\t Age </string>
+    <string name="d109hint"> If date of birth recorded then age will be automatically calculated from D.O.I and D.O.B </string>
+    <string name="d109a"> Age </string>
+    <string name="d109b"> Months </string>
+    <string name="d109c"> Years </string>
+
+    <string name="d110"> D110:\t Education What is the highest class (NAME) completed </string>
+    <string name="d110a"> None </string>
+    <string name="d110b"> Pre-Primary </string>
+    <string name="d110c"> Primary(1 &#8211; 5) </string>
+    <string name="d110d"> Middle (6 &#8211; 8) </string>
+    <string name="d110e"> Secondary(9 &#8211; 10) </string>
+    <string name="d110f"> Intermediate </string>
+    <string name="d110g"> Graduation </string>
+    <string name="d110h"> Masters </string>
+    <string name="d110i"> PhD </string>
+    <string name="d110j"> Diploma (IT/Electric,Mechanical,civil) </string>
+    <string name="d110k"> Religious Education (Hafiz/Aalim) </string>
+    <string name="d110l"> Don\'t Know </string>
+    <string name="d110m"> Not Applicable </string>
+
+    <string name="d111"> D111:\t Occupation </string>
+    <string name="d111x"> For children less than five years, this variable will not be visible, and an auto generated NA code will appear. </string>
+    <string name="d111a"> Housewife </string>
+    <string name="d111b"> Unskilled Manual Labor </string>
+    <string name="d111c"> Skilled Manual labor </string>
+    <string name="d111d"> Agriculture </string>
+    <string name="d111e"> Sales/Service </string>
+    <string name="d111f"> Professional </string>
+    <string name="d111g"> Student </string>
+    <string name="d111h"> Unemployed </string>
+    <string name="d111i"> Retired </string>
+    <string name="d111j"> Not Applicable </string>
+
+    <string name="d112"> D112:\t Total members of household (Auto calculated) </string>
+
+    <string name="d113"> D113:\t Total married women of Reproductive age in household (Auto calculated) </string>
+
+    <string name="d114"> D114:\t Total children of under 5 years age in household (Auto calculated) </string>
+
+    <string name="d115"> D115:\t Is this Respondent are available at home ? </string>
+    <string name="d115a"> Yes </string>
+    <string name="d115b"> No </string>
+
+    <string name="e100"> E100:\t Name Of Woman </string>
+
+    <string name="e101"> E101:\t Have you ever been pregnant since your marriage ? </string>
+    <string name="e101a"> Yes </string>
+    <string name="e101b"> No </string>
+
+    <string name="e102"> E102:\t How many times have you been pregnant since your marriage ? </string>
+
+    <string name="e102a"> E102A:\t Are you currently pregnant ? </string>
+    <string name="e102aa"> Yes </string>
+    <string name="e102ab"> No </string>
+
+    <string name="e103"> E103:\t Pregnancy history number </string>
+    <string name="e103hint"> Auto generate, depending on the number of pregnancies starting from 1 </string>
+
+    <string name="e104"> E104:\t Thinking back to your pregnancies, was this pregnancy single or multiple? </string>
+    <string name="e104hint"> Similar fields will appear for the following pregnancies. The remaining pregnancies should be identified with the name of the pregnancy. </string>
+    <string name="e104hint1"> For example, “thinking back to the pregnancy after {name of the eldest child}……” </string>
     <string name="e104a">Single</string>
     <string name="e104b">Multiple</string>
+
     <string name="e105">Was the baby born alive, born dead or lost before birth?</string>
     <string name="e105a">Born alive (Live birth)</string>
     <string name="e105b">Born dead (Still birth)</string>
@@ -204,22 +242,28 @@
     <string name="e105d">One Born One Dead</string>
     <string name="e105e">Both Dead</string>
     <string name="e105f">Lost before full term(Miscarriage)</string>
+
     <string name="e106">In what month and year was {NAME} born? : Probe: When is his/her birthday?</string>
     <string name="e106a">Days</string>
     <string name="e106b">Month</string>
     <string name="e106c">Year</string>
+
     <string name="e107">Is (Name) Still alive?</string>
     <string name="e107a">Yes</string>
     <string name="e107b">No</string>
+
     <string name="e108">Is {NAME} a boy or a girl?</string>
     <string name="e108a">Boy</string>
     <string name="e108b">Girl</string>
-    <string name="e109"> E109:\t What was the name given to the child ? </string>
+
+    <string name="e109">What was the name given to the child ? </string>
     <string name="e109hint"> Record Baby 1, Baby 2 In case no name was given </string>
+
     <string name="e110">How old was {NAME} when he/she died?</string>
     <string name="e110a">Days </string>
     <string name="e110b">Months</string>
     <string name="e110c">Years</string>
+
     <string name="e111">What was the reason for {NAME}’s death?</string>
     <string name="e111a">Birth before 37 weeks (Preterm)</string>
     <string name="e111b">Difficulty in breathing (Birth Asphyxia) </string>
@@ -229,108 +273,141 @@
     <string name="e111f">Diarrhea</string>
     <string name="e111g">Fever</string>
     <string name="e111x">Other (specify)</string>
+
     <string name="e112">Where did {Name} die? </string>
     <string name="e112a">Home</string>
     <string name="e112b">Government health facility</string>
     <string name="e112c">Private health facility</string>
     <string name="e112d">NGO health facility</string>
     <string name="e112e">On the way to the facility </string>
+
     <string name="e113">If born dead or lost before birth: In what month and year did this pregnancy end? (MM/YYYY)</string>
+
     <string name="e114">How long did the pregnancy last? (data will be converted to weeks for analytical purposes)  (Months)</string>
+
     <string name="e115">Did you or someone else do something to end this pregnancy?</string>
     <string name="e115a">Yes</string>
     <string name="e115b">No</string>
-    <string name="e116">God Forbid (Khuda Na Khuwasta), did any woman in your household die during  42 days after delivery in the past three years due to pregnancy related complications?</string>
-    <string name="e116a">Yes</string>
-    <string name="e116b">No</string>
-    <string name="e116_title">MATERNAL MORTALITY STATUS The following questions now related to maternal mortality in the past 3 years in your household. (2017-2019) Definition of Maternal Mortality: Maternal death is the death of a woman while pregnant or within 42 days of termination of pregnancy, irrespective of the duration and site of the pregnancy, from any cause related to or aggravated by the pregnancy or its management but not from accidental or incidental causes.</string>
-    <string name="e117">How many women have died?</string>
-    <string name="e118">Name of woman</string>
-    <string name="e119">Date of death (dd/mm/yyyy)</string>
-    <string name="e120">Age at time of death (In Years)</string>
-    <string name="e121">Cause of death</string>
-    <string name="e121a">Severe bleeding (before childbirth)</string>
-    <string name="e121b">Severe Bleeding (mostly bleeding after childbirth)</string>
-    <string name="e121c">Infection/Fever (mostly after childbirth) </string>
-    <string name="e121d">High Blood Pressure during pregnancy (pre eclampsia and eclampsia) </string>
-    <string name="e121e">Complication from delivery</string>
-    <string name="e121f">Unsafe abortion</string>
-    <string name="e121g">Convulsion </string>
-    <string name="e121h">CAUSE NOT KNOWN/Don’t know</string>
-    <string name="e121x">OTHERS (specify)</string>
-    <string name="e122">Place of death</string>
-    <string name="e122a">At home</string>
-    <string name="e122b">Government health facility</string>
-    <string name="e122c">Private health facility</string>
-    <string name="e122d">NGO health facility</string>
-    <string name="e122e">On the way to the facility </string>
 
-    <string name="f101">Did you see anyone for antenatal care during your last pregnancy with (name)?</string>
-    <string name="f101a">Why did you not go for antenatal check-up(s) during your pregnancy with {NAME}?   Multiple responses allowed</string>
-    <string name="f101aa">No transportation</string>
-    <string name="f101ab">Poor attitude of staff</string>
-    <string name="f101ac">Facility not functional</string>
-    <string name="f101ad">Too far</string>
-    <string name="f101ae">A male/husband was not present to accompany me to the health facility</string>
-    <string name="f101af">Poor quality of service</string>
-    <string name="f101ag">No female provider at facility</string>
-    <string name="f101ah">Not necessary</string>
-    <string name="f101ai">High Cost</string>
+    <string name="e116"> E116:\t God Forbid (Khuda Na Khuwasta), did any woman in your household die during 42 days after delivery in the past three years due to pregnancy related complications ? </string>
+    <string name="e116a"> Yes </string>
+    <string name="e116b"> No </string>
+    <string name="e116_title"> MATERNAL MORTALITY STATUS The following questions now related to maternal mortality in the past 3 years in your household. (2017 &#8212; 2019) Definition of Maternal Mortality: Maternal death is the death of a woman while pregnant or within 42 days of termination of pregnancy, irrespective of the duration and site of the pregnancy, from any cause related to or aggravated by the pregnancy or its management but not from accidental or incidental causes.</string>
+
+    <string name="e117"> E117:\t How many women have died ? </string>
+
+    <string name="e118"> E118:\t Name of woman </string>
+
+    <string name="e119"> E119:\t Date of death (dd/mm/yyyy) </string>
+
+    <string name="e120"> E120:\t Age at time of death (In Years) </string>
+
+    <string name="e121"> E121:\t Cause of death </string>
+    <string name="e121a"> Severe bleeding (before childbirth) </string>
+    <string name="e121b"> Severe Bleeding (mostly bleeding after childbirth) </string>
+    <string name="e121c"> Infection/Fever (mostly after childbirth) </string>
+    <string name="e121d"> High Blood Pressure during pregnancy (pre eclampsia and eclampsia) </string>
+    <string name="e121e"> Complication from delivery </string>
+    <string name="e121f"> Unsafe abortion </string>
+    <string name="e121g"> Convulsion </string>
+    <string name="e121h"> CAUSE NOT KNOWN/Don’t know </string>
+    <string name="e121x"> Others (specify) </string>
+
+    <string name="e122"> E122:\t Place of death</string>
+    <string name="e122a"> At home </string>
+    <string name="e122b"> Government health facility </string>
+    <string name="e122c"> Private health facility </string>
+    <string name="e122d"> NGO health facility </string>
+    <string name="e122e"> On the way to the facility </string>
+
+    <string name="f101"> F101:\t Did you see anyone for antenatal care during your last pregnancy with (name) ? </string>
+
+    <string name="f101a"> F101A:\t Why did you not go for antenatal check-up(s) during your pregnancy with {NAME} ? </string>
+    <string name="f101ahint"> Multiple responses allowed </string>
+    <string name="f101aa"> No transportation </string>
+    <string name="f101ab"> Poor attitude of staff </string>
+    <string name="f101ac"> Facility not functional </string>
+    <string name="f101ad"> Too far </string>
+    <string name="f101ae"> A male/husband was not present to accompany me to the health facility </string>
+    <string name="f101af"> Poor quality of service </string>
+    <string name="f101ag"> No female provider at facility </string>
+    <string name="f101ah"> Not necessary </string>
+    <string name="f101ai"> High Cost </string>
+
     <string name="f101n">No</string>
     <string name="f101y">Yes</string>
-    <string name="f102">Where did you seek ANC checkup for last pregnancy?</string>
-    <string name="f102a">Government health facility</string>
-    <string name="f102b">Private health facility</string>
-    <string name="f102c">Health House</string>
-    <string name="f102d">Birth station</string>
-    <string name="f103">Who did ANC checkup during last pregnancy?  Probe: Anyone else?</string>
-    <string name="f103a">Doctor</string>
-    <string name="f103b">LHV (Lady Health Visitor)</string>
-    <string name="f103c">Nurse</string>
-    <string name="f103d">CMW (Community Midwife) </string>
-    <string name="f103e">LHW (Lady Health Worker)</string>
-    <string name="f104">How far is the health facility where you usually receive antenatal check-up(s) during last pregnancy, from your home?</string>
-    <string name="f105">How do you usually travel to the health facility, where you usually receive antenatal check-up(s) during pregnancy with {NAME}?</string>
-    <string name="f105a">Walk</string>
-    <string name="f105b">Car </string>
-    <string name="f105c">Motorcycle</string>
-    <string name="f105d">Public transport/Rikshaw</string>
-    <string name="f106">How long does it take to reach health facility, where you usually receive antenatal check-up(s) during pregnancy with {NAME} from your home?</string>
-    <string name="f107">Who accompanied you to antenatal check-up(s) during pregnancy with {NAME}?</string>
-    <string name="f107a">Husband</string>
-    <string name="f107b">Nobody accompany me , I  went on my own</string>
-    <string name="f107x">Other (specify)</string>
-    <string name="f108">How many weeks or months pregnant were you when you first received antenatal care during last pregnancy with {NAME}? Record the answer as stated by respondent. </string>
-    <string name="f108a">Weeks</string>
-    <string name="f108b">Month</string>
-    <string name="f108c">Don’t Known</string>
-    <string name="f109">How many times did you receive antenatal care during last pregnancy with {NAME}? Probe to identify the number of times antenatal care was received. If a range is given, record the minimum number of times antenatal care received.</string>
-    <string name="f109a">Number of times</string>
-    <string name="f109b">Don’t Know</string>
-    <string name="f110">As part of your antenatal care during your pregnancy, were any of the following done at least once:(Ask about each option and circle all positive responses) (</string>
-    <string name="f110a">Were you weighed</string>
-    <string name="f110b">Was your BP measured</string>
-    <string name="f110c">Did you give urine sample </string>
-    <string name="f110d">Did you give blood sample</string>
-    <string name="f110e">Ultrasound</string>
-    <string name="f110f">Received counselling on nutrition</string>
-    <string name="f110g">Received counselling on breastfeeding</string>
-    <string name="f110h">Received counselling on family planning</string>
-    <string name="f110i">None of the above</string>
-    <string name="f110x">Other specify</string>
-    <string name="f111">Do you have a card or other document with your own immunizations listed? If yes, ask: May I see it please? If a card is presented, use it to assist with answers to the following questions.</string>
-    <string name="f111a">Yes (card or other document seen)</string>
-    <string name="f111b">No (card or other document Not seen</string>
-    <string name="f112">When you were pregnant with (name), did you receive any injection in the arm or shoulder to prevent you and the baby from getting tetanus, that is, convulsions after birth?</string>
-    <string name="f112a">Yes</string>
-    <string name="f112b">No</string>
-    <string name="f112c">Don\'t Know</string>
-    <string name="f113">How many times did you receive tetanus injection during your pregnancy with (name)?</string>
+
+    <string name="f102"> F102:\t Where did you seek ANC checkup for last pregnancy ? </string>
+    <string name="f102a"> Government health facility </string>
+    <string name="f102b"> Private health facility </string>
+    <string name="f102c"> Health House </string>
+    <string name="f102d"> Birth station </string>
+
+    <string name="f103"> F103:\t Who did ANC checkup during last pregnancy?  Probe: Anyone else ? </string>
+    <string name="f103a"> Doctor </string>
+    <string name="f103b"> LHV (Lady Health Visitor) </string>
+    <string name="f103c"> Nurse </string>
+    <string name="f103d"> CMW (Community Midwife) </string>
+    <string name="f103e"> LHW (Lady Health Worker) </string>
+
+    <string name="f104"> F104:\t How far is the health facility where you usually receive antenatal check-up(s) during last pregnancy, from your home ? </string>
+
+    <string name="f105"> F105:\t How do you usually travel to the health facility, where you usually receive antenatal check-up(s) during pregnancy with {NAME}?</string>
+    <string name="f105a"> Walk </string>
+    <string name="f105b"> Car </string>
+    <string name="f105c"> Motorcycle </string>
+    <string name="f105d"> Public transport/Rikshaw </string>
+
+    <string name="f106"> F106:\t How long does it take to reach health facility, where you usually receive antenatal check-up(s) during pregnancy with {NAME} from your home ? </string>
+
+    <string name="f107"> F107:\t Who accompanied you to antenatal check-up(s) during pregnancy with {NAME} ? </string>
+    <string name="f107a"> Husband </string>
+    <string name="f107b"> Nobody accompany me , I  went on my own </string>
+    <string name="f107x"> Other (specify) </string>
+
+    <string name="f108"> F108:\t How many weeks or months pregnant were you when you first received antenatal care during last pregnancy with {NAME}? Record the answer as stated by respondent. </string>
+    <string name="f108a"> Weeks </string>
+    <string name="f108b"> Month </string>
+    <string name="f108c"> Don’t Known </string>
+
+    <string name="f109"> F109:\t How many times did you receive antenatal care during last pregnancy with {NAME}? Probe to identify the number of times antenatal care was received. If a range is given, record the minimum number of times antenatal care received.</string>
+    <string name="f109hint"> Probe to identify the number of times antenatal care was received. </string>
+    <string name="f109hint1"> If a range is given, record the minimum number of times antenatal care received.</string>
+    <string name="f109a"> Number of times </string>
+    <string name="f109b"> Don’t Know </string>
+
+    <string name="f110"> F110:\t As part of your antenatal care during your pregnancy, were any of the following done at least once </string>
+    <string name="f110hint"> Ask about each option and circle all positive responses </string>
+    <string name="f110a"> Were you weighed </string>
+    <string name="f110b"> Was your BP measured </string>
+    <string name="f110c"> Did you give urine sample </string>
+    <string name="f110d"> Did you give blood sample </string>
+    <string name="f110e"> Ultrasound </string>
+    <string name="f110f"> Received counselling on nutrition </string>
+    <string name="f110g"> Received counselling on breastfeeding </string>
+    <string name="f110h"> Received counselling on family planning </string>
+    <string name="f110i"> None of the above</string>
+    <string name="f110x"> Other specify </string>
+
+    <string name="f111"> F111:\t Do you have a card or other document with your own immunizations listed ? </string>
+    <string name="f111hint"> If yes, ask: May I see it please ? </string>
+    <string name="f111hint1"> If a card is presented, use it to assist with answers to the following questions. </string>
+    <string name="f111a"> Yes (card or other document seen) </string>
+    <string name="f111b"> No (card or other document Not seen </string>
+
+    <string name="f112"> F112:\t When you were pregnant with (name), did you receive any injection in the arm or shoulder to prevent you and the baby from getting tetanus, that is, convulsions after birth ? </string>
+    <string name="f112a"> Yes </string>
+    <string name="f112b"> No </string>
+    <string name="f112c"> Don\'t Know </string>
+
+    <string name="f113"> F113:\t How many times did you receive tetanus injection during your pregnancy with (name)?</string>
     <string name="f113a">Number of times</string>
     <string name="f113b">Don\'t Know</string>
+
     <string name="f114">Have you ever taken any iron folic acid (IFA) while you were pregnant?</string>
     <string name="f114a">Yes</string>
     <string name="f114b">No</string>
+
     <string name="f115">Who advised to take any iron folic acid (IFA) while you were pregnant?  </string>
     <string name="f115a">Doctor</string>
     <string name="f115b">LHV (Lady Health Visitor)</string>
@@ -338,6 +415,7 @@
     <string name="f115d">CMW (Community Midwife)</string>
     <string name="f115e">LHW (Lady Health Worker)</string>
     <string name="f115f">Dai/TBA (Traditional Birth Attendant)</string>
+
     <string name="f116">From Where did you get iron folic acid (IFA) while you were pregnant?    [Multiple responses</string>
     <string name="f116a">Doctor</string>
     <string name="f116b">LHV (Lady Health Visitor)</string>
@@ -348,23 +426,29 @@
     <string name="f116g">Dai/TBA (Traditional Birth Attendant)</string>
     <string name="f116h">Pharmacy (Medical Store)</string>
     <string name="f116i">Friend/Relative Friend/Relative </string>
+
     <string name="f117">How often did you take IFA during pregnancy?</string>
     <string name="f117a">Daily </string>
     <string name="f117b">Once a week  </string>
     <string name="f117c">Biweekly</string>
     <string name="f117d">Monthly </string>
     <string name="f117e">Rarely</string>
+
     <string name="f118">How many months or days did you take IFA? </string>
     <string name="f118a">Month </string>
     <string name="f118b">Days </string>
+
     <string name="f119">Did you pay for IFA?</string>
     <string name="f119a">Yes</string>
     <string name="f119b">No</string>
+
     <string name="f120">On average, how much did you spend per month for IFA?</string>
     <string name="f121">Did LHW visit your household during your last pregnancy? </string>
     <string name="f121a">Yes</string>
     <string name="f121b">No</string>
+
     <string name="f122">How many times LHW visit, as part of your antenatal care during your last pregnancy?</string>
+
     <string name="f123">What was the purpose of LHW’s visit during your last pregnancy for ANC?  [Multiple responses]  </string>
     <string name="f123a">Informed expected Delivery date</string>
     <string name="f123b">Health, Nutrition, Hygiene counselling</string>
@@ -373,9 +457,11 @@
     <string name="f123e">Birth Preparedness counselling</string>
     <string name="f123f">Provided IFA</string>
     <string name="f123g">Informed about danger signs during pregnancy</string>
+
     <string name="f124">Did you get information about danger sign /problems during your pregnancy with {NAME}?</string>
     <string name="f124a">Yes</string>
     <string name="f124b">No</string>
+
     <string name="f125">Will you please name any danger signs/problems that you are aware of?  Select all that are mentioned, DO NOT READ LIST OR PROMPT with any suggestions such as Any other danger signs?</string>
     <string name="f125a">Vaginal bleeding</string>
     <string name="f125b">Severe headache &amp; vision problems</string>
@@ -383,6 +469,7 @@
     <string name="f125d">Swollen hands/face/feet</string>
     <string name="f125e">Reduced fatal movement</string>
     <string name="f125f">Abdominal pain/cramps(&lt;37th weeks)</string>
+
     <string name="f126">By whom Did you receive the information on danger signs/problems during your pregnancy with {NAME}?</string>
     <string name="f126a">Doctor</string>
     <string name="f126b">LHV (Lady Health Visitor)</string>
@@ -391,10 +478,12 @@
     <string name="f126e">LHW (Lady Health Worker)</string>
     <string name="f126f">Dai/TBA (Traditional Birth Attendant)</string>
     <string name="f126g">TV/Radio/News Paper/Mobile</string>
+
     <string name="f127">Where did the health care provider tell you to go in case you notice danger signs/problems during pregnancy with {NAME}? </string>
     <string name="f127a">Government health facility</string>
     <string name="f127b">Private health facility</string>
     <string name="f127c">NGO health facility </string>
+
     <string name="f128">What danger signs/problems did you experience during pregnancy with {NAME}?  Multiple responses are allowed</string>
     <string name="f128a">Vaginal bleeding</string>
     <string name="f128b">Severe headache &amp; vision problems</string>
@@ -403,9 +492,11 @@
     <string name="f128e">Reduced fetal movement</string>
     <string name="f128f">Abdominal pain/cramps(&lt;37th weeks)</string>
     <string name="f128g">No, I did not experience any danger sign</string>
+
     <string name="f129">Did you seek care for the danger signs/problems mentioned above?</string>
     <string name="f129a">Yes</string>
     <string name="f129b">No</string>
+
     <string name="f130">Why did you not seek care from a health care provider for the danger signs/problems mentioned above during your pregnancy with {NAME}?   Select all that apply. </string>
     <string name="f130a">No transportation</string>
     <string name="f130b">Poor attitude of staff</string>
@@ -416,18 +507,22 @@
     <string name="f130g">No female provider at facility</string>
     <string name="f130h">Not necessary</string>
     <string name="f130i">High Cost</string>
+
     <string name="f131">Where did you seek care for the danger signs/problems you mentioned above during your pregnancy with {NAME}?</string>
     <string name="f131a">Government health facility</string>
     <string name="f131b">Private health facility</string>
     <string name="f131c">NGO health facility</string>
+
     <string name="f132">Did your diet/eating habit change during the pregnancy with {NAME}? </string>
     <string name="f132a">Yes, more than usual</string>
     <string name="f132b">Yes, less than usual</string>
     <string name="f132c">Remains Same</string>
+
     <string name="f133">Did the nature of your household work (physical exertion) change during the pregnancy with {NAME}?</string>
     <string name="f133a">Yes, more than usual</string>
     <string name="f133b">Radio Yes, less than usual</string>
     <string name="f133c">Remains Same</string>
+
     <string name="f134">What preparedness measures did you take for {NAME}’s birth?</string>
     <string name="f134a">Selection of birth attendant</string>
     <string name="f134b">Selection of health facility to go in case of complication</string>
