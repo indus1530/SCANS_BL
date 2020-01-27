@@ -88,6 +88,7 @@ public class SectionNActivity extends AppCompatActivity {
     private void SaveDraft() throws JSONException {
 
         JSONObject json = new JSONObject();
+
         json.put("n101",
                 bi.n101a.isChecked() ?"1" :
                         bi.n101b.isChecked() ?"2" :
@@ -125,11 +126,13 @@ public class SectionNActivity extends AppCompatActivity {
                         bi.n103b.isChecked() ?"2" :
                                 bi.n103c.isChecked() ?"3" :
                                         "0");
+
         json.put("n104",
-                bi.n104a.isChecked() ?"" :
-                        bi.n104b.isChecked() ?"98" :
+                bi.n104a.isChecked() ? "1" :
+                        bi.n104b.isChecked() ? "98" :
                                 "0");
-        json.put("n104at", bi.n104at.getText().toString());
+        json.put("n104ax", bi.n104ax.getText().toString());
+
         json.put("n105",
                 bi.n105a.isChecked() ?"1" :
                         bi.n105b.isChecked() ?"2" :
@@ -138,15 +141,18 @@ public class SectionNActivity extends AppCompatActivity {
                                                 bi.n105e.isChecked() ?"5" :
                                                         bi.n105f.isChecked() ?"98" :
                                                                 "0");
+
         json.put("n106",
                 bi.n106a.isChecked() ?"1" :
                         bi.n106b.isChecked() ?"2" :
                                 "0");
+
         json.put("n107",
                 bi.n107a.isChecked() ?"1" :
                         bi.n107b.isChecked() ?"2" :
                                 bi.n107c.isChecked() ?"98" :
                                         "0");
+
         json.put("n108",
                 bi.n108a.isChecked() ?"1" :
                         bi.n108b.isChecked() ?"2" :

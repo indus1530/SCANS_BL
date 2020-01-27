@@ -2,7 +2,6 @@ package edu.aku.hassannaqvi.uen_midline.ui.sections;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.provider.Settings;
 import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
@@ -12,9 +11,6 @@ import com.validatorcrawler.aliazaz.Validator;
 
 import org.json.JSONException;
 import org.json.JSONObject;
-
-import java.text.SimpleDateFormat;
-import java.util.Date;
 
 import edu.aku.hassannaqvi.uen_midline.R;
 import edu.aku.hassannaqvi.uen_midline.contracts.FormsContract;
@@ -27,7 +23,6 @@ import edu.aku.hassannaqvi.uen_midline.utils.Util;
 public class SectionAActivity extends AppCompatActivity {
 
     ActivitySectionABinding bi;
-    private String dtToday = new SimpleDateFormat("dd-MM-yy HH:mm").format(new Date().getTime());
     private DatabaseHelper db;
 
     @Override
@@ -79,9 +74,10 @@ public class SectionAActivity extends AppCompatActivity {
     private void SaveDraft() throws JSONException {
 
         MainApp.fc = new FormsContract();
-        MainApp.fc.setFormDate(dtToday);
+        MainApp.fc.setFormDate(MainApp.appInfo.getDtToday());
         MainApp.fc.setUser(MainApp.userName);
-        MainApp.fc.setDeviceID(Settings.Secure.getString(getApplicationContext().getContentResolver(), Settings.Secure.ANDROID_ID));
+        MainApp.fc.setDeviceID(MainApp.appInfo.getDeviceID());
+        MainApp.fc.setDevicetagID(MainApp.appInfo.getTagName());
         MainApp.fc.setAppversion(MainApp.appInfo.getVersionName() + "." + MainApp.appInfo.getVersionCode());
         MainApp.fc.setClusterCode(bi.a101.getText().toString());
         MainApp.fc.setHhno(bi.a112.getText().toString());
