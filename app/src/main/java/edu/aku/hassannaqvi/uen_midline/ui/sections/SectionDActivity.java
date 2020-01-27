@@ -41,7 +41,6 @@ public class SectionDActivity extends AppCompatActivity {
     private int serial = 0;
     private Pair<List<Integer>, List<String>> menSLst;
     private Pair<List<Integer>, List<String>> womenSLst;
-    private FamilyMembersContract motherFMC;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -182,7 +181,7 @@ public class SectionDActivity extends AppCompatActivity {
                 ? mainVModel.getMemberInfo(menSLst.getFirst().get(bi.d106.getSelectedItemPosition() - 2)).getSerialno() : "97");
         fmc.setMother_name(bi.d106.getSelectedItem().toString());
 
-        motherFMC = womenSLst.getFirst().size() != 0 && bi.d107.getSelectedItemPosition() != 1
+        FamilyMembersContract motherFMC = womenSLst.getFirst().size() != 0 && bi.d107.getSelectedItemPosition() != 1
                 ? mainVModel.getMemberInfo(womenSLst.getFirst().get(bi.d107.getSelectedItemPosition() - 2)) : null;
         String motherSerial = womenSLst.getFirst().size() != 0 && bi.d107.getSelectedItemPosition() != 1
                 ? mainVModel.getMemberInfo(womenSLst.getFirst().get(bi.d107.getSelectedItemPosition() - 2)).getSerialno() : "97";
