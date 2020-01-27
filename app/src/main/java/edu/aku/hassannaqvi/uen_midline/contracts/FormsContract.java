@@ -81,7 +81,7 @@ public class FormsContract {
         this.sO = sO;
     }
 
-    public static final String CONTENT_AUTHORITY = "edu.aku.hassannaqvi.rsvstudy";
+    public static final String CONTENT_AUTHORITY = "edu.aku.hassannaqvi.uen_midline";
 
     public static final String PATH_FORMS = "forms";
 
@@ -368,7 +368,7 @@ public class FormsContract {
 
         public static final String TABLE_NAME = "forms";
         public static final String COLUMN_NAME_NULLABLE = "NULLHACK";
-        public static final String COLUMN_PROJECT_NAME = "uen_mdline2020";
+        public static final String COLUMN_PROJECT_NAME = "projectName";
         public static final String COLUMN_ID = "_id";
         public static final String COLUMN_UID = "_uid";
         public static final String COLUMN_FORMDATE = "formdate";
