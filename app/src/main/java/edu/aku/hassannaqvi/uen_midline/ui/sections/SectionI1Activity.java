@@ -217,7 +217,7 @@ public class SectionI1Activity extends AppCompatActivity {
         f1.put("i1_res_fm_uid", res_child.getUid());
         f1.put("i1_res_fm_serial", res_child.getSerialno());
 
-//        f1.put("i100", fmc_child.getSerialno());
+        f1.put("i100", bi.i100.getSelectedItem().toString());
         f1.put("i101", bi.i101a.isChecked() ? "1" :
                 bi.i101b.isChecked() ? "2" : "0");
 

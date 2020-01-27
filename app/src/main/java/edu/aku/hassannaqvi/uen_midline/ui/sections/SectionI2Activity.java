@@ -33,7 +33,7 @@ import static edu.aku.hassannaqvi.uen_midline.ui.list_activity.FamilyMembersList
 public class SectionI2Activity extends AppCompatActivity {
 
     ActivitySectionI2Binding bi;
-    private FamilyMembersContract fmc_child;
+    private FamilyMembersContract fmc_child, res_child;
     private Pair<List<Integer>, List<String>> childLst, resList;
 
     @Override
@@ -84,9 +84,23 @@ public class SectionI2Activity extends AppCompatActivity {
                     populateRespondentSpinner();
                 } else {
                     bi.respondentSpinner.setVisibility(View.GONE);
+                    res_child = mainVModel.getMemberInfo(Integer.valueOf(fmc_child.getSerialno()));
                 }
 
 
+            }
+
+            @Override
+            public void onNothingSelected(AdapterView<?> parent) {
+
+            }
+        });
+
+        bi.i20res.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+            @Override
+            public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
+                if (position == 0) return;
+                res_child = mainVModel.getMemberInfo(resList.getFirst().get(bi.i20res.getSelectedItemPosition() - 1));
             }
 
             @Override
@@ -186,6 +200,14 @@ public class SectionI2Activity extends AppCompatActivity {
 
     private void SaveDraft() throws JSONException {
 
+        JSONObject f1 = new JSONObject();
+
+//        f1.put("hhno", MainApp.fc.getHhno());
+//        f1.put("cluster", MainApp.fc.getClusterCode());
+        f1.put("i2_fm_uid", fmc_child.getUid());
+        f1.put("i2_fm_serial", fmc_child.getSerialno());
+        f1.put("i2_res_fm_uid", res_child.getUid());
+        f1.put("i2_res_fm_serial", res_child.getSerialno());
         JSONObject f2 = new JSONObject();
 
         f2.put("i201",
