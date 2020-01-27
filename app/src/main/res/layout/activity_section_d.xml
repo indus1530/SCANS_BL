@@ -65,7 +65,7 @@
                             android:text="@string/d102" />
 
                         <TextView
-                            style="@style/textView3Head"
+                            style="@style/i_textviewhint"
                             android:text="@string/d102a" />
 
                         <EditText
@@ -77,6 +77,7 @@
                             android:textColor="@android:color/black" />
 
                     </LinearLayout>
+
                 </androidx.cardview.widget.CardView>
 
                 <!-- d103  Radio   -->
@@ -94,8 +95,8 @@
                             android:text="@string/d103" />
 
                         <TextView
-                            style="@style/textView3Head"
-                            android:text="@string/d103x" />
+                            style="@style/i_textviewhint"
+                            android:text="@string/d103hint" />
 
                         <RadioGroup
                             android:id="@+id/d103"
@@ -177,8 +178,11 @@
                                 android:id="@+id/d103o"
                                 style="@style/radiobutton"
                                 android:text="@string/d103o" />
+
                         </RadioGroup>
+
                     </LinearLayout>
+
                 </androidx.cardview.widget.CardView>
 
                 <!-- d104  Radio   -->

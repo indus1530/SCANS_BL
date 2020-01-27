@@ -651,21 +651,20 @@ public class DatabaseHelper extends SQLiteOpenHelper {
 
         // Create a new map of values, where column names are the keys
         ContentValues values = new ContentValues();
-/*        values.put(SingleMember.COLUMN_ID, morc.get_id());
-        values.put(SingleMember.COLUMN_UID, morc.getUid());
-        values.put(SingleMember.COLUMN_UUID, morc.getUuid());
-        values.put(SingleMember.COLUMN_FORMDATE, morc.getFormdate());
-        values.put(SingleMember.COLUMN_CLUSTERNO, morc.getClusterno());
-        values.put(SingleMember.COLUMN_HHNO, morc.getHhno());
-        values.put(SingleMember.COLUMN_SERIAL_NO, morc.getSerialno());
-        values.put(SingleMember.COLUMN_NAME, morc.getName());
-        values.put(SingleMember.COLUMN_RELATION_HH, morc.getRelHH());
-        values.put(SingleMember.COLUMN_AGE, morc.getAge());
-        values.put(SingleMember.COLUMN_MOTHER_NAME, morc.getMother_name());
-        values.put(SingleMember.COLUMN_MOTHER_SERIAL, morc.getMother_serial());
-        values.put(SingleMember.COLUMN_GENDER, morc.getGender());
-        values.put(SingleMember.COLUMN_MARITAL, morc.getMarital());
-        values.put(SingleMember.COLUMN_SE1, morc.getsD());*/
+
+        values.put(SingleKishMWRA.COLUMN_UID, kishmwra.getUID());
+
+        values.put(SingleKishMWRA.COLUMN__UUID, kishmwra.get_UUID());
+        values.put(SingleKishMWRA.COLUMN_DEVICEID, kishmwra.getDeviceId());
+        values.put(SingleKishMWRA.COLUMN_FORMDATE, kishmwra.getFormDate());
+        values.put(SingleKishMWRA.COLUMN_USER, kishmwra.getUser());
+        values.put(SingleKishMWRA.COLUMN_SF, kishmwra.getsF());
+        values.put(SingleKishMWRA.COLUMN_SG, kishmwra.getsG());
+        values.put(SingleKishMWRA.COLUMN_SH1, kishmwra.getsH1());
+        values.put(SingleKishMWRA.COLUMN_SH2, kishmwra.getsH2());
+        values.put(SingleKishMWRA.COLUMN_SK, kishmwra.getsK());
+        values.put(SingleKishMWRA.COLUMN_SL, kishmwra.getsL());
+        values.put(SingleKishMWRA.COLUMN_DEVICETAGID, kishmwra.getDevicetagID());
 
         // Insert the new row, returning the primary key value of the new row
         long newRowId;

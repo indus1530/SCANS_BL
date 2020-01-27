@@ -44,6 +44,7 @@ public class SectionI1Activity extends AppCompatActivity {
 
         setUIComponent();
         setListener();
+
     }
 
     private void setUIComponent() {
