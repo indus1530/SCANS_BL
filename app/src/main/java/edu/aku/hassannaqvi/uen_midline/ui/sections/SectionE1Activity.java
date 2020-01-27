@@ -27,6 +27,7 @@ import java.util.Map;
 
 import edu.aku.hassannaqvi.uen_midline.R;
 import edu.aku.hassannaqvi.uen_midline.contracts.MWRAContract;
+import edu.aku.hassannaqvi.uen_midline.core.DatabaseHelper;
 import edu.aku.hassannaqvi.uen_midline.core.MainApp;
 import edu.aku.hassannaqvi.uen_midline.databinding.ActivitySectionE1Binding;
 import edu.aku.hassannaqvi.uen_midline.utils.Util;
@@ -122,8 +123,18 @@ public class SectionE1Activity extends AppCompatActivity {
 
     private boolean UpdateDB() {
 
+        DatabaseHelper db = new DatabaseHelper(this);
+        long rowID = db.addMWRA(mwra);
+        if (rowID != 0) {
+            mwra.set_ID(String.valueOf(rowID));
+            mwra.setUID(mwra.getDeviceId() + mwra.get_ID());
+            db.updateMWRAUID(mwra);
+            return true;
+        } else {
+            Toast.makeText(this, "Updating Database... ERROR!", Toast.LENGTH_SHORT).show();
+            return false;
+        }
 
-        return true;
     }
 
     private void SaveDraft() throws JSONException {
@@ -135,7 +146,13 @@ public class SectionE1Activity extends AppCompatActivity {
         mwra.setFormDate(new SimpleDateFormat("dd-MM-yy HH:mm").format(new Date().getTime()));
         mwra.setUser(MainApp.userName);
         mwra.setDevicetagID(preferences.getString("tagName", null));
+
         JSONObject json = new JSONObject();
+        json.put("fmuid", MainApp.selectedKishMWRA.getUid());
+        json.put("fm_serial", MainApp.selectedKishMWRA.getSerialno());
+        json.put("hhno", MainApp.fc.getHhno());
+        json.put("cluster", MainApp.fc.getClusterCode());
+
         json.put("e101",
                 bi.e101a.isChecked() ? "1" :
                         bi.e101b.isChecked() ? "2" :

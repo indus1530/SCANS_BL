@@ -70,8 +70,9 @@ public class SectionAActivity extends AppCompatActivity {
             return true;
         } else {
             Toast.makeText(this, "Updating Database... ERROR!", Toast.LENGTH_SHORT).show();
+            return false;
         }
-        return false;
+
     }
 
 
