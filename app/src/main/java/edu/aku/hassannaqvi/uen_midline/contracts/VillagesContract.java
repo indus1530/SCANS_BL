@@ -35,23 +35,23 @@ public class VillagesContract {
     }
 
     public VillagesContract sync(JSONObject jsonObject) throws JSONException {
-        this.areaCode = jsonObject.getString(singleVillage.COLUMN_AREA_CODE);
-        this.villagecode = jsonObject.getString(singleVillage.COLUMN_VILLAGE_CODE);
-        this.villagename = jsonObject.getString(singleVillage.COLUMN_VILLAGE_NAME);
+        this.areaCode = jsonObject.getString(SingleVillage.COLUMN_AREA_CODE);
+        this.villagecode = jsonObject.getString(SingleVillage.COLUMN_VILLAGE_CODE);
+        this.villagename = jsonObject.getString(SingleVillage.COLUMN_VILLAGE_NAME);
 
         return this;
     }
 
     public VillagesContract hydrate(Cursor cursor) {
-        this.areaCode = cursor.getString(cursor.getColumnIndex(singleVillage.COLUMN_AREA_CODE));
-        this.villagecode = cursor.getString(cursor.getColumnIndex(singleVillage.COLUMN_VILLAGE_CODE));
-        this.villagename = cursor.getString(cursor.getColumnIndex(singleVillage.COLUMN_VILLAGE_NAME));
+        this.areaCode = cursor.getString(cursor.getColumnIndex(SingleVillage.COLUMN_AREA_CODE));
+        this.villagecode = cursor.getString(cursor.getColumnIndex(SingleVillage.COLUMN_VILLAGE_CODE));
+        this.villagename = cursor.getString(cursor.getColumnIndex(SingleVillage.COLUMN_VILLAGE_NAME));
 
         return this;
     }
 
 
-    public static abstract class singleVillage implements BaseColumns {
+    public static abstract class SingleVillage implements BaseColumns {
 
         public static final String TABLE_NAME = "villages";
         public static final String _ID = "_id";

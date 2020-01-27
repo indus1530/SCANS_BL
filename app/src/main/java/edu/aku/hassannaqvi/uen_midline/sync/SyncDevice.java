@@ -28,8 +28,6 @@ import static android.content.Context.MODE_PRIVATE;
 public class SyncDevice extends AsyncTask<Void, Integer, String> {
     private SyncDevicInterface delegate;
     private Context context;
-    private SharedPreferences sharedPref;
-    private SharedPreferences.Editor editor;
     private boolean flag;
     private String TAG = SyncDevice.class.getName();
 
@@ -97,10 +95,10 @@ public class SyncDevice extends AsyncTask<Void, Integer, String> {
 
                 BufferedReader br = new BufferedReader(new InputStreamReader(
                         connection.getInputStream(), StandardCharsets.UTF_8));
-                StringBuffer sb = new StringBuffer();
+                StringBuilder sb = new StringBuilder();
 
                 while ((line = br.readLine()) != null) {
-                    sb.append(line + "\n");
+                    sb.append(line).append("\n");
                 }
                 br.close();
                 System.out.println("" + sb.toString());
@@ -122,7 +120,7 @@ public class SyncDevice extends AsyncTask<Void, Integer, String> {
     protected void onPostExecute(String result) {
         super.onPostExecute(result);
         int sSynced = 0;
-        String sSyncedError = "";
+        StringBuilder sSyncedError = new StringBuilder();
         JSONArray json = null;
         try {
             json = new JSONArray(result);
@@ -132,11 +130,11 @@ public class SyncDevice extends AsyncTask<Void, Integer, String> {
                     if (!jsonObject.equals("")) {
                         //  db.updateSyncedChildForm(jsonObject.getString("id"));  // UPDATE SYNCED
                         String tag = jsonObject.getString("tag");
-                        sharedPref = context.getSharedPreferences("tagName", MODE_PRIVATE);
-                        editor = sharedPref.edit();
+                        SharedPreferences sharedPref = context.getSharedPreferences("tagName", MODE_PRIVATE);
+                        SharedPreferences.Editor editor = sharedPref.edit();
                         editor.putString("tagName", tag);
                         editor.putString("countryID", jsonObject.getString("country_id"));
-                        editor.commit();
+                        editor.apply();
 
                         if (flag) {
                             delegate.processFinish(true);
@@ -144,7 +142,7 @@ public class SyncDevice extends AsyncTask<Void, Integer, String> {
 
                     } else if (jsonObject.getString("status").equals("0") && jsonObject.getString("error").equals("1")) {
                     } else {
-                        sSyncedError += "\nError:This device is not found on server.";
+                        sSyncedError.append("\nError:This device is not found on server.");
                     }
                 }
             } else {

@@ -105,9 +105,6 @@ public class GetAllData extends AsyncTask<String, String, String> {
             case "VersionApp":
                 position = 3;
                 break;
-            case "FamilyMembers":
-                position = 4;
-                break;
         }
         list.get(position).setstatus("Syncing");
         list.get(position).setstatusID(2);
@@ -132,7 +129,7 @@ public class GetAllData extends AsyncTask<String, String, String> {
                     position = 1;
                     break;
                 case "BLRandom":
-                    url = new URL(MainApp._HOST_URL + BLRandomContract.singleRandomHH._URI);
+                    url = new URL(MainApp._HOST_URL + BLRandomContract.SingleRandomHH._URI);
                     position = 2;
                     break;
                 case "VersionApp":
@@ -161,7 +158,6 @@ public class GetAllData extends AsyncTask<String, String, String> {
 
                             // Starts the query
                             urlConnection.connect();
-                            JSONArray jsonSync = new JSONArray();
                             DataOutputStream wr = new DataOutputStream(urlConnection.getOutputStream());
                             JSONObject json = new JSONObject();
                             try {
