@@ -36,10 +36,10 @@ public class SectionFActivity extends AppCompatActivity {
 
     void setUIComponent() {
 
-        bi.f101Name.setText(MainApp.selectedKishMWRA.getName().toUpperCase() + "\n"
+        /*bi.f101Name.setText(MainApp.selectedKishMWRA.getName().toUpperCase() + "\n"
                 + getResources().getString(R.string.d101)
                 + ":"
-                + MainApp.selectedKishMWRA.getSerialno());
+                + MainApp.selectedKishMWRA.getSerialno());*/
 
         bi.f101.setOnCheckedChangeListener(((radioGroup, i) -> {
             if (i == bi.f101a.getId()) {

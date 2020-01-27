@@ -959,10 +959,10 @@
                                 android:layout_width="0dp"
                                 android:layout_weight="1"
                                 style="@style/EditTextNum"
-                                android:enabled='@{f11898.checked? false : true}'
                                 android:hint="@string/f118a"
                                 android:maxLength="2"
                                 android:text='@{f11898.checked ? "" : f118a.getText().toString()}'
+                                android:enabled='@{f11898.checked? false : true}'
                                 android:textColor="@android:color/black"
                                 app:defaultValue="00"
                                 app:maxValue="9"
@@ -971,22 +971,22 @@
 
                             <com.edittextpicker.aliazaz.EditTextPicker
                                 android:id="@+id/f118b"
-                                style="@style/EditTextNum"
                                 android:layout_width="0dp"
                                 android:layout_weight="1"
-                                android:enabled='@{f11898.checked? false : true}'
+                                style="@style/EditTextNum"
                                 android:hint="@string/f118b"
                                 android:maxLength="2"
                                 android:text='@{f11898.checked ? "" : f118b.getText().toString()}'
+                                android:enabled='@{f11898.checked? false : true}'
                                 android:textColor="@android:color/black"
                                 app:defaultValue="00"
                                 app:maxValue="30"
                                 app:minValue="1"
                                 app:type="range" />
 
-                            <RadioButton
+                            <CheckBox
                                 android:id="@+id/f11898"
-                                style="@style/radiobutton"
+                                style="@style/checkbox"
                                 android:layout_width="0dp"
                                 android:layout_weight="1"
                                 android:text="@string/dkn" />
@@ -1053,7 +1053,7 @@
                         <com.edittextpicker.aliazaz.EditTextPicker
                             android:id="@+id/f120"
                             style="@style/EditTextNum"
-                            android:hint="@string/f120"
+                            android:hint="@string/rupees"
                             android:maxLength="3"
                             app:maxValue="100"
                             app:minValue="1"
@@ -1062,6 +1062,7 @@
                     </LinearLayout>
 
                 </androidx.cardview.widget.CardView>
+
 
             </LinearLayout>
 

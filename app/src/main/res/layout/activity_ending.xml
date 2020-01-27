@@ -40,8 +40,7 @@
 
             <RadioGroup
                 android:id="@+id/istatus"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content">
+                style="@style/radiogroup">
 
                 <RadioButton
                     android:id="@+id/istatusa"
@@ -81,8 +80,6 @@
                 <RadioButton
                     android:id="@+id/istatus96"
                     style="@style/radiobutton"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
                     android:layout_marginBottom="1dp"
                     android:text="@string/other" />
 
