@@ -20,6 +20,7 @@ import java.util.Date;
 import edu.aku.hassannaqvi.uen_midline.contracts.AreasContract;
 import edu.aku.hassannaqvi.uen_midline.contracts.AreasContract.singleAreas;
 import edu.aku.hassannaqvi.uen_midline.contracts.BLRandomContract;
+import edu.aku.hassannaqvi.uen_midline.contracts.ChildContract;
 import edu.aku.hassannaqvi.uen_midline.contracts.ChildContract.SingleChild;
 import edu.aku.hassannaqvi.uen_midline.contracts.EnumBlockContract;
 import edu.aku.hassannaqvi.uen_midline.contracts.FamilyMembersContract;
@@ -627,22 +628,12 @@ public class DatabaseHelper extends SQLiteOpenHelper {
 
         // Create a new map of values, where column names are the keys
         ContentValues values = new ContentValues();
-/*        values.put(singleMember.COLUMN_ID, morc.get_id());
-        values.put(singleMember.COLUMN_UID, morc.getUid());
-        values.put(singleMember.COLUMN_UUID, morc.getUuid());
-        values.put(singleMember.COLUMN_FORMDATE, morc.getFormdate());
-        values.put(singleMember.COLUMN_CLUSTERNO, morc.getClusterno());
-        values.put(singleMember.COLUMN_HHNO, morc.getHhno());
-        values.put(singleMember.COLUMN_SERIAL_NO, morc.getSerialno());
-        values.put(singleMember.COLUMN_NAME, morc.getName());
-        values.put(singleMember.COLUMN_RELATION_HH, morc.getRelHH());
-        values.put(singleMember.COLUMN_AGE, morc.getAge());
-        values.put(singleMember.COLUMN_MOTHER_NAME, morc.getMother_name());
-        values.put(singleMember.COLUMN_MOTHER_SERIAL, morc.getMother_serial());
-        values.put(singleMember.COLUMN_GENDER, morc.getGender());
-        values.put(singleMember.COLUMN_MARITAL, morc.getMarital());
-        values.put(singleMember.COLUMN_SE1, morc.getsD());*/
-
+        values.put(SingleMortality.COLUMN__UUID, morc.get_UUID());
+        values.put(SingleMortality.COLUMN_DEVICEID, morc.getDeviceId());
+        values.put(SingleMortality.COLUMN_DEVICETAGID, morc.getDevicetagID());
+        values.put(SingleMortality.COLUMN_FORMDATE, morc.getFormDate());
+        values.put(SingleMortality.COLUMN_USER, morc.getUser());
+        values.put(SingleMortality.COLUMN_SE3, morc.getsE3());
         // Insert the new row, returning the primary key value of the new row
         long newRowId;
         newRowId = db.insert(
@@ -703,6 +694,31 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         long newRowId;
         newRowId = db.insert(
                 MWRATable.TABLE_NAME,
+                SingleKishMWRA.COLUMN_NAME_NULLABLE,
+                values);
+        return newRowId;
+    }
+
+    public Long addChild(ChildContract childContract) {
+
+        // Gets the data repository in write mode
+        SQLiteDatabase db = this.getWritableDatabase();
+
+        // Create a new map of values, where column names are the keys
+        ContentValues values = new ContentValues();
+//        values.put(MWRATable._ID, mwra.get_ID());
+        values.put(SingleChild.COLUMN__UUID, childContract.get_UUID());
+        values.put(SingleChild.COLUMN_DEVICEID, childContract.get_UUID());
+        values.put(SingleChild.COLUMN_FORMDATE, childContract.get_UUID());
+        values.put(SingleChild.COLUMN_USER, childContract.get_UUID());
+        values.put(SingleChild.COLUMN_SI1, childContract.getsI1());
+        values.put(SingleChild.COLUMN_DEVICETAGID, childContract.getDevicetagID());
+
+
+        // Insert the new row, returning the primary key value of the new row
+        long newRowId;
+        newRowId = db.insert(
+                SingleChild.TABLE_NAME,
                 SingleKishMWRA.COLUMN_NAME_NULLABLE,
                 values);
         return newRowId;
@@ -1277,6 +1293,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
                 selection,
                 selectionArgs);
     }
+
 
     //Generic update ChildColumn
     public int updatesChildColumn(String column, String value) {

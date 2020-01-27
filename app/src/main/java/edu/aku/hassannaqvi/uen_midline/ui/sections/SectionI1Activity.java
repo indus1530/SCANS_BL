@@ -19,7 +19,10 @@ import java.util.ArrayList;
 import java.util.List;
 
 import edu.aku.hassannaqvi.uen_midline.R;
+import edu.aku.hassannaqvi.uen_midline.contracts.ChildContract;
 import edu.aku.hassannaqvi.uen_midline.contracts.FamilyMembersContract;
+import edu.aku.hassannaqvi.uen_midline.core.DatabaseHelper;
+import edu.aku.hassannaqvi.uen_midline.core.MainApp;
 import edu.aku.hassannaqvi.uen_midline.databinding.ActivitySectionI1Binding;
 import edu.aku.hassannaqvi.uen_midline.utils.Util;
 import edu.aku.hassannaqvi.uen_midline.validator.ClearClass;
@@ -30,7 +33,7 @@ import static edu.aku.hassannaqvi.uen_midline.ui.list_activity.FamilyMembersList
 public class SectionI1Activity extends AppCompatActivity {
 
     ActivitySectionI1Binding bi;
-    private FamilyMembersContract fmc_child;
+    private FamilyMembersContract fmc_child, res_child;
     private Pair<List<Integer>, List<String>> childLst, resList;
 
     @Override
@@ -82,9 +85,23 @@ public class SectionI1Activity extends AppCompatActivity {
                     populateRespondentSpinner();
                 } else {
                     bi.respondentSpinner.setVisibility(View.GONE);
+                    res_child = mainVModel.getMemberInfo(Integer.valueOf(fmc_child.getSerialno()));
                 }
 
+            }
 
+            @Override
+            public void onNothingSelected(AdapterView<?> parent) {
+
+            }
+        });
+
+
+        bi.i10res.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+            @Override
+            public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
+                if (position == 0) return;
+                res_child = mainVModel.getMemberInfo(resList.getFirst().get(bi.i10res.getSelectedItemPosition() - 1));
             }
 
             @Override
@@ -169,28 +186,38 @@ public class SectionI1Activity extends AppCompatActivity {
 
     private boolean UpdateDB() {
 
-        /*DatabaseHelper db = new DatabaseHelper(this);
-
-        int updcount = db.updateSB();
-
-        if (updcount == 1) {
-            Toast.makeText(this, "Updating Database... Successful!", Toast.LENGTH_SHORT).show();
+        DatabaseHelper db = MainApp.appInfo.getDbHelper();
+        long rowID = db.addChild(MainApp.child);
+        if (rowID != 0) {
+            MainApp.child.set_ID(String.valueOf(rowID));
+            MainApp.child.setUID(MainApp.child.getDeviceId() + MainApp.child.get_ID());
+            db.updatesChildColumn(ChildContract.SingleChild.COLUMN_UID, MainApp.child.getUID());
             return true;
         } else {
             Toast.makeText(this, "Updating Database... ERROR!", Toast.LENGTH_SHORT).show();
             return false;
-        }*/
-
-        return true;
+        }
     }
 
 
     private void SaveDraft() throws JSONException {
 
+        MainApp.child = new ChildContract();
+        MainApp.child.set_UUID(MainApp.fc.get_UID());
+        MainApp.child.setDeviceId(MainApp.appInfo.getDeviceID());
+        MainApp.child.setDevicetagID(MainApp.appInfo.getTagName());
+        MainApp.child.setFormDate(MainApp.appInfo.getDtToday());
+        MainApp.child.setUser(MainApp.userName);
         JSONObject f1 = new JSONObject();
 
-        f1.put("i100", fmc_child.getSerialno());
+        f1.put("hhno", MainApp.fc.getHhno());
+        f1.put("cluster", MainApp.fc.getClusterCode());
+        f1.put("i1_fm_uid", fmc_child.getUid());
+        f1.put("i1_fm_serial", fmc_child.getSerialno());
+        f1.put("i1_res_fm_uid", res_child.getUid());
+        f1.put("i1_res_fm_serial", res_child.getSerialno());
 
+        f1.put("i100", bi.i100.getSelectedItem().toString());
         f1.put("i101", bi.i101a.isChecked() ? "1" :
                 bi.i101b.isChecked() ? "2" : "0");
 

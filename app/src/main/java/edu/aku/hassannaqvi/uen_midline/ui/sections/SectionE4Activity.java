@@ -141,7 +141,16 @@ public class SectionE4Activity extends AppCompatActivity {
 
         morc = new MortalityContract();
 
+        morc.set_UUID(MainApp.fc.get_UID());
+        morc.setDeviceId(MainApp.appInfo.getDeviceID());
+        morc.setFormDate(MainApp.appInfo.getDtToday());
+        morc.setUser(MainApp.userName);
+        morc.setDevicetagID(MainApp.appInfo.getTagName());
+
         JSONObject f1 = new JSONObject();
+        f1.put("hhno", MainApp.fc.getHhno());
+        f1.put("cluster", MainApp.fc.getClusterCode());
+        f1.put("counter", MainApp.deathCount);
         f1.put("e118", bi.e118.getText().toString());
         f1.put("e119a", bi.e119a.getText().toString());
         f1.put("e119b", bi.e119b.getText().toString());

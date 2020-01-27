@@ -13,7 +13,11 @@ import org.json.JSONException;
 import org.json.JSONObject;
 
 import edu.aku.hassannaqvi.uen_midline.R;
+import edu.aku.hassannaqvi.uen_midline.contracts.KishMWRAContract;
+import edu.aku.hassannaqvi.uen_midline.core.DatabaseHelper;
+import edu.aku.hassannaqvi.uen_midline.core.MainApp;
 import edu.aku.hassannaqvi.uen_midline.databinding.ActivitySectionF02Binding;
+import edu.aku.hassannaqvi.uen_midline.utils.JSONUtils;
 import edu.aku.hassannaqvi.uen_midline.utils.Util;
 import edu.aku.hassannaqvi.uen_midline.validator.ClearClass;
 
@@ -73,7 +77,14 @@ public class SectionF02Activity extends AppCompatActivity {
 
     private boolean UpdateDB() {
 
-        return true;
+        DatabaseHelper db = MainApp.appInfo.getDbHelper();
+        int updcount = db.updatesKishMWRAColumn(KishMWRAContract.SingleKishMWRA.COLUMN_SF, MainApp.kish.getsF());
+        if (updcount == 1) {
+            return true;
+        } else {
+            Toast.makeText(this, "Updating Database... ERROR!", Toast.LENGTH_SHORT).show();
+            return false;
+        }
     }
 
     private void SaveDraft() throws JSONException {
@@ -156,6 +167,15 @@ public class SectionF02Activity extends AppCompatActivity {
         f1.put("f134e", bi.f134e.isChecked() ? "5" : "0");
         f1.put("f134f", bi.f134f.isChecked() ? "6" : "0");
         f1.put("f134g", bi.f134g.isChecked() ? "7" : "0");
+
+        try {
+            JSONObject s4_merge = JSONUtils.mergeJSONObjects(new JSONObject(MainApp.kish.getsF()), f1);
+
+            MainApp.kish.setsF(String.valueOf(s4_merge));
+
+        } catch (JSONException e) {
+            e.printStackTrace();
+        }
 
     }
 
