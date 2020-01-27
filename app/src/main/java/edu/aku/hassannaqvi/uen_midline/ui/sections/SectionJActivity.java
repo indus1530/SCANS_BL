@@ -187,8 +187,6 @@ public class SectionJActivity extends AppCompatActivity {
     private void SaveDraft() throws JSONException {
 
         JSONObject json = new JSONObject();
-//        json.put("hhno", MainApp.fc.getHhno());
-//        json.put("cluster", MainApp.fc.getClusterCode());
         json.put("j_fm_uid", fmc_child.getUid());
         json.put("j_fm_serial", fmc_child.getSerialno());
         json.put("j_res_fm_uid", res_child.getUid());

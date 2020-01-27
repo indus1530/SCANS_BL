@@ -202,8 +202,6 @@ public class SectionI2Activity extends AppCompatActivity {
 
         JSONObject f1 = new JSONObject();
 
-//        f1.put("hhno", MainApp.fc.getHhno());
-//        f1.put("cluster", MainApp.fc.getClusterCode());
         f1.put("i2_fm_uid", fmc_child.getUid());
         f1.put("i2_fm_serial", fmc_child.getSerialno());
         f1.put("i2_res_fm_uid", res_child.getUid());
