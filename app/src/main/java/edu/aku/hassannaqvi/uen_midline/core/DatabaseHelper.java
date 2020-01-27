@@ -708,6 +708,30 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         return newRowId;
     }
 
+    public Long addPregnantMWRA(MWRA_PREContract mwra) {
+
+        // Gets the data repository in write mode
+        SQLiteDatabase db = this.getWritableDatabase();
+
+        // Create a new map of values, where column names are the keys
+        ContentValues values = new ContentValues();
+//        values.put(MWRATable._ID, mwra.get_ID());
+        values.put(MWRATable.COLUMN_UUID, mwra.get_UUID());
+        values.put(MWRATable.COLUMN_DEVICEID, mwra.getDeviceId());
+        values.put(MWRATable.COLUMN_FORMDATE, mwra.getFormDate());
+        values.put(MWRATable.COLUMN_USER, mwra.getUser());
+        values.put(MWRATable.COLUMN_DEVICETAGID, mwra.getDevicetagID());
+        values.put(MWRATable.COLUMN_SE1, mwra.getsE2());
+
+        // Insert the new row, returning the primary key value of the new row
+        long newRowId;
+        newRowId = db.insert(
+                SingleMWRAPRE.TABLE_NAME,
+                SingleKishMWRA.COLUMN_NAME_NULLABLE,
+                values);
+        return newRowId;
+    }
+
     public FormsContract isDataExists(String studyId) {
         SQLiteDatabase db = getReadableDatabase();
         Cursor c = null;

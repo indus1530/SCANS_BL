@@ -124,7 +124,7 @@ public class SectionE1Activity extends AppCompatActivity {
 
     private boolean UpdateDB() {
 
-        DatabaseHelper db = new DatabaseHelper(this);
+        DatabaseHelper db = MainApp.appInfo.getDbHelper();
         long rowID = db.addMWRA(mwra);
         if (rowID != 0) {
             mwra.set_ID(String.valueOf(rowID));

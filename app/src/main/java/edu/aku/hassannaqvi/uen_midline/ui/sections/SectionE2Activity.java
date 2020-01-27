@@ -20,6 +20,7 @@ import edu.aku.hassannaqvi.uen_midline.CONSTANTS;
 import edu.aku.hassannaqvi.uen_midline.R;
 import edu.aku.hassannaqvi.uen_midline.contracts.MWRAContract;
 import edu.aku.hassannaqvi.uen_midline.contracts.MWRA_PREContract;
+import edu.aku.hassannaqvi.uen_midline.core.DatabaseHelper;
 import edu.aku.hassannaqvi.uen_midline.core.MainApp;
 import edu.aku.hassannaqvi.uen_midline.databinding.ActivitySectionE2Binding;
 import edu.aku.hassannaqvi.uen_midline.utils.Util;
@@ -44,7 +45,7 @@ public class SectionE2Activity extends AppCompatActivity {
 
     private void setUIComponent() {
 
-        mwraContract = getIntent().getParcelableExtra("mwra");
+        mwraContract = getIntent().getParcelableExtra(CONSTANTS.MWRA_INFO);
 
         bi.e105.setOnCheckedChangeListener(((radioGroup, i) -> {
 
@@ -97,7 +98,7 @@ public class SectionE2Activity extends AppCompatActivity {
                 if (MainApp.noOfPragnencies > 0) {
                     finish();
                     startActivity(new Intent(SectionE2Activity.this, SectionE2Activity.class)
-                            .putExtra("mwra", mwraContract));
+                            .putExtra(CONSTANTS.MWRA_INFO, mwraContract));
                 } else {
                     if (MainApp.pragnantWoman.getFirst().size() > 0) {
                         finish();
@@ -150,16 +151,31 @@ public class SectionE2Activity extends AppCompatActivity {
     }
 
     private boolean UpdateDB() {
-
-        return true;
+        DatabaseHelper db = MainApp.appInfo.getDbHelper();
+        long rowID = db.addPregnantMWRA(mwraPre);
+        if (rowID != 0) {
+            mwraPre.set_ID(String.valueOf(rowID));
+            mwraPre.setUID(mwraPre.getDeviceId() + mwraPre.get_ID());
+            db.updatesMWRAPREColumn(mwraPre);
+            return true;
+        } else {
+            Toast.makeText(this, "Updating Database... ERROR!", Toast.LENGTH_SHORT).show();
+            return false;
+        }
     }
 
     private void SaveDraft() throws JSONException {
 
 
+        mwraPre = new MWRA_PREContract();
+        mwraPre.set_UUID(MainApp.fc.get_UID());
+        mwraPre.setDeviceId(MainApp.appInfo.getDeviceID());
+        mwraPre.setDevicetagID(MainApp.appInfo.getTagName());
+        mwraPre.setFormDate(MainApp.appInfo.getDtToday());
         JSONObject e2 = new JSONObject();
         e2.put("mw_uid", mwraContract.getUID());
-        e2.put("fm_serial", MainApp.selectedKishMWRA.getSerialno());
+        e2.put("fm_serial", mwraContract.getFm_serial());
+        e2.put("fm_uid", mwraContract.getFmuid());
         e2.put("hhno", MainApp.fc.getHhno());
         e2.put("cluster", MainApp.fc.getClusterCode());
         e2.put("counter", MainApp.noOfPragnencies);
@@ -226,6 +242,8 @@ public class SectionE2Activity extends AppCompatActivity {
                 bi.e115a.isChecked() ? "1" :
                         bi.e115b.isChecked() ? "2" :
                                 "0");
+
+        mwraPre.setsE2(String.valueOf(e2));
 
         --MainApp.noOfPragnencies;
 
