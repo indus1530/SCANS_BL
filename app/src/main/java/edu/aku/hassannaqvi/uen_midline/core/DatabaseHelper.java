@@ -641,7 +641,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         values.put(singleMember.COLUMN_MOTHER_SERIAL, morc.getMother_serial());
         values.put(singleMember.COLUMN_GENDER, morc.getGender());
         values.put(singleMember.COLUMN_MARITAL, morc.getMarital());
-        values.put(singleMember.COLUMN_SD, morc.getsD());*/
+        values.put(singleMember.COLUMN_SE1, morc.getsD());*/
 
         // Insert the new row, returning the primary key value of the new row
         long newRowId;
@@ -673,12 +673,36 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         values.put(singleMember.COLUMN_MOTHER_SERIAL, morc.getMother_serial());
         values.put(singleMember.COLUMN_GENDER, morc.getGender());
         values.put(singleMember.COLUMN_MARITAL, morc.getMarital());
-        values.put(singleMember.COLUMN_SD, morc.getsD());*/
+        values.put(singleMember.COLUMN_SE1, morc.getsD());*/
 
         // Insert the new row, returning the primary key value of the new row
         long newRowId;
         newRowId = db.insert(
                 SingleKishMWRA.TABLE_NAME,
+                SingleKishMWRA.COLUMN_NAME_NULLABLE,
+                values);
+        return newRowId;
+    }
+
+    public Long addMWRA(MWRAContract mwra) {
+
+        // Gets the data repository in write mode
+        SQLiteDatabase db = this.getWritableDatabase();
+
+        // Create a new map of values, where column names are the keys
+        ContentValues values = new ContentValues();
+//        values.put(MWRATable._ID, mwra.get_ID());
+        values.put(MWRATable.COLUMN_UUID, mwra.get_UUID());
+        values.put(MWRATable.COLUMN_DEVICEID, mwra.getDeviceId());
+        values.put(MWRATable.COLUMN_FORMDATE, mwra.getFormDate());
+        values.put(MWRATable.COLUMN_USER, mwra.getUser());
+        values.put(MWRATable.COLUMN_DEVICETAGID, mwra.getDevicetagID());
+        values.put(MWRATable.COLUMN_SE1, mwra.getsE1());
+
+        // Insert the new row, returning the primary key value of the new row
+        long newRowId;
+        newRowId = db.insert(
+                MWRATable.TABLE_NAME,
                 SingleKishMWRA.COLUMN_NAME_NULLABLE,
                 values);
         return newRowId;
@@ -958,7 +982,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
                 MWRAContract.MWRATable.COLUMN_UUID,
                 MWRAContract.MWRATable.COLUMN_FORMDATE,
                 MWRAContract.MWRATable.COLUMN_USER,
-                MWRAContract.MWRATable.COLUMN_SD,
+                MWRAContract.MWRATable.COLUMN_SE1,
                 MWRAContract.MWRATable.COLUMN_DEVICEID,
                 MWRAContract.MWRATable.COLUMN_DEVICETAGID
         };
@@ -1226,6 +1250,21 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         String[] selectionArgs = {String.valueOf(MainApp.kish.get_ID())};
 
         return db.update(SingleKishMWRA.TABLE_NAME,
+                values,
+                selection,
+                selectionArgs);
+    }
+
+    public int updateMWRAUID(MWRAContract mwra) {
+        SQLiteDatabase db = this.getReadableDatabase();
+
+        ContentValues values = new ContentValues();
+        values.put(MWRATable.COLUMN_UID, mwra.getUID());
+
+        String selection = MWRATable._ID + " =? ";
+        String[] selectionArgs = {String.valueOf(mwra.get_ID())};
+
+        return db.update(MWRATable.TABLE_NAME,
                 values,
                 selection,
                 selectionArgs);

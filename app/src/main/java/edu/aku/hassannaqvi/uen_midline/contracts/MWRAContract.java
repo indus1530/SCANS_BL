@@ -131,7 +131,7 @@ public class MWRAContract {
         this.formDate = jsonObject.getString(MWRATable.COLUMN_FORMDATE);
         this.deviceId = jsonObject.getString(MWRATable.COLUMN_DEVICEID);
         this.user = jsonObject.getString(MWRATable.COLUMN_USER);
-        this.sE1 = jsonObject.getString(MWRATable.COLUMN_SD);
+        this.sE1 = jsonObject.getString(MWRATable.COLUMN_SE1);
         this.synced = jsonObject.getString(MWRATable.COLUMN_SYNCED);
         this.synced_date = jsonObject.getString(MWRATable.COLUMN_SYNCED_DATE);
         this.devicetagID = jsonObject.getString(MWRATable.COLUMN_DEVICETAGID);
@@ -148,7 +148,7 @@ public class MWRAContract {
         this.formDate = cursor.getString(cursor.getColumnIndex(MWRATable.COLUMN_FORMDATE));
         this.deviceId = cursor.getString(cursor.getColumnIndex(MWRATable.COLUMN_DEVICEID));
         this.user = cursor.getString(cursor.getColumnIndex(MWRATable.COLUMN_USER));
-        this.sE1 = cursor.getString(cursor.getColumnIndex(MWRATable.COLUMN_SD));
+        this.sE1 = cursor.getString(cursor.getColumnIndex(MWRATable.COLUMN_SE1));
         this.devicetagID = cursor.getString(cursor.getColumnIndex(MWRATable.COLUMN_DEVICETAGID));
 
         return this;
@@ -168,7 +168,7 @@ public class MWRAContract {
         json.put(MWRATable.COLUMN_USER, this.user == null ? JSONObject.NULL : this.user);
         if (!this.sE1.equals("")) {
 
-            json.put(MWRATable.COLUMN_SD, this.sE1.equals("") ? JSONObject.NULL : new JSONObject(this.sE1));
+            json.put(MWRATable.COLUMN_SE1, this.sE1.equals("") ? JSONObject.NULL : new JSONObject(this.sE1));
         }
         json.put(MWRATable.COLUMN_DEVICETAGID, this.devicetagID == null ? JSONObject.NULL : this.devicetagID);
 
@@ -186,7 +186,7 @@ public class MWRAContract {
         public static final String COLUMN_FORMDATE = "formdate";
         public static final String COLUMN_DEVICEID = "deviceid";
         public static final String COLUMN_USER = "user";
-        public static final String COLUMN_SD = "sd";
+        public static final String COLUMN_SE1 = "sE1";
         public static final String COLUMN_SYNCED = "synced";
         public static final String COLUMN_SYNCED_DATE = "sync_date";
         public static final String COLUMN_DEVICETAGID = "tagid";
