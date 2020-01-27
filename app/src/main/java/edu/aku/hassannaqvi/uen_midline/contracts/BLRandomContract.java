@@ -44,37 +44,37 @@ public class BLRandomContract {
     }
 
     public BLRandomContract Sync(JSONObject jsonObject) throws JSONException {
-        this._ID = jsonObject.getString(singleRandomHH.COLUMN_ID);
-        this.LUID = jsonObject.getString(singleRandomHH.COLUMN_LUID);
-        this.subVillageCode = jsonObject.getString(singleRandomHH.COLUMN_ENUM_BLOCK_CODE);
-        this.structure = jsonObject.getString(singleRandomHH.COLUMN_STRUCTURE_NO);
+        this._ID = jsonObject.getString(SingleRandomHH.COLUMN_ID);
+        this.LUID = jsonObject.getString(SingleRandomHH.COLUMN_LUID);
+        this.subVillageCode = jsonObject.getString(SingleRandomHH.COLUMN_ENUM_BLOCK_CODE);
+        this.structure = jsonObject.getString(SingleRandomHH.COLUMN_STRUCTURE_NO);
         this.structure = String.format("%04d", Integer.valueOf(this.structure));
 
-        this.extension = jsonObject.getString(singleRandomHH.COLUMN_FAMILY_EXT_CODE);
+        this.extension = jsonObject.getString(SingleRandomHH.COLUMN_FAMILY_EXT_CODE);
         this.extension = String.format("%03d", Integer.valueOf(this.extension));
 
         this.hh = structure + "-" + extension;
-        this.randomDT = jsonObject.getString(singleRandomHH.COLUMN_RANDOMDT);
-        this.hhhead = jsonObject.getString(singleRandomHH.COLUMN_HH_HEAD);
-        this.contact = jsonObject.getString(singleRandomHH.COLUMN_CONTACT);
-        this.selStructure = jsonObject.getString(singleRandomHH.COLUMN_HH_SELECTED_STRUCT);
-        this.sno = jsonObject.getString(singleRandomHH.COLUMN_SNO_HH);
+        this.randomDT = jsonObject.getString(SingleRandomHH.COLUMN_RANDOMDT);
+        this.hhhead = jsonObject.getString(SingleRandomHH.COLUMN_HH_HEAD);
+        this.contact = jsonObject.getString(SingleRandomHH.COLUMN_CONTACT);
+        this.selStructure = jsonObject.getString(SingleRandomHH.COLUMN_HH_SELECTED_STRUCT);
+        this.sno = jsonObject.getString(SingleRandomHH.COLUMN_SNO_HH);
 
         return this;
     }
 
-    public BLRandomContract Hydrate(Cursor cursor) {
-        this._ID = cursor.getString(cursor.getColumnIndex(singleRandomHH.COLUMN_ID));
-        this.LUID = cursor.getString(cursor.getColumnIndex(singleRandomHH.COLUMN_LUID));
-        this.subVillageCode = cursor.getString(cursor.getColumnIndex(singleRandomHH.COLUMN_ENUM_BLOCK_CODE));
-        this.structure = cursor.getString(cursor.getColumnIndex(singleRandomHH.COLUMN_STRUCTURE_NO));
-        this.extension = cursor.getString(cursor.getColumnIndex(singleRandomHH.COLUMN_FAMILY_EXT_CODE));
-        this.hh = cursor.getString(cursor.getColumnIndex(singleRandomHH.COLUMN_HH));
-        this.randomDT = cursor.getString(cursor.getColumnIndex(singleRandomHH.COLUMN_RANDOMDT));
-        this.hhhead = cursor.getString(cursor.getColumnIndex(singleRandomHH.COLUMN_HH_HEAD));
-        this.contact = cursor.getString(cursor.getColumnIndex(singleRandomHH.COLUMN_CONTACT));
-        this.selStructure = cursor.getString(cursor.getColumnIndex(singleRandomHH.COLUMN_HH_SELECTED_STRUCT));
-        this.sno = cursor.getString(cursor.getColumnIndex(singleRandomHH.COLUMN_SNO_HH));
+    public BLRandomContract hydrate(Cursor cursor) {
+        this._ID = cursor.getString(cursor.getColumnIndex(SingleRandomHH.COLUMN_ID));
+        this.LUID = cursor.getString(cursor.getColumnIndex(SingleRandomHH.COLUMN_LUID));
+        this.subVillageCode = cursor.getString(cursor.getColumnIndex(SingleRandomHH.COLUMN_ENUM_BLOCK_CODE));
+        this.structure = cursor.getString(cursor.getColumnIndex(SingleRandomHH.COLUMN_STRUCTURE_NO));
+        this.extension = cursor.getString(cursor.getColumnIndex(SingleRandomHH.COLUMN_FAMILY_EXT_CODE));
+        this.hh = cursor.getString(cursor.getColumnIndex(SingleRandomHH.COLUMN_HH));
+        this.randomDT = cursor.getString(cursor.getColumnIndex(SingleRandomHH.COLUMN_RANDOMDT));
+        this.hhhead = cursor.getString(cursor.getColumnIndex(SingleRandomHH.COLUMN_HH_HEAD));
+        this.contact = cursor.getString(cursor.getColumnIndex(SingleRandomHH.COLUMN_CONTACT));
+        this.selStructure = cursor.getString(cursor.getColumnIndex(SingleRandomHH.COLUMN_HH_SELECTED_STRUCT));
+        this.sno = cursor.getString(cursor.getColumnIndex(SingleRandomHH.COLUMN_SNO_HH));
 
         return this;
     }
@@ -183,7 +183,7 @@ public class BLRandomContract {
         this.sno = sno;
     }
 
-    public static abstract class singleRandomHH implements BaseColumns {
+    public static abstract class SingleRandomHH implements BaseColumns {
 
         public static final String TABLE_NAME = "BLRandom";
         public static final String COLUMN_ID = "_id";
@@ -196,11 +196,7 @@ public class BLRandomContract {
         public static final String COLUMN_HH_HEAD = "hh08";
         public static final String COLUMN_CONTACT = "hh09";
         public static final String COLUMN_HH_SELECTED_STRUCT = "hhss";
-
         public static final String COLUMN_SNO_HH = "sno";
-
-        public static final String COLUMN_RANDOM_TYPE = "rndtype";
-        public static final String COLUMN_ASSIGNED_HH = "rndAssign";
 
         public static String _URI = "bl_random.php";
     }

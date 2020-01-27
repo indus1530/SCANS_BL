@@ -85,11 +85,11 @@ public final class CreateTable {
             + AreasContract.singleAreas.COLUMN_AREA + " TEXT );";
 
 
-    public static final String SQL_CREATE_PSU_TABLE = "CREATE TABLE " + VillagesContract.singleVillage.TABLE_NAME + " (" +
-            VillagesContract.singleVillage._ID + " INTEGER PRIMARY KEY AUTOINCREMENT," +
-            VillagesContract.singleVillage.COLUMN_AREA_CODE + " TEXT, " +
-            VillagesContract.singleVillage.COLUMN_VILLAGE_CODE + " TEXT, " +
-            VillagesContract.singleVillage.COLUMN_VILLAGE_NAME + " TEXT " +
+    public static final String SQL_CREATE_PSU_TABLE = "CREATE TABLE " + VillagesContract.SingleVillage.TABLE_NAME + " (" +
+            VillagesContract.SingleVillage._ID + " INTEGER PRIMARY KEY AUTOINCREMENT," +
+            VillagesContract.SingleVillage.COLUMN_AREA_CODE + " TEXT, " +
+            VillagesContract.SingleVillage.COLUMN_VILLAGE_CODE + " TEXT, " +
+            VillagesContract.SingleVillage.COLUMN_VILLAGE_NAME + " TEXT " +
             ");";
 
     public static final String SQL_CREATE_KISH_TABLE = "CREATE TABLE " + SingleKishMWRA.TABLE_NAME + "("

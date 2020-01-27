@@ -20,11 +20,10 @@ import edu.aku.hassannaqvi.uen_midline.utils.Util;
 public class FamilyMemberListAdapter extends RecyclerView.Adapter<FamilyMemberListAdapter.ViewHolder> {
 
 
-    OnItemClicked itemClicked;
+    private OnItemClicked itemClicked;
     private Context mContext;
     private List<FamilyMembersContract> mList;
-    DatabaseHelper db;
-    private ItemMemListBinding viewHolder;
+    private DatabaseHelper db;
 
     public FamilyMemberListAdapter(Context mContext, List<FamilyMembersContract> mList) {
         this.mContext = mContext;
@@ -51,10 +50,12 @@ public class FamilyMemberListAdapter extends RecyclerView.Adapter<FamilyMemberLi
         holder.bi.realHead.setText(MainApp.relationHHLst[Integer.valueOf(mList.get(i).getRelHH()) - 1]);
         holder.bi.dob.setText("Age: " + mList.get(i).getAge() + " Year(s)");
         holder.bi.index.setText(String.format("%02d", Integer.valueOf(mList.get(i).getSerialno())));
-        String gender = mList.get(i).getGender();
         holder.bi.genderImage.setImageResource(Util.getMemberIcon(Integer.valueOf(mList.get(i).getGender()), mList.get(i).getAge()));
         holder.bi.motherName.setText(mList.get(i).getMother_name());
-        holder.bi.parentLayout.setOnClickListener(v -> itemClicked.onItemClick(mList.get(i), i, holder.bi));
+
+        ItemMemListBinding viewHolder = holder.bi;
+
+        holder.bi.parentLayout.setOnClickListener(v -> itemClicked.onItemClick(mList.get(i), i, viewHolder));
     }
 
     @Override
@@ -73,7 +74,7 @@ public class FamilyMemberListAdapter extends RecyclerView.Adapter<FamilyMemberLi
 
     class ViewHolder extends RecyclerView.ViewHolder {
 
-        ItemMemListBinding bi;
+        private ItemMemListBinding bi;
 
         ViewHolder(@NonNull ItemMemListBinding itemView) {
             super(itemView.getRoot());

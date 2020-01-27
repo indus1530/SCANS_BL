@@ -284,9 +284,6 @@ public class SyncActivity extends AppCompatActivity {
                 @Override
                 public void run() {
 
-
-                    Toast.makeText(SyncActivity.this, "Sync Talukas", Toast.LENGTH_SHORT).show();
-
                     if (listActivityCreated) {
                         model = new SyncModel();
                         model.setstatusID(0);
@@ -296,8 +293,6 @@ public class SyncActivity extends AppCompatActivity {
                     bi.noItem.setVisibility(View.GONE);
 
 //                  getting Users!!
-//                    Toast.makeText(SyncActivity.this, "Sync Users", Toast.LENGTH_SHORT).show();
-
                     if (listActivityCreated) {
                         model = new SyncModel();
                         model.setstatusID(0);
@@ -306,7 +301,6 @@ public class SyncActivity extends AppCompatActivity {
                     new GetAllData(mContext, "User", syncListAdapter, list).execute(distID);
 
 //                   getting BL Random
-//                    Toast.makeText(SyncActivity.this, "Sync BL Random", Toast.LENGTH_SHORT).show();
                     if (listActivityCreated) {
                         model = new SyncModel();
                         model.setstatusID(0);
@@ -315,7 +309,6 @@ public class SyncActivity extends AppCompatActivity {
                     new GetAllData(mContext, "BLRandom", syncListAdapter, list).execute(distID);
 
 //                    Getting App Version
-//                    Toast.makeText(SyncActivity.this, "Sync App Version", Toast.LENGTH_SHORT).show();
                     if (listActivityCreated) {
                         model = new SyncModel();
                         model.setstatusID(0);

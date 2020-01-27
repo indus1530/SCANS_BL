@@ -161,6 +161,7 @@ public class MainApp extends Application {
         AlertDialog dialog = builder.create();
         dialog.show();
 
+        assert bi != null;
         bi.continueBtn.setOnClickListener(v -> {
             itemClick.itemClick();
             dialog.dismiss();

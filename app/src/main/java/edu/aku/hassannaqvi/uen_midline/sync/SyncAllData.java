@@ -17,14 +17,13 @@ import java.io.InputStreamReader;
 import java.lang.reflect.InvocationTargetException;
 import java.lang.reflect.Method;
 import java.net.HttpURLConnection;
-import java.net.MalformedURLException;
 import java.net.URL;
 import java.nio.charset.StandardCharsets;
 import java.util.Collection;
 import java.util.List;
 
-import edu.aku.hassannaqvi.uen_midline.core.DatabaseHelper;
 import edu.aku.hassannaqvi.uen_midline.adapter.UploadListAdapter;
+import edu.aku.hassannaqvi.uen_midline.core.DatabaseHelper;
 import edu.aku.hassannaqvi.uen_midline.otherClasses.SyncModel;
 
 /**
@@ -33,18 +32,18 @@ import edu.aku.hassannaqvi.uen_midline.otherClasses.SyncModel;
 
 public class SyncAllData extends AsyncTask<Void, Integer, String> {
 
-    UploadListAdapter adapter;
-    List<SyncModel> uploadlist;
-    int position;
-    private String TAG = "";
+    private UploadListAdapter adapter;
+    private List<SyncModel> uploadlist;
+    private int position;
+    private String TAG;
     private Context mContext;
     private ProgressDialog pd;
     private String syncClass, url, tableName, updateSyncClass;
     private Class contractClass;
     private Collection dbData;
 
-    public SyncAllData(Context context, String syncClass, String updateSyncClass, Class contractClass, String url, String tableName, Collection dbData, int position, UploadListAdapter adapter, List<SyncModel> uploadlist) {
-        mContext = context;
+    public SyncAllData(Context mContext, String syncClass, String updateSyncClass, Class contractClass, String url, String tableName, Collection dbData, int position, UploadListAdapter adapter, List<SyncModel> uploadlist) {
+        this.mContext = mContext;
         this.syncClass = syncClass;
         this.updateSyncClass = updateSyncClass;
         this.contractClass = contractClass;
@@ -137,11 +136,7 @@ public class SyncAllData extends AsyncTask<Void, Integer, String> {
                             break;
                         }
 
-                    } catch (NoSuchMethodException e) {
-                        e.printStackTrace();
-                    } catch (IllegalAccessException e) {
-                        e.printStackTrace();
-                    } catch (InvocationTargetException e) {
+                    } catch (NoSuchMethodException | InvocationTargetException | IllegalAccessException e) {
                         e.printStackTrace();
                     }
 
@@ -154,19 +149,16 @@ public class SyncAllData extends AsyncTask<Void, Integer, String> {
                     jsonParam
                             .put(jsonTable)
                             .put(jsonSync);
-//                            .put(jsonSync.toString().replace("\uFEFF", "") + "\n");
-
 
                     wr.writeBytes(String.valueOf(jsonParam));
                     wr.flush();
 
-
                     BufferedReader br = new BufferedReader(new InputStreamReader(
                             connection.getInputStream(), StandardCharsets.UTF_8));
-                    StringBuffer sb = new StringBuffer();
+                    StringBuilder sb = new StringBuilder();
 
                     while ((line = br.readLine()) != null) {
-                        sb.append(line + "\n");
+                        sb.append(line).append("\n");
                     }
                     br.close();
                     System.out.println("" + sb.toString());
@@ -175,26 +167,15 @@ public class SyncAllData extends AsyncTask<Void, Integer, String> {
                     System.out.println(connection.getResponseMessage());
                     return connection.getResponseMessage();
                 }
-            } catch (MalformedURLException e) {
-                e.printStackTrace();
-            } catch (IOException e) {
-
-                e.printStackTrace();
-            } catch (JSONException e) {
+            } catch (IOException | JSONException e) {
                 e.printStackTrace();
             } finally {
                 if (connection != null)
                     connection.disconnect();
             }
         } else {
-          /*  uploadlist.get(position).setstatus("Completed");
-            uploadlist.get(position).setstatusID(3);
-            adapter.updatesyncList(uploadlist);*/
             return "No new records to sync";
         }
-        /*uploadlist.get(position).setstatus("Completed");
-        uploadlist.get(position).setstatusID(3);
-        adapter.updatesyncList(uploadlist);*/
         return line;
     }
 
@@ -204,7 +185,7 @@ public class SyncAllData extends AsyncTask<Void, Integer, String> {
         int sSynced = 0;
         int sDuplicate = 0;
         String sSyncedError = "";
-        JSONArray json = null;
+        JSONArray json;
         try {
             json = new JSONArray(result);
 

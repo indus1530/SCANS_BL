@@ -20,9 +20,11 @@ import java.util.Date;
 import edu.aku.hassannaqvi.uen_midline.contracts.AreasContract;
 import edu.aku.hassannaqvi.uen_midline.contracts.AreasContract.singleAreas;
 import edu.aku.hassannaqvi.uen_midline.contracts.BLRandomContract;
+import edu.aku.hassannaqvi.uen_midline.contracts.BLRandomContract.SingleRandomHH;
 import edu.aku.hassannaqvi.uen_midline.contracts.ChildContract;
 import edu.aku.hassannaqvi.uen_midline.contracts.ChildContract.SingleChild;
 import edu.aku.hassannaqvi.uen_midline.contracts.EnumBlockContract;
+import edu.aku.hassannaqvi.uen_midline.contracts.EnumBlockContract.EnumBlockTable;
 import edu.aku.hassannaqvi.uen_midline.contracts.FamilyMembersContract;
 import edu.aku.hassannaqvi.uen_midline.contracts.FamilyMembersContract.singleMember;
 import edu.aku.hassannaqvi.uen_midline.contracts.FormsContract;
@@ -40,7 +42,7 @@ import edu.aku.hassannaqvi.uen_midline.contracts.UCsContract;
 import edu.aku.hassannaqvi.uen_midline.contracts.UsersContract;
 import edu.aku.hassannaqvi.uen_midline.contracts.VersionAppContract;
 import edu.aku.hassannaqvi.uen_midline.contracts.VillagesContract;
-import edu.aku.hassannaqvi.uen_midline.contracts.VillagesContract.singleVillage;
+import edu.aku.hassannaqvi.uen_midline.contracts.VillagesContract.SingleVillage;
 
 import static edu.aku.hassannaqvi.uen_midline.utils.CreateTable.DATABASE_NAME;
 import static edu.aku.hassannaqvi.uen_midline.utils.CreateTable.DATABASE_VERSION;
@@ -65,7 +67,7 @@ import static edu.aku.hassannaqvi.uen_midline.utils.CreateTable.SQL_CREATE_VERSI
 
 public class DatabaseHelper extends SQLiteOpenHelper {
 
-    private static final String SQL_DELETE_VILLAGES = "DROP TABLE IF EXISTS " + singleVillage.TABLE_NAME;
+    private static final String SQL_DELETE_VILLAGES = "DROP TABLE IF EXISTS " + SingleVillage.TABLE_NAME;
     private static final String SQL_DELETE_TALUKAS = "DROP TABLE IF EXISTS " + TalukasContract.singleTalukas.TABLE_NAME;
     private static final String SQL_DELETE_UCS = "DROP TABLE IF EXISTS " + UCsContract.singleUCs.TABLE_NAME;
     private static final String SQL_DELETE_AREAS = "DROP TABLE IF EXISTS " + singleAreas.TABLE_NAME;
@@ -113,7 +115,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
 
     public void syncVillages(JSONArray pcList) {
         SQLiteDatabase db = this.getWritableDatabase();
-        db.delete(VillagesContract.singleVillage.TABLE_NAME, null, null);
+        db.delete(SingleVillage.TABLE_NAME, null, null);
 
         try {
             JSONArray jsonArray = pcList;
@@ -127,11 +129,11 @@ public class DatabaseHelper extends SQLiteOpenHelper {
 
                 ContentValues values = new ContentValues();
 
-                values.put(singleVillage.COLUMN_AREA_CODE, vc.getAreaCode());
-                values.put(singleVillage.COLUMN_VILLAGE_CODE, vc.getVillagecode());
-                values.put(singleVillage.COLUMN_VILLAGE_NAME, vc.getVillagename());
+                values.put(SingleVillage.COLUMN_AREA_CODE, vc.getAreaCode());
+                values.put(SingleVillage.COLUMN_VILLAGE_CODE, vc.getVillagecode());
+                values.put(SingleVillage.COLUMN_VILLAGE_NAME, vc.getVillagename());
 
-                db.insert(VillagesContract.singleVillage.TABLE_NAME, null, values);
+                db.insert(SingleVillage.TABLE_NAME, null, values);
             }
             db.close();
 
@@ -191,7 +193,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
 
     public void syncBLRandom(JSONArray BLlist) {
         SQLiteDatabase db = this.getWritableDatabase();
-        db.delete(BLRandomContract.singleRandomHH.TABLE_NAME, null, null);
+        db.delete(SingleRandomHH.TABLE_NAME, null, null);
         try {
             JSONArray jsonArray = BLlist;
             for (int i = 0; i < jsonArray.length(); i++) {
@@ -202,19 +204,19 @@ public class DatabaseHelper extends SQLiteOpenHelper {
 
                 ContentValues values = new ContentValues();
 
-                values.put(BLRandomContract.singleRandomHH.COLUMN_ID, Vc.get_ID());
-                values.put(BLRandomContract.singleRandomHH.COLUMN_LUID, Vc.getLUID());
-                values.put(BLRandomContract.singleRandomHH.COLUMN_STRUCTURE_NO, Vc.getStructure());
-                values.put(BLRandomContract.singleRandomHH.COLUMN_FAMILY_EXT_CODE, Vc.getExtension());
-                values.put(BLRandomContract.singleRandomHH.COLUMN_HH, Vc.getHh());
-                values.put(BLRandomContract.singleRandomHH.COLUMN_ENUM_BLOCK_CODE, Vc.getSubVillageCode());
-                values.put(BLRandomContract.singleRandomHH.COLUMN_RANDOMDT, Vc.getRandomDT());
-                values.put(BLRandomContract.singleRandomHH.COLUMN_HH_HEAD, Vc.getHhhead());
-                values.put(BLRandomContract.singleRandomHH.COLUMN_CONTACT, Vc.getContact());
-                values.put(BLRandomContract.singleRandomHH.COLUMN_HH_SELECTED_STRUCT, Vc.getSelStructure());
-                values.put(BLRandomContract.singleRandomHH.COLUMN_SNO_HH, Vc.getSno());
+                values.put(SingleRandomHH.COLUMN_ID, Vc.get_ID());
+                values.put(SingleRandomHH.COLUMN_LUID, Vc.getLUID());
+                values.put(SingleRandomHH.COLUMN_STRUCTURE_NO, Vc.getStructure());
+                values.put(SingleRandomHH.COLUMN_FAMILY_EXT_CODE, Vc.getExtension());
+                values.put(SingleRandomHH.COLUMN_HH, Vc.getHh());
+                values.put(SingleRandomHH.COLUMN_ENUM_BLOCK_CODE, Vc.getSubVillageCode());
+                values.put(SingleRandomHH.COLUMN_RANDOMDT, Vc.getRandomDT());
+                values.put(SingleRandomHH.COLUMN_HH_HEAD, Vc.getHhhead());
+                values.put(SingleRandomHH.COLUMN_CONTACT, Vc.getContact());
+                values.put(SingleRandomHH.COLUMN_HH_SELECTED_STRUCT, Vc.getSelStructure());
+                values.put(SingleRandomHH.COLUMN_SNO_HH, Vc.getSno());
 
-                db.insert(BLRandomContract.singleRandomHH.TABLE_NAME, null, values);
+                db.insert(SingleRandomHH.TABLE_NAME, null, values);
             }
         } catch (Exception e) {
         } finally {
@@ -404,24 +406,24 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         SQLiteDatabase db = this.getReadableDatabase();
         Cursor c = null;
         String[] columns = {
-                singleVillage.COLUMN_AREA_CODE,
-                singleVillage.COLUMN_VILLAGE_CODE,
-                singleVillage.COLUMN_VILLAGE_NAME,
+                SingleVillage.COLUMN_AREA_CODE,
+                SingleVillage.COLUMN_VILLAGE_CODE,
+                SingleVillage.COLUMN_VILLAGE_NAME,
 
         };
 
-        String whereClause = singleVillage.COLUMN_AREA_CODE + "=?";
+        String whereClause = SingleVillage.COLUMN_AREA_CODE + "=?";
         String[] whereArgs = new String[]{String.valueOf(areaCode)};
         String groupBy = null;
         String having = null;
 
         String orderBy =
-                singleVillage.COLUMN_VILLAGE_NAME + " ASC";
+                SingleVillage.COLUMN_VILLAGE_NAME + " ASC";
 
         Collection<VillagesContract> allAC = new ArrayList<>();
         try {
             c = db.query(
-                    singleVillage.TABLE_NAME,  // The table to query
+                    SingleVillage.TABLE_NAME,  // The table to query
                     columns,                   // The columns to return
                     whereClause,               // The columns for the WHERE clause
                     whereArgs,                 // The values for the WHERE clause
@@ -1198,6 +1200,100 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         return count;
     }
 
+    //Get BLRandom data
+    public BLRandomContract getHHFromBLRandom(String subAreaCode, String hh) {
+        SQLiteDatabase db = this.getReadableDatabase();
+        Cursor c = null;
+        String[] columns = {
+                SingleRandomHH.COLUMN_ID,
+                SingleRandomHH.COLUMN_LUID,
+                SingleRandomHH.COLUMN_STRUCTURE_NO,
+                SingleRandomHH.COLUMN_FAMILY_EXT_CODE,
+                SingleRandomHH.COLUMN_HH,
+                SingleRandomHH.COLUMN_ENUM_BLOCK_CODE,
+                SingleRandomHH.COLUMN_RANDOMDT,
+                SingleRandomHH.COLUMN_HH_SELECTED_STRUCT,
+                SingleRandomHH.COLUMN_CONTACT,
+                SingleRandomHH.COLUMN_HH_HEAD,
+                SingleRandomHH.COLUMN_SNO_HH
+        };
+
+        String whereClause = SingleRandomHH.COLUMN_ENUM_BLOCK_CODE + "=? AND " + SingleRandomHH.COLUMN_HH + "=?";
+        String[] whereArgs = new String[]{subAreaCode, hh};
+        String groupBy = null;
+        String having = null;
+
+        String orderBy =
+                SingleRandomHH.COLUMN_ID + " ASC";
+
+        BLRandomContract allBL = null;
+        try {
+            c = db.query(
+                    SingleRandomHH.TABLE_NAME,  // The table to query
+                    columns,                   // The columns to return
+                    whereClause,               // The columns for the WHERE clause
+                    whereArgs,                 // The values for the WHERE clause
+                    groupBy,                   // don't group the rows
+                    having,                    // don't filter by row groups
+                    orderBy                    // The sort order
+            );
+            while (c.moveToNext()) {
+                allBL = new BLRandomContract().hydrate(c);
+            }
+        } finally {
+            if (c != null) {
+                c.close();
+            }
+            if (db != null) {
+                db.close();
+            }
+        }
+        return allBL;
+    }
+
+    //Get EnumBlock
+    public EnumBlockContract getEnumBlock(String cluster) {
+
+        SQLiteDatabase db = this.getReadableDatabase();
+        Cursor c = null;
+        String[] columns = {
+                EnumBlockTable._ID,
+                EnumBlockTable.COLUMN_COUNTRY_ID,
+                EnumBlockTable.COLUMN_GEO_AREA,
+                EnumBlockTable.COLUMN_CLUSTER_AREA
+        };
+
+        String whereClause = EnumBlockTable.COLUMN_CLUSTER_AREA + " =?";
+        String[] whereArgs = new String[]{cluster};
+        String groupBy = null;
+        String having = null;
+
+        String orderBy = EnumBlockTable._ID + " ASC";
+        EnumBlockContract allEB = null;
+        try {
+            c = db.query(
+                    EnumBlockTable.TABLE_NAME,  // The table to query
+                    columns,                   // The columns to return
+                    whereClause,               // The columns for the WHERE clause
+                    whereArgs,                 // The values for the WHERE clause
+                    groupBy,                   // don't group the rows
+                    having,                    // don't filter by row groups
+                    orderBy                    // The sort order
+            );
+            while (c.moveToNext()) {
+                allEB = new EnumBlockContract().HydrateEnum(c);
+            }
+        } finally {
+            if (c != null) {
+                c.close();
+            }
+            if (db != null) {
+                db.close();
+            }
+        }
+        return allEB;
+    }
+
     //Generic update FormColumn
     public int updatesFormColumn(String column, String value) {
         SQLiteDatabase db = this.getReadableDatabase();
@@ -1278,6 +1374,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
                 selectionArgs);
     }
 
+    //Generic update MWRAColumn
     public int updateMWRAUID(MWRAContract mwra) {
         SQLiteDatabase db = this.getReadableDatabase();
 
@@ -1292,7 +1389,6 @@ public class DatabaseHelper extends SQLiteOpenHelper {
                 selection,
                 selectionArgs);
     }
-
 
     //Generic update ChildColumn
     public int updatesChildColumn(String column, String value) {
