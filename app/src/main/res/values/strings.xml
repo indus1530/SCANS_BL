@@ -2098,46 +2098,56 @@
     <string name="n113b">Ten or more household </string>
     <string name="n113c">Don\'t Know</string>
 
-    <string name="o101">We would like to learn about the places that household members use to wash their hands. Can you please show me where members of your of your household most often wash their hands?</string>
-    <string name="o101a">Observed  </string>
-    <string name="o101b">Not in dwelling/plot/yard </string>
-    <string name="o101b_title">NOT OBSERVED </string>
-    <string name="o101c">No permission to see</string>
-    <string name="o101x">Other reasons </string>
-    <string name="o102">Observe presence of water at the place for hand washing.  Verify by checking the tap/pump, or basin, bucket, water container or similar objects for presence of water.</string>
-    <string name="o102a">Water is available</string>
-    <string name="o102b">Water is not available</string>
-    <string name="o103">Is soap, detergent or ash/mud/sand present at the place for hand washing?</string>
-    <string name="o103a">Yes, present</string>
-    <string name="o103b">No, not present</string>
-    <string name="o104">What was available at the place of hand washing?   Record your observation. Select all that apply. </string>
-    <string name="o104a">Bar soap </string>
-    <string name="o104b">Detergent (Powder/Liquid/Paste)</string>
-    <string name="o104c">Liquid soap </string>
-    <string name="o104d">Ash/Mud/Sand</string>
+    <string name="o101"> O101:\t We would like to learn about the places that household members use to wash their hands. Can you please show me where members of your household most often wash their hands ? </string>
+    <string name="o101a"> Observed </string>
+    <string name="o101b"> Not in dwelling/plot/yard </string>
+    <string name="o101b_title"> NOT OBSERVED </string>
+    <string name="o101c"> No permission to see </string>
+    <string name="o101x"> Other reasons </string>
+
+    <string name="o102"> O102:\t Observe presence of water at the place for hand washing . </string>
+    <string name="o102hint"> Verify by checking the tap/pump, or basin, bucket, water container or similar objects for presence of water. </string>
+    <string name="o102a"> Water is available </string>
+    <string name="o102b"> Water is not available </string>
+
+    <string name="o103"> O103:\t Is soap, detergent or ash/mud/sand present at the place for hand washing ? </string>
+    <string name="o103a"> Yes, Present </string>
+    <string name="o103b"> No, Not Present </string>
+
+    <string name="o104"> O104:\t What was available at the place of hand washing ? </string>
+    <string name="o104hint"> Record your observation. Select all that apply. </string>
+    <string name="o104a"> Bar soap </string>
+    <string name="o104b"> Detergent (Powder/Liquid/Paste) </string>
+    <string name="o104c"> Liquid soap </string>
+    <string name="o104d"> Ash/Mud/Sand </string>
     <!--<string name="o104e">None/Never</string>
     <string name="o10499">Refused</string>
     <string name="o104x">Other</string>-->
-    <string name="o105">Do you have any soap or detergent or ash/mud/sand in your house for washing hands?</string>
-    <string name="o105a">Yes</string>
-    <string name="o105b">No</string>
-    <string name="o106">Can you please show it to me?</string>
-    <string name="o106a">Yes, Shown</string>
-    <string name="o106b">No, not shown</string>
-    <string name="o107">Record your observation.  Multiple responses are allowed</string>
-    <string name="o107a">Bar soap </string>
-    <string name="o107b">Detergent (Powder/Liquid/Paste)</string>
-    <string name="o107c">Liquid soap </string>
-    <string name="o107d">Ash/Mud/Sand</string>
-    <string name="o108">Outcome of interview</string>
-    <string name="o108a">Completed </string>
-    <string name="o108b">Refused </string>
-    <string name="o108c">Dwelling permanent locked </string>
-    <string name="o108d">Dwelling temporary locked </string>
-    <string name="o108e">Pending</string>
-    <string name="o108f">Dwelling vacant </string>
-    <string name="o108g">Incomplete </string>
-    <string name="o108x">Others (specify) </string>
+
+    <string name="o105"> O105:\t Do you have any soap or detergent or ash/mud/sand in your house for washing hands ? </string>
+    <string name="o105a"> Yes </string>
+    <string name="o105b"> No </string>
+
+    <string name="o106"> O106:\t Can you please show it to me ? </string>
+    <string name="o106a"> Yes, Shown </string>
+    <string name="o106b"> No, Not Shown </string>
+
+    <string name="o107"> O107:\t Record your observation. </string>
+    <string name="o107hint"> Multiple responses are allowed </string>
+    <string name="o107a"> Bar soap </string>
+    <string name="o107b"> Detergent (Powder/Liquid/Paste) </string>
+    <string name="o107c"> Liquid soap </string>
+    <string name="o107d"> Ash/Mud/Sand </string>
+
+    <string name="o108"> O108:\t Outcome of interview </string>
+    <string name="o108a"> Completed </string>
+    <string name="o108b"> Refused </string>
+    <string name="o108c"> Dwelling permanent locked </string>
+    <string name="o108d"> Dwelling temporary locked </string>
+    <string name="o108e"> Pending</string>
+    <string name="o108f"> Dwelling vacant </string>
+    <string name="o108g"> Incomplete </string>
+    <string name="o108x"> Others (specify) </string>
 
 
     <string name="end_interview"> End </string>
