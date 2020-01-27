@@ -26,6 +26,7 @@ public class MWRA_PREContract {
     * hhno
     * cluster
     * mw_uid
+    * fm_uid
     * fm_serial
     * counter
     * */
@@ -138,7 +139,7 @@ public class MWRA_PREContract {
         json.put(SingleMWRAPRE.COLUMN_USER, this.user == null ? JSONObject.NULL : this.user);
 
         if (!this.sE2.equals("")) {
-            json.put(SingleMWRAPRE.COLUMN_SE2, this.sE2.equals("") ? JSONObject.NULL : new JSONObject(this.sE2));
+            json.put(SingleMWRAPRE.COLUMN_SE2, new JSONObject(this.sE2));
         }
 
         json.put(SingleMWRAPRE.COLUMN_DEVICETAGID, this.devicetagID == null ? JSONObject.NULL : this.devicetagID);

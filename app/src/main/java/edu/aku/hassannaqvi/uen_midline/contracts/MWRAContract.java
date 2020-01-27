@@ -26,6 +26,12 @@ public class MWRAContract implements Parcelable {
     private String devicetagID = "";
     private String synced = "";
     private String synced_date = "";
+
+    // Only for run time
+    private String fmuid = "";
+    private String fm_serial = "";
+
+
     /*
     saved in JSON
     =============
@@ -51,6 +57,8 @@ public class MWRAContract implements Parcelable {
         devicetagID = in.readString();
         synced = in.readString();
         synced_date = in.readString();
+        fmuid = in.readString();
+        fm_serial = in.readString();
     }
 
     public static final Creator<MWRAContract> CREATOR = new Creator<MWRAContract>() {
@@ -151,6 +159,22 @@ public class MWRAContract implements Parcelable {
         this.user = user;
     }
 
+    public String getFmuid() {
+        return fmuid;
+    }
+
+    public void setFmuid(String fmuid) {
+        this.fmuid = fmuid;
+    }
+
+    public String getFm_serial() {
+        return fm_serial;
+    }
+
+    public void setFm_serial(String fm_serial) {
+        this.fm_serial = fm_serial;
+    }
+
     public MWRAContract Sync(JSONObject jsonObject) throws JSONException {
 
         this._ID = jsonObject.getString(MWRATable.COLUMN_ID);
@@ -209,18 +233,20 @@ public class MWRAContract implements Parcelable {
     }
 
     @Override
-    public void writeToParcel(Parcel parcel, int i) {
-        parcel.writeString(projectName);
-        parcel.writeString(_ID);
-        parcel.writeString(UID);
-        parcel.writeString(_UUID);
-        parcel.writeString(deviceId);
-        parcel.writeString(formDate);
-        parcel.writeString(user);
-        parcel.writeString(sE1);
-        parcel.writeString(devicetagID);
-        parcel.writeString(synced);
-        parcel.writeString(synced_date);
+    public void writeToParcel(Parcel dest, int flags) {
+        dest.writeString(projectName);
+        dest.writeString(_ID);
+        dest.writeString(UID);
+        dest.writeString(_UUID);
+        dest.writeString(deviceId);
+        dest.writeString(formDate);
+        dest.writeString(user);
+        dest.writeString(sE1);
+        dest.writeString(devicetagID);
+        dest.writeString(synced);
+        dest.writeString(synced_date);
+        dest.writeString(fmuid);
+        dest.writeString(fm_serial);
     }
 
     public static abstract class MWRATable implements BaseColumns {
