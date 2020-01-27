@@ -22,6 +22,8 @@ import java.util.List;
 import java.util.Map;
 
 import edu.aku.hassannaqvi.uen_midline.R;
+import edu.aku.hassannaqvi.uen_midline.contracts.MWRAContract;
+import edu.aku.hassannaqvi.uen_midline.core.DatabaseHelper;
 import edu.aku.hassannaqvi.uen_midline.core.MainApp;
 import edu.aku.hassannaqvi.uen_midline.databinding.ActivitySectionE1Binding;
 import edu.aku.hassannaqvi.uen_midline.utils.Util;
@@ -32,6 +34,8 @@ public class SectionE1Activity extends AppCompatActivity {
     List<String> womanNames;
     Map<String, String> womanMap;
     int position;
+    private MWRAContract mwra;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -100,6 +104,7 @@ public class SectionE1Activity extends AppCompatActivity {
                 Intent next;
                 if (bi.e101a.isChecked()) {
                     next = new Intent(SectionE1Activity.this, SectionE2Activity.class);
+                    next.putExtra("mwra", mwra);
                 } else {
                     if (MainApp.pragnantWoman.getFirst().size() > 0) {
                         next = new Intent(SectionE1Activity.this, SectionE1Activity.class);
@@ -115,12 +120,35 @@ public class SectionE1Activity extends AppCompatActivity {
 
     private boolean UpdateDB() {
 
-        return true;
+        DatabaseHelper db = new DatabaseHelper(this);
+        long rowID = db.addMWRA(mwra);
+        if (rowID != 0) {
+            mwra.set_ID(String.valueOf(rowID));
+            mwra.setUID(mwra.getDeviceId() + mwra.get_ID());
+            db.updateMWRAUID(mwra);
+            return true;
+        } else {
+            Toast.makeText(this, "Updating Database... ERROR!", Toast.LENGTH_SHORT).show();
+            return false;
+        }
+
     }
 
     private void SaveDraft() throws JSONException {
 
+        mwra = new MWRAContract();
+        mwra.set_UUID(MainApp.fc.get_UID());
+        mwra.setDeviceId(MainApp.appInfo.getDeviceID());
+        mwra.setFormDate(MainApp.appInfo.getDtToday());
+        mwra.setUser(MainApp.userName);
+        mwra.setDevicetagID(MainApp.appInfo.getTagName());
+
         JSONObject json = new JSONObject();
+        json.put("fmuid", MainApp.selectedKishMWRA.getUid());
+        json.put("fm_serial", MainApp.selectedKishMWRA.getSerialno());
+        json.put("hhno", MainApp.fc.getHhno());
+        json.put("cluster", MainApp.fc.getClusterCode());
+
         json.put("e101",
                 bi.e101a.isChecked() ? "1" :
                         bi.e101b.isChecked() ? "2" :
@@ -137,6 +165,8 @@ public class SectionE1Activity extends AppCompatActivity {
         // Deleting item in list
         MainApp.pragnantWoman.getFirst().remove(position - 1);
         MainApp.pragnantWoman.getSecond().remove(position - 1);
+
+        mwra.setsE1(String.valueOf(json));
 
     }
 

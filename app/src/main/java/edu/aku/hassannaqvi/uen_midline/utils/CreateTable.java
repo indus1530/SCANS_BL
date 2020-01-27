@@ -116,7 +116,7 @@ public final class CreateTable {
             + MWRATable.COLUMN_FORMDATE + " TEXT,"
             + MWRATable.COLUMN_DEVICEID + " TEXT,"
             + MWRATable.COLUMN_USER + " TEXT,"
-            + MWRATable.COLUMN_SD + " TEXT,"
+            + MWRATable.COLUMN_SE1 + " TEXT,"
             + MWRATable.COLUMN_DEVICETAGID + " TEXT,"
             + MWRATable.COLUMN_SYNCED + " TEXT,"
             + MWRATable.COLUMN_SYNCED_DATE + " TEXT );";

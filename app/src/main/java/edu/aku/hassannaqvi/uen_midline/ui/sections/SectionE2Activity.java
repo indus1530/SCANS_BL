@@ -18,6 +18,8 @@ import org.json.JSONObject;
 
 import edu.aku.hassannaqvi.uen_midline.CONSTANTS;
 import edu.aku.hassannaqvi.uen_midline.R;
+import edu.aku.hassannaqvi.uen_midline.contracts.MWRAContract;
+import edu.aku.hassannaqvi.uen_midline.contracts.MWRA_PREContract;
 import edu.aku.hassannaqvi.uen_midline.core.MainApp;
 import edu.aku.hassannaqvi.uen_midline.databinding.ActivitySectionE2Binding;
 import edu.aku.hassannaqvi.uen_midline.utils.Util;
@@ -26,6 +28,8 @@ import edu.aku.hassannaqvi.uen_midline.validator.ClearClass;
 public class SectionE2Activity extends AppCompatActivity {
 
     ActivitySectionE2Binding bi;
+    private MWRAContract mwraContract;
+    MWRA_PREContract mwraPre;
 
 
     @Override
@@ -40,6 +44,7 @@ public class SectionE2Activity extends AppCompatActivity {
 
     private void setUIComponent() {
 
+        mwraContract = getIntent().getParcelableExtra("mwra");
 
         bi.e105.setOnCheckedChangeListener(((radioGroup, i) -> {
 
@@ -91,7 +96,8 @@ public class SectionE2Activity extends AppCompatActivity {
             } else {
                 if (MainApp.noOfPragnencies > 0) {
                     finish();
-                    startActivity(new Intent(SectionE2Activity.this, SectionE2Activity.class));
+                    startActivity(new Intent(SectionE2Activity.this, SectionE2Activity.class)
+                            .putExtra("mwra", mwraContract));
                 } else {
                     if (MainApp.pragnantWoman.getFirst().size() > 0) {
                         finish();
@@ -150,7 +156,13 @@ public class SectionE2Activity extends AppCompatActivity {
 
     private void SaveDraft() throws JSONException {
 
+
         JSONObject e2 = new JSONObject();
+        e2.put("mw_uid", mwraContract.getUID());
+        e2.put("fm_serial", MainApp.selectedKishMWRA.getSerialno());
+        e2.put("hhno", MainApp.fc.getHhno());
+        e2.put("cluster", MainApp.fc.getClusterCode());
+        e2.put("counter", MainApp.noOfPragnencies);
 
         //e2.put("e103", bi.e103.getText().toString());
 
