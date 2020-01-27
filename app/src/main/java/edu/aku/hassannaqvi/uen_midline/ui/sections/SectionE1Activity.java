@@ -1,7 +1,9 @@
 package edu.aku.hassannaqvi.uen_midline.ui.sections;
 
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
+import android.provider.Settings;
 import android.text.Editable;
 import android.text.TextWatcher;
 import android.view.View;
@@ -17,11 +19,14 @@ import com.validatorcrawler.aliazaz.Validator;
 import org.json.JSONException;
 import org.json.JSONObject;
 
+import java.text.SimpleDateFormat;
 import java.util.ArrayList;
+import java.util.Date;
 import java.util.List;
 import java.util.Map;
 
 import edu.aku.hassannaqvi.uen_midline.R;
+import edu.aku.hassannaqvi.uen_midline.contracts.MWRAContract;
 import edu.aku.hassannaqvi.uen_midline.core.MainApp;
 import edu.aku.hassannaqvi.uen_midline.databinding.ActivitySectionE1Binding;
 import edu.aku.hassannaqvi.uen_midline.utils.Util;
@@ -32,6 +37,8 @@ public class SectionE1Activity extends AppCompatActivity {
     List<String> womanNames;
     Map<String, String> womanMap;
     int position;
+    private MWRAContract mwra;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -115,11 +122,19 @@ public class SectionE1Activity extends AppCompatActivity {
 
     private boolean UpdateDB() {
 
+
         return true;
     }
 
     private void SaveDraft() throws JSONException {
 
+        SharedPreferences preferences = getSharedPreferences("tagName", MODE_PRIVATE);
+        mwra = new MWRAContract();
+        mwra.set_UUID(MainApp.fc.get_UID());
+        mwra.setDeviceId(Settings.Secure.getString(getApplicationContext().getContentResolver(), Settings.Secure.ANDROID_ID));
+        mwra.setFormDate(new SimpleDateFormat("dd-MM-yy HH:mm").format(new Date().getTime()));
+        mwra.setUser(MainApp.userName);
+        mwra.setDevicetagID(preferences.getString("tagName", null));
         JSONObject json = new JSONObject();
         json.put("e101",
                 bi.e101a.isChecked() ? "1" :
@@ -137,6 +152,8 @@ public class SectionE1Activity extends AppCompatActivity {
         // Deleting item in list
         MainApp.pragnantWoman.getFirst().remove(position - 1);
         MainApp.pragnantWoman.getSecond().remove(position - 1);
+
+        mwra.setsE1(String.valueOf(json));
 
     }
 
