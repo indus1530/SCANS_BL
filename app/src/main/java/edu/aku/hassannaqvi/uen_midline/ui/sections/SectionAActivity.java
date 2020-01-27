@@ -59,7 +59,7 @@ public class SectionAActivity extends AppCompatActivity {
     private boolean UpdateDB() {
         long updcount = db.addForm(MainApp.fc);
         MainApp.fc.set_ID(String.valueOf(updcount));
-        if (updcount != 0) {
+        if (updcount > 0) {
             MainApp.fc.set_UID(MainApp.fc.getDeviceID() + MainApp.fc.get_ID());
             db.updatesFormColumn(FormsContract.FormsTable.COLUMN_UID, MainApp.fc.get_UID());
             return true;
@@ -108,6 +108,9 @@ public class SectionAActivity extends AppCompatActivity {
     }
 
     public void BtnCheckHH() {
+
+//        if (Validator.emptyTextBox(this,))
+
 
     }
 }

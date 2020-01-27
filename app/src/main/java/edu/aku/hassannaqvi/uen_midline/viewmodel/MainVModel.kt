@@ -3,6 +3,7 @@ package edu.aku.hassannaqvi.uen_midline.viewmodel
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import edu.aku.hassannaqvi.uen_midline.contracts.FamilyMembersContract
+import edu.aku.hassannaqvi.uen_midline.databinding.ItemMemListBinding
 
 class MainVModel : ViewModel() {
 
@@ -16,6 +17,9 @@ class MainVModel : ViewModel() {
         private set
 
     var mwraChildU5Lst = MutableLiveData<MutableList<FamilyMembersContract>>()
+        private set
+
+    var holderSet = MutableLiveData<MutableList<Pair<Int, ItemMemListBinding>>>()
         private set
 
     fun setFamilyMembers(item: FamilyMembersContract) {
@@ -53,6 +57,19 @@ class MainVModel : ViewModel() {
         mwraChildU5Lst.value = lst
     }
 
+    fun setHolderValues(index: Int, holder: ItemMemListBinding) {
+        var lst = holderSet.value
+        if (lst.isNullOrEmpty()) {
+            lst = mutableListOf()
+            lst.add(Pair(index, holder))
+        } else {
+            val fmc = holderSet.value?.find { it.first == index }
+            fmc?.let { lst.map { if (it.first == index) Pair(index, holder) else it } }
+                    ?: lst.add(Pair(index, holder))
+        }
+        holderSet.value = lst
+    }
+
     fun setMWRA(item: FamilyMembersContract) {
         var lst = mwraLst.value
         if (lst.isNullOrEmpty())
@@ -83,6 +100,10 @@ class MainVModel : ViewModel() {
     fun getAllRespondent(): Pair<List<Int>?, List<String>?> {
         val family = familyMemLst.value?.filter { it -> (it.age.toInt() >= 15) }
         return Pair(family?.map { it.serialno.toInt() }, family?.map { it.name })
+    }
+
+    fun getHolder(fmItem: FamilyMembersContract): ItemMemListBinding? {
+        return holderSet.value?.find { it.first == fmItem.serialno.toInt() }?.second
     }
 
 
