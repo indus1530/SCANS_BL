@@ -93,8 +93,7 @@
 
                             <RadioGroup
                                 android:id="@+id/e105"
-                                android:layout_width="match_parent"
-                                android:layout_height="match_parent">
+                                style="@style/radiogroup">
 
                                 <RadioButton
                                     android:id="@+id/e105a"
@@ -125,9 +124,13 @@
                                     android:id="@+id/e105f"
                                     style="@style/radiobutton"
                                     android:text="@string/e105f" />
+
                             </RadioGroup>
+
                         </LinearLayout>
+
                     </androidx.cardview.widget.CardView>
+
                 </LinearLayout>
 
 
@@ -168,9 +171,8 @@
 
                                     <com.edittextpicker.aliazaz.EditTextPicker
                                         android:id="@+id/e106a"
-                                        style="@style/textInput"
+                                        style="@style/EditTextNum"
                                         android:hint="@string/e106a"
-                                        android:inputType="number"
                                         android:maxLength="2"
                                         android:textColor="@android:color/black"
                                         app:defaultValue="00"
@@ -192,9 +194,8 @@
 
                                     <com.edittextpicker.aliazaz.EditTextPicker
                                         android:id="@+id/e106b"
-                                        style="@style/textInput"
+                                        style="@style/EditTextNum"
                                         android:hint="@string/e106b"
-                                        android:inputType="number"
                                         android:maxLength="2"
                                         android:textColor="@android:color/black"
                                         app:defaultValue="00"
@@ -216,10 +217,8 @@
 
                                     <com.edittextpicker.aliazaz.EditTextPicker
                                         android:id="@+id/e106c"
-                                        style="@style/textInput"
-                                        android:digits="0123456789"
+                                        style="@style/EditTextNum"
                                         android:hint="@string/e106c"
-                                        android:inputType="number"
                                         android:maxLength="4"
                                         android:textColor="@android:color/black"
                                         app:defaultValue="00"
@@ -386,9 +385,8 @@
 
                                     <com.edittextpicker.aliazaz.EditTextPicker
                                         android:id="@+id/e110a"
-                                        style="@style/textInput"
+                                        style="@style/EditTextNum"
                                         android:hint="@string/e110a"
-                                        android:inputType="number"
                                         android:maxLength="2"
                                         android:textColor="@android:color/black"
                                         app:defaultValue="00"
@@ -410,9 +408,8 @@
 
                                     <com.edittextpicker.aliazaz.EditTextPicker
                                         android:id="@+id/e110b"
-                                        style="@style/textInput"
+                                        style="@style/EditTextNum"
                                         android:hint="@string/e110b"
-                                        android:inputType="number"
                                         android:maxLength="2"
                                         android:textColor="@android:color/black"
                                         app:defaultValue="00"
@@ -434,10 +431,8 @@
 
                                     <com.edittextpicker.aliazaz.EditTextPicker
                                         android:id="@+id/e110c"
-                                        style="@style/textInput"
-                                        android:digits="0123456789"
+                                        style="@style/EditTextNum"
                                         android:hint="@string/e110c"
-                                        android:inputType="number"
                                         android:maxLength="4"
                                         android:textColor="@android:color/black"
                                         app:defaultValue="00"
@@ -566,9 +561,13 @@
                                     android:id="@+id/e112e"
                                     style="@style/radiobutton"
                                     android:text="@string/e112e" />
+
                             </RadioGroup>
+
                         </LinearLayout>
+
                     </androidx.cardview.widget.CardView>
+
                 </LinearLayout>
 
 
@@ -602,9 +601,8 @@
 
                                 <com.edittextpicker.aliazaz.EditTextPicker
                                     android:id="@+id/e113m"
-                                    style="@style/textInput"
+                                    style="@style/EditTextNum"
                                     android:hint="@string/e110b"
-                                    android:inputType="number"
                                     android:maxLength="2"
                                     android:textColor="@android:color/black"
                                     app:defaultValue="00"
@@ -626,10 +624,8 @@
 
                                 <com.edittextpicker.aliazaz.EditTextPicker
                                     android:id="@+id/e113y"
-                                    style="@style/textInput"
-                                    android:digits="0123456789"
+                                    style="@style/EditTextNum"
                                     android:hint="@string/e110c"
-                                    android:inputType="number"
                                     android:maxLength="4"
                                     android:textColor="@android:color/black"
                                     app:defaultValue="00"
@@ -661,9 +657,8 @@
 
                         <com.edittextpicker.aliazaz.EditTextPicker
                             android:id="@+id/e114"
-                            style="@style/textInput"
+                            style="@style/EditTextNum"
                             android:hint="@string/e110b"
-                            android:inputType="number"
                             android:maxLength="2"
                             android:textColor="@android:color/black"
                             app:defaultValue="00"
