@@ -65,7 +65,6 @@ import static edu.aku.hassannaqvi.uen_midline.utils.CreateTable.SQL_CREATE_VERSI
 
 public class DatabaseHelper extends SQLiteOpenHelper {
 
-
     private static final String SQL_DELETE_VILLAGES = "DROP TABLE IF EXISTS " + singleVillage.TABLE_NAME;
     private static final String SQL_DELETE_TALUKAS = "DROP TABLE IF EXISTS " + TalukasContract.singleTalukas.TABLE_NAME;
     private static final String SQL_DELETE_UCS = "DROP TABLE IF EXISTS " + UCsContract.singleUCs.TABLE_NAME;

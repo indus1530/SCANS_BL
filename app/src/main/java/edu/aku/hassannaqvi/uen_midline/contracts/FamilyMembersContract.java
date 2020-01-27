@@ -26,6 +26,7 @@ public class FamilyMembersContract {
 
     //Not required in db
     private String fName;
+    private String available;
 
     public FamilyMembersContract() {
     }
@@ -201,6 +202,14 @@ public class FamilyMembersContract {
 
     public void setfName(String fName) {
         this.fName = fName;
+    }
+
+    public String getAvailable() {
+        return available;
+    }
+
+    public void setAvailable(String available) {
+        this.available = available;
     }
 
     public static abstract class singleMember implements BaseColumns {

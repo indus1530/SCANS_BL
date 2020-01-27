@@ -41,7 +41,6 @@ public class SectionDActivity extends AppCompatActivity {
     private int serial = 0;
     private Pair<List<Integer>, List<String>> menSLst;
     private Pair<List<Integer>, List<String>> womenSLst;
-    private FamilyMembersContract motherFMC;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -182,7 +181,7 @@ public class SectionDActivity extends AppCompatActivity {
                 ? mainVModel.getMemberInfo(menSLst.getFirst().get(bi.d106.getSelectedItemPosition() - 2)).getSerialno() : "97");
         fmc.setMother_name(bi.d106.getSelectedItem().toString());
 
-        motherFMC = womenSLst.getFirst().size() != 0 && bi.d107.getSelectedItemPosition() != 1
+        FamilyMembersContract motherFMC = womenSLst.getFirst().size() != 0 && bi.d107.getSelectedItemPosition() != 1
                 ? mainVModel.getMemberInfo(womenSLst.getFirst().get(bi.d107.getSelectedItemPosition() - 2)) : null;
         String motherSerial = womenSLst.getFirst().size() != 0 && bi.d107.getSelectedItemPosition() != 1
                 ? mainVModel.getMemberInfo(womenSLst.getFirst().get(bi.d107.getSelectedItemPosition() - 2)).getSerialno() : "97";
@@ -226,6 +225,8 @@ public class SectionDActivity extends AppCompatActivity {
                 bi.d115a.isChecked() ? "1" :
                         bi.d115b.isChecked() ? "2" : "0");
 
+        fmc.setAvailable(bi.d115a.isChecked() ? "1" : bi.d115b.isChecked() ? "2" : "0");
+
         fmc.setsD(String.valueOf(sd));
 
         // Update in ViewModel
@@ -235,8 +236,8 @@ public class SectionDActivity extends AppCompatActivity {
             mainVModel.setMWRA(fmc);
         else if (Integer.valueOf(fmc.getAge()) < 5) {
             mainVModel.setChildU5(fmc);
-            if (motherFMC == null || bi.d115b.isChecked()) return;
-            if (Integer.valueOf(motherFMC.getAge()) >= 15 && Integer.valueOf(motherFMC.getAge()) <= 49)
+            if (motherFMC == null) return;
+            if (Integer.valueOf(motherFMC.getAge()) >= 15 && Integer.valueOf(motherFMC.getAge()) <= 49 && motherFMC.getAvailable().equals("1"))
                 mainVModel.setMwraChildU5(motherFMC);
         }
 
