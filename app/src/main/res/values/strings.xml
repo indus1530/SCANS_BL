@@ -371,7 +371,7 @@
     <string name="f108b"> Month </string>
     <string name="f108c"> Don’t Known </string>
 
-    <string name="f109"> F109:\t How many times did you receive antenatal care during last pregnancy with {NAME}? Probe to identify the number of times antenatal care was received. If a range is given, record the minimum number of times antenatal care received.</string>
+    <string name="f109"> F109:\t How many times did you receive antenatal care during last pregnancy with {NAME} ? </string>
     <string name="f109hint"> Probe to identify the number of times antenatal care was received. </string>
     <string name="f109hint1"> If a range is given, record the minimum number of times antenatal care received.</string>
     <string name="f109a"> Number of times </string>
@@ -1087,142 +1087,177 @@
     <string name="h223c"> Borrowing another loan from someone </string>
     <string name="h223d"> Donations/fund raising </string>
 
+
     <string name="i1_diarrhea">Now I would like to ask you some questions related to diarrhea and Acute Respiratory Infection (ARI) about less than 5 years of age children in your household during last two weeks.</string>
-    <string name="i101">Has any child less than 5 years of age in the household had diarrhea in the last 2 weeks?  An episode of diarrhea is defined as, “(three or more loose stools in a day/24 hours)” </string>
+
+    <string name="i101"> I101:\t Has any child less than 5 years of age in the household had diarrhea in the last 2 weeks ? </string>
+    <string name="i101hint"> An episode of diarrhea is defined as, “(three or more loose stools in a day/24 hours)” </string>
     <string name="i101a">Yes</string>
     <string name="i101b">No</string>
-    <string name="i102">How many children had diarrhoea in the household in the last two weeks?</string>
-    <string name="i103">For how many days did {NAME} have diarrhoea?</string>
-    <string name="i104">Was there any blood in the stool?</string>
-    <string name="i104a">Yes</string>
-    <string name="i104b">No</string>
-    <string name="i104c">Don\'t Know</string>
-    <string name="i105">Did you seek care when {NAME} had diarrhea?</string>
-    <string name="i105a">Yes</string>
-    <string name="i105b">No</string>
-    <string name="i106">Why did you not seek care for {NAME}’s diarrheal episode?</string>
-    <string name="i106a">The problem did not require care seeking</string>
-    <string name="i106b">Had no money to pay HCP</string>
-    <string name="i106c">Transport was not available</string>
-    <string name="i106d">A male was not present to accompany me to the health center</string>
-    <string name="i106e">No permission from household head/husband /mother in law</string>
-    <string name="i106f">Health facility is too far</string>
-    <string name="i107">Where did you seek care for {NAME}’s diarrheal episode? </string>
-    <string name="i107a">Government health facility</string>
-    <string name="i107b">Private health facility</string>
-    <string name="i107c">NGO health facility </string>
-    <string name="i108">Who referred you to seek care at the facility for {NAME}’s diarrheal treatment? </string>
-    <string name="i108a">Doctor</string>
-    <string name="i108b">LHV (Lady Health Visitor)</string>
-    <string name="i108c">Nurse</string>
-    <string name="i108d">Community Midwife </string>
-    <string name="i108e">LHW (Lady Health Worker)</string>
-    <string name="i108f">Dai/TBA (Traditional Birth Attendant)</string>
-    <string name="i109">How far is the health facility, where you sought treatment of {NAME} for diarrheal episode?</string>
-    <string name="i110">How long does it take to reach health facility, where you sought treatment of {NAME} for diarrheal episode?</string>
-    <string name="i111">Who treated {NAME} for diarrhea episode?</string>
-    <string name="i111a">Doctor</string>
-    <string name="i111b">LHV (Lady Health Visitor)</string>
-    <string name="i111c">Nurse</string>
-    <string name="i111d">Community Midwife </string>
-    <string name="i111e">Dispenser/Compounder</string>
-    <string name="i111f">LHW (Lady Health Worker)</string>
-    <string name="i111g">Dai/TBA (Traditional Birth Attendant)</string>
-    <string name="i112">What treatment was given to {NAME} for diarrheal illness?</string>
-    <string name="i112a">Fluid from ORS packets or pre packed liquid </string>
-    <string name="i112b">ORS </string>
-    <string name="i112c">RHF </string>
-    <string name="i112d">Loos ORS</string>
-    <string name="i112e">Zinc DT</string>
-    <string name="i112f">Increased recommended fluids </string>
-    <string name="i112g">Antibiotic drug Oral</string>
-    <string name="i112h">Flagyl</string>
-    <string name="i112i">Intravenous (IV) (drip)</string>
-    <string name="i112j">Ant motility </string>
-    <string name="i112k">Home remedy </string>
-    <string name="i113">Was the {NAME} hospitalized for diarrhea treatment?</string>
-    <string name="i113a">Yes</string>
-    <string name="i113b">No</string>
-    <string name="i114">Where was {NAME} hospitalized?</string>
+
+    <string name="i102"> I102:\t How many children had diarrhoea in the household in the last two weeks ? </string>
+
+    <string name="i103"> I103:\t For how many days did {NAME} have diarrhoea ? </string>
+
+    <string name="i104"> I104:\t Was there any blood in the stool ? </string>
+    <string name="i104a"> Yes </string>
+    <string name="i104b"> No </string>
+    <string name="i104c"> Don\'t Know </string>
+
+    <string name="i105"> I105:\t Did you seek care when {NAME} had diarrhea ? </string>
+    <string name="i105a"> Yes </string>
+    <string name="i105b"> No </string>
+
+    <string name="i106"> I106:\t Why did you not seek care for {NAME}’s diarrheal episode ? </string>
+    <string name="i106a"> The problem did not require care seeking </string>
+    <string name="i106b"> Had no money to pay HCP </string>
+    <string name="i106c"> Transport was not available </string>
+    <string name="i106d"> A male was not present to accompany me to the health center </string>
+    <string name="i106e"> No permission from household head/husband /mother in law </string>
+    <string name="i106f"> Health facility is too far </string>
+
+    <string name="i107"> I107:\t Where did you seek care for {NAME}’s diarrheal episode ? </string>
+    <string name="i107a"> Government health facility </string>
+    <string name="i107b"> Private health facility </string>
+    <string name="i107c"> NGO health facility </string>
+
+    <string name="i108"> I108:\t Who referred you to seek care at the facility for {NAME}’s diarrheal treatment ? </string>
+    <string name="i108a"> Doctor </string>
+    <string name="i108b"> LHV (Lady Health Visitor) </string>
+    <string name="i108c"> Nurse </string>
+    <string name="i108d"> Community Midwife </string>
+    <string name="i108e"> LHW (Lady Health Worker) </string>
+    <string name="i108f"> Dai/TBA (Traditional Birth Attendant) </string>
+
+    <string name="i109"> I109:\t How far is the health facility, where you sought treatment of {NAME} for diarrheal episode ? </string>
+
+    <string name="i110"> I110:\t How long does it take to reach health facility, where you sought treatment of {NAME} for diarrheal episode?</string>
+
+    <string name="i111"> I111:\t Who treated {NAME} for diarrhea episode?</string>
+    <string name="i111a"> Doctor </string>
+    <string name="i111b"> LHV (Lady Health Visitor) </string>
+    <string name="i111c"> Nurse </string>
+    <string name="i111d"> Community Midwife </string>
+    <string name="i111e"> Dispenser/Compounder </string>
+    <string name="i111f"> LHW (Lady Health Worker) </string>
+    <string name="i111g"> Dai/TBA (Traditional Birth Attendant) </string>
+
+    <string name="i112"> I112:\t What treatment was given to {NAME} for diarrheal illness ? </string>
+    <string name="i112a"> Fluid from ORS packets or pre packed liquid </string>
+    <string name="i112b"> ORS </string>
+    <string name="i112c"> RHF </string>
+    <string name="i112d"> Loos ORS </string>
+    <string name="i112e"> Zinc DT </string>
+    <string name="i112f"> Increased recommended fluids </string>
+    <string name="i112g"> Antibiotic drug Oral </string>
+    <string name="i112h"> Flagyl </string>
+    <string name="i112i"> Intravenous (IV) (drip) </string>
+    <string name="i112j"> Ant motility </string>
+    <string name="i112k"> Home remedy </string>
+
+    <string name="i113"> I113:\t Was the {NAME} hospitalized for diarrhea treatment ? </string>
+    <string name="i113a"> Yes </string>
+    <string name="i113b"> No </string>
+
+    <string name="i114"> I114:\t Where was {NAME} hospitalized ? </string>
     <string name="i114a">Government health facility</string>
     <string name="i114b">Private health facility</string>
     <string name="i114c">NGO health facility </string>
-    <string name="i115">For how long {NAME} was hospitalized?</string>
-    <string name="i115a">Hours</string>
-    <string name="i115b">Days</string>
-    <string name="i116">What treatment was given to {NAME} during hospitalization to treat diarrhoea?  Select all that apply. </string>
-    <string name="i116a">ORS</string>
-    <string name="i116b">Antibiotic</string>
-    <string name="i116b_title">Pill or Syrup:</string>
-    <string name="i116c">Antimotility/(Antidiarrheal)</string>
-    <string name="i116d">Zinc</string>
-    <string name="i116e">Antibiotic</string>
-    <string name="i116e_ttitle">Injection</string>
-    <string name="i116f">Unknown injection</string>
-    <string name="i116g">Intravenous (IV)</string>
-    <string name="i116h">Home remedy/herbal medicine</string>
-    <string name="i117">Have you heard about ORS? </string>
-    <string name="i117a">Yes</string>
-    <string name="i117b">No</string>
-    <string name="i118">Are you aware about the preparation method of ORS (Oral rehydration salt)?</string>
+
+    <string name="i115"> I115:\t For how long {NAME} was hospitalized ? </string>
+    <string name="i115a"> Hours </string>
+    <string name="i115b"> Days </string>
+
+    <string name="i116"> I116:\t What treatment was given to {NAME} during hospitalization to treat diarrhoea?  Select all that apply. </string>
+    <string name="i116a"> ORS </string>
+    <string name="i116b"> Antibiotic </string>
+    <string name="i116b_title"> Pill or Syrup: </string>
+    <string name="i116c"> Antimotility/(Antidiarrheal) </string>
+    <string name="i116d"> Zinc </string>
+    <string name="i116e"> Antibiotic </string>
+    <string name="i116e_ttitle"> Injection </string>
+    <string name="i116f"> Unknown injection </string>
+    <string name="i116g"> Intravenous (IV) </string>
+    <string name="i116h"> Home remedy/herbal medicine </string>
+
+    <string name="i117"> I117:\t Have you heard about ORS ? </string>
+    <string name="i117a"> Yes </string>
+    <string name="i117b"> No </string>
+
+    <string name="i118"> I118:\t Are you aware about the preparation method of ORS (Oral rehydration salt) ? </string>
     <string name="i118a">Yes</string>
     <string name="i118b">No</string>
-    <string name="i119">Where did you learn how to prepare Oral Rehydration Solution (ORS)? </string>
-    <string name="i119a">Doctor</string>
-    <string name="i119b">LHV (Lady Health Visitor)</string>
-    <string name="i119c">Nurse</string>
-    <string name="i119d">Community Midwife </string>
-    <string name="i119e">Dispenser/Compounder</string>
-    <string name="i119f">HW (Lady Health Worker)</string>
-    <string name="i119g">Dai/TBA (Traditional Birth Attendant)</string>
-    <string name="i119h">Pamphalet/Broucher/SignBoard</string>
-    <string name="i119i">Mobile/SmartPhone</string>
-    <string name="i120">How much did diarrheal treatment of {NAME} cost you for medicine?</string>
-    <string name="i121">How much did it cost you on transport for diarrheal treatment of {NAME}?</string>
-    <string name="i122">Do you know any danger sign of diarrhea?</string>
-    <string name="i122a">Yes</string>
-    <string name="i122b">No</string>
-    <string name="i123">Who provided you information regarding danger signs of diarrhea?</string>
-    <string name="i123a">Doctor</string>
-    <string name="i123b">LHV (Lady Health Visitor)</string>
-    <string name="i123c">Nurse</string>
-    <string name="i123d">Community Midwife</string>
-    <string name="i123e">LHW (Lady Health Worker)</string>
-    <string name="i123f">Dai/TBA (Traditional Birth Attendant)</string>
-    <string name="i124">Could you please name any danger signs/problems that may occur in diarrhoea?</string>
-    <string name="i124a">Dehydration</string>
-    <string name="i124b">Convulsions </string>
-    <string name="i124c">Unusually sleepy or unconscious </string>
-    <string name="i124d">Not able to drink or feed anything </string>
-    <string name="i124e">Vomits everything</string>
-    <string name="i124f">Blood In stool</string>
-    <string name="i124g">Skin pinch goes back very slowly</string>
-    <string name="i125">Did LHW provided care / visit you when the child was sick with diarrhea?</string>
+
+    <string name="i119"> I119:\t Where did you learn how to prepare Oral Rehydration Solution (ORS)? </string>
+    <string name="i119a"> Doctor </string>
+    <string name="i119b"> LHV (Lady Health Visitor) </string>
+    <string name="i119c"> Nurse </string>
+    <string name="i119d"> Community Midwife </string>
+    <string name="i119e"> Dispenser/Compounder </string>
+    <string name="i119f"> HW (Lady Health Worker) </string>
+    <string name="i119g"> Dai/TBA (Traditional Birth Attendant) </string>
+    <string name="i119h"> Pamphalet/Broucher/SignBoard </string>
+    <string name="i119i"> Mobile/SmartPhone </string>
+
+    <string name="i120"> I120:\t How much did diarrheal treatment of {NAME} cost you for medicine ? </string>
+
+    <string name="i121"> I121:\t How much did it cost you on transport for diarrheal treatment of {NAME} ? </string>
+
+    <string name="i122"> I122:\t Do you know any danger sign of diarrhea ? </string>
+    <string name="i122a"> Yes </string>
+    <string name="i122b"> No </string>
+
+    <string name="i123"> I123:\t Who provided you information regarding danger signs of diarrhea ? </string>
+    <string name="i123a"> Doctor </string>
+    <string name="i123b"> LHV (Lady Health Visitor) </string>
+    <string name="i123c"> Nurse </string>
+    <string name="i123d"> Community Midwife </string>
+    <string name="i123e"> LHW (Lady Health Worker) </string>
+    <string name="i123f"> Dai/TBA (Traditional Birth Attendant) </string>
+
+    <string name="i124"> I124:\t Could you please name any danger signs/problems that may occur in diarrhoea?</string>
+    <string name="i124a"> Dehydration </string>
+    <string name="i124b"> Convulsions </string>
+    <string name="i124c"> Unusually sleepy or unconscious </string>
+    <string name="i124d"> Not able to drink or feed anything </string>
+    <string name="i124e"> Vomits everything </string>
+    <string name="i124f"> Blood In stool </string>
+    <string name="i124g"> Skin pinch goes back very slowly </string>
+
+    <string name="i125"> I125:\t Did LHW provided care / visit you when the child was sick with diarrhea?</string>
     <string name="i125a">Yes</string>
     <string name="i125b">No</string>
-    <string name="i126">What services did she provide?</string>
-    <string name="i126a">Informed mother about home preparation of ORS.</string>
-    <string name="i126b">Provide Zinc DT</string>
-    <string name="i126c">Provide ORS packet</string>
-    <string name="i126d">Referral to HCF for Diarrhea treatment</string>
-    <string name="i126e">Informed about danger signs of diarrhea</string>
+
+    <string name="i126"> I126:\t What services did she provide ? </string>
+    <string name="i126a"> Informed mother about home preparation of ORS. </string>
+    <string name="i126b"> Provide Zinc DT </string>
+    <string name="i126c"> Provide ORS packet </string>
+    <string name="i126d"> Referral to HCF for Diarrhea treatment </string>
+    <string name="i126e"> Informed about danger signs of diarrhea </string>
 
     <string name="i201">Has any child less than five years had fever in the last two weeks in the household?</string>
     <string name="i201a">Yes</string>
     <string name="i201b">No</string>
+
     <string name="i202">How many children had fever in the last two weeks in the household?</string>
+
     <string name="i203">Has a child had an illness with cough that he/she breathes faster than usual with short, rapid breaths or has difficulty breathing in the past two weeks?</string>
     <string name="i203a">Yes</string>
     <string name="i203b">No</string>
+
     <string name="i204">How many children have had an illness with cough that he/she breathe faster than usual with short, rapid breaths or have difficulty breathing in the past two weeks?</string>
+
     <string name="i205">Did {NAME} have chest in drawing during the fever /and cough? </string>
     <string name="i205a">Yes</string>
     <string name="i205b">No</string>
     <string name="i205c">Don\'t Know</string>
+
     <string name="i206">How many days did {NAME} suffer the symptoms of fever and cough?</string>
+
     <string name="i207">Did you seek advice or treatment for {NAME}’s. symptoms of fever, cough and fast breathing?</string>
     <string name="i207a">Yes</string>
     <string name="i207b">No</string>
+
     <string name="i208">Why did you not seek care or treatment for {NAME}’s illness?</string>
     <string name="i208a">The problem did not require care seeking</string>
     <string name="i208b">Had no money to pay HCP</string>
@@ -1232,11 +1267,13 @@
     <string name="i208f">Health facility is too far</string>
     <string name="i208g">Facility not open </string>
     <string name="i208h">Poor quality service</string>
+
     <string name="i209">Where did {NAME} receive treatment for symptoms of fever, cough and fast breathing?</string>
     <string name="i209a">At home</string>
     <string name="i209b">Government health facility</string>
     <string name="i209c">Private health facility</string>
     <string name="i209d">NGO health facility </string>
+
     <string name="i210">Who referred {NAME} for treatment of symptoms of fever, cough and fast breathing?</string>
     <string name="i210a">Doctor</string>
     <string name="i210b">LHV (Lady Health Visitor)</string>
@@ -1246,6 +1283,7 @@
     <string name="i210f">LHW (Lady Health Worker)</string>
     <string name="i210g">Dai/TBA (Traditional Birth Attendant)</string>
     <string name="i210h">Self</string>
+
     <string name="i211">How far is the health facility, where you sought treatment of {NAME}’s symptoms of fever, cough and fast breathing? (kilometers)</string>
     <string name="i212">How long does it take to reach health facility, where you sought treatment of {NAME}’s symptoms of fever, cough and fast breathingtreatment?(Minutes)</string>
     <string name="i213">Who treated {NAME} for symptoms of fever, cough and fast breathing at the facility?</string>
