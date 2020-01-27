@@ -19,10 +19,10 @@
 
 
         <LinearLayout
-            android:layoutDirection="ltr"
             android:id="@+id/fldGrpSectionf02"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layoutDirection="ltr"
             android:orientation="vertical">
 
 
@@ -452,16 +452,16 @@
 
                             <RadioButton
                                 android:id="@+id/f129a"
+                                style="@style/radiobutton"
                                 android:layout_width="0dp"
                                 android:layout_weight="1"
-                                style="@style/radiobutton"
                                 android:text="@string/yes" />
 
                             <RadioButton
                                 android:id="@+id/f129b"
+                                style="@style/radiobutton"
                                 android:layout_width="0dp"
                                 android:layout_weight="1"
-                                style="@style/radiobutton"
                                 android:text="@string/no" />
 
                         </RadioGroup>
