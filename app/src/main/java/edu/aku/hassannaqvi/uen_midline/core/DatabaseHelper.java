@@ -20,6 +20,7 @@ import java.util.Date;
 import edu.aku.hassannaqvi.uen_midline.contracts.AreasContract;
 import edu.aku.hassannaqvi.uen_midline.contracts.AreasContract.singleAreas;
 import edu.aku.hassannaqvi.uen_midline.contracts.BLRandomContract;
+import edu.aku.hassannaqvi.uen_midline.contracts.ChildContract;
 import edu.aku.hassannaqvi.uen_midline.contracts.ChildContract.SingleChild;
 import edu.aku.hassannaqvi.uen_midline.contracts.EnumBlockContract;
 import edu.aku.hassannaqvi.uen_midline.contracts.FamilyMembersContract;
@@ -708,6 +709,31 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         return newRowId;
     }
 
+    public Long addChild(ChildContract childContract) {
+
+        // Gets the data repository in write mode
+        SQLiteDatabase db = this.getWritableDatabase();
+
+        // Create a new map of values, where column names are the keys
+        ContentValues values = new ContentValues();
+//        values.put(MWRATable._ID, mwra.get_ID());
+        values.put(SingleChild.COLUMN__UUID, childContract.get_UUID());
+        values.put(SingleChild.COLUMN_DEVICEID, childContract.get_UUID());
+        values.put(SingleChild.COLUMN_FORMDATE, childContract.get_UUID());
+        values.put(SingleChild.COLUMN_USER, childContract.get_UUID());
+        values.put(SingleChild.COLUMN_SI1, childContract.getsI1());
+        values.put(SingleChild.COLUMN_DEVICETAGID, childContract.getDevicetagID());
+
+
+        // Insert the new row, returning the primary key value of the new row
+        long newRowId;
+        newRowId = db.insert(
+                SingleChild.TABLE_NAME,
+                SingleKishMWRA.COLUMN_NAME_NULLABLE,
+                values);
+        return newRowId;
+    }
+
     public Long addPregnantMWRA(MWRA_PREContract mwra) {
 
         // Gets the data repository in write mode
@@ -1277,6 +1303,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
                 selection,
                 selectionArgs);
     }
+
 
     //Generic update ChildColumn
     public int updatesChildColumn(String column, String value) {
