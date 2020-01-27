@@ -190,7 +190,7 @@ public class SectionGActivity extends AppCompatActivity {
 
     private boolean UpdateDB() {
 
-        DatabaseHelper db = new DatabaseHelper(this);
+        DatabaseHelper db = MainApp.appInfo.getDbHelper();
         int updcount = db.updatesKishMWRAColumn(KishMWRAContract.SingleKishMWRA.COLUMN_SG, MainApp.kish.getsG());
         if (updcount == 1) {
             return true;

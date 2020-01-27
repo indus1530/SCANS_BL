@@ -21,12 +21,16 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
 
+import edu.aku.hassannaqvi.uen_midline.CONSTANTS;
 import edu.aku.hassannaqvi.uen_midline.R;
+import edu.aku.hassannaqvi.uen_midline.contracts.FamilyMembersContract;
 import edu.aku.hassannaqvi.uen_midline.contracts.MWRAContract;
 import edu.aku.hassannaqvi.uen_midline.core.DatabaseHelper;
 import edu.aku.hassannaqvi.uen_midline.core.MainApp;
 import edu.aku.hassannaqvi.uen_midline.databinding.ActivitySectionE1Binding;
 import edu.aku.hassannaqvi.uen_midline.utils.Util;
+
+import static edu.aku.hassannaqvi.uen_midline.ui.list_activity.FamilyMembersListActivity.mainVModel;
 
 public class SectionE1Activity extends AppCompatActivity {
 
@@ -104,6 +108,7 @@ public class SectionE1Activity extends AppCompatActivity {
                 Intent next;
                 if (bi.e101a.isChecked()) {
                     next = new Intent(SectionE1Activity.this, SectionE2Activity.class);
+                    next.putExtra(CONSTANTS.MWRA_INFO, mwra);
                 } else {
                     if (MainApp.pragnantWoman.getFirst().size() > 0) {
                         next = new Intent(SectionE1Activity.this, SectionE1Activity.class);
@@ -119,7 +124,7 @@ public class SectionE1Activity extends AppCompatActivity {
 
     private boolean UpdateDB() {
 
-        DatabaseHelper db = new DatabaseHelper(this);
+        DatabaseHelper db = MainApp.appInfo.getDbHelper();
         long rowID = db.addMWRA(mwra);
         if (rowID != 0) {
             mwra.set_ID(String.valueOf(rowID));
@@ -143,11 +148,15 @@ public class SectionE1Activity extends AppCompatActivity {
         mwra.setDevicetagID(MainApp.appInfo.getTagName());
 
         JSONObject json = new JSONObject();
-        json.put("fmuid", MainApp.selectedKishMWRA.getUid());
-        json.put("fm_serial", MainApp.selectedKishMWRA.getSerialno());
+        FamilyMembersContract selMWRA = mainVModel.getMemberInfo(MainApp.pragnantWoman.getFirst().get(bi.womanSpinner.getSelectedItemPosition() - 1));
+        mwra.setFmuid(selMWRA.getUid());
+        json.put("fmuid", selMWRA.getUid());
+        mwra.setFm_serial(selMWRA.getSerialno());
+        json.put("fm_serial", selMWRA.getSerialno());
         json.put("hhno", MainApp.fc.getHhno());
         json.put("cluster", MainApp.fc.getClusterCode());
 
+        json.put("e100", bi.womanSpinner.getSelectedItem().toString());
         json.put("e101",
                 bi.e101a.isChecked() ? "1" :
                         bi.e101b.isChecked() ? "2" :
@@ -157,8 +166,6 @@ public class SectionE1Activity extends AppCompatActivity {
                 bi.e102aa.isChecked() ? "1" :
                         bi.e102ab.isChecked() ? "2" :
                                 "0");
-
-//        MainApp.fc.setsE(String.valueOf(json));
 
 
         // Deleting item in list

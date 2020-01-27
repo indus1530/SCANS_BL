@@ -19,6 +19,7 @@ public class AppInfo {
     private String deviceID;
     private String appVersion;
     private String dtToday;
+    private DatabaseHelper dbHelper;
 
     public AppInfo(Context context) {
         try {
@@ -29,6 +30,7 @@ public class AppInfo {
             deviceID = Settings.Secure.getString(context.getContentResolver(), Settings.Secure.ANDROID_ID);
             appVersion = versionName + "." + versionCode;
             tagName = getTagName(context);
+            dbHelper = new DatabaseHelper(context);
         } catch (PackageManager.NameNotFoundException e) {
             e.printStackTrace();
         }
@@ -107,5 +109,13 @@ public class AppInfo {
 
     public void setDtToday(String dtToday) {
         this.dtToday = dtToday;
+    }
+
+    public DatabaseHelper getDbHelper() {
+        return dbHelper;
+    }
+
+    public void setDbHelper(DatabaseHelper dbHelper) {
+        this.dbHelper = dbHelper;
     }
 }

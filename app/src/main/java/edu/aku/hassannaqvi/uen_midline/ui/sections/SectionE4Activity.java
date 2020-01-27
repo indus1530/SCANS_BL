@@ -124,7 +124,7 @@ public class SectionE4Activity extends AppCompatActivity {
     }
 
     private boolean UpdateDB() {
-        DatabaseHelper db = new DatabaseHelper(this);
+        DatabaseHelper db = MainApp.appInfo.getDbHelper();
         long updcount = db.addMortality(morc);
         morc.set_ID(String.valueOf(updcount));
         if (updcount != 0) {

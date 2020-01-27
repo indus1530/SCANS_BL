@@ -1,6 +1,8 @@
 package edu.aku.hassannaqvi.uen_midline.contracts;
 
 import android.database.Cursor;
+import android.os.Parcel;
+import android.os.Parcelable;
 import android.provider.BaseColumns;
 
 import org.json.JSONException;
@@ -10,9 +12,9 @@ import org.json.JSONObject;
  * Created by gul.sanober on 5/9/2017.
  */
 
-public class MWRAContract {
+public class MWRAContract implements Parcelable {
 
-    private final String projectName = "Pulse Oximetry";
+    private String projectName = "uen_mdLine20";
 
     private String _ID = "";
     private String UID = "";
@@ -24,6 +26,12 @@ public class MWRAContract {
     private String devicetagID = "";
     private String synced = "";
     private String synced_date = "";
+
+    // Only for run time
+    private String fmuid = "";
+    private String fm_serial = "";
+
+
     /*
     saved in JSON
     =============
@@ -36,6 +44,34 @@ public class MWRAContract {
 
     public MWRAContract() {
     }
+
+    protected MWRAContract(Parcel in) {
+        projectName = in.readString();
+        _ID = in.readString();
+        UID = in.readString();
+        _UUID = in.readString();
+        deviceId = in.readString();
+        formDate = in.readString();
+        user = in.readString();
+        sE1 = in.readString();
+        devicetagID = in.readString();
+        synced = in.readString();
+        synced_date = in.readString();
+        fmuid = in.readString();
+        fm_serial = in.readString();
+    }
+
+    public static final Creator<MWRAContract> CREATOR = new Creator<MWRAContract>() {
+        @Override
+        public MWRAContract createFromParcel(Parcel in) {
+            return new MWRAContract(in);
+        }
+
+        @Override
+        public MWRAContract[] newArray(int size) {
+            return new MWRAContract[size];
+        }
+    };
 
     public String getProjectName() {
         return projectName;
@@ -123,6 +159,22 @@ public class MWRAContract {
         this.user = user;
     }
 
+    public String getFmuid() {
+        return fmuid;
+    }
+
+    public void setFmuid(String fmuid) {
+        this.fmuid = fmuid;
+    }
+
+    public String getFm_serial() {
+        return fm_serial;
+    }
+
+    public void setFm_serial(String fm_serial) {
+        this.fm_serial = fm_serial;
+    }
+
     public MWRAContract Sync(JSONObject jsonObject) throws JSONException {
 
         this._ID = jsonObject.getString(MWRATable.COLUMN_ID);
@@ -173,6 +225,28 @@ public class MWRAContract {
         json.put(MWRATable.COLUMN_DEVICETAGID, this.devicetagID == null ? JSONObject.NULL : this.devicetagID);
 
         return json;
+    }
+
+    @Override
+    public int describeContents() {
+        return 0;
+    }
+
+    @Override
+    public void writeToParcel(Parcel dest, int flags) {
+        dest.writeString(projectName);
+        dest.writeString(_ID);
+        dest.writeString(UID);
+        dest.writeString(_UUID);
+        dest.writeString(deviceId);
+        dest.writeString(formDate);
+        dest.writeString(user);
+        dest.writeString(sE1);
+        dest.writeString(devicetagID);
+        dest.writeString(synced);
+        dest.writeString(synced_date);
+        dest.writeString(fmuid);
+        dest.writeString(fm_serial);
     }
 
     public static abstract class MWRATable implements BaseColumns {

@@ -75,7 +75,7 @@ public class SectionOActivity extends AppCompatActivity {
 
     private boolean UpdateDB() {
 
-        DatabaseHelper db = new DatabaseHelper(this);
+        DatabaseHelper db = MainApp.appInfo.getDbHelper();
         int updcount = db.updatesFormColumn(FormsContract.FormsTable.COLUMN_SO, MainApp.fc.getsO());
         if (updcount == 1) {
             return true;
@@ -90,19 +90,19 @@ public class SectionOActivity extends AppCompatActivity {
         JSONObject json = new JSONObject();
 
         json.put("o101",
-                bi.o101a.isChecked() ? "1" :
-                        bi.o101b.isChecked() ? "2" :
-                                bi.o101c.isChecked() ? "3" :
+                bi.o101a.isChecked() ?"1" :
+                        bi.o101b.isChecked() ?"2" :
+                                bi.o101c.isChecked() ?"3" :
                                         bi.o10196.isChecked() ? "96" :
                                                 "0");
         json.put("o10196x", bi.o10196x.getText().toString());
         json.put("o102",
-                bi.o102a.isChecked() ? "1" :
-                        bi.o102b.isChecked() ? "2" :
+                bi.o102a.isChecked() ?"1" :
+                        bi.o102b.isChecked() ?"2" :
                                 "0");
         json.put("o103",
-                bi.o103a.isChecked() ? "1" :
-                        bi.o103b.isChecked() ? "2" :
+                bi.o103a.isChecked() ?"1" :
+                        bi.o103b.isChecked() ?"2" :
                                 "0");
         json.put("o104a", bi.o104a.isChecked() ? "1" : "0");
         json.put("o104b", bi.o104b.isChecked() ? "2" : "0");
@@ -117,8 +117,8 @@ public class SectionOActivity extends AppCompatActivity {
                                 "0");
 
         json.put("o106",
-                bi.o106a.isChecked() ? "1" :
-                        bi.o106b.isChecked() ? "2" :
+                bi.o106a.isChecked() ?"1" :
+                        bi.o106b.isChecked() ?"2" :
                                 "0");
 
         json.put("o107a", bi.o107a.isChecked() ? "1" : "0");
@@ -127,14 +127,14 @@ public class SectionOActivity extends AppCompatActivity {
         json.put("o107d", bi.o107d.isChecked() ? "4" : "0");
 
         json.put("o108",
-                bi.o108a.isChecked() ? "1" :
-                        bi.o108b.isChecked() ? "2" :
-                                bi.o108c.isChecked() ? "3" :
-                                        bi.o108d.isChecked() ? "4" :
-                                                bi.o108e.isChecked() ? "5" :
-                                                        bi.o108f.isChecked() ? "6" :
-                                                                bi.o108g.isChecked() ? "7" :
-                                                                        bi.o108x.isChecked() ? "96" :
+                bi.o108a.isChecked() ?"1" :
+                        bi.o108b.isChecked() ?"2" :
+                                bi.o108c.isChecked() ?"3" :
+                                        bi.o108d.isChecked() ?"4" :
+                                                bi.o108e.isChecked() ?"5" :
+                                                        bi.o108f.isChecked() ?"6" :
+                                                                bi.o108g.isChecked() ?"7" :
+                                                                        bi.o108x.isChecked() ?"96" :
                                                                                 "0");
         json.put("o108xt", bi.o108xt.getText().toString());
 

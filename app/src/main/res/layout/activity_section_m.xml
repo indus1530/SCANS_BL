@@ -36,8 +36,7 @@
 
                     <RadioGroup
                         android:id="@+id/m101"
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent">
+                        style="@style/radiogroup">
 
                         <RadioButton
                             android:id="@+id/m101a"
@@ -70,8 +69,7 @@
 
                     <RadioGroup
                         android:id="@+id/m102"
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent">
+                        style="@style/radiogroup">
 
                         <RadioButton
                             android:id="@+id/m102a"
