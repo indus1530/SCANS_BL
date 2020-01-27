@@ -25,12 +25,12 @@
 
         <activity
             android:name=".ui.other.SplashscreenActivity"
-            android:screenOrientation="portrait">
+            android:screenOrientation="portrait" /><!--
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
-        </activity>
+        </activity>-->
 
 
         <activity
@@ -147,7 +147,12 @@
         <activity
             android:name=".ui.sections.SectionNActivity"
             android:label="@string/tnheading"
-            android:screenOrientation="portrait" />
+            android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
 
         <activity
             android:name=".ui.sections.SectionOActivity"

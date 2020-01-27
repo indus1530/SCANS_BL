@@ -128,10 +128,8 @@ public class SectionNActivity extends AppCompatActivity {
                                         "0");
 
         json.put("n104",
-                bi.n104a.isChecked() ? "1" :
-                        bi.n104b.isChecked() ? "98" :
-                                "0");
-        json.put("n104ax", bi.n104ax.getText().toString());
+                bi.n10498.isChecked() ? "98" :
+                        bi.n104.getText().toString());
 
         json.put("n105",
                 bi.n105a.isChecked() ?"1" :
@@ -150,13 +148,13 @@ public class SectionNActivity extends AppCompatActivity {
         json.put("n107",
                 bi.n107a.isChecked() ?"1" :
                         bi.n107b.isChecked() ?"2" :
-                                bi.n107c.isChecked() ?"98" :
+                                bi.n10798.isChecked() ? "98" :
                                         "0");
 
         json.put("n108",
                 bi.n108a.isChecked() ?"1" :
                         bi.n108b.isChecked() ?"2" :
-                                bi.n108c.isChecked() ?"98" :
+                                bi.n10898.isChecked() ? "98" :
                                         "0");
 
         json.put("n109a", bi.n109a.isChecked() ? "1" : "0");
@@ -183,16 +181,18 @@ public class SectionNActivity extends AppCompatActivity {
         json.put("n111",
                 bi.n111a.isChecked() ?"1" :
                         bi.n111b.isChecked() ?"2" :
-                                bi.n111c.isChecked() ?"98" :
+                                bi.n11198.isChecked() ? "98" :
                                         "0");
+
         json.put("n112",
                 bi.n112a.isChecked() ?"1" :
                         bi.n112b.isChecked() ?"2" :
                                 "0");
+
         json.put("n113",
                 bi.n113a.isChecked() ?"1" :
                         bi.n113b.isChecked() ?"2" :
-                                bi.n113c.isChecked() ?"98" :
+                                bi.n11398.isChecked() ? "98" :
                                         "0");
 
         MainApp.fc.setsN(String.valueOf(json));
