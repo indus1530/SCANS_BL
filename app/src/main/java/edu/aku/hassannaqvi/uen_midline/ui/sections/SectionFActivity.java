@@ -76,7 +76,7 @@ public class SectionFActivity extends AppCompatActivity {
     }
 
     private boolean UpdateDB() {
-        DatabaseHelper db = new DatabaseHelper(this);
+        DatabaseHelper db = MainApp.appInfo.getDbHelper();
         long updcount = db.addKishMWRA(MainApp.kish);
         MainApp.kish.set_ID(String.valueOf(updcount));
         if (updcount != 0) {

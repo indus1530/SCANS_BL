@@ -173,7 +173,7 @@ public class SectionI2Activity extends AppCompatActivity {
     }
 
     private boolean UpdateDB() {
-        DatabaseHelper db = new DatabaseHelper(this);
+        DatabaseHelper db = MainApp.appInfo.getDbHelper();
         int updcount = db.updatesChildColumn(ChildContract.SingleChild.COLUMN_SI2, MainApp.child.getsI2());
         if (updcount == 1) {
             return true;

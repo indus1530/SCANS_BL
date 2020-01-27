@@ -75,7 +75,7 @@ public class SectionNActivity extends AppCompatActivity {
 
     private boolean UpdateDB() {
 
-        DatabaseHelper db = new DatabaseHelper(this);
+        DatabaseHelper db = MainApp.appInfo.getDbHelper();
         int updcount = db.updatesFormColumn(FormsContract.FormsTable.COLUMN_SN, MainApp.fc.getsN());
         if (updcount == 1) {
             return true;
