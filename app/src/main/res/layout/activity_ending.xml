@@ -91,7 +91,6 @@
                     android:text='@{istatus96.checked? istatus96x.getText().toString(): ""}'
                     android:visibility='@{istatus96.checked? View.VISIBLE : View.GONE}' />
 
-
             </RadioGroup>
 
             <LinearLayout

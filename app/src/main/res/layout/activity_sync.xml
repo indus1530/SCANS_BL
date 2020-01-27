@@ -42,7 +42,6 @@
                 android:layout_height="wrap_content"
                 tools:listitem="@layout/sync_list_adapter" />
 
-
             <TextView
                 android:id="@+id/no_item"
                 android:layout_width="match_parent"
