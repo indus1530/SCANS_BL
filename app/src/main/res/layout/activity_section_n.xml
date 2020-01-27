@@ -305,7 +305,7 @@
                             android:text="@string/n104a" />
 
                         <com.edittextpicker.aliazaz.EditTextPicker
-                            android:id="@+id/n104at"
+                            android:id="@+id/n104ax"
                             style="@style/EditTextNum"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
@@ -316,7 +316,7 @@
                             app:maxValue="60"
                             app:minValue="1"
                             app:type="range"
-                            android:text='@{n104a.checked? n104at.getText().toString() : ""}'
+                            android:text='@{n104a.checked? n104ax.getText().toString() : ""}'
                             android:visibility='@{n104a.checked? View.VISIBLE : View.GONE}' />
 
                         <RadioButton

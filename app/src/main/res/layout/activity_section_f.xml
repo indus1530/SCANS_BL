@@ -685,7 +685,7 @@
                             style="@style/EditTextAlpha"
                             android:hint="@string/specify"
                             android:tag="f10796"
-                            android:text='@{f10796.checked? f10796.getText().toString() : ""}'
+                            android:text='@{f10796.checked? f10796x.getText().toString() : ""}'
                             android:visibility='@{f10796.checked? View.VISIBLE : View.GONE}' />
 
                         <RadioButton

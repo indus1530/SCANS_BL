@@ -120,16 +120,16 @@ public class SectionNActivity extends AppCompatActivity {
                                                                                                                                 bi.n102m.isChecked() ?"13" :
                                                                                                                                         bi.n102n.isChecked() ?"14" :
                                                                                                                                                 "0");
-        json.put("n103",
-                bi.n103a.isChecked() ?"1" :
+        json.put("n103", bi.n103a.isChecked() ? "1" :
                         bi.n103b.isChecked() ?"2" :
-                                bi.n103c.isChecked() ?"3" :
-                                        "0");
+                                bi.n103c.isChecked() ? "3" : "0");
+
         json.put("n104",
                 bi.n104a.isChecked() ?"" :
                         bi.n104b.isChecked() ?"98" :
                                 "0");
-        json.put("n104at", bi.n104at.getText().toString());
+        json.put("n104at", bi.n104ax.getText().toString());
+
         json.put("n105",
                 bi.n105a.isChecked() ?"1" :
                         bi.n105b.isChecked() ?"2" :
