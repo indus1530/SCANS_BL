@@ -52,6 +52,7 @@
                             android:id="@+id/l101b"
                             style="@style/radiobutton"
                             android:text="@string/l101b" />
+
                     </RadioGroup>
                 </LinearLayout>
             </androidx.cardview.widget.CardView>
@@ -84,6 +85,7 @@
                             android:id="@+id/l102b"
                             style="@style/radiobutton"
                             android:text="@string/l102b" />
+
                     </RadioGroup>
                 </LinearLayout>
             </androidx.cardview.widget.CardView>
@@ -117,6 +119,7 @@
                             android:id="@+id/l103b"
                             style="@style/radiobutton"
                             android:text="@string/l103b" />
+
                     </RadioGroup>
                 </LinearLayout>
             </androidx.cardview.widget.CardView>
@@ -179,7 +182,9 @@
                             android:tag="l10496"
                             android:text='@{l10496.checked? l10496x.getText().toString() : ""}'
                             android:visibility='@{l10496.checked? View.VISIBLE : View.GONE}' />
+
                     </RadioGroup>
+
                 </LinearLayout>
             </androidx.cardview.widget.CardView>
 
@@ -221,7 +226,9 @@
                             android:id="@+id/l105d"
                             style="@style/radiobutton"
                             android:text="@string/l105d" />
+
                     </RadioGroup>
+
                 </LinearLayout>
             </androidx.cardview.widget.CardView>
 
@@ -273,7 +280,9 @@
                             android:tag="l10696"
                             android:text='@{l10696.checked? l10696x.getText().toString() : ""}'
                             android:visibility='@{l10696.checked? View.VISIBLE : View.GONE}' />
+
                     </RadioGroup>
+
                 </LinearLayout>
             </androidx.cardview.widget.CardView>
 
@@ -330,7 +339,9 @@
                             android:tag="l10796"
                             android:text='@{l10796.checked? l10796x.getText().toString() : ""}'
                             android:visibility='@{l10796.checked? View.VISIBLE : View.GONE}' />
+
                     </RadioGroup>
+
                 </LinearLayout>
             </androidx.cardview.widget.CardView>
 
@@ -382,7 +393,9 @@
                             android:tag="l10896"
                             android:text='@{l10896.checked? l10896x.getText().toString() : ""}'
                             android:visibility='@{l10896.checked? View.VISIBLE : View.GONE}' />
+
                     </RadioGroup>
+
                 </LinearLayout>
             </androidx.cardview.widget.CardView>
 
@@ -434,7 +447,9 @@
                             android:tag="l10996"
                             android:text='@{l10996.checked? l10996x.getText().toString() : ""}'
                             android:visibility='@{l10996.checked? View.VISIBLE : View.GONE}' />
+
                     </RadioGroup>
+
                 </LinearLayout>
             </androidx.cardview.widget.CardView>
 

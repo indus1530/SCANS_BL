@@ -91,7 +91,7 @@
                     style="@style/EditTextAlpha"
                     android:hint="@string/other"
                     android:maxLength="40"
-                    android:text='@{istatus96.checked? istatus96x.getText().toString()}'
+                    android:text='@{istatus96.checked? istatus96x.getText().toString(): ""}'
                     android:visibility='@{istatus96.checked? View.VISIBLE : View.GONE}' />
 
 
