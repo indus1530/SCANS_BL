@@ -4,7 +4,6 @@ import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.os.Handler;
-import android.view.View;
 
 import edu.aku.hassannaqvi.uen_midline.R;
 
@@ -29,7 +28,6 @@ public class SplashscreenActivity extends Activity {
             // close this activity
             finish();
         }, SPLASH_TIME_OUT);
-
 
     }
 

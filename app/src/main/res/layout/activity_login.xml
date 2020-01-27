@@ -53,14 +53,12 @@
                 android:layout_marginTop="10dp"
                 android:orientation="vertical">
 
-
                 <androidx.cardview.widget.CardView
                     android:layout_width="450dp"
                     android:layout_height="420dp"
                     android:layout_gravity="center_horizontal"
                     android:elevation="5dp"
                     app:cardCornerRadius="10dp">
-
 
                     <LinearLayout
                         android:layout_width="match_parent"
@@ -115,7 +113,6 @@
 
                             </LinearLayout>
 
-
                             <TextView
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
@@ -163,8 +160,8 @@
                                     android:onClick="@{() -> callback.onShowPasswordClick()}"
                                     android:src="@drawable/ic_remove_red_eye_black_24dp"
                                     android:textSize="20sp" />
-                            </LinearLayout>
 
+                            </LinearLayout>
 
                         </LinearLayout>
 
@@ -220,11 +217,10 @@
                                     android:background="@drawable/circle_style"
                                     android:src="@drawable/ic_upload"
                                     android:tint="@color/white" />
+
                             </LinearLayout>
 
-
                         </LinearLayout>
-
 
                         <androidx.appcompat.widget.AppCompatButton
                             android:id="@+id/email_sign_in_button"
@@ -236,10 +232,9 @@
                             android:text="Login"
                             android:textColor="@color/greenInfo" />
 
-
                     </LinearLayout>
-                </androidx.cardview.widget.CardView>
 
+                </androidx.cardview.widget.CardView>
 
                 <TextView
                     android:id="@+id/txtinstalldate"
@@ -248,12 +243,12 @@
                     android:layout_gravity="center"
                     android:layout_marginTop="20dp"
                     android:gravity="center"
-                    android:textSize="16sp"
+                    android:textSize="16sp" />
 
-                    />
             </LinearLayout>
+
         </LinearLayout>
 
-
     </ScrollView>
+
 </LinearLayout>

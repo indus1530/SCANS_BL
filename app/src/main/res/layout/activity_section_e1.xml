@@ -30,6 +30,7 @@
                 android:layout_height="wrap_content"
                 android:orientation="vertical">
 
+                <!-- e101  Spinner   -->
                 <androidx.cardview.widget.CardView
                     android:id="@+id/fldGrpCVe100"
                     style="@style/cardView">
@@ -167,7 +168,6 @@
 
             </LinearLayout>
 
-
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -190,6 +190,8 @@
                     android:onClick="@{() -> callback.BtnContinue()}"
                     android:text="@string/nextSection" />
             </LinearLayout>
+
         </LinearLayout>
     </ScrollView>
+
 </layout>
