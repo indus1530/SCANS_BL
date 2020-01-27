@@ -1,25 +1,42 @@
 package edu.aku.hassannaqvi.uen_midline.core;
 
 import android.content.Context;
+import android.content.SharedPreferences;
 import android.content.pm.PackageManager;
+import android.provider.Settings;
 
 import java.text.SimpleDateFormat;
 import java.util.Date;
+
+import static android.content.Context.MODE_PRIVATE;
 
 public class AppInfo {
 
     private String versionName;
     private Long installedOn;
     private int versionCode;
+    private String tagName;
+    private String deviceID;
+    private String appVersion;
+    private String dtToday;
 
     public AppInfo(Context context) {
         try {
-            this.installedOn = context.getPackageManager().getPackageInfo(context.getApplicationContext().getPackageName(), 0).lastUpdateTime;
-            this.versionCode = context.getPackageManager().getPackageInfo(context.getApplicationContext().getPackageName(), 0).versionCode;
-            this.versionName = context.getPackageManager().getPackageInfo(context.getApplicationContext().getPackageName(), 0).versionName;
+            installedOn = context.getPackageManager().getPackageInfo(context.getApplicationContext().getPackageName(), 0).lastUpdateTime;
+            versionCode = context.getPackageManager().getPackageInfo(context.getApplicationContext().getPackageName(), 0).versionCode;
+            versionName = context.getPackageManager().getPackageInfo(context.getApplicationContext().getPackageName(), 0).versionName;
+            dtToday = new SimpleDateFormat("dd-MM-yy HH:mm").format(new Date().getTime());
+            deviceID = Settings.Secure.getString(context.getContentResolver(), Settings.Secure.ANDROID_ID);
+            appVersion = versionName + "." + versionCode;
+            tagName = getTagName(context);
         } catch (PackageManager.NameNotFoundException e) {
             e.printStackTrace();
         }
+    }
+
+    private String getTagName(Context mContext) {
+        SharedPreferences sharedPref = mContext.getSharedPreferences("tagName", MODE_PRIVATE);
+        return sharedPref.getString("tagName", null);
     }
 
     private AppInfo(String versionName, Long installedOn, int versionCode) {
@@ -58,5 +75,37 @@ public class AppInfo {
 
     public void setVersionCode(int versionCode) {
         this.versionCode = versionCode;
+    }
+
+    public String getTagName() {
+        return tagName;
+    }
+
+    public void setTagName(String tagName) {
+        this.tagName = tagName;
+    }
+
+    public String getDeviceID() {
+        return deviceID;
+    }
+
+    public void setDeviceID(String deviceID) {
+        this.deviceID = deviceID;
+    }
+
+    public String getAppVersion() {
+        return appVersion;
+    }
+
+    public void setAppVersion(String appVersion) {
+        this.appVersion = appVersion;
+    }
+
+    public String getDtToday() {
+        return dtToday;
+    }
+
+    public void setDtToday(String dtToday) {
+        this.dtToday = dtToday;
     }
 }

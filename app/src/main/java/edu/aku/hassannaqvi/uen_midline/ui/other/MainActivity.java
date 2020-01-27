@@ -93,9 +93,9 @@ public class MainActivity extends AppCompatActivity {
                     m_Text = input.getText().toString();
                     if (!m_Text.equals("")) {
                         editor.putString("tagName", m_Text);
-                        editor.commit();
+                        editor.apply();
+                        MainApp.appInfo.setTagName(m_Text);
                         dialog.dismiss();
-
                     }
                 }
             });
