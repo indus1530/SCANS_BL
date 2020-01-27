@@ -9,7 +9,13 @@ import androidx.databinding.DataBindingUtil;
 
 import com.validatorcrawler.aliazaz.Validator;
 
+import java.text.SimpleDateFormat;
+import java.util.Date;
+
 import edu.aku.hassannaqvi.uen_midline.R;
+import edu.aku.hassannaqvi.uen_midline.contracts.FormsContract;
+import edu.aku.hassannaqvi.uen_midline.core.DatabaseHelper;
+import edu.aku.hassannaqvi.uen_midline.core.MainApp;
 import edu.aku.hassannaqvi.uen_midline.databinding.ActivityEndingBinding;
 
 public class EndingActivity extends AppCompatActivity {
@@ -52,20 +58,31 @@ public class EndingActivity extends AppCompatActivity {
 
     private void SaveDraft() {
 
+        MainApp.fc.setIstatus(bi.istatusa.isChecked() ? "1"
+                : bi.istatusb.isChecked() ? "2"
+                : bi.istatusc.isChecked() ? "3"
+                : bi.istatusd.isChecked() ? "4"
+                : bi.istatuse.isChecked() ? "5"
+                : bi.istatusf.isChecked() ? "6"
+                : bi.istatusg.isChecked() ? "7"
+                : bi.istatus96.isChecked() ? "96"
+                : "0");
+
+        MainApp.fc.setIstatus88x(bi.istatus96x.getText().toString());
+        MainApp.fc.setEndingdatetime(new SimpleDateFormat("dd-MM-yy HH:mm").format(new Date().getTime()));
     }
 
     public boolean UpdateDB() {
-//        try {
-//            Long longID = new CrudOperations(this, FormsDAO.class.getName(), "formsDao", "updateForm", fc).execute().get();
-//            return longID == 1;
-//
-//        } catch (InterruptedException e) {
-//            e.printStackTrace();
-//        } catch (ExecutionException e) {
-//            e.printStackTrace();
-//        }
 
-        return true;
+        DatabaseHelper db = MainApp.appInfo.getDbHelper();
+        int updcount = db.updateEnding();
+        if (updcount == 1) {
+            return true;
+        } else {
+            Toast.makeText(this, "Updating Database... ERROR!", Toast.LENGTH_SHORT).show();
+            return false;
+        }
+
     }
 
     private boolean formValidation() {
