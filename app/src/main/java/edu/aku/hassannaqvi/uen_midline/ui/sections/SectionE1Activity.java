@@ -104,6 +104,7 @@ public class SectionE1Activity extends AppCompatActivity {
                 Intent next;
                 if (bi.e101a.isChecked()) {
                     next = new Intent(SectionE1Activity.this, SectionE2Activity.class);
+                    next.putExtra("mwra", mwra);
                 } else {
                     if (MainApp.pragnantWoman.getFirst().size() > 0) {
                         next = new Intent(SectionE1Activity.this, SectionE1Activity.class);

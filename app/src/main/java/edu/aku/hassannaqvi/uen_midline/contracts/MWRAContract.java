@@ -1,6 +1,8 @@
 package edu.aku.hassannaqvi.uen_midline.contracts;
 
 import android.database.Cursor;
+import android.os.Parcel;
+import android.os.Parcelable;
 import android.provider.BaseColumns;
 
 import org.json.JSONException;
@@ -10,9 +12,9 @@ import org.json.JSONObject;
  * Created by gul.sanober on 5/9/2017.
  */
 
-public class MWRAContract {
+public class MWRAContract implements Parcelable {
 
-    private final String projectName = "Pulse Oximetry";
+    private String projectName = "uen_mdLine20";
 
     private String _ID = "";
     private String UID = "";
@@ -36,6 +38,32 @@ public class MWRAContract {
 
     public MWRAContract() {
     }
+
+    protected MWRAContract(Parcel in) {
+        projectName = in.readString();
+        _ID = in.readString();
+        UID = in.readString();
+        _UUID = in.readString();
+        deviceId = in.readString();
+        formDate = in.readString();
+        user = in.readString();
+        sE1 = in.readString();
+        devicetagID = in.readString();
+        synced = in.readString();
+        synced_date = in.readString();
+    }
+
+    public static final Creator<MWRAContract> CREATOR = new Creator<MWRAContract>() {
+        @Override
+        public MWRAContract createFromParcel(Parcel in) {
+            return new MWRAContract(in);
+        }
+
+        @Override
+        public MWRAContract[] newArray(int size) {
+            return new MWRAContract[size];
+        }
+    };
 
     public String getProjectName() {
         return projectName;
@@ -173,6 +201,26 @@ public class MWRAContract {
         json.put(MWRATable.COLUMN_DEVICETAGID, this.devicetagID == null ? JSONObject.NULL : this.devicetagID);
 
         return json;
+    }
+
+    @Override
+    public int describeContents() {
+        return 0;
+    }
+
+    @Override
+    public void writeToParcel(Parcel parcel, int i) {
+        parcel.writeString(projectName);
+        parcel.writeString(_ID);
+        parcel.writeString(UID);
+        parcel.writeString(_UUID);
+        parcel.writeString(deviceId);
+        parcel.writeString(formDate);
+        parcel.writeString(user);
+        parcel.writeString(sE1);
+        parcel.writeString(devicetagID);
+        parcel.writeString(synced);
+        parcel.writeString(synced_date);
     }
 
     public static abstract class MWRATable implements BaseColumns {
