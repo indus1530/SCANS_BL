@@ -934,7 +934,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         Collection<FamilyMembersContract> allFC = new ArrayList<>();
         try {
             c = db.query(
-                    FormsTable.TABLE_NAME,  // The table to query
+                    SingleMember.TABLE_NAME,  // The table to query
                     columns,                   // The columns to return
                     whereClause,               // The columns for the WHERE clause
                     whereArgs,                 // The values for the WHERE clause
@@ -1060,6 +1060,155 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         return allMC;
     }
 
+    public Collection<MWRA_PREContract> getUnsyncedPregMWRA() {
+        SQLiteDatabase db = this.getReadableDatabase();
+        Cursor c = null;
+        String[] columns = {
+                SingleMWRAPRE._ID,
+                SingleMWRAPRE.COLUMN_UID,
+                SingleMWRAPRE.COLUMN__UUID,
+                SingleMWRAPRE.COLUMN_DEVICEID,
+                SingleMWRAPRE.COLUMN_FORMDATE,
+                SingleMWRAPRE.COLUMN_USER,
+                SingleMWRAPRE.COLUMN_SE2,
+                SingleMWRAPRE.COLUMN_DEVICETAGID,
+
+        };
+        String whereClause = SingleMWRAPRE.COLUMN_SYNCED + " is null";
+        String[] whereArgs = null;
+        String groupBy = null;
+        String having = null;
+
+        String orderBy =
+                SingleMWRAPRE._ID + " ASC";
+
+        Collection<MWRA_PREContract> allMC = new ArrayList<MWRA_PREContract>();
+        try {
+            c = db.query(
+                    SingleMWRAPRE.TABLE_NAME,  // The table to query
+                    columns,                   // The columns to return
+                    whereClause,               // The columns for the WHERE clause
+                    whereArgs,                 // The values for the WHERE clause
+                    groupBy,                   // don't group the rows
+                    having,                    // don't filter by row groups
+                    orderBy                    // The sort order
+            );
+            while (c.moveToNext()) {
+                MWRA_PREContract mc = new MWRA_PREContract();
+                allMC.add(mc.hydrate(c));
+            }
+        } finally {
+            if (c != null) {
+                c.close();
+            }
+            if (db != null) {
+                db.close();
+            }
+        }
+        return allMC;
+    }
+
+    public Collection<MortalityContract> getUnsyncedMortality() {
+        SQLiteDatabase db = this.getReadableDatabase();
+        Cursor c = null;
+        String[] columns = {
+                SingleMortality._ID,
+                SingleMortality.COLUMN_UID,
+                SingleMortality.COLUMN__UUID,
+                SingleMortality.COLUMN_DEVICEID,
+                SingleMortality.COLUMN_DEVICETAGID,
+                SingleMortality.COLUMN_FORMDATE,
+                SingleMortality.COLUMN_USER,
+                SingleMortality.COLUMN_SE3,
+
+
+        };
+        String whereClause = SingleMWRAPRE.COLUMN_SYNCED + " is null";
+        String[] whereArgs = null;
+        String groupBy = null;
+        String having = null;
+
+        String orderBy =
+                SingleMWRAPRE._ID + " ASC";
+
+        Collection<MortalityContract> allMC = new ArrayList<MortalityContract>();
+        try {
+            c = db.query(
+                    SingleMortality.TABLE_NAME,  // The table to query
+                    columns,                   // The columns to return
+                    whereClause,               // The columns for the WHERE clause
+                    whereArgs,                 // The values for the WHERE clause
+                    groupBy,                   // don't group the rows
+                    having,                    // don't filter by row groups
+                    orderBy                    // The sort order
+            );
+            while (c.moveToNext()) {
+                MortalityContract mc = new MortalityContract();
+                allMC.add(mc.hydrate(c));
+            }
+        } finally {
+            if (c != null) {
+                c.close();
+            }
+            if (db != null) {
+                db.close();
+            }
+        }
+        return allMC;
+    }
+
+    public Collection<KishMWRAContract> getUnsyncedKishMWRA() {
+        SQLiteDatabase db = this.getReadableDatabase();
+        Cursor c = null;
+        String[] columns = {
+                SingleKishMWRA._ID,
+                SingleKishMWRA.COLUMN_UID,
+                SingleKishMWRA.COLUMN__UUID,
+                SingleKishMWRA.COLUMN_DEVICEID,
+                SingleKishMWRA.COLUMN_FORMDATE,
+                SingleKishMWRA.COLUMN_USER,
+                SingleKishMWRA.COLUMN_SF,
+                SingleKishMWRA.COLUMN_SG,
+                SingleKishMWRA.COLUMN_SH1,
+                SingleKishMWRA.COLUMN_SH2,
+                SingleKishMWRA.COLUMN_SK,
+                SingleKishMWRA.COLUMN_SL,
+                SingleKishMWRA.COLUMN_DEVICETAGID,
+        };
+        String whereClause = SingleKishMWRA.COLUMN_SYNCED + " is null";
+        String[] whereArgs = null;
+        String groupBy = null;
+        String having = null;
+
+        String orderBy =
+                SingleKishMWRA._ID + " ASC";
+
+        Collection<KishMWRAContract> allMC = new ArrayList<KishMWRAContract>();
+        try {
+            c = db.query(
+                    SingleKishMWRA.TABLE_NAME,  // The table to query
+                    columns,                   // The columns to return
+                    whereClause,               // The columns for the WHERE clause
+                    whereArgs,                 // The values for the WHERE clause
+                    groupBy,                   // don't group the rows
+                    having,                    // don't filter by row groups
+                    orderBy                    // The sort order
+            );
+            while (c.moveToNext()) {
+                KishMWRAContract mc = new KishMWRAContract();
+                allMC.add(mc.hydrate(c));
+            }
+        } finally {
+            if (c != null) {
+                c.close();
+            }
+            if (db != null) {
+                db.close();
+            }
+        }
+        return allMC;
+    }
+
     public Collection<FormsContract> getUnsyncedForms() {
         SQLiteDatabase db = this.getReadableDatabase();
         Cursor c = null;
@@ -1125,6 +1274,61 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         }
         return allFC;
     }
+
+    public Collection<ChildContract> getUnsyncedChildForms() {
+        SQLiteDatabase db = this.getReadableDatabase();
+        Cursor c = null;
+        String[] columns = {
+                SingleChild._ID,
+                SingleChild.COLUMN_UID,
+                SingleChild.COLUMN__UUID,
+                SingleChild.COLUMN_DEVICEID,
+                SingleChild.COLUMN_FORMDATE,
+                SingleChild.COLUMN_USER,
+                SingleChild.COLUMN_SI1,
+                SingleChild.COLUMN_SI2,
+                SingleChild.COLUMN_SJ,
+                SingleChild.COLUMN_DEVICETAGID,
+
+        };
+
+
+        String whereClause = SingleChild.COLUMN_SYNCED + " is null";
+
+        String[] whereArgs = null;
+
+        String groupBy = null;
+        String having = null;
+
+        String orderBy =
+                SingleChild._ID + " ASC";
+
+        Collection<ChildContract> allFC = new ArrayList<ChildContract>();
+        try {
+            c = db.query(
+                    SingleChild.TABLE_NAME,  // The table to query
+                    columns,                   // The columns to return
+                    whereClause,               // The columns for the WHERE clause
+                    whereArgs,                 // The values for the WHERE clause
+                    groupBy,                   // don't group the rows
+                    having,                    // don't filter by row groups
+                    orderBy                    // The sort order
+            );
+            while (c.moveToNext()) {
+                ChildContract fc = new ChildContract();
+                allFC.add(fc.hydrate(c));
+            }
+        } finally {
+            if (c != null) {
+                c.close();
+            }
+            if (db != null) {
+                db.close();
+            }
+        }
+        return allFC;
+    }
+
 
     public Collection<FormsContract> getTodayForms() {
         SQLiteDatabase db = this.getReadableDatabase();
@@ -1449,5 +1653,101 @@ public class DatabaseHelper extends SQLiteOpenHelper {
             alc.set(1, Cursor2);
             return alc;
         }
+    }
+
+
+    public void updateSyncedChildForms(String id) {
+        SQLiteDatabase db = this.getReadableDatabase();
+
+// New value for one column
+        ContentValues values = new ContentValues();
+        values.put(SingleChild.COLUMN_SYNCED, true);
+        values.put(SingleChild.COLUMN_SYNCED_DATE, new Date().toString());
+
+// Which row to update, based on the title
+        String where = SingleChild._ID + " = ?";
+        String[] whereArgs = {id};
+
+        int count = db.update(
+                SingleChild.TABLE_NAME,
+                values,
+                where,
+                whereArgs);
+    }
+
+    public void updateSyncedKishMWRAForms(String id) {
+        SQLiteDatabase db = this.getReadableDatabase();
+
+// New value for one column
+        ContentValues values = new ContentValues();
+        values.put(SingleKishMWRA.COLUMN_SYNCED, true);
+        values.put(SingleKishMWRA.COLUMN_SYNCED_DATE, new Date().toString());
+
+// Which row to update, based on the title
+        String where = SingleKishMWRA._ID + " = ?";
+        String[] whereArgs = {id};
+
+        int count = db.update(
+                SingleKishMWRA.TABLE_NAME,
+                values,
+                where,
+                whereArgs);
+    }
+
+    public void updateSyncedPregMWRAForms(String id) {
+        SQLiteDatabase db = this.getReadableDatabase();
+
+// New value for one column
+        ContentValues values = new ContentValues();
+        values.put(SingleMWRAPRE.COLUMN_SYNCED, true);
+        values.put(SingleMWRAPRE.COLUMN_SYNCED_DATE, new Date().toString());
+
+// Which row to update, based on the title
+        String where = SingleMWRAPRE._ID + " = ?";
+        String[] whereArgs = {id};
+
+        int count = db.update(
+                SingleMWRAPRE.TABLE_NAME,
+                values,
+                where,
+                whereArgs);
+    }
+
+    public void updateSyncedFamilyMemForms(String id) {
+        SQLiteDatabase db = this.getReadableDatabase();
+
+// New value for one column
+        ContentValues values = new ContentValues();
+        values.put(SingleMember.COLUMN_SYNCED, true);
+        values.put(SingleMember.COLUMN_SYNCED_DATE, new Date().toString());
+
+// Which row to update, based on the title
+        String where = SingleMember._ID + " = ?";
+        String[] whereArgs = {id};
+
+        int count = db.update(
+                SingleMember.TABLE_NAME,
+                values,
+                where,
+                whereArgs);
+    }
+
+    public void updateSyncedMWRAForms(String id) {
+        SQLiteDatabase db = this.getReadableDatabase();
+
+// New value for one column
+        ContentValues values = new ContentValues();
+        values.put(MWRATable.COLUMN_SYNCED, true);
+        values.put(MWRATable.COLUMN_SYNCED_DATE, new Date().toString());
+
+// Which row to update, based on the title
+        String where = MWRATable._ID + " = ?";
+        String[] whereArgs = {id};
+
+        int count = db.update(
+                MWRATable.TABLE_NAME,
+                values,
+                where,
+                whereArgs);
     }
 }
