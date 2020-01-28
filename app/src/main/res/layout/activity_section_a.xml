@@ -12,10 +12,8 @@
     </data>
 
     <ScrollView
+
         style="@style/i_scrollview"
-        android:fadeScrollbars="false"
-        android:fillViewport="true"
-        android:scrollbarSize="10dip"
         tools:context=".ui.Myactivity">
 
         <LinearLayout
@@ -48,15 +46,6 @@
                         android:layout_height="wrap_content"
                         android:orientation="horizontal">
 
-                        <!--<EditText
-                            android:id="@+id/a101"
-                            style="@style/textInput"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:hint="@string/a101"
-                            android:inputType="number"
-                            android:maxLength="5"
-                            android:textColor="@android:color/black" />-->
 
                         <EditText
                             android:id="@+id/a101"
@@ -64,23 +53,19 @@
                             android:layout_width="0dp"
                             android:layout_marginTop="5dp"
                             android:layout_marginEnd="10dp"
-                            android:layout_weight="20"
+                            android:layout_weight="1"
                             android:digits="0123456789-"
                             android:hint="@string/a101"
                             android:inputType="number"
-                            android:layoutDirection="ltr"
-                            android:maxLength="6"
-                            android:textDirection="ltr" />
+                            android:maxLength="6" />
 
                         <Button
                             android:id="@+id/checkHHBtn1"
-                            style="@style/Widget.AppCompat.Button.Colored"
                             android:layout_width="0dp"
                             android:layout_height="wrap_content"
                             android:layout_marginTop="5dp"
-                            android:layout_weight="20"
+                            android:layout_weight="1"
                             android:background="@drawable/button_bg"
-                            android:elevation="5dp"
                             android:onClick="@{() -> callback.BtnCheckCluster()}"
                             android:text="CHECK"
                             android:textColor="@color/colorPrimaryDark" />
@@ -94,352 +79,324 @@
             <LinearLayout
                 android:id="@+id/fldGrpSectionA01"
                 style="@style/linearlayout_view_wt_bound"
-                android:visibility="gone"
-                tools:visibility="visible">
+                android:visibility="gone">
 
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:orientation="horizontal">
 
-                    <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:orientation="horizontal">
-
-                        <!--a104-->
-                        <TextView
-                            android:layout_width="0dp"
-                            android:layout_height="60sp"
-                            android:layout_marginTop="16dp"
-                            android:layout_marginBottom="4dp"
-                            android:layout_weight="2"
-                            android:background="@color/colorPrimary"
-                            android:elevation="3sp"
-                            android:gravity="center_horizontal|center_vertical"
-                            android:padding="15dp"
-                            android:text="@string/a104"
-                            android:textAppearance="?android:attr/textAppearanceLarge"
-                            android:textColor="@android:color/white" />
-
-
-                        <TextView
-                            android:id="@+id/a104"
-                            android:layout_width="0dp"
-                            android:layout_height="60sp"
-                            android:layout_marginTop="13dp"
-                            android:layout_marginBottom="4dp"
-                            android:layout_weight="3"
-                            android:background="@color/pink_100"
-                            android:gravity="center_horizontal|center_vertical"
-                            android:padding="15dp"
-                            android:text="Balochistan"
-                            android:textColor="@color/colorPrimaryDark"
-                            android:textSize="16sp" />
-
-                        <!--a105-->
-                        <TextView
-                            android:layout_width="0dp"
-                            android:layout_height="60sp"
-                            android:layout_marginTop="16dp"
-                            android:layout_marginBottom="8dp"
-                            android:layout_weight="2"
-                            android:background="@color/colorPrimary"
-                            android:elevation="3sp"
-                            android:gravity="center_horizontal|center_vertical"
-                            android:padding="15dp"
-                            android:text="@string/a105"
-                            android:textAppearance="?android:attr/textAppearanceLarge"
-                            android:textColor="@android:color/white" />
-
-
-                        <TextView
-                            android:id="@+id/a105"
-                            android:layout_width="0dp"
-                            android:layout_height="60sp"
-                            android:layout_marginTop="13dp"
-                            android:layout_marginBottom="4dp"
-                            android:layout_weight="3"
-                            android:background="@color/pink_100"
-                            android:gravity="center_horizontal|center_vertical"
-                            android:padding="15dp"
-                            android:text="Jafferabad"
-                            android:textColor="@color/colorPrimaryDark"
-                            android:textSize="16sp" />
-
-                    </LinearLayout>
-
-                </LinearLayout>
-
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:orientation="horizontal">
-
-                    <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:orientation="horizontal">
-
-                        <!--a106-->
-                        <TextView
-                            android:layout_width="0dp"
-                            android:layout_height="wrap_content"
-                            android:layout_marginTop="16dp"
-                            android:layout_marginBottom="8dp"
-                            android:layout_weight="2"
-                            android:background="@color/colorPrimary"
-                            android:gravity="center_horizontal|center_vertical"
-                            android:padding="15dp"
-                            android:text="@string/a106"
-                            android:textAppearance="?android:attr/textAppearanceLarge"
-                            android:textColor="@android:color/white" />
-
-
-                        <TextView
-                            android:id="@+id/a106"
-                            android:layout_width="0dp"
-                            android:layout_height="wrap_content"
-                            android:layout_marginTop="16dp"
-                            android:layout_marginBottom="4dp"
-                            android:layout_weight="3"
-                            android:background="@color/pink_100"
-                            android:gravity="center_horizontal|center_vertical"
-                            android:padding="15dp"
-                            android:text="Test"
-                            android:textColor="@color/colorPrimaryDark"
-                            android:textSize="16sp" />
-
-                        <!--a107-->
-                        <TextView
-                            android:layout_width="0dp"
-                            android:layout_height="wrap_content"
-                            android:layout_marginTop="16dp"
-                            android:layout_marginBottom="8dp"
-                            android:layout_weight="2"
-                            android:background="@color/colorPrimary"
-                            android:gravity="center_horizontal|center_vertical"
-                            android:padding="15dp"
-                            android:text="@string/a107"
-                            android:textAppearance="?android:attr/textAppearanceLarge"
-                            android:textColor="@android:color/white" />
-
-
-                        <TextView
-                            android:id="@+id/a107"
-                            android:layout_width="0dp"
-                            android:layout_height="wrap_content"
-                            android:layout_marginTop="13dp"
-                            android:layout_marginBottom="8dp"
-                            android:layout_weight="3"
-                            android:background="@color/pink_100"
-                            android:gravity="center_horizontal|center_vertical"
-                            android:padding="15dp"
-                            android:text="Test"
-                            android:textColor="@color/colorPrimaryDark"
-                            android:textSize="16sp" />
-
-                    </LinearLayout>
-
-                </LinearLayout>
-
-                <!--a112-->
-                <TextView
-                    style="@style/i_textview"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="16dp"
-                    android:background="@color/colorPrimary"
-                    android:text="@string/a112"
-                    android:textAppearance="?android:attr/textAppearanceLarge"
-                    android:textColor="@android:color/white" />
-
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:orientation="horizontal">
-
-                    <com.edittextpicker.aliazaz.EditTextPicker
-                        android:id="@+id/a112"
-                        style="@style/textInput"
+                    <!--a104-->
+                    <TextView
                         android:layout_width="0dp"
-                        android:layout_marginTop="5dp"
-                        android:layout_marginEnd="10dp"
-                        android:layout_weight="60"
-                        android:hint="@string/num"
-                        android:layoutDirection="ltr"
-                        android:textDirection="ltr"
-                        app:defaultValue=""
-                        app:mask="####-###"
-                        app:pattern="^(\\d{4,4}\\-\\d{3,3})$"
-                        app:type="equal" />
+                        android:layout_height="60sp"
+                        android:layout_marginTop="16dp"
+                        android:layout_marginBottom="4dp"
+                        android:layout_weight="2"
+                        android:background="@color/colorPrimary"
+                        android:gravity="center"
+                        android:padding="15dp"
+                        android:text="@string/a104"
+                        android:textAppearance="?android:attr/textAppearanceLarge"
+                        android:textColor="@android:color/white" />
+
+
+                    <TextView
+                        android:id="@+id/a104"
+                        android:layout_width="0dp"
+                        android:layout_height="60sp"
+                        android:layout_marginTop="13dp"
+                        android:layout_marginBottom="4dp"
+                        android:layout_weight="3"
+                        android:background="@color/pink_100"
+                        android:gravity="center"
+                        android:padding="15dp"
+                        android:text="Balochistan"
+                        android:textColor="@color/colorPrimaryDark"
+                        android:textSize="16sp" />
+
+                    <!--a105-->
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="60sp"
+                        android:layout_marginTop="16dp"
+                        android:layout_marginBottom="8dp"
+                        android:layout_weight="2"
+                        android:background="@color/colorPrimary"
+                        android:gravity="center"
+                        android:padding="15dp"
+                        android:text="@string/a105"
+                        android:textAppearance="?android:attr/textAppearanceLarge"
+                        android:textColor="@android:color/white" />
+
+
+                    <TextView
+                        android:id="@+id/a105"
+                        android:layout_width="0dp"
+                        android:layout_height="60sp"
+                        android:layout_marginTop="13dp"
+                        android:layout_marginBottom="4dp"
+                        android:layout_weight="3"
+                        android:background="@color/pink_100"
+                        android:gravity="center"
+                        android:padding="15dp"
+                        android:text="Jafferabad"
+                        android:textColor="@color/colorPrimaryDark"
+                        android:textSize="16sp" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <!--a106-->
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="16dp"
+                        android:layout_marginBottom="8dp"
+                        android:layout_weight="2"
+                        android:background="@color/colorPrimary"
+                        android:gravity="center_horizontal|center_vertical"
+                        android:padding="15dp"
+                        android:text="@string/a106"
+                        android:textAppearance="?android:attr/textAppearanceLarge"
+                        android:textColor="@android:color/white" />
+
+
+                    <TextView
+                        android:id="@+id/a106"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="16dp"
+                        android:layout_marginBottom="4dp"
+                        android:layout_weight="3"
+                        android:background="@color/pink_100"
+                        android:gravity="center_horizontal|center_vertical"
+                        android:padding="15dp"
+                        android:text="Test"
+                        android:textColor="@color/colorPrimaryDark"
+                        android:textSize="16sp" />
+
+                    <!--a107-->
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="16dp"
+                        android:layout_marginBottom="8dp"
+                        android:layout_weight="2"
+                        android:background="@color/colorPrimary"
+                        android:gravity="center_horizontal|center_vertical"
+                        android:padding="15dp"
+                        android:text="@string/a107"
+                        android:textAppearance="?android:attr/textAppearanceLarge"
+                        android:textColor="@android:color/white" />
+
+
+                    <TextView
+                        android:id="@+id/a107"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="13dp"
+                        android:layout_marginBottom="8dp"
+                        android:layout_weight="3"
+                        android:background="@color/pink_100"
+                        android:gravity="center_horizontal|center_vertical"
+                        android:padding="15dp"
+                        android:text="Test"
+                        android:textColor="@color/colorPrimaryDark"
+                        android:textSize="16sp" />
+
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+                    <!--a112-->
+                    <TextView
+                        style="@style/i_textview"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@color/colorPrimary"
+                        android:text="@string/a112"
+                        android:textAppearance="?android:attr/textAppearanceLarge"
+                        android:textColor="@android:color/white" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <com.edittextpicker.aliazaz.EditTextPicker
+                            android:id="@+id/a112"
+                            style="@style/textInput"
+                            android:layout_weight="1"
+                            android:hint="@string/num"
+                            app:defaultValue=""
+                            app:mask="####-###"
+                            app:pattern="^(\\d{4,4}\\-\\d{3,3})$"
+                            app:type="equal" />
+
+                        <Button
+                            android:id="@+id/checkHHBtn2"
+                            style="@style/button"
+                            android:layout_weight="1"
+                            android:background="@drawable/button_bg"
+                            android:onClick="@{() -> callback.BtnCheckHH()}"
+                            android:text="CHECK"
+                            android:textColor="@color/colorPrimaryDark" />
+
+                    </LinearLayout>
+                </LinearLayout>
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:id="@+id/fldGrpSectionA02"
+                style="@style/linearlayout_view_wt_bound"
+                android:visibility="gone">
+
+                <LinearLayout
+                    android:id="@+id/fldGrpcih110"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/hhName"
+                        style="@style/i_textview"
+                        android:padding="10dp"
+                        android:text="@string/checkHHpresent"
+                        android:textAlignment="center" />
+
+                    <CheckBox
+                        android:id="@+id/checkHHHeadpresent"
+                        style="@style/checkbox"
+                        android:text="@string/checkHHpresent" />
+
+                    <LinearLayout
+                        android:id="@+id/fldGrpcih110a"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <TextView
+                            style="@style/i_textview"
+                            android:layout_marginTop="16dp"
+                            android:text="New Head of Household Name"
+                            android:textColor="@android:color/white" />
+
+                        <EditText
+                            android:id="@+id/newHHheadname"
+                            style="@style/EditTextAlpha"
+                            android:maxLength="25" />
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <!-- a109  Input   -->
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/fldGrpCVa109"
+                    style="@style/cardView">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <TextView
+                            style="@style/i_textview"
+                            android:text="@string/a109" />
+
+                        <EditText
+                            android:id="@+id/a109"
+                            style="@style/textInputName"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:hint="@string/a109"
+                            android:textColor="@android:color/black" />
+
+
+                    </LinearLayout>
+                </androidx.cardview.widget.CardView>
+
+                <!-- a110  Input   -->
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/fldGrpCVa110"
+                    style="@style/cardView">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <TextView
+                            style="@style/i_textview"
+                            android:text="@string/a110" />
+
+                        <EditText
+                            android:id="@+id/a110"
+                            style="@style/EditTextAlphaNmeric"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:hint="@string/a110"
+                            android:textColor="@android:color/black" />
+
+                    </LinearLayout>
+                </androidx.cardview.widget.CardView>
+
+                <!-- a111  Input   -->
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/fldGrpCVa111"
+                    style="@style/cardView">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <TextView
+                            style="@style/i_textview"
+                            android:text="@string/a111" />
+
+                        <EditText
+                            android:id="@+id/a111"
+                            style="@style/EditTextAlphaNmeric"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:hint="@string/a111"
+                            android:textColor="@android:color/black" />
+
+                    </LinearLayout>
+
+                </androidx.cardview.widget.CardView>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="end"
+                    android:layout_marginTop="20dp"
+                    android:orientation="horizontal">
 
                     <Button
-                        android:id="@+id/checkHHBtn2"
-                        style="@style/Widget.AppCompat.Button.Colored"
-                        android:layout_width="0dp"
-                        android:layout_height="wrap_content"
-                        android:layout_marginTop="5dp"
-                        android:layout_weight="30"
-                        android:background="@drawable/button_bg"
-                        android:elevation="5dp"
-                        android:onClick="@{() -> callback.BtnCheckHH()}"
-                        android:text="CHECK"
-                        android:textColor="@color/colorPrimaryDark" />
+                        android:id="@+id/btnEnd"
+                        style="@style/buttons_bottom"
+                        android:background="@android:color/holo_red_light"
+                        android:onClick="@{() -> callback.BtnEnd()}"
+                        android:text="@string/end_interview"
+                        android:visibility="gone" />
+                    <!--'onClick' for btn_End will NOT change and always call 'endInterview'-->
 
-                </LinearLayout>
-
-                <LinearLayout
-                    android:id="@+id/fldGrpSectionA02"
-                    style="@style/linearlayout_view_wt_bound"
-                    android:visibility="gone"
-                    tools:visibility="visible">
-
-                    <LinearLayout
-                        android:id="@+id/fldGrpcih110"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:orientation="vertical"
-                        android:visibility="gone"
-                        tools:visibility="visible">
-
-                        <TextView
-                            android:id="@+id/hhName"
-                            style="@style/i_textview"
-                            android:padding="10dp"
-                            android:text="@string/checkHHpresent"
-                            android:textAlignment="center" />
-
-                        <CheckBox
-                            android:id="@+id/checkHHHeadpresent"
-                            style="@style/checkbox"
-                            android:layout_marginTop="@dimen/cardview_default_elevation"
-                            android:text="@string/checkHHpresent" />
-
-                        <LinearLayout
-                            android:id="@+id/fldGrpcih110a"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:orientation="vertical"
-                            android:visibility="@{checkHHHeadpresent.checked ? View.GONE : View.VISIBLE}">
-
-                            <TextView
-                                style="@style/i_textview"
-                                android:layout_marginTop="16dp"
-                                android:text="New Head of Household Name"
-                                android:textColor="@android:color/white" />
-
-                            <EditText
-                                android:id="@+id/newHHheadname"
-                                style="@style/EditTextAlpha"
-                                android:maxLength="25"
-                                android:text='@{checkHHHeadpresent.checked ? "" : newHHheadname.getText().toString()}' />
-
-                        </LinearLayout>
-
-                    </LinearLayout>
-
-                    <!-- a109  Input   -->
-                    <androidx.cardview.widget.CardView
-                        android:id="@+id/fldGrpCVa109"
-                        style="@style/cardView">
-
-                        <LinearLayout
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:orientation="vertical">
-
-                            <TextView
-                                style="@style/i_textview"
-                                android:text="@string/a109" />
-
-                            <EditText
-                                android:id="@+id/a109"
-                                style="@style/textInputName"
-                                android:layout_width="match_parent"
-                                android:layout_height="wrap_content"
-                                android:hint="@string/a109"
-                                android:textColor="@android:color/black" />
-
-
-                        </LinearLayout>
-                    </androidx.cardview.widget.CardView>
-
-                    <!-- a110  Input   -->
-                    <androidx.cardview.widget.CardView
-                        android:id="@+id/fldGrpCVa110"
-                        style="@style/cardView">
-
-                        <LinearLayout
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:orientation="vertical">
-
-                            <TextView
-                                style="@style/i_textview"
-                                android:text="@string/a110" />
-
-                            <EditText
-                                android:id="@+id/a110"
-                                style="@style/EditTextAlphaNmeric"
-                                android:layout_width="match_parent"
-                                android:layout_height="wrap_content"
-                                android:hint="@string/a110"
-                                android:textColor="@android:color/black" />
-
-                        </LinearLayout>
-                    </androidx.cardview.widget.CardView>
-
-                    <!-- a111  Input   -->
-                    <androidx.cardview.widget.CardView
-                        android:id="@+id/fldGrpCVa111"
-                        style="@style/cardView">
-
-                        <LinearLayout
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:orientation="vertical">
-
-                            <TextView
-                                style="@style/i_textview"
-                                android:text="@string/a111" />
-
-                            <EditText
-                                android:id="@+id/a111"
-                                style="@style/EditTextAlphaNmeric"
-                                android:layout_width="match_parent"
-                                android:layout_height="wrap_content"
-                                android:hint="@string/a111"
-                                android:textColor="@android:color/black" />
-
-                        </LinearLayout>
-
-                    </androidx.cardview.widget.CardView>
-
-                    <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_gravity="end"
-                        android:layout_marginTop="20dp"
-                        android:orientation="horizontal">
-
-                        <Button
-                            android:id="@+id/btnEnd"
-                            style="@style/buttons_bottom"
-                            android:background="@android:color/holo_red_light"
-                            android:onClick="@{() -> callback.BtnEnd()}"
-                            android:text="@string/end_interview"
-                            android:visibility="gone" />
-                        <!--'onClick' for btn_End will NOT change and always call 'endInterview'-->
-
-                        <Button
-                            android:id="@+id/btnNext"
-                            style="@style/buttons_bottom"
-                            android:background="@android:color/holo_green_light"
-                            android:onClick="@{() -> callback.BtnContinue()}"
-                            android:text="@string/nextSection" />
-
-                    </LinearLayout>
+                    <Button
+                        android:id="@+id/btnNext"
+                        style="@style/buttons_bottom"
+                        android:background="@android:color/holo_green_light"
+                        android:onClick="@{() -> callback.BtnContinue()}"
+                        android:text="@string/nextSection" />
 
                 </LinearLayout>
 
