@@ -18,7 +18,6 @@ import org.json.JSONObject;
 
 import edu.aku.hassannaqvi.uen_midline.R;
 import edu.aku.hassannaqvi.uen_midline.contracts.BLRandomContract;
-import edu.aku.hassannaqvi.uen_midline.contracts.EnumBlockContract;
 import edu.aku.hassannaqvi.uen_midline.contracts.FormsContract;
 import edu.aku.hassannaqvi.uen_midline.core.DatabaseHelper;
 import edu.aku.hassannaqvi.uen_midline.core.MainApp;
@@ -150,7 +149,7 @@ public class SectionAActivity extends AppCompatActivity {
 
     public void BtnCheckCluster() {
 
-        if (!Validator.emptyTextBox(this, bi.a101)) return;
+        /*if (!Validator.emptyTextBox(this, bi.a101)) return;
 
         EnumBlockContract enumBlockContract = db.getEnumBlock(bi.a101.getText().toString());
         if (enumBlockContract != null) {
@@ -167,12 +166,14 @@ public class SectionAActivity extends AppCompatActivity {
             }
         } else {
             Toast.makeText(this, "Sorry cluster not found!!", Toast.LENGTH_SHORT).show();
-        }
+        }*/
+
+        bi.fldGrpSectionA01.setVisibility(View.VISIBLE);
 
     }
 
     public void BtnCheckHH() {
-        if (!Validator.emptyTextBox(this, bi.a112)) return;
+        /*if (!Validator.emptyTextBox(this, bi.a112)) return;
 
         bl = MainApp.appInfo.getDbHelper().getHHFromBLRandom(bi.a101.getText().toString(), bi.a112.getText().toString().toUpperCase());
 
@@ -184,7 +185,10 @@ public class SectionAActivity extends AppCompatActivity {
         } else {
             bi.fldGrpSectionA02.setVisibility(View.GONE);
             Toast.makeText(this, "No Household found!", Toast.LENGTH_SHORT).show();
-        }
+        }*/
+
+
+        bi.fldGrpSectionA02.setVisibility(View.VISIBLE);
 
     }
 }
