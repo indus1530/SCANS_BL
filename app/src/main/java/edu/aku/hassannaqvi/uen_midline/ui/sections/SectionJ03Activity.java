@@ -302,113 +302,114 @@ public class SectionJ03Activity extends AppCompatActivity {
         }
     }
 
+
     private void SaveDraft() throws JSONException {
 
-        JSONObject j3 = new JSONObject();
+        JSONObject json = new JSONObject();
 
-        j3.put("j105",
+        json.put("j105",
                 bi.j105a.isChecked() ? "1" :
                         bi.j105b.isChecked() ? "2" :
                                 "0");
 
-        j3.put("j106",
+        json.put("j106",
                 bi.j106a.isChecked() ? "1" :
                         bi.j106b.isChecked() ? "2" :
                                 bi.j106c.isChecked() ? "98" :
                                         "0");
 
-        j3.put("j108",
+        json.put("j108",
                 bi.j108a.isChecked() ? "1" :
                         bi.j108b.isChecked() ? "2" :
                                 bi.j108c.isChecked() ? "98" :
                                         "0");
 
-        j3.put("j109",
+        json.put("j109",
                 bi.j109a.isChecked() ? "1" :
                         bi.j109b.isChecked() ? "2" :
                                 bi.j109c.isChecked() ? "98" :
                                         "0");
 
-        j3.put("j111",
+        json.put("j111",
                 bi.j111a.isChecked() ? "1" :
                         bi.j111b.isChecked() ? "2" :
                                 bi.j111c.isChecked() ? "98" :
                                         "0");
 
-        j3.put("j112",
+        json.put("j112",
                 bi.j112a.isChecked() ? "1" :
                         bi.j112b.isChecked() ? "2" :
                                 bi.j112c.isChecked() ? "98" :
                                         "0");
 
-        j3.put("j113", bi.j113.getText().toString());
+        json.put("j113", bi.j113.getText().toString());
 
-        j3.put("j114",
+        json.put("j114",
                 bi.j114a.isChecked() ? "1" :
                         bi.j114b.isChecked() ? "2" :
                                 bi.j114c.isChecked() ? "98" :
                                         "0");
 
-        j3.put("j115",
+        json.put("j115",
                 bi.j115a.isChecked() ? "1" :
                         bi.j115b.isChecked() ? "2" :
                                 bi.j115c.isChecked() ? "98" :
                                         "0");
 
-        j3.put("j116", bi.j116.getText().toString());
+        json.put("j116", bi.j116.getText().toString());
 
-        j3.put("j117",
+        json.put("j117",
                 bi.j117a.isChecked() ? "1" :
                         bi.j117b.isChecked() ? "2" :
                                 bi.j117c.isChecked() ? "98" :
                                         "0");
 
-        j3.put("j118", bi.j118.getText().toString());
+        json.put("j118", bi.j118.getText().toString());
 
-        j3.put("j119",
+        json.put("j119",
                 bi.j119a.isChecked() ? "1" :
                         bi.j119b.isChecked() ? "2" :
                                 bi.j119c.isChecked() ? "98" :
                                         "0");
 
-        j3.put("j120",
+        json.put("j120",
                 bi.j120a.isChecked() ? "1" :
                         bi.j120b.isChecked() ? "2" :
                                 bi.j120c.isChecked() ? "98" :
                                         "0");
 
-        j3.put("j121", bi.j121.getText().toString());
+        json.put("j121", bi.j121.getText().toString());
 
-        j3.put("j122",
+        json.put("j122",
                 bi.j122a.isChecked() ? "1" :
                         bi.j122b.isChecked() ? "2" :
                                 bi.j122c.isChecked() ? "98" :
                                         "0");
 
-        j3.put("j123a", bi.j123a.isChecked() ? "1" : "0");
-        j3.put("j123b", bi.j123b.isChecked() ? "2" : "0");
-        j3.put("j123c", bi.j123c.isChecked() ? "3" : "0");
-        j3.put("j123d", bi.j123d.isChecked() ? "4" : "0");
-        j3.put("j123e", bi.j123e.isChecked() ? "5" : "0");
-        j3.put("j123f", bi.j123f.isChecked() ? "6" : "0");
-        j3.put("j123g", bi.j123g.isChecked() ? "7" : "0");
-        j3.put("j123h", bi.j123h.isChecked() ? "8" : "0");
-        j3.put("j123i", bi.j123i.isChecked() ? "9" : "0");
-        j3.put("j123j", bi.j123j.isChecked() ? "10" : "0");
-        j3.put("j123k", bi.j123k.isChecked() ? "11" : "0");
-        j3.put("j123l", bi.j123l.isChecked() ? "12" : "0");
-        j3.put("j123m", bi.j123m.isChecked() ? "13" : "0");
-        j3.put("j123n", bi.j123n.isChecked() ? "14" : "0");
-        j3.put("j123o", bi.j123o.isChecked() ? "15" : "0");
-        j3.put("j123p", bi.j123p.isChecked() ? "16" : "0");
-        j3.put("j123dk", bi.j123dk.isChecked() ? "98" : "0");
-        j3.put("j12396", bi.j12396.isChecked() ? "96" : "0");
-        j3.put("j12396x", bi.j12396x.getText().toString());
+        json.put("j123a", bi.j123a.isChecked() ? "1" : "0");
+        json.put("j123b", bi.j123b.isChecked() ? "2" : "0");
+        json.put("j123c", bi.j123c.isChecked() ? "3" : "0");
+        json.put("j123d", bi.j123d.isChecked() ? "4" : "0");
+        json.put("j123e", bi.j123e.isChecked() ? "5" : "0");
+        json.put("j123f", bi.j123f.isChecked() ? "6" : "0");
+        json.put("j123g", bi.j123g.isChecked() ? "7" : "0");
+        json.put("j123h", bi.j123h.isChecked() ? "8" : "0");
+        json.put("j123i", bi.j123i.isChecked() ? "9" : "0");
+        json.put("j123j", bi.j123j.isChecked() ? "10" : "0");
+        json.put("j123k", bi.j123k.isChecked() ? "11" : "0");
+        json.put("j123l", bi.j123l.isChecked() ? "12" : "0");
+        json.put("j123m", bi.j123m.isChecked() ? "13" : "0");
+        json.put("j123n", bi.j123n.isChecked() ? "14" : "0");
+        json.put("j123o", bi.j123o.isChecked() ? "15" : "0");
+        json.put("j123p", bi.j123p.isChecked() ? "16" : "0");
+        json.put("j123dk", bi.j123dk.isChecked() ? "98" : "0");
+        json.put("j12396", bi.j12396.isChecked() ? "96" : "0");
+        json.put("j12396x", bi.j12396x.getText().toString());
 
         try {
-            JSONObject s4_merge = JSONUtils.mergeJSONObjects(new JSONObject(MainApp.child.getsJ()), j3);
+            JSONObject json_merge = JSONUtils.mergeJSONObjects(new JSONObject(MainApp.child.getsJ()), json);
 
-            MainApp.child.setsJ(String.valueOf(s4_merge));
+            MainApp.child.setsJ(String.valueOf(json_merge));
 
         } catch (JSONException e) {
             e.printStackTrace();
