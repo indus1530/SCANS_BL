@@ -53,8 +53,6 @@ public class ChildContract {
         this.sI2 = cursor.getString(cursor.getColumnIndex(SingleChild.COLUMN_SI2));
         this.sJ = cursor.getString(cursor.getColumnIndex(SingleChild.COLUMN_SJ));
         this.devicetagID = cursor.getString(cursor.getColumnIndex(SingleChild.COLUMN_DEVICETAGID));
-        this.synced = cursor.getString(cursor.getColumnIndex(SingleChild.COLUMN_SYNCED));
-        this.synced_date = cursor.getString(cursor.getColumnIndex(SingleChild.COLUMN_SYNCED_DATE));
 
         return this;
 
@@ -80,8 +78,6 @@ public class ChildContract {
             json.put(SingleChild.COLUMN_SJ, this.sJ.equals("") ? JSONObject.NULL : new JSONObject(this.sJ));
         }
         json.put(SingleChild.COLUMN_DEVICETAGID, this.devicetagID == null ? JSONObject.NULL : this.devicetagID);
-        json.put(SingleChild.COLUMN_SYNCED, this.synced == null ? JSONObject.NULL : this.synced);
-        json.put(SingleChild.COLUMN_SYNCED_DATE, this.synced_date == null ? JSONObject.NULL : this.synced_date);
 
         return json;
 

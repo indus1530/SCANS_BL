@@ -251,7 +251,7 @@ public class MWRAContract implements Parcelable {
 
     public static abstract class MWRATable implements BaseColumns {
 
-        public static final String TABLE_NAME = "mother";
+        public static final String TABLE_NAME = "mwra";
         public static final String COLUMN_NAME_NULLABLE = "NULLHACK";
         public static final String COLUMN_PROJECT_NAME = "project_name";
         public static final String COLUMN_ID = "_id";
