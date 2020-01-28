@@ -121,8 +121,6 @@ public class MWRA_PREContract {
         this.user = cursor.getString(cursor.getColumnIndex(SingleMWRAPRE.COLUMN_USER));
         this.sE2 = cursor.getString(cursor.getColumnIndex(SingleMWRAPRE.COLUMN_SE2));
         this.devicetagID = cursor.getString(cursor.getColumnIndex(SingleMWRAPRE.COLUMN_DEVICETAGID));
-        this.synced = cursor.getString(cursor.getColumnIndex(SingleMWRAPRE.COLUMN_SYNCED));
-        this.synced_date = cursor.getString(cursor.getColumnIndex(SingleMWRAPRE.COLUMN_SYNCED_DATE));
 
         return this;
 
@@ -143,8 +141,6 @@ public class MWRA_PREContract {
         }
 
         json.put(SingleMWRAPRE.COLUMN_DEVICETAGID, this.devicetagID == null ? JSONObject.NULL : this.devicetagID);
-        json.put(SingleMWRAPRE.COLUMN_SYNCED, this.synced == null ? JSONObject.NULL : this.synced);
-        json.put(SingleMWRAPRE.COLUMN_SYNCED_DATE, this.synced_date == null ? JSONObject.NULL : this.synced_date);
 
         return json;
 

@@ -169,8 +169,6 @@ public class KishMWRAContract {
         this.sK = cursor.getString(cursor.getColumnIndex(SingleKishMWRA.COLUMN_SK));
         this.sL = cursor.getString(cursor.getColumnIndex(SingleKishMWRA.COLUMN_SL));
         this.devicetagID = cursor.getString(cursor.getColumnIndex(SingleKishMWRA.COLUMN_DEVICETAGID));
-        this.synced = cursor.getString(cursor.getColumnIndex(SingleKishMWRA.COLUMN_SYNCED));
-        this.synced_date = cursor.getString(cursor.getColumnIndex(SingleKishMWRA.COLUMN_SYNCED_DATE));
 
 
         return this;
@@ -209,8 +207,6 @@ public class KishMWRAContract {
         }
 
         json.put(SingleKishMWRA.COLUMN_DEVICETAGID, this.devicetagID == null ? JSONObject.NULL : this.devicetagID);
-        json.put(SingleKishMWRA.COLUMN_SYNCED, this.synced == null ? JSONObject.NULL : this.synced);
-        json.put(SingleKishMWRA.COLUMN_SYNCED_DATE, this.synced_date == null ? JSONObject.NULL : this.synced_date);
 
 
         return json;

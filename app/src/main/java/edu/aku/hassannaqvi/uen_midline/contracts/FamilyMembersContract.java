@@ -230,6 +230,8 @@ public class FamilyMembersContract {
         public static final String COLUMN_GENDER = "gender";
         public static final String COLUMN_MARITAL = "marital";
         public static final String COLUMN_SD = "sD";
+        public static final String COLUMN_SYNCED = "synced";
+        public static final String COLUMN_SYNCED_DATE = "synced_date";
 
         public static String _URL = "sosas.php";
     }

@@ -186,6 +186,9 @@ public final class CreateTable {
             FamilyMembersContract.SingleMember.COLUMN_MOTHER_SERIAL + " TEXT," +
             FamilyMembersContract.SingleMember.COLUMN_GENDER + " TEXT," +
             FamilyMembersContract.SingleMember.COLUMN_MARITAL + " TEXT," +
-            FamilyMembersContract.SingleMember.COLUMN_SD + " TEXT" + ");";
+            FamilyMembersContract.SingleMember.COLUMN_SD + " TEXT," +
+            FamilyMembersContract.SingleMember.COLUMN_SYNCED + " TEXT," +
+            FamilyMembersContract.SingleMember.COLUMN_SYNCED_DATE + " TEXT"
+            + ");";
 
 }

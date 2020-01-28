@@ -32,7 +32,13 @@ import edu.aku.hassannaqvi.uen_midline.CONSTANTS;
 import edu.aku.hassannaqvi.uen_midline.R;
 import edu.aku.hassannaqvi.uen_midline.adapter.SyncListAdapter;
 import edu.aku.hassannaqvi.uen_midline.adapter.UploadListAdapter;
+import edu.aku.hassannaqvi.uen_midline.contracts.ChildContract;
+import edu.aku.hassannaqvi.uen_midline.contracts.FamilyMembersContract;
 import edu.aku.hassannaqvi.uen_midline.contracts.FormsContract;
+import edu.aku.hassannaqvi.uen_midline.contracts.KishMWRAContract;
+import edu.aku.hassannaqvi.uen_midline.contracts.MWRAContract;
+import edu.aku.hassannaqvi.uen_midline.contracts.MWRA_PREContract;
+import edu.aku.hassannaqvi.uen_midline.contracts.MortalityContract;
 import edu.aku.hassannaqvi.uen_midline.core.DatabaseHelper;
 import edu.aku.hassannaqvi.uen_midline.core.MainApp;
 import edu.aku.hassannaqvi.uen_midline.databinding.ActivitySyncBinding;
@@ -161,6 +167,90 @@ public class SyncActivity extends AppCompatActivity implements SyncDevice.SyncDe
                 uploadmodel.setstatusID(0);
                 uploadlist.add(uploadmodel);
             }
+            new SyncAllData(
+                    this,
+                    "Child",
+                    "updateSyncedChildForms",
+                    ChildContract.class,
+                    MainApp._HOST_URL + MainApp._SERVER_URL,
+                    ChildContract.SingleChild.TABLE_NAME,
+                    db.getUnsyncedChildForms(), 1, uploadListAdapter, uploadlist
+            ).execute();
+
+            if (uploadlistActivityCreated) {
+                uploadmodel = new SyncModel();
+                uploadmodel.setstatusID(0);
+                uploadlist.add(uploadmodel);
+            }
+            new SyncAllData(
+                    this,
+                    "KISH MWRA",
+                    "updateSyncedKishMWRAForms",
+                    MWRAContract.class,
+                    MainApp._HOST_URL + MainApp._SERVER_URL,
+                    KishMWRAContract.SingleKishMWRA.TABLE_NAME,
+                    db.getUnsyncedKishMWRA(), 2, uploadListAdapter, uploadlist
+            ).execute();
+            if (uploadlistActivityCreated) {
+                uploadmodel = new SyncModel();
+                uploadmodel.setstatusID(0);
+                uploadlist.add(uploadmodel);
+            }
+            new SyncAllData(
+                    this,
+                    "Pregnant MWRA",
+                    "updateSyncedPregMWRAForms",
+                    MWRA_PREContract.class,
+                    MainApp._HOST_URL + MainApp._SERVER_URL,
+                    MWRA_PREContract.SingleMWRAPRE.TABLE_NAME,
+                    db.getUnsyncedPregMWRA(), 3, uploadListAdapter, uploadlist
+            ).execute();
+
+            if (uploadlistActivityCreated) {
+                uploadmodel = new SyncModel();
+                uploadmodel.setstatusID(0);
+                uploadlist.add(uploadmodel);
+            }
+            new SyncAllData(
+                    this,
+                    "Mortality",
+                    "updateSyncedMortalityForms",
+                    MWRA_PREContract.class,
+                    MainApp._HOST_URL + MainApp._SERVER_URL,
+                    MortalityContract.SingleMortality.TABLE_NAME,
+                    db.getUnsyncedMortality(), 4, uploadListAdapter, uploadlist
+            ).execute();
+
+
+            if (uploadlistActivityCreated) {
+                uploadmodel = new SyncModel();
+                uploadmodel.setstatusID(0);
+                uploadlist.add(uploadmodel);
+            }
+            new SyncAllData(
+                    this,
+                    "Family Members",
+                    "updateSyncedFamilyMemForms",
+                    MWRA_PREContract.class,
+                    MainApp._HOST_URL + MainApp._SERVER_URL,
+                    FamilyMembersContract.SingleMember.TABLE_NAME,
+                    db.getAllFamilyMembersForms(), 5, uploadListAdapter, uploadlist
+            ).execute();
+
+            if (uploadlistActivityCreated) {
+                uploadmodel = new SyncModel();
+                uploadmodel.setstatusID(0);
+                uploadlist.add(uploadmodel);
+            }
+            new SyncAllData(
+                    this,
+                    "MWRA",
+                    "updateSyncedMWRAForms",
+                    MWRA_PREContract.class,
+                    MainApp._HOST_URL + MainApp._SERVER_URL,
+                    MWRAContract.MWRATable.TABLE_NAME,
+                    db.getUnsyncedMWRA(), 6, uploadListAdapter, uploadlist
+            ).execute();
 
 
             bi.noDataItem.setVisibility(View.GONE);

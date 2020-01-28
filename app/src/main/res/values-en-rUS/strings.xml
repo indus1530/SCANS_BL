@@ -17,7 +17,7 @@
     <string name="permission_rationale">"Contacts permissions are needed for providing email completions." </string>
 
 
-    <string name="tdheading">SECTION D: HOUSEHOLD MEMBERS’ INFORMATION</string>
+    <string name="tdheading">SECTION D: HOUSEHOLD MEMBER’S INFORMATION</string>
     <string name="teheading">SECTION E: REPRODUCTIVE HEALTH (Complete this table for all married women aged 15-49 years in the household) </string>
     <string name="te2heading">MATERNAL MORTALITY STATUS</string>
     <string name="tfheading">SECTION F: ANTENATAL CARE</string>
@@ -66,21 +66,23 @@
 
 
     <string name="taheading">SECTION A: HH Identification</string>
-    <string name="a101"> A101:\t Cluster number </string>
+    <string name="a101"> Cluster number </string>
     <string name="a101a"> This information will be based on the list of villages generated from the district. Each enumerator will be given a list of clusters that he/she will be visiting, and before starting the interview, this information will be entered from the same list. </string>
 
-    <string name="a102"> A102:\t Cluster type </string>
+    <string name="a102"> Cluster type </string>
     <string name="a102a"> LHW covered </string>
     <string name="a102b"> LHW uncovered </string>
 
     <string name="a103"> A103:\t Form Serial Number : Auto generated </string>
 
-    <string name="a104"> A104:\t Province</string>
+    <!--    <string name="a104"> A104:\t Province</string>-->
+    <string name="a104"> Province </string>
     <string name="a104a">Balochistan </string>
     <string name="a104b">Punjab </string>
     <string name="a104c">Sindh </string>
 
-    <string name="a105"> A105:\t District</string>
+    <!--    <string name="a105"> A105:\t District</string>-->
+    <string name="a105"> District </string>
     <string name="a105a">Jafferabad </string>
     <string name="a105a_title">Balochistan</string>
     <string name="a105b">Nasirabad </string>
@@ -93,21 +95,22 @@
     <string name="a105g">Sanghar </string>
     <string name="a105h">Qamber Shahdadkot </string>
 
-    <string name="a106"> A106:\t Tehsil/Taluka </string>
+    <!--    <string name="a106"> A106:\t Tehsil/Taluka </string>-->
+    <string name="a106"> Tehsil/Taluka </string>
 
-    <string name="a107"> A107:\t Union Council </string>
+    <string name="a107"> Union Council </string>
 
-    <string name="a108"> A108:\t Location </string>
+    <string name="a108"> Location </string>
     <string name="a108a">Urban </string>
     <string name="a108b">Rural </string>
 
-    <string name="a109"> A109:\t Village </string>
+    <string name="a109"> Village </string>
 
-    <string name="a110"> A110:\t Block/mohalla </string>
+    <string name="a110"> Block/mohalla </string>
 
-    <string name="a111"> A111:\t Street </string>
+    <string name="a111"> Street </string>
 
-    <string name="a112"> A112:\t House number/khandan number </string>
+    <string name="a112"> House number/khandan number </string>
     <string name="a112a">Not Available</string>
 
     <string name="checkHHpresent"> Selected Head name present (A/C Line listing) </string>
@@ -249,15 +252,15 @@
     <string name="e106b"> Month </string>
     <string name="e106c"> Year </string>
 
-    <string name="e107"> E107:\t Is (Name) Still alive ? </string>
+    <string name="e107"> E109:\t Is (Name) Still alive ? </string>
     <string name="e107a"> Yes </string>
     <string name="e107b"> No </string>
 
-    <string name="e108"> E108:\t Is {NAME} a boy or a girl ? </string>
+    <string name="e108"> E107:\t Is {NAME} a boy or a girl ? </string>
     <string name="e108a"> Boy </string>
     <string name="e108b"> Girl </string>
 
-    <string name="e109"> E109:\t What was the name given to the child ? </string>
+    <string name="e109"> E108:\t What was the name given to the child ? </string>
     <string name="e109hint"> Record Baby 1, Baby 2 In case no name was given </string>
 
     <string name="e110"> E110:\t How old was {NAME} when he/she died?</string>
@@ -1235,149 +1238,173 @@
     <string name="i126d"> Referral to HCF for Diarrhea treatment </string>
     <string name="i126e"> Informed about danger signs of diarrhea </string>
 
-    <string name="i201">Has any child less than five years had fever in the last two weeks in the household?</string>
-    <string name="i201a">Yes</string>
-    <string name="i201b">No</string>
 
-    <string name="i202">How many children had fever in the last two weeks in the household?</string>
+    <string name="i201"> I201:\t Has any child less than five years had fever in the last two weeks in the household ? </string>
+    <string name="i201a"> Yes </string>
+    <string name="i201b"> No </string>
 
-    <string name="i203">Has a child had an illness with cough that he/she breathes faster than usual with short, rapid breaths or has difficulty breathing in the past two weeks?</string>
-    <string name="i203a">Yes</string>
-    <string name="i203b">No</string>
+    <string name="i202"> I202:\t How many children had fever in the last two weeks in the household ? </string>
 
-    <string name="i204">How many children have had an illness with cough that he/she breathe faster than usual with short, rapid breaths or have difficulty breathing in the past two weeks?</string>
+    <string name="i203"> I203:\t Has a child had an illness with cough that he/she breathes faster than usual with short, rapid breaths or has difficulty breathing in the past two weeks ? </string>
+    <string name="i203a"> Yes </string>
+    <string name="i203b"> No </string>
 
-    <string name="i205">Did {NAME} have chest in drawing during the fever /and cough? </string>
-    <string name="i205a">Yes</string>
-    <string name="i205b">No</string>
-    <string name="i205c">Don\'t Know</string>
+    <string name="i204"> I204:\t How many children have had an illness with cough that he/she breathe faster than usual with short, rapid breaths or have difficulty breathing in the past two weeks ? </string>
 
-    <string name="i206">How many days did {NAME} suffer the symptoms of fever and cough?</string>
+    <string name="i205"> I205:\t Did {NAME} have chest in drawing during the fever /and cough ? </string>
+    <string name="i205a"> Yes </string>
+    <string name="i205b"> No </string>
+    <string name="i205c"> Don\'t Know </string>
 
-    <string name="i207">Did you seek advice or treatment for {NAME}’s. symptoms of fever, cough and fast breathing?</string>
-    <string name="i207a">Yes</string>
-    <string name="i207b">No</string>
+    <string name="i206"> I206:\t How many days did {NAME} suffer the symptoms of fever and cough ? </string>
 
-    <string name="i208">Why did you not seek care or treatment for {NAME}’s illness?</string>
-    <string name="i208a">The problem did not require care seeking</string>
-    <string name="i208b">Had no money to pay HCP</string>
-    <string name="i208c">Transport was not available</string>
-    <string name="i208d">A male was not present to accompany me to the health center</string>
-    <string name="i208e">No permission from household head/husband /mother in law</string>
-    <string name="i208f">Health facility is too far</string>
-    <string name="i208g">Facility not open </string>
-    <string name="i208h">Poor quality service</string>
+    <string name="i207"> I207:\t Did you seek advice or treatment for {NAME}’s. symptoms of fever, cough and fast breathing ? </string>
+    <string name="i207a"> Yes </string>
+    <string name="i207b"> No </string>
 
-    <string name="i209">Where did {NAME} receive treatment for symptoms of fever, cough and fast breathing?</string>
-    <string name="i209a">At home</string>
-    <string name="i209b">Government health facility</string>
-    <string name="i209c">Private health facility</string>
-    <string name="i209d">NGO health facility </string>
+    <string name="i208"> I208:\t Why did you not seek care or treatment for {NAME}’s illness ? </string>
+    <string name="i208a"> The problem did not require care seeking </string>
+    <string name="i208b"> Had no money to pay HCP </string>
+    <string name="i208c"> Transport was not available </string>
+    <string name="i208d"> A male was not present to accompany me to the health center </string>
+    <string name="i208e"> No permission from household head/husband /mother in law </string>
+    <string name="i208f"> Health facility is too far </string>
+    <string name="i208g"> Facility not open </string>
+    <string name="i208h"> Poor quality service </string>
 
-    <string name="i210">Who referred {NAME} for treatment of symptoms of fever, cough and fast breathing?</string>
-    <string name="i210a">Doctor</string>
-    <string name="i210b">LHV (Lady Health Visitor)</string>
-    <string name="i210c">Nurse</string>
-    <string name="i210d">Community Midwife </string>
-    <string name="i210e">Dispenser/Compounder</string>
-    <string name="i210f">LHW (Lady Health Worker)</string>
-    <string name="i210g">Dai/TBA (Traditional Birth Attendant)</string>
-    <string name="i210h">Self</string>
+    <string name="i209"> I209:\t Where did {NAME} receive treatment for symptoms of fever, cough and fast breathing ? </string>
+    <string name="i209a"> At home </string>
+    <string name="i209b"> Government health facility </string>
+    <string name="i209c"> Private health facility </string>
+    <string name="i209d"> NGO health facility </string>
 
-    <string name="i211">How far is the health facility, where you sought treatment of {NAME}’s symptoms of fever, cough and fast breathing? (kilometers)</string>
-    <string name="i212">How long does it take to reach health facility, where you sought treatment of {NAME}’s symptoms of fever, cough and fast breathingtreatment?(Minutes)</string>
-    <string name="i213">Who treated {NAME} for symptoms of fever, cough and fast breathing at the facility?</string>
-    <string name="i213a">Doctor</string>
-    <string name="i213b">LHV (Lady Health Visitor)</string>
-    <string name="i213c">Nurse</string>
-    <string name="i213d">Community Midwife</string>
-    <string name="i213f">Dispenser/Compounder</string>
-    <string name="i214">Was {NAME} hospitalized for symptoms of fever, cough and fast breathing?</string>
-    <string name="i214a">Yes</string>
-    <string name="i214b">No</string>
-    <string name="i215">Where was {NAME} hospitalized for symptoms of fever, cough and fast breathing treatment?</string>
-    <string name="i215a">Government health facility</string>
-    <string name="i215b">Private health facility</string>
-    <string name="i215c">NGO health facility</string>
-    <string name="i216">For how many days {NAME} was hospitalized for treatment of fever, cough and fast breathing?</string>
-    <string name="i217">Was {NAME} given any medicine to treat his illness during his hospitalization for symptoms of fever, cough and fast breathing?</string>
-    <string name="i217a">Yes</string>
-    <string name="i217b">No</string>
-    <string name="i217c">Don\'t Know</string>
-    <string name="i218">What treatment was given to {NAME}?</string>
-    <string name="i218a">Chloroquine </string>
-    <string name="i218b">Amodiaquine</string>
-    <string name="i218c">Quinine </string>
-    <string name="i218d">Artemisinin</string>
-    <string name="i218e">Combination </string>
-    <string name="i218f">Other anti-malarial </string>
-    <string name="i218g">Pill/syrup </string>
-    <string name="i218h">Injection </string>
-    <string name="i218i">Ponstan</string>
-    <string name="i218j">Paracetamol</string>
-    <string name="i218k">Ibuprofen </string>
-    <string name="i218l">Cough syrup </string>
-    <string name="i218m">Amoxil DT</string>
-    <string name="i218n">Home Remedy</string>
-    <string name="i219">Did {NAME} have a chest x-ray?</string>
-    <string name="i219a">Yes</string>
-    <string name="i219b">No</string>
-    <string name="i220">At any time during illness, did {NAME} have blood taken from his/her finger or heal for testing?</string>
-    <string name="i220a">Yes</string>
-    <string name="i220b">No</string>
-    <string name="i221">How much did it cost you for {NAME}’s treatment of symptoms of fever, cough and fast breathing? (Rupees)</string>
-    <string name="i222">Do you know any danger sign of pneumonia?</string>
-    <string name="i222a">Yes</string>
-    <string name="i222b">No</string>
-    <string name="i223">Could you please tell what danger signs may occur in pneumonia?</string>
-    <string name="i223a">Chest In drawing</string>
-    <string name="i223b">Not able to drink</string>
-    <string name="i223c">Persistent vomiting</string>
-    <string name="i223d">Convulsions</string>
-    <string name="i223e">Lethargic or unconscious</string>
-    <string name="i223f">Stridor in a calm child  </string>
-    <string name="i223g">Severe malnutrition</string>
-    <string name="i224">Who provided you information regarding the danger sign/problems in pneumonia?  Select all applicable</string>
-    <string name="i224a">Doctor</string>
-    <string name="i224b">LHV (Lady Health Visitor)</string>
-    <string name="i224c">Nurse</string>
-    <string name="i224d">Community Midwife </string>
-    <string name="i224e">LHW (Lady Health Worker)</string>
-    <string name="i224f">Dai/TBA (Traditional Birth Attendant)</string>
-    <string name="i225">Did LHW visit you when the child was sick with pneumonia</string>
-    <string name="i225a">Yes</string>
-    <string name="i225b">No</string>
-    <string name="i226">What services did she provide?</string>
-    <string name="i226a">Provide Amoxil DT</string>
-    <string name="i226b">Provide Panadol (Pill/Syrup)</string>
-    <string name="i226c">Used ARI timer to count breaths for the child when he was sick?</string>
-    <string name="i226d">Referral to any HCF for Pneumonia treatment</string>
-    <string name="i226e">Inform about air pollution hazards</string>
-    <string name="i226f">Information about danger signs of pneumonia</string>
+    <string name="i210"> I210:\t Who referred {NAME} for treatment of symptoms of fever, cough and fast breathing ? </string>
+    <string name="i210a"> Doctor </string>
+    <string name="i210b"> LHV (Lady Health Visitor) </string>
+    <string name="i210c"> Nurse </string>
+    <string name="i210d"> Community Midwife </string>
+    <string name="i210e"> Dispenser/Compounder </string>
+    <string name="i210f"> LHW (Lady Health Worker) </string>
+    <string name="i210g"> Dai/TBA (Traditional Birth Attendant) </string>
+    <string name="i210h"> Self </string>
 
-    <string name="j101">Do you have a vaccination card from a Government or private health provider where (name)’s vaccinations are written down?  If yes: May I see it please?   	The respondent should already have brought the card when you got permission to begin the interview.</string>
-    <string name="j101a">YES, SEEN</string>
-    <string name="j101b">YES, NOT SEEN</string>
-    <string name="j101c">NO</string>
-    <string name="j102">Did you ever have a vaccination card from a Government or private health provider for (name)?</string>
+    <string name="i211"> I211:\t How far is the health facility, where you sought treatment of {NAME}’s symptoms of fever, cough and fast breathing ? </string>
+
+    <string name="i212"> I212:\t How long does it take to reach health facility, where you sought treatment of {NAME}’s symptoms of fever, cough and fast breathing treatment ? </string>
+
+    <string name="i213"> I213:\t Who treated {NAME} for symptoms of fever, cough and fast breathing at the facility ? </string>
+    <string name="i213a"> Doctor </string>
+    <string name="i213b"> LHV (Lady Health Visitor) </string>
+    <string name="i213c"> Nurse </string>
+    <string name="i213d"> Community Midwife </string>
+    <string name="i213f"> Dispenser/Compounder </string>
+
+    <string name="i214"> I214:\t Was {NAME} hospitalized for symptoms of fever, cough and fast breathing ? </string>
+    <string name="i214a"> Yes </string>
+    <string name="i214b"> No </string>
+
+    <string name="i215"> I215:\t Where was {NAME} hospitalized for symptoms of fever, cough and fast breathing treatment ? </string>
+    <string name="i215a"> Government health facility </string>
+    <string name="i215b"> Private health facility </string>
+    <string name="i215c"> NGO health facility </string>
+
+    <string name="i216"> I216:\t For how many days {NAME} was hospitalized for treatment of fever, cough and fast breathing ? </string>
+
+    <string name="i217"> I217:\t Was {NAME} given any medicine to treat his illness during his hospitalization for symptoms of fever, cough and fast breathing ? </string>
+    <string name="i217a"> Yes </string>
+    <string name="i217b"> No </string>
+    <string name="i217c"> Don\'t Know </string>
+
+    <string name="i218"> I218:\t What treatment was given to {NAME} ? </string>
+    <string name="i218a"> Chloroquine </string>
+    <string name="i218b"> Amodiaquine </string>
+    <string name="i218c"> Quinine </string>
+    <string name="i218d"> Artemisinin </string>
+    <string name="i218e"> Combination </string>
+    <string name="i218f"> Other anti-malarial </string>
+    <string name="i218g"> Pill/syrup </string>
+    <string name="i218h"> Injection </string>
+    <string name="i218i"> Ponstan </string>
+    <string name="i218j"> Paracetamol </string>
+    <string name="i218k"> Ibuprofen </string>
+    <string name="i218l"> Cough syrup </string>
+    <string name="i218m"> Amoxil DT </string>
+    <string name="i218n"> Home Remedy </string>
+
+    <string name="i219"> I219:\t Did {NAME} have a chest x-ray ? </string>
+    <string name="i219a"> Yes </string>
+    <string name="i219b"> No </string>
+
+    <string name="i220"> I220:\t At any time during illness, did {NAME} have blood taken from his/her finger or heal for testing ? </string>
+    <string name="i220a"> Yes </string>
+    <string name="i220b"> No </string>
+
+    <string name="i221"> I221:\t How much did it cost you for {NAME}’s treatment of symptoms of fever, cough and fast breathing ? </string>
+
+    <string name="i222"> I222:\t Do you know any danger sign of pneumonia ? </string>
+    <string name="i222a"> Yes </string>
+    <string name="i222b"> No </string>
+
+    <string name="i223"> I223:\t Could you please tell what danger signs may occur in pneumonia ? </string>
+    <string name="i223a"> Chest In drawing </string>
+    <string name="i223b"> Not able to drink </string>
+    <string name="i223c"> Persistent vomiting </string>
+    <string name="i223d"> Convulsions </string>
+    <string name="i223e"> Lethargic or unconscious </string>
+    <string name="i223f"> Stridor in a calm child </string>
+    <string name="i223g"> Severe malnutrition </string>
+
+    <string name="i224"> I224:\t Who provided you information regarding the danger sign/problems in pneumonia ? </string>
+    <string name="i224a"> Doctor </string>
+    <string name="i224b"> LHV (Lady Health Visitor) </string>
+    <string name="i224c"> Nurse </string>
+    <string name="i224d"> Community Midwife </string>
+    <string name="i224e"> LHW (Lady Health Worker) </string>
+    <string name="i224f"> Dai/TBA (Traditional Birth Attendant) </string>
+
+    <string name="i225"> I225:\t Did LHW visit you when the child was sick with pneumonia </string>
+    <string name="i225a"> Yes </string>
+    <string name="i225b"> No </string>
+
+    <string name="i226"> I226:\t What services did she provide ? </string>
+    <string name="i226a"> Provide Amoxil DT </string>
+    <string name="i226b"> Provide Panadol (Pill/Syrup) </string>
+    <string name="i226c"> Used ARI timer to count breaths for the child when he was sick ? </string>
+    <string name="i226d"> Referral to any HCF for Pneumonia treatment </string>
+    <string name="i226e"> Inform about air pollution hazards </string>
+    <string name="i226f"> Information about danger signs of pneumonia </string>
+
+
+    <string name="j101"> J101:\t Do you have a vaccination card from a Government or private health provider where (name)’s vaccinations are written down ? </string>
+    <string name="j101hint"> If yes: May I see it please ? </string>
+    <string name="j101hint1"> The respondent should already have brought the card when you got permission to begin the interview.</string>
+    <string name="j101a"> Yes , Seen </string>
+    <string name="j101b"> Yes , Not Seen </string>
+    <string name="j101c"> No </string>
+
+    <string name="j102"> J102:\t Did you ever have a vaccination card from a Government or private health provider for (name)?</string>
     <string name="j102a">YES</string>
     <string name="j102b">NO</string>
-    <string name="j103">Check and copy Date of Birth recorded on card</string>
+
+    <string name="j103"> J103:\tCheck and copy Date of Birth recorded on card</string>
     <string name="j103a">DAY</string>
     <string name="j103b">MONTH</string>
     <string name="j103c">YEAR</string>
     <string name="j103d">Don\'t Know</string>
+
     <string name="j10401">BCG (Date _ Month_  Year)</string>
     <string name="j10401d">DAY</string>
     <string name="j10401m">MONTH</string>
     <string name="j10401y">YEAR</string>
-    <string name="j10401a">Where (Name) received vaccination for BCG?</string>
+
+    <string name="j10401a"> J104:\tWhere (Name) received vaccination for BCG?</string>
     <string name="j10401aa">Government Facility</string>
     <string name="j10401ab">Private Facility</string>
     <string name="j10401ac">EPI Centre</string>
     <string name="j10401ad">Community Mother and Child health Centre</string>
     <string name="j10401ae">NGO facility</string>
     <string name="j10401af">Child Health Days/Immunization Weeks</string>
+
     <string name="j10401b">Who gave vaccination to (Name)?</string>
     <string name="j10401ba">Doctor</string>
     <string name="j10401bb">LHW</string>
@@ -1387,6 +1414,7 @@
     <string name="j10401bf"> CHW</string>
     <string name="j10401bg">Dispenser/Compounder</string>
     <string name="j10401bx">Other (specify)</string>
+
     <string name="j10402">Oral Polio Vaccine dose at birth_OPV-0 (Day_Month_Year)</string>
     <string name="j10402d">DAY</string>
     <string name="j10402m">MONTH</string>
@@ -1687,59 +1715,59 @@
     <string name="j10416bf">CHW</string>
     <string name="j10416bg">Dispenser/Compounder</string>
     <string name="j10416bx">Other (specify)</string>
-    <string name="j105">Check J104: Are all vaccines (BCG to Measles-2) recorded?</string>
+    <string name="j105"> J105:\t Check J104: Are all vaccines (BCG to Measles-2) recorded?</string>
     <string name="j105a">Yes</string>
     <string name="j105b">No</string>
-    <string name="j106">In addition to what is recorded on the card you have shown me, did (name) receive any other vaccinations?</string>
+    <string name="j106"> J106:\t In addition to what is recorded on the card you have shown me, did (name) receive any other vaccinations?</string>
     <string name="j106a">Yes</string>
     <string name="j106b">No</string>
     <string name="j106c">Don\'t Know</string>
-    <string name="j107">Go back to J104 and probe for these vaccinations.  	Record ‘66’ in the corresponding day column for each vaccine received.  	For vaccinations not received record ‘00’.  	When finished, go to End of module.</string>
-    <string name="j108">Has (name) ever received any vaccinations to prevent (him/her) from getting diseases, including vaccinations received in a campaign, immunization day or child health day?</string>
+    <string name="j107">J107:\t Go back to J104 and probe for these vaccinations.  	Record ‘66’ in the corresponding day column for each vaccine received.  	For vaccinations not received record ‘00’.  	When finished, go to End of module.</string>
+    <string name="j108">J108:\t Has (name) ever received any vaccinations to prevent (him/her) from getting diseases, including vaccinations received in a campaign, immunization day or child health day?</string>
     <string name="j108a">Yes</string>
     <string name="j108b">No</string>
     <string name="j108c">Don\'t Know</string>
-    <string name="j109">Has (name) ever received a BCG vaccination against tuberculosis – that is, an injection in the arm or shoulder that usually causes a scar?</string>
+    <string name="j109">J109:\t Has (name) ever received a BCG vaccination against tuberculosis – that is, an injection in the arm or shoulder that usually causes a scar?</string>
     <string name="j109a">Yes</string>
     <string name="j109b">No</string>
     <string name="j109c">Don\'t Know</string>
-    <string name="j111">Has (name) ever received any vaccination drops in the mouth to protect (him/her) from polio?  	Probe by indicating that the first drop is usually given at birth and later at the same time as injections to prevent other diseases.</string>
+    <string name="j111">J111:\t Has (name) ever received any vaccination drops in the mouth to protect (him/her) from polio?  	Probe by indicating that the first drop is usually given at birth and later at the same time as injections to prevent other diseases.</string>
     <string name="j111a">Yes</string>
     <string name="j111b">No</string>
     <string name="j111c">Don\'t Know</string>
-    <string name="j112">Were the first polio drops received in the first two weeks after birth? </string>
+    <string name="j112">J112:\t Were the first polio drops received in the first two weeks after birth? </string>
     <string name="j112a">Yes</string>
     <string name="j112b">No</string>
     <string name="j112c">Don\'t Know</string>
-    <string name="j113">How many times were the polio drops received?</string>
-    <string name="j114">The last time (name) received the polio drops, did (he/she) also get an injection to protect against polio?  	Probe to ensure that both were given, drops and injection.</string>
+    <string name="j113">J113:\t How many times were the polio drops received?</string>
+    <string name="j114">J114:\t The last time (name) received the polio drops, did (he/she) also get an injection to protect against polio?  	Probe to ensure that both were given, drops and injection.</string>
     <string name="j114a">Yes</string>
     <string name="j114b">No</string>
     <string name="j114c">Don\'t Know</string>
-    <string name="j115">Has (name) ever received a Pentavalent vaccination – that is, an injection in the thigh to prevent (him/her) from getting tetanus, whooping cough, diphtheria, Hepatitis B disease, and Haemophilus influenzae type b?  	Probe by indicating that Pentavalent vaccination is sometimes given at the same time as the Polio drops.</string>
+    <string name="j115">J115:\t Has (name) ever received a Pentavalent vaccination – that is, an injection in the thigh to prevent (him/her) from getting tetanus, whooping cough, diphtheria, Hepatitis B disease, and Haemophilus influenzae type b?  	Probe by indicating that Pentavalent vaccination is sometimes given at the same time as the Polio drops.</string>
     <string name="j115a">Yes</string>
     <string name="j115b">No</string>
     <string name="j115c">Don\'t Know</string>
-    <string name="j116">How many times was the Pentavalent vaccine received?</string>
-    <string name="j117">Has (name) ever received a Pneumococcal Conjugate vaccination – that is, an injection to prevent (him/her) from getting pneumococcal disease, including ear infections and meningitis caused by pneumococcus?  	Probe by indicating that Pneumococcal Conjugate vaccination is sometimes given at the same time as the Pentavalent vaccination.</string>
+    <string name="j116">J116:\t How many times was the Pentavalent vaccine received?</string>
+    <string name="j117">J117:\t Has (name) ever received a Pneumococcal Conjugate vaccination – that is, an injection to prevent (him/her) from getting pneumococcal disease, including ear infections and meningitis caused by pneumococcus?  	Probe by indicating that Pneumococcal Conjugate vaccination is sometimes given at the same time as the Pentavalent vaccination.</string>
     <string name="j117a">Yes</string>
     <string name="j117b">No</string>
     <string name="j117c">Don\'t Know</string>
-    <string name="j118">How many times was the pneumococcal vaccine received?</string>
-    <string name="j119">Has (name) ever received an inactivated polio vaccine (IPV) – that is, a shot in the thigh at the age of 14 weeks or older - to prevent (him/her) from getting polio?</string>
+    <string name="j118">J118:\t How many times was the pneumococcal vaccine received?</string>
+    <string name="j119">J119:\t Has (name) ever received an inactivated polio vaccine (IPV) – that is, a shot in the thigh at the age of 14 weeks or older - to prevent (him/her) from getting polio?</string>
     <string name="j119a">Yes</string>
     <string name="j119b">No</string>
     <string name="j119c">Don\'t Know</string>
-    <string name="j120">Has (name) ever received a Measles Injection (MMR vaccine dose 1) – that is, a shot in the arm at the age of 9 months or older - to prevent (him/her) from getting measles?</string>
+    <string name="j120">J120:\t Has (name) ever received a Measles Injection (MMR vaccine dose 1) – that is, a shot in the arm at the age of 9 months or older - to prevent (him/her) from getting measles?</string>
     <string name="j120a">Yes</string>
     <string name="j120b">No</string>
     <string name="j120c">Don\'t Know</string>
-    <string name="j121">How many times was a Measles Injection (or an MMR or MR) vaccine received?</string>
-    <string name="j122">Has (name) ever received a vaccine for Diarrhea (Rotavirus vaccine)?</string>
+    <string name="j121">J121:\t How many times was a Measles Injection (or an MMR or MR) vaccine received?</string>
+    <string name="j122">J122:\t Has (name) ever received a vaccine for Diarrhea (Rotavirus vaccine)?</string>
     <string name="j122a">Yes</string>
     <string name="j122b">No</string>
     <string name="j122c">Don\'t Know</string>
-    <string name="j123">Why (name) is not vaccinated?   If the child has not received all their vaccinations, ask the mother/caretaker.  Record all the reasons mentioned but do not prompt by asking specific. Encourage the mother to provide all reasons.</string>
+    <string name="j123">J123:\t Why (name) is not vaccinated?   If the child has not received all their vaccinations, ask the mother/caretaker.  Record all the reasons mentioned but do not prompt by asking specific. Encourage the mother to provide all reasons.</string>
     <string name="j123a">PLACE OF IMMUNIZATION TOO FAR</string>
     <string name="j123b">TIME OF IMMUNIZATION NOT CONVENIENT</string>
     <string name="j123c">MOTHER TOO BUSY</string>
@@ -1758,7 +1786,7 @@
     <string name="j123p">TOOK CHILD BUT NOT VACCINATION DAY</string>
     <string name="j123x">OTHER (specify)</string>
 
-    <string name="k101">Have you ever heard of a method to delay pregnancy?</string>
+    <string name="k101">K101:\t Have you ever heard of a method to delay pregnancy?</string>
     <string name="k101a">Yes</string>
     <string name="k101aa">From where you get the information about FP methods?</string>
     <string name="k101aaa">Government Hospital</string>
@@ -1775,13 +1803,13 @@
     <string name="k101aal">Pamphalet/ Broucher</string>
     <string name="k101aam">Mobile/Smart Phone</string>
     <string name="k101b">No</string>
-    <string name="k102">Did you or your husband ever done something or used any method to delay or avoid getting pregnant?</string>
+    <string name="k102">K102:\t Did you or your husband ever done something or used any method to delay or avoid getting pregnant?</string>
     <string name="k102a">Yes</string>
     <string name="k102b">No</string>
-    <string name="k103">Are you or your husband currently doing something or using any method to delay or avoid getting pregnant?</string>
+    <string name="k103">K103:\t Are you or your husband currently doing something or using any method to delay or avoid getting pregnant?</string>
     <string name="k103a">Yes</string>
     <string name="k103b">No</string>
-    <string name="k104">What are you doing to delay or avoid pregnancy?     Select all that apply. Do not prompt. If more than one method is mentioned check each.</string>
+    <string name="k104">K104:\t What are you doing to delay or avoid pregnancy?     Select all that apply. Do not prompt. If more than one method is mentioned check each.</string>
     <string name="k104a">Female Sterilization</string>
     <string name="k104b">Male Sterilization</string>
     <string name="k104c">IUD (Intrauterine Device)</string>
@@ -1795,7 +1823,7 @@
     <string name="k104k">Withdrawal</string>
     <string name="k104l">Other modern method</string>
     <string name="k104m">Other traditional method</string>
-    <string name="k105">From where did you get the current method to delay or avoid pregnancy?</string>
+    <string name="k105">K105:\t From where did you get the current method to delay or avoid pregnancy?</string>
     <string name="k105a">Government Hospital</string>
     <string name="k105aa">Since when you are using current method without stopping it?</string>
     <string name="k105aaa">Month</string>
@@ -1809,7 +1837,7 @@
     <string name="k105g">Pharmacy, Chemist</string>
     <string name="k105h">Friend/Relative</string>
     <string name="k105i">Dai/TBA</string>
-    <string name="k106">Reasons for not using any family planning method? Select all that apply</string>
+    <string name="k106">K106:\t Reasons for not using any family planning method? Select all that apply</string>
     <string name="k106a">Side effects of contraceptives</string>
     <string name="k106b">Want Pregnancy</string>
     <string name="k106c">Want to have Son</string>
@@ -1819,70 +1847,70 @@
     <string name="k106g">Current method was not affordable</string>
     <string name="k106h">Opposition from spouse</string>
     <string name="k106x">Other (specify)</string>
-    <string name="k107">Did (LHW ) she provide Contraceptive pills/ Tell other Contraceptive Options</string>
+    <string name="k107">K107:\t Did (LHW ) she provide Contraceptive pills/ Tell other Contraceptive Options</string>
     <string name="k107a">Yes</string>
     <string name="k107b">No</string>
-    <string name="k108">Did LHW organize Health Meetings for You and Your husband?</string>
+    <string name="k108">K108:\t Did LHW organize Health Meetings for You and Your husband?</string>
     <string name="k108a">Yes</string>
     <string name="k108b">No</string>
     <string name="k108c">General meeting for Community</string>
-    <string name="k109">Do you know about any LHW HEALTH HOUSE in your area or near you?</string>
+    <string name="k109">K109:\t Do you know about any LHW HEALTH HOUSE in your area or near you?</string>
     <string name="k109a">Yes</string>
     <string name="k109ab">No</string>
 
-    <string name="l101">Do you have your own Mobile Phone?</string>
+    <string name="l101">L101:\t Do you have your own Mobile Phone?</string>
     <string name="l101a">Yes</string>
     <string name="l101b">No</string>
-    <string name="l102">Aside from your own housework, have you done any work in last seven days?</string>
+    <string name="l102">L102:\t Aside from your own housework, have you done any work in last seven days?</string>
     <string name="l102a">Yes</string>
     <string name="l102b">No</string>
-    <string name="l103">Although you did not work in the last seven days, do you have any job or business from which you were absent for leave, illness, vacation, maternity leave, or any other such reason?</string>
+    <string name="l103">L103:\t Although you did not work in the last seven days, do you have any job or business from which you were absent for leave, illness, vacation, maternity leave, or any other such reason?</string>
     <string name="l103a">Yes</string>
     <string name="l103b">No</string>
-    <string name="l104">What is your occupation? That is what kind of work you mainly do?</string>
+    <string name="l104">L104:\t What is your occupation? That is what kind of work you mainly do?</string>
     <string name="l104a">Agriculture</string>
     <string name="l104b">Education Related</string>
     <string name="l104c">Self employed</string>
     <string name="l104d">Work for family only</string>
     <string name="l104e">Work for others</string>
     <string name="l104x">Other (specify)</string>
-    <string name="l105">Are you paid for this job?</string>
+    <string name="l105">L105:\t Are you paid for this job?</string>
     <string name="l105a">Cash</string>
     <string name="l105b">Kind</string>
     <string name="l105c">Both in kind and cash</string>
     <string name="l105d">Not paid at all </string>
-    <string name="l106">Who usually decides, how to spend money you earn?</string>
+    <string name="l106">L106:\t Who usually decides, how to spend money you earn?</string>
     <string name="l106a">Respondent</string>
     <string name="l106b">Husband</string>
     <string name="l106c">Jointly</string>
     <string name="l106d">Other (specify)</string>
-    <string name="l107">Who usually decides how your husband’s earning will be used?</string>
+    <string name="l107">L107:\t Who usually decides how your husband’s earning will be used?</string>
     <string name="l107a">Respondent</string>
     <string name="l107b">Husband</string>
     <string name="l107c">Jointly</string>
     <string name="l107d">He has no earning</string>
     <string name="l107x">Other (specify)</string>
-    <string name="l108">Who usually makes decisions about health care for yourself?</string>
+    <string name="l108">L108:\t Who usually makes decisions about health care for yourself?</string>
     <string name="l108a">Respondent</string>
     <string name="l108b">Husband</string>
     <string name="l108c">Jointly</string>
     <string name="l108x">Other (specify)</string>
-    <string name="l109">Who usually makes decisions about visits to your family or relatives?</string>
+    <string name="l109">L109:\t Who usually makes decisions about visits to your family or relatives?</string>
     <string name="l109a">Respondent</string>
     <string name="l109b">Husband</string>
     <string name="l109c">Jointly</string>
     <string name="l109x">Other (specify)</string>
-    <string name="l110">Do you own this or any other house/land/property?</string>
+    <string name="l110">L110:\t Do you own this or any other house/land/property?</string>
     <string name="l110a">Alone respondent</string>
     <string name="l110b">With husband</string>
     <string name="l110c">With someone else</string>
     <string name="l110d">Does not own</string>
-    <string name="l111">Is your name on the title deed or government recognized document for any house/land/property you own?</string>
+    <string name="l111">L111:\t Is your name on the title deed or government recognized document for any house/land/property you own?</string>
     <string name="l111a">Yes</string>
     <string name="l111b">No</string>
     <string name="l111c">Don\'t Know</string>
     <string name="l111d">Don’t have any such document</string>
-    <string name="l112">In your opinion, is a husband justified in hitting or beating his wife in the following situations:</string>
+    <string name="l112">L112:\t In your opinion, is a husband justified in hitting or beating his wife in the following situations:</string>
     <string name="l112a">1.	If she goes out without telling him?</string>
     <string name="l112aa">Yes</string>
     <string name="l112ab">No</string>
@@ -1903,7 +1931,7 @@
     <string name="l112ea">Yes</string>
     <string name="l112eb">No</string>
     <string name="l112ec">Don\'t Know</string>
-    <string name="l113">Resource availability is a significant feature for human freedom. Women’s access to resources has following main components:   </string>
+    <string name="l113">L113:\t Resource availability is a significant feature for human freedom. Women’s access to resources has following main components:   </string>
     <string name="l113a">Knowledge of loan programs.  </string>
     <string name="l113aa">Yes</string>
     <string name="l113ab">No</string>
@@ -1920,35 +1948,35 @@
     <string name="l113da">Yes</string>
     <string name="l113db">No</string>
     <string name="l113dc">Don\'t Know</string>
-    <string name="l114">Did you make decisions for family planning/contraceptive use? </string>
+    <string name="l114">L114:\t Did you make decisions for family planning/contraceptive use? </string>
     <string name="l114a">Yes</string>
     <string name="l114b">No</string>
     <string name="l114c">Jointly with husband</string>
     <string name="l114x">Other (specify)</string>
-    <string name="l115">Did you decide how many children you should have?</string>
+    <string name="l115">L115:\t Did you decide how many children you should have?</string>
     <string name="l115a">Yes</string>
     <string name="l115b">No</string>
     <string name="l115c">Jointly with husband</string>
     <string name="l115x">Other (specify)</string>
-    <string name="l116">Did you make decisions for your children’s education?</string>
+    <string name="l116">L116:\t Did you make decisions for your children’s education?</string>
     <string name="l116a">Yes</string>
     <string name="l116b">No</string>
     <string name="l116c">Jointly with husband</string>
     <string name="l116x">Other (specify)</string>
-    <string name="l117">Did you make decisions for your child health/disease? </string>
+    <string name="l117">L117:\t Did you make decisions for your child health/disease? </string>
     <string name="l117a">Yes</string>
     <string name="l117b">No</string>
     <string name="l117c">Jointly with husband</string>
     <string name="l117x">Other (specify)</string>
 
-    <string name="m101">Is the cooking usually done in the house, in a separate building, or outdoors?</string>
+    <string name="m101">M101:\t Is the cooking usually done in the house, in a separate building, or outdoors?</string>
     <string name="m101a">In the house  </string>
     <string name="m101b">In a separate building</string>
     <string name="m101c">Outdoors</string>
-    <string name="m102">Do you have a separate room which is used as a kitchen?</string>
+    <string name="m102">M102:\t Do you have a separate room which is used as a kitchen?</string>
     <string name="m102a">Yes</string>
     <string name="m102b">No</string>
-    <string name="m103">Main material of the floor  RECORD OBSERVATION</string>
+    <string name="m103">M103:\t Main material of the floor  RECORD OBSERVATION</string>
     <string name="m103a">Earth/sand/mud</string>
     <string name="m103a_title">NATURAL FLOOR</string>
     <string name="m103b">Dung</string>
@@ -1965,7 +1993,7 @@
     <string name="m103l">Bricks</string>
     <string name="m103m">Mats</string>
     <string name="m103n">Marble </string>
-    <string name="m104">Main material of the roof  RECORD OBSERVATION</string>
+    <string name="m104">M104:\t Main material of the roof  RECORD OBSERVATION</string>
     <string name="m104a">No Roof</string>
     <string name="m104a_title">NATURAL ROOF</string>
     <string name="m104b">Thatch/Palm Leaf</string>
@@ -1984,7 +2012,7 @@
     <string name="m104m">Cement/RCC </string>
     <string name="m104n">Ceramic Tiles</string>
     <string name="m104o">Roofing Shingles</string>
-    <string name="m105">Main material of the walls  RECORD OBSERVATION</string>
+    <string name="m105">M105:\t Main material of the walls  RECORD OBSERVATION</string>
     <string name="m105a">No walls </string>
     <string name="m105a_title">NATURAL WALLS</string>
     <string name="m105b">Cane/Palm/Trunks </string>
@@ -2009,8 +2037,8 @@
     <string name="m105s">Cement block</string>
     <string name="m105t">Covered adobe</string>
     <string name="m105u">Wood planks/Shingles </string>
-    <string name="m106">How many rooms in this house are used for sleeping?</string>
-    <string name="m107">Does any member of this household own?</string>
+    <string name="m106">M106:\t How many rooms in this house are used for sleeping?</string>
+    <string name="m107">M107:\t Does any member of this household own?</string>
     <string name="m107a">Watch</string>
     <string name="m107aa">Yes</string>
     <string name="m107ab">No</string>
@@ -2036,22 +2064,22 @@
     <string name="m107i">Boat without motor</string>
     <string name="m107ia">Yes</string>
     <string name="m107ib">No</string>
-    <string name="m108">Does respondent (selected woman) of this household own mobile phone?</string>
+    <string name="m108">M108:\t Does respondent (selected woman) of this household own mobile phone?</string>
     <string name="m108a">Yes</string>
     <string name="m108b">No</string>
     <string name="m108ea">Yes</string>
     <string name="m108eb">No</string>
-    <string name="m109">Does any member of this household own any agricultural land?</string>
+    <string name="m109">M109:\t Does any member of this household own any agricultural land?</string>
     <string name="m109a">Yes</string>
     <string name="m109b">No</string>
-    <string name="m110">How many acres or kanals of agricultural land do members of this household own?</string>
+    <string name="m110">M110:\t How many acres or kanals of agricultural land do members of this household own?</string>
     <string name="m110a">Acres 1 </string>
     <string name="m110b">Kanals2 </string>
     <string name="m110c">Don\'t Know</string>
-    <string name="m111">Does this household own any livestock, herds, other farm animals?</string>
+    <string name="m111">M111:\t Does this household own any livestock, herds, other farm animals?</string>
     <string name="m111a">Yes</string>
     <string name="m111b">No</string>
-    <string name="m112">How many of the following animals does the household own?</string>
+    <string name="m112">M112:\t How many of the following animals does the household own?</string>
     <string name="m112a">Cows/Bulls</string>
     <string name="m112b">Horses/Donkeys/Mules</string>
     <string name="m112c">Goats</string>
@@ -2059,10 +2087,10 @@
     <string name="m112e"> Chickens</string>
     <string name="m112f">Buffalo</string>
     <string name="m112g"> Camels</string>
-    <string name="m113">Does any member of this household have a bank account?</string>
+    <string name="m113">M113:\t Does any member of this household have a bank account?</string>
     <string name="m113a">Yes</string>
     <string name="m113b">No</string>
-    <string name="m114">Does your household have?</string>
+    <string name="m114">M114:\t Does your household have?</string>
     <string name="m114a">Electricity </string>
     <string name="m114aa">Yes</string>
     <string name="m114ab">No</string>
@@ -2117,7 +2145,7 @@
     <string name="m114r">Internet Connection </string>
     <string name="m114ra">Yes</string>
     <string name="m114rb">No</string>
-    <string name="m115">What type of fuel does your household mainly use for cooking</string>
+    <string name="m115">M115:\t What type of fuel does your household mainly use for cooking</string>
     <string name="m115a">Electricity</string>
     <string name="m115b">Liquefied Petroleum Gas (LPG) </string>
     <string name="m115c">Natural Gas</string>
@@ -2129,7 +2157,7 @@
     <string name="m115i">Straw/Shrubs/Grass</string>
     <string name="m115j">Animal dung</string>
     <string name="m115k">No food cooked in household</string>
-    <string name="m116">What language do you usually speak in your household?</string>
+    <string name="m116">M116:\t What language do you usually speak in your household?</string>
     <string name="m116a">Urdu </string>
     <string name="m116b">Punjabi </string>
     <string name="m116c">Sindhi </string>
