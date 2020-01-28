@@ -266,6 +266,7 @@
                         android:layout_marginTop="5dp"
                         android:layout_marginEnd="10dp"
                         android:layout_weight="60"
+                        android:inputType="number"
                         android:hint="@string/num"
                         android:layoutDirection="ltr"
                         android:textDirection="ltr"
