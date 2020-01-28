@@ -189,7 +189,7 @@ public class SectionI1Activity extends AppCompatActivity {
 
         DatabaseHelper db = MainApp.appInfo.getDbHelper();
         long rowID = db.addChild(MainApp.child);
-        if (rowID != 0) {
+        if (rowID > 0) {
             MainApp.child.set_ID(String.valueOf(rowID));
             MainApp.child.setUID(MainApp.child.getDeviceId() + MainApp.child.get_ID());
             db.updatesChildColumn(ChildContract.SingleChild.COLUMN_UID, MainApp.child.getUID());

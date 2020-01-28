@@ -737,18 +737,18 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         // Create a new map of values, where column names are the keys
         ContentValues values = new ContentValues();
 //        values.put(MWRATable._ID, mwra.get_ID());
-        values.put(MWRATable.COLUMN_UUID, mwra.get_UUID());
-        values.put(MWRATable.COLUMN_DEVICEID, mwra.getDeviceId());
-        values.put(MWRATable.COLUMN_FORMDATE, mwra.getFormDate());
-        values.put(MWRATable.COLUMN_USER, mwra.getUser());
-        values.put(MWRATable.COLUMN_DEVICETAGID, mwra.getDevicetagID());
-        values.put(MWRATable.COLUMN_SE1, mwra.getsE2());
+        values.put(SingleMWRAPRE.COLUMN__UUID, mwra.get_UUID());
+        values.put(SingleMWRAPRE.COLUMN_DEVICEID, mwra.getDeviceId());
+        values.put(SingleMWRAPRE.COLUMN_FORMDATE, mwra.getFormDate());
+        values.put(SingleMWRAPRE.COLUMN_USER, mwra.getUser());
+        values.put(SingleMWRAPRE.COLUMN_DEVICETAGID, mwra.getDevicetagID());
+        values.put(SingleMWRAPRE.COLUMN_SE2, mwra.getsE2());
 
         // Insert the new row, returning the primary key value of the new row
         long newRowId;
         newRowId = db.insert(
-                MWRATable.TABLE_NAME,
-                MWRATable.COLUMN_NAME_NULLABLE,
+                SingleMWRAPRE.TABLE_NAME,
+                null,
                 values);
         return newRowId;
     }

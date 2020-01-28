@@ -153,7 +153,7 @@ public class SectionE2Activity extends AppCompatActivity {
     private boolean UpdateDB() {
         DatabaseHelper db = MainApp.appInfo.getDbHelper();
         long rowID = db.addPregnantMWRA(mwraPre);
-        if (rowID != 0) {
+        if (rowID > 0) {
             mwraPre.set_ID(String.valueOf(rowID));
             mwraPre.setUID(mwraPre.getDeviceId() + mwraPre.get_ID());
             db.updatesMWRAPREColumn(mwraPre);
