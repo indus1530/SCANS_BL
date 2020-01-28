@@ -1378,8 +1378,8 @@
     <string name="j101"> J101:\t Do you have a vaccination card from a Government or private health provider where (name)’s vaccinations are written down ? </string>
     <string name="j101hint"> If yes: May I see it please ? </string>
     <string name="j101hint1"> The respondent should already have brought the card when you got permission to begin the interview.</string>
-    <string name="j101a"> Yes, Seen </string>
-    <string name="j101b"> Yes, Not Seen </string>
+    <string name="j101a"> Yes , Seen </string>
+    <string name="j101b"> Yes , Not Seen </string>
     <string name="j101c"> No </string>
 
     <string name="j102">Did you ever have a vaccination card from a Government or private health provider for (name)?</string>
