@@ -417,18 +417,20 @@ public class SectionJ03Activity extends AppCompatActivity {
 
     }
 
+
     @Override
     public void onBackPressed() {
         Toast.makeText(this, "You can't go back", Toast.LENGTH_SHORT).show();
     }
 
-    private boolean formValidation() {
 
+    private boolean formValidation() {
         return Validator.emptyCheckingContainer(this, bi.fldGrpSectionJ03);
     }
 
-    public void BtnEnd() {
 
+    public void BtnEnd() {
         Util.openEndActivity(this);
     }
+
 }
