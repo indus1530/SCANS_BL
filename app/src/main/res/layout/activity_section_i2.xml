@@ -334,6 +334,71 @@
 
                 </androidx.cardview.widget.CardView>
 
+                <!-- i208  Radio   -->
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/fldGrpCVi208"
+                    style="@style/cardView"
+                    android:visibility='@{i207a.checked? View.GONE : View.VISIBLE}'>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <TextView
+                            style="@style/i_textview"
+                            android:text="@string/i208" />
+
+                        <RadioGroup
+                            android:id="@+id/i208"
+                            style="@style/radiogroup">
+
+                            <RadioButton
+                                android:id="@+id/i208a"
+                                style="@style/radiobutton"
+                                android:text="@string/i208a" />
+
+                            <RadioButton
+                                android:id="@+id/i208b"
+                                style="@style/radiobutton"
+                                android:text="@string/i208b" />
+
+                            <RadioButton
+                                android:id="@+id/i208c"
+                                style="@style/radiobutton"
+                                android:text="@string/i208c" />
+
+                            <RadioButton
+                                android:id="@+id/i208d"
+                                style="@style/radiobutton"
+                                android:text="@string/i208d" />
+
+                            <RadioButton
+                                android:id="@+id/i208e"
+                                style="@style/radiobutton"
+                                android:text="@string/i208e" />
+
+                            <RadioButton
+                                android:id="@+id/i208f"
+                                style="@style/radiobutton"
+                                android:text="@string/i208f" />
+
+                            <RadioButton
+                                android:id="@+id/i208g"
+                                style="@style/radiobutton"
+                                android:text="@string/i208g" />
+
+                            <RadioButton
+                                android:id="@+id/i208h"
+                                style="@style/radiobutton"
+                                android:text="@string/i208h" />
+
+                        </RadioGroup>
+
+                    </LinearLayout>
+
+                </androidx.cardview.widget.CardView>
+
 
                 <LinearLayout
                     android:id="@+id/fldGrpi025"
@@ -341,71 +406,6 @@
                     android:layout_height="wrap_content"
                     android:orientation="vertical"
                     android:visibility='@{i207b.checked? View.GONE : View.VISIBLE}'>
-
-                    <!-- i208  Radio   -->
-                    <androidx.cardview.widget.CardView
-                        android:id="@+id/fldGrpCVi208"
-                        style="@style/cardView"
-                        android:visibility='@{i207a.checked? View.GONE : View.VISIBLE}'>
-
-                        <LinearLayout
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:orientation="vertical">
-
-                            <TextView
-                                style="@style/i_textview"
-                                android:text="@string/i208" />
-
-                            <RadioGroup
-                                android:id="@+id/i208"
-                                style="@style/radiogroup">
-
-                                <RadioButton
-                                    android:id="@+id/i208a"
-                                    style="@style/radiobutton"
-                                    android:text="@string/i208a" />
-
-                                <RadioButton
-                                    android:id="@+id/i208b"
-                                    style="@style/radiobutton"
-                                    android:text="@string/i208b" />
-
-                                <RadioButton
-                                    android:id="@+id/i208c"
-                                    style="@style/radiobutton"
-                                    android:text="@string/i208c" />
-
-                                <RadioButton
-                                    android:id="@+id/i208d"
-                                    style="@style/radiobutton"
-                                    android:text="@string/i208d" />
-
-                                <RadioButton
-                                    android:id="@+id/i208e"
-                                    style="@style/radiobutton"
-                                    android:text="@string/i208e" />
-
-                                <RadioButton
-                                    android:id="@+id/i208f"
-                                    style="@style/radiobutton"
-                                    android:text="@string/i208f" />
-
-                                <RadioButton
-                                    android:id="@+id/i208g"
-                                    style="@style/radiobutton"
-                                    android:text="@string/i208g" />
-
-                                <RadioButton
-                                    android:id="@+id/i208h"
-                                    style="@style/radiobutton"
-                                    android:text="@string/i208h" />
-
-                            </RadioGroup>
-
-                        </LinearLayout>
-
-                    </androidx.cardview.widget.CardView>
 
                     <!-- i209  Radio   -->
                     <androidx.cardview.widget.CardView

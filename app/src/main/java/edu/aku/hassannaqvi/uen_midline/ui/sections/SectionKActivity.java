@@ -42,7 +42,7 @@ public class SectionKActivity extends AppCompatActivity {
         bi.k102.setOnCheckedChangeListener(((radioGroup, i) -> {
 
             if (i == bi.k102b.getId()) {
-                ClearClass.ClearAllFields(bi.fldGrpi022, null);
+                ClearClass.ClearAllFields(bi.fldGrpk1022, null);
             }
 
         }));
