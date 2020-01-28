@@ -766,7 +766,7 @@
 
                                 <com.edittextpicker.aliazaz.EditTextPicker
                                     android:id="@+id/j10403m"
-                                    style="@style/textInput"
+                                    style="@style/EditTextNum"
                                     android:hint="@string/j10403m"
                                     android:maxLength="2"
                                     app:defaultValue="00"
