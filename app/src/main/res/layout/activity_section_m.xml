@@ -103,14 +103,14 @@
                         android:layout_width="match_parent"
                         android:layout_height="match_parent">
 
+                        <TextView
+                            style="@style/textView3Head"
+                            android:text="@string/m103a_title" />
+
                         <RadioButton
                             android:id="@+id/m103a"
                             style="@style/radiobutton"
                             android:text="@string/m103a" />
-
-                        <TextView
-                            style="@style/textView3Head"
-                            android:text="@string/m103a_title" />
 
                         <RadioButton
                             android:id="@+id/m103b"
