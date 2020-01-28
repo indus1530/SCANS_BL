@@ -206,16 +206,16 @@
 
                             <RadioButton
                                 android:id="@+id/d104a"
+                                style="@style/radiobutton"
                                 android:layout_width="0dp"
                                 android:layout_weight="1"
-                                style="@style/radiobutton"
                                 android:text="@string/d104a" />
 
                             <RadioButton
                                 android:id="@+id/d104b"
+                                style="@style/radiobutton"
                                 android:layout_width="0dp"
                                 android:layout_weight="1"
-                                style="@style/radiobutton"
                                 android:text="@string/d104b" />
 
                         </RadioGroup>
@@ -734,16 +734,16 @@
 
                             <RadioButton
                                 android:id="@+id/d115a"
+                                style="@style/radiobutton"
                                 android:layout_width="0dp"
                                 android:layout_weight="1"
-                                style="@style/radiobutton"
                                 android:text="@string/d115a" />
 
                             <RadioButton
                                 android:id="@+id/d115b"
+                                style="@style/radiobutton"
                                 android:layout_width="0dp"
                                 android:layout_weight="1"
-                                style="@style/radiobutton"
                                 android:text="@string/d115b" />
 
                         </RadioGroup>
