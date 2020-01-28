@@ -28,6 +28,7 @@ import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
 
+import edu.aku.hassannaqvi.uen_midline.CONSTANTS;
 import edu.aku.hassannaqvi.uen_midline.R;
 import edu.aku.hassannaqvi.uen_midline.adapter.SyncListAdapter;
 import edu.aku.hassannaqvi.uen_midline.adapter.UploadListAdapter;
@@ -59,6 +60,7 @@ public class SyncActivity extends AppCompatActivity implements SyncDevice.SyncDe
     Boolean listActivityCreated;
     Boolean uploadlistActivityCreated;
     String dtToday = new SimpleDateFormat("dd-MM-yy HH:mm").format(new Date().getTime());
+    private boolean sync_flag;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -73,18 +75,11 @@ public class SyncActivity extends AppCompatActivity implements SyncDevice.SyncDe
         uploadlistActivityCreated = true;
         db = new DatabaseHelper(this);
         dbBackup();
-        bi.btnSync.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                onSyncDataClick();
-            }
-        });
-        bi.btnUpload.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                syncServer();
-            }
-        });
+
+        sync_flag = getIntent().getBooleanExtra(CONSTANTS.SYNC_LOGIN, false);
+
+        bi.btnSync.setOnClickListener(v -> onSyncDataClick());
+        bi.btnUpload.setOnClickListener(v -> syncServer());
         setAdapter();
         setUploadAdapter();
     }
@@ -100,29 +95,6 @@ public class SyncActivity extends AppCompatActivity implements SyncDevice.SyncDe
         } else {
             Toast.makeText(this, "No network connection available.", Toast.LENGTH_SHORT).show();
         }
-    }
-
-    private void settingList() {
-        model = new SyncModel();
-        /*model.settableName("EnumBlock");
-        model.setstatus("In Progress");*/
-        model.setstatusID(0);
-        list.add(model);
-        model = new SyncModel();
-        /*model.settableName("User");
-        model.setstatus("In Progress");*/
-        model.setstatusID(0);
-        list.add(model);
-        model = new SyncModel();
-       /* model.settableName("BLRandom");
-        model.setstatus("In Progress");*/
-        model.setstatusID(0);
-        list.add(model);
-        model = new SyncModel();
-       /* model.settableName("VersionApp");
-        model.setstatus("In Progress");*/
-        model.setstatusID(0);
-        list.add(model);
     }
 
     void setAdapter() {
@@ -269,54 +241,60 @@ public class SyncActivity extends AppCompatActivity implements SyncDevice.SyncDe
 
     @Override
     public void processFinish(boolean flag) {
-        new syncData(SyncActivity.this, "").execute();
+        MainApp.appInfo.updateTagName(SyncActivity.this);
+        new SyncData(SyncActivity.this, MainApp.DIST_ID).execute(sync_flag);
     }
 
-    public class syncData extends AsyncTask<String, String, String> {
+    public class SyncData extends AsyncTask<Boolean, String, String> {
 
         private Context mContext;
-        String distID;
+        private String distID;
 
-        public syncData(Context mContext, String districtId) {
+        private SyncData(Context mContext, String districtId) {
             this.mContext = mContext;
             this.distID = districtId;
         }
 
         @Override
-        protected String doInBackground(String... strings) {
+        protected String doInBackground(Boolean... booleans) {
             runOnUiThread(() -> {
 
-                if (listActivityCreated) {
-                    model = new SyncModel();
-                    model.setstatusID(0);
-                    list.add(model);
-                }
-                new GetAllData(mContext, "EnumBlock", syncListAdapter, list).execute(distID);
-                bi.noItem.setVisibility(View.GONE);
-
+                if (booleans[0]) {
 //                  getting Users!!
-                if (listActivityCreated) {
-                    model = new SyncModel();
-                    model.setstatusID(0);
-                    list.add(model);
-                }
-                new GetAllData(mContext, "User", syncListAdapter, list).execute(distID);
-
-//                   getting BL Random
-                if (listActivityCreated) {
-                    model = new SyncModel();
-                    model.setstatusID(0);
-                    list.add(model);
-                }
-                new GetAllData(mContext, "BLRandom", syncListAdapter, list).execute(distID);
+                    if (listActivityCreated) {
+                        model = new SyncModel();
+                        model.setstatusID(0);
+                        list.add(model);
+                    }
+                    new GetAllData(mContext, "User", syncListAdapter, list).execute();
 
 //                    Getting App Version
-                if (listActivityCreated) {
-                    model = new SyncModel();
-                    model.setstatusID(0);
-                    list.add(model);
+                    if (listActivityCreated) {
+                        model = new SyncModel();
+                        model.setstatusID(0);
+                        list.add(model);
+                    }
+                    new GetAllData(mContext, "VersionApp", syncListAdapter, list).execute();
+
+                } else {
+
+                    if (listActivityCreated) {
+                        model = new SyncModel();
+                        model.setstatusID(0);
+                        list.add(model);
+                    }
+                    new GetAllData(mContext, "EnumBlock", syncListAdapter, list).execute(distID);
+                    bi.noItem.setVisibility(View.GONE);
+
+//                   getting BL Random
+                    if (listActivityCreated) {
+                        model = new SyncModel();
+                        model.setstatusID(0);
+                        list.add(model);
+                    }
+                    new GetAllData(mContext, "BLRandom", syncListAdapter, list).execute(distID);
+
                 }
-                new GetAllData(mContext, "VersionApp", syncListAdapter, list).execute();
 
                 listActivityCreated = false;
             });
@@ -326,19 +304,15 @@ public class SyncActivity extends AppCompatActivity implements SyncDevice.SyncDe
 
         @Override
         protected void onPostExecute(String s) {
-            new Handler().postDelayed(new Runnable() {
-
-                @Override
-                public void run() {
+            new Handler().postDelayed(() -> {
 
 //                    populateSpinner(mContext);
 
-                    editor.putBoolean("flag", true);
-                    editor.commit();
+                editor.putBoolean("flag", true);
+                editor.commit();
 
-                    dbBackup();
+                dbBackup();
 
-                }
             }, 1200);
         }
     }

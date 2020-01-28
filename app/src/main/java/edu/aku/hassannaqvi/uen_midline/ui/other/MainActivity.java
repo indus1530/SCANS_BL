@@ -111,39 +111,6 @@ public class MainActivity extends AppCompatActivity {
 
     }
 
-   /* BroadcastReceiver broadcastReceiver = new BroadcastReceiver() {
-        @Override
-        public void onReceive(Context context, Intent intent) {
-            if (DownloadManager.ACTION_DOWNLOAD_COMPLETE.equals(intent.getAction())) {
-
-                DownloadManager.Query query = new DownloadManager.Query();
-                query.setFilterById(sharedPrefDownload.getLong("refID", 0));
-
-                downloadManager = (DownloadManager) getSystemService(Context.DOWNLOAD_SERVICE);
-                Cursor cursor = downloadManager.query(query);
-                if (cursor.moveToFirst()) {
-                    int colIndex = cursor.getColumnIndex(DownloadManager.COLUMN_STATUS);
-                    if (DownloadManager.STATUS_SUCCESSFUL == cursor.getInt(colIndex)) {
-
-                        editorDownload.putBoolean("flag", true);
-                        editorDownload.commit();
-
-                        Toast.makeText(context, "New App downloaded!!", Toast.LENGTH_SHORT).show();
-                        bi.lblAppVersion.setText("TMK APP New Version " + newVer + "  Downloaded.");
-
-                        ActivityManager am = (ActivityManager) getSystemService(ACTIVITY_SERVICE);
-                        List<ActivityManager.RunningTaskInfo> taskInfo = am.getRunningTasks(1);
-
-                        if (taskInfo.get(0).topActivity.getClassName().equals(MainActivity.class.getName())) {
-//                                InstallNewApp(newVer, preVer);
-                            showDialog(newVer, preVer);
-                        }
-                    }
-                }
-            }
-        }
-    };*/
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -278,7 +245,7 @@ public class MainActivity extends AppCompatActivity {
             bi.testing.setVisibility(View.VISIBLE);
         }
 
-        loadTagDialog();
+        //loadTagDialog();
 
     }
 
@@ -296,14 +263,13 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void OpenFormFunc() {
-        Intent oF = new Intent();
+        Intent oF;
         if (!MainApp.userName.equals("0000")) {
             oF = new Intent(MainActivity.this, SectionAActivity.class);
             startActivity(oF);
         } else {
             Toast.makeText(getApplicationContext(), "Please login Again!", Toast.LENGTH_LONG).show();
         }
-
 
     }
 

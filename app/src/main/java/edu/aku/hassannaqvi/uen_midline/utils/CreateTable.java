@@ -1,18 +1,16 @@
 package edu.aku.hassannaqvi.uen_midline.utils;
 
-import edu.aku.hassannaqvi.uen_midline.contracts.AreasContract;
+import edu.aku.hassannaqvi.uen_midline.contracts.BLRandomContract.SingleRandomHH;
 import edu.aku.hassannaqvi.uen_midline.contracts.ChildContract.SingleChild;
+import edu.aku.hassannaqvi.uen_midline.contracts.EnumBlockContract;
 import edu.aku.hassannaqvi.uen_midline.contracts.FamilyMembersContract;
 import edu.aku.hassannaqvi.uen_midline.contracts.FormsContract;
 import edu.aku.hassannaqvi.uen_midline.contracts.KishMWRAContract.SingleKishMWRA;
 import edu.aku.hassannaqvi.uen_midline.contracts.MWRAContract.MWRATable;
 import edu.aku.hassannaqvi.uen_midline.contracts.MWRA_PREContract.SingleMWRAPRE;
 import edu.aku.hassannaqvi.uen_midline.contracts.MortalityContract.SingleMortality;
-import edu.aku.hassannaqvi.uen_midline.contracts.TalukasContract;
-import edu.aku.hassannaqvi.uen_midline.contracts.UCsContract;
 import edu.aku.hassannaqvi.uen_midline.contracts.UsersContract;
 import edu.aku.hassannaqvi.uen_midline.contracts.VersionAppContract;
-import edu.aku.hassannaqvi.uen_midline.contracts.VillagesContract;
 
 public final class CreateTable {
 
@@ -55,7 +53,7 @@ public final class CreateTable {
             + UsersContract.singleUser._ID + " INTEGER PRIMARY KEY AUTOINCREMENT,"
             + UsersContract.singleUser.ROW_USERNAME + " TEXT,"
             + UsersContract.singleUser.ROW_PASSWORD + " TEXT,"
-            + UsersContract.singleUser.FULL_NAME + " TEXT"
+            + UsersContract.singleUser.DIST_ID + " TEXT"
             + " );";
 
     public static final String SQL_CREATE_VERSIONAPP = "CREATE TABLE " + VersionAppContract.VersionAppTable.TABLE_NAME + " (" +
@@ -64,7 +62,7 @@ public final class CreateTable {
             VersionAppContract.VersionAppTable.COLUMN_VERSION_NAME + " TEXT, " +
             VersionAppContract.VersionAppTable.COLUMN_PATH_NAME + " TEXT " +
             ");";
-
+/*
     public static final String SQL_CREATE_TALUKAS = "CREATE TABLE " + TalukasContract.singleTalukas.TABLE_NAME + "("
             + TalukasContract.singleTalukas._ID + " INTEGER PRIMARY KEY AUTOINCREMENT,"
             + TalukasContract.singleTalukas.COLUMN_TALUKA_CODE + " TEXT,"
@@ -82,14 +80,26 @@ public final class CreateTable {
             + AreasContract.singleAreas._ID + " INTEGER PRIMARY KEY AUTOINCREMENT,"
             + AreasContract.singleAreas.COLUMN_AREACODE + " TEXT,"
             + AreasContract.singleAreas.COLUMN_UC_CODE + " TEXT,"
-            + AreasContract.singleAreas.COLUMN_AREA + " TEXT );";
+            + AreasContract.singleAreas.COLUMN_AREA + " TEXT );";*/
 
+    public static final String SQL_CREATE_BL_RANDOM = "CREATE TABLE " + SingleRandomHH.TABLE_NAME + "("
+            + SingleRandomHH.COLUMN_ID + " TEXT,"
+            + SingleRandomHH.COLUMN_ENUM_BLOCK_CODE + " TEXT,"
+            + SingleRandomHH.COLUMN_LUID + " TEXT,"
+            + SingleRandomHH.COLUMN_HH + " TEXT,"
+            + SingleRandomHH.COLUMN_STRUCTURE_NO + " TEXT,"
+            + SingleRandomHH.COLUMN_FAMILY_EXT_CODE + " TEXT,"
+            + SingleRandomHH.COLUMN_HH_HEAD + " TEXT,"
+            + SingleRandomHH.COLUMN_CONTACT + " TEXT,"
+            + SingleRandomHH.COLUMN_HH_SELECTED_STRUCT + " TEXT,"
+            + SingleRandomHH.COLUMN_RANDOMDT + " TEXT,"
+            + SingleRandomHH.COLUMN_SNO_HH + " TEXT );";
 
-    public static final String SQL_CREATE_PSU_TABLE = "CREATE TABLE " + VillagesContract.SingleVillage.TABLE_NAME + " (" +
-            VillagesContract.SingleVillage._ID + " INTEGER PRIMARY KEY AUTOINCREMENT," +
-            VillagesContract.SingleVillage.COLUMN_AREA_CODE + " TEXT, " +
-            VillagesContract.SingleVillage.COLUMN_VILLAGE_CODE + " TEXT, " +
-            VillagesContract.SingleVillage.COLUMN_VILLAGE_NAME + " TEXT " +
+    public static final String SQL_CREATE_PSU_TABLE = "CREATE TABLE " + EnumBlockContract.EnumBlockTable.TABLE_NAME + " (" +
+            EnumBlockContract.EnumBlockTable._ID + " INTEGER PRIMARY KEY AUTOINCREMENT," +
+            EnumBlockContract.EnumBlockTable.COLUMN_DIST_ID + " TEXT, " +
+            EnumBlockContract.EnumBlockTable.COLUMN_GEO_AREA + " TEXT, " +
+            EnumBlockContract.EnumBlockTable.COLUMN_CLUSTER_AREA + " TEXT " +
             ");";
 
     public static final String SQL_CREATE_KISH_TABLE = "CREATE TABLE " + SingleKishMWRA.TABLE_NAME + "("

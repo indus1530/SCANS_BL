@@ -41,6 +41,10 @@ public final class AppInfo {
         return sharedPref.getString("tagName", null);
     }
 
+    public void updateTagName(Context mContext) {
+        tagName = getTagName(mContext);
+    }
+
     private AppInfo(String versionName, Long installedOn, int versionCode) {
         this.versionName = versionName;
         this.installedOn = installedOn;

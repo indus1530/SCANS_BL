@@ -10,6 +10,7 @@ import android.widget.Toast;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.databinding.DataBindingUtil;
 
+import com.validatorcrawler.aliazaz.Clear;
 import com.validatorcrawler.aliazaz.Validator;
 
 import org.json.JSONException;
@@ -17,6 +18,7 @@ import org.json.JSONObject;
 
 import edu.aku.hassannaqvi.uen_midline.R;
 import edu.aku.hassannaqvi.uen_midline.contracts.BLRandomContract;
+import edu.aku.hassannaqvi.uen_midline.contracts.EnumBlockContract;
 import edu.aku.hassannaqvi.uen_midline.contracts.FormsContract;
 import edu.aku.hassannaqvi.uen_midline.core.DatabaseHelper;
 import edu.aku.hassannaqvi.uen_midline.core.MainApp;
@@ -51,8 +53,8 @@ public class SectionAActivity extends AppCompatActivity {
 
             @Override
             public void onTextChanged(CharSequence s, int start, int before, int count) {
-                /*Clear.clearAllFields(bi.fldGrpSectionA01);
-                bi.fldGrpSectionA01.setVisibility(View.GONE);*/
+                Clear.clearAllFields(bi.fldGrpSectionA01);
+                bi.fldGrpSectionA01.setVisibility(View.GONE);
             }
 
             @Override
@@ -68,8 +70,8 @@ public class SectionAActivity extends AppCompatActivity {
 
             @Override
             public void onTextChanged(CharSequence s, int start, int before, int count) {
-               /* Clear.clearAllFields(bi.fldGrpSectionA02);
-                bi.fldGrpSectionA02.setVisibility(View.GONE);*/
+                Clear.clearAllFields(bi.fldGrpSectionA02);
+                bi.fldGrpSectionA02.setVisibility(View.GONE);
             }
 
             @Override
@@ -124,6 +126,18 @@ public class SectionAActivity extends AppCompatActivity {
 
         JSONObject json = new JSONObject();
 
+        json.put("imei", MainApp.IMEI);
+        json.put("rndid", bl.get_ID());
+        json.put("luid", bl.getLUID());
+        json.put("randDT", bl.getRandomDT());
+        json.put("hh03", bl.getStructure());
+        json.put("hh07", bl.getExtension());
+        json.put("hhhead", bl.getHhhead());
+        json.put("hh09", bl.getContact());
+        json.put("hhss", bl.getSelStructure());
+        json.put("hhheadpresent", bi.checkHHHeadpresent.isChecked() ? "1" : "2");
+        json.put("hhheadpresentnew", bi.newHHheadname.getText().toString());
+
         json.put("a104", bi.a104.getText().toString());
         json.put("a105", bi.a105.getText().toString());
         json.put("a106", bi.a106.getText().toString());
@@ -131,8 +145,6 @@ public class SectionAActivity extends AppCompatActivity {
         json.put("a109", bi.a109.getText().toString());
         json.put("a110", bi.a110.getText().toString());
         json.put("a111", bi.a111.getText().toString());
-        json.put("hhheadpresent", bi.checkHHHeadpresent.isChecked() ? "1" : "2");
-        json.put("hhheadpresentnew", bi.newHHheadname.getText().toString());
 
         MainApp.fc.setsInfo(String.valueOf(json));
 
@@ -148,7 +160,7 @@ public class SectionAActivity extends AppCompatActivity {
 
     public void BtnCheckCluster() {
 
-        /*if (!Validator.emptyTextBox(this, bi.a101)) return;
+        if (!Validator.emptyTextBox(this, bi.a101)) return;
 
         EnumBlockContract enumBlockContract = db.getEnumBlock(bi.a101.getText().toString());
         if (enumBlockContract != null) {
@@ -165,14 +177,12 @@ public class SectionAActivity extends AppCompatActivity {
             }
         } else {
             Toast.makeText(this, "Sorry cluster not found!!", Toast.LENGTH_SHORT).show();
-        }*/
-
-        bi.fldGrpSectionA01.setVisibility(View.VISIBLE);
+        }
 
     }
 
     public void BtnCheckHH() {
-        /*if (!Validator.emptyTextBox(this, bi.a112)) return;
+        if (!Validator.emptyTextBox(this, bi.a112)) return;
 
         bl = MainApp.appInfo.getDbHelper().getHHFromBLRandom(bi.a101.getText().toString(), bi.a112.getText().toString().toUpperCase());
 
@@ -184,10 +194,7 @@ public class SectionAActivity extends AppCompatActivity {
         } else {
             bi.fldGrpSectionA02.setVisibility(View.GONE);
             Toast.makeText(this, "No Household found!", Toast.LENGTH_SHORT).show();
-        }*/
-
-
-        bi.fldGrpSectionA02.setVisibility(View.VISIBLE);
+        }
 
     }
 }
