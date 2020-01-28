@@ -42,7 +42,8 @@ public class SyncAllData extends AsyncTask<Void, Integer, String> {
     private Class contractClass;
     private Collection dbData;
 
-    public SyncAllData(Context mContext, String syncClass, String updateSyncClass, Class contractClass, String url, String tableName, Collection dbData, int position, UploadListAdapter adapter, List<SyncModel> uploadlist) {
+    public SyncAllData(Context mContext, String syncClass, String updateSyncClass, Class contractClass, String url,
+                       String tableName, Collection dbData, int position, UploadListAdapter adapter, List<SyncModel> uploadlist) {
         this.mContext = mContext;
         this.syncClass = syncClass;
         this.updateSyncClass = updateSyncClass;
@@ -51,7 +52,7 @@ public class SyncAllData extends AsyncTask<Void, Integer, String> {
         this.tableName = tableName;
         this.dbData = dbData;
         this.position = position;
-        this.adapter = adapter;
+            this.adapter = adapter;
         this.uploadlist = uploadlist;
         TAG = "Get" + syncClass;
         uploadlist.get(position).settableName(syncClass);

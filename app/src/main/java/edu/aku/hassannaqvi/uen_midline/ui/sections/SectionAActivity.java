@@ -53,8 +53,14 @@ public class SectionAActivity extends AppCompatActivity {
 
             @Override
             public void onTextChanged(CharSequence s, int start, int before, int count) {
-                Clear.clearAllFields(bi.fldGrpSectionA01);
-                bi.fldGrpSectionA01.setVisibility(View.GONE);
+
+                if (s.toString().equals("")) {
+                    bi.fldGrpSectionA01.setVisibility(View.GONE);
+                    bi.fldGrpSectionA02.setVisibility(View.GONE);
+//                    Clear.clearAllFields(bi.fldGrpSectionA01);
+                }
+
+//
             }
 
             @Override
@@ -70,8 +76,13 @@ public class SectionAActivity extends AppCompatActivity {
 
             @Override
             public void onTextChanged(CharSequence s, int start, int before, int count) {
-                Clear.clearAllFields(bi.fldGrpSectionA02);
-                bi.fldGrpSectionA02.setVisibility(View.GONE);
+
+                if (s.toString().equals("")) {
+                    bi.fldGrpSectionA02.setVisibility(View.GONE);
+//                    Clear.clearAllFields(bi.fldGrpSectionA02);
+                }
+
+
             }
 
             @Override
@@ -121,7 +132,7 @@ public class SectionAActivity extends AppCompatActivity {
         MainApp.fc.setDevicetagID(MainApp.appInfo.getTagName());
         MainApp.fc.setAppversion(MainApp.appInfo.getAppVersion());
         MainApp.fc.setClusterCode(bi.a101.getText().toString());
-        MainApp.fc.setHhno(bi.a112.getText().toString());
+//        MainApp.fc.setHhno(bi.a112.getText().toString());
         MainApp.setGPS(this); // Set GPS
 
         JSONObject json = new JSONObject();
@@ -169,11 +180,12 @@ public class SectionAActivity extends AppCompatActivity {
 
                 String[] selSplit = selected.split("\\|");
 
+                bi.fldGrpSectionA01.setVisibility(View.VISIBLE);
                 bi.a104.setText(selSplit[0]);
                 bi.a105.setText(selSplit[1].equals("") ? "----" : selSplit[1]);
                 bi.a106.setText(selSplit[2].equals("") ? "----" : selSplit[2]);
                 bi.a107.setText(selSplit[3]);
-                bi.fldGrpSectionA01.setVisibility(View.VISIBLE);
+
             }
         } else {
             Toast.makeText(this, "Sorry cluster not found!!", Toast.LENGTH_SHORT).show();
