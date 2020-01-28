@@ -715,10 +715,10 @@
                             style="@style/EditTextNum"
                             android:layout_width="0dp"
                             android:layout_weight="2"
+                            android:enabled='@{f11398.checked ? false : true}'
                             android:hint="@string/f113a"
                             android:maxLength="2"
-                            android:text='@{f11398.checked? f113.getText().toString() : ""}'
-                            android:enabled='@{f11398.checked ? false : true}'
+                            android:text='@{f11398.checked? "" : f113.getText().toString()}'
                             app:defaultValue="00"
                             app:maxValue="20"
                             app:minValue="1"
@@ -729,6 +729,7 @@
                             style="@style/checkbox"
                             android:layout_width="0dp"
                             android:layout_weight="1"
+                            android:tag="-1"
                             android:text="@string/dkn" />
 
                     </LinearLayout>
@@ -980,13 +981,13 @@
 
                             <com.edittextpicker.aliazaz.EditTextPicker
                                 android:id="@+id/f118a"
+                                style="@style/EditTextNum"
                                 android:layout_width="0dp"
                                 android:layout_weight="1"
-                                style="@style/EditTextNum"
+                                android:enabled='@{f11898.checked? false : true}'
                                 android:hint="@string/f118a"
                                 android:maxLength="2"
                                 android:text='@{f11898.checked ? "" : f118a.getText().toString()}'
-                                android:enabled='@{f11898.checked? false : true}'
                                 android:textColor="@android:color/black"
                                 app:defaultValue="00"
                                 app:maxValue="9"
@@ -995,13 +996,13 @@
 
                             <com.edittextpicker.aliazaz.EditTextPicker
                                 android:id="@+id/f118b"
+                                style="@style/EditTextNum"
                                 android:layout_width="0dp"
                                 android:layout_weight="1"
-                                style="@style/EditTextNum"
+                                android:enabled='@{f11898.checked? false : true}'
                                 android:hint="@string/f118b"
                                 android:maxLength="2"
                                 android:text='@{f11898.checked ? "" : f118b.getText().toString()}'
-                                android:enabled='@{f11898.checked? false : true}'
                                 android:textColor="@android:color/black"
                                 app:defaultValue="00"
                                 app:maxValue="30"
@@ -1013,6 +1014,7 @@
                                 style="@style/checkbox"
                                 android:layout_width="0dp"
                                 android:layout_weight="1"
+                                android:tag="-1"
                                 android:text="@string/dkn" />
 
                         </LinearLayout>
@@ -1042,16 +1044,16 @@
 
                             <RadioButton
                                 android:id="@+id/f119a"
+                                style="@style/radiobutton"
                                 android:layout_width="0dp"
                                 android:layout_weight="1"
-                                style="@style/radiobutton"
                                 android:text="@string/yes" />
 
                             <RadioButton
                                 android:id="@+id/f119b"
+                                style="@style/radiobutton"
                                 android:layout_width="0dp"
                                 android:layout_weight="1"
-                                style="@style/radiobutton"
                                 android:text="@string/no" />
 
                         </RadioGroup>

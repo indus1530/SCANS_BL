@@ -76,7 +76,8 @@
             <androidx.cardview.widget.CardView
                 android:id="@+id/respondentSpinner"
                 style="@style/cardView"
-                android:visibility="gone">
+                android:visibility="gone"
+                tools:visibility="visible">
 
                 <LinearLayout
                     android:layout_width="match_parent"
