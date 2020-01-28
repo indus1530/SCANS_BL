@@ -12,6 +12,7 @@ import org.json.JSONObject;
 import java.io.BufferedInputStream;
 import java.io.BufferedReader;
 import java.io.DataOutputStream;
+import java.io.IOException;
 import java.io.InputStream;
 import java.io.InputStreamReader;
 import java.net.HttpURLConnection;
@@ -56,20 +57,17 @@ public class GetAllData extends AsyncTask<String, String, String> {
         this.list = list;
         TAG = "Get" + syncClass;
         switch (syncClass) {
+            case "User":
+                position = 0;
+                break;
+            case "VersionApp":
+                position = 1;
+                break;
             case "EnumBlock":
                 position = 0;
                 break;
-            case "User":
-                position = 1;
-                break;
             case "BLRandom":
-                position = 2;
-                break;
-            case "VersionApp":
-                position = 3;
-                break;
-            case "FamilyMembers":
-                position = 4;
+                position = 1;
                 break;
         }
         list.get(position).settableName(syncClass);
@@ -93,17 +91,17 @@ public class GetAllData extends AsyncTask<String, String, String> {
     protected void onProgressUpdate(String... values) {
         super.onProgressUpdate(values);
         switch (values[0]) {
+            case "User":
+                position = 0;
+                break;
+            case "VersionApp":
+                position = 1;
+                break;
             case "EnumBlock":
                 position = 0;
                 break;
-            case "User":
-                position = 1;
-                break;
             case "BLRandom":
-                position = 2;
-                break;
-            case "VersionApp":
-                position = 3;
+                position = 1;
                 break;
         }
         list.get(position).setstatus("Syncing");
@@ -120,21 +118,21 @@ public class GetAllData extends AsyncTask<String, String, String> {
         URL url = null;
         try {
             switch (syncClass) {
+                case "User":
+                    url = new URL(MainApp._HOST_URL + UsersContract.singleUser._URI);
+                    position = 0;
+                    break;
+                case "VersionApp":
+                    url = new URL(MainApp._UPDATE_URL + VersionAppContract.VersionAppTable._URI);
+                    position = 1;
+                    break;
                 case "EnumBlock":
                     url = new URL(MainApp._HOST_URL + EnumBlockContract.EnumBlockTable._URI);
                     position = 0;
                     break;
-                case "User":
-                    url = new URL(MainApp._HOST_URL + UsersContract.singleUser._URI);
-                    position = 1;
-                    break;
                 case "BLRandom":
                     url = new URL(MainApp._HOST_URL + BLRandomContract.SingleRandomHH._URI);
-                    position = 2;
-                    break;
-                case "VersionApp":
-                    url = new URL(MainApp._UPDATE_URL + VersionAppContract.VersionAppTable._URI);
-                    position = 3;
+                    position = 1;
                     break;
             }
 
@@ -144,7 +142,6 @@ public class GetAllData extends AsyncTask<String, String, String> {
 
             switch (syncClass) {
                 case "EnumBlock":
-                case "User":
                 case "BLRandom":
 
                     if (args[0] != null && !args[0].equals("")) {
@@ -162,6 +159,7 @@ public class GetAllData extends AsyncTask<String, String, String> {
                             JSONObject json = new JSONObject();
                             try {
                                 json.put("dist_id", args[0]);
+                                json.put("user", "test1234");
                             } catch (JSONException e1) {
                                 e1.printStackTrace();
                             }
@@ -171,6 +169,29 @@ public class GetAllData extends AsyncTask<String, String, String> {
                             wr.close();
                         }
                     }
+                    break;
+
+                case "User":
+                    urlConnection.setRequestMethod("POST");
+                    urlConnection.setDoOutput(true);
+                    urlConnection.setDoInput(true);
+                    urlConnection.setRequestProperty("Content-Type", "application/json");
+                    urlConnection.setRequestProperty("charset", "utf-8");
+                    urlConnection.setUseCaches(false);
+
+                    // Starts the query
+                    urlConnection.connect();
+                    DataOutputStream wr = new DataOutputStream(urlConnection.getOutputStream());
+                    JSONObject json = new JSONObject();
+                    try {
+                        json.put("user", "test1234");
+                    } catch (JSONException e1) {
+                        e1.printStackTrace();
+                    }
+                    Log.d(TAG, "downloadUrl: " + json.toString());
+                    wr.writeBytes(json.toString());
+                    wr.flush();
+                    wr.close();
                     break;
             }
 
@@ -189,9 +210,7 @@ public class GetAllData extends AsyncTask<String, String, String> {
                     result.append(line);
                 }
             }
-        } catch (java.net.SocketTimeoutException e) {
-            return null;
-        } catch (java.io.IOException e) {
+        } catch (IOException e) {
             return null;
         } finally {
             urlConnection.disconnect();
@@ -206,29 +225,27 @@ public class GetAllData extends AsyncTask<String, String, String> {
 
         //Do something with the JSON string
         if (result != null) {
-            String json = result;
-            if (json.length() > 0) {
+            if (result.length() > 0) {
                 DatabaseHelper db = new DatabaseHelper(mContext);
-                String message;
                 try {
-                    JSONArray jsonArray = new JSONArray(json);
+                    JSONArray jsonArray = new JSONArray(result);
 
                     switch (syncClass) {
+                        case "User":
+                            db.syncUser(jsonArray);
+                            position = 0;
+                            break;
+                        case "VersionApp":
+                            db.syncVersionApp(jsonArray);
+                            position = 1;
+                            break;
                         case "EnumBlock":
                             db.syncEnumBlocks(jsonArray);
                             position = 0;
                             break;
-                        case "User":
-                            db.syncUser(jsonArray);
-                            position = 1;
-                            break;
                         case "BLRandom":
                             db.syncBLRandom(jsonArray);
-                            position = 2;
-                            break;
-                        case "VersionApp":
-                            db.syncVersionApp(jsonArray);
-                            position = 3;
+                            position = 1;
                             break;
 
                     }
@@ -243,8 +260,8 @@ public class GetAllData extends AsyncTask<String, String, String> {
                     e.printStackTrace();
                 }
             } else {
-                pd.setMessage("Received: " + json.length() + "");
-                list.get(position).setmessage("Received: " + json.length() + "");
+                pd.setMessage("Received: " + result.length() + "");
+                list.get(position).setmessage("Received: " + result.length() + "");
                 list.get(position).setstatus("Successfull");
                 list.get(position).setstatusID(3);
                 adapter.updatesyncList(list);

@@ -10,5 +10,7 @@ class CONSTANTS {
         const val MINYEAR_IM = 2018
         const val MWRA_INFO = "mwra"
 
+        const val SYNC_LOGIN = "sync_login"
+
     }
 }

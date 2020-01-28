@@ -82,7 +82,7 @@ public class SyncDevice extends AsyncTask<Void, Integer, String> {
 
                 try {
                     jsonObject.addProperty("imei", MainApp.IMEI);
-                    jsonObject.addProperty("appversion", MainApp.appInfo.getVersionName() + "." + MainApp.appInfo.getVersionCode());
+                    jsonObject.addProperty("appversion", MainApp.appInfo.getAppVersion());
                     jsonObject.addProperty("appname", context.getString(R.string.app_name));
 
                 } catch (Exception e) {
@@ -128,12 +128,10 @@ public class SyncDevice extends AsyncTask<Void, Integer, String> {
                 for (int i = 0; i < json.length(); i++) {
                     JSONObject jsonObject = new JSONObject(json.getString(i));
                     if (!jsonObject.equals("")) {
-                        //  db.updateSyncedChildForm(jsonObject.getString("id"));  // UPDATE SYNCED
                         String tag = jsonObject.getString("tag");
                         SharedPreferences sharedPref = context.getSharedPreferences("tagName", MODE_PRIVATE);
                         SharedPreferences.Editor editor = sharedPref.edit();
                         editor.putString("tagName", tag);
-                        editor.putString("countryID", jsonObject.getString("country_id"));
                         editor.apply();
 
                         if (flag) {

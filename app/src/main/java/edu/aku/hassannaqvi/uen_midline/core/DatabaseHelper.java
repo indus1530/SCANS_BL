@@ -46,7 +46,7 @@ import edu.aku.hassannaqvi.uen_midline.contracts.VillagesContract.SingleVillage;
 
 import static edu.aku.hassannaqvi.uen_midline.utils.CreateTable.DATABASE_NAME;
 import static edu.aku.hassannaqvi.uen_midline.utils.CreateTable.DATABASE_VERSION;
-import static edu.aku.hassannaqvi.uen_midline.utils.CreateTable.SQL_CREATE_AREAS;
+import static edu.aku.hassannaqvi.uen_midline.utils.CreateTable.SQL_CREATE_BL_RANDOM;
 import static edu.aku.hassannaqvi.uen_midline.utils.CreateTable.SQL_CREATE_CHILD_TABLE;
 import static edu.aku.hassannaqvi.uen_midline.utils.CreateTable.SQL_CREATE_FAMILY_MEMBERS;
 import static edu.aku.hassannaqvi.uen_midline.utils.CreateTable.SQL_CREATE_FORMS;
@@ -55,8 +55,6 @@ import static edu.aku.hassannaqvi.uen_midline.utils.CreateTable.SQL_CREATE_MORTA
 import static edu.aku.hassannaqvi.uen_midline.utils.CreateTable.SQL_CREATE_MWRAPRE_TABLE;
 import static edu.aku.hassannaqvi.uen_midline.utils.CreateTable.SQL_CREATE_MWRA_TABLE;
 import static edu.aku.hassannaqvi.uen_midline.utils.CreateTable.SQL_CREATE_PSU_TABLE;
-import static edu.aku.hassannaqvi.uen_midline.utils.CreateTable.SQL_CREATE_TALUKAS;
-import static edu.aku.hassannaqvi.uen_midline.utils.CreateTable.SQL_CREATE_UCS;
 import static edu.aku.hassannaqvi.uen_midline.utils.CreateTable.SQL_CREATE_USERS;
 import static edu.aku.hassannaqvi.uen_midline.utils.CreateTable.SQL_CREATE_VERSIONAPP;
 
@@ -85,10 +83,11 @@ public class DatabaseHelper extends SQLiteOpenHelper {
 
         db.execSQL(SQL_CREATE_USERS);
         db.execSQL(SQL_CREATE_FORMS);
-        db.execSQL(SQL_CREATE_TALUKAS);
-        db.execSQL(SQL_CREATE_UCS);
+//        db.execSQL(SQL_CREATE_TALUKAS);
+//        db.execSQL(SQL_CREATE_UCS);
         db.execSQL(SQL_CREATE_PSU_TABLE);
-        db.execSQL(SQL_CREATE_AREAS);
+        db.execSQL(SQL_CREATE_BL_RANDOM);
+//        db.execSQL(SQL_CREATE_AREAS);
         db.execSQL(SQL_CREATE_VERSIONAPP);
         db.execSQL(SQL_CREATE_FAMILY_MEMBERS);
         db.execSQL(SQL_CREATE_KISH_TABLE);
@@ -155,7 +154,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
 
                 ContentValues values = new ContentValues();
 
-                values.put(EnumBlockContract.EnumBlockTable.COLUMN_COUNTRY_ID, Vc.getEbcode());
+                values.put(EnumBlockContract.EnumBlockTable.COLUMN_DIST_ID, Vc.getDsit_code());
                 values.put(EnumBlockContract.EnumBlockTable.COLUMN_GEO_AREA, Vc.getGeoarea());
                 values.put(EnumBlockContract.EnumBlockTable.COLUMN_CLUSTER_AREA, Vc.getCluster());
 
@@ -527,7 +526,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
 
                 values.put(UsersContract.singleUser.ROW_USERNAME, user.getUserName());
                 values.put(UsersContract.singleUser.ROW_PASSWORD, user.getPassword());
-                values.put(UsersContract.singleUser.FULL_NAME, user.getFULL_NAME());
+                values.put(UsersContract.singleUser.DIST_ID, user.getDIST_ID());
 //                values.put(singleUser.REGION_DSS, user.getREGION_DSS());
                 db.insert(UsersContract.singleUser.TABLE_NAME, null, values);
             }
@@ -545,7 +544,14 @@ public class DatabaseHelper extends SQLiteOpenHelper {
 
         Cursor mCursor = db.rawQuery("SELECT * FROM " + UsersContract.singleUser.TABLE_NAME + " WHERE " + UsersContract.singleUser.ROW_USERNAME + "=? AND " + UsersContract.singleUser.ROW_PASSWORD + "=?", new String[]{username, password});
         if (mCursor != null) {
-            return mCursor.getCount() > 0;
+
+            if (mCursor.getCount() > 0) {
+
+                if (mCursor.moveToFirst()) {
+                    MainApp.DIST_ID = mCursor.getString(mCursor.getColumnIndex(UsersContract.singleUser.DIST_ID));
+                }
+                return true;
+            }
         }
         return false;
     }
@@ -1460,7 +1466,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         Cursor c = null;
         String[] columns = {
                 EnumBlockTable._ID,
-                EnumBlockTable.COLUMN_COUNTRY_ID,
+                EnumBlockTable.COLUMN_DIST_ID,
                 EnumBlockTable.COLUMN_GEO_AREA,
                 EnumBlockTable.COLUMN_CLUSTER_AREA
         };
