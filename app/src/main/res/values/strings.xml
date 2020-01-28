@@ -66,21 +66,23 @@
 
 
     <string name="taheading">SECTION A: HH Identification</string>
-    <string name="a101"> A101:\t Cluster number </string>
+    <string name="a101"> Cluster number </string>
     <string name="a101a"> This information will be based on the list of villages generated from the district. Each enumerator will be given a list of clusters that he/she will be visiting, and before starting the interview, this information will be entered from the same list. </string>
 
-    <string name="a102"> A102:\t Cluster type </string>
+    <string name="a102"> Cluster type </string>
     <string name="a102a"> LHW covered </string>
     <string name="a102b"> LHW uncovered </string>
 
     <string name="a103"> A103:\t Form Serial Number : Auto generated </string>
 
-    <string name="a104"> A104:\t Province</string>
+    <!--    <string name="a104"> A104:\t Province</string>-->
+    <string name="a104"> Province </string>
     <string name="a104a">Balochistan </string>
     <string name="a104b">Punjab </string>
     <string name="a104c">Sindh </string>
 
-    <string name="a105"> A105:\t District</string>
+    <!--    <string name="a105"> A105:\t District</string>-->
+    <string name="a105"> District </string>
     <string name="a105a">Jafferabad </string>
     <string name="a105a_title">Balochistan</string>
     <string name="a105b">Nasirabad </string>
@@ -93,21 +95,22 @@
     <string name="a105g">Sanghar </string>
     <string name="a105h">Qamber Shahdadkot </string>
 
-    <string name="a106"> A106:\t Tehsil/Taluka </string>
+    <!--    <string name="a106"> A106:\t Tehsil/Taluka </string>-->
+    <string name="a106"> Tehsil/Taluka </string>
 
-    <string name="a107"> A107:\t Union Council </string>
+    <string name="a107"> Union Council </string>
 
-    <string name="a108"> A108:\t Location </string>
+    <string name="a108"> Location </string>
     <string name="a108a">Urban </string>
     <string name="a108b">Rural </string>
 
-    <string name="a109"> A109:\t Village </string>
+    <string name="a109"> Village </string>
 
-    <string name="a110"> A110:\t Block/mohalla </string>
+    <string name="a110"> Block/mohalla </string>
 
-    <string name="a111"> A111:\t Street </string>
+    <string name="a111"> Street </string>
 
-    <string name="a112"> A112:\t House number/khandan number </string>
+    <string name="a112"> House number/khandan number </string>
     <string name="a112a">Not Available</string>
 
     <string name="checkHHpresent"> Selected Head name present (A/C Line listing) </string>
@@ -1235,142 +1238,165 @@
     <string name="i126d"> Referral to HCF for Diarrhea treatment </string>
     <string name="i126e"> Informed about danger signs of diarrhea </string>
 
-    <string name="i201">Has any child less than five years had fever in the last two weeks in the household?</string>
-    <string name="i201a">Yes</string>
-    <string name="i201b">No</string>
 
-    <string name="i202">How many children had fever in the last two weeks in the household?</string>
+    <string name="i201"> I201:\t Has any child less than five years had fever in the last two weeks in the household ? </string>
+    <string name="i201a"> Yes </string>
+    <string name="i201b"> No </string>
 
-    <string name="i203">Has a child had an illness with cough that he/she breathes faster than usual with short, rapid breaths or has difficulty breathing in the past two weeks?</string>
-    <string name="i203a">Yes</string>
-    <string name="i203b">No</string>
+    <string name="i202"> I202:\t How many children had fever in the last two weeks in the household ? </string>
 
-    <string name="i204">How many children have had an illness with cough that he/she breathe faster than usual with short, rapid breaths or have difficulty breathing in the past two weeks?</string>
+    <string name="i203"> I203:\t Has a child had an illness with cough that he/she breathes faster than usual with short, rapid breaths or has difficulty breathing in the past two weeks ? </string>
+    <string name="i203a"> Yes </string>
+    <string name="i203b"> No </string>
 
-    <string name="i205">Did {NAME} have chest in drawing during the fever /and cough? </string>
-    <string name="i205a">Yes</string>
-    <string name="i205b">No</string>
-    <string name="i205c">Don\'t Know</string>
+    <string name="i204"> I204:\t How many children have had an illness with cough that he/she breathe faster than usual with short, rapid breaths or have difficulty breathing in the past two weeks ? </string>
 
-    <string name="i206">How many days did {NAME} suffer the symptoms of fever and cough?</string>
+    <string name="i205"> I205:\t Did {NAME} have chest in drawing during the fever /and cough ? </string>
+    <string name="i205a"> Yes </string>
+    <string name="i205b"> No </string>
+    <string name="i205c"> Don\'t Know </string>
 
-    <string name="i207">Did you seek advice or treatment for {NAME}’s. symptoms of fever, cough and fast breathing?</string>
-    <string name="i207a">Yes</string>
-    <string name="i207b">No</string>
+    <string name="i206"> I206:\t How many days did {NAME} suffer the symptoms of fever and cough ? </string>
 
-    <string name="i208">Why did you not seek care or treatment for {NAME}’s illness?</string>
-    <string name="i208a">The problem did not require care seeking</string>
-    <string name="i208b">Had no money to pay HCP</string>
-    <string name="i208c">Transport was not available</string>
-    <string name="i208d">A male was not present to accompany me to the health center</string>
-    <string name="i208e">No permission from household head/husband /mother in law</string>
-    <string name="i208f">Health facility is too far</string>
-    <string name="i208g">Facility not open </string>
-    <string name="i208h">Poor quality service</string>
+    <string name="i207"> I207:\t Did you seek advice or treatment for {NAME}’s. symptoms of fever, cough and fast breathing ? </string>
+    <string name="i207a"> Yes </string>
+    <string name="i207b"> No </string>
 
-    <string name="i209">Where did {NAME} receive treatment for symptoms of fever, cough and fast breathing?</string>
-    <string name="i209a">At home</string>
-    <string name="i209b">Government health facility</string>
-    <string name="i209c">Private health facility</string>
-    <string name="i209d">NGO health facility </string>
+    <string name="i208"> I208:\t Why did you not seek care or treatment for {NAME}’s illness ? </string>
+    <string name="i208a"> The problem did not require care seeking </string>
+    <string name="i208b"> Had no money to pay HCP </string>
+    <string name="i208c"> Transport was not available </string>
+    <string name="i208d"> A male was not present to accompany me to the health center </string>
+    <string name="i208e"> No permission from household head/husband /mother in law </string>
+    <string name="i208f"> Health facility is too far </string>
+    <string name="i208g"> Facility not open </string>
+    <string name="i208h"> Poor quality service </string>
 
-    <string name="i210">Who referred {NAME} for treatment of symptoms of fever, cough and fast breathing?</string>
-    <string name="i210a">Doctor</string>
-    <string name="i210b">LHV (Lady Health Visitor)</string>
-    <string name="i210c">Nurse</string>
-    <string name="i210d">Community Midwife </string>
-    <string name="i210e">Dispenser/Compounder</string>
-    <string name="i210f">LHW (Lady Health Worker)</string>
-    <string name="i210g">Dai/TBA (Traditional Birth Attendant)</string>
-    <string name="i210h">Self</string>
+    <string name="i209"> I209:\t Where did {NAME} receive treatment for symptoms of fever, cough and fast breathing ? </string>
+    <string name="i209a"> At home </string>
+    <string name="i209b"> Government health facility </string>
+    <string name="i209c"> Private health facility </string>
+    <string name="i209d"> NGO health facility </string>
 
-    <string name="i211">How far is the health facility, where you sought treatment of {NAME}’s symptoms of fever, cough and fast breathing? (kilometers)</string>
-    <string name="i212">How long does it take to reach health facility, where you sought treatment of {NAME}’s symptoms of fever, cough and fast breathingtreatment?(Minutes)</string>
-    <string name="i213">Who treated {NAME} for symptoms of fever, cough and fast breathing at the facility?</string>
-    <string name="i213a">Doctor</string>
-    <string name="i213b">LHV (Lady Health Visitor)</string>
-    <string name="i213c">Nurse</string>
-    <string name="i213d">Community Midwife</string>
-    <string name="i213f">Dispenser/Compounder</string>
-    <string name="i214">Was {NAME} hospitalized for symptoms of fever, cough and fast breathing?</string>
-    <string name="i214a">Yes</string>
-    <string name="i214b">No</string>
-    <string name="i215">Where was {NAME} hospitalized for symptoms of fever, cough and fast breathing treatment?</string>
-    <string name="i215a">Government health facility</string>
-    <string name="i215b">Private health facility</string>
-    <string name="i215c">NGO health facility</string>
-    <string name="i216">For how many days {NAME} was hospitalized for treatment of fever, cough and fast breathing?</string>
-    <string name="i217">Was {NAME} given any medicine to treat his illness during his hospitalization for symptoms of fever, cough and fast breathing?</string>
-    <string name="i217a">Yes</string>
-    <string name="i217b">No</string>
-    <string name="i217c">Don\'t Know</string>
-    <string name="i218">What treatment was given to {NAME}?</string>
-    <string name="i218a">Chloroquine </string>
-    <string name="i218b">Amodiaquine</string>
-    <string name="i218c">Quinine </string>
-    <string name="i218d">Artemisinin</string>
-    <string name="i218e">Combination </string>
-    <string name="i218f">Other anti-malarial </string>
-    <string name="i218g">Pill/syrup </string>
-    <string name="i218h">Injection </string>
-    <string name="i218i">Ponstan</string>
-    <string name="i218j">Paracetamol</string>
-    <string name="i218k">Ibuprofen </string>
-    <string name="i218l">Cough syrup </string>
-    <string name="i218m">Amoxil DT</string>
-    <string name="i218n">Home Remedy</string>
-    <string name="i219">Did {NAME} have a chest x-ray?</string>
-    <string name="i219a">Yes</string>
-    <string name="i219b">No</string>
-    <string name="i220">At any time during illness, did {NAME} have blood taken from his/her finger or heal for testing?</string>
-    <string name="i220a">Yes</string>
-    <string name="i220b">No</string>
-    <string name="i221">How much did it cost you for {NAME}’s treatment of symptoms of fever, cough and fast breathing? (Rupees)</string>
-    <string name="i222">Do you know any danger sign of pneumonia?</string>
-    <string name="i222a">Yes</string>
-    <string name="i222b">No</string>
-    <string name="i223">Could you please tell what danger signs may occur in pneumonia?</string>
-    <string name="i223a">Chest In drawing</string>
-    <string name="i223b">Not able to drink</string>
-    <string name="i223c">Persistent vomiting</string>
-    <string name="i223d">Convulsions</string>
-    <string name="i223e">Lethargic or unconscious</string>
-    <string name="i223f">Stridor in a calm child  </string>
-    <string name="i223g">Severe malnutrition</string>
-    <string name="i224">Who provided you information regarding the danger sign/problems in pneumonia?  Select all applicable</string>
-    <string name="i224a">Doctor</string>
-    <string name="i224b">LHV (Lady Health Visitor)</string>
-    <string name="i224c">Nurse</string>
-    <string name="i224d">Community Midwife </string>
-    <string name="i224e">LHW (Lady Health Worker)</string>
-    <string name="i224f">Dai/TBA (Traditional Birth Attendant)</string>
-    <string name="i225">Did LHW visit you when the child was sick with pneumonia</string>
-    <string name="i225a">Yes</string>
-    <string name="i225b">No</string>
-    <string name="i226">What services did she provide?</string>
-    <string name="i226a">Provide Amoxil DT</string>
-    <string name="i226b">Provide Panadol (Pill/Syrup)</string>
-    <string name="i226c">Used ARI timer to count breaths for the child when he was sick?</string>
-    <string name="i226d">Referral to any HCF for Pneumonia treatment</string>
-    <string name="i226e">Inform about air pollution hazards</string>
-    <string name="i226f">Information about danger signs of pneumonia</string>
+    <string name="i210"> I210:\t Who referred {NAME} for treatment of symptoms of fever, cough and fast breathing ? </string>
+    <string name="i210a"> Doctor </string>
+    <string name="i210b"> LHV (Lady Health Visitor) </string>
+    <string name="i210c"> Nurse </string>
+    <string name="i210d"> Community Midwife </string>
+    <string name="i210e"> Dispenser/Compounder </string>
+    <string name="i210f"> LHW (Lady Health Worker) </string>
+    <string name="i210g"> Dai/TBA (Traditional Birth Attendant) </string>
+    <string name="i210h"> Self </string>
 
-    <string name="j101">Do you have a vaccination card from a Government or private health provider where (name)’s vaccinations are written down?  If yes: May I see it please?   	The respondent should already have brought the card when you got permission to begin the interview.</string>
-    <string name="j101a">YES, SEEN</string>
-    <string name="j101b">YES, NOT SEEN</string>
-    <string name="j101c">NO</string>
+    <string name="i211"> I211:\t How far is the health facility, where you sought treatment of {NAME}’s symptoms of fever, cough and fast breathing ? </string>
+
+    <string name="i212"> I212:\t How long does it take to reach health facility, where you sought treatment of {NAME}’s symptoms of fever, cough and fast breathing treatment ? </string>
+
+    <string name="i213"> I213:\t Who treated {NAME} for symptoms of fever, cough and fast breathing at the facility ? </string>
+    <string name="i213a"> Doctor </string>
+    <string name="i213b"> LHV (Lady Health Visitor) </string>
+    <string name="i213c"> Nurse </string>
+    <string name="i213d"> Community Midwife </string>
+    <string name="i213f"> Dispenser/Compounder </string>
+
+    <string name="i214"> I214:\t Was {NAME} hospitalized for symptoms of fever, cough and fast breathing ? </string>
+    <string name="i214a"> Yes </string>
+    <string name="i214b"> No </string>
+
+    <string name="i215"> I215:\t Where was {NAME} hospitalized for symptoms of fever, cough and fast breathing treatment ? </string>
+    <string name="i215a"> Government health facility </string>
+    <string name="i215b"> Private health facility </string>
+    <string name="i215c"> NGO health facility </string>
+
+    <string name="i216"> I216:\t For how many days {NAME} was hospitalized for treatment of fever, cough and fast breathing ? </string>
+
+    <string name="i217"> I217:\t Was {NAME} given any medicine to treat his illness during his hospitalization for symptoms of fever, cough and fast breathing ? </string>
+    <string name="i217a"> Yes </string>
+    <string name="i217b"> No </string>
+    <string name="i217c"> Don\'t Know </string>
+
+    <string name="i218"> I218:\t What treatment was given to {NAME} ? </string>
+    <string name="i218a"> Chloroquine </string>
+    <string name="i218b"> Amodiaquine </string>
+    <string name="i218c"> Quinine </string>
+    <string name="i218d"> Artemisinin </string>
+    <string name="i218e"> Combination </string>
+    <string name="i218f"> Other anti-malarial </string>
+    <string name="i218g"> Pill/syrup </string>
+    <string name="i218h"> Injection </string>
+    <string name="i218i"> Ponstan </string>
+    <string name="i218j"> Paracetamol </string>
+    <string name="i218k"> Ibuprofen </string>
+    <string name="i218l"> Cough syrup </string>
+    <string name="i218m"> Amoxil DT </string>
+    <string name="i218n"> Home Remedy </string>
+
+    <string name="i219"> I219:\t Did {NAME} have a chest x-ray ? </string>
+    <string name="i219a"> Yes </string>
+    <string name="i219b"> No </string>
+
+    <string name="i220"> I220:\t At any time during illness, did {NAME} have blood taken from his/her finger or heal for testing ? </string>
+    <string name="i220a"> Yes </string>
+    <string name="i220b"> No </string>
+
+    <string name="i221"> I221:\t How much did it cost you for {NAME}’s treatment of symptoms of fever, cough and fast breathing ? </string>
+
+    <string name="i222"> I222:\t Do you know any danger sign of pneumonia ? </string>
+    <string name="i222a"> Yes </string>
+    <string name="i222b"> No </string>
+
+    <string name="i223"> I223:\t Could you please tell what danger signs may occur in pneumonia ? </string>
+    <string name="i223a"> Chest In drawing </string>
+    <string name="i223b"> Not able to drink </string>
+    <string name="i223c"> Persistent vomiting </string>
+    <string name="i223d"> Convulsions </string>
+    <string name="i223e"> Lethargic or unconscious </string>
+    <string name="i223f"> Stridor in a calm child </string>
+    <string name="i223g"> Severe malnutrition </string>
+
+    <string name="i224"> I224:\t Who provided you information regarding the danger sign/problems in pneumonia ? </string>
+    <string name="i224a"> Doctor </string>
+    <string name="i224b"> LHV (Lady Health Visitor) </string>
+    <string name="i224c"> Nurse </string>
+    <string name="i224d"> Community Midwife </string>
+    <string name="i224e"> LHW (Lady Health Worker) </string>
+    <string name="i224f"> Dai/TBA (Traditional Birth Attendant) </string>
+
+    <string name="i225"> I225:\t Did LHW visit you when the child was sick with pneumonia </string>
+    <string name="i225a"> Yes </string>
+    <string name="i225b"> No </string>
+
+    <string name="i226"> I226:\t What services did she provide ? </string>
+    <string name="i226a"> Provide Amoxil DT </string>
+    <string name="i226b"> Provide Panadol (Pill/Syrup) </string>
+    <string name="i226c"> Used ARI timer to count breaths for the child when he was sick ? </string>
+    <string name="i226d"> Referral to any HCF for Pneumonia treatment </string>
+    <string name="i226e"> Inform about air pollution hazards </string>
+    <string name="i226f"> Information about danger signs of pneumonia </string>
+
+
+    <string name="j101"> J101:\t Do you have a vaccination card from a Government or private health provider where (name)’s vaccinations are written down ? </string>
+    <string name="j101hint"> If yes: May I see it please ? </string>
+    <string name="j101hint1"> The respondent should already have brought the card when you got permission to begin the interview.</string>
+    <string name="j101a"> Yes, Seen </string>
+    <string name="j101b"> Yes, Not Seen </string>
+    <string name="j101c"> No </string>
+
     <string name="j102">Did you ever have a vaccination card from a Government or private health provider for (name)?</string>
     <string name="j102a">YES</string>
     <string name="j102b">NO</string>
+
     <string name="j103">Check and copy Date of Birth recorded on card</string>
     <string name="j103a">DAY</string>
     <string name="j103b">MONTH</string>
     <string name="j103c">YEAR</string>
     <string name="j103d">Don\'t Know</string>
+
     <string name="j10401">BCG (Date _ Month_  Year)</string>
     <string name="j10401d">DAY</string>
     <string name="j10401m">MONTH</string>
     <string name="j10401y">YEAR</string>
+
     <string name="j10401a">Where (Name) received vaccination for BCG?</string>
     <string name="j10401aa">Government Facility</string>
     <string name="j10401ab">Private Facility</string>
@@ -1378,6 +1404,7 @@
     <string name="j10401ad">Community Mother and Child health Centre</string>
     <string name="j10401ae">NGO facility</string>
     <string name="j10401af">Child Health Days/Immunization Weeks</string>
+
     <string name="j10401b">Who gave vaccination to (Name)?</string>
     <string name="j10401ba">Doctor</string>
     <string name="j10401bb">LHW</string>
@@ -1387,6 +1414,7 @@
     <string name="j10401bf"> CHW</string>
     <string name="j10401bg">Dispenser/Compounder</string>
     <string name="j10401bx">Other (specify)</string>
+
     <string name="j10402">Oral Polio Vaccine dose at birth_OPV-0 (Day_Month_Year)</string>
     <string name="j10402d">DAY</string>
     <string name="j10402m">MONTH</string>
