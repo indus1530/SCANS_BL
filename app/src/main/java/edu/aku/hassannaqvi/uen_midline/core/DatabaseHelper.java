@@ -934,7 +934,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         Collection<FamilyMembersContract> allFC = new ArrayList<>();
         try {
             c = db.query(
-                    FormsTable.TABLE_NAME,  // The table to query
+                    SingleMember.TABLE_NAME,  // The table to query
                     columns,                   // The columns to return
                     whereClause,               // The columns for the WHERE clause
                     whereArgs,                 // The values for the WHERE clause
@@ -1134,7 +1134,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         Collection<MortalityContract> allMC = new ArrayList<MortalityContract>();
         try {
             c = db.query(
-                    SingleMWRAPRE.TABLE_NAME,  // The table to query
+                    SingleMortality.TABLE_NAME,  // The table to query
                     columns,                   // The columns to return
                     whereClause,               // The columns for the WHERE clause
                     whereArgs,                 // The values for the WHERE clause
@@ -1186,7 +1186,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         Collection<KishMWRAContract> allMC = new ArrayList<KishMWRAContract>();
         try {
             c = db.query(
-                    MWRAContract.MWRATable.TABLE_NAME,  // The table to query
+                    SingleKishMWRA.TABLE_NAME,  // The table to query
                     columns,                   // The columns to return
                     whereClause,               // The columns for the WHERE clause
                     whereArgs,                 // The values for the WHERE clause
@@ -1289,8 +1289,6 @@ public class DatabaseHelper extends SQLiteOpenHelper {
                 SingleChild.COLUMN_SI2,
                 SingleChild.COLUMN_SJ,
                 SingleChild.COLUMN_DEVICETAGID,
-                SingleChild.COLUMN_SYNCED,
-                SingleChild.COLUMN_SYNCED_DATE,
 
         };
 

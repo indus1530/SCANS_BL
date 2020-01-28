@@ -359,7 +359,7 @@ public class SyncActivity extends AppCompatActivity implements SyncDevice.SyncDe
 
     @Override
     public void processFinish(boolean flag) {
-        new syncData(SyncActivity.this, "").execute();
+//        new syncData(SyncActivity.this, "").execute();
     }
 
     public class syncData extends AsyncTask<String, String, String> {
