@@ -68,7 +68,7 @@ public class SectionAActivity extends AppCompatActivity {
 
             }
         });
-       /* bi.a112.addTextChangedListener(new TextWatcher() {
+        bi.a112.addTextChangedListener(new TextWatcher() {
             @Override
             public void beforeTextChanged(CharSequence s, int start, int count, int after) {
 
@@ -89,7 +89,7 @@ public class SectionAActivity extends AppCompatActivity {
             public void afterTextChanged(Editable s) {
 
             }
-        });*/
+        });
     }
 
 
