@@ -616,7 +616,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         // Insert the new row, returning the primary key value of the new row
         long newRowId;
         newRowId = db.insert(
-                FormsTable.TABLE_NAME,
+                SingleMember.TABLE_NAME,
                 FormsTable.COLUMN_NAME_NULLABLE,
                 values);
         return newRowId;
@@ -694,7 +694,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         long newRowId;
         newRowId = db.insert(
                 MWRATable.TABLE_NAME,
-                SingleKishMWRA.COLUMN_NAME_NULLABLE,
+                null,
                 values);
         return newRowId;
     }
@@ -719,7 +719,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         long newRowId;
         newRowId = db.insert(
                 SingleChild.TABLE_NAME,
-                SingleKishMWRA.COLUMN_NAME_NULLABLE,
+                null,
                 values);
         return newRowId;
     }
@@ -742,8 +742,8 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         // Insert the new row, returning the primary key value of the new row
         long newRowId;
         newRowId = db.insert(
-                SingleMWRAPRE.TABLE_NAME,
-                SingleKishMWRA.COLUMN_NAME_NULLABLE,
+                MWRATable.TABLE_NAME,
+                MWRATable.COLUMN_NAME_NULLABLE,
                 values);
         return newRowId;
     }
