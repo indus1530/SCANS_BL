@@ -264,7 +264,7 @@
                         android:layout_marginTop="5dp"
                         android:layout_marginEnd="10dp"
                         android:layout_weight="60"
-                        android:hint="@string/a112"
+                        android:hint="@string/num"
                         android:layoutDirection="ltr"
                         android:textDirection="ltr"
                         app:defaultValue=""
@@ -301,14 +301,14 @@
 
                         <TextView
                             android:id="@+id/hhName"
-                            style="@style/textView3Head"
+                            style="@style/i_textview"
                             android:padding="10dp"
+                            android:text="@string/checkHHpresent"
                             android:textAlignment="center" />
 
                         <CheckBox
                             android:id="@+id/checkHHHeadpresent"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
+                            style="@style/checkbox"
                             android:layout_marginTop="@dimen/cardview_default_elevation"
                             android:text="@string/checkHHpresent" />
 
@@ -320,18 +320,14 @@
                             android:visibility="@{checkHHHeadpresent.checked ? View.GONE : View.VISIBLE}">
 
                             <TextView
-                                android:layout_width="match_parent"
-                                android:layout_height="wrap_content"
+                                style="@style/i_textview"
                                 android:layout_marginTop="16dp"
-                                android:background="@color/colorPrimary"
                                 android:text="New Head of Household Name"
-                                android:textAppearance="?android:attr/textAppearanceLarge"
                                 android:textColor="@android:color/white" />
 
                             <EditText
                                 android:id="@+id/newHHheadname"
-                                style="@style/textInput"
-                                android:digits="ABCDEFGHIJKLMNOPQRSTUVWXYZ abcdefghijklmnopqrstuvwxyz"
+                                style="@style/EditTextAlpha"
                                 android:maxLength="25"
                                 android:text='@{checkHHHeadpresent.checked ? "" : newHHheadname.getText().toString()}' />
 
@@ -413,6 +409,7 @@
                                 android:textColor="@android:color/black" />
 
                         </LinearLayout>
+
                     </androidx.cardview.widget.CardView>
 
                     <LinearLayout
