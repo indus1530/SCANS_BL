@@ -93,6 +93,14 @@
                         style="@style/i_textview"
                         android:text="@string/j101" />
 
+                    <TextView
+                        style="@style/i_textviewhint"
+                        android:text="@string/j101hint" />
+
+                    <TextView
+                        style="@style/i_textviewhint"
+                        android:text="@string/j101hint1" />
+
                     <RadioGroup
                         android:id="@+id/j101"
                         style="@style/radiogroup"
@@ -758,7 +766,7 @@
 
                                 <com.edittextpicker.aliazaz.EditTextPicker
                                     android:id="@+id/j10403m"
-                                    style="@style/textInput"
+                                    style="@style/EditTextNum"
                                     android:hint="@string/j10403m"
                                     android:maxLength="2"
                                     app:defaultValue="00"
