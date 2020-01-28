@@ -235,6 +235,7 @@
                             style="@style/textInput"
                             android:layout_weight="1"
                             android:hint="@string/num"
+                            android:inputType="number"
                             app:defaultValue=""
                             app:mask="####-###"
                             app:pattern="^(\\d{4,4}\\-\\d{3,3})$"
@@ -275,6 +276,7 @@
                     <CheckBox
                         android:id="@+id/checkHHHeadpresent"
                         style="@style/checkbox"
+                        android:tag="-1"
                         android:text="@string/checkHHpresent" />
 
                     <LinearLayout
@@ -292,7 +294,9 @@
                         <EditText
                             android:id="@+id/newHHheadname"
                             style="@style/EditTextAlpha"
-                            android:maxLength="25" />
+                            android:maxLength="25"
+                            android:text='@{checkHHHeadpresent.checked ? "" : newHHheadname.getText().toString()}'
+                            android:visibility='@{checkHHHeadpresent.checked? View.GONE : View.VISIBLE}' />
 
                     </LinearLayout>
 

@@ -40,6 +40,7 @@ class FamilyMembersListActivity : AppCompatActivity() {
     private lateinit var bi: ActivityFamilyMembersListBinding
     private var viewHolder: ItemMemListBinding? = null
     private var currentFM: FamilyMembersContract? = null
+    private lateinit var clickLst: MutableList<FamilyMembersContract>
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -51,6 +52,8 @@ class FamilyMembersListActivity : AppCompatActivity() {
 
         settingValue()
         settingMenu()
+
+        clickLst = mutableListOf()
     }
 
     private fun settingMenu() {
@@ -91,7 +94,7 @@ class FamilyMembersListActivity : AppCompatActivity() {
 
                                     MainApp.pragnantWoman = mainVModel.getAllWomenName()
 
-                                    MainApp.selectedKishMWRA = mainVModel.mwraChildU5Lst.value?.get(kishSelectedMWRA(5, mainVModel.mwraChildU5Lst.value!!.size) - 1)
+                                    MainApp.selectedKishMWRA = mainVModel.mwraChildU5Lst.value?.get(kishSelectedMWRA(intent.getIntExtra("sno", 0), mainVModel.mwraChildU5Lst.value!!.size) - 1)
 
                                     startActivity(Intent(this, if (bi.contentScroll.mwra.text.toString().toInt() > 0) SectionE1Activity::class.java else SectionE3Activity::class.java))
                                 }
@@ -129,7 +132,10 @@ class FamilyMembersListActivity : AppCompatActivity() {
             MainApp.setItemClick {
 
                 memSelectedCounter++
-                viewHolder = holder
+//                viewHolder = holder
+
+                /*holder.parentLayout.isEnabled = false
+                holder.parentLayout.checkIcon.visibility = View.VISIBLE*/
 
                 currentFM = item
 
@@ -166,14 +172,33 @@ class FamilyMembersListActivity : AppCompatActivity() {
             if (flag) memSelectedCounter--
         }*/
 
-        currentFM?.let {
+        /*currentFM?.let {
             mainVModel.getHolder(currentFM!!)?.let {
-                viewHolder!!.parentLayout.isEnabled = flag
-                viewHolder!!.parentLayout.checkIcon.visibility = if (flag) View.GONE else View.VISIBLE
-                viewHolder = null
+                it.parentLayout.isEnabled = flag
+                it.parentLayout.checkIcon.visibility = if (flag) View.GONE else View.VISIBLE
                 if (flag) memSelectedCounter--
             }
+        }*/
+
+        if (flag) {
+            memSelectedCounter--
+            return
+        } else {
+            currentFM?.let {
+                clickLst.add(currentFM!!)
+            }
         }
+
+        for (item in clickLst) {
+
+            val view = mainVModel.getHolder(item)
+            view?.let {
+                bi.contentScroll.recyclerView.getChildAt(view).parentLayout?.isEnabled = false
+                bi.contentScroll.recyclerView.getChildAt(view).checkIcon?.visibility = View.VISIBLE
+            }
+
+        }
+
     }
 
     private fun kishSelectedMWRA(sno: Int, size: Int): Int {

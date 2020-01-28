@@ -3,7 +3,6 @@ package edu.aku.hassannaqvi.uen_midline.viewmodel
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import edu.aku.hassannaqvi.uen_midline.contracts.FamilyMembersContract
-import edu.aku.hassannaqvi.uen_midline.databinding.ItemMemListBinding
 
 class MainVModel : ViewModel() {
 
@@ -19,7 +18,7 @@ class MainVModel : ViewModel() {
     var mwraChildU5Lst = MutableLiveData<MutableList<FamilyMembersContract>>()
         private set
 
-    var holderSet = MutableLiveData<MutableList<Pair<Int, ItemMemListBinding>>>()
+    var holderSet = MutableLiveData<MutableList<Pair<Int, Int>>>()
         private set
 
     fun setFamilyMembers(item: FamilyMembersContract) {
@@ -57,15 +56,17 @@ class MainVModel : ViewModel() {
         mwraChildU5Lst.value = lst
     }
 
-    fun setHolderValues(index: Int, holder: ItemMemListBinding) {
+    fun setHolderValues(index: Int, holder: Int) {
         var lst = holderSet.value
         if (lst.isNullOrEmpty()) {
             lst = mutableListOf()
             lst.add(Pair(index, holder))
         } else {
             val fmc = holderSet.value?.find { it.first == index }
-            fmc?.let { lst.map { if (it.first == index) Pair(index, holder) else it } }
-                    ?: lst.add(Pair(index, holder))
+            fmc?.let {
+                //                lst.map { if (it.first == fmc.first) Pair(fmc.first, holder) else it } } ?: lst.add(Pair(index, holder))
+                lst.map { if (it.first == fmc.first) Pair(fmc.first, holder) else it }
+            } ?: lst.add(Pair(index, holder))
         }
         holderSet.value = lst
     }
@@ -102,7 +103,7 @@ class MainVModel : ViewModel() {
         return Pair(family?.map { it.serialno.toInt() }, family?.map { it.name })
     }
 
-    fun getHolder(fmItem: FamilyMembersContract): ItemMemListBinding? {
+    fun getHolder(fmItem: FamilyMembersContract): Int? {
         return holderSet.value?.find { it.first == fmItem.serialno.toInt() }?.second
     }
 
