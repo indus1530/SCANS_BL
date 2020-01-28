@@ -653,7 +653,6 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         ContentValues values = new ContentValues();
 
         values.put(SingleKishMWRA.COLUMN_UID, kishmwra.getUID());
-
         values.put(SingleKishMWRA.COLUMN__UUID, kishmwra.get_UUID());
         values.put(SingleKishMWRA.COLUMN_DEVICEID, kishmwra.getDeviceId());
         values.put(SingleKishMWRA.COLUMN_FORMDATE, kishmwra.getFormDate());
