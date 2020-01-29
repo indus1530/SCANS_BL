@@ -1858,7 +1858,7 @@
 
     <string name="k101"> K101:\t Have you ever heard of a method to delay pregnancy ? </string>
     <string name="k101a">Yes</string>
-    <string name="k101aa">From where you get the information about FP methods?</string>
+    <string name="k101aa"> K101A:\t From where you get the information about FP methods?</string>
     <string name="k101aaa">Government Hospital</string>
     <string name="k101aab">Family Welfare Centre</string>
     <string name="k101aac">Mobile service camp</string>
@@ -2143,8 +2143,8 @@
     <string name="m109a">Yes</string>
     <string name="m109b">No</string>
     <string name="m110">M110:\t How many acres or kanals of agricultural land do members of this household own?</string>
-    <string name="m110a">Acres 1 </string>
-    <string name="m110b">Kanals2 </string>
+    <string name="m110a">Acres </string>
+    <string name="m110b">Kanals </string>
     <string name="m110c">Don\'t Know</string>
     <string name="m111">M111:\t Does this household own any livestock, herds, other farm animals?</string>
     <string name="m111a">Yes</string>

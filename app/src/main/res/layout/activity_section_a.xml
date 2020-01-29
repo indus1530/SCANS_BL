@@ -232,10 +232,9 @@
 
                         <com.edittextpicker.aliazaz.EditTextPicker
                             android:id="@+id/a112"
-                            style="@style/textInput"
+                            style="@style/EditTextNum"
                             android:layout_weight="1"
                             android:hint="@string/num"
-                            android:inputType="number"
                             app:defaultValue=""
                             app:mask="####-###"
                             app:pattern="^(\\d{4,4}\\-\\d{3,3})$"
