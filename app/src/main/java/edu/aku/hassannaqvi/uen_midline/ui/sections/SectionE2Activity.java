@@ -90,27 +90,26 @@ public class SectionE2Activity extends AppCompatActivity {
             } catch (Exception e) {
                 e.printStackTrace();
             }
-            if (MainApp.twinFlag) {
-                if (UpdateDB()) {
+            if (UpdateDB()) {
+                if (MainApp.twinFlag) {
                     openDialog();
-                }
-            } else {
-                if (MainApp.noOfPragnencies > 0) {
-                    finish();
-                    startActivity(new Intent(SectionE2Activity.this, SectionE2Activity.class)
-                            .putExtra(CONSTANTS.MWRA_INFO, mwraContract));
                 } else {
-                    if (MainApp.pragnantWoman.getFirst().size() > 0) {
+                    if (MainApp.noOfPragnencies > 0) {
                         finish();
-                        startActivity(new Intent(SectionE2Activity.this, SectionE1Activity.class));
+                        startActivity(new Intent(SectionE2Activity.this, SectionE2Activity.class)
+                                .putExtra(CONSTANTS.MWRA_INFO, mwraContract));
                     } else {
-                        finish();
-                        startActivity(new Intent(SectionE2Activity.this, SectionE3Activity.class));
+                        if (MainApp.pragnantWoman.getFirst().size() > 0) {
+                            finish();
+                            startActivity(new Intent(SectionE2Activity.this, SectionE1Activity.class));
+                        } else {
+                            finish();
+                            startActivity(new Intent(SectionE2Activity.this, SectionE3Activity.class));
+                        }
                     }
+
                 }
-
             }
-
 
         }
     }
