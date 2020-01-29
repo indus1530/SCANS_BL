@@ -218,7 +218,7 @@
                                     android:enabled='@{j103d.checked?  false : true}'
                                     app:defaultValue="00"
                                     app:maxValue="30"
-                                    app:minValue="0"
+                                    app:minValue="1"
                                     app:type="range" />
 
                             </LinearLayout>
@@ -241,8 +241,8 @@
                                     android:text='@{j103d.checked? "" : j103b.getText().toString()}'
                                     android:enabled='@{j103d.checked?  false : true}'
                                     app:defaultValue="00"
-                                    app:maxValue="30"
-                                    app:minValue="0"
+                                    app:maxValue="11"
+                                    app:minValue="1"
                                     app:type="range" />
 
                             </LinearLayout>
@@ -318,7 +318,7 @@
                                     android:maxLength="2"
                                     app:defaultValue="00"
                                     app:maxValue="30"
-                                    app:minValue="0"
+                                    app:minValue="1"
                                     app:type="range" />
 
                             </LinearLayout>
@@ -339,8 +339,8 @@
                                     android:hint="@string/j10401m"
                                     android:maxLength="2"
                                     app:defaultValue="00"
-                                    app:maxValue="30"
-                                    app:minValue="0"
+                                    app:maxValue="11"
+                                    app:minValue="1"
                                     app:type="range" />
 
                             </LinearLayout>
@@ -534,7 +534,7 @@
                                     android:maxLength="2"
                                     app:defaultValue="00"
                                     app:maxValue="30"
-                                    app:minValue="0"
+                                    app:minValue="1"
                                     app:type="range" />
 
                             </LinearLayout>
@@ -555,8 +555,8 @@
                                     android:hint="@string/j10402m"
                                     android:maxLength="2"
                                     app:defaultValue="00"
-                                    app:maxValue="30"
-                                    app:minValue="0"
+                                    app:maxValue="11"
+                                    app:minValue="1"
                                     app:type="range" />
 
                             </LinearLayout>
@@ -750,7 +750,7 @@
                                     android:maxLength="2"
                                     app:defaultValue="00"
                                     app:maxValue="30"
-                                    app:minValue="0"
+                                    app:minValue="1"
                                     app:type="range" />
 
                             </LinearLayout>
@@ -771,8 +771,8 @@
                                     android:hint="@string/j10403m"
                                     android:maxLength="2"
                                     app:defaultValue="00"
-                                    app:maxValue="30"
-                                    app:minValue="0"
+                                    app:maxValue="11"
+                                    app:minValue="1"
                                     app:type="range" />
 
                             </LinearLayout>
@@ -967,7 +967,7 @@
                                     android:maxLength="2"
                                     app:defaultValue="00"
                                     app:maxValue="30"
-                                    app:minValue="0"
+                                    app:minValue="1"
                                     app:type="range" />
 
                             </LinearLayout>
@@ -988,8 +988,8 @@
                                     android:hint="@string/j10404m"
                                     android:maxLength="2"
                                     app:defaultValue="00"
-                                    app:maxValue="30"
-                                    app:minValue="0"
+                                    app:maxValue="11"
+                                    app:minValue="1"
                                     app:type="range" />
 
                             </LinearLayout>
@@ -1183,7 +1183,7 @@
                                     android:maxLength="2"
                                     app:defaultValue="00"
                                     app:maxValue="30"
-                                    app:minValue="0"
+                                    app:minValue="1"
                                     app:type="range" />
 
                             </LinearLayout>
@@ -1204,8 +1204,8 @@
                                     android:hint="@string/j10405m"
                                     android:maxLength="2"
                                     app:defaultValue="00"
-                                    app:maxValue="30"
-                                    app:minValue="0"
+                                    app:maxValue="11"
+                                    app:minValue="1"
                                     app:type="range" />
 
                             </LinearLayout>
@@ -1398,7 +1398,7 @@
                                     android:maxLength="2"
                                     app:defaultValue="00"
                                     app:maxValue="30"
-                                    app:minValue="0"
+                                    app:minValue="1"
                                     app:type="range" />
 
                             </LinearLayout>
@@ -1419,8 +1419,8 @@
                                     android:hint="@string/j10406m"
                                     android:maxLength="2"
                                     app:defaultValue="00"
-                                    app:maxValue="30"
-                                    app:minValue="0"
+                                    app:maxValue="11"
+                                    app:minValue="1"
                                     app:type="range" />
 
                             </LinearLayout>
@@ -1614,7 +1614,7 @@
                                     android:maxLength="2"
                                     app:defaultValue="00"
                                     app:maxValue="30"
-                                    app:minValue="0"
+                                    app:minValue="1"
                                     app:type="range" />
 
                             </LinearLayout>
@@ -1635,8 +1635,8 @@
                                     android:hint="@string/j10407m"
                                     android:maxLength="2"
                                     app:defaultValue="00"
-                                    app:maxValue="30"
-                                    app:minValue="0"
+                                    app:maxValue="11"
+                                    app:minValue="1"
                                     app:type="range" />
 
                             </LinearLayout>
@@ -1830,7 +1830,7 @@
                                     android:maxLength="2"
                                     app:defaultValue="00"
                                     app:maxValue="30"
-                                    app:minValue="0"
+                                    app:minValue="1"
                                     app:type="range" />
 
                             </LinearLayout>
@@ -1851,8 +1851,8 @@
                                     android:hint="@string/j10408m"
                                     android:maxLength="2"
                                     app:defaultValue="00"
-                                    app:maxValue="30"
-                                    app:minValue="0"
+                                    app:maxValue="11"
+                                    app:minValue="1"
                                     app:type="range" />
 
                             </LinearLayout>

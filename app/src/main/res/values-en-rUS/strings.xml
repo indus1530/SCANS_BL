@@ -1931,12 +1931,15 @@
     <string name="l101">L101:\t Do you have your own Mobile Phone?</string>
     <string name="l101a">Yes</string>
     <string name="l101b">No</string>
+
     <string name="l102">L102:\t Aside from your own housework, have you done any work in last seven days?</string>
     <string name="l102a">Yes</string>
     <string name="l102b">No</string>
+
     <string name="l103">L103:\t Although you did not work in the last seven days, do you have any job or business from which you were absent for leave, illness, vacation, maternity leave, or any other such reason?</string>
     <string name="l103a">Yes</string>
     <string name="l103b">No</string>
+
     <string name="l104">L104:\t What is your occupation? That is what kind of work you mainly do?</string>
     <string name="l104a">Agriculture</string>
     <string name="l104b">Education Related</string>
@@ -1944,95 +1947,108 @@
     <string name="l104d">Work for family only</string>
     <string name="l104e">Work for others</string>
     <string name="l104x">Other (specify)</string>
+
     <string name="l105">L105:\t Are you paid for this job?</string>
     <string name="l105a">Cash</string>
     <string name="l105b">Kind</string>
     <string name="l105c">Both in kind and cash</string>
     <string name="l105d">Not paid at all </string>
+
     <string name="l106">L106:\t Who usually decides, how to spend money you earn?</string>
     <string name="l106a">Respondent</string>
     <string name="l106b">Husband</string>
     <string name="l106c">Jointly</string>
     <string name="l106d">Other (specify)</string>
+
     <string name="l107">L107:\t Who usually decides how your husband’s earning will be used?</string>
     <string name="l107a">Respondent</string>
     <string name="l107b">Husband</string>
     <string name="l107c">Jointly</string>
     <string name="l107d">He has no earning</string>
     <string name="l107x">Other (specify)</string>
+
     <string name="l108">L108:\t Who usually makes decisions about health care for yourself?</string>
     <string name="l108a">Respondent</string>
     <string name="l108b">Husband</string>
     <string name="l108c">Jointly</string>
     <string name="l108x">Other (specify)</string>
+
     <string name="l109">L109:\t Who usually makes decisions about visits to your family or relatives?</string>
     <string name="l109a">Respondent</string>
     <string name="l109b">Husband</string>
     <string name="l109c">Jointly</string>
     <string name="l109x">Other (specify)</string>
+
     <string name="l110">L110:\t Do you own this or any other house/land/property?</string>
     <string name="l110a">Alone respondent</string>
     <string name="l110b">With husband</string>
     <string name="l110c">With someone else</string>
     <string name="l110d">Does not own</string>
+
     <string name="l111">L111:\t Is your name on the title deed or government recognized document for any house/land/property you own?</string>
     <string name="l111a">Yes</string>
     <string name="l111b">No</string>
     <string name="l111c">Don\'t Know</string>
     <string name="l111d">Don’t have any such document</string>
+
     <string name="l112">L112:\t In your opinion, is a husband justified in hitting or beating his wife in the following situations:</string>
     <string name="l112a">1.	If she goes out without telling him?</string>
     <string name="l112aa">Yes</string>
     <string name="l112ab">No</string>
     <string name="l112ac">Don\'t Know</string>
-    <string name="l112b">If she neglects the children?</string>
+    <string name="l112b">2. If she neglects the children?</string>
     <string name="l112ba">Yes</string>
     <string name="l112bb">No</string>
     <string name="l112bc">Don\'t Know</string>
-    <string name="l112c">If she argues with him?</string>
+    <string name="l112c">3. If she argues with him?</string>
     <string name="l112ca">Yes</string>
     <string name="l112cb">No</string>
     <string name="l112cc">Don\'t Know</string>
-    <string name="l112d">If she refuses to have sex with him?</string>
+    <string name="l112d">4. If she refuses to have sex with him?</string>
     <string name="l112da">Yes</string>
     <string name="l112db">No</string>
     <string name="l112dc">Don\'t Know</string>
-    <string name="l112e">If she burns the food?</string>
+    <string name="l112e">5. If she burns the food?</string>
     <string name="l112ea">Yes</string>
     <string name="l112eb">No</string>
     <string name="l112ec">Don\'t Know</string>
+
     <string name="l113">L113:\t Resource availability is a significant feature for human freedom. Women’s access to resources has following main components:   </string>
-    <string name="l113a">Knowledge of loan programs.  </string>
+    <string name="l113a">1. Knowledge of loan programs.  </string>
     <string name="l113aa">Yes</string>
     <string name="l113ab">No</string>
     <string name="l113ac">Don\'t Know</string>
-    <string name="l113b">Get loans</string>
+    <string name="l113b">2. Get loans</string>
     <string name="l113ba">Yes</string>
     <string name="l113bb">No</string>
     <string name="l113bc">Don\'t Know</string>
-    <string name="l113c">Having bank saving accounts</string>
+    <string name="l113c">3. Having bank saving accounts</string>
     <string name="l113ca">Yes</string>
     <string name="l113cb">No</string>
     <string name="l113cc">Don\'t Know</string>
-    <string name="l113d">Freedom of working outside</string>
+    <string name="l113d">4. Freedom of working outside</string>
     <string name="l113da">Yes</string>
     <string name="l113db">No</string>
     <string name="l113dc">Don\'t Know</string>
+
     <string name="l114">L114:\t Did you make decisions for family planning/contraceptive use? </string>
     <string name="l114a">Yes</string>
     <string name="l114b">No</string>
     <string name="l114c">Jointly with husband</string>
     <string name="l114x">Other (specify)</string>
+
     <string name="l115">L115:\t Did you decide how many children you should have?</string>
     <string name="l115a">Yes</string>
     <string name="l115b">No</string>
     <string name="l115c">Jointly with husband</string>
     <string name="l115x">Other (specify)</string>
+
     <string name="l116">L116:\t Did you make decisions for your children’s education?</string>
     <string name="l116a">Yes</string>
     <string name="l116b">No</string>
     <string name="l116c">Jointly with husband</string>
     <string name="l116x">Other (specify)</string>
+
     <string name="l117">L117:\t Did you make decisions for your child health/disease? </string>
     <string name="l117a">Yes</string>
     <string name="l117b">No</string>
