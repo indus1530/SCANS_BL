@@ -245,7 +245,11 @@ public class SectionDActivity extends AppCompatActivity {
 
     private boolean formValidation() {
         if (fmcFLAG) return Validator.emptyCheckingContainer(this, bi.fldGrpSectionD);
-        else return Validator.emptyEditTextPicker(this, bi.d109);
+        else {
+            if (!Validator.emptyCheckingContainer(this, bi.fldGrpSectionD))
+                return false;
+            return Validator.emptyEditTextPicker(this, bi.d109);
+        }
     }
 
     public void BtnEnd() {

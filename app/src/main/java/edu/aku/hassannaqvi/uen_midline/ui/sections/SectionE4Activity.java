@@ -182,8 +182,9 @@ public class SectionE4Activity extends AppCompatActivity {
     }
 
     private boolean formValidation() {
-
-        return Validator.emptyCheckingContainer(this, bi.fldGrpSectionE4);
+        if (!Validator.emptyCheckingContainer(this, bi.fldGrpSectionE4))
+            return false;
+        return Validator.emptyEditTextPicker(this, bi.e120);
     }
 
     public void BtnEnd() {
