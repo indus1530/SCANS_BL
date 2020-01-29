@@ -166,8 +166,8 @@
                         android:hint="@string/d109a"
                         android:maxLength="2"
                         android:textColor="@android:color/black"
-                        app:maxValue="99"
-                        app:minValue="0"
+                        app:maxValue="49"
+                        app:minValue="15"
                         app:type="range" />
 
                 </LinearLayout>
