@@ -827,7 +827,7 @@
                         <CheckBox
                             android:id="@+id/j123dk"
                             style="@style/checkbox"
-                            android:text="@string/j122c" />
+                            android:text="@string/dkn" />
 
                         <CheckBox
                             android:id="@+id/j12396"

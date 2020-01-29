@@ -40,21 +40,27 @@
 
                     <RadioGroup
                         android:id="@+id/l101"
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent">
+                        style="@style/radiogroup"
+                        android:orientation="horizontal">
 
                         <RadioButton
                             android:id="@+id/l101a"
+                            android:layout_width="0dp"
+                            android:layout_weight="1"
                             style="@style/radiobutton"
                             android:text="@string/l101a" />
 
                         <RadioButton
                             android:id="@+id/l101b"
+                            android:layout_width="0dp"
+                            android:layout_weight="1"
                             style="@style/radiobutton"
                             android:text="@string/l101b" />
 
                     </RadioGroup>
+
                 </LinearLayout>
+
             </androidx.cardview.widget.CardView>
 
             <!-- l102  Radio   -->
@@ -73,21 +79,27 @@
 
                     <RadioGroup
                         android:id="@+id/l102"
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent">
+                        style="@style/radiogroup"
+                        android:orientation="horizontal">
 
                         <RadioButton
                             android:id="@+id/l102a"
+                            android:layout_width="0dp"
+                            android:layout_weight="1"
                             style="@style/radiobutton"
-                            android:text="@string/l102a" />
+                            android:text="@string/yes" />
 
                         <RadioButton
                             android:id="@+id/l102b"
+                            android:layout_width="0dp"
+                            android:layout_weight="1"
                             style="@style/radiobutton"
-                            android:text="@string/l102b" />
+                            android:text="@string/no" />
 
                     </RadioGroup>
+
                 </LinearLayout>
+
             </androidx.cardview.widget.CardView>
 
             <!-- l103  Radio   -->
@@ -107,21 +119,27 @@
 
                     <RadioGroup
                         android:id="@+id/l103"
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent">
+                        style="@style/radiogroup"
+                        android:orientation="horizontal">
 
                         <RadioButton
                             android:id="@+id/l103a"
+                            android:layout_width="0dp"
+                            android:layout_weight="1"
                             style="@style/radiobutton"
                             android:text="@string/l103a" />
 
                         <RadioButton
                             android:id="@+id/l103b"
+                            android:layout_width="0dp"
+                            android:layout_weight="1"
                             style="@style/radiobutton"
                             android:text="@string/l103b" />
 
                     </RadioGroup>
+
                 </LinearLayout>
+
             </androidx.cardview.widget.CardView>
 
             <!-- l104  Radio   -->
@@ -140,8 +158,7 @@
 
                     <RadioGroup
                         android:id="@+id/l104"
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent">
+                        style="@style/radiogroup">
 
                         <RadioButton
                             android:id="@+id/l104a"
@@ -176,8 +193,6 @@
                         <EditText
                             android:id="@+id/l10496x"
                             style="@style/EditTextAlpha"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
                             android:hint="@string/specify"
                             android:tag="l10496"
                             android:text='@{l10496.checked? l10496x.getText().toString() : ""}'
@@ -186,6 +201,7 @@
                     </RadioGroup>
 
                 </LinearLayout>
+
             </androidx.cardview.widget.CardView>
 
             <!-- l105  Radio   -->
@@ -204,8 +220,7 @@
 
                     <RadioGroup
                         android:id="@+id/l105"
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent">
+                        style="@style/radiogroup">
 
                         <RadioButton
                             android:id="@+id/l105a"
@@ -230,6 +245,7 @@
                     </RadioGroup>
 
                 </LinearLayout>
+
             </androidx.cardview.widget.CardView>
 
             <!-- l106  Radio   -->
@@ -248,8 +264,7 @@
 
                     <RadioGroup
                         android:id="@+id/l106"
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent">
+                        style="@style/radiogroup">
 
                         <RadioButton
                             android:id="@+id/l106a"
@@ -274,8 +289,6 @@
                         <EditText
                             android:id="@+id/l10696x"
                             style="@style/EditTextAlpha"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
                             android:hint="@string/specify"
                             android:tag="l10696"
                             android:text='@{l10696.checked? l10696x.getText().toString() : ""}'
@@ -302,8 +315,7 @@
 
                     <RadioGroup
                         android:id="@+id/l107"
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent">
+                        style="@style/radiogroup">
 
                         <RadioButton
                             android:id="@+id/l107a"
@@ -333,8 +345,6 @@
                         <EditText
                             android:id="@+id/l10796x"
                             style="@style/EditTextAlpha"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
                             android:hint="@string/specify"
                             android:tag="l10796"
                             android:text='@{l10796.checked? l10796x.getText().toString() : ""}'
@@ -343,6 +353,7 @@
                     </RadioGroup>
 
                 </LinearLayout>
+
             </androidx.cardview.widget.CardView>
 
             <!-- l108  Radio   -->
@@ -361,8 +372,7 @@
 
                     <RadioGroup
                         android:id="@+id/l108"
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent">
+                        style="@style/radiogroup">
 
                         <RadioButton
                             android:id="@+id/l108a"
@@ -387,8 +397,6 @@
                         <EditText
                             android:id="@+id/l10896x"
                             style="@style/EditTextAlpha"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
                             android:hint="@string/specify"
                             android:tag="l10896"
                             android:text='@{l10896.checked? l10896x.getText().toString() : ""}'
@@ -397,6 +405,7 @@
                     </RadioGroup>
 
                 </LinearLayout>
+
             </androidx.cardview.widget.CardView>
 
             <!-- l109  Radio   -->
@@ -415,8 +424,7 @@
 
                     <RadioGroup
                         android:id="@+id/l109"
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent">
+                        style="@style/radiogroup">
 
                         <RadioButton
                             android:id="@+id/l109a"
@@ -441,8 +449,6 @@
                         <EditText
                             android:id="@+id/l10996x"
                             style="@style/EditTextAlpha"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
                             android:hint="@string/specify"
                             android:tag="l10996"
                             android:text='@{l10996.checked? l10996x.getText().toString() : ""}'
@@ -451,6 +457,7 @@
                     </RadioGroup>
 
                 </LinearLayout>
+
             </androidx.cardview.widget.CardView>
 
             <!-- l110  Radio   -->
@@ -469,8 +476,7 @@
 
                     <RadioGroup
                         android:id="@+id/l110"
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent">
+                        style="@style/radiogroup">
 
                         <RadioButton
                             android:id="@+id/l110a"
@@ -491,8 +497,11 @@
                             android:id="@+id/l110d"
                             style="@style/radiobutton"
                             android:text="@string/l110d" />
+
                     </RadioGroup>
+
                 </LinearLayout>
+
             </androidx.cardview.widget.CardView>
 
             <!-- l111  Radio   -->
@@ -511,30 +520,32 @@
 
                     <RadioGroup
                         android:id="@+id/l111"
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent">
+                        style="@style/radiogroup">
 
                         <RadioButton
                             android:id="@+id/l111a"
                             style="@style/radiobutton"
-                            android:text="@string/l111a" />
+                            android:text="@string/yes" />
 
                         <RadioButton
                             android:id="@+id/l111b"
                             style="@style/radiobutton"
-                            android:text="@string/l111b" />
+                            android:text="@string/no" />
 
                         <RadioButton
                             android:id="@+id/l111c"
                             style="@style/radiobutton"
-                            android:text="@string/l111c" />
+                            android:text="@string/dkn" />
 
                         <RadioButton
                             android:id="@+id/l111d"
                             style="@style/radiobutton"
                             android:text="@string/l111d" />
+
                     </RadioGroup>
+
                 </LinearLayout>
+
             </androidx.cardview.widget.CardView>
 
             <!-- l112  Title   -->
@@ -550,7 +561,9 @@
                     <TextView
                         style="@style/i_textview"
                         android:text="@string/l112" />
+
                 </LinearLayout>
+
             </androidx.cardview.widget.CardView>
 
             <!-- l112a  Radio   -->
@@ -564,30 +577,39 @@
                     android:orientation="vertical">
 
                     <TextView
-                        style="@style/i_textview"
+                        style="@style/i_textviewhint"
                         android:text="@string/l112a" />
 
                     <RadioGroup
                         android:id="@+id/l112a"
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent">
+                        style="@style/radiogroup"
+                        android:orientation="horizontal">
 
                         <RadioButton
                             android:id="@+id/l112aa"
+                            android:layout_width="0dp"
+                            android:layout_weight="1"
                             style="@style/radiobutton"
-                            android:text="@string/l112aa" />
+                            android:text="@string/yes" />
 
                         <RadioButton
                             android:id="@+id/l112ab"
+                            android:layout_width="0dp"
+                            android:layout_weight="1"
                             style="@style/radiobutton"
-                            android:text="@string/l112ab" />
+                            android:text="@string/no" />
 
                         <RadioButton
                             android:id="@+id/l112ac"
+                            android:layout_width="0dp"
+                            android:layout_weight="1"
                             style="@style/radiobutton"
-                            android:text="@string/l112ac" />
+                            android:text="@string/dkn" />
+
                     </RadioGroup>
+
                 </LinearLayout>
+
             </androidx.cardview.widget.CardView>
 
             <!-- l112b  Radio   -->
@@ -601,30 +623,39 @@
                     android:orientation="vertical">
 
                     <TextView
-                        style="@style/i_textview"
+                        style="@style/i_textviewhint"
                         android:text="@string/l112b" />
 
                     <RadioGroup
                         android:id="@+id/l112b"
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent">
+                        style="@style/radiogroup"
+                        android:orientation="horizontal">
 
                         <RadioButton
                             android:id="@+id/l112ba"
+                            android:layout_width="0dp"
+                            android:layout_weight="1"
                             style="@style/radiobutton"
-                            android:text="@string/l112ba" />
+                            android:text="@string/yes" />
 
                         <RadioButton
                             android:id="@+id/l112bb"
+                            android:layout_width="0dp"
+                            android:layout_weight="1"
                             style="@style/radiobutton"
-                            android:text="@string/l112bb" />
+                            android:text="@string/no" />
 
                         <RadioButton
                             android:id="@+id/l112bc"
+                            android:layout_width="0dp"
+                            android:layout_weight="1"
                             style="@style/radiobutton"
-                            android:text="@string/l112bc" />
+                            android:text="@string/dkn" />
+
                     </RadioGroup>
+
                 </LinearLayout>
+
             </androidx.cardview.widget.CardView>
 
             <!-- l112c  Radio   -->
@@ -638,30 +669,39 @@
                     android:orientation="vertical">
 
                     <TextView
-                        style="@style/i_textview"
+                        style="@style/i_textviewhint"
                         android:text="@string/l112c" />
 
                     <RadioGroup
                         android:id="@+id/l112c"
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent">
+                        style="@style/radiogroup"
+                        android:orientation="horizontal">
 
                         <RadioButton
                             android:id="@+id/l112ca"
+                            android:layout_width="0dp"
+                            android:layout_weight="1"
                             style="@style/radiobutton"
-                            android:text="@string/l112ca" />
+                            android:text="@string/yes" />
 
                         <RadioButton
                             android:id="@+id/l112cb"
+                            android:layout_width="0dp"
+                            android:layout_weight="1"
                             style="@style/radiobutton"
-                            android:text="@string/l112cb" />
+                            android:text="@string/no" />
 
                         <RadioButton
                             android:id="@+id/l112cc"
+                            android:layout_width="0dp"
+                            android:layout_weight="1"
                             style="@style/radiobutton"
-                            android:text="@string/l112cc" />
+                            android:text="@string/dkn" />
+
                     </RadioGroup>
+
                 </LinearLayout>
+
             </androidx.cardview.widget.CardView>
 
             <!-- l112d  Radio   -->
@@ -675,30 +715,39 @@
                     android:orientation="vertical">
 
                     <TextView
-                        style="@style/i_textview"
+                        style="@style/i_textviewhint"
                         android:text="@string/l112d" />
 
                     <RadioGroup
                         android:id="@+id/l112d"
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent">
+                        style="@style/radiogroup"
+                        android:orientation="horizontal">
 
                         <RadioButton
                             android:id="@+id/l112da"
+                            android:layout_width="0dp"
+                            android:layout_weight="1"
                             style="@style/radiobutton"
-                            android:text="@string/l112da" />
+                            android:text="@string/yes" />
 
                         <RadioButton
                             android:id="@+id/l112db"
+                            android:layout_width="0dp"
+                            android:layout_weight="1"
                             style="@style/radiobutton"
-                            android:text="@string/l112db" />
+                            android:text="@string/no" />
 
                         <RadioButton
                             android:id="@+id/l112dc"
+                            android:layout_width="0dp"
+                            android:layout_weight="1"
                             style="@style/radiobutton"
-                            android:text="@string/l112dc" />
+                            android:text="@string/dkn" />
+
                     </RadioGroup>
+
                 </LinearLayout>
+
             </androidx.cardview.widget.CardView>
 
             <!-- l112e  Radio   -->
@@ -712,30 +761,39 @@
                     android:orientation="vertical">
 
                     <TextView
-                        style="@style/i_textview"
+                        style="@style/i_textviewhint"
                         android:text="@string/l112e" />
 
                     <RadioGroup
                         android:id="@+id/l112e"
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent">
+                        style="@style/radiogroup"
+                        android:orientation="horizontal">
 
                         <RadioButton
                             android:id="@+id/l112ea"
+                            android:layout_width="0dp"
+                            android:layout_weight="1"
                             style="@style/radiobutton"
-                            android:text="@string/l112ea" />
+                            android:text="@string/yes" />
 
                         <RadioButton
                             android:id="@+id/l112eb"
+                            android:layout_width="0dp"
+                            android:layout_weight="1"
                             style="@style/radiobutton"
-                            android:text="@string/l112eb" />
+                            android:text="@string/no" />
 
                         <RadioButton
                             android:id="@+id/l112ec"
+                            android:layout_width="0dp"
+                            android:layout_weight="1"
                             style="@style/radiobutton"
-                            android:text="@string/l112ec" />
+                            android:text="@string/dkn" />
+
                     </RadioGroup>
+
                 </LinearLayout>
+
             </androidx.cardview.widget.CardView>
 
             <!-- l113  Title   -->
@@ -752,6 +810,7 @@
                         style="@style/i_textview"
                         android:text="@string/l113" />
                 </LinearLayout>
+
             </androidx.cardview.widget.CardView>
 
             <!-- l113a  Radio   -->
@@ -765,30 +824,39 @@
                     android:orientation="vertical">
 
                     <TextView
-                        style="@style/i_textview"
+                        style="@style/i_textviewhint"
                         android:text="@string/l113a" />
 
                     <RadioGroup
                         android:id="@+id/l113a"
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent">
+                        style="@style/radiogroup"
+                        android:orientation="horizontal">
 
                         <RadioButton
                             android:id="@+id/l113aa"
+                            android:layout_width="0dp"
+                            android:layout_weight="1"
                             style="@style/radiobutton"
-                            android:text="@string/l113aa" />
+                            android:text="@string/yes" />
 
                         <RadioButton
                             android:id="@+id/l113ab"
+                            android:layout_width="0dp"
+                            android:layout_weight="1"
                             style="@style/radiobutton"
-                            android:text="@string/l113ab" />
+                            android:text="@string/no" />
 
                         <RadioButton
                             android:id="@+id/l113ac"
+                            android:layout_width="0dp"
+                            android:layout_weight="1"
                             style="@style/radiobutton"
-                            android:text="@string/l113ac" />
+                            android:text="@string/dkn" />
+
                     </RadioGroup>
+
                 </LinearLayout>
+
             </androidx.cardview.widget.CardView>
 
             <!-- l113b  Radio   -->
@@ -802,30 +870,39 @@
                     android:orientation="vertical">
 
                     <TextView
-                        style="@style/i_textview"
+                        style="@style/i_textviewhint"
                         android:text="@string/l113b" />
 
                     <RadioGroup
                         android:id="@+id/l113b"
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent">
+                        style="@style/radiogroup"
+                        android:orientation="horizontal">
 
                         <RadioButton
                             android:id="@+id/l113ba"
+                            android:layout_width="0dp"
+                            android:layout_weight="1"
                             style="@style/radiobutton"
-                            android:text="@string/l113ba" />
+                            android:text="@string/yes" />
 
                         <RadioButton
                             android:id="@+id/l113bb"
+                            android:layout_width="0dp"
+                            android:layout_weight="1"
                             style="@style/radiobutton"
-                            android:text="@string/l113bb" />
+                            android:text="@string/no" />
 
                         <RadioButton
                             android:id="@+id/l113bc"
+                            android:layout_width="0dp"
+                            android:layout_weight="1"
                             style="@style/radiobutton"
-                            android:text="@string/l113bc" />
+                            android:text="@string/dkn" />
+
                     </RadioGroup>
+
                 </LinearLayout>
+
             </androidx.cardview.widget.CardView>
 
             <!-- l113c  Radio   -->
@@ -839,30 +916,39 @@
                     android:orientation="vertical">
 
                     <TextView
-                        style="@style/i_textview"
+                        style="@style/i_textviewhint"
                         android:text="@string/l113c" />
 
                     <RadioGroup
                         android:id="@+id/l113c"
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent">
+                        style="@style/radiogroup"
+                        android:orientation="horizontal">
 
                         <RadioButton
                             android:id="@+id/l113ca"
+                            android:layout_width="0dp"
+                            android:layout_weight="1"
                             style="@style/radiobutton"
                             android:text="@string/l113ca" />
 
                         <RadioButton
                             android:id="@+id/l113cb"
+                            android:layout_width="0dp"
+                            android:layout_weight="1"
                             style="@style/radiobutton"
                             android:text="@string/l113cb" />
 
                         <RadioButton
                             android:id="@+id/l113cc"
+                            android:layout_width="0dp"
+                            android:layout_weight="1"
                             style="@style/radiobutton"
                             android:text="@string/l113cc" />
+
                     </RadioGroup>
+
                 </LinearLayout>
+
             </androidx.cardview.widget.CardView>
 
             <!-- l113d  Radio   -->
@@ -876,30 +962,39 @@
                     android:orientation="vertical">
 
                     <TextView
-                        style="@style/i_textview"
+                        style="@style/i_textviewhint"
                         android:text="@string/l113d" />
 
                     <RadioGroup
                         android:id="@+id/l113d"
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent">
+                        style="@style/radiogroup"
+                        android:orientation="horizontal">
 
                         <RadioButton
                             android:id="@+id/l113da"
+                            android:layout_width="0dp"
+                            android:layout_weight="1"
                             style="@style/radiobutton"
-                            android:text="@string/l113da" />
+                            android:text="@string/yes" />
 
                         <RadioButton
                             android:id="@+id/l113db"
+                            android:layout_width="0dp"
+                            android:layout_weight="1"
                             style="@style/radiobutton"
-                            android:text="@string/l113db" />
+                            android:text="@string/no" />
 
                         <RadioButton
                             android:id="@+id/l113dc"
+                            android:layout_width="0dp"
+                            android:layout_weight="1"
                             style="@style/radiobutton"
-                            android:text="@string/l113dc" />
+                            android:text="@string/dkn" />
+
                     </RadioGroup>
+
                 </LinearLayout>
+
             </androidx.cardview.widget.CardView>
 
             <!-- l114  Radio   -->
@@ -918,18 +1013,17 @@
 
                     <RadioGroup
                         android:id="@+id/l114"
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent">
+                        style="@style/radiogroup">
 
                         <RadioButton
                             android:id="@+id/l114a"
                             style="@style/radiobutton"
-                            android:text="@string/l114a" />
+                            android:text="@string/yes" />
 
                         <RadioButton
                             android:id="@+id/l114b"
                             style="@style/radiobutton"
-                            android:text="@string/l114b" />
+                            android:text="@string/no" />
 
                         <RadioButton
                             android:id="@+id/l114c"
@@ -944,14 +1038,15 @@
                         <EditText
                             android:id="@+id/l11496x"
                             style="@style/EditTextAlpha"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
                             android:hint="@string/specify"
                             android:tag="l11496"
                             android:text='@{l11496.checked? l11496x.getText().toString() : ""}'
                             android:visibility='@{l11496.checked? View.VISIBLE : View.GONE}' />
+
                     </RadioGroup>
+
                 </LinearLayout>
+
             </androidx.cardview.widget.CardView>
 
             <!-- l115  Radio   -->
@@ -970,18 +1065,17 @@
 
                     <RadioGroup
                         android:id="@+id/l115"
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent">
+                        style="@style/radiogroup">
 
                         <RadioButton
                             android:id="@+id/l115a"
                             style="@style/radiobutton"
-                            android:text="@string/l115a" />
+                            android:text="@string/yes" />
 
                         <RadioButton
                             android:id="@+id/l115b"
                             style="@style/radiobutton"
-                            android:text="@string/l115b" />
+                            android:text="@string/no" />
 
                         <RadioButton
                             android:id="@+id/l115c"
@@ -1023,18 +1117,17 @@
 
                     <RadioGroup
                         android:id="@+id/l116"
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent">
+                        style="@style/radiogroup">
 
                         <RadioButton
                             android:id="@+id/l116a"
                             style="@style/radiobutton"
-                            android:text="@string/l116a" />
+                            android:text="@string/yes" />
 
                         <RadioButton
                             android:id="@+id/l116b"
                             style="@style/radiobutton"
-                            android:text="@string/l116b" />
+                            android:text="@string/no" />
 
                         <RadioButton
                             android:id="@+id/l116c"
@@ -1049,8 +1142,6 @@
                         <EditText
                             android:id="@+id/l11696x"
                             style="@style/EditTextAlpha"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
                             android:hint="@string/specify"
                             android:tag="l11696"
                             android:text='@{l11696.checked? l11696x.getText().toString() : ""}'
@@ -1078,18 +1169,17 @@
 
                     <RadioGroup
                         android:id="@+id/l117"
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent">
+                        style="@style/radiogroup">
 
                         <RadioButton
                             android:id="@+id/l117a"
                             style="@style/radiobutton"
-                            android:text="@string/l117a" />
+                            android:text="@string/yes" />
 
                         <RadioButton
                             android:id="@+id/l117b"
                             style="@style/radiobutton"
-                            android:text="@string/l117b" />
+                            android:text="@string/no" />
 
                         <RadioButton
                             android:id="@+id/l117c"
@@ -1104,8 +1194,6 @@
                         <EditText
                             android:id="@+id/l11796x"
                             style="@style/EditTextAlpha"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
                             android:hint="@string/specify"
                             android:tag="l11796"
                             android:text='@{l11796.checked? l11796x.getText().toString() : ""}'
@@ -1116,6 +1204,7 @@
                 </LinearLayout>
 
             </androidx.cardview.widget.CardView>
+
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -1137,7 +1226,11 @@
                     android:background="@android:color/holo_green_light"
                     android:onClick="@{() -> callback.BtnContinue()}"
                     android:text="@string/nextSection" />
+
             </LinearLayout>
+
         </LinearLayout>
+
     </ScrollView>
+
 </layout>
