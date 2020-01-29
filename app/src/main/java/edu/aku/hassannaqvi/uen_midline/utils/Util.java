@@ -74,8 +74,8 @@ public class Util {
 
 
     public static Integer getMemberIcon(int gender, String age) {
-        int memAge = age.isEmpty() ? 0 : Integer.valueOf(age);
-        if (memAge == 0) return R.drawable.boy;
+        int memAge = Integer.valueOf(age);
+        if (memAge == -1) return R.drawable.boy;
         else if (memAge > 10) return gender == 1 ? R.drawable.ctr_male : R.drawable.ctr_female;
         else return gender == 1 ? R.drawable.ctr_childboy : R.drawable.ctr_childgirl;
     }

@@ -3,7 +3,6 @@ package edu.aku.hassannaqvi.uen_midline.ui.list_activity
 import android.app.Activity
 import android.content.Intent
 import android.os.Bundle
-import android.view.View
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import androidx.databinding.DataBindingUtil
@@ -26,14 +25,12 @@ import edu.aku.hassannaqvi.uen_midline.ui.sections.SectionE3Activity
 import edu.aku.hassannaqvi.uen_midline.utils.Util
 import edu.aku.hassannaqvi.uen_midline.viewmodel.MainVModel
 import kotlinx.android.synthetic.main.activity_family_members_list.*
-import kotlinx.android.synthetic.main.item_mem_list.view.*
 import ru.whalemare.sheetmenu.ActionItem
 import ru.whalemare.sheetmenu.SheetMenu
 import ru.whalemare.sheetmenu.layout.GridLayoutProvider
 
 class FamilyMembersListActivity : AppCompatActivity() {
 
-    //    private lateinit var mainVModel: MainVModel
     private var serial = 1
     private var memSelectedCounter = 0
     private lateinit var adapter: FamilyMemberListAdapter
@@ -84,7 +81,6 @@ class FamilyMembersListActivity : AppCompatActivity() {
                         run {
                             when (item.id) {
                                 0 -> {
-//                                    serial++
                                     startActivityForResult(Intent(this, SectionDActivity::class.java).putExtra(SERIAL_EXTRA, serial), CONSTANTS.MEMBER_ITEM)
                                 }
                                 1 -> {
@@ -127,15 +123,9 @@ class FamilyMembersListActivity : AppCompatActivity() {
         adapter = FamilyMemberListAdapter(this, membersLst, mainVModel)
         bi.contentScroll.recyclerView.layoutManager = LinearLayoutManager(this)
         bi.contentScroll.recyclerView.adapter = adapter
-        adapter.setItemClicked { item, position, holder ->
+        adapter.setItemClicked { item, position ->
             openDialog(this, item)
             MainApp.setItemClick {
-
-                memSelectedCounter++
-//                viewHolder = holder
-
-                /*holder.parentLayout.isEnabled = false
-                holder.parentLayout.checkIcon.visibility = View.VISIBLE*/
 
                 currentFM = item
 
@@ -154,17 +144,15 @@ class FamilyMembersListActivity : AppCompatActivity() {
         if (requestCode == CONSTANTS.MEMBER_ITEM) {
             when (resultCode) {
                 Activity.RESULT_OK -> {
-                    data?.let { serial = data.getIntExtra(SERIAL_EXTRA, 0) }
-                    handlingHolder(false)
+                    data?.let { serial = data.getIntExtra(SERIAL_EXTRA, 0) } ?: handlingHolder()
                 }
                 Activity.RESULT_CANCELED -> {
-                    handlingHolder(true)
                 }
             }
         }
     }
 
-    private fun handlingHolder(flag: Boolean) {
+    private fun handlingHolder() {
         /*viewHolder?.let {
             viewHolder!!.parentLayout.isEnabled = flag
             viewHolder!!.parentLayout.checkIcon.visibility = if (flag) View.GONE else View.VISIBLE
@@ -180,7 +168,7 @@ class FamilyMembersListActivity : AppCompatActivity() {
             }
         }*/
 
-        if (flag) {
+        /*if (flag) {
             memSelectedCounter--
             return
         } else {
@@ -197,6 +185,10 @@ class FamilyMembersListActivity : AppCompatActivity() {
                 bi.contentScroll.recyclerView.getChildAt(view).checkIcon?.visibility = View.VISIBLE
             }
 
+        }*/
+        memSelectedCounter++
+        currentFM?.let {
+            mainVModel.setCheckedItemValues(currentFM!!.serialno.toInt())
         }
 
     }

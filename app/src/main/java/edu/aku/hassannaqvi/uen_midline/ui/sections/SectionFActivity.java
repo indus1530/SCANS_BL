@@ -69,6 +69,7 @@ public class SectionFActivity extends AppCompatActivity {
                 e.printStackTrace();
             }
             if (UpdateDB()) {
+                finish();
                 startActivity(new Intent(SectionFActivity.this, SectionF02Activity.class));
             }
 

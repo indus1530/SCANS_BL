@@ -24,7 +24,6 @@ public class FamilyMemberListAdapter extends RecyclerView.Adapter<FamilyMemberLi
     private Context mContext;
     private List<FamilyMembersContract> mList;
     private MainVModel vModel;
-    RecyclerView recyclerView;
 
     public FamilyMemberListAdapter(Context mContext, List<FamilyMembersContract> mList, MainVModel vModel) {
         this.mContext = mContext;
@@ -40,22 +39,30 @@ public class FamilyMemberListAdapter extends RecyclerView.Adapter<FamilyMemberLi
     @Override
     public ViewHolder onCreateViewHolder(@NonNull ViewGroup viewGroup, final int i) {
         ItemMemListBinding bi = DataBindingUtil.inflate(LayoutInflater.from(mContext), R.layout.item_mem_list, viewGroup, false);
-        recyclerView = (RecyclerView) viewGroup;
         return new ViewHolder(bi);
     }
 
     @Override
     public void onBindViewHolder(@NonNull final ViewHolder holder, final int i) {
 
+        holder.bi.parentLayout.setTag(i);
+
         holder.bi.name.setText(mList.get(i).getName());
         holder.bi.realHead.setText(MainApp.relationHHLst[Integer.valueOf(mList.get(i).getRelHH()) - 1]);
-        holder.bi.dob.setText("Age: " + mList.get(i).getAge() + " Year(s)");
+        String age = mList.get(i).getAge();
+        holder.bi.dob.setText(new StringBuilder().append("Age:").append(Integer.valueOf(age) < 0 ? "-" : age).append(" Year(s)"));
+//        holder.bi.dob.setText("Age: " + (Integer.valueOf(age) < 0 ? "-" : age) + " Year(s)");
         holder.bi.index.setText(String.format("%02d", Integer.valueOf(mList.get(i).getSerialno())));
         holder.bi.genderImage.setImageResource(Util.getMemberIcon(Integer.valueOf(mList.get(i).getGender()), mList.get(i).getAge()));
         holder.bi.motherName.setText(mList.get(i).getMother_name());
-        holder.bi.parentLayout.setOnClickListener(v -> itemClicked.onItemClick(mList.get(i), i, recyclerView.getChildAt(holder.getAdapterPosition())));
+        holder.bi.parentLayout.setOnClickListener(v -> {
+            itemClicked.onItemClick(mList.get(i), i);
+        });
 
-        vModel.setHolderValues(Integer.valueOf(mList.get(i).getSerialno()), holder.getAdapterPosition());
+        if (vModel.getCheckedItemValues(Integer.valueOf(mList.get(i).getSerialno()))) {
+            holder.bi.checkIcon.setVisibility(View.VISIBLE);
+            holder.bi.parentLayout.setEnabled(false);
+        }
     }
 
     @Override
@@ -69,7 +76,7 @@ public class FamilyMemberListAdapter extends RecyclerView.Adapter<FamilyMemberLi
     }
 
     public interface OnItemClicked {
-        void onItemClick(FamilyMembersContract item, int position, View viewHolder);
+        void onItemClick(FamilyMembersContract item, int position);
     }
 
     class ViewHolder extends RecyclerView.ViewHolder {

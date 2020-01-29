@@ -160,7 +160,7 @@ public class SectionDActivity extends AppCompatActivity {
                     bi.d104a.isChecked() ? "1" :
                             bi.d104b.isChecked() ? "2" : "0");
 
-            fmc.setAge("0");
+            fmc.setAge("-1");
 
             // Update in ViewModel
             mainVModel.setFamilyMembers(fmc);

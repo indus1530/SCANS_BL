@@ -18,7 +18,7 @@ class MainVModel : ViewModel() {
     var mwraChildU5Lst = MutableLiveData<MutableList<FamilyMembersContract>>()
         private set
 
-    var holderSet = MutableLiveData<MutableList<Pair<Int, Int>>>()
+    var checkedItems = MutableLiveData<MutableList<Int>>()
         private set
 
     fun setFamilyMembers(item: FamilyMembersContract) {
@@ -56,19 +56,14 @@ class MainVModel : ViewModel() {
         mwraChildU5Lst.value = lst
     }
 
-    fun setHolderValues(index: Int, holder: Int) {
-        var lst = holderSet.value
+    fun setCheckedItemValues(index: Int) {
+        var lst = checkedItems.value
         if (lst.isNullOrEmpty()) {
             lst = mutableListOf()
-            lst.add(Pair(index, holder))
-        } else {
-            val fmc = holderSet.value?.find { it.first == index }
-            fmc?.let {
-                //                lst.map { if (it.first == fmc.first) Pair(fmc.first, holder) else it } } ?: lst.add(Pair(index, holder))
-                lst.map { if (it.first == fmc.first) Pair(fmc.first, holder) else it }
-            } ?: lst.add(Pair(index, holder))
-        }
-        holderSet.value = lst
+            lst.add(index)
+        } else lst.add(index)
+
+        checkedItems.value = lst
     }
 
     fun setMWRA(item: FamilyMembersContract) {
@@ -103,8 +98,9 @@ class MainVModel : ViewModel() {
         return Pair(family?.map { it.serialno.toInt() }, family?.map { it.name })
     }
 
-    fun getHolder(fmItem: FamilyMembersContract): Int? {
-        return holderSet.value?.find { it.first == fmItem.serialno.toInt() }?.second
+    fun getCheckedItemValues(fmItem: Int): Boolean {
+        val flag = checkedItems.value?.find { it == fmItem }
+        flag?.let { return true } ?: return false
     }
 
 
