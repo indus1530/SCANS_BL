@@ -16,6 +16,9 @@ import com.validatorcrawler.aliazaz.Validator;
 import org.json.JSONException;
 import org.json.JSONObject;
 
+import java.text.SimpleDateFormat;
+import java.util.Date;
+
 import edu.aku.hassannaqvi.uen_midline.CONSTANTS;
 import edu.aku.hassannaqvi.uen_midline.R;
 import edu.aku.hassannaqvi.uen_midline.contracts.MWRAContract;
@@ -170,7 +173,7 @@ public class SectionE2Activity extends AppCompatActivity {
         mwraPre.set_UUID(MainApp.fc.get_UID());
         mwraPre.setDeviceId(MainApp.appInfo.getDeviceID());
         mwraPre.setDevicetagID(MainApp.appInfo.getTagName());
-        mwraPre.setFormDate(MainApp.appInfo.getDtToday());
+        mwraPre.setFormDate(new SimpleDateFormat("dd-MM-yy HH:mm").format(new Date().getTime()));
         JSONObject e2 = new JSONObject();
         e2.put("mw_uid", mwraContract.getUID());
         e2.put("fm_serial", mwraContract.getFm_serial());

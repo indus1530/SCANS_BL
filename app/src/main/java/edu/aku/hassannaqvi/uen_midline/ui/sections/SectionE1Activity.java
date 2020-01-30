@@ -17,7 +17,9 @@ import com.validatorcrawler.aliazaz.Validator;
 import org.json.JSONException;
 import org.json.JSONObject;
 
+import java.text.SimpleDateFormat;
 import java.util.ArrayList;
+import java.util.Date;
 import java.util.List;
 import java.util.Map;
 
@@ -143,7 +145,7 @@ public class SectionE1Activity extends AppCompatActivity {
         mwra = new MWRAContract();
         mwra.set_UUID(MainApp.fc.get_UID());
         mwra.setDeviceId(MainApp.appInfo.getDeviceID());
-        mwra.setFormDate(MainApp.appInfo.getDtToday());
+        mwra.setFormDate(new SimpleDateFormat("dd-MM-yy HH:mm").format(new Date().getTime()));
         mwra.setUser(MainApp.userName);
         mwra.setDevicetagID(MainApp.appInfo.getTagName());
 

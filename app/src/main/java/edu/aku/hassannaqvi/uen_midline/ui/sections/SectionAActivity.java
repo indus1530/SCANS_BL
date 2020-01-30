@@ -15,6 +15,9 @@ import com.validatorcrawler.aliazaz.Validator;
 import org.json.JSONException;
 import org.json.JSONObject;
 
+import java.text.SimpleDateFormat;
+import java.util.Date;
+
 import edu.aku.hassannaqvi.uen_midline.R;
 import edu.aku.hassannaqvi.uen_midline.contracts.BLRandomContract;
 import edu.aku.hassannaqvi.uen_midline.contracts.EnumBlockContract;
@@ -125,7 +128,7 @@ public class SectionAActivity extends AppCompatActivity {
     private void SaveDraft() throws JSONException {
 
         MainApp.fc = new FormsContract();
-        MainApp.fc.setFormDate(MainApp.appInfo.getDtToday());
+        MainApp.fc.setFormDate(new SimpleDateFormat("dd-MM-yy HH:mm").format(new Date().getTime()));
         MainApp.fc.setUser(MainApp.userName);
         MainApp.fc.setDeviceID(MainApp.appInfo.getDeviceID());
         MainApp.fc.setDevicetagID(MainApp.appInfo.getTagName());
