@@ -20,6 +20,7 @@ import edu.aku.hassannaqvi.uen_scans_bl.databinding.ActivityFamilyMembersListBin
 import edu.aku.hassannaqvi.uen_scans_bl.databinding.ItemMemListBinding
 import edu.aku.hassannaqvi.uen_scans_bl.otherClasses.KishGrid
 import edu.aku.hassannaqvi.uen_scans_bl.ui.sections.SectionDActivity
+import edu.aku.hassannaqvi.uen_scans_bl.ui.sections.SectionMActivity
 import edu.aku.hassannaqvi.uen_scans_bl.utils.Util
 import edu.aku.hassannaqvi.uen_scans_bl.viewmodel.MainVModel
 import kotlinx.android.synthetic.main.activity_family_members_list.*
@@ -90,7 +91,7 @@ class FamilyMembersListActivity : AppCompatActivity() {
 
                                     MainApp.selectedKishMWRA = mainVModel.mwraChildU5Lst.value?.get(kishSelectedMWRA(intent.getIntExtra("sno", 0), mainVModel.mwraChildU5Lst.value!!.size) - 1)
 
-                                    startActivity(Intent(this, if (bi.contentScroll.mwra.text.toString().toInt() > 0) SectionE1Activity::class.java else SectionE3Activity::class.java))
+                                    startActivity(Intent(this, if (bi.contentScroll.mwra.text.toString().toInt() > 0) SectionMActivity::class.java else SectionMActivity::class.java))
                                 }
                                 else -> Util.openEndActivity(this)
                             }
