@@ -1,4 +1,5 @@
 <layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools">
 
     <data>
@@ -82,19 +83,29 @@
                         android:layout_height="wrap_content"
                         android:orientation="horizontal">
 
-                        <EditText
-                            android:id="@+id/m102at"
+                        <com.edittextpicker.aliazaz.EditTextPicker
+                            android:id="@+id/m102a"
                             style="@style/EditTextNum"
                             android:layout_width="0dp"
                             android:layout_weight="1"
-                            android:hint="@string/m102a" />
+                            android:hint="@string/m102a"
+                            app:defaultValue="00"
+                            app:mask="##.##"
+                            app:maxValue="30"
+                            app:minValue="1"
+                            app:type="range" />
 
-                        <EditText
-                            android:id="@+id/m102bt"
+                        <com.edittextpicker.aliazaz.EditTextPicker
+                            android:id="@+id/m102b"
                             style="@style/EditTextNum"
                             android:layout_width="0dp"
                             android:layout_weight="1"
-                            android:hint="@string/m102b" />
+                            android:hint="@string/m102b"
+                            app:defaultValue="00"
+                            app:mask="##.##"
+                            app:maxValue="30"
+                            app:minValue="1"
+                            app:type="range" />
 
                     </LinearLayout>
 
