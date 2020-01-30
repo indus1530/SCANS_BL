@@ -14,8 +14,11 @@
 
     <ScrollView
         style="@style/i_scrollview"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+        android:fadeScrollbars="false"
+        android:fillViewport="true"
+        android:layoutDirection="ltr"
+        android:scrollbarSize="10dip"
+        tools:context=".ui.Myactivity">
 
         <LinearLayout
             android:id="@+id/fldGrpSectionK2"
@@ -36,6 +39,7 @@
                     <TextView
                         style="@style/i_textview"
                         android:text="@string/k201_title" />
+
                 </LinearLayout>
             </androidx.cardview.widget.CardView>
 
@@ -52,6 +56,7 @@
                     <TextView
                         style="@style/i_textview"
                         android:text="@string/k201_title1" />
+
                 </LinearLayout>
             </androidx.cardview.widget.CardView>
 
@@ -76,6 +81,7 @@
                         android:layout_height="wrap_content"
                         android:hint="@string/k201"
                         android:textColor="@android:color/black" />
+
                 </LinearLayout>
             </androidx.cardview.widget.CardView>
 
@@ -107,7 +113,9 @@
                             android:id="@+id/k202b"
                             style="@style/radiobutton"
                             android:text="@string/k202b" />
+
                     </RadioGroup>
+
                 </LinearLayout>
             </androidx.cardview.widget.CardView>
 
@@ -139,7 +147,9 @@
                             android:id="@+id/k203b"
                             style="@style/radiobutton"
                             android:text="@string/k203b" />
+
                     </RadioGroup>
+
                 </LinearLayout>
             </androidx.cardview.widget.CardView>
 
@@ -164,6 +174,7 @@
                         android:layout_height="wrap_content"
                         android:hint="@string/k204"
                         android:textColor="@android:color/black" />
+
                 </LinearLayout>
             </androidx.cardview.widget.CardView>
 
@@ -192,6 +203,7 @@
                         app:maxValue="10"
                         app:minValue="1"
                         app:type="range" />
+
                 </LinearLayout>
             </androidx.cardview.widget.CardView>
 
@@ -216,6 +228,7 @@
                         android:layout_height="wrap_content"
                         android:hint="@string/k205"
                         android:textColor="@android:color/black" />
+
                 </LinearLayout>
             </androidx.cardview.widget.CardView>
 
@@ -244,6 +257,7 @@
                         app:maxValue="10"
                         app:minValue="1"
                         app:type="range" />
+
                 </LinearLayout>
             </androidx.cardview.widget.CardView>
 
@@ -308,6 +322,7 @@
                         app:maxValue="20"
                         app:minValue="1"
                         app:type="range" />
+
                 </LinearLayout>
             </androidx.cardview.widget.CardView>
 
@@ -356,6 +371,7 @@
                         app:maxValue="60"
                         app:minValue="1"
                         app:type="range" />
+
                 </LinearLayout>
             </androidx.cardview.widget.CardView>
 
@@ -392,7 +408,9 @@
                             android:id="@+id/k208c"
                             style="@style/radiobutton"
                             android:text="@string/k208c" />
+
                     </RadioGroup>
+
                 </LinearLayout>
             </androidx.cardview.widget.CardView>
 
@@ -421,6 +439,7 @@
                         app:maxValue="100"
                         app:minValue="1"
                         app:type="range" />
+
                 </LinearLayout>
             </androidx.cardview.widget.CardView>
 
@@ -449,6 +468,7 @@
                         app:maxValue="10"
                         app:minValue="1"
                         app:type="range" />
+
                 </LinearLayout>
             </androidx.cardview.widget.CardView>
 
@@ -481,6 +501,7 @@
                         app:maxValue="0"
                         app:minValue="0"
                         app:type="range" />
+
                 </LinearLayout>
             </androidx.cardview.widget.CardView>
 
@@ -512,65 +533,80 @@
                             android:id="@+id/k211b"
                             style="@style/radiobutton"
                             android:text="@string/k211b" />
+
                     </RadioGroup>
+
                 </LinearLayout>
             </androidx.cardview.widget.CardView>
 
-            <!-- k212  Input-Numeric   -->
-            <androidx.cardview.widget.CardView
-                android:id="@+id/fldGrpCVk212"
-                style="@style/cardView">
 
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:orientation="vertical">
+            <LinearLayout
+                android:id="@+id/fldGrpCVk01"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:visibility='@{k211b.checked? View.VISIBLE : View.GONE}'>
 
-                    <TextView
-                        style="@style/i_textview"
-                        android:text="@string/k212" />
+                <!-- k212  Input-Numeric   -->
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/fldGrpCVk212"
+                    style="@style/cardView">
 
-                    <com.edittextpicker.aliazaz.EditTextPicker
-                        android:id="@+id/k212"
-                        style="@style/EditTextAlphaNumeric"
+                    <LinearLayout
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:hint="@string/k212"
-                        android:inputType="number"
-                        app:mask="##"
-                        app:maxValue="100"
-                        app:minValue="1"
-                        app:type="range" />
-                </LinearLayout>
-            </androidx.cardview.widget.CardView>
+                        android:orientation="vertical">
 
-            <!-- k212a  Input-Numeric   -->
-            <androidx.cardview.widget.CardView
-                android:id="@+id/fldGrpCVk212a"
-                style="@style/cardView">
+                        <TextView
+                            style="@style/i_textview"
+                            android:text="@string/k212" />
 
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:orientation="vertical">
+                        <com.edittextpicker.aliazaz.EditTextPicker
+                            android:id="@+id/k212"
+                            style="@style/EditTextAlphaNumeric"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:hint="@string/k212"
+                            android:inputType="number"
+                            app:mask="##"
+                            app:maxValue="100"
+                            app:minValue="1"
+                            app:type="range" />
 
-                    <TextView
-                        style="@style/i_textview"
-                        android:text="@string/k212a" />
+                    </LinearLayout>
+                </androidx.cardview.widget.CardView>
 
-                    <com.edittextpicker.aliazaz.EditTextPicker
-                        android:id="@+id/k212a"
-                        style="@style/EditTextAlphaNumeric"
+                <!-- k212a  Input-Numeric   -->
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/fldGrpCVk212a"
+                    style="@style/cardView">
+
+                    <LinearLayout
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:hint="@string/k212a"
-                        android:inputType="number"
-                        app:mask="##"
-                        app:maxValue="10"
-                        app:minValue="1"
-                        app:type="range" />
-                </LinearLayout>
-            </androidx.cardview.widget.CardView>
+                        android:orientation="vertical">
+
+                        <TextView
+                            style="@style/i_textview"
+                            android:text="@string/k212a" />
+
+                        <com.edittextpicker.aliazaz.EditTextPicker
+                            android:id="@+id/k212a"
+                            style="@style/EditTextAlphaNumeric"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:hint="@string/k212a"
+                            android:inputType="number"
+                            app:mask="##"
+                            app:maxValue="10"
+                            app:minValue="1"
+                            app:type="range" />
+
+                    </LinearLayout>
+                </androidx.cardview.widget.CardView>
+
+            </LinearLayout>
+
 
             <!-- k213  Input-Numeric   -->
             <androidx.cardview.widget.CardView
@@ -597,6 +633,7 @@
                         app:maxValue="100"
                         app:minValue="1"
                         app:type="range" />
+
                 </LinearLayout>
             </androidx.cardview.widget.CardView>
 
@@ -625,6 +662,7 @@
                         app:maxValue="10"
                         app:minValue="1"
                         app:type="range" />
+
                 </LinearLayout>
             </androidx.cardview.widget.CardView>
 
@@ -653,6 +691,7 @@
                         app:maxValue="100"
                         app:minValue="1"
                         app:type="range" />
+
                 </LinearLayout>
             </androidx.cardview.widget.CardView>
 
@@ -681,6 +720,7 @@
                         app:maxValue="10"
                         app:minValue="1"
                         app:type="range" />
+
                 </LinearLayout>
             </androidx.cardview.widget.CardView>
 
@@ -712,65 +752,80 @@
                             android:id="@+id/k215b"
                             style="@style/radiobutton"
                             android:text="@string/k215b" />
+
                     </RadioGroup>
+
                 </LinearLayout>
             </androidx.cardview.widget.CardView>
 
-            <!-- k216  Input-Numeric   -->
-            <androidx.cardview.widget.CardView
-                android:id="@+id/fldGrpCVk216"
-                style="@style/cardView">
 
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:orientation="vertical">
+            <LinearLayout
+                android:id="@+id/fldGrpCVk02"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:visibility='@{k215b.checked? View.VISIBLE : View.GONE}'>
 
-                    <TextView
-                        style="@style/i_textview"
-                        android:text="@string/k216" />
+                <!-- k216  Input-Numeric   -->
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/fldGrpCVk216"
+                    style="@style/cardView">
 
-                    <com.edittextpicker.aliazaz.EditTextPicker
-                        android:id="@+id/k216"
-                        style="@style/EditTextAlphaNumeric"
+                    <LinearLayout
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:hint="@string/k216"
-                        android:inputType="number"
-                        app:mask="##"
-                        app:maxValue="100"
-                        app:minValue="1"
-                        app:type="range" />
-                </LinearLayout>
-            </androidx.cardview.widget.CardView>
+                        android:orientation="vertical">
 
-            <!-- k216a  Input-Numeric   -->
-            <androidx.cardview.widget.CardView
-                android:id="@+id/fldGrpCVk216a"
-                style="@style/cardView">
+                        <TextView
+                            style="@style/i_textview"
+                            android:text="@string/k216" />
 
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:orientation="vertical">
+                        <com.edittextpicker.aliazaz.EditTextPicker
+                            android:id="@+id/k216"
+                            style="@style/EditTextAlphaNumeric"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:hint="@string/k216"
+                            android:inputType="number"
+                            app:mask="##"
+                            app:maxValue="100"
+                            app:minValue="1"
+                            app:type="range" />
 
-                    <TextView
-                        style="@style/i_textview"
-                        android:text="@string/k216a" />
+                    </LinearLayout>
+                </androidx.cardview.widget.CardView>
 
-                    <com.edittextpicker.aliazaz.EditTextPicker
-                        android:id="@+id/k216a"
-                        style="@style/EditTextAlphaNumeric"
+                <!-- k216a  Input-Numeric   -->
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/fldGrpCVk216a"
+                    style="@style/cardView">
+
+                    <LinearLayout
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:hint="@string/k216a"
-                        android:inputType="number"
-                        app:mask="##"
-                        app:maxValue="10"
-                        app:minValue="1"
-                        app:type="range" />
-                </LinearLayout>
-            </androidx.cardview.widget.CardView>
+                        android:orientation="vertical">
+
+                        <TextView
+                            style="@style/i_textview"
+                            android:text="@string/k216a" />
+
+                        <com.edittextpicker.aliazaz.EditTextPicker
+                            android:id="@+id/k216a"
+                            style="@style/EditTextAlphaNumeric"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:hint="@string/k216a"
+                            android:inputType="number"
+                            app:mask="##"
+                            app:maxValue="10"
+                            app:minValue="1"
+                            app:type="range" />
+
+                    </LinearLayout>
+                </androidx.cardview.widget.CardView>
+
+            </LinearLayout>
+
 
             <!-- k217  Input-Numeric   -->
             <androidx.cardview.widget.CardView
@@ -797,6 +852,7 @@
                         app:maxValue="100"
                         app:minValue="1"
                         app:type="range" />
+
                 </LinearLayout>
             </androidx.cardview.widget.CardView>
 
@@ -825,6 +881,7 @@
                         app:maxValue="10"
                         app:minValue="1"
                         app:type="range" />
+
                 </LinearLayout>
             </androidx.cardview.widget.CardView>
 
@@ -853,6 +910,7 @@
                         app:maxValue="100"
                         app:minValue="1"
                         app:type="range" />
+
                 </LinearLayout>
             </androidx.cardview.widget.CardView>
 
@@ -881,6 +939,7 @@
                         app:maxValue="10"
                         app:minValue="1"
                         app:type="range" />
+
                 </LinearLayout>
             </androidx.cardview.widget.CardView>
 
@@ -912,65 +971,80 @@
                             android:id="@+id/k219b"
                             style="@style/radiobutton"
                             android:text="@string/k219b" />
+
                     </RadioGroup>
+
                 </LinearLayout>
             </androidx.cardview.widget.CardView>
 
-            <!-- k220  Input-Numeric   -->
-            <androidx.cardview.widget.CardView
-                android:id="@+id/fldGrpCVk220"
-                style="@style/cardView">
 
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:orientation="vertical">
+            <LinearLayout
+                android:id="@+id/fldGrpCVk03"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:visibility='@{k219b.checked? View.VISIBLE : View.GONE}'>
 
-                    <TextView
-                        style="@style/i_textview"
-                        android:text="@string/k220" />
+                <!-- k220  Input-Numeric   -->
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/fldGrpCVk220"
+                    style="@style/cardView">
 
-                    <com.edittextpicker.aliazaz.EditTextPicker
-                        android:id="@+id/k220"
-                        style="@style/EditTextAlphaNumeric"
+                    <LinearLayout
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:hint="@string/k220"
-                        android:inputType="number"
-                        app:mask="##"
-                        app:maxValue="100"
-                        app:minValue="1"
-                        app:type="range" />
-                </LinearLayout>
-            </androidx.cardview.widget.CardView>
+                        android:orientation="vertical">
 
-            <!-- k220a  Input-Numeric   -->
-            <androidx.cardview.widget.CardView
-                android:id="@+id/fldGrpCVk220a"
-                style="@style/cardView">
+                        <TextView
+                            style="@style/i_textview"
+                            android:text="@string/k220" />
 
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:orientation="vertical">
+                        <com.edittextpicker.aliazaz.EditTextPicker
+                            android:id="@+id/k220"
+                            style="@style/EditTextAlphaNumeric"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:hint="@string/k220"
+                            android:inputType="number"
+                            app:mask="##"
+                            app:maxValue="100"
+                            app:minValue="1"
+                            app:type="range" />
 
-                    <TextView
-                        style="@style/i_textview"
-                        android:text="@string/k220a" />
+                    </LinearLayout>
+                </androidx.cardview.widget.CardView>
 
-                    <com.edittextpicker.aliazaz.EditTextPicker
-                        android:id="@+id/k220a"
-                        style="@style/EditTextAlphaNumeric"
+                <!-- k220a  Input-Numeric   -->
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/fldGrpCVk220a"
+                    style="@style/cardView">
+
+                    <LinearLayout
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:hint="@string/k220a"
-                        android:inputType="number"
-                        app:mask="##"
-                        app:maxValue="10"
-                        app:minValue="1"
-                        app:type="range" />
-                </LinearLayout>
-            </androidx.cardview.widget.CardView>
+                        android:orientation="vertical">
+
+                        <TextView
+                            style="@style/i_textview"
+                            android:text="@string/k220a" />
+
+                        <com.edittextpicker.aliazaz.EditTextPicker
+                            android:id="@+id/k220a"
+                            style="@style/EditTextAlphaNumeric"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:hint="@string/k220a"
+                            android:inputType="number"
+                            app:mask="##"
+                            app:maxValue="10"
+                            app:minValue="1"
+                            app:type="range" />
+
+                    </LinearLayout>
+                </androidx.cardview.widget.CardView>
+
+            </LinearLayout>
+
 
             <!-- k221  Input-Numeric   -->
             <androidx.cardview.widget.CardView
@@ -997,6 +1071,7 @@
                         app:maxValue="100"
                         app:minValue="1"
                         app:type="range" />
+
                 </LinearLayout>
             </androidx.cardview.widget.CardView>
 
@@ -1025,6 +1100,7 @@
                         app:maxValue="10"
                         app:minValue="1"
                         app:type="range" />
+
                 </LinearLayout>
             </androidx.cardview.widget.CardView>
 
@@ -1041,6 +1117,7 @@
                     <TextView
                         style="@style/i_textview"
                         android:text="@string/k221_title" />
+
                 </LinearLayout>
             </androidx.cardview.widget.CardView>
 
@@ -1069,6 +1146,7 @@
                         app:maxValue="100"
                         app:minValue="1"
                         app:type="range" />
+
                 </LinearLayout>
             </androidx.cardview.widget.CardView>
 
@@ -1097,6 +1175,7 @@
                         app:maxValue="10"
                         app:minValue="1"
                         app:type="range" />
+
                 </LinearLayout>
             </androidx.cardview.widget.CardView>
 
@@ -1128,65 +1207,80 @@
                             android:id="@+id/k223b"
                             style="@style/radiobutton"
                             android:text="@string/k223b" />
+
                     </RadioGroup>
+
                 </LinearLayout>
             </androidx.cardview.widget.CardView>
 
-            <!-- k224  Input-Numeric   -->
-            <androidx.cardview.widget.CardView
-                android:id="@+id/fldGrpCVk224"
-                style="@style/cardView">
 
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:orientation="vertical">
+            <LinearLayout
+                android:id="@+id/fldGrpCVk04"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:visibility='@{k223b.checked? View.VISIBLE : View.GONE}'>
 
-                    <TextView
-                        style="@style/i_textview"
-                        android:text="@string/k224" />
+                <!-- k224  Input-Numeric   -->
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/fldGrpCVk224"
+                    style="@style/cardView">
 
-                    <com.edittextpicker.aliazaz.EditTextPicker
-                        android:id="@+id/k224"
-                        style="@style/EditTextAlphaNumeric"
+                    <LinearLayout
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:hint="@string/k224"
-                        android:inputType="number"
-                        app:mask="##"
-                        app:maxValue="100"
-                        app:minValue="1"
-                        app:type="range" />
-                </LinearLayout>
-            </androidx.cardview.widget.CardView>
+                        android:orientation="vertical">
 
-            <!-- k224a  Input-Numeric   -->
-            <androidx.cardview.widget.CardView
-                android:id="@+id/fldGrpCVk224a"
-                style="@style/cardView">
+                        <TextView
+                            style="@style/i_textview"
+                            android:text="@string/k224" />
 
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:orientation="vertical">
+                        <com.edittextpicker.aliazaz.EditTextPicker
+                            android:id="@+id/k224"
+                            style="@style/EditTextAlphaNumeric"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:hint="@string/k224"
+                            android:inputType="number"
+                            app:mask="##"
+                            app:maxValue="100"
+                            app:minValue="1"
+                            app:type="range" />
 
-                    <TextView
-                        style="@style/i_textview"
-                        android:text="@string/k224a" />
+                    </LinearLayout>
+                </androidx.cardview.widget.CardView>
 
-                    <com.edittextpicker.aliazaz.EditTextPicker
-                        android:id="@+id/k224a"
-                        style="@style/EditTextAlphaNumeric"
+                <!-- k224a  Input-Numeric   -->
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/fldGrpCVk224a"
+                    style="@style/cardView">
+
+                    <LinearLayout
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:hint="@string/k224a"
-                        android:inputType="number"
-                        app:mask="##"
-                        app:maxValue="10"
-                        app:minValue="1"
-                        app:type="range" />
-                </LinearLayout>
-            </androidx.cardview.widget.CardView>
+                        android:orientation="vertical">
+
+                        <TextView
+                            style="@style/i_textview"
+                            android:text="@string/k224a" />
+
+                        <com.edittextpicker.aliazaz.EditTextPicker
+                            android:id="@+id/k224a"
+                            style="@style/EditTextAlphaNumeric"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:hint="@string/k224a"
+                            android:inputType="number"
+                            app:mask="##"
+                            app:maxValue="10"
+                            app:minValue="1"
+                            app:type="range" />
+
+                    </LinearLayout>
+                </androidx.cardview.widget.CardView>
+
+            </LinearLayout>
+
 
             <!-- k225  Input-Numeric   -->
             <androidx.cardview.widget.CardView
@@ -1213,6 +1307,7 @@
                         app:maxValue="100"
                         app:minValue="1"
                         app:type="range" />
+
                 </LinearLayout>
             </androidx.cardview.widget.CardView>
 
@@ -1241,6 +1336,7 @@
                         app:maxValue="10"
                         app:minValue="1"
                         app:type="range" />
+
                 </LinearLayout>
             </androidx.cardview.widget.CardView>
 
@@ -1269,6 +1365,7 @@
                         app:maxValue="100"
                         app:minValue="1"
                         app:type="range" />
+
                 </LinearLayout>
             </androidx.cardview.widget.CardView>
 
@@ -1297,6 +1394,7 @@
                         app:maxValue="10"
                         app:minValue="1"
                         app:type="range" />
+
                 </LinearLayout>
             </androidx.cardview.widget.CardView>
 
@@ -1328,65 +1426,80 @@
                             android:id="@+id/k227b"
                             style="@style/radiobutton"
                             android:text="@string/k227b" />
+
                     </RadioGroup>
+
                 </LinearLayout>
             </androidx.cardview.widget.CardView>
 
-            <!-- k228  Input-Numeric   -->
-            <androidx.cardview.widget.CardView
-                android:id="@+id/fldGrpCVk228"
-                style="@style/cardView">
 
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:orientation="vertical">
+            <LinearLayout
+                android:id="@+id/fldGrpCVk05"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:visibility='@{k227b.checked? View.VISIBLE : View.GONE}'>
 
-                    <TextView
-                        style="@style/i_textview"
-                        android:text="@string/k228" />
+                <!-- k228  Input-Numeric   -->
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/fldGrpCVk228"
+                    style="@style/cardView">
 
-                    <com.edittextpicker.aliazaz.EditTextPicker
-                        android:id="@+id/k228"
-                        style="@style/EditTextAlphaNumeric"
+                    <LinearLayout
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:hint="@string/k228"
-                        android:inputType="number"
-                        app:mask="##"
-                        app:maxValue="100"
-                        app:minValue="1"
-                        app:type="range" />
-                </LinearLayout>
-            </androidx.cardview.widget.CardView>
+                        android:orientation="vertical">
 
-            <!-- k228a  Input-Numeric   -->
-            <androidx.cardview.widget.CardView
-                android:id="@+id/fldGrpCVk228a"
-                style="@style/cardView">
+                        <TextView
+                            style="@style/i_textview"
+                            android:text="@string/k228" />
 
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:orientation="vertical">
+                        <com.edittextpicker.aliazaz.EditTextPicker
+                            android:id="@+id/k228"
+                            style="@style/EditTextAlphaNumeric"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:hint="@string/k228"
+                            android:inputType="number"
+                            app:mask="##"
+                            app:maxValue="100"
+                            app:minValue="1"
+                            app:type="range" />
 
-                    <TextView
-                        style="@style/i_textview"
-                        android:text="@string/k228a" />
+                    </LinearLayout>
+                </androidx.cardview.widget.CardView>
 
-                    <com.edittextpicker.aliazaz.EditTextPicker
-                        android:id="@+id/k228a"
-                        style="@style/EditTextAlphaNumeric"
+                <!-- k228a  Input-Numeric   -->
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/fldGrpCVk228a"
+                    style="@style/cardView">
+
+                    <LinearLayout
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:hint="@string/k228a"
-                        android:inputType="number"
-                        app:mask="##"
-                        app:maxValue="10"
-                        app:minValue="1"
-                        app:type="range" />
-                </LinearLayout>
-            </androidx.cardview.widget.CardView>
+                        android:orientation="vertical">
+
+                        <TextView
+                            style="@style/i_textview"
+                            android:text="@string/k228a" />
+
+                        <com.edittextpicker.aliazaz.EditTextPicker
+                            android:id="@+id/k228a"
+                            style="@style/EditTextAlphaNumeric"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:hint="@string/k228a"
+                            android:inputType="number"
+                            app:mask="##"
+                            app:maxValue="10"
+                            app:minValue="1"
+                            app:type="range" />
+
+                    </LinearLayout>
+                </androidx.cardview.widget.CardView>
+
+            </LinearLayout>
+
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -1409,6 +1522,7 @@
                     android:text="Save" />
                 <!--'onClick' for btn_End will NOT change and always call 'endInterview'-->
             </LinearLayout>
+
         </LinearLayout>
 
     </ScrollView>

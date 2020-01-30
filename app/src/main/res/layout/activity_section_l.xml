@@ -14,14 +14,51 @@
 
     <ScrollView
         style="@style/i_scrollview"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+        android:fadeScrollbars="false"
+        android:fillViewport="true"
+        android:layoutDirection="ltr"
+        android:scrollbarSize="10dip"
+        tools:context=".ui.Myactivity">
 
         <LinearLayout
             android:id="@+id/fldGrpSectionL"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="vertical">
+
+            <!-- l101_title  Title   -->
+            <androidx.cardview.widget.CardView
+                android:id="@+id/fldGrpCVl101_title"
+                style="@style/cardView">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <TextView
+                        style="@style/i_textview"
+                        android:text="@string/l101_title" />
+
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+            <!-- l101_title2  Title   -->
+            <androidx.cardview.widget.CardView
+                android:id="@+id/fldGrpCVl101_title2"
+                style="@style/cardView">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <TextView
+                        style="@style/i_textview"
+                        android:text="@string/l101_title2" />
+
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
 
             <!-- l101  Input   -->
             <androidx.cardview.widget.CardView
@@ -44,38 +81,7 @@
                         android:layout_height="wrap_content"
                         android:hint="@string/l101"
                         android:textColor="@android:color/black" />
-                </LinearLayout>
-            </androidx.cardview.widget.CardView>
 
-            <!-- l101_title  Title   -->
-            <androidx.cardview.widget.CardView
-                android:id="@+id/fldGrpCVl101_title"
-                style="@style/cardView">
-
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:orientation="vertical">
-
-                    <TextView
-                        style="@style/i_textview"
-                        android:text="@string/l101_title" />
-                </LinearLayout>
-            </androidx.cardview.widget.CardView>
-
-            <!-- l101_title2  Title   -->
-            <androidx.cardview.widget.CardView
-                android:id="@+id/fldGrpCVl101_title2"
-                style="@style/cardView">
-
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:orientation="vertical">
-
-                    <TextView
-                        style="@style/i_textview"
-                        android:text="@string/l101_title2" />
                 </LinearLayout>
             </androidx.cardview.widget.CardView>
 
@@ -107,7 +113,9 @@
                             android:id="@+id/l102b"
                             style="@style/radiobutton"
                             android:text="@string/l102b" />
+
                     </RadioGroup>
+
                 </LinearLayout>
             </androidx.cardview.widget.CardView>
 
@@ -144,7 +152,26 @@
                             android:id="@+id/l103c"
                             style="@style/radiobutton"
                             android:text="@string/l103c" />
+
                     </RadioGroup>
+
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+            <!-- l104_title  Title   -->
+            <androidx.cardview.widget.CardView
+                android:id="@+id/fldGrpCVl104_title"
+                style="@style/cardView">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <TextView
+                        style="@style/i_textview"
+                        android:text="@string/l104_title" />
+
                 </LinearLayout>
             </androidx.cardview.widget.CardView>
 
@@ -173,22 +200,7 @@
                         android:layout_height="wrap_content"
                         android:hint="@string/l104"
                         android:inputType="number" />
-                </LinearLayout>
-            </androidx.cardview.widget.CardView>
 
-            <!-- l104_title  Title   -->
-            <androidx.cardview.widget.CardView
-                android:id="@+id/fldGrpCVl104_title"
-                style="@style/cardView">
-
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:orientation="vertical">
-
-                    <TextView
-                        style="@style/i_textview"
-                        android:text="@string/l104_title" />
                 </LinearLayout>
             </androidx.cardview.widget.CardView>
 
@@ -213,6 +225,7 @@
                     android:text="Save" />
                 <!--'onClick' for btn_End will NOT change and always call 'endInterview'-->
             </LinearLayout>
+
         </LinearLayout>
 
     </ScrollView>
