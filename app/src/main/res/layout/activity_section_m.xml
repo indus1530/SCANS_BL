@@ -1001,7 +1001,7 @@
                         android:text='@{m110a.checked? m110at.getText().toString() : ""}'
                         android:visibility='@{m110a.checked? View.VISIBLE : View.GONE}'
                         app:defaultValue=""
-                        app:mask="###-#"
+                        app:mask="###.#"
                         app:pattern="^(\\d{3,3}\\.\\d{1,1})$"
                         app:type="equal" />
 
@@ -1012,7 +1012,7 @@
                         android:text='@{m110b.checked? m110bt.getText().toString() : ""}'
                         android:visibility='@{m110b.checked? View.VISIBLE : View.GONE}'
                         app:defaultValue=""
-                        app:mask="###-#"
+                        app:mask="###.#"
                         app:pattern="^(\\d{3,3}\\.\\d{1,1})$"
                         app:type="equal" />
 
