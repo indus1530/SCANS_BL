@@ -535,12 +535,12 @@
                         <RadioButton
                             android:id="@+id/l111c"
                             style="@style/radiobutton"
-                            android:text="@string/dkn" />
+                            android:text="@string/l111d" />
 
                         <RadioButton
                             android:id="@+id/l111d"
                             style="@style/radiobutton"
-                            android:text="@string/l111d" />
+                            android:text="@string/dkn" />
 
                     </RadioGroup>
 

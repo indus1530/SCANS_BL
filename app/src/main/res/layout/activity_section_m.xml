@@ -966,7 +966,7 @@
                         style="@style/i_textview"
                         android:text="@string/m110" />
 
-                    <RadioGroup
+                    <RadioGrouph
                         android:id="@+id/m110"
                         style="@style/radiogroup"
                         android:orientation="horizontal">
@@ -992,7 +992,7 @@
                             android:layout_weight="1"
                             android:text="@string/dkn" />
 
-                    </RadioGroup>
+                    </RadioGrouph>
 
                     <com.edittextpicker.aliazaz.EditTextPicker
                         android:id="@+id/m110at"

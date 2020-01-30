@@ -157,15 +157,15 @@ public class SectionE1Activity extends AppCompatActivity {
         json.put("cluster", MainApp.fc.getClusterCode());
 
         json.put("e100", bi.womanSpinner.getSelectedItem().toString());
+
         json.put("e101",
                 bi.e101a.isChecked() ? "1" :
-                        bi.e101b.isChecked() ? "2" :
-                                "0");
+                        bi.e101b.isChecked() ? "2" : "0");
+
         json.put("e102", bi.e102.getText().toString());
-        json.put("e102a",
-                bi.e102aa.isChecked() ? "1" :
-                        bi.e102ab.isChecked() ? "2" :
-                                "0");
+
+        json.put("e102a", bi.e102aa.isChecked() ? "1" :
+                bi.e102ab.isChecked() ? "2" : "0");
 
 
         // Deleting item in list

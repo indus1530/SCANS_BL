@@ -708,12 +708,12 @@
                                 style="@style/radiobutton"
                                 android:text="@string/no" />
 
-                            <RadioButton
+                            <!--<RadioButton
                                 android:id="@+id/j122c"
                                 android:layout_width="0dp"
                                 android:layout_weight="1"
                                 style="@style/radiobutton"
-                                android:text="@string/dkn" />
+                                android:text="@string/dkn" />-->
 
                         </RadioGroup>
 

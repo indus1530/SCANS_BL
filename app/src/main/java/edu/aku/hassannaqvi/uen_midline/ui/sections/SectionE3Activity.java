@@ -111,10 +111,8 @@ public class SectionE3Activity extends AppCompatActivity {
 
         JSONObject json = new JSONObject();
 
-        json.put("e116",
-                bi.e116a.isChecked() ? "1" :
-                        bi.e116b.isChecked() ? "2" :
-                                "0");
+        json.put("e116", bi.e116a.isChecked() ? "1" :
+                bi.e116b.isChecked() ? "2" : "0");
 
         json.put("e117", bi.e117.getText().toString());
 

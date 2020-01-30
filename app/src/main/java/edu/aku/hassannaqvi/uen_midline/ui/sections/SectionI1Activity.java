@@ -221,6 +221,7 @@ public class SectionI1Activity extends AppCompatActivity {
         json.put("i1_res_fm_serial", res_child.getSerialno());
 
         json.put("i100", bi.i100.getSelectedItem().toString());
+
         json.put("i101", bi.i101a.isChecked() ? "1" :
                 bi.i101b.isChecked() ? "2" : "0");
 

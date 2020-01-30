@@ -82,6 +82,7 @@ public class SectionMActivity extends AppCompatActivity {
     }
 
     private void SaveDraft() throws JSONException {
+
         JSONObject json = new JSONObject();
         json.put("m101",
                 bi.m101a.isChecked() ? "1" :
@@ -135,7 +136,7 @@ public class SectionMActivity extends AppCompatActivity {
                                                                 bi.m105g.isChecked() ? "7" :
                                                                         bi.m105h.isChecked() ? "8" :
                                                                                 bi.m105i.isChecked() ? "9" :
-                                                                                        bi.m105j.isChecked() ? "Uncovered adobe" :
+                                                                                        bi.m105j.isChecked() ? "10" :
                                                                                                 bi.m105k.isChecked() ? "11" :
                                                                                                         bi.m105l.isChecked() ? "12" :
                                                                                                                 bi.m105m.isChecked() ? "13" :
@@ -160,6 +161,10 @@ public class SectionMActivity extends AppCompatActivity {
         json.put("m107c",
                 bi.m107ca.isChecked() ? "1" :
                         bi.m107cb.isChecked() ? "2" :
+                                "0");
+        json.put("m107d",
+                bi.m107da.isChecked() ? "1" :
+                        bi.m107db.isChecked() ? "2" :
                                 "0");
         json.put("m107e",
                 bi.m108ea.isChecked() ? "1" :
@@ -225,7 +230,8 @@ public class SectionMActivity extends AppCompatActivity {
                                 "0");
         json.put("m114d",
                 bi.m114da.isChecked() ? "1" :
-                        "0");
+                        bi.m114db.isChecked() ? "2" :
+                                "0");
         json.put("m114e",
                 bi.m114ea.isChecked() ? "1" :
                         bi.m114eb.isChecked() ? "2" :

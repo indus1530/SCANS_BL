@@ -526,7 +526,7 @@
 
     <string name="f133"> F133:\t Did the nature of your household work (physical exertion) change during the pregnancy with {NAME} ? </string>
     <string name="f133a"> Yes, more than usual </string>
-    <string name="f133b"> Radio Yes, less than usual </string>
+    <string name="f133b"> Yes, less than usual </string>
     <string name="f133c"> Remains Same </string>
 
     <string name="f134"> F134:\t What preparedness measures did you take for {NAME}’s birth ? </string>

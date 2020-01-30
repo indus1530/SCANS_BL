@@ -383,7 +383,7 @@ public class SectionJ03Activity extends AppCompatActivity {
         json.put("j122",
                 bi.j122a.isChecked() ? "1" :
                         bi.j122b.isChecked() ? "2" :
-                                bi.j122c.isChecked() ? "98" :
+//                                bi.j122c.isChecked() ? "98" :
                                         "0");
 
         json.put("j123a", bi.j123a.isChecked() ? "1" : "0");
