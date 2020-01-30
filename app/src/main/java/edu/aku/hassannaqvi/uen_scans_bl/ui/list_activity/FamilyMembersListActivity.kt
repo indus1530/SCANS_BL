@@ -20,8 +20,6 @@ import edu.aku.hassannaqvi.uen_scans_bl.databinding.ActivityFamilyMembersListBin
 import edu.aku.hassannaqvi.uen_scans_bl.databinding.ItemMemListBinding
 import edu.aku.hassannaqvi.uen_scans_bl.otherClasses.KishGrid
 import edu.aku.hassannaqvi.uen_scans_bl.ui.sections.SectionDActivity
-import edu.aku.hassannaqvi.uen_scans_bl.ui.sections.SectionE1Activity
-import edu.aku.hassannaqvi.uen_scans_bl.ui.sections.SectionE3Activity
 import edu.aku.hassannaqvi.uen_scans_bl.utils.Util
 import edu.aku.hassannaqvi.uen_scans_bl.viewmodel.MainVModel
 import kotlinx.android.synthetic.main.activity_family_members_list.*
