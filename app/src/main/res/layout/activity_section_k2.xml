@@ -261,9 +261,8 @@
                 </LinearLayout>
             </androidx.cardview.widget.CardView>
 
-            <!-- k206  Title   -->
+            <!-- k206 (d/m/y)Title   -->
             <androidx.cardview.widget.CardView
-                android:id="@+id/fldGrpCVk206"
                 style="@style/cardView">
 
                 <LinearLayout
@@ -275,60 +274,85 @@
                         style="@style/i_textview"
                         android:text="@string/k206" />
 
-                    <TextView
-                        style="@style/i_textview"
-                        android:text="@string/k206dd" />
+                    <LinearLayout
+                        android:id="@+id/fldGrpCVk206"
+                        style="@style/linearlayout_view_wt_bound"
+                        android:orientation="horizontal">
 
-                    <com.edittextpicker.aliazaz.EditTextPicker
-                        android:id="@+id/k206dd"
-                        style="@style/EditTextAlphaNumeric"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:hint="@string/k206dd"
-                        android:inputType="number"
-                        app:mask="##"
-                        app:maxValue="30"
-                        app:minValue="1"
-                        app:type="range" />
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:orientation="vertical">
 
-                    <TextView
-                        style="@style/i_textview"
-                        android:text="@string/k206mm" />
+                            <TextView
+                                style="@style/textView3Head"
+                                android:text="@string/k206dd" />
 
-                    <com.edittextpicker.aliazaz.EditTextPicker
-                        android:id="@+id/k206mm"
-                        style="@style/EditTextAlphaNumeric"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:hint="@string/k206mm"
-                        android:inputType="number"
-                        app:mask="##"
-                        app:maxValue="12"
-                        app:minValue="1"
-                        app:type="range" />
+                            <com.edittextpicker.aliazaz.EditTextPicker
+                                android:id="@+id/k206dd"
+                                style="@style/EditTextNum"
+                                android:hint="@string/k206dd"
+                                android:maxLength="2"
+                                app:defaultValue="00"
+                                app:maxValue="30"
+                                app:minValue="1"
+                                app:type="range" />
 
-                    <TextView
-                        style="@style/i_textview"
-                        android:text="@string/k206yy" />
+                        </LinearLayout>
 
-                    <com.edittextpicker.aliazaz.EditTextPicker
-                        android:id="@+id/k206yy"
-                        style="@style/EditTextAlphaNumeric"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:hint="@string/k206yy"
-                        android:inputType="number"
-                        app:mask="##"
-                        app:maxValue="20"
-                        app:minValue="1"
-                        app:type="range" />
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:orientation="vertical">
+
+                            <TextView
+                                style="@style/textView3Head"
+                                android:text="@string/k206mm" />
+
+                            <com.edittextpicker.aliazaz.EditTextPicker
+                                android:id="@+id/k206mm"
+                                style="@style/EditTextNum"
+                                android:hint="@string/k206mm"
+                                android:maxLength="2"
+                                app:defaultValue="00"
+                                app:maxValue="11"
+                                app:minValue="1"
+                                app:type="range" />
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:orientation="vertical">
+
+                            <TextView
+                                style="@style/textView3Head"
+                                android:text="@string/k206yy" />
+
+                            <com.edittextpicker.aliazaz.EditTextPicker
+                                android:id="@+id/k206yy"
+                                style="@style/EditTextNum"
+                                android:hint="@string/k206yy"
+                                android:maxLength="4"
+                                app:defaultValue="00"
+                                app:maxValue="0"
+                                app:minValue="0"
+                                app:type="range" />
+
+                        </LinearLayout>
+
+                    </LinearLayout>
 
                 </LinearLayout>
+
             </androidx.cardview.widget.CardView>
 
-            <!-- k207  Title   -->
+            <!-- k206 (d/m/y)Title   -->
             <androidx.cardview.widget.CardView
-                android:id="@+id/fldGrpCVk207"
                 style="@style/cardView">
 
                 <LinearLayout
@@ -340,39 +364,59 @@
                         style="@style/i_textview"
                         android:text="@string/k207" />
 
-                    <TextView
-                        style="@style/i_textview"
-                        android:text="@string/k207hh" />
+                    <LinearLayout
+                        android:id="@+id/fldGrpCVk207"
+                        style="@style/linearlayout_view_wt_bound"
+                        android:orientation="horizontal">
 
-                    <com.edittextpicker.aliazaz.EditTextPicker
-                        android:id="@+id/k207hh"
-                        style="@style/EditTextAlphaNumeric"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:hint="@string/k207hh"
-                        android:inputType="number"
-                        app:mask="##"
-                        app:maxValue="24"
-                        app:minValue="1"
-                        app:type="range" />
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:orientation="vertical">
 
-                    <TextView
-                        style="@style/i_textview"
-                        android:text="@string/k207mm" />
+                            <TextView
+                                style="@style/textView3Head"
+                                android:text="@string/k207hh" />
 
-                    <com.edittextpicker.aliazaz.EditTextPicker
-                        android:id="@+id/k207mm"
-                        style="@style/EditTextAlphaNumeric"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:hint="@string/k207mm"
-                        android:inputType="number"
-                        app:mask="##"
-                        app:maxValue="60"
-                        app:minValue="1"
-                        app:type="range" />
+                            <com.edittextpicker.aliazaz.EditTextPicker
+                                android:id="@+id/k207hh"
+                                style="@style/EditTextNum"
+                                android:hint="@string/k207hh"
+                                android:maxLength="2"
+                                app:defaultValue="00"
+                                app:maxValue="24"
+                                app:minValue="1"
+                                app:type="range" />
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:orientation="vertical">
+
+                            <TextView
+                                style="@style/textView3Head"
+                                android:text="@string/k207mm" />
+
+                            <com.edittextpicker.aliazaz.EditTextPicker
+                                android:id="@+id/k207mm"
+                                style="@style/EditTextNum"
+                                android:hint="@string/k207mm"
+                                android:maxLength="2"
+                                app:defaultValue="00"
+                                app:maxValue="60"
+                                app:minValue="1"
+                                app:type="range" />
+
+                        </LinearLayout>
+
+                    </LinearLayout>
 
                 </LinearLayout>
+
             </androidx.cardview.widget.CardView>
 
             <!-- k208  Radio   -->
