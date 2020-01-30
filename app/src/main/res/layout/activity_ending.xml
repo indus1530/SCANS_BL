@@ -9,7 +9,7 @@
 
         <variable
             name="callback"
-            type="edu.aku.hassannaqvi.uen_midline.ui.other.EndingActivity" />
+            type="edu.aku.hassannaqvi.uen_scans_bl.ui.other.EndingActivity" />
     </data>
 
     <ScrollView

@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="edu.aku.hassannaqvi.uen_midline">
+    package="edu.aku.hassannaqvi.uen_scans_bl">
 
     <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" /> <!-- Needed only if your app targets Android 5.0 (API level 21) or higher. -->
     <uses-feature android:name="android.hardware.location.gps" />
@@ -16,7 +16,7 @@
     <uses-permission android:name="android.permission.READ_PHONE_STATE" />
 
     <application
-        android:name=".core.MainApp"
+        android:name="edu.aku.hassannaqvi.uen_scans_bl.core.MainApp"
         android:allowBackup="true"
         android:icon="@drawable/uenlogo"
         android:label="@string/app_name"
@@ -24,7 +24,7 @@
         android:theme="@style/AppTheme1">
 
         <activity
-            android:name=".ui.other.SplashscreenActivity"
+            android:name="edu.aku.hassannaqvi.uen_scans_bl.ui.other.SplashscreenActivity"
             android:screenOrientation="portrait">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -34,144 +34,144 @@
 
 
         <activity
-            android:name=".ui.other.LoginActivity"
+            android:name="edu.aku.hassannaqvi.uen_scans_bl.ui.other.LoginActivity"
             android:screenOrientation="portrait"
             android:theme="@style/AppTheme" />
 
         <activity
-            android:name=".ui.sections.SectionAActivity"
+            android:name="edu.aku.hassannaqvi.uen_scans_bl.ui.sections.SectionAActivity"
             android:label="@string/taheading"
             android:screenOrientation="portrait" />
 
         <activity
-            android:name=".ui.list_activity.FamilyMembersListActivity"
+            android:name="edu.aku.hassannaqvi.uen_scans_bl.ui.list_activity.FamilyMembersListActivity"
             android:screenOrientation="portrait"
             android:theme="@style/AppTheme" />
 
         <activity
-            android:name=".ui.sections.SectionDActivity"
+            android:name="edu.aku.hassannaqvi.uen_scans_bl.ui.sections.SectionDActivity"
             android:label="@string/tdheading"
-            android:parentActivityName=".ui.list_activity.FamilyMembersListActivity"
+            android:parentActivityName="edu.aku.hassannaqvi.uen_scans_bl.ui.list_activity.FamilyMembersListActivity"
             android:screenOrientation="portrait">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
-                android:value="edu.aku.hassannaqvi.uen_midline.ui.list_activity.FamilyMembersListActivity" />
+                android:value="edu.aku.hassannaqvi.uen_scans_bl.ui.list_activity.FamilyMembersListActivity" />
         </activity>
 
         <activity
-            android:name=".ui.sections.SectionE1Activity"
+            android:name="edu.aku.hassannaqvi.uen_scans_bl.ui.sections.SectionE1Activity"
             android:label="@string/teheading"
             android:screenOrientation="portrait" />
 
         <activity
-            android:name=".ui.sections.SectionE2Activity"
+            android:name="edu.aku.hassannaqvi.uen_scans_bl.ui.sections.SectionE2Activity"
             android:label="@string/teheading"
             android:screenOrientation="portrait" />
 
         <activity
-            android:name=".ui.sections.SectionE3Activity"
+            android:name="edu.aku.hassannaqvi.uen_scans_bl.ui.sections.SectionE3Activity"
             android:label="@string/teheading"
             android:screenOrientation="portrait" />
 
         <activity
-            android:name=".ui.sections.SectionE4Activity"
+            android:name="edu.aku.hassannaqvi.uen_scans_bl.ui.sections.SectionE4Activity"
             android:label="@string/teheading"
             android:screenOrientation="portrait" />
 
         <activity
-            android:name=".ui.sections.SectionFActivity"
+            android:name="edu.aku.hassannaqvi.uen_scans_bl.ui.sections.SectionFActivity"
             android:label="@string/tfheading"
             android:screenOrientation="portrait" />
 
         <activity
-            android:name=".ui.sections.SectionF02Activity"
+            android:name="edu.aku.hassannaqvi.uen_scans_bl.ui.sections.SectionF02Activity"
             android:label="@string/tfheading"
             android:screenOrientation="portrait" />
 
         <activity
-            android:name=".ui.sections.SectionGActivity"
+            android:name="edu.aku.hassannaqvi.uen_scans_bl.ui.sections.SectionGActivity"
             android:label="@string/tgheading"
             android:screenOrientation="portrait" />
 
         <activity
-            android:name=".ui.sections.SectionH1Activity"
+            android:name="edu.aku.hassannaqvi.uen_scans_bl.ui.sections.SectionH1Activity"
             android:label="@string/th1heading"
             android:screenOrientation="portrait" />
 
         <activity
-            android:name=".ui.sections.SectionH2Activity"
+            android:name="edu.aku.hassannaqvi.uen_scans_bl.ui.sections.SectionH2Activity"
             android:label="@string/th2heading"
             android:screenOrientation="portrait" />
 
         <activity
-            android:name=".ui.sections.SectionI1Activity"
+            android:name="edu.aku.hassannaqvi.uen_scans_bl.ui.sections.SectionI1Activity"
             android:label="@string/tiheading"
             android:screenOrientation="portrait" />
 
         <activity
-            android:name=".ui.sections.SectionI2Activity"
+            android:name="edu.aku.hassannaqvi.uen_scans_bl.ui.sections.SectionI2Activity"
             android:label="@string/tiheading"
             android:screenOrientation="portrait" />
 
         <activity
-            android:name=".ui.sections.SectionJActivity"
+            android:name="edu.aku.hassannaqvi.uen_scans_bl.ui.sections.SectionJActivity"
             android:label="@string/tjheading"
             android:screenOrientation="portrait" />
 
         <activity
-            android:name=".ui.sections.SectionJ02Activity"
+            android:name="edu.aku.hassannaqvi.uen_scans_bl.ui.sections.SectionJ02Activity"
             android:label="@string/tjheading"
             android:screenOrientation="portrait"></activity>
 
         <activity
-            android:name=".ui.sections.SectionJ03Activity"
+            android:name="edu.aku.hassannaqvi.uen_scans_bl.ui.sections.SectionJ03Activity"
             android:label="@string/tjheading"
             android:screenOrientation="portrait" />
 
         <activity
-            android:name=".ui.sections.SectionKActivity"
+            android:name="edu.aku.hassannaqvi.uen_scans_bl.ui.sections.SectionKActivity"
             android:label="@string/tkheading"
             android:screenOrientation="portrait" />
 
         <activity
-            android:name=".ui.sections.SectionLActivity"
+            android:name="edu.aku.hassannaqvi.uen_scans_bl.ui.sections.SectionLActivity"
             android:label="@string/tlheading"
             android:screenOrientation="portrait" />
 
         <activity
-            android:name=".ui.sections.SectionMActivity"
+            android:name="edu.aku.hassannaqvi.uen_scans_bl.ui.sections.SectionMActivity"
             android:label="@string/tmheading"
             android:screenOrientation="portrait" />
 
         <activity
-            android:name=".ui.sections.SectionNActivity"
+            android:name="edu.aku.hassannaqvi.uen_scans_bl.ui.sections.SectionNActivity"
             android:label="@string/tnheading"
             android:screenOrientation="portrait" />
 
         <activity
-            android:name=".ui.sections.SectionOActivity"
+            android:name="edu.aku.hassannaqvi.uen_scans_bl.ui.sections.SectionOActivity"
             android:label="@string/toheading"
             android:screenOrientation="portrait" />
 
         <activity
-            android:name=".ui.other.EndingActivity"
+            android:name="edu.aku.hassannaqvi.uen_scans_bl.ui.other.EndingActivity"
             android:screenOrientation="portrait" />
 
         <activity
-            android:name=".ui.other.MainActivity"
+            android:name="edu.aku.hassannaqvi.uen_scans_bl.ui.other.MainActivity"
             android:screenOrientation="portrait" />
 
         <activity
-            android:name=".core.AndroidDatabaseManager"
-            android:parentActivityName=".ui.other.MainActivity"
+            android:name="edu.aku.hassannaqvi.uen_scans_bl.core.AndroidDatabaseManager"
+            android:parentActivityName="edu.aku.hassannaqvi.uen_scans_bl.ui.other.MainActivity"
             android:screenOrientation="portrait" />
 
         <activity
-            android:name=".ui.sync.SyncActivity"
-            android:parentActivityName=".ui.other.MainActivity"
+            android:name="edu.aku.hassannaqvi.uen_scans_bl.ui.sync.SyncActivity"
+            android:parentActivityName="edu.aku.hassannaqvi.uen_scans_bl.ui.other.MainActivity"
             android:screenOrientation="portrait" />
 
-        <service android:name=".DownloadFileService" />
+        <service android:name="edu.aku.hassannaqvi.uen_scans_bl.DownloadFileService" />
 
     </application>
 
