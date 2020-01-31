@@ -16,10 +16,11 @@
         android:fadeScrollbars="false"
         android:fillViewport="true"
         android:scrollbarSize="10dip"
+        android:layoutDirection="ltr"
         tools:context=".ui.Myactivity">
 
         <LinearLayout
-            android:id="@+id/GrpName"
+            android:id="@+id/fldGrpSectionC1"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="vertical">
@@ -125,6 +126,7 @@
                     <TextView
                         style="@style/i_textview"
                         android:text="@string/c102_title_section" />
+
                 </LinearLayout>
             </androidx.cardview.widget.CardView>
 
@@ -141,6 +143,7 @@
                     <TextView
                         style="@style/i_textview"
                         android:text="@string/c102_title" />
+
                 </LinearLayout>
             </androidx.cardview.widget.CardView>
 
@@ -187,7 +190,9 @@
                             android:id="@+id/c102e"
                             style="@style/radiobutton"
                             android:text="@string/c102e" />
+
                     </RadioGroup>
+
                 </LinearLayout>
             </androidx.cardview.widget.CardView>
 

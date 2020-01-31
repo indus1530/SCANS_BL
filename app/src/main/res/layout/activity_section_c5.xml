@@ -15,10 +15,11 @@
         android:fadeScrollbars="false"
         android:fillViewport="true"
         android:scrollbarSize="10dip"
+        android:layoutDirection="ltr"
         tools:context=".ui.Myactivity">
 
         <LinearLayout
-            android:id="@+id/GrpName"
+            android:id="@+id/fldGrpSectionC5"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="vertical">

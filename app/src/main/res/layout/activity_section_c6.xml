@@ -1,4 +1,5 @@
 <layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools">
 
     <data>
@@ -15,10 +16,11 @@
         android:fadeScrollbars="false"
         android:fillViewport="true"
         android:scrollbarSize="10dip"
+        android:layoutDirection="ltr"
         tools:context=".ui.Myactivity">
 
         <LinearLayout
-            android:id="@+id/GrpName"
+            android:id="@+id/fldGrpSectionC6"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="vertical">
@@ -53,15 +55,14 @@
                         style="@style/i_textview"
                         android:text="@string/ca601" />
 
-                    <RadioButton
-                        android:id="@+id/ca601a"
-                        style="@style/radiobutton"
-                        android:text="@string/ca601a" />
+                    <io.blackbox_vision.datetimepickeredittext.view.TimePickerInputEditText
+                        android:id="@+id/ca601"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="@string/ca601"
+                        app:is24HourView="true"
+                        app:timeFormat="HH:mm" />
 
-                    <RadioButton
-                        android:id="@+id/ca601b"
-                        style="@style/radiobutton"
-                        android:text="@string/ca601b" />
                 </LinearLayout>
             </androidx.cardview.widget.CardView>
 
@@ -79,15 +80,14 @@
                         style="@style/i_textview"
                         android:text="@string/ca602" />
 
-                    <RadioButton
-                        android:id="@+id/ca602a"
-                        style="@style/radiobutton"
-                        android:text="@string/ca602a" />
+                    <io.blackbox_vision.datetimepickeredittext.view.TimePickerInputEditText
+                        android:id="@+id/ca602"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="@string/ca602"
+                        app:is24HourView="true"
+                        app:timeFormat="HH:mm" />
 
-                    <RadioButton
-                        android:id="@+id/ca602b"
-                        style="@style/radiobutton"
-                        android:text="@string/ca602b" />
                 </LinearLayout>
             </androidx.cardview.widget.CardView>
 
@@ -137,15 +137,14 @@
                         style="@style/i_textview"
                         android:text="@string/ca604" />
 
-                    <RadioButton
-                        android:id="@+id/ca604a"
-                        style="@style/radiobutton"
-                        android:text="@string/ca604a" />
+                    <io.blackbox_vision.datetimepickeredittext.view.TimePickerInputEditText
+                        android:id="@+id/ca604"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="@string/ca604"
+                        app:is24HourView="true"
+                        app:timeFormat="HH:mm" />
 
-                    <RadioButton
-                        android:id="@+id/ca604b"
-                        style="@style/radiobutton"
-                        android:text="@string/ca604b" />
                 </LinearLayout>
             </androidx.cardview.widget.CardView>
 
@@ -163,15 +162,14 @@
                         style="@style/i_textview"
                         android:text="@string/ca605" />
 
-                    <RadioButton
-                        android:id="@+id/ca605a"
-                        style="@style/radiobutton"
-                        android:text="@string/ca605a" />
+                    <io.blackbox_vision.datetimepickeredittext.view.TimePickerInputEditText
+                        android:id="@+id/ca605"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="@string/ca605"
+                        app:is24HourView="true"
+                        app:timeFormat="HH:mm" />
 
-                    <RadioButton
-                        android:id="@+id/ca605b"
-                        style="@style/radiobutton"
-                        android:text="@string/ca605b" />
                 </LinearLayout>
             </androidx.cardview.widget.CardView>
 
@@ -279,15 +277,14 @@
                         style="@style/i_textview"
                         android:text="@string/cb601" />
 
-                    <RadioButton
-                        android:id="@+id/cb601a"
-                        style="@style/radiobutton"
-                        android:text="@string/cb601a" />
+                    <io.blackbox_vision.datetimepickeredittext.view.TimePickerInputEditText
+                        android:id="@+id/cb601"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="@string/cb601"
+                        app:is24HourView="true"
+                        app:timeFormat="HH:mm" />
 
-                    <RadioButton
-                        android:id="@+id/cb601b"
-                        style="@style/radiobutton"
-                        android:text="@string/cb601b" />
                 </LinearLayout>
             </androidx.cardview.widget.CardView>
 
@@ -305,15 +302,14 @@
                         style="@style/i_textview"
                         android:text="@string/cb602" />
 
-                    <RadioButton
-                        android:id="@+id/cb602a"
-                        style="@style/radiobutton"
-                        android:text="@string/cb602a" />
+                    <io.blackbox_vision.datetimepickeredittext.view.TimePickerInputEditText
+                        android:id="@+id/cb602"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="@string/cb602"
+                        app:is24HourView="true"
+                        app:timeFormat="HH:mm" />
 
-                    <RadioButton
-                        android:id="@+id/cb602b"
-                        style="@style/radiobutton"
-                        android:text="@string/cb602b" />
                 </LinearLayout>
             </androidx.cardview.widget.CardView>
 
@@ -412,6 +408,7 @@
                     android:text="Save" />
                 <!--'onClick' for btn_End will NOT change and always call 'endInterview'-->
             </LinearLayout>
+
         </LinearLayout>
     </ScrollView>
 </layout>
