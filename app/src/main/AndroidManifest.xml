@@ -22,16 +22,6 @@
         android:label="@string/app_name"
         android:screenOrientation="portrait"
         android:theme="@style/AppTheme1">
-        <activity android:name=".ui.sections.SectionC6Activity"></activity>
-        <activity android:name=".ui.sections.SectionC5Activity" />
-        <activity android:name=".ui.sections.SectionC4Activity" />
-        <activity android:name=".ui.sections.SectionC3Activity" />
-        <activity android:name=".ui.sections.SectionC2Activity" />
-        <activity android:name=".ui.sections.SectionC1Activity" />
-        <activity android:name=".ui.sections.SectionMActivity" />
-        <activity android:name=".ui.sections.SectionK1Activity" />
-        <activity android:name=".ui.sections.SectionK2Activity" />
-        <activity android:name=".ui.sections.SectionLActivity" />
 
         <activity
             android:name=".ui.other.SplashscreenActivity"
@@ -51,6 +41,36 @@
         <activity
             android:name=".ui.sections.SectionAActivity"
             android:label="@string/taheading"
+            android:screenOrientation="portrait" />
+
+        <activity
+            android:name=".ui.sections.SectionC1Activity"
+            android:label="@string/tmheading"
+            android:screenOrientation="portrait" />
+
+        <activity
+            android:name=".ui.sections.SectionC2Activity"
+            android:label="@string/tmheading"
+            android:screenOrientation="portrait" />
+
+        <activity
+            android:name=".ui.sections.SectionC3Activity"
+            android:label="@string/tmheading"
+            android:screenOrientation="portrait" />
+
+        <activity
+            android:name=".ui.sections.SectionC4Activity"
+            android:label="@string/tmheading"
+            android:screenOrientation="portrait" />
+
+        <activity
+            android:name=".ui.sections.SectionC5Activity"
+            android:label="@string/tmheading"
+            android:screenOrientation="portrait" />
+
+        <activity
+            android:name=".ui.sections.SectionC6Activity"
+            android:label="@string/tmheading"
             android:screenOrientation="portrait" />
 
         <activity
