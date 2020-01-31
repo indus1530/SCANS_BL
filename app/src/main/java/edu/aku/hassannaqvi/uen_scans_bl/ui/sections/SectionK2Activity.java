@@ -58,18 +58,6 @@ public class SectionK2Activity extends AppCompatActivity {
             }
         }));
 
-        bi.k223.setOnCheckedChangeListener(((radioGroup, i) -> {
-            if (i != bi.k223b.getId()) {
-                ClearClass.ClearAllFields(bi.fldGrpCVk04, null);
-            }
-        }));
-
-        bi.k227.setOnCheckedChangeListener(((radioGroup, i) -> {
-            if (i != bi.k227b.getId()) {
-                ClearClass.ClearAllFields(bi.fldGrpCVk05, null);
-            }
-        }));
-
     }
 
 
@@ -82,7 +70,7 @@ public class SectionK2Activity extends AppCompatActivity {
             }
             if (UpdateDB()) {
                 finish();
-                startActivity(new Intent(this, SectionLActivity.class));
+                startActivity(new Intent(this, SectionK3Activity.class));
             } else {
                 Toast.makeText(this, "Failed to Update Database!", Toast.LENGTH_SHORT).show();
             }
@@ -185,34 +173,6 @@ public class SectionK2Activity extends AppCompatActivity {
 
         k2.put("k220", bi.k220.getText().toString());
         k2.put("k220a", bi.k220a.getText().toString());
-
-        k2.put("k221", bi.k221.getText().toString());
-        k2.put("k221a", bi.k221a.getText().toString());
-
-        k2.put("k222", bi.k222.getText().toString());
-        k2.put("k222a", bi.k222a.getText().toString());
-
-        k2.put("k223",
-                bi.k223a.isChecked() ? "1" :
-                        bi.k223b.isChecked() ? "2" :
-                                "0");
-
-        k2.put("k224", bi.k224.getText().toString());
-        k2.put("k224a", bi.k224a.getText().toString());
-
-        k2.put("k225", bi.k225.getText().toString());
-        k2.put("k225a", bi.k225a.getText().toString());
-
-        k2.put("k226", bi.k226.getText().toString());
-        k2.put("k226a", bi.k226a.getText().toString());
-
-        k2.put("k227",
-                bi.k227a.isChecked() ? "1" :
-                        bi.k227b.isChecked() ? "2" :
-                                "0");
-
-        k2.put("k228", bi.k228.getText().toString());
-        k2.put("k228a", bi.k228a.getText().toString());
 
     }
 
