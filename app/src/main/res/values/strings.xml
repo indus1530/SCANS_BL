@@ -94,47 +94,47 @@
     <string name="a105h">Qamber Shahdadkot </string>
 
     <!--    <string name="a106"> A106:\t Tehsil/Taluka </string>-->
-    <string name="a106"> Tehsil/Taluka </string>
+    <!--<string name="a106"> Tehsil/Taluka </string>
 
     <string name="a107"> Union Council </string>
 
-    <string name="a108"> Location </string>
+    <string name="a108"> Location </string>-->
     <string name="a108a">Urban </string>
     <string name="a108b">Rural </string>
 
-    <string name="a109"> Village </string>
+    <!--    <string name="a109"> Village </string>-->
 
-    <string name="a110"> Block/mohalla </string>
+    <!--    <string name="a110"> Block/mohalla </string>-->
 
-    <string name="a111"> Street </string>
+    <!--    <string name="a111"> Street </string>-->
 
-    <string name="a112"> House number/khandan number </string>
+    <!--    <string name="a112"> House number/khandan number </string>-->
     <string name="a112a">Not Available</string>
 
     <string name="checkHHpresent"> Selected Head name present (A/C Line listing) </string>
 
-    <string name="b101">Latitude (Example: 24.861462) </string>
-    <string name="b102">Longitude (Example:67.009939)</string>
+    <!--    <string name="b101">Latitude (Example: 24.861462) </string>-->
+    <!--    <string name="b102">Longitude (Example:67.009939)</string>-->
 
-    <string name="c101"> C101:\t Was consent taken ? </string>
+    <!--    <string name="c101"> C101:\t Was consent taken ? </string>-->
 
-    <string name="c101a"> C101A:\t Verbal consent</string>
-    <string name="c101aa"> Yes </string>
-    <string name="c101ab"> No </string>
+    <!--    <string name="c101a"> C101A:\t Verbal consent</string>-->
+    <!--    <string name="c101aa"> Yes </string>-->
+    <!--    <string name="c101ab"> No </string>-->
 
-    <string name="c101b"> C101B:\t Written consent </string>
-    <string name="c101ba"> Yes </string>
-    <string name="c101bb"> No </string>
+    <!--    <string name="c101b"> C101B:\t Written consent </string>-->
+    <!--    <string name="c101ba"> Yes </string>-->
+    <!--    <string name="c101bb"> No </string>-->
 
-    <string name="d101"> D101:\t Member Serial Number </string>
+    <!--    <string name="d101"> D101:\t Member Serial Number </string>-->
 
-    <string name="d102"> D102:\t Name </string>
-    <string name="d102a">Please give me the names of the persons who usually live in your household, starting with the head of the household.</string>
+    <!--    <string name="d102"> D102:\t Name </string>-->
+    <!--    <string name="d102a">Please give me the names of the persons who usually live in your household, starting with the head of the household.</string>-->
 
-    <string name="d103"> D103:\t Relationship to Head of HH </string>
+    <!--    <string name="d103"> D103:\t Relationship to Head of HH </string>-->
     <string name="d103hint"> What is the relationship of [NAME] to the Head of the household ? </string>
-    <string name="d103a"> Head of HH </string>
-    <string name="d103b"> Wife/Husband </string>
+    <!--    <string name="d103a"> Head of HH </string>-->
+    <!--    <string name="d103b"> Wife/Husband </string>-->
     <string name="d103c"> Son/Daughters </string>
     <string name="d103d"> Son in law/Daughter in law </string>
     <string name="d103e"> Grand child </string>
@@ -149,7 +149,7 @@
     <string name="d103n"> Domestic Servant </string>
     <string name="d103o"> Don’t Know </string>
 
-    <string name="d104"> D104:\t Is [NAME] male or female?</string>
+    <!--<string name="d104"> D104:\t Is [NAME] male or female?</string>
     <string name="d104a"> Male </string>
     <string name="d104b"> Female </string>
 
@@ -161,7 +161,7 @@
 
     <string name="d106"> D106:\t Serial no of Father   If father’s relation is “Not Available” in the members list then record code “NA” </string>
     <string name="d106a"> Serial no of Father </string>
-    <string name="d106b"> NA</string>
+    <string name="d106b"> NA</string>-->
 
     <string name="d107"> D107:\t Serial no. of Mother If mother’s relation is “Not Available” in the members list then record code “NA” </string>
     <string name="d107a"> Serial no. of Mother </string>
@@ -217,18 +217,18 @@
     <string name="d115b"> No </string>
 
 
-    <string name="a101"> a101:\t Date of interview: </string>
+    <!--    <string name="a101"> a101:\t Date of interview: </string>-->
     <string name="a101dd"> Day</string>
     <string name="a101mm"> Month</string>
     <string name="a101yy"> Year</string>
-    <string name="a102"> a102:\t Time of interview: In 24 hours format</string>
+    <!--    <string name="a102"> a102:\t Time of interview: In 24 hours format</string>-->
     <string name="a102hh"> Hours</string>
     <string name="a102mm"> Minutes</string>
     <string name="a103a"> a103a:\t Interviewer’s Name </string>
     <string name="a103b"> a103b:\t Interviewer’s Code</string>
-    <string name="a104a"> a104a:\t Team Leader’s name</string>
-    <string name="a104b"> a104b:\t Team Leader’s Code</string>
-    <string name="a105"> a105:\t Cluster number</string>
+    <!--    <string name="a104a"> a104a:\t Team Leader’s name</string>-->
+    <!--    <string name="a104b"> a104b:\t Team Leader’s Code</string>-->
+    <!--    <string name="a105"> a105:\t Cluster number</string>-->
     <string name="a106"> a106:\t Enumeration Block</string>
     <string name="a107"> a107:\t PROVINCE</string>
     <string name="a108"> a108:\t District</string>
@@ -324,7 +324,7 @@
     <string name="a209s"> class 18</string>
     <string name="a209t"> class 19</string>
     <string name="a209u"> 20 class </string>
-    <string name="a209v"> Don't Know</string>
+    <string name="a209v"> Dont Know </string>
     <string name="a209w"> Not Applicable </string>
     <string name="a210"> a210:\t Occupation (10YEARS AND ABOVE)</string>
     <string name="a210a"> Housewife</string>
@@ -1948,7 +1948,7 @@
     <string name="k101a"> Height is Appropriate for his/her age</string>
     <string name="k101b"> Taller than for his/her age</string>
     <string name="k101c"> Shorter than for his/her age</string>
-    <string name="k101_title"> k101_title:\t Read aloud to the selected women of household: Now I would like to ask some questions about you, male head of household and your child.</string>
+    <string name="k101_title"> Read aloud to the selected women of household: Now I would like to ask some questions about you, male head of household and your child.</string>
     <string name="k102"> k102:\t Do you think that your (Child Name) weight is appropriate for his/her age?</string>
     <string name="k102a"> Weight is Appropriate for his/her age</string>
     <string name="k102b"> higher than for his/her age </string>

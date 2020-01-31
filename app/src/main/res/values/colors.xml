@@ -1,11 +1,19 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <color name="colorAccent">#69f0ae</color>
+    <color name="colorAccent">#1E88E5</color>
+    <color name="colorPrimary">#1565C0</color>
+    <color name="colorPrimaryDark">#1565C0</color>
+
+    <color name="ticker_red">#42A5F5</color>
+    <color name="dullWhile">#90CAF9</color>
+
+
+    <!--<color name="colorAccent">#69f0ae</color>
     <color name="colorPrimary">#43a047</color>
     <color name="colorPrimaryDark">#2e7d32</color>
 
     <color name="ticker_red">#64dd17</color>
-    <color name="dullWhile">#f2f2f2</color>
+    <color name="dullWhile">#f2f2f2</color>-->
 
     <color name="dullWhiteOverlay">#99E7E6E6</color>
     <color name="gray">#757575</color>

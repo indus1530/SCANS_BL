@@ -79,7 +79,8 @@
             <LinearLayout
                 android:id="@+id/fldGrpSectionA01"
                 style="@style/linearlayout_view_wt_bound"
-                android:visibility="gone">
+                android:visibility="gone"
+                tools:visibility="visible">
 
                 <LinearLayout
                     android:layout_width="match_parent"
@@ -215,15 +216,11 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:orientation="vertical">
+
                     <!--a112-->
                     <TextView
                         style="@style/i_textview"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:background="@color/colorPrimary"
-                        android:text="@string/a112"
-                        android:textAppearance="?android:attr/textAppearanceLarge"
-                        android:textColor="@android:color/white" />
+                        android:text="@string/a112" />
 
                     <LinearLayout
                         android:layout_width="match_parent"
@@ -234,7 +231,6 @@
                             android:id="@+id/a112"
                             style="@style/EditTextNum"
                             android:layout_weight="1"
-                            android:hint="@string/num"
                             app:defaultValue=""
                             app:mask="####-###"
                             app:pattern="^(\\d{4,4}\\-\\d{3,3})$"
@@ -250,14 +246,17 @@
                             android:textColor="@color/colorPrimaryDark" />
 
                     </LinearLayout>
+
                 </LinearLayout>
+
             </LinearLayout>
 
 
             <LinearLayout
                 android:id="@+id/fldGrpSectionA02"
                 style="@style/linearlayout_view_wt_bound"
-                android:visibility="gone">
+                android:visibility="gone"
+                tools:visibility="visible">
 
                 <LinearLayout
                     android:id="@+id/fldGrpcih110"
@@ -343,13 +342,12 @@
 
                         <EditText
                             android:id="@+id/a110"
-                            style="@style/EditTextAlphaNmeric"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
+                            style="@style/EditTextAlphaNumeric"
                             android:hint="@string/a110"
                             android:textColor="@android:color/black" />
 
                     </LinearLayout>
+
                 </androidx.cardview.widget.CardView>
 
                 <!-- a111  Input   -->
@@ -368,9 +366,7 @@
 
                         <EditText
                             android:id="@+id/a111"
-                            style="@style/EditTextAlphaNmeric"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
+                            style="@style/EditTextAlphaNumeric"
                             android:hint="@string/a111"
                             android:textColor="@android:color/black" />
 
@@ -388,16 +384,17 @@
                     <Button
                         android:id="@+id/btnEnd"
                         style="@style/buttons_bottom"
-                        android:background="@android:color/holo_red_light"
+                        android:background="@android:color/holo_orange_light"
                         android:onClick="@{() -> callback.BtnEnd()}"
                         android:text="@string/end_interview"
-                        android:visibility="gone" />
+                        android:visibility="gone"
+                        tools:visibility="visible" />
                     <!--'onClick' for btn_End will NOT change and always call 'endInterview'-->
 
                     <Button
                         android:id="@+id/btnNext"
                         style="@style/buttons_bottom"
-                        android:background="@android:color/holo_green_light"
+                        android:background="@android:color/holo_blue_dark"
                         android:onClick="@{() -> callback.BtnContinue()}"
                         android:text="@string/nextSection" />
 
@@ -406,6 +403,7 @@
             </LinearLayout>
 
         </LinearLayout>
+
     </ScrollView>
 
 </layout>
