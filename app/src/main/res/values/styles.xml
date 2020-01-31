@@ -72,7 +72,7 @@
         <item name="android:digits">abcdefghijklmnopqrstuvwxyz ABCDEFGHIJKLMNOPQRSTUVWXYZ</item>
     </style>
 
-    <style name="EditTextAlphaNmeric" parent="@style/textInput">
+    <style name="EditTextAlphaNumeric" parent="@style/textInput">
         <item name="android:digits">abcdefghijklmnopqrstuvwxyz ABCDEFGHIJKLMNOPQRSTUVWXYZ
             0123456789
         </item>

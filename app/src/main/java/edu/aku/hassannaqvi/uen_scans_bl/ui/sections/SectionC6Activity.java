@@ -16,42 +16,19 @@ import edu.aku.hassannaqvi.uen_scans_bl.R;
 import edu.aku.hassannaqvi.uen_scans_bl.contracts.KishMWRAContract;
 import edu.aku.hassannaqvi.uen_scans_bl.core.DatabaseHelper;
 import edu.aku.hassannaqvi.uen_scans_bl.core.MainApp;
-import edu.aku.hassannaqvi.uen_scans_bl.databinding.ActivitySectionK1Binding;
+import edu.aku.hassannaqvi.uen_scans_bl.databinding.ActivitySectionC6Binding;
 import edu.aku.hassannaqvi.uen_scans_bl.utils.Util;
-import edu.aku.hassannaqvi.uen_scans_bl.validator.ClearClass;
 
-public class SectionK1Activity extends AppCompatActivity {
+public class SectionC6Activity extends AppCompatActivity {
 
-
-    ActivitySectionK1Binding bi;
+    ActivitySectionC6Binding bi;
 
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        bi = DataBindingUtil.setContentView(this, R.layout.activity_section_k1);
+        bi = DataBindingUtil.setContentView(this, R.layout.activity_section_c2);
         bi.setCallback(this);
-
-        setlistener();
-
-    }
-
-
-    private void setlistener() {
-
-        bi.k103.setOnCheckedChangeListener(((radioGroup, i) -> {
-
-            if (i == bi.k103b.getId()) {
-                ClearClass.ClearAllFields(bi.fldGrpCVk104, null);
-            }
-
-        }));
-
-        /*bi.k105.setOnCheckedChangeListener(((radioGroup, i) -> {
-            if (i != bi.k105aac.getId()) {
-                ClearClass.ClearAllFields(bi.fldGrpCVk106, null);
-            }
-        }));*/
 
     }
 
@@ -65,7 +42,7 @@ public class SectionK1Activity extends AppCompatActivity {
             }
             if (UpdateDB()) {
                 finish();
-                startActivity(new Intent(this, SectionK2Activity.class));
+                startActivity(new Intent(this, SectionD1Activity.class));
             } else {
                 Toast.makeText(this, "Failed to Update Database!", Toast.LENGTH_SHORT).show();
             }
@@ -94,37 +71,54 @@ public class SectionK1Activity extends AppCompatActivity {
 
     private void SaveDraft() throws JSONException {
 
-        JSONObject k1 = new JSONObject();
+        JSONObject f1 = new JSONObject();
 
-        k1.put("k101",
-                bi.k101a.isChecked() ? "1" :
-                        bi.k101b.isChecked() ? "2" :
-                                bi.k101c.isChecked() ? "3" :
-                                        "0");
+        f1.put("ca601", bi.ca601.getText().toString());
 
-        k1.put("k102",
-                bi.k102a.isChecked() ? "1" :
-                        bi.k102b.isChecked() ? "2" :
-                                bi.k102c.isChecked() ? "3" :
-                                        "0");
+        f1.put("ca602", bi.ca602.getText().toString());
 
-        k1.put("k103",
-                bi.k103a.isChecked() ? "1" :
-                        bi.k103b.isChecked() ? "2" :
-                                bi.k103c.isChecked() ? "3" :
-                                        "0");
-
-        k1.put("k104",
-                bi.k104a.isChecked() ? "1" :
-                        bi.k104b.isChecked() ? "98" :
+        f1.put("ca603",
+                bi.ca603a.isChecked() ? "1" :
+                        bi.ca603b.isChecked() ? "2" :
                                 "0");
-        k1.put("k104at", bi.k104at.getText().toString());
+
+        f1.put("ca604", bi.ca604.getText().toString());
+
+        f1.put("ca605", bi.ca605.getText().toString());
+
+        f1.put("ca606",
+                bi.ca606a.isChecked() ? "1" :
+                        bi.ca606b.isChecked() ? "2" :
+                                "0");
+
+        f1.put("ca607",
+                bi.ca607a.isChecked() ? "1" :
+                        bi.ca607b.isChecked() ? "2" :
+                                bi.ca607c.isChecked() ? "3" :
+                                        bi.ca607d.isChecked() ? "4" :
+                                                "0");
+
+        f1.put("cb601", bi.cb601.getText().toString());
+
+        f1.put("cb602", bi.cb602.getText().toString());
+
+        f1.put("cb603",
+                bi.cb603a.isChecked() ? "1" :
+                        bi.cb603b.isChecked() ? "2" :
+                                "0");
+
+        f1.put("cb604",
+                bi.cb604a.isChecked() ? "1" :
+                        bi.cb604b.isChecked() ? "2" :
+                                bi.cb604c.isChecked() ? "3" :
+                                        bi.cb604d.isChecked() ? "4" :
+                                                "0");
 
     }
 
 
     private boolean formValidation() {
-        return Validator.emptyCheckingContainer(this, bi.fldGrpSectionK1);
+        return Validator.emptyCheckingContainer(this, bi.fldGrpSectionC6);
 
     }
 

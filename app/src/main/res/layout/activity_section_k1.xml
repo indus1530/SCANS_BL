@@ -1,7 +1,5 @@
 <layout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
-    tools:context=".ui.sections.SectionK1Activity">
+    xmlns:tools="http://schemas.android.com/tools">
 
     <data>
 
@@ -14,8 +12,11 @@
 
     <ScrollView
         style="@style/i_scrollview"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+        android:fadeScrollbars="false"
+        android:fillViewport="true"
+        android:layoutDirection="ltr"
+        android:scrollbarSize="10dip"
+        tools:context=".ui.Myactivity">
 
         <LinearLayout
             android:id="@+id/fldGrpSectionK1"
@@ -56,7 +57,9 @@
                             android:id="@+id/k101c"
                             style="@style/radiobutton"
                             android:text="@string/k101c" />
+
                     </RadioGroup>
+
                 </LinearLayout>
             </androidx.cardview.widget.CardView>
 
@@ -73,6 +76,7 @@
                     <TextView
                         style="@style/i_textview"
                         android:text="@string/k101_title" />
+
                 </LinearLayout>
             </androidx.cardview.widget.CardView>
 
@@ -109,7 +113,9 @@
                             android:id="@+id/k102c"
                             style="@style/radiobutton"
                             android:text="@string/k102c" />
+
                     </RadioGroup>
+
                 </LinearLayout>
             </androidx.cardview.widget.CardView>
 
@@ -146,14 +152,17 @@
                             android:id="@+id/k103c"
                             style="@style/radiobutton"
                             android:text="@string/k103c" />
+
                     </RadioGroup>
+
                 </LinearLayout>
             </androidx.cardview.widget.CardView>
 
             <!-- k104  Radio   -->
             <androidx.cardview.widget.CardView
                 android:id="@+id/fldGrpCVk104"
-                style="@style/cardView">
+                style="@style/cardView"
+                android:visibility='@{k103b.checked? View.GONE : View.VISIBLE}'>
 
                 <LinearLayout
                     android:layout_width="match_parent"
@@ -188,7 +197,9 @@
                             android:id="@+id/k104b"
                             style="@style/radiobutton"
                             android:text="@string/k104b" />
+
                     </RadioGroup>
+
                 </LinearLayout>
             </androidx.cardview.widget.CardView>
 
