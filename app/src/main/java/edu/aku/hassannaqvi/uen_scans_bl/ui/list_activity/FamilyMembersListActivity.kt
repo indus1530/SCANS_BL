@@ -19,7 +19,7 @@ import edu.aku.hassannaqvi.uen_scans_bl.core.MainApp.openDialog
 import edu.aku.hassannaqvi.uen_scans_bl.databinding.ActivityFamilyMembersListBinding
 import edu.aku.hassannaqvi.uen_scans_bl.databinding.ItemMemListBinding
 import edu.aku.hassannaqvi.uen_scans_bl.otherClasses.KishGrid
-import edu.aku.hassannaqvi.uen_scans_bl.ui.sections.SectionDActivity
+import edu.aku.hassannaqvi.uen_scans_bl.ui.sections.SectionD1Activity
 import edu.aku.hassannaqvi.uen_scans_bl.ui.sections.SectionMActivity
 import edu.aku.hassannaqvi.uen_scans_bl.utils.Util
 import edu.aku.hassannaqvi.uen_scans_bl.viewmodel.MainVModel
@@ -80,7 +80,7 @@ class FamilyMembersListActivity : AppCompatActivity() {
                         run {
                             when (item.id) {
                                 0 -> {
-                                    startActivityForResult(Intent(this, SectionDActivity::class.java).putExtra(SERIAL_EXTRA, serial), CONSTANTS.MEMBER_ITEM)
+                                    startActivityForResult(Intent(this, SectionD1Activity::class.java).putExtra(SERIAL_EXTRA, serial), CONSTANTS.MEMBER_ITEM)
                                 }
                                 1 -> {
                                     if (memSelectedCounter == 0) return@run
@@ -128,7 +128,7 @@ class FamilyMembersListActivity : AppCompatActivity() {
 
                 currentFM = item
 
-                startActivityForResult(Intent(this, SectionDActivity::class.java)
+                startActivityForResult(Intent(this, SectionD1Activity::class.java)
                         .putExtra(SERIAL_EXTRA, item.serialno.toInt()), CONSTANTS.MEMBER_ITEM)
 
             }

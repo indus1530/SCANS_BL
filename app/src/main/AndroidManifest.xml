@@ -54,7 +54,7 @@
             android:screenOrientation="portrait"
             android:theme="@style/AppTheme" />
         <activity
-            android:name=".ui.sections.SectionDActivity"
+            android:name=".ui.sections.SectionD1Activity"
             android:label="@string/tdheading"
             android:parentActivityName=".ui.list_activity.FamilyMembersListActivity"
             android:screenOrientation="portrait">
