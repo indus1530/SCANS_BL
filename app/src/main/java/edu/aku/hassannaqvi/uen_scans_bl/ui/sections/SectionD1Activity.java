@@ -80,15 +80,15 @@ public class SectionD1Activity extends AppCompatActivity {
                                 bi.d101c.isChecked() ? "3" :
                                         "0");
 
-        f1.put("d101_sub",
-                bi.d101_suba.isChecked() ? "1" :
-                        bi.d101_subb.isChecked() ? "2" :
-                                bi.d101_subc.isChecked() ? "3" :
-                                        bi.d101_subd.isChecked() ? "4" :
-                                                bi.d101_sube.isChecked() ? "5" :
-                                                        bi.d101_subf.isChecked() ? "6" :
-                                                                bi.d101_subg.isChecked() ? "7" :
-                                                                        bi.d101_subh.isChecked() ? "8" :
+        f1.put("d101sub",
+                bi.d101suba.isChecked() ? "1" :
+                        bi.d101subb.isChecked() ? "2" :
+                                bi.d101subc.isChecked() ? "3" :
+                                        bi.d101subd.isChecked() ? "4" :
+                                                bi.d101sube.isChecked() ? "5" :
+                                                        bi.d101subf.isChecked() ? "6" :
+                                                                bi.d101subg.isChecked() ? "7" :
+                                                                        bi.d101subh.isChecked() ? "8" :
                                                                                 "0");
 
         f1.put("d102",
@@ -97,15 +97,15 @@ public class SectionD1Activity extends AppCompatActivity {
                                 bi.d102c.isChecked() ? "3" :
                                         "0");
 
-        f1.put("d102_sub",
-                bi.d102_suba.isChecked() ? "1" :
-                        bi.d102_subb.isChecked() ? "2" :
-                                bi.d102_subc.isChecked() ? "3" :
-                                        bi.d102_subd.isChecked() ? "4" :
-                                                bi.d102_sube.isChecked() ? "5" :
-                                                        bi.d102_subf.isChecked() ? "6" :
-                                                                bi.d102_subg.isChecked() ? "7" :
-                                                                        bi.d102_subh.isChecked() ? "8" :
+        f1.put("d102sub",
+                bi.d102suba.isChecked() ? "1" :
+                        bi.d102subb.isChecked() ? "2" :
+                                bi.d102subc.isChecked() ? "3" :
+                                        bi.d102subd.isChecked() ? "4" :
+                                                bi.d102sube.isChecked() ? "5" :
+                                                        bi.d102subf.isChecked() ? "6" :
+                                                                bi.d102subg.isChecked() ? "7" :
+                                                                        bi.d102subh.isChecked() ? "8" :
                                                                                 "0");
 
         f1.put("d103",
@@ -113,14 +113,14 @@ public class SectionD1Activity extends AppCompatActivity {
                         bi.d103b.isChecked() ? "2" :
                                 "0");
 
-        f1.put("d103_sub",
-                bi.d103_suba.isChecked() ? "1" :
-                        bi.d103_subb.isChecked() ? "2" :
-                                bi.d103_subc.isChecked() ? "3" :
-                                        bi.d103_subd.isChecked() ? "4" :
-                                                bi.d103_sube.isChecked() ? "5" :
-                                                        bi.d103_subf.isChecked() ? "6" :
-                                                                bi.d103_subg.isChecked() ? "7" :
+        f1.put("d103sub",
+                bi.d103suba.isChecked() ? "1" :
+                        bi.d103subb.isChecked() ? "2" :
+                                bi.d103subc.isChecked() ? "3" :
+                                        bi.d103subd.isChecked() ? "4" :
+                                                bi.d103sube.isChecked() ? "5" :
+                                                        bi.d103subf.isChecked() ? "6" :
+                                                                bi.d103subg.isChecked() ? "7" :
                                                                         "0");
 
         f1.put("d104",
@@ -128,14 +128,14 @@ public class SectionD1Activity extends AppCompatActivity {
                         bi.d104b.isChecked() ? "2" :
                                 "0");
 
-        f1.put("d104_sub",
-                bi.d104_suba.isChecked() ? "1" :
-                        bi.d104_subb.isChecked() ? "2" :
-                                bi.d104_subc.isChecked() ? "3" :
-                                        bi.d104_subd.isChecked() ? "4" :
-                                                bi.d104_sube.isChecked() ? "5" :
-                                                        bi.d104_subf.isChecked() ? "6" :
-                                                                bi.d104_subg.isChecked() ? "7" :
+        f1.put("d104sub",
+                bi.d104suba.isChecked() ? "1" :
+                        bi.d104subb.isChecked() ? "2" :
+                                bi.d104subc.isChecked() ? "3" :
+                                        bi.d104subd.isChecked() ? "4" :
+                                                bi.d104sube.isChecked() ? "5" :
+                                                        bi.d104subf.isChecked() ? "6" :
+                                                                bi.d104subg.isChecked() ? "7" :
                                                                         "0");
 
         f1.put("d105",
@@ -150,12 +150,12 @@ public class SectionD1Activity extends AppCompatActivity {
                         bi.d106b.isChecked() ? "2" :
                                 "0");
 
-        f1.put("d106_sub",
-                bi.d106_suba.isChecked() ? "1" :
-                        bi.d106_subb.isChecked() ? "2" :
-                                bi.d106_subc.isChecked() ? "3" :
-                                        bi.d106_subd.isChecked() ? "4" :
-                                                bi.d106_sube.isChecked() ? "5" :
+        f1.put("d106sub",
+                bi.d106suba.isChecked() ? "1" :
+                        bi.d106subb.isChecked() ? "2" :
+                                bi.d106subc.isChecked() ? "3" :
+                                        bi.d106subd.isChecked() ? "4" :
+                                                bi.d106sube.isChecked() ? "5" :
                                                         "0");
 
     }

@@ -43,15 +43,30 @@
                 </LinearLayout>
             </androidx.cardview.widget.CardView>
 
-            <!-- k221  Input-Numeric   -->
-            <androidx.cardview.widget.CardView
-                android:id="@+id/fldGrpCVk221"
-                style="@style/cardView">
+            <!-- k221  Spinner and Input-Numeric   -->
+            <LinearLayout style="@style/linearlayout_view_wt_bound">
 
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:orientation="vertical">
+                    android:orientation="horizontal">
+
+                    <TextView
+                        style="@style/i_textview"
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:text="@string/k221a" />
+
+                    <Spinner
+                        android:id="@+id/k221a"
+                        style="@style/spinner"
+                        android:layout_width="0dp"
+                        android:layout_margin="10dp"
+                        android:layout_weight="1" />
+
+                </LinearLayout>
+
+                <LinearLayout style="@style/linearlayout_view">
 
                     <TextView
                         style="@style/i_textview"
@@ -70,46 +85,33 @@
                         app:type="range" />
 
                 </LinearLayout>
-            </androidx.cardview.widget.CardView>
 
-            <!-- k221a  Input-Numeric   -->
-            <androidx.cardview.widget.CardView
-                android:id="@+id/fldGrpCVk221a"
-                style="@style/cardView">
+            </LinearLayout>
+
+            <!-- k222  Spinner and Input-Numeric   -->
+            <LinearLayout style="@style/linearlayout_view_wt_bound">
 
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:orientation="vertical">
+                    android:orientation="horizontal">
 
                     <TextView
                         style="@style/i_textview"
-                        android:text="@string/k221a" />
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:text="@string/k222a" />
 
-                    <com.edittextpicker.aliazaz.EditTextPicker
-                        android:id="@+id/k221a"
-                        style="@style/EditTextAlphaNumeric"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:hint="@string/k221a"
-                        android:inputType="number"
-                        app:mask="##"
-                        app:maxValue="10"
-                        app:minValue="1"
-                        app:type="range" />
+                    <Spinner
+                        android:id="@+id/k222a"
+                        style="@style/spinner"
+                        android:layout_width="0dp"
+                        android:layout_margin="10dp"
+                        android:layout_weight="1" />
 
                 </LinearLayout>
-            </androidx.cardview.widget.CardView>
 
-            <!-- k222  Input-Numeric   -->
-            <androidx.cardview.widget.CardView
-                android:id="@+id/fldGrpCVk222"
-                style="@style/cardView">
-
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:orientation="vertical">
+                <LinearLayout style="@style/linearlayout_view">
 
                     <TextView
                         style="@style/i_textview"
@@ -128,36 +130,8 @@
                         app:type="range" />
 
                 </LinearLayout>
-            </androidx.cardview.widget.CardView>
 
-            <!-- k222a  Input-Numeric   -->
-            <androidx.cardview.widget.CardView
-                android:id="@+id/fldGrpCVk222a"
-                style="@style/cardView">
-
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:orientation="vertical">
-
-                    <TextView
-                        style="@style/i_textview"
-                        android:text="@string/k222a" />
-
-                    <com.edittextpicker.aliazaz.EditTextPicker
-                        android:id="@+id/k222a"
-                        style="@style/EditTextAlphaNumeric"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:hint="@string/k222a"
-                        android:inputType="number"
-                        app:mask="##"
-                        app:maxValue="10"
-                        app:minValue="1"
-                        app:type="range" />
-
-                </LinearLayout>
-            </androidx.cardview.widget.CardView>
+            </LinearLayout>
 
             <!-- k223  Radio   -->
             <androidx.cardview.widget.CardView
@@ -193,7 +167,7 @@
                 </LinearLayout>
             </androidx.cardview.widget.CardView>
 
-
+            <!-- k224  Spinner and Input-Numeric   -->
             <LinearLayout
                 android:id="@+id/fldGrpCVk04"
                 android:layout_width="match_parent"
@@ -201,15 +175,29 @@
                 android:orientation="vertical"
                 android:visibility='@{k223b.checked? View.VISIBLE : View.GONE}'>
 
-                <!-- k224  Input-Numeric   -->
-                <androidx.cardview.widget.CardView
-                    android:id="@+id/fldGrpCVk224"
-                    style="@style/cardView">
+                <LinearLayout style="@style/linearlayout_view_wt_bound">
 
                     <LinearLayout
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:orientation="vertical">
+                        android:orientation="horizontal">
+
+                        <TextView
+                            style="@style/i_textview"
+                            android:layout_width="0dp"
+                            android:layout_weight="1"
+                            android:text="@string/k224a" />
+
+                        <Spinner
+                            android:id="@+id/k224a"
+                            style="@style/spinner"
+                            android:layout_width="0dp"
+                            android:layout_margin="10dp"
+                            android:layout_weight="1" />
+
+                    </LinearLayout>
+
+                    <LinearLayout style="@style/linearlayout_view">
 
                         <TextView
                             style="@style/i_textview"
@@ -228,53 +216,40 @@
                             app:type="range" />
 
                     </LinearLayout>
-                </androidx.cardview.widget.CardView>
 
-                <!-- k224a  Input-Numeric   -->
-                <androidx.cardview.widget.CardView
-                    android:id="@+id/fldGrpCVk224a"
-                    style="@style/cardView">
-
-                    <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:orientation="vertical">
-
-                        <TextView
-                            style="@style/i_textview"
-                            android:text="@string/k224a" />
-
-                        <com.edittextpicker.aliazaz.EditTextPicker
-                            android:id="@+id/k224a"
-                            style="@style/EditTextAlphaNumeric"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:hint="@string/k224a"
-                            android:inputType="number"
-                            app:mask="##"
-                            app:maxValue="10"
-                            app:minValue="1"
-                            app:type="range" />
-
-                    </LinearLayout>
-                </androidx.cardview.widget.CardView>
+                </LinearLayout>
 
             </LinearLayout>
 
 
-            <!-- k225  Input-Numeric   -->
-            <androidx.cardview.widget.CardView
-                android:id="@+id/fldGrpCVk225"
-                style="@style/cardView">
+            <!-- k225  Spinner and Input-Numeric   -->
+            <LinearLayout style="@style/linearlayout_view_wt_bound">
 
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:orientation="vertical">
+                    android:orientation="horizontal">
 
                     <TextView
                         style="@style/i_textview"
-                        android:text="@string/k225" />
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:text="@string/k225a" />
+
+                    <Spinner
+                        android:id="@+id/k225a"
+                        style="@style/spinner"
+                        android:layout_width="0dp"
+                        android:layout_margin="10dp"
+                        android:layout_weight="1" />
+
+                </LinearLayout>
+
+                <LinearLayout style="@style/linearlayout_view">
+
+                    <TextView
+                        style="@style/i_textview"
+                        android:text="@string/k224" />
 
                     <com.edittextpicker.aliazaz.EditTextPicker
                         android:id="@+id/k225"
@@ -289,46 +264,33 @@
                         app:type="range" />
 
                 </LinearLayout>
-            </androidx.cardview.widget.CardView>
 
-            <!-- k225a  Input-Numeric   -->
-            <androidx.cardview.widget.CardView
-                android:id="@+id/fldGrpCVk225a"
-                style="@style/cardView">
+            </LinearLayout>
+
+            <!-- k226  Spinner and Input-Numeric   -->
+            <LinearLayout style="@style/linearlayout_view_wt_bound">
 
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:orientation="vertical">
+                    android:orientation="horizontal">
 
                     <TextView
                         style="@style/i_textview"
-                        android:text="@string/k225a" />
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:text="@string/k226a" />
 
-                    <com.edittextpicker.aliazaz.EditTextPicker
-                        android:id="@+id/k225a"
-                        style="@style/EditTextAlphaNumeric"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:hint="@string/k225a"
-                        android:inputType="number"
-                        app:mask="##"
-                        app:maxValue="10"
-                        app:minValue="1"
-                        app:type="range" />
+                    <Spinner
+                        android:id="@+id/k226a"
+                        style="@style/spinner"
+                        android:layout_width="0dp"
+                        android:layout_margin="10dp"
+                        android:layout_weight="1" />
 
                 </LinearLayout>
-            </androidx.cardview.widget.CardView>
 
-            <!-- k226  Input-Numeric   -->
-            <androidx.cardview.widget.CardView
-                android:id="@+id/fldGrpCVk226"
-                style="@style/cardView">
-
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:orientation="vertical">
+                <LinearLayout style="@style/linearlayout_view">
 
                     <TextView
                         style="@style/i_textview"
@@ -347,36 +309,8 @@
                         app:type="range" />
 
                 </LinearLayout>
-            </androidx.cardview.widget.CardView>
 
-            <!-- k226a  Input-Numeric   -->
-            <androidx.cardview.widget.CardView
-                android:id="@+id/fldGrpCVk226a"
-                style="@style/cardView">
-
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:orientation="vertical">
-
-                    <TextView
-                        style="@style/i_textview"
-                        android:text="@string/k226a" />
-
-                    <com.edittextpicker.aliazaz.EditTextPicker
-                        android:id="@+id/k226a"
-                        style="@style/EditTextAlphaNumeric"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:hint="@string/k226a"
-                        android:inputType="number"
-                        app:mask="##"
-                        app:maxValue="10"
-                        app:minValue="1"
-                        app:type="range" />
-
-                </LinearLayout>
-            </androidx.cardview.widget.CardView>
+            </LinearLayout>
 
             <!-- k227  Radio   -->
             <androidx.cardview.widget.CardView
@@ -412,7 +346,7 @@
                 </LinearLayout>
             </androidx.cardview.widget.CardView>
 
-
+            <!-- k228  Spinner and Input-Numeric   -->
             <LinearLayout
                 android:id="@+id/fldGrpCVk05"
                 android:layout_width="match_parent"
@@ -420,15 +354,29 @@
                 android:orientation="vertical"
                 android:visibility='@{k227b.checked? View.VISIBLE : View.GONE}'>
 
-                <!-- k228  Input-Numeric   -->
-                <androidx.cardview.widget.CardView
-                    android:id="@+id/fldGrpCVk228"
-                    style="@style/cardView">
+                <LinearLayout style="@style/linearlayout_view_wt_bound">
 
                     <LinearLayout
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:orientation="vertical">
+                        android:orientation="horizontal">
+
+                        <TextView
+                            style="@style/i_textview"
+                            android:layout_width="0dp"
+                            android:layout_weight="1"
+                            android:text="@string/k228a" />
+
+                        <Spinner
+                            android:id="@+id/k228a"
+                            style="@style/spinner"
+                            android:layout_width="0dp"
+                            android:layout_margin="10dp"
+                            android:layout_weight="1" />
+
+                    </LinearLayout>
+
+                    <LinearLayout style="@style/linearlayout_view">
 
                         <TextView
                             style="@style/i_textview"
@@ -447,36 +395,8 @@
                             app:type="range" />
 
                     </LinearLayout>
-                </androidx.cardview.widget.CardView>
 
-                <!-- k228a  Input-Numeric   -->
-                <androidx.cardview.widget.CardView
-                    android:id="@+id/fldGrpCVk228a"
-                    style="@style/cardView">
-
-                    <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:orientation="vertical">
-
-                        <TextView
-                            style="@style/i_textview"
-                            android:text="@string/k228a" />
-
-                        <com.edittextpicker.aliazaz.EditTextPicker
-                            android:id="@+id/k228a"
-                            style="@style/EditTextAlphaNumeric"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:hint="@string/k228a"
-                            android:inputType="number"
-                            app:mask="##"
-                            app:maxValue="10"
-                            app:minValue="1"
-                            app:type="range" />
-
-                    </LinearLayout>
-                </androidx.cardview.widget.CardView>
+                </LinearLayout>
 
             </LinearLayout>
 

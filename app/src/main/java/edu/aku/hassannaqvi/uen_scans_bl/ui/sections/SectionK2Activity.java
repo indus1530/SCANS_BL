@@ -133,10 +133,10 @@ public class SectionK2Activity extends AppCompatActivity {
                                         "0");
 
         k2.put("k209", bi.k209.getText().toString());
-        k2.put("k209a", bi.k209a.getText().toString());
+        k2.put("k209a", bi.k209a.getSelectedItem().toString());
 
-        //k2.put("k210", bi.k210.getText().toString());
-        k2.put("k210a", bi.k210a.getText().toString());
+        k2.put("k210", bi.k210.getText().toString());
+        k2.put("k210a", bi.k210a.getSelectedItem().toString());
 
         k2.put("k211",
                 bi.k211a.isChecked() ? "1" :
@@ -144,13 +144,13 @@ public class SectionK2Activity extends AppCompatActivity {
                                 "0");
 
         k2.put("k212", bi.k212.getText().toString());
-        k2.put("k212a", bi.k212a.getText().toString());
+        k2.put("k212a", bi.k212a.getSelectedItem().toString());
 
         k2.put("k213", bi.k213.getText().toString());
-        k2.put("k213a", bi.k213a.getText().toString());
+        k2.put("k213a", bi.k213a.getSelectedItem().toString());
 
         k2.put("k214", bi.k214.getText().toString());
-        k2.put("k214a", bi.k214a.getText().toString());
+        k2.put("k214a", bi.k214a.getSelectedItem().toString());
 
         k2.put("k215",
                 bi.k215a.isChecked() ? "1" :
@@ -158,13 +158,13 @@ public class SectionK2Activity extends AppCompatActivity {
                                 "0");
 
         k2.put("k216", bi.k216.getText().toString());
-        k2.put("k216a", bi.k216a.getText().toString());
+        k2.put("k216a", bi.k216a.getSelectedItem().toString());
 
         k2.put("k217", bi.k217.getText().toString());
-        k2.put("k217a", bi.k217a.getText().toString());
+        k2.put("k217a", bi.k217a.getSelectedItem().toString());
 
         k2.put("k218", bi.k218.getText().toString());
-        k2.put("k218a", bi.k218a.getText().toString());
+        k2.put("k218a", bi.k218a.getSelectedItem().toString());
 
         k2.put("k219",
                 bi.k219a.isChecked() ? "1" :
@@ -172,7 +172,7 @@ public class SectionK2Activity extends AppCompatActivity {
                                 "0");
 
         k2.put("k220", bi.k220.getText().toString());
-        k2.put("k220a", bi.k220a.getText().toString());
+        k2.put("k220a", bi.k220a.getSelectedItem().toString());
 
     }
 
