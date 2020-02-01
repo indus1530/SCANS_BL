@@ -93,33 +93,33 @@ public class SectionK3Activity extends AppCompatActivity {
 
         JSONObject k2 = new JSONObject();
 
-        k2.put("k221", bi.k221.getText().toString());
-        k2.put("k221a", bi.k221a.getSelectedItem().toString());
+        k2.put("k221a", bi.k221a.getText().toString());
+        k2.put("k221b", bi.k221b.getSelectedItem().toString());
 
-        k2.put("k222", bi.k222.getText().toString());
-        k2.put("k222a", bi.k222a.getSelectedItem().toString());
+        k2.put("k222a", bi.k222a.getText().toString());
+        k2.put("k222b", bi.k222b.getSelectedItem().toString());
 
         k2.put("k223",
                 bi.k223a.isChecked() ? "1" :
                         bi.k223b.isChecked() ? "2" :
                                 "0");
 
-        k2.put("k224", bi.k224.getText().toString());
-        k2.put("k224a", bi.k224a.getSelectedItem().toString());
+        k2.put("k224a", bi.k224a.getText().toString());
+        k2.put("k224b", bi.k224b.getSelectedItem().toString());
 
-        k2.put("k225", bi.k225.getText().toString());
-        k2.put("k225a", bi.k225a.getSelectedItem().toString());
+        k2.put("k225a", bi.k225a.getText().toString());
+        k2.put("k225b", bi.k225b.getSelectedItem().toString());
 
-        k2.put("k226", bi.k226.getText().toString());
-        k2.put("k226a", bi.k226a.getSelectedItem().toString());
+        k2.put("k226a", bi.k226a.getText().toString());
+        k2.put("k226b", bi.k226b.getSelectedItem().toString());
 
         k2.put("k227",
                 bi.k227a.isChecked() ? "1" :
                         bi.k227b.isChecked() ? "2" :
                                 "0");
 
-        k2.put("k228", bi.k228.getText().toString());
-        k2.put("k228a", bi.k228a.getSelectedItem().toString());
+        k2.put("k228a", bi.k228a.getText().toString());
+        k2.put("k228b", bi.k228b.getSelectedItem().toString());
 
     }
 

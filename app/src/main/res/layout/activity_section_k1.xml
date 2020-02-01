@@ -1,5 +1,4 @@
-<layout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools">
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
 
     <data>
 
@@ -15,14 +14,18 @@
         android:fadeScrollbars="false"
         android:fillViewport="true"
         android:layoutDirection="ltr"
-        android:scrollbarSize="10dip"
-        tools:context=".ui.Myactivity">
+        android:scrollbarSize="10dip">
 
         <LinearLayout
             android:id="@+id/fldGrpSectionK1"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="vertical">
+
+            <TextView
+                style="@style/i_textviewhint"
+                android:text="@string/tk1headinghint" />
+
 
             <!-- k101  Radio   -->
             <androidx.cardview.widget.CardView
@@ -58,24 +61,6 @@
                             android:text="@string/k101c" />
 
                     </RadioGroup>
-
-                </LinearLayout>
-
-            </androidx.cardview.widget.CardView>
-
-            <!-- k101_title  Title   -->
-            <androidx.cardview.widget.CardView
-                android:id="@+id/fldGrpCVk101_title"
-                style="@style/cardView">
-
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:orientation="vertical">
-
-                    <TextView
-                        style="@style/i_textviewhint"
-                        android:text="@string/k101_title" />
 
                 </LinearLayout>
 
@@ -184,7 +169,6 @@
                             style="@style/EditTextAlpha"
                             android:layout_weight="1"
                             android:hint="@string/k104a"
-                            android:tag="k104a"
                             android:enabled='@{k10498.checked ? false : true}'
                             android:text='@{k10498.checked ? "" : k104.getText().toString()}' />
 
