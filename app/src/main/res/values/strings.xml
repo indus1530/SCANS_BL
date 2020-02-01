@@ -231,41 +231,50 @@
     <!--    <string name="a104a"> a104a:\t Team Leader’s name</string>-->
     <!--    <string name="a104b"> a104b:\t Team Leader’s Code</string>-->
     <!--    <string name="a105"> a105:\t Cluster number</string>-->
-    <string name="a106"> a106:\t Enumeration Block</string>
-    <string name="a107"> a107:\t PROVINCE</string>
-    <string name="a108"> a108:\t District</string>
-    <string name="a109"> a109:\t Tehsil</string>
-    <string name="a110"> a110:\t City </string>
-    <string name="a111"> a111:\t Village</string>
-    <string name="a112"> a112:\t Household number </string>
+    <string name="a106"> Enumeration Block</string>
+    <string name="a107"> Province </string>
+    <string name="a108"> District </string>
+    <string name="a109"> Tehsil </string>
+    <string name="a110"> City </string>
+    <string name="a111"> A111:\t Village</string>
+    <string name="a112"> A112:\t Household number </string>
     <string name="a113_title1"> a113_title1:\t The enumerator will read out the consent for understanding of respondent and will mention the purpose of the study and time required to complete the interviews (a separate consent sheet will be provided to the enumerators</string>
-    <string name="a113"> a113:\t Was consent taken?                       </string>
+
+    <string name="a113hint"> IF VERBAL CONSENT IS NOT GIVEN STOP INTERVIEW AND MOVE TO QUESTION # A119 OF THIS SECTION TO RECORD THE OUTCOME OF THE INTERVIEW </string>
+    <string name="a113"> A113:\t Was Consent Taken ? </string>
     <string name="a113_title2"> Verbal consent: </string>
     <string name="a113a"> Yes </string>
     <string name="a113b"> No</string>
-    <string name="a113_title3"> a113_title3:\t IF VERBAL CONSENT IS NOT GIVEN STOP INTERVIEW AND MOVE TO QUESTION# A119 OF THIS SECTION TO RECORD THE OUTCOME OF THE INTERVIEW</string>
-    <string name="a114"> a114:\t Name of the Respondent</string>
-    <string name="a115"> a115:\t Age of Respondent in completed </string>
-    <string name="a116"> a116:\t Does your HH Have a child aged 5 &#8211; 10-year? </string>
+
+    <string name="a114"> A114:\t Name of the Respondent</string>
+
+    <string name="a115"> A115:\t Age of Respondent in completed </string>
+
+    <string name="a116"> A116:\t Does your HH Have a child aged 5 &#8211; 10 Years ? </string>
     <string name="a116a"> Yes </string>
     <string name="a116b"> No </string>
-    <string name="a117"> a117:\t Does any child 5 &#8211; 10 year of aged group of This HH is suffering from any chronic disease?      </string>
-    <string name="a117a"> Yes</string>
+
+    <string name="a117"> A117:\t Does any child 5 &#8211; 10 year of aged group of This HH is suffering from any chronic disease ? </string>
+    <string name="a117a"> Yes </string>
     <string name="a117b"> No </string>
-    <string name="a118"> a118:\t Is any child in your household aged 5 to 10 involved in any other nutritional research / project?</string>
-    <string name="a118a"> Yes</string>
-    <string name="a118b"> No</string>
-    <string name="a119"> a119:\t Result of Household Questionnaire interview: Discuss any result not completed with team leader.</string>
+
+    <string name="a118"> A118:\t Is any child in your household aged 5 &#8211; 10 involved in any other nutritional research / project ? </string>
+    <string name="a118a"> Yes </string>
+    <string name="a118b"> No </string>
+
+    <string name="a119"> A119:\t Result of Household Questionnaire interview: </string>
+    <string name="a119hint"> Discuss any result not completed with team leader. </string>
     <string name="a119a"> Completed</string>
     <string name="a119b"> No household member at home or no competent respondent at home at time of visit</string>
     <string name="a119c"> Entire household absent for extended period of time </string>
     <string name="a119d"> Refused</string>
     <string name="a119e"> Dwelling vacant or address not a dwelling </string>
-    <string name="a119f"> Dwelling not found</string>
+    <string name="a119f"> Dwelling not found </string>
     <string name="a119g"> No Child between 5 &#8211; 10 years 5 &#8211; 10 </string>
-    <string name="a119h"> HH Having a child of 5 &#8211; 10 &#8211; year age group with Chronic Desease </string>
+    <string name="a119h"> HH Having a child of 5 &#8211; 10 &#8211; year age group with Chronic Disease </string>
     <string name="a119i"> HH having a child of 5 &#8211; 10 &#8211; year age group which is part of any nutrition study </string>
-    <string name="a119x"> OTHER (SPECIFY) </string>
+    <string name="a119x"> Other</string>
+
     <string name="a201"> a201:\t Line number </string>
     <string name="a202"> a202:\t First, please tell me the name of each person who usually lives here, starting with the head of the household. Probe for additional household members.</string>
     <string name="a203"> a203:\t relationship with  Head of household)? </string>
