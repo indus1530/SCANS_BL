@@ -94,31 +94,28 @@ public class SectionK1Activity extends AppCompatActivity {
 
     private void SaveDraft() throws JSONException {
 
-        JSONObject k1 = new JSONObject();
+        JSONObject json = new JSONObject();
 
-        k1.put("k101",
+        json.put("k101",
                 bi.k101a.isChecked() ? "1" :
                         bi.k101b.isChecked() ? "2" :
                                 bi.k101c.isChecked() ? "3" :
                                         "0");
 
-        k1.put("k102",
+        json.put("k102",
                 bi.k102a.isChecked() ? "1" :
                         bi.k102b.isChecked() ? "2" :
                                 bi.k102c.isChecked() ? "3" :
                                         "0");
 
-        k1.put("k103",
+        json.put("k103",
                 bi.k103a.isChecked() ? "1" :
                         bi.k103b.isChecked() ? "2" :
                                 bi.k103c.isChecked() ? "3" :
                                         "0");
 
-        k1.put("k104",
-                bi.k104a.isChecked() ? "1" :
-                        bi.k104b.isChecked() ? "98" :
-                                "0");
-        k1.put("k104at", bi.k104at.getText().toString());
+        json.put("k104", bi.k10498.isChecked() ? "98" :
+                bi.k104.getText().toString());
 
     }
 

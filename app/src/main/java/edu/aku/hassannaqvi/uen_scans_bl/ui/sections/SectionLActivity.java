@@ -71,22 +71,22 @@ public class SectionLActivity extends AppCompatActivity {
 
     private void SaveDraft() throws JSONException {
 
-        JSONObject l1 = new JSONObject();
+        JSONObject json = new JSONObject();
 
-        l1.put("l101", bi.l101.getText().toString());
+        json.put("l101", bi.l101.getSelectedItem().toString());
 
-        l1.put("l102",
+        json.put("l102",
                 bi.l102a.isChecked() ? "1" :
                         bi.l102b.isChecked() ? "2" :
                                 "0");
 
-        l1.put("l103",
+        json.put("l103",
                 bi.l103a.isChecked() ? "1" :
                         bi.l103b.isChecked() ? "2" :
                                 bi.l103c.isChecked() ? "3" :
                                         "0");
 
-        l1.put("l104", bi.l104.getText().toString());
+        json.put("l104", bi.l104.getText().toString());
 
     }
 

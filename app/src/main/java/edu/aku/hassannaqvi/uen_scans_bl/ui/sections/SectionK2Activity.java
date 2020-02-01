@@ -99,80 +99,80 @@ public class SectionK2Activity extends AppCompatActivity {
 
     private void SaveDraft() throws JSONException {
 
-        JSONObject k2 = new JSONObject();
+        JSONObject json = new JSONObject();
 
-        k2.put("k201", bi.k201.getText().toString());
+        json.put("k201", bi.k201.getSelectedItem().toString());
 
-        k2.put("k202",
+        json.put("k202",
                 bi.k202a.isChecked() ? "1" :
                         bi.k202b.isChecked() ? "2" :
                                 "0");
 
-        k2.put("k203",
+        json.put("k203",
                 bi.k203a.isChecked() ? "1" :
                         bi.k203b.isChecked() ? "2" :
                                 "0");
 
-        k2.put("k204", bi.k204.getText().toString());
-        k2.put("k204a", bi.k204a.getText().toString());
+        json.put("k204a", bi.k204a.getSelectedItem().toString());
+        json.put("k204b", bi.k204b.getText().toString());
 
-        k2.put("k205", bi.k205.getText().toString());
-        k2.put("k205a", bi.k205a.getText().toString());
+        json.put("k205a", bi.k205a.getSelectedItem().toString());
+        json.put("k205b", bi.k205b.getText().toString());
 
-        k2.put("k206dd", bi.k206dd.getText().toString());
-        k2.put("k206mm", bi.k206mm.getText().toString());
-        k2.put("k206yy", bi.k206yy.getText().toString());
+        json.put("k206dd", bi.k206dd.getText().toString());
+        json.put("k206mm", bi.k206mm.getText().toString());
+        json.put("k206yy", bi.k206yy.getText().toString());
 
-        k2.put("k207hh", bi.k207hh.getText().toString());
-        k2.put("k207mm", bi.k207mm.getText().toString());
+        json.put("k207hh", bi.k207hh.getText().toString());
+        json.put("k207mm", bi.k207mm.getText().toString());
 
-        k2.put("k208",
+        json.put("k208",
                 bi.k208a.isChecked() ? "1" :
                         bi.k208b.isChecked() ? "2" :
                                 bi.k208c.isChecked() ? "3" :
                                         "0");
 
-        k2.put("k209", bi.k209.getText().toString());
-        k2.put("k209a", bi.k209a.getSelectedItem().toString());
+        json.put("k209a", bi.k209a.getText().toString());
+        json.put("k209b", bi.k209b.getSelectedItem().toString());
 
-        k2.put("k210", bi.k210.getText().toString());
-        k2.put("k210a", bi.k210a.getSelectedItem().toString());
+        json.put("k210a", bi.k210a.getText().toString());
+        json.put("k210b", bi.k210b.getSelectedItem().toString());
 
-        k2.put("k211",
+        json.put("k211",
                 bi.k211a.isChecked() ? "1" :
                         bi.k211b.isChecked() ? "2" :
                                 "0");
 
-        k2.put("k212", bi.k212.getText().toString());
-        k2.put("k212a", bi.k212a.getSelectedItem().toString());
+        json.put("k212a", bi.k212a.getText().toString());
+        json.put("k212b", bi.k212b.getSelectedItem().toString());
 
-        k2.put("k213", bi.k213.getText().toString());
-        k2.put("k213a", bi.k213a.getSelectedItem().toString());
+        json.put("k213a", bi.k213a.getText().toString());
+        json.put("k213b", bi.k213b.getSelectedItem().toString());
 
-        k2.put("k214", bi.k214.getText().toString());
-        k2.put("k214a", bi.k214a.getSelectedItem().toString());
+        json.put("k214a", bi.k214a.getText().toString());
+        json.put("k214b", bi.k214b.getSelectedItem().toString());
 
-        k2.put("k215",
+        json.put("k215",
                 bi.k215a.isChecked() ? "1" :
                         bi.k215b.isChecked() ? "2" :
                                 "0");
 
-        k2.put("k216", bi.k216.getText().toString());
-        k2.put("k216a", bi.k216a.getSelectedItem().toString());
+        json.put("k216a", bi.k216a.getText().toString());
+        json.put("k216b", bi.k216b.getSelectedItem().toString());
 
-        k2.put("k217", bi.k217.getText().toString());
-        k2.put("k217a", bi.k217a.getSelectedItem().toString());
+        json.put("k217a", bi.k217a.getText().toString());
+        json.put("k217b", bi.k217b.getSelectedItem().toString());
 
-        k2.put("k218", bi.k218.getText().toString());
-        k2.put("k218a", bi.k218a.getSelectedItem().toString());
+        json.put("k218a", bi.k218a.getText().toString());
+        json.put("k218b", bi.k218b.getSelectedItem().toString());
 
-        k2.put("k219",
+        json.put("k219",
                 bi.k219a.isChecked() ? "1" :
                         bi.k219b.isChecked() ? "2" :
                                 "0");
 
-        k2.put("k220", bi.k220.getText().toString());
-        k2.put("k220a", bi.k220a.getSelectedItem().toString());
+        json.put("k220a", bi.k220a.getText().toString());
+        json.put("k220b", bi.k220b.getSelectedItem().toString());
 
     }
 

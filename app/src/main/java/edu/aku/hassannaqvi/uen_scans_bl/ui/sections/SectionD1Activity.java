@@ -21,14 +21,13 @@ import edu.aku.hassannaqvi.uen_scans_bl.utils.Util;
 
 public class SectionD1Activity extends AppCompatActivity {
 
-
     ActivitySectionD1Binding bi;
 
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        bi = DataBindingUtil.setContentView(this, R.layout.activity_section_c2);
+        bi = DataBindingUtil.setContentView(this, R.layout.activity_section_d1);
         bi.setCallback(this);
 
     }

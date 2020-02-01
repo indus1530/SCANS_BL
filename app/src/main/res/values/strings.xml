@@ -1,7 +1,7 @@
 <resources>
 
     <!--new Strings-->
-    <string name="app_name">UEN Midline 2020</string>
+    <string name="app_name">UEN SCANS BL 2020</string>
 
     <!-- Strings related to login -->
     <string name="btnSync">Sync</string>
@@ -24,8 +24,6 @@
     <string name="tiheading">SECTION I: CHILD HEALTH</string>
     <string name="ti2heading">SECTION I2: ACUTE RESPIRATORY INFECTION (ARI)</string>
     <string name="tjheading">SECTION J: IMMUNIZATION</string>
-    <string name="tkheading">SECTION K: FAMILY PLANNING</string>
-    <string name="tlheading">SECTION L: WOMEN EMPOWERMENT</string>
     <string name="tnheading">SECTION N: WATER AND SANITATION</string>
 
     <string name="splashText">Supporting Women and Girls in Pakistan Scaling Up\n
@@ -57,13 +55,17 @@
     <string name="rupees"> Rupees </string>
     <string name="num"> Number </string>
     <string name="name"> Name </string>
+    <string name="id"> ID </string>
+    <string name="mid1"> Measurer 1: ID </string>
+    <string name="mid2"> Measurer 2: ID </string>
+    <string name="mid3"> Measurer 3: ID </string>
 
     <string name="total">Total</string>
     <string name="mwra">MWRA</string>
     <string name="under5">Child Under 5</string>
 
 
-    <string name="taheading">SECTION A: HH Identification</string>
+    <string name="taheading">SECTION A: HH Identification </string>
     <string name="a101"> Cluster number </string>
     <string name="a101a"> This information will be based on the list of villages generated from the district. Each enumerator will be given a list of clusters that he/she will be visiting, and before starting the interview, this information will be entered from the same list. </string>
 
@@ -235,7 +237,7 @@
     <string name="a109"> a109:\t Tehsil</string>
     <string name="a110"> a110:\t City </string>
     <string name="a111"> a111:\t Village</string>
-    <string name="a112"> a112:\t Household number</string>
+    <string name="a112"> a112:\t Household number </string>
     <string name="a113_title1"> a113_title1:\t The enumerator will read out the consent for understanding of respondent and will mention the purpose of the study and time required to complete the interviews (a separate consent sheet will be provided to the enumerators</string>
     <string name="a113"> a113:\t Was consent taken?                       </string>
     <string name="a113_title2"> Verbal consent: </string>
@@ -1418,75 +1420,88 @@
     <string name="cb604b"> Fairly good </string>
     <string name="cb604c"> Fairly bad کافی بری </string>
     <string name="cb604d"> Very bad </string>
-    <string name="d101"> d101:\t Full sugar carbonated soft drinks (i.e. Pepsi/Coca-Cola)</string>
+
+    <string name="d101"> D101:\t Full sugar carbonated soft drinks (i.e. Pepsi/Coca-Cola) </string>
     <string name="d101a"> At home </string>
-    <string name="d101b">  Outside of home</string>
-    <string name="d101c">  Both</string>
-    <string name="d101sub"> d101sub:\t Full sugar carbonated soft drinks (i.e. Pepsi/Coca-Cola)</string>
+    <string name="d101b">  Outside of home </string>
+    <string name="d101c">  Both </string>
+
+    <string name="d101sub"> D101sub:\t Full sugar carbonated soft drinks (i.e. Pepsi/Coca-Cola)</string>
     <string name="d101suba"> 1 bottle per day  </string>
     <string name="d101subb"> 2 bottles per day</string>
     <string name="d101subc"> 3 or more bottles per day</string>
     <string name="d101subd"> 1 bottle per week</string>
-    <string name="d101sube"> 2–4 bottles per week</string>
-    <string name="d101subf"> 5–6 bottles per week</string>
-    <string name="d101subg"> 1–3 bottles per month</string>
-    <string name="d101subh"> Never/less than 1 per month</string>
-    <string name="d102"> d102:\t Fruit juice (i.e. lemonade - not real juice)</string>
-    <string name="d102a"> At home</string>
-    <string name="d102b"> Outside of home</string>
-    <string name="d102c"> Both</string>
-    <string name="d102sub"> d102sub:\t Fruit juice (i.e. lemonade - not real juice)</string>
-    <string name="d102suba"> 1 bottle per day</string>
+    <string name="d101sube"> 2 &#8211; 4 bottles per week</string>
+    <string name="d101subf"> 5 &#8211; 6 bottles per week</string>
+    <string name="d101subg"> 1 &#8211; 3 bottles per month</string>
+    <string name="d101subh"> Never / less than 1 per month</string>
+
+    <string name="d102"> D102:\t Fruit juice (i.e. lemonade - not real juice)</string>
+    <string name="d102a"> At home </string>
+    <string name="d102b"> Outside of home </string>
+    <string name="d102c"> Both </string>
+
+    <string name="d102sub"> D102sub:\t Fruit juice (i.e. lemonade - not real juice) </string>
+    <string name="d102suba"> 1 bottle per day </string>
     <string name="d102subb"> 2 bottles per day </string>
-    <string name="d102subc"> 3 or more bottles per day</string>
-    <string name="d102subd"> 1 bottle per week</string>
-    <string name="d102sube"> 2–4 bottles per week</string>
-    <string name="d102subf"> 5–6 bottles per week</string>
-    <string name="d102subg"> 1–3 bottles per month</string>
-    <string name="d102subh"> Never/less than 1 per month</string>
-    <string name="d103"> d103:\t Black tea (or other caffeine beverages)</string>
+    <string name="d102subc"> 3 or more bottles per day </string>
+    <string name="d102subd"> 1 bottle per week </string>
+    <string name="d102sube"> 2 &#8211; 4 bottles per week </string>
+    <string name="d102subf"> 5 &#8211; 6 bottles per week </string>
+    <string name="d102subg"> 1 &#8211; 3 bottles per month </string>
+    <string name="d102subh"> Never / less than 1 per month </string>
+
+    <string name="d103"> D103:\t Black tea (or other caffeine beverages) </string>
     <string name="d103a"> With sugar</string>
     <string name="d103b"> Without sugar</string>
-    <string name="d103sub"> d103sub:\t Black tea (or other caffeine beverages)</string>
+
+    <string name="d103sub"> D103sub:\t Black tea (or other caffeine beverages) </string>
     <string name="d103suba"> 1 cup per day </string>
-    <string name="d103subb"> 2 cups per day</string>
-    <string name="d103subc"> 3 or more cups per day</string>
+    <string name="d103subb"> 2 cups per day </string>
+    <string name="d103subc"> 3 or more cups per day </string>
     <string name="d103subd"> 1 &#8211; 2 cups per week </string>
-    <string name="d103sube"> 3 &#8211; 6 cups per week</string>
-    <string name="d103subf"> 1–3 cups per month</string>
-    <string name="d103subg"> Never/less than 1 per month</string>
-    <string name="d104"> d104:\t Tea with milk</string>
-    <string name="d104a"> With sugar</string>
-    <string name="d104b"> Without sugar</string>
-    <string name="d104sub"> d104sub:\t Tea with milk</string>
+    <string name="d103sube"> 3 &#8211; 6 cups per week </string>
+    <string name="d103subf"> 1 &#8211; 3 cups per month </string>
+    <string name="d103subg"> Never/less than 1 per month </string>
+
+    <string name="d104"> D104:\t Tea with milk </string>
+    <string name="d104a"> With Sugar </string>
+    <string name="d104b"> Without Sugar </string>
+
+    <string name="d104sub"> D104sub:\t Tea with milk</string>
     <string name="d104suba"> 1 cup per day </string>
-    <string name="d104subb"> 2 cups per day</string>
-    <string name="d104subc"> 3 or more cups per day</string>
+    <string name="d104subb"> 2 cups per day </string>
+    <string name="d104subc"> 3 or more cups per day </string>
     <string name="d104subd"> 1 &#8211; 2 cups per week </string>
-    <string name="d104sube"> 3 &#8211; 6 cups per week</string>
-    <string name="d104subf"> 1–3 cups per month</string>
-    <string name="d104subg"> Never/less than 1 per month</string>
-    <string name="d105"> d105:\t How much sugar do you use?</string>
+    <string name="d104sube"> 3 &#8211; 6 cups per week </string>
+    <string name="d104subf"> 1 &#8211; 3 cups per month </string>
+    <string name="d104subg"> Never/less than 1 per month </string>
+
+    <string name="d105"> D105:\t How much sugar do you use ? </string>
     <string name="d105a"> None/less than 1 teaspoon per day </string>
-    <string name="d105b"> 1–2 teaspoons per day  </string>
-    <string name="d105c"> 3–4 teaspoons per day </string>
-    <string name="d106"> d106:\t Water                             </string>
-    <string name="d106a"> Tap</string>
-    <string name="d106b">  Bottled  </string>
-    <string name="d106sub"> d106sub:\t Water                               </string>
-    <string name="d106suba"> 1 glass per day  </string>
-    <string name="d106subb"> 2 &#8211; 3 glasses per day  </string>
-    <string name="d106subc"> 3 &#8211; 6 glasses per day  </string>
-    <string name="d106subd"> 6 &#8211; 8 glasses per day  </string>
-    <string name="d106sube"> &gt;8 glasses per day  </string>
+    <string name="d105b"> 1 &#8211; 2 teaspoons per day </string>
+    <string name="d105c"> 3 &#8211; 4 teaspoons per day </string>
     <string name="d150d"> 5 or more teaspoons per day </string>
-    <string name="d201"> d201:\t What type of white milk do your (child name) usually drink?</string>
-    <string name="d201a"> Cow milk  </string>
-    <string name="d201b"> Goat milk   </string>
+
+    <string name="d106"> D106:\t Water </string>
+    <string name="d106a"> Tap </string>
+    <string name="d106b"> Bottled </string>
+
+    <string name="d106sub"> D106sub:\t Water </string>
+    <string name="d106suba"> 1 glass per day  </string>
+    <string name="d106subb"> 2 &#8211; 3 glasses per day </string>
+    <string name="d106subc"> 3 &#8211; 6 glasses per day </string>
+    <string name="d106subd"> 6 &#8211; 8 glasses per day </string>
+    <string name="d106sube"> &gt; 8 glasses per day </string>
+
+    <string name="d201"> D201:\t What type of white milk do your (child name) usually drink ? </string>
+    <string name="d201a"> Cow milk </string>
+    <string name="d201b"> Goat milk </string>
     <string name="d201c"> Buffalo milk </string>
     <string name="d201d"> Tetra pack </string>
-    <string name="d201e"> Don’t drink milk  </string>
-    <string name="d201f"> Don’t know  </string>
+    <string name="d201e"> Don’\t drink milk </string>
+    <string name="d201f"> Don’\t know </string>
+
     <string name="d202"> d202:\t White milk (glass or with cereal)</string>
     <string name="d202a"> 1 glass per day  </string>
     <string name="d202b"> 2 &#8211; 3 glasses per day </string>
@@ -1943,107 +1958,137 @@
     <string name="d901sub"> d901sub:\t 24 &#8211; Hour Recall (on tablet)</string>
     <string name="d901suba"> 24 &#8211; Hour Recall (on tablet) The recall should follow a standardized 24 &#8211; hour recall multiple &#8211; pass format. The multiple &#8211; pass technique aims to reduce cognitive burden and improve reporting accuracy by encouraging respondents to report the foods that they consumed in stages, with increasing detail and opportunity to review and probe for potentially forgotten or misreported items.  1.	Please list all the food consumed yesterday 2.	Probe for foods that may have been missed (i.e. carbonated beverages, sweets, savory snacks, fruits, vegetables, breads). As well, probe to ask about additions to the food (i.e. salt, sugar, condiments etc.) 3.	Collect time and name of eating occasion for each food 4.	Using the measurement toolkit, collect detailed description and portion sizes of each food item.  5.	Final review of all foods in chronological order, with portion size.</string>
     <string name="title"> title:\t 24 &#8211; Hour Recall</string>
-    <string name="title_a"> title_a:\t Before breakfast         </string>
-    <string name="k101"> k101:\t Do you think that your (Child Name) height is appropriate for his/her age?</string>
-    <string name="k101a"> Height is Appropriate for his/her age</string>
-    <string name="k101b"> Taller than for his/her age</string>
-    <string name="k101c"> Shorter than for his/her age</string>
-    <string name="k101_title"> Read aloud to the selected women of household: Now I would like to ask some questions about you, male head of household and your child.</string>
-    <string name="k102"> k102:\t Do you think that your (Child Name) weight is appropriate for his/her age?</string>
-    <string name="k102a"> Weight is Appropriate for his/her age</string>
-    <string name="k102b"> higher than for his/her age </string>
-    <string name="k102c"> lower than for his/her age</string>
-    <string name="k103"> k103:\t How tall is your husband (the father of Child name) than you? </string>
+    <string name="title_a"> title_a:\t Before breakfast </string>
+
+
+    <string name="tk1heading"> MODULE K1:\t RESPONDENT AND CHILD’\S PHYSICAL </string>
+    <string name="tk1headinghint"> Read aloud to the selected women of household: Now I would like to ask some questions about you, male head of household and your child.</string>
+
+    <string name="k101"> K101:\t Do you think that your (Child Name) height is appropriate for his/her age ? </string>
+    <string name="k101a"> Height is Appropriate for his/her age </string>
+    <string name="k101b"> Taller than for his/her age </string>
+    <string name="k101c"> Shorter than for his/her age </string>
+
+    <string name="k102"> K102:\t Do you think that your (Child Name) weight is appropriate for his/her age ? </string>
+    <string name="k102a"> Weight is Appropriate for his/her age </string>
+    <string name="k102b"> Higher than for his/her age </string>
+    <string name="k102c"> Lower than for his/her age </string>
+
+    <string name="k103"> K103:\t How tall is your husband (the father of Child name) than you ? </string>
     <string name="k103a"> Taller than you </string>
     <string name="k103b"> Same height as you </string>
-    <string name="k103c"> Shorter than you</string>
-    <string name="k104"> k104:\t Approximately how much taller/shorter is he? Please record in inches the difference indicated.</string>
-    <string name="k104a"> Inches</string>
-    <string name="k104b"> Don’t Know  </string>
-    <string name="k201_title"> k201_title:\t This Section will be filled for all childrens of 5 &#8211; 10 years selected through Kish Grid Method of index Mother</string>
-    <string name="k201_title1"> k201_title1:\t Identification</string>
-    <string name="k201"> k201:\t Select the Child’s Name from drop down list </string>
-    <string name="k202"> k202:\t Is the child available at home?</string>
+    <string name="k103c"> Shorter than you </string>
+
+    <string name="k104"> K104:\t Approximately how much taller/shorter is he? Please record in inches the difference indicated. </string>
+    <string name="k104a"> Inches </string>
+    <string name="k104b"> Don’t Know </string>
+
+
+    <string name="tk2heading"> MODULE K2:\t CHILD AND MOTHER ANTHROPOMETRIC ASSESSMENT </string>
+    <string name="tk2headinghint"> This Section will be filled for all childrens of 5 &#8211; 10 years selected through Kish Grid Method of index Mother </string>
+    <string name="tk2headinghint1"> Identification </string>
+
+    <string name="k201"> K201:\t Child’\s Name </string>
+
+    <string name="k202"> K202:\t Is the child available at home ? </string>
     <string name="k202a"> Yes </string>
     <string name="k202b"> No </string>
-    <string name="k203"> k203:\t Verbal consent and assent granted</string>
+
+    <string name="k203"> K203:\t Verbal consent and assent granted </string>
     <string name="k203a"> Yes </string>
     <string name="k203b"> No </string>
-    <string name="k204"> k204:\t Study personnel name #1</string>
-    <string name="k204a"> k204a:\t Study personnel ID #1</string>
-    <string name="k205"> k205:\t Study personnel name #2</string>
-    <string name="k205a"> k205a:\t Study personnel ID #2</string>
-    <string name="k206"> k206:\t Date</string>
+
+    <string name="k204"> K204:\t Study Personnel Name &amp; ID #1 </string>
+
+    <string name="k205"> K05:\t Study Personnel Name &amp; ID #2 </string>
+
+    <string name="k206"> K206:\t Date</string>
     <string name="k206dd"> Day</string>
     <string name="k206mm"> Month</string>
     <string name="k206yy"> Year</string>
-    <string name="k207"> k207:\t Time</string>
-    <string name="k207hh"> hours</string>
-    <string name="k207mm"> minutes</string>
-    <string name="k208"> k208:\t Interview Status </string>
+
+    <string name="k207"> K207:\t Time </string>
+    <string name="k207hh"> hours </string>
+    <string name="k207mm"> minutes </string>
+
+    <string name="k208"> K208:\t Interview Status </string>
     <string name="k208a"> Completed </string>
     <string name="k208b"> Withdrawn </string>
-    <string name="k208c"> Refused</string>
-    <string name="k209"> k209:\t Height measurement #1 </string>
-    <string name="k209a"> k209a:\t Measurer 1: ID</string>
-    <string name="k210"> k210:\t Height measurement #2</string>
-    <string name="k210a"> Height measurement #2 CM</string>
-    <string name="k211"> k211:\t Does the height measurements differ by &gt;0.6 cm?</string>
+    <string name="k208c"> Refused </string>
+
+    <string name="tk2headinghint2"> Read aloud: Now we are going to do some measurements of (CHILD NAME) height, weight, and arm. Each measurement will be done at least twice. </string>
+    <string name="k209"> K209:\t Height Measurement #1 </string>
+
+    <string name="k210"> K210:\t Height Measurement #2 </string>
+
+    <string name="k211"> K211:\t Does the height measurements differ by &gt;0.6 cm ? </string>
     <string name="k211a"> Yes </string>
     <string name="k211b"> No </string>
-    <string name="k212"> k212:\t Height measurement #3</string>
-    <string name="k212a"> k212a:\t Measurer 3: ID</string>
-    <string name="k213"> k213:\t Weight measurement #1</string>
-    <string name="k213a"> k213a:\t Measurer 1: ID</string>
-    <string name="k214"> k214:\t Weight measurement #2</string>
-    <string name="k214a"> k214a:\t Measurer 1: ID</string>
-    <string name="k215"> k215:\t Does the weight measurements differ by &gt;.1 kg?</string>
+
+    <string name="k212"> K212:\t Height Measurement #3 </string>
+
+    <string name="k213"> K213:\t Weight Measurement #1</string>
+
+    <string name="k214"> K214:\t Weight Measurement #2 </string>
+
+    <string name="k215"> K215:\t Does the weight measurements differ by &gt;.1 kg ? </string>
     <string name="k215a"> Yes </string>
     <string name="k215b"> No </string>
-    <string name="k216"> k216:\t Weight measurement #3</string>
-    <string name="k216a"> k216a:\t Measurer 3: ID</string>
-    <string name="k217"> k217:\t Left middle upper arm circumference measurement #1 </string>
-    <string name="k217a"> k217a:\t Measurer 1:ID</string>
-    <string name="k218"> k218:\t Left middle upper arm circumference measurement #2</string>
-    <string name="k218a"> k218a:\t Measurer 2:ID</string>
-    <string name="k219"> k219:\t Does the middle upper arm circumference measurements differ by &gt;.3 cm </string>
+
+    <string name="k216"> K216:\t Weight Measurement #3 </string>
+
+    <string name="k217"> K217:\t Left middle upper arm circumference measurement #1 </string>
+
+    <string name="k218"> k218:\t Left middle upper arm circumference measurement #2 </string>
+
+    <string name="k219"> K219:\t Does the middle upper arm circumference measurements differ by &gt;.3 cm </string>
     <string name="k219a"> Yes </string>
     <string name="k219b"> No </string>
-    <string name="k220"> k220:\t Left middle upper arm circumference measurement #3 </string>
-    <string name="k220a"> k220a:\t Measurer 3:ID</string>
-    <string name="k221"> k221:\t Height measurement of mother #1 </string>
-    <string name="k221a"> k221a:\t Measurer 1:ID</string>
-    <string name="k221_title"> k221_title:\t Read aloud: Now we are going to do some measurements of (MOTHER NAME) height and weight.  Each measurement will be done at least twice. </string>
-    <string name="k222"> k222:\t Height measurement of mother #2 </string>
-    <string name="k222a"> k222a:\t Measurer 2:ID</string>
-    <string name="k223"> k223:\t Does the height measurements differ by &gt;0.6 cm?</string>
+
+    <string name="k220"> K220:\t Left middle upper arm circumference measurement #3 </string>
+
+    <string name="tk2headinghint3"> Read aloud: Now we are going to do some measurements of (MOTHER NAME) height and weight. Each measurement will be done at least twice. </string>
+    <string name="k221"> K221:\t Height measurement of mother #1 </string>
+
+    <string name="k222"> K222:\t Height measurement of mother #2 </string>
+
+    <string name="k223"> K223:\t Does the height measurements differ by &gt;0.6 cm ? </string>
     <string name="k223a"> Yes </string>
     <string name="k223b"> No </string>
-    <string name="k224"> k224:\t Height measurement of mother #3</string>
-    <string name="k224a"> k224a:\t Measurer 3:ID</string>
-    <string name="k225"> k225:\t Weight measurement of mother #1</string>
-    <string name="k225a"> k225a:\t Measurer 1:ID</string>
-    <string name="k226"> k226:\t Weight measurement of mother #2</string>
-    <string name="k226a"> k226a:\t Measurer 2:ID</string>
-    <string name="k227"> k227:\t Does the weight measurements differ by &gt;.1 kg?</string>
+
+    <string name="k224"> K224:\t Height measurement of mother #3 </string>
+
+    <string name="k225"> K225:\t Weight measurement of mother #1</string>
+
+    <string name="k226"> K226:\t Weight measurement of mother #2 </string>
+
+    <string name="k227"> K227:\t Does the weight measurements differ by &gt;.1 kg ? </string>
     <string name="k227a"> Yes </string>
     <string name="k227b"> No </string>
-    <string name="k228"> k228:\t Weight measurement of mother #3</string>
-    <string name="k228a"> k228a:\t Measurer 3:ID</string>
-    <string name="l101"> l101:\t Select the Child’s Name from drop down list</string>
-    <string name="l101_title"> l101_title:\t This Section will be filled for index child </string>
-    <string name="l101_title2"> l101_title2:\t Identification</string>
-    <string name="l102"> l102:\t Verbal consent and assent granted</string>
+
+    <string name="k228"> K228:\t Weight measurement of mother #3 </string>
+
+    <!-- SECTION L -->
+    <string name="tlheading"> MODULE L:\t NUTRITIONAL IRON STATUS ASSESSMENT OF PARTICIPANT </string>
+    <string name="tlheading1"> This Section will be filled for index child </string>
+    <string name="tlheading2"> Identification </string>
+
+    <string name="l101"> l101:\t Child’\s Name </string>
+
+    <string name="l102"> l102:\t Verbal consent and assent granted </string>
     <string name="l102a"> Yes </string>
     <string name="l102b"> No </string>
-    <string name="l103"> l103:\t Interview Status    </string>
+
+    <string name="l103"> l103:\t Interview Status </string>
     <string name="l103a"> Completed </string>
     <string name="l103b"> Withdrawn </string>
     <string name="l103c"> Refused</string>
+
+    <string name="tlheading3"> Nutritional Iron status assessment of participant </string>
+    <string name="tlheading4"> Read aloud to participant: we are going to assess (CHILD NAME) iron status </string>
     <string name="l104"> l104:\t Haemoglobin</string>
-    <string name="l104_title"> l104_title:\t Nutritional Iron status assessment of participant Read aloud to participant: we are going to assess (CHILD NAME) iron status </string>
 
-
+    <!-- SECTION M -->
     <string name="tmheading">SECTION M: VISION TEST </string>
     <string name="m101"> M101:\t Vision Test was performed ? </string>
     <string name="m101a"> Yes </string>
