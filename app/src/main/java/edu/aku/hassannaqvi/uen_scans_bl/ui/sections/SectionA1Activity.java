@@ -24,13 +24,13 @@ import edu.aku.hassannaqvi.uen_scans_bl.contracts.EnumBlockContract;
 import edu.aku.hassannaqvi.uen_scans_bl.contracts.FormsContract;
 import edu.aku.hassannaqvi.uen_scans_bl.core.DatabaseHelper;
 import edu.aku.hassannaqvi.uen_scans_bl.core.MainApp;
-import edu.aku.hassannaqvi.uen_scans_bl.databinding.ActivitySectionABinding;
+import edu.aku.hassannaqvi.uen_scans_bl.databinding.ActivitySectionA1Binding;
 import edu.aku.hassannaqvi.uen_scans_bl.ui.list_activity.FamilyMembersListActivity;
 import edu.aku.hassannaqvi.uen_scans_bl.utils.Util;
 
 public class SectionA1Activity extends AppCompatActivity {
 
-    ActivitySectionABinding bi;
+    ActivitySectionA1Binding bi;
     private DatabaseHelper db;
     private BLRandomContract bl;
 
