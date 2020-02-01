@@ -1420,75 +1420,88 @@
     <string name="cb604b"> Fairly good </string>
     <string name="cb604c"> Fairly bad کافی بری </string>
     <string name="cb604d"> Very bad </string>
-    <string name="d101"> d101:\t Full sugar carbonated soft drinks (i.e. Pepsi/Coca-Cola)</string>
+
+    <string name="d101"> D101:\t Full sugar carbonated soft drinks (i.e. Pepsi/Coca-Cola) </string>
     <string name="d101a"> At home </string>
-    <string name="d101b">  Outside of home</string>
-    <string name="d101c">  Both</string>
-    <string name="d101sub"> d101sub:\t Full sugar carbonated soft drinks (i.e. Pepsi/Coca-Cola)</string>
+    <string name="d101b">  Outside of home </string>
+    <string name="d101c">  Both </string>
+
+    <string name="d101sub"> D101sub:\t Full sugar carbonated soft drinks (i.e. Pepsi/Coca-Cola)</string>
     <string name="d101suba"> 1 bottle per day  </string>
     <string name="d101subb"> 2 bottles per day</string>
     <string name="d101subc"> 3 or more bottles per day</string>
     <string name="d101subd"> 1 bottle per week</string>
-    <string name="d101sube"> 2–4 bottles per week</string>
-    <string name="d101subf"> 5–6 bottles per week</string>
-    <string name="d101subg"> 1–3 bottles per month</string>
-    <string name="d101subh"> Never/less than 1 per month</string>
-    <string name="d102"> d102:\t Fruit juice (i.e. lemonade - not real juice)</string>
-    <string name="d102a"> At home</string>
-    <string name="d102b"> Outside of home</string>
-    <string name="d102c"> Both</string>
-    <string name="d102sub"> d102sub:\t Fruit juice (i.e. lemonade - not real juice)</string>
-    <string name="d102suba"> 1 bottle per day</string>
+    <string name="d101sube"> 2 &#8211; 4 bottles per week</string>
+    <string name="d101subf"> 5 &#8211; 6 bottles per week</string>
+    <string name="d101subg"> 1 &#8211; 3 bottles per month</string>
+    <string name="d101subh"> Never / less than 1 per month</string>
+
+    <string name="d102"> D102:\t Fruit juice (i.e. lemonade - not real juice)</string>
+    <string name="d102a"> At home </string>
+    <string name="d102b"> Outside of home </string>
+    <string name="d102c"> Both </string>
+
+    <string name="d102sub"> D102sub:\t Fruit juice (i.e. lemonade - not real juice) </string>
+    <string name="d102suba"> 1 bottle per day </string>
     <string name="d102subb"> 2 bottles per day </string>
-    <string name="d102subc"> 3 or more bottles per day</string>
-    <string name="d102subd"> 1 bottle per week</string>
-    <string name="d102sube"> 2–4 bottles per week</string>
-    <string name="d102subf"> 5–6 bottles per week</string>
-    <string name="d102subg"> 1–3 bottles per month</string>
-    <string name="d102subh"> Never/less than 1 per month</string>
-    <string name="d103"> d103:\t Black tea (or other caffeine beverages)</string>
+    <string name="d102subc"> 3 or more bottles per day </string>
+    <string name="d102subd"> 1 bottle per week </string>
+    <string name="d102sube"> 2 &#8211; 4 bottles per week </string>
+    <string name="d102subf"> 5 &#8211; 6 bottles per week </string>
+    <string name="d102subg"> 1 &#8211; 3 bottles per month </string>
+    <string name="d102subh"> Never / less than 1 per month </string>
+
+    <string name="d103"> D103:\t Black tea (or other caffeine beverages) </string>
     <string name="d103a"> With sugar</string>
     <string name="d103b"> Without sugar</string>
-    <string name="d103sub"> d103sub:\t Black tea (or other caffeine beverages)</string>
+
+    <string name="d103sub"> D103sub:\t Black tea (or other caffeine beverages) </string>
     <string name="d103suba"> 1 cup per day </string>
-    <string name="d103subb"> 2 cups per day</string>
-    <string name="d103subc"> 3 or more cups per day</string>
+    <string name="d103subb"> 2 cups per day </string>
+    <string name="d103subc"> 3 or more cups per day </string>
     <string name="d103subd"> 1 &#8211; 2 cups per week </string>
-    <string name="d103sube"> 3 &#8211; 6 cups per week</string>
-    <string name="d103subf"> 1–3 cups per month</string>
-    <string name="d103subg"> Never/less than 1 per month</string>
-    <string name="d104"> d104:\t Tea with milk</string>
-    <string name="d104a"> With sugar</string>
-    <string name="d104b"> Without sugar</string>
-    <string name="d104sub"> d104sub:\t Tea with milk</string>
+    <string name="d103sube"> 3 &#8211; 6 cups per week </string>
+    <string name="d103subf"> 1 &#8211; 3 cups per month </string>
+    <string name="d103subg"> Never/less than 1 per month </string>
+
+    <string name="d104"> D104:\t Tea with milk </string>
+    <string name="d104a"> With Sugar </string>
+    <string name="d104b"> Without Sugar </string>
+
+    <string name="d104sub"> D104sub:\t Tea with milk</string>
     <string name="d104suba"> 1 cup per day </string>
-    <string name="d104subb"> 2 cups per day</string>
-    <string name="d104subc"> 3 or more cups per day</string>
+    <string name="d104subb"> 2 cups per day </string>
+    <string name="d104subc"> 3 or more cups per day </string>
     <string name="d104subd"> 1 &#8211; 2 cups per week </string>
-    <string name="d104sube"> 3 &#8211; 6 cups per week</string>
-    <string name="d104subf"> 1–3 cups per month</string>
-    <string name="d104subg"> Never/less than 1 per month</string>
-    <string name="d105"> d105:\t How much sugar do you use?</string>
+    <string name="d104sube"> 3 &#8211; 6 cups per week </string>
+    <string name="d104subf"> 1 &#8211; 3 cups per month </string>
+    <string name="d104subg"> Never/less than 1 per month </string>
+
+    <string name="d105"> D105:\t How much sugar do you use ? </string>
     <string name="d105a"> None/less than 1 teaspoon per day </string>
-    <string name="d105b"> 1–2 teaspoons per day  </string>
-    <string name="d105c"> 3–4 teaspoons per day </string>
-    <string name="d106"> d106:\t Water                             </string>
-    <string name="d106a"> Tap</string>
-    <string name="d106b">  Bottled  </string>
-    <string name="d106sub"> d106sub:\t Water                               </string>
-    <string name="d106suba"> 1 glass per day  </string>
-    <string name="d106subb"> 2 &#8211; 3 glasses per day  </string>
-    <string name="d106subc"> 3 &#8211; 6 glasses per day  </string>
-    <string name="d106subd"> 6 &#8211; 8 glasses per day  </string>
-    <string name="d106sube"> &gt;8 glasses per day  </string>
+    <string name="d105b"> 1 &#8211; 2 teaspoons per day </string>
+    <string name="d105c"> 3 &#8211; 4 teaspoons per day </string>
     <string name="d150d"> 5 or more teaspoons per day </string>
-    <string name="d201"> d201:\t What type of white milk do your (child name) usually drink?</string>
-    <string name="d201a"> Cow milk  </string>
-    <string name="d201b"> Goat milk   </string>
+
+    <string name="d106"> D106:\t Water </string>
+    <string name="d106a"> Tap </string>
+    <string name="d106b"> Bottled </string>
+
+    <string name="d106sub"> D106sub:\t Water </string>
+    <string name="d106suba"> 1 glass per day  </string>
+    <string name="d106subb"> 2 &#8211; 3 glasses per day </string>
+    <string name="d106subc"> 3 &#8211; 6 glasses per day </string>
+    <string name="d106subd"> 6 &#8211; 8 glasses per day </string>
+    <string name="d106sube"> &gt; 8 glasses per day </string>
+
+    <string name="d201"> D201:\t What type of white milk do your (child name) usually drink ? </string>
+    <string name="d201a"> Cow milk </string>
+    <string name="d201b"> Goat milk </string>
     <string name="d201c"> Buffalo milk </string>
     <string name="d201d"> Tetra pack </string>
-    <string name="d201e"> Don’t drink milk  </string>
-    <string name="d201f"> Don’t know  </string>
+    <string name="d201e"> Don’\t drink milk </string>
+    <string name="d201f"> Don’\t know </string>
+
     <string name="d202"> d202:\t White milk (glass or with cereal)</string>
     <string name="d202a"> 1 glass per day  </string>
     <string name="d202b"> 2 &#8211; 3 glasses per day </string>
@@ -1948,7 +1961,7 @@
     <string name="title_a"> title_a:\t Before breakfast </string>
 
 
-    <string name="tk1heading"> MODULE K1:\t RESPONDENT AND CHILD’/S PHYSICAL </string>
+    <string name="tk1heading"> MODULE K1:\t RESPONDENT AND CHILD’\S PHYSICAL </string>
     <string name="tk1headinghint"> Read aloud to the selected women of household: Now I would like to ask some questions about you, male head of household and your child.</string>
 
     <string name="k101"> K101:\t Do you think that your (Child Name) height is appropriate for his/her age ? </string>

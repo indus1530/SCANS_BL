@@ -30,10 +30,6 @@
                 android:orientation="vertical">
 
                 <TextView
-                    style="@style/i_textview"
-                    android:text="@string/a101" />
-
-                <TextView
                     style="@style/textView3Head"
                     android:text="@string/a101a" />
 

@@ -86,11 +86,11 @@
             android:screenOrientation="portrait" />
         <activity
             android:name=".ui.sections.SectionK1Activity"
-            android:label="@string/tkheading"
+            android:label="@string/tk1heading"
             android:screenOrientation="portrait" />
         <activity
             android:name=".ui.sections.SectionK2Activity"
-            android:label="@string/tkheading"
+            android:label="@string/tk2heading"
             android:screenOrientation="portrait" />
         <activity
             android:name=".ui.sections.SectionLActivity"
