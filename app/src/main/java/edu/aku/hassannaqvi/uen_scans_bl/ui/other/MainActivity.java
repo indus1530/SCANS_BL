@@ -43,7 +43,7 @@ import edu.aku.hassannaqvi.uen_scans_bl.core.AndroidDatabaseManager;
 import edu.aku.hassannaqvi.uen_scans_bl.core.DatabaseHelper;
 import edu.aku.hassannaqvi.uen_scans_bl.core.MainApp;
 import edu.aku.hassannaqvi.uen_scans_bl.databinding.ActivityMainBinding;
-import edu.aku.hassannaqvi.uen_scans_bl.ui.sections.SectionAActivity;
+import edu.aku.hassannaqvi.uen_scans_bl.ui.sections.SectionA1Activity;
 import edu.aku.hassannaqvi.uen_scans_bl.ui.sync.SyncActivity;
 
 public class MainActivity extends AppCompatActivity {
@@ -265,7 +265,7 @@ public class MainActivity extends AppCompatActivity {
     public void OpenFormFunc() {
         Intent oF;
         if (!MainApp.userName.equals("0000")) {
-            oF = new Intent(MainActivity.this, SectionAActivity.class);
+            oF = new Intent(MainActivity.this, SectionA1Activity.class);
             startActivity(oF);
         } else {
             Toast.makeText(getApplicationContext(), "Please login Again!", Toast.LENGTH_LONG).show();

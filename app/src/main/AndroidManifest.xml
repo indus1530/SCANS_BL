@@ -40,7 +40,7 @@
             android:screenOrientation="portrait"
             android:theme="@style/AppTheme" />
         <activity
-            android:name=".ui.sections.SectionAActivity"
+            android:name=".ui.sections.SectionA1Activity"
             android:label="@string/taheading"
             android:screenOrientation="portrait" />
         <activity

@@ -28,7 +28,7 @@ import edu.aku.hassannaqvi.uen_scans_bl.databinding.ActivitySectionABinding;
 import edu.aku.hassannaqvi.uen_scans_bl.ui.list_activity.FamilyMembersListActivity;
 import edu.aku.hassannaqvi.uen_scans_bl.utils.Util;
 
-public class SectionAActivity extends AppCompatActivity {
+public class SectionA1Activity extends AppCompatActivity {
 
     ActivitySectionABinding bi;
     private DatabaseHelper db;
@@ -38,7 +38,7 @@ public class SectionAActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
-        bi = DataBindingUtil.setContentView(this, R.layout.activity_section_a);
+        bi = DataBindingUtil.setContentView(this, R.layout.activity_section_a1);
         bi.setCallback(this);
         db = MainApp.appInfo.getDbHelper();
 
@@ -104,7 +104,7 @@ public class SectionAActivity extends AppCompatActivity {
             }
             if (UpdateDB()) {
                 finish();
-                startActivity(new Intent(SectionAActivity.this, FamilyMembersListActivity.class).putExtra("sno", Integer.valueOf(bl.getSno())));
+                startActivity(new Intent(SectionA1Activity.this, FamilyMembersListActivity.class).putExtra("sno", Integer.valueOf(bl.getSno())));
             }
         }
     }
