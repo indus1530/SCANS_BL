@@ -12,7 +12,6 @@
     </data>
 
     <ScrollView
-
         style="@style/i_scrollview"
         tools:context=".ui.Myactivity">
 
@@ -254,34 +253,47 @@
                 android:visibility="visible"
                 tools:visibility="visible">
 
-                <LinearLayout
+                <!-- checkHHHeadpresen -->
+                <androidx.cardview.widget.CardView
                     android:id="@+id/fldGrpcih110"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:orientation="vertical">
-
-                    <TextView
-                        android:id="@+id/hhName"
-                        style="@style/i_textview"
-                        android:padding="10dp"
-                        android:text="@string/checkHHpresent"
-                        android:textAlignment="center" />
-
-                    <CheckBox
-                        android:id="@+id/checkHHHeadpresent"
-                        style="@style/checkbox"
-                        android:tag="-1"
-                        android:text="@string/checkHHpresent" />
+                    style="@style/cardView">
 
                     <LinearLayout
-                        android:id="@+id/fldGrpcih110a"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+
+                        <TextView
+                            android:id="@+id/hhName"
+                            style="@style/i_textview"
+                            android:padding="10dp"
+                            android:text="@string/checkHHpresent"
+                            android:textAlignment="center" />
+
+                        <CheckBox
+                            android:id="@+id/checkHHHeadpresent"
+                            style="@style/checkbox"
+                            android:tag="-1"
+                            android:text="@string/checkHHpresent" />
+
+                    </LinearLayout>
+
+                </androidx.cardview.widget.CardView>
+
+                <!-- checkHHHeadpresen -->
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/fldGrpcih110a"
+                    style="@style/cardView"
+                    android:visibility='@{checkHHHeadpresent.checked? View.GONE : View.VISIBLE}'>
+
+                    <LinearLayout
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:orientation="vertical">
 
                         <TextView
                             style="@style/i_textview"
-                            android:layout_marginTop="16dp"
                             android:text="New Head of Household Name"
                             android:textColor="@android:color/white" />
 
@@ -289,12 +301,12 @@
                             android:id="@+id/newHHheadname"
                             style="@style/EditTextAlpha"
                             android:maxLength="25"
-                            android:text='@{checkHHHeadpresent.checked ? "" : newHHheadname.getText().toString()}'
-                            android:visibility='@{checkHHHeadpresent.checked? View.GONE : View.VISIBLE}' />
+                            android:hint="@string/name"
+                            android:text='@{checkHHHeadpresent.checked ? "" : newHHheadname.getText().toString()}' />
 
                     </LinearLayout>
 
-                </LinearLayout>
+                </androidx.cardview.widget.CardView>
 
                 <!-- a109  Input   -->
                 <androidx.cardview.widget.CardView

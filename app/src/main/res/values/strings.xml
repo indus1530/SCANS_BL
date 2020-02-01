@@ -270,9 +270,9 @@
     <string name="a119d"> Refused</string>
     <string name="a119e"> Dwelling vacant or address not a dwelling </string>
     <string name="a119f"> Dwelling not found </string>
-    <string name="a119g"> No Child between 5 &#8211; 10 years 5 &#8211; 10 </string>
-    <string name="a119h"> HH Having a child of 5 &#8211; 10 &#8211; year age group with Chronic Disease </string>
-    <string name="a119i"> HH having a child of 5 &#8211; 10 &#8211; year age group which is part of any nutrition study </string>
+    <string name="a119g"> No Child between 5 &#8211; 10 Years </string>
+    <string name="a119h"> HH Having a child of 5 &#8211; 10 Years age group with Chronic Disease </string>
+    <string name="a119i"> HH having a child of 5 &#8211; 10 Years age group which is part of any nutrition study </string>
     <string name="a119x"> Other</string>
 
     <string name="a201"> a201:\t Line number </string>
