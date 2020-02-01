@@ -64,6 +64,8 @@ public class EndingActivity extends AppCompatActivity {
                 : bi.istatuse.isChecked() ? "5"
                 : bi.istatusf.isChecked() ? "6"
                 : bi.istatusg.isChecked() ? "7"
+                : bi.istatush.isChecked() ? "8"
+                : bi.istatusi.isChecked() ? "9"
                 : bi.istatus96.isChecked() ? "96"
                 : "0");
 
