@@ -298,11 +298,11 @@
     <string name="a204b"> Female</string>
     <string name="a204c"> Transgender</string>
     <string name="a205"> a205:\t What is (name)’s date of birth?</string>
-    <string name="a205dd"> day</string>
+    <string name="a205dd"> Day</string>
     <string name="a205mm"> Month</string>
     <string name="a205yy"> Year</string>
     <string name="a206"> a206:\t How old is (name)?Record in completed years.98 DON’T KNOW</string>
-    <string name="a206dd"> day</string>
+    <string name="a206dd"> Day</string>
     <string name="a206mm"> Month</string>
     <string name="a206yy"> Year</string>
     <string name="a207"> a207:\t Marital Status (10 years or above)</string>
@@ -326,7 +326,7 @@
     <string name="a209j"> class 9</string>
     <string name="a209k"> class 10</string>
     <string name="a209l"> class 11</string>
-    <string name="a209m"> 12</string>
+    <string name="a209m"> class 12</string>
     <string name="a209n"> class 13</string>
     <string name="a209o"> class 14</string>
     <string name="a209p"> class 15</string>
@@ -334,7 +334,7 @@
     <string name="a209r"> class 17</string>
     <string name="a209s"> class 18</string>
     <string name="a209t"> class 19</string>
-    <string name="a209u"> 20 class </string>
+    <string name="a209u"> class 20 </string>
     <string name="a209v"> Dont Know </string>
     <string name="a209w"> Not Applicable </string>
     <string name="a210"> a210:\t Occupation (10YEARS AND ABOVE)</string>
