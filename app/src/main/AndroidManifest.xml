@@ -39,77 +39,77 @@
 
         <activity
             android:name=".ui.sections.SectionA1Activity"
-            android:label="@string/taheading"
+            android:label="@string/ta1heading"
             android:screenOrientation="portrait" />
 
         <activity
             android:name=".ui.sections.SectionA2Activity"
-            android:label="@string/tmheading"
+            android:label="@string/ta2heading"
             android:screenOrientation="portrait" />
 
         <activity
             android:name=".ui.sections.SectionA31Activity"
-            android:label="@string/tmheading"
+            android:label="@string/ta3heading"
             android:screenOrientation="portrait" />
 
         <activity
             android:name=".ui.sections.SectionA32Activity"
-            android:label="@string/tmheading"
+            android:label="@string/ta3heading"
             android:screenOrientation="portrait" />
 
         <activity
             android:name=".ui.sections.SectionA4Activity"
-            android:label="@string/tmheading"
+            android:label="@string/ta4heading"
             android:screenOrientation="portrait" />
 
         <activity
             android:name=".ui.sections.SectionB1Activity"
-            android:label="@string/tmheading"
+            android:label="@string/tb1heading"
             android:screenOrientation="portrait" />
 
         <activity
             android:name=".ui.sections.SectionB2Activity"
-            android:label="@string/tmheading"
+            android:label="@string/tb2heading"
             android:screenOrientation="portrait" />
 
         <activity
             android:name=".ui.sections.SectionB3Activity"
-            android:label="@string/tmheading"
+            android:label="@string/tb3heading"
             android:screenOrientation="portrait" />
 
         <activity
             android:name=".ui.sections.SectionC1Activity"
-            android:label="@string/tmheading"
+            android:label="@string/tc1heading"
             android:screenOrientation="portrait" />
 
         <activity
             android:name=".ui.sections.SectionC2Activity"
-            android:label="@string/tmheading"
+            android:label="@string/tc2heading"
             android:screenOrientation="portrait" />
 
         <activity
             android:name=".ui.sections.SectionC3Activity"
-            android:label="@string/tmheading"
+            android:label="@string/tc3heading"
             android:screenOrientation="portrait" />
 
         <activity
             android:name=".ui.sections.SectionC4Activity"
-            android:label="@string/tmheading"
+            android:label="@string/tc4heading"
             android:screenOrientation="portrait" />
 
         <activity
             android:name=".ui.sections.SectionC5Activity"
-            android:label="@string/tmheading"
+            android:label="@string/tc5heading"
             android:screenOrientation="portrait" />
 
         <activity
             android:name=".ui.sections.SectionC6Activity"
-            android:label="@string/tmheading"
+            android:label="@string/tc6heading"
             android:screenOrientation="portrait" />
 
         <activity
             android:name=".ui.sections.SectionD1Activity"
-            android:label="@string/tdheading"
+            android:label="@string/td1heading"
             android:parentActivityName=".ui.list_activity.FamilyMembersListActivity"
             android:screenOrientation="portrait">
             <meta-data
@@ -119,37 +119,37 @@
 
         <activity
             android:name=".ui.sections.SectionD2Activity"
-            android:label="@string/tmheading"
+            android:label="@string/td2heading"
             android:screenOrientation="portrait" />
 
         <activity
             android:name=".ui.sections.SectionD3Activity"
-            android:label="@string/tmheading"
+            android:label="@string/td3heading"
             android:screenOrientation="portrait" />
 
         <activity
             android:name=".ui.sections.SectionD4Activity"
-            android:label="@string/tmheading"
+            android:label="@string/td4heading"
             android:screenOrientation="portrait" />
 
         <activity
             android:name=".ui.sections.SectionD6Activity"
-            android:label="@string/tmheading"
+            android:label="@string/td6heading"
             android:screenOrientation="portrait" />
 
         <activity
             android:name=".ui.sections.SectionD7Activity"
-            android:label="@string/tmheading"
+            android:label="@string/td7heading"
             android:screenOrientation="portrait" />
 
         <activity
             android:name=".ui.sections.SectionD8Activity"
-            android:label="@string/tmheading"
+            android:label="@string/td8heading"
             android:screenOrientation="portrait" />
 
         <activity
             android:name=".ui.sections.SectionD9Activity"
-            android:label="@string/tmheading"
+            android:label="@string/td9heading"
             android:screenOrientation="portrait" />
 
         <activity
@@ -169,7 +169,7 @@
 
         <activity
             android:name=".ui.sections.SectionK3Activity"
-            android:label="@string/tmheading"
+            android:label="@string/tk3heading"
             android:screenOrientation="portrait" />
 
         <activity
