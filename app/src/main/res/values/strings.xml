@@ -356,7 +356,8 @@
     <string name="a211b"> No</string>
     <string name="a212"> a212:\t Father Line No  (Only for 5 &#8211; 10 year Children)</string>
     <string name="a213"> a213:\t Mother Line No   (Only for U5 Children)</string>
-    <string name="a301"> a301:\t What language do you usually speak in your household?</string>
+
+    <string name="a301"> A301:\t What language do you usually speak in your household?</string>
     <string name="a301a"> Punjabi </string>
     <string name="a301b"> Hindko </string>
     <string name="a301c"> Siraiki </string>
@@ -368,13 +369,15 @@
     <string name="a301i"> Gujrati </string>
     <string name="a301j"> Dhatki </string>
     <string name="a301x"> Other specify </string>
-    <string name="a302"> a302:\t What is your family’s religion?</string>
+
+    <string name="a302"> A302:\t What is your family’s religion?</string>
     <string name="a302a"> Muslim </string>
     <string name="a302b"> Christian </string>
     <string name="a302c"> Hindu</string>
     <string name="a302d"> Sikh </string>
     <string name="a302x"> Other Specify </string>
-    <string name="a303"> a303:\t Main material of the floor RECORD OBSERVATION</string>
+
+    <string name="a303"> A303:\t Main material of the floor RECORD OBSERVATION</string>
     <string name="a303a_title"> Natural Floor </string>
     <string name="a303a"> Mud/Clay/Earth/Sand/  </string>
     <string name="a303b"> Dung </string>
