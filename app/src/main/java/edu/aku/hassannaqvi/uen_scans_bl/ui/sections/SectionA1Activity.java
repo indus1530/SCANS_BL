@@ -111,7 +111,7 @@ public class SectionA1Activity extends AppCompatActivity {
 
 
     private boolean UpdateDB() {
-        long updcount = db.addForm(MainApp.fc);
+        /*long updcount = db.addForm(MainApp.fc);
         MainApp.fc.set_ID(String.valueOf(updcount));
         if (updcount > 0) {
             MainApp.fc.set_UID(MainApp.fc.getDeviceID() + MainApp.fc.get_ID());
@@ -120,7 +120,8 @@ public class SectionA1Activity extends AppCompatActivity {
         } else {
             Toast.makeText(this, "Updating Database... ERROR!", Toast.LENGTH_SHORT).show();
             return false;
-        }
+        }*/
+        return true;
 
     }
 

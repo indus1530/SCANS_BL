@@ -13,9 +13,6 @@ import org.json.JSONException;
 import org.json.JSONObject;
 
 import edu.aku.hassannaqvi.uen_scans_bl.R;
-import edu.aku.hassannaqvi.uen_scans_bl.contracts.KishMWRAContract;
-import edu.aku.hassannaqvi.uen_scans_bl.core.DatabaseHelper;
-import edu.aku.hassannaqvi.uen_scans_bl.core.MainApp;
 import edu.aku.hassannaqvi.uen_scans_bl.databinding.ActivitySectionD1Binding;
 import edu.aku.hassannaqvi.uen_scans_bl.utils.Util;
 
@@ -58,14 +55,15 @@ public class SectionD1Activity extends AppCompatActivity {
 
     private boolean UpdateDB() {
 
-        DatabaseHelper db = MainApp.appInfo.getDbHelper();
+        /*DatabaseHelper db = MainApp.appInfo.getDbHelper();
         int updcount = db.updatesKishMWRAColumn(KishMWRAContract.SingleKishMWRA.COLUMN_SK, MainApp.kish.getsK());
         if (updcount == 1) {
             return true;
         } else {
             Toast.makeText(this, "Updating Database... ERROR!", Toast.LENGTH_SHORT).show();
             return false;
-        }
+        }*/
+        return true;
     }
 
 
