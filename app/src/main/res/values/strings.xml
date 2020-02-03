@@ -521,171 +521,217 @@
     <string name="a317c"> In a separate building</string>
     <string name="a317d"> Outdoors (open place)  </string>
     <string name="a317x"> Others (Specify)</string>
-    <string name="a318"> a318:\t What type of fuel does your household Mainly use for cooking? </string>
+
+    <string name="a318"> A318:\t What type of fuel does your household Mainly use for cooking? </string>
     <string name="a318a"> Natural Gas </string>
     <string name="a318b"> Liquefied Petroleum Gas LPG </string>
-    <string name="a318c"> Bio &#8211; gas</string>
+    <string name="a318c"> Bio &#8211; gas </string>
     <string name="a318d"> Electricity </string>
     <string name="a318e"> Kerosene </string>
-    <string name="a318f"> Coal/Lignite</string>
-    <string name="a318g"> Charcoal</string>
+    <string name="a318f"> Coal/Lignite </string>
+    <string name="a318g"> Charcoal </string>
     <string name="a318h"> Wood</string>
     <string name="a318i"> Agricultural Crop Residue  </string>
     <string name="a318j"> Animal Dung </string>
     <string name="a318k"> No food cooked in household</string>
     <string name="a318x"> Other specify</string>
-    <string name="a319"> a319:\t Does your household have? Multiple Response</string>
-    <string name="a319a"> a319a:\t Electricity Connection </string>
+
+    <string name="a319"> A319:\t Does your household have ? </string>
+
+    <string name="a319a"> Electricity Connection </string>
     <string name="a319aa"> Yes </string>
     <string name="a319ab"> No </string>
-    <string name="a319b"> a319b:\t Radio </string>
+
+    <string name="a319b"> Radio </string>
     <string name="a319ba"> Yes </string>
     <string name="a319bb"> No </string>
-    <string name="a319c"> a319c:\t Television </string>
+
+    <string name="a319c"> Television </string>
     <string name="a319ca"> Yes </string>
     <string name="a319cb"> No </string>
-    <string name="a319d"> a319d:\t Landline phone </string>
+
+    <string name="a319d"> Landline phone </string>
     <string name="a319da"> Yes </string>
-    <string name="a319db"> No</string>
-    <string name="a319e"> a319e:\t Refrigerator </string>
+    <string name="a319db"> No </string>
+
+    <string name="a319e"> Refrigerator </string>
     <string name="a319ea"> Yes </string>
     <string name="a319eb"> No </string>
-    <string name="a319f"> a319f:\t Almirah/Cabinet </string>
+
+    <string name="a319f"> Almirah / Cabinet </string>
     <string name="a319fa"> Yes </string>
-    <string name="a319fb"> No</string>
-    <string name="a319g"> a319g:\t Chair </string>
+    <string name="a319fb"> No </string>
+
+    <string name="a319g"> Chair </string>
     <string name="a319ga"> Yes</string>
     <string name="a319gb"> No</string>
-    <string name="a319h"> a319h:\t Room Cooler </string>
+
+    <string name="a319h"> Room Cooler </string>
     <string name="a319ha"> Yes </string>
     <string name="a319hb"> No </string>
-    <string name="a319i"> a319i:\t Air conditioner </string>
+
+    <string name="a319i"> Air conditioner </string>
     <string name="a319ia"> Yes</string>
     <string name="a319ib"> No </string>
-    <string name="a319j"> a319j:\t Washing machine</string>
+
+    <string name="a319j"> Washing machine </string>
     <string name="a319ja"> Yes </string>
     <string name="a319jb"> No </string>
-    <string name="a319k"> a319k:\t Water Pump </string>
+
+    <string name="a319k"> Water Pump </string>
     <string name="a319ka"> Yes</string>
     <string name="a319kb"> No</string>
-    <string name="a319l"> a319l:\t Bed</string>
+
+    <string name="a319l"> Bed </string>
     <string name="a319la"> Yes </string>
     <string name="a319lb"> No </string>
-    <string name="a319m"> a319m:\t Clock </string>
+
+    <string name="a319m"> Clock </string>
     <string name="a319ma"> Yes </string>
     <string name="a319mb"> No </string>
-    <string name="a319n"> a319n:\t Sofa </string>
+
+    <string name="a319n"> Sofa </string>
     <string name="a319na"> Yes </string>
     <string name="a319nb"> No </string>
-    <string name="a319o"> a319o:\t Camera </string>
+
+    <string name="a319o"> Camera </string>
     <string name="a319oa"> Yes </string>
     <string name="a319ob"> No</string>
-    <string name="a319p"> a319p:\t Sewing machine </string>
+
+    <string name="a319p"> Sewing machine </string>
     <string name="a319pa"> Yes  </string>
     <string name="a319pb"> No </string>
-    <string name="a319q"> a319q:\t Computer/laptop  </string>
+
+    <string name="a319q"> Computer/laptop  </string>
     <string name="a319qa"> Yes </string>
     <string name="a319qb"> No </string>
-    <string name="a319r"> a319r:\t Internet connection </string>
+
+    <string name="a319r"> Internet connection </string>
     <string name="a319ra"> Yes </string>
     <string name="a319rb"> No </string>
-    <string name="a320"> a320:\t Do you have your own mobile phone sepretelly? </string>
+
+    <string name="a320"> A320:\t Do you have your own mobile phone sepretelly ? </string>
     <string name="a320a"> Yes </string>
     <string name="a320b"> No </string>
-    <string name="a321"> a321:\t Does any member of this household own? Multiple Response</string>
-    <string name="a321a"> a321a:\t Watch</string>
+
+    <string name="a321"> A321:\t Does any member of this household own ? </string>
+
+    <string name="a321a"> Watch</string>
     <string name="a321aa"> Yes </string>
     <string name="a321ab"> No </string>
-    <string name="a321b"> a321b:\t Mobile Phone </string>
+
+    <string name="a321b"> Mobile Phone </string>
     <string name="a321ba"> Yes </string>
     <string name="a321bb"> No </string>
-    <string name="a321c"> a321c:\t Bicycle</string>
+
+    <string name="a321c"> Bicycle</string>
     <string name="a321ca"> Yes </string>
     <string name="a321cb"> No</string>
-    <string name="a321d"> a321d:\t Motorcycle or scooter </string>
+
+    <string name="a321d"> Motorcycle or scooter </string>
     <string name="a321da"> Yes </string>
     <string name="a321db"> No </string>
-    <string name="a321e"> a321e:\t Animal &#8211; drawn cart </string>
+
+    <string name="a321e"> Animal &#8211; drawn cart </string>
     <string name="a321ea"> Yes </string>
     <string name="a321eb"> No </string>
-    <string name="a321f"> a321f:\t Car or truck or bus </string>
+
+    <string name="a321f"> Car or truck or bus </string>
     <string name="a321fa"> Yes </string>
     <string name="a321fb"> No</string>
-    <string name="a321g"> a321g:\t Tractor </string>
+
+    <string name="a321g"> Tractor </string>
     <string name="a321ga"> Yes </string>
     <string name="a321gb"> No</string>
-    <string name="a321h"> a321h:\t Boat with a motor </string>
+
+    <string name="a321h"> Boat with a motor </string>
     <string name="a321ha"> Yes </string>
     <string name="a321hb"> No </string>
-    <string name="a321i"> a321i:\t Boat without motor  </string>
+
+    <string name="a321i"> Boat without motor  </string>
     <string name="a321ia"> Yes </string>
     <string name="a321ib"> No </string>
-    <string name="a322"> a322:\t What kind of toilet facility do members of your household usually use? Note for DC: (If not possible to determine, ask permission to observe the facility)</string>
-    <string name="a322a_title"> Flush or Pour Flush Toilet</string>
+
+    <string name="a322"> A322:\t What kind of toilet facility do members of your household usually use? Note for DC: (If not possible to determine, ask permission to observe the facility)</string>
+    <string name="a322hint1"> Flush or Pour Flush Toilet</string>
     <string name="a322a"> Flush to piped sewer system</string>
     <string name="a322b"> Flush to septic tank </string>
     <string name="a322c"> Flush to soakage pit latrine </string>
     <string name="a322d"> Flush to somewhere else </string>
     <string name="a322e"> Flush to unknown place/Not sure/DK where </string>
-    <string name="a322f_title"> PIT Latrine </string>
+    <string name="a322hint2"> PIT Latrine </string>
     <string name="a322f"> Ventilated improved PIT latrine</string>
     <string name="a322g"> PIT latrine with slab</string>
     <string name="a322h"> PIT latrine without slab/open pit </string>
     <string name="a322i"> Composting toilet </string>
     <string name="a322j"> Bucket toilet </string>
-    <string name="a322l"> No facility/bush/field/OD </string>
+    <string name="a322k"> No facility / bush / field / OD </string>
     <string name="a322x"> Other specify </string>
-    <string name="a323"> a323:\t Do you share this facility with others who are not members of your household?</string>
+
+    <string name="a323"> A323:\t Do you share this facility with others who are not members of your household ? </string>
     <string name="a323a"> Yes </string>
     <string name="a323b"> No </string>
-    <string name="a323c"> Don’t Know</string>
-    <string name="a324"> a324:\t Do you share this facility only with members of other households that you know, or is the facility open to the use of the general public?</string>
+    <string name="a323c"> Don’t Know </string>
+
+    <string name="a324"> A324:\t Do you share this facility only with members of other households that you know, or is the facility open to the use of the general public?</string>
     <string name="a324a"> Other household only (not public) </string>
     <string name="a324b"> Public facility  </string>
-    <string name="a325"> a325:\t How many households in total use this toilet facility, including your own household?</string>
+
+    <string name="a325"> A325:\t How many households in total use this toilet facility, including your own household?</string>
     <string name="a325a_title"> Number of household </string>
     <string name="a325a"> If less than 10  </string>
     <string name="a325b"> Ten or more household  </string>
     <string name="a325x"> Don’t Know </string>
-    <string name="a326"> a326:\t Does any member of this household own any agricultural land?</string>
+
+    <string name="a326"> A326:\t Does any member of this household own any agricultural land?</string>
     <string name="a326a"> Yes</string>
     <string name="a326b"> No </string>
     <string name="a326c"> Don’t Know </string>
-    <string name="a327"> a327:\t How many acres or kanals of agricultural land do members of this household own?</string>
-    <string name="a327a"> How many acres or kanals of agricultural land do members of this household own? Acre</string>
-    <string name="a327b"> How many acres or kanals of agricultural land do members of this household own? Kanals</string>
-    <string name="a327c"> Don’t Know </string>
-    <string name="a328"> a328:\t Does this household own any livestock, herds, other farm animals or poultry?</string>
+
+    <string name="a327"> A327:\t How many ACRES or KANALS of agricultural land do members of this household own ? </string>
+    <string name="a327a"> Acre </string>
+    <string name="a327b"> Kanals </string>
+    <string name="a32798"> Don’t Know </string>
+
+    <string name="a328"> A328:\t Does this household own any livestock, herds, other farm animals or poultry ? </string>
     <string name="a328a"> Yes </string>
     <string name="a328b"> No </string>
     <string name="a328c"> Don’t Know </string>
-    <string name="a329"> a329:\t How many of the following animals do the household own?</string>
+
+    <string name="a329"> A329:\t How many of the following animals do the household own ? </string>
     <string name="a329a"> Cows/Bulls/Buffalo  </string>
     <string name="a329b"> Horses/Donkeys/Mules </string>
     <string name="a329c"> Goats  </string>
     <string name="a329d"> Sheep</string>
     <string name="a329e"> Chickens </string>
     <string name="a329f"> Camels </string>
-    <string name="a330"> a330:\t Does any member of this household have a bank account?</string>
+
+    <string name="a330"> A330:\t Does any member of this household have a bank account ? </string>
     <string name="a330a"> Yes </string>
     <string name="a330b"> No </string>
     <string name="a330c"> Don’t Know </string>
-    <string name="a331"> a331:\t What is total monthly household income of this house?</string>
+
+    <string name="a331"> A331:\t What is total monthly household income of this house ? </string>
     <string name="a331a"> Rupees </string>
     <string name="a331b"> Don’t Want to Share</string>
     <string name="a331c"> Don’t Know </string>
-    <string name="a332"> a332:\t Do you or your family receive any support in the form of cash or kind? (select as many as apply) </string>
+
+    <string name="a332"> A332:\t Do you or your family receive any support in the form of cash or kind ? </string>
     <string name="a332a"> BISP </string>
     <string name="a332b"> Food Voucher per month </string>
     <string name="a332c"> Cash Per month (other than BISP) </string>
     <string name="a332d"> Student Scholarship </string>
     <string name="a332e"> None </string>
     <string name="a332x"> Other specify </string>
-    <string name="a333"> a333:\t Who provides this support? (select as many as apply)</string>
+
+    <string name="a333"> A333:\t Who provides this support ? </string>
     <string name="a333a"> Government </string>
     <string name="a333b"> NGO </string>
     <string name="a333c"> Individual </string>
     <string name="a333x"> Other specify </string>
+
+
+    <!-- SECTION A4 -->
     <string name="a401"> a401:\t Please show us where you and members of your household most often wash their hands. </string>
     <string name="a401a"> Observed  </string>
     <string name="a401b"> Not observed</string>
