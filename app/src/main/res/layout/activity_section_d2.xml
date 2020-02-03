@@ -299,9 +299,9 @@
                     </LinearLayout>
                 </androidx.cardview.widget.CardView>
 
-                <!-- d205_sub  Radio   -->
+                <!-- d205sub  Radio   -->
                 <androidx.cardview.widget.CardView
-                    android:id="@+id/fldGrpCVd205_sub"
+                    android:id="@+id/fldGrpCVd205sub"
                     style="@style/cardView">
 
                     <LinearLayout
@@ -314,42 +314,42 @@
                             android:text="@string/d205sub" />
 
                         <RadioGroup
-                            android:id="@+id/d205_sub"
+                            android:id="@+id/d205sub"
                             android:layout_width="match_parent"
                             android:layout_height="match_parent">
 
                             <RadioButton
-                                android:id="@+id/d205_suba"
+                                android:id="@+id/d205suba"
                                 style="@style/radiobutton"
                                 android:text="@string/d205suba" />
 
                             <RadioButton
-                                android:id="@+id/d205_subb"
+                                android:id="@+id/d205subb"
                                 style="@style/radiobutton"
                                 android:text="@string/d205subb" />
 
                             <RadioButton
-                                android:id="@+id/d205_subc"
+                                android:id="@+id/d205subc"
                                 style="@style/radiobutton"
                                 android:text="@string/d205subc" />
 
                             <RadioButton
-                                android:id="@+id/d205_subd"
+                                android:id="@+id/d205subd"
                                 style="@style/radiobutton"
                                 android:text="@string/d205subd" />
 
                             <RadioButton
-                                android:id="@+id/d205_sube"
+                                android:id="@+id/d205sube"
                                 style="@style/radiobutton"
                                 android:text="@string/d205sube" />
 
                             <RadioButton
-                                android:id="@+id/d205_subf"
+                                android:id="@+id/d205subf"
                                 style="@style/radiobutton"
                                 android:text="@string/d205subf" />
 
                             <RadioButton
-                                android:id="@+id/d205_subg"
+                                android:id="@+id/d205subg"
                                 style="@style/radiobutton"
                                 android:text="@string/d205subg" />
                         </RadioGroup>
@@ -413,9 +413,9 @@
                     </LinearLayout>
                 </androidx.cardview.widget.CardView>
 
-                <!-- d206_sub  Radio   -->
+                <!-- d206sub  Radio   -->
                 <androidx.cardview.widget.CardView
-                    android:id="@+id/fldGrpCVd206_sub"
+                    android:id="@+id/fldGrpCVd206sub"
                     style="@style/cardView">
 
                     <LinearLayout
@@ -428,42 +428,42 @@
                             android:text="@string/d206sub" />
 
                         <RadioGroup
-                            android:id="@+id/d206_sub"
+                            android:id="@+id/d206sub"
                             android:layout_width="match_parent"
                             android:layout_height="match_parent">
 
                             <RadioButton
-                                android:id="@+id/d206_suba"
+                                android:id="@+id/d206suba"
                                 style="@style/radiobutton"
                                 android:text="@string/d206suba" />
 
                             <RadioButton
-                                android:id="@+id/d206_subb"
+                                android:id="@+id/d206subb"
                                 style="@style/radiobutton"
                                 android:text="@string/d206subb" />
 
                             <RadioButton
-                                android:id="@+id/d206_subc"
+                                android:id="@+id/d206subc"
                                 style="@style/radiobutton"
                                 android:text="@string/d206subc" />
 
                             <RadioButton
-                                android:id="@+id/d206_subd"
+                                android:id="@+id/d206subd"
                                 style="@style/radiobutton"
                                 android:text="@string/d206subd" />
 
                             <RadioButton
-                                android:id="@+id/d206_sube"
+                                android:id="@+id/d206sube"
                                 style="@style/radiobutton"
                                 android:text="@string/d206sube" />
 
                             <RadioButton
-                                android:id="@+id/d206_subf"
+                                android:id="@+id/d206subf"
                                 style="@style/radiobutton"
                                 android:text="@string/d206subf" />
 
                             <RadioButton
-                                android:id="@+id/d206_subg"
+                                android:id="@+id/d206subg"
                                 style="@style/radiobutton"
                                 android:text="@string/d206subg" />
                         </RadioGroup>
@@ -616,9 +616,9 @@
                     </LinearLayout>
                 </androidx.cardview.widget.CardView>
 
-                <!-- d209_sub  Radio   -->
+                <!-- d209sub  Radio   -->
                 <androidx.cardview.widget.CardView
-                    android:id="@+id/fldGrpCVd209_sub"
+                    android:id="@+id/fldGrpCVd209sub"
                     style="@style/cardView">
 
                     <LinearLayout
@@ -631,42 +631,42 @@
                             android:text="@string/d209sub" />
 
                         <RadioGroup
-                            android:id="@+id/d209_sub"
+                            android:id="@+id/d209sub"
                             android:layout_width="match_parent"
                             android:layout_height="match_parent">
 
                             <RadioButton
-                                android:id="@+id/d209_suba"
+                                android:id="@+id/d209suba"
                                 style="@style/radiobutton"
                                 android:text="@string/d209suba" />
 
                             <RadioButton
-                                android:id="@+id/d209_subb"
+                                android:id="@+id/d209subb"
                                 style="@style/radiobutton"
                                 android:text="@string/d209subb" />
 
                             <RadioButton
-                                android:id="@+id/d209_subc"
+                                android:id="@+id/d209subc"
                                 style="@style/radiobutton"
                                 android:text="@string/d209subc" />
 
                             <RadioButton
-                                android:id="@+id/d209_subd"
+                                android:id="@+id/d209subd"
                                 style="@style/radiobutton"
                                 android:text="@string/d209subd" />
 
                             <RadioButton
-                                android:id="@+id/d209_sube"
+                                android:id="@+id/d209sube"
                                 style="@style/radiobutton"
                                 android:text="@string/d209sube" />
 
                             <RadioButton
-                                android:id="@+id/d209_subf"
+                                android:id="@+id/d209subf"
                                 style="@style/radiobutton"
                                 android:text="@string/d209subf" />
 
                             <RadioButton
-                                android:id="@+id/d209_subg"
+                                android:id="@+id/d209subg"
                                 style="@style/radiobutton"
                                 android:text="@string/d209subg" />
                         </RadioGroup>
