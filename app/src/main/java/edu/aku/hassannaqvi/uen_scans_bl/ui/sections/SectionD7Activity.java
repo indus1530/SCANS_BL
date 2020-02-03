@@ -38,7 +38,7 @@ public class SectionD7Activity extends AppCompatActivity {
             }
             if (UpdateDB()) {
                 finish();
-                //startActivity(new Intent(SectionA3Activity.this, FamilyMembersListActivity.class).putExtra("sno", Integer.valueOf(bl.getSno())));
+                //startActivity(new Intent(SectionA31Activity.this, FamilyMembersListActivity.class).putExtra("sno", Integer.valueOf(bl.getSno())));
             }
         }
     }
