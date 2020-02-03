@@ -2,6 +2,7 @@ package edu.aku.hassannaqvi.uen_scans_bl.ui.sections;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.view.View;
 import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
@@ -38,24 +39,35 @@ public class SectionA4Activity extends AppCompatActivity {
 
     private void setlistener() {
 
-        bi.a401.setOnCheckedChangeListener(((radioGroup, i) -> {
+        //a401
+        bi.a401.setOnCheckedChangeListener((group, checkedId) -> {
 
-            if (i != bi.a401a.getId()) {
+            if (checkedId == bi.a401a.getId() || checkedId == bi.a401x.getId()) {
+                bi.fldGrpCVa01.setVisibility(View.VISIBLE);
+
+            } else {
                 ClearClass.ClearAllFields(bi.fldGrpCVa01, null);
+                bi.fldGrpCVa01.setVisibility(View.GONE);
+
+            }
+        });
+
+        //a403e
+        bi.a403e.setOnCheckedChangeListener((compoundButton, b) -> {
+            if (b) {
+                bi.fldGrpCVa02.setVisibility(View.VISIBLE);
+            } else {
+                ClearClass.ClearAllFields(bi.fldGrpCVa02, null);
+                bi.fldGrpCVa02.setVisibility(View.GONE);
+            }
+        });
+
+        bi.a404.setOnCheckedChangeListener(((radioGroup, i) -> {
+
+            if (i == bi.a404b.getId()) {
+                ClearClass.ClearAllFields(bi.fldGrpCVa405, null);
             }
 
-        }));
-
-        bi.k215.setOnCheckedChangeListener(((radioGroup, i) -> {
-            if (i != bi.k215b.getId()) {
-                ClearClass.ClearAllFields(bi.fldGrpCVk02, null);
-            }
-        }));
-
-        bi.k219.setOnCheckedChangeListener(((radioGroup, i) -> {
-            if (i != bi.k219b.getId()) {
-                ClearClass.ClearAllFields(bi.fldGrpCVk03, null);
-            }
         }));
 
     }
