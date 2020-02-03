@@ -24,7 +24,7 @@
             android:orientation="vertical">
 
             <LinearLayout
-                android:id="@+id/GrpName"
+                android:id="@+id/fldGrpSectionA4"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="vertical">
@@ -82,171 +82,203 @@
                                 android:tag="a401x"
                                 android:text='@{a401x.checked? a401xt.getText().toString() : ""}'
                                 android:visibility='@{a401x.checked? View.VISIBLE : View.GONE}' />
+
                         </RadioGroup>
+
                     </LinearLayout>
+
                 </androidx.cardview.widget.CardView>
 
-                <!-- a402  Radio   -->
-                <androidx.cardview.widget.CardView
-                    android:id="@+id/fldGrpCVa402"
-                    style="@style/cardView">
 
-                    <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:orientation="vertical">
+                <LinearLayout
+                    android:id="@+id/fldGrpCVa01"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
 
-                        <TextView
-                            style="@style/i_textview"
-                            android:text="@string/a402" />
-
-                        <RadioGroup
-                            android:id="@+id/a402"
-                            android:layout_width="match_parent"
-                            android:layout_height="match_parent">
-
-                            <RadioButton
-                                android:id="@+id/a402a"
-                                style="@style/radiobutton"
-                                android:text="@string/a402a" />
-
-                            <RadioButton
-                                android:id="@+id/a402b"
-                                style="@style/radiobutton"
-                                android:text="@string/a402b" />
-                        </RadioGroup>
-                    </LinearLayout>
-                </androidx.cardview.widget.CardView>
-
-                <!-- a403  CheckBox   -->
-                <androidx.cardview.widget.CardView
-                    android:id="@+id/fldGrpCVa403"
-                    style="@style/cardView">
-
-                    <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:orientation="vertical">
-
-                        <TextView
-                            style="@style/i_textview"
-                            android:text="@string/a403" />
+                    <!-- a402  Radio   -->
+                    <androidx.cardview.widget.CardView
+                        android:id="@+id/fldGrpCVa402"
+                        style="@style/cardView">
 
                         <LinearLayout
-                            android:id="@+id/a403check"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:orientation="vertical"
-                            android:tag="0">
+                            android:orientation="vertical">
 
-                            <RadioButton
-                                android:id="@+id/a403a"
-                                style="@style/radiobutton"
-                                android:text="@string/a403a" />
+                            <TextView
+                                style="@style/i_textview"
+                                android:text="@string/a402" />
 
-                            <RadioButton
-                                android:id="@+id/a403b"
-                                style="@style/radiobutton"
-                                android:text="@string/a403b" />
+                            <RadioGroup
+                                android:id="@+id/a402"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent">
 
-                            <RadioButton
-                                android:id="@+id/a403c"
-                                style="@style/radiobutton"
-                                android:text="@string/a403c" />
+                                <RadioButton
+                                    android:id="@+id/a402a"
+                                    style="@style/radiobutton"
+                                    android:text="@string/a402a" />
 
-                            <RadioButton
-                                android:id="@+id/a403d"
-                                style="@style/radiobutton"
-                                android:text="@string/a403d" />
-
-                            <RadioButton
-                                android:id="@+id/a403e"
-                                style="@style/radiobutton"
-                                android:text="@string/a403e" />
+                                <RadioButton
+                                    android:id="@+id/a402b"
+                                    style="@style/radiobutton"
+                                    android:text="@string/a402b" />
+                            </RadioGroup>
                         </LinearLayout>
-                    </LinearLayout>
-                </androidx.cardview.widget.CardView>
+                    </androidx.cardview.widget.CardView>
 
-                <!-- a404  Radio   -->
-                <androidx.cardview.widget.CardView
-                    android:id="@+id/fldGrpCVa404"
-                    style="@style/cardView">
-
-                    <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:orientation="vertical">
-
-                        <TextView
-                            style="@style/i_textview"
-                            android:text="@string/a404" />
-
-                        <RadioGroup
-                            android:id="@+id/a404"
-                            android:layout_width="match_parent"
-                            android:layout_height="match_parent">
-
-                            <RadioButton
-                                android:id="@+id/a404a"
-                                style="@style/radiobutton"
-                                android:text="@string/a404a" />
-
-                            <RadioButton
-                                android:id="@+id/a404b"
-                                style="@style/radiobutton"
-                                android:text="@string/a404b" />
-                        </RadioGroup>
-                    </LinearLayout>
-                </androidx.cardview.widget.CardView>
-
-                <!-- a405  CheckBox   -->
-                <androidx.cardview.widget.CardView
-                    android:id="@+id/fldGrpCVa405"
-                    style="@style/cardView">
-
-                    <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:orientation="vertical">
-
-                        <TextView
-                            style="@style/i_textview"
-                            android:text="@string/a405" />
+                    <!-- a403  CheckBox   -->
+                    <androidx.cardview.widget.CardView
+                        android:id="@+id/fldGrpCVa403"
+                        style="@style/cardView">
 
                         <LinearLayout
-                            android:id="@+id/a405check"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:orientation="vertical"
-                            android:tag="0">
+                            android:orientation="vertical">
 
-                            <RadioButton
-                                android:id="@+id/a405a"
-                                style="@style/radiobutton"
-                                android:text="@string/a405a" />
+                            <TextView
+                                style="@style/i_textview"
+                                android:text="@string/a403" />
 
-                            <RadioButton
-                                android:id="@+id/a405b"
-                                style="@style/radiobutton"
-                                android:text="@string/a405b" />
+                            <LinearLayout
+                                android:id="@+id/a403"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="vertical"
+                                android:tag="0">
 
-                            <RadioButton
-                                android:id="@+id/a405c"
-                                style="@style/radiobutton"
-                                android:text="@string/a405c" />
+                                <CheckBox
+                                    android:id="@+id/a403a"
+                                    style="@style/checkbox"
+                                    android:text="@string/a403a" />
 
-                            <RadioButton
-                                android:id="@+id/a405d"
-                                style="@style/radiobutton"
-                                android:text="@string/a405d" />
+                                <CheckBox
+                                    android:id="@+id/a403b"
+                                    style="@style/checkbox"
+                                    android:text="@string/a403b" />
 
-                            <RadioButton
-                                android:id="@+id/a405e"
-                                style="@style/radiobutton"
-                                android:text="@string/a405e" />
+                                <CheckBox
+                                    android:id="@+id/a403c"
+                                    style="@style/checkbox"
+                                    android:text="@string/a403c" />
+
+                                <CheckBox
+                                    android:id="@+id/a403d"
+                                    style="@style/checkbox"
+                                    android:text="@string/a403d" />
+
+                                <CheckBox
+                                    android:id="@+id/a403e"
+                                    style="@style/checkbox"
+                                    android:text="@string/a403e" />
+
+                            </LinearLayout>
+
                         </LinearLayout>
-                    </LinearLayout>
-                </androidx.cardview.widget.CardView>
+
+                    </androidx.cardview.widget.CardView>
+
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:id="@+id/fldGrpCVa02"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <!-- a404  Radio   -->
+                    <androidx.cardview.widget.CardView
+                        android:id="@+id/fldGrpCVa404"
+                        style="@style/cardView">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical">
+
+                            <TextView
+                                style="@style/i_textview"
+                                android:text="@string/a404" />
+
+                            <RadioGroup
+                                android:id="@+id/a404"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent">
+
+                                <RadioButton
+                                    android:id="@+id/a404a"
+                                    style="@style/radiobutton"
+                                    android:text="@string/a404a" />
+
+                                <RadioButton
+                                    android:id="@+id/a404b"
+                                    style="@style/radiobutton"
+                                    android:text="@string/a404b" />
+
+                            </RadioGroup>
+
+                        </LinearLayout>
+
+                    </androidx.cardview.widget.CardView>
+
+                    <!-- a405  CheckBox   -->
+                    <androidx.cardview.widget.CardView
+                        android:id="@+id/fldGrpCVa405"
+                        style="@style/cardView"
+                        android:visibility='@{a404b.checked? View.GONE : View.VISIBLE}'>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical">
+
+                            <TextView
+                                style="@style/i_textview"
+                                android:text="@string/a405" />
+
+                            <LinearLayout
+                                android:id="@+id/a405check"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="vertical"
+                                android:tag="0">
+
+                                <CheckBox
+                                    android:id="@+id/a405a"
+                                    style="@style/checkbox"
+                                    android:text="@string/a405a" />
+
+                                <CheckBox
+                                    android:id="@+id/a405b"
+                                    style="@style/checkbox"
+                                    android:text="@string/a405b" />
+
+                                <CheckBox
+                                    android:id="@+id/a405c"
+                                    style="@style/checkbox"
+                                    android:text="@string/a405c" />
+
+                                <CheckBox
+                                    android:id="@+id/a405d"
+                                    style="@style/checkbox"
+                                    android:text="@string/a405d" />
+
+                                <CheckBox
+                                    android:id="@+id/a405e"
+                                    style="@style/checkbox"
+                                    android:text="@string/a405e" />
+
+                            </LinearLayout>
+
+                        </LinearLayout>
+
+                    </androidx.cardview.widget.CardView>
+
+                </LinearLayout>
+
 
                 <!-- a406  CheckBox   -->
                 <androidx.cardview.widget.CardView
@@ -270,55 +302,58 @@
                             android:tag="0">
 
                             <TextView
-                                style="@style/i_textview"
+                                style="@style/textView3Head"
                                 android:text="@string/a406a_title" />
 
-                            <RadioButton
+                            <CheckBox
                                 android:id="@+id/a406a"
-                                style="@style/radiobutton"
+                                style="@style/checkbox"
                                 android:text="@string/a406a" />
 
-                            <RadioButton
+                            <CheckBox
                                 android:id="@+id/a406b"
-                                style="@style/radiobutton"
+                                style="@style/checkbox"
                                 android:text="@string/a406b" />
 
-                            <RadioButton
+                            <CheckBox
                                 android:id="@+id/a406c"
-                                style="@style/radiobutton"
+                                style="@style/checkbox"
                                 android:text="@string/a406c" />
 
-                            <RadioButton
+                            <CheckBox
                                 android:id="@+id/a406d"
-                                style="@style/radiobutton"
+                                style="@style/checkbox"
                                 android:text="@string/a406d" />
 
-                            <RadioButton
+                            <CheckBox
                                 android:id="@+id/a406e"
-                                style="@style/radiobutton"
+                                style="@style/checkbox"
                                 android:text="@string/a406e" />
 
-                            <RadioButton
+                            <CheckBox
                                 android:id="@+id/a406f"
-                                style="@style/radiobutton"
+                                style="@style/checkbox"
                                 android:text="@string/a406f" />
 
-                            <RadioButton
+                            <CheckBox
                                 android:id="@+id/a406g"
-                                style="@style/radiobutton"
+                                style="@style/checkbox"
                                 android:text="@string/a406g" />
 
-                            <RadioButton
+                            <CheckBox
                                 android:id="@+id/a406h"
-                                style="@style/radiobutton"
+                                style="@style/checkbox"
                                 android:text="@string/a406h" />
 
-                            <RadioButton
+                            <CheckBox
                                 android:id="@+id/a406i"
-                                style="@style/radiobutton"
+                                style="@style/checkbox"
                                 android:text="@string/a406i" />
+
                         </LinearLayout>
+
                     </LinearLayout>
+
                 </androidx.cardview.widget.CardView>
 
             </LinearLayout>
