@@ -8,7 +8,7 @@
 
         <variable
             name="callback"
-            type="edu.aku.hassannaqvi.template.ui.Myactivity" />
+            type="edu.aku.hassannaqvi.uen_scans_bl.ui.sections.SectionD9Activity" />
     </data>
 
     <ScrollView
@@ -16,7 +16,13 @@
         android:fadeScrollbars="false"
         android:fillViewport="true"
         android:scrollbarSize="10dip"
-        tools:context=".ui.Myactivity">
+        android:layoutDirection="ltr"
+        tools:context=".ui.sections.SectionD9Activity">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
 
         <LinearLayout
             android:id="@+id/GrpName"
@@ -1538,11 +1544,11 @@
 
                     <TextView
                         style="@style/i_textview"
-                        android:text="@string/d901_sub" />
+                        android:text="@string/d901sub" />
 
                     <TextView
                         style="@style/i_textview"
-                        android:text="@string/d901_suba" />
+                        android:text="@string/d901suba" />
                 </LinearLayout>
             </androidx.cardview.widget.CardView>
 
@@ -1577,6 +1583,8 @@
                         android:text="@string/title_a" />
                 </LinearLayout>
             </androidx.cardview.widget.CardView>
+
+        </LinearLayout>
 
             <LinearLayout
                 android:layout_width="match_parent"
