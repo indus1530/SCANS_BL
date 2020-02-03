@@ -167,6 +167,7 @@ public class SectionA1Activity extends AppCompatActivity {
         return Validator.emptyCheckingContainer(this, bi.GrpName);
     }
 
+
     public void BtnEnd() {
         Util.openEndActivity(this);
     }
