@@ -3,6 +3,7 @@ package edu.aku.hassannaqvi.uen_scans_bl.ui.sections;
 import android.os.Bundle;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.databinding.DataBindingUtil;
 
 import com.validatorcrawler.aliazaz.Validator;
 
@@ -12,6 +13,7 @@ import org.json.JSONObject;
 import edu.aku.hassannaqvi.uen_scans_bl.R;
 import edu.aku.hassannaqvi.uen_scans_bl.core.MainApp;
 import edu.aku.hassannaqvi.uen_scans_bl.databinding.ActivitySectionD3Binding;
+import edu.aku.hassannaqvi.uen_scans_bl.utils.Util;
 
 public class SectionD3Activity extends AppCompatActivity {
 
@@ -20,8 +22,46 @@ public class SectionD3Activity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_section_d3);
+        bi = DataBindingUtil.setContentView(this, R.layout.activity_section_d3);
+        bi.setCallback(this);
 
+
+    }
+
+
+    public void BtnContinue() {
+        if (formValidation()) {
+            try {
+                SaveDraft();
+            } catch (Exception e) {
+                e.printStackTrace();
+            }
+            if (UpdateDB()) {
+                finish();
+                //startActivity(new Intent(SectionA3Activity.this, FamilyMembersListActivity.class).putExtra("sno", Integer.valueOf(bl.getSno())));
+            }
+        }
+    }
+
+
+    public void BtnEnd() {
+        Util.openEndActivity(this);
+    }
+
+
+    private boolean UpdateDB() {
+        /*long updcount = db.addForm(MainApp.fc);
+        MainApp.fc.set_ID(String.valueOf(updcount));
+        if (updcount > 0) {
+            MainApp.fc.set_UID(MainApp.fc.getDeviceID() + MainApp.fc.get_ID());
+            db.updatesFormColumn(FormsContract.FormsTable.COLUMN_UID, MainApp.fc.get_UID());
+            return true;
+        } else {
+            Toast.makeText(this, "Updating Database... ERROR!", Toast.LENGTH_SHORT).show();
+            return false;
+        }*/
+
+        return true;
 
     }
 

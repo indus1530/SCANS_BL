@@ -27,7 +27,7 @@ public class SectionC6Activity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        bi = DataBindingUtil.setContentView(this, R.layout.activity_section_c2);
+        bi = DataBindingUtil.setContentView(this, R.layout.activity_section_c6);
         bi.setCallback(this);
 
     }

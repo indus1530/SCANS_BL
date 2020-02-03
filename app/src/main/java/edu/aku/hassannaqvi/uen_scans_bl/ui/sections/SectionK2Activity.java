@@ -31,12 +31,12 @@ public class SectionK2Activity extends AppCompatActivity {
         bi = DataBindingUtil.setContentView(this, R.layout.activity_section_k2);
         bi.setCallback(this);
 
-        setlistener();
+        setupSkips();
 
     }
 
 
-    private void setlistener() {
+    private void setupSkips() {
 
         bi.k211.setOnCheckedChangeListener(((radioGroup, i) -> {
 

@@ -1,5 +1,6 @@
 <layout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto">
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
 
     <data>
 
@@ -15,7 +16,8 @@
         android:fadeScrollbars="false"
         android:fillViewport="true"
         android:layoutDirection="ltr"
-        android:scrollbarSize="10dip">
+        android:scrollbarSize="10dip"
+        tools:context=".ui.sections.SectionA3Activity">
 
         <LinearLayout
             android:id="@+id/GrpName"
@@ -2927,7 +2929,11 @@
                     android:onClick="@{() -> callback.BtnContinue()}"
                     android:text="Save" />
                 <!--'onClick' for btn_End will NOT change and always call 'endInterview'-->
+
             </LinearLayout>
+
         </LinearLayout>
+
     </ScrollView>
+
 </layout>

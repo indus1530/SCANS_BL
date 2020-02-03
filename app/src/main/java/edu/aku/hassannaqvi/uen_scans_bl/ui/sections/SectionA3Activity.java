@@ -1,9 +1,9 @@
 package edu.aku.hassannaqvi.uen_scans_bl.ui.sections;
 
 import android.os.Bundle;
-import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.databinding.DataBindingUtil;
 
 import com.validatorcrawler.aliazaz.Validator;
 
@@ -11,10 +11,9 @@ import org.json.JSONException;
 import org.json.JSONObject;
 
 import edu.aku.hassannaqvi.uen_scans_bl.R;
-import edu.aku.hassannaqvi.uen_scans_bl.contracts.FormsContract;
 import edu.aku.hassannaqvi.uen_scans_bl.core.DatabaseHelper;
-import edu.aku.hassannaqvi.uen_scans_bl.core.MainApp;
 import edu.aku.hassannaqvi.uen_scans_bl.databinding.ActivitySectionA3Binding;
+import edu.aku.hassannaqvi.uen_scans_bl.utils.Util;
 
 public class SectionA3Activity extends AppCompatActivity {
 
@@ -24,9 +23,12 @@ public class SectionA3Activity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_section_a3);
+        bi = DataBindingUtil.setContentView(this, R.layout.activity_section_a3);
+        bi.setCallback(this);
+
 
     }
+
 
     public void BtnContinue() {
         if (formValidation()) {
@@ -43,8 +45,13 @@ public class SectionA3Activity extends AppCompatActivity {
     }
 
 
+    public void BtnEnd() {
+        Util.openEndActivity(this);
+    }
+
+
     private boolean UpdateDB() {
-        long updcount = db.addForm(MainApp.fc);
+        /*long updcount = db.addForm(MainApp.fc);
         MainApp.fc.set_ID(String.valueOf(updcount));
         if (updcount > 0) {
             MainApp.fc.set_UID(MainApp.fc.getDeviceID() + MainApp.fc.get_ID());
@@ -53,9 +60,12 @@ public class SectionA3Activity extends AppCompatActivity {
         } else {
             Toast.makeText(this, "Updating Database... ERROR!", Toast.LENGTH_SHORT).show();
             return false;
-        }
+        }*/
+
+        return true;
 
     }
+
 
     private void SaveDraft() throws JSONException {
 
