@@ -18,7 +18,7 @@
         tools:context=".ui.sections.SectionD3Activity">
 
         <LinearLayout
-            android:id="@+id/GrpName"
+            android:id="@+id/fldGrpSectionD3"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="vertical">

@@ -1,6 +1,9 @@
 package edu.aku.hassannaqvi.uen_scans_bl.ui.sections;
 
+import android.content.Intent;
 import android.os.Bundle;
+import android.view.View;
+import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.databinding.DataBindingUtil;
@@ -14,6 +17,7 @@ import edu.aku.hassannaqvi.uen_scans_bl.R;
 import edu.aku.hassannaqvi.uen_scans_bl.core.DatabaseHelper;
 import edu.aku.hassannaqvi.uen_scans_bl.databinding.ActivitySectionA31Binding;
 import edu.aku.hassannaqvi.uen_scans_bl.utils.Util;
+import edu.aku.hassannaqvi.uen_scans_bl.validator.ClearClass;
 
 public class SectionA31Activity extends AppCompatActivity {
 
@@ -25,6 +29,36 @@ public class SectionA31Activity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         bi = DataBindingUtil.setContentView(this, R.layout.activity_section_a31);
         bi.setCallback(this);
+        setupSkips();
+
+
+    }
+
+
+    private void setupSkips() {
+
+        bi.a313.setOnCheckedChangeListener(((radioGroup, i) -> {
+
+            if (i == bi.a313a.getId()) {
+                bi.fldGrpCVa314.setVisibility(View.VISIBLE);
+            } else {
+                ClearClass.ClearAllFields(bi.fldGrpCVa314, null);
+                bi.fldGrpCVa314.setVisibility(View.GONE);
+            }
+
+        }));
+
+        bi.a308.setOnCheckedChangeListener(((radioGroup, i) -> {
+            if (i == bi.a308c.getId()) {
+                bi.fldGrpCVa309.setVisibility(View.VISIBLE);
+                bi.fldGrpCVa310.setVisibility(View.VISIBLE);
+            } else {
+                ClearClass.ClearAllFields(bi.fldGrpCVa309, null);
+                ClearClass.ClearAllFields(bi.fldGrpCVa310, null);
+                bi.fldGrpCVa309.setVisibility(View.GONE);
+                bi.fldGrpCVa310.setVisibility(View.GONE);
+            }
+        }));
 
 
     }
@@ -39,7 +73,9 @@ public class SectionA31Activity extends AppCompatActivity {
             }
             if (UpdateDB()) {
                 finish();
-                //startActivity(new Intent(SectionA31Activity.this, FamilyMembersListActivity.class).putExtra("sno", Integer.valueOf(bl.getSno())));
+                startActivity(new Intent(this, SectionA32Activity.class));
+            } else {
+                Toast.makeText(this, "Failed to Update Database!", Toast.LENGTH_SHORT).show();
             }
         }
     }
@@ -82,9 +118,10 @@ public class SectionA31Activity extends AppCompatActivity {
                                                                         bi.a301h.isChecked() ? "8" :
                                                                                 bi.a301i.isChecked() ? "9" :
                                                                                         bi.a301j.isChecked() ? "10" :
-                                                                                                bi.a301x.isChecked() ? "96" :
+                                                                                                bi.a30196.isChecked() ? "96" :
                                                                                                         "0");
-        json.put("a301xt", bi.a301xt.getText().toString());
+        json.put("a30196x", bi.a30196x.getText().toString());
+
         json.put("a302",
                 bi.a302a.isChecked() ? "1" :
                         bi.a302b.isChecked() ? "2" :
@@ -93,6 +130,7 @@ public class SectionA31Activity extends AppCompatActivity {
                                                 bi.a302x.isChecked() ? "96" :
                                                         "0");
         json.put("a302xt", bi.a302xt.getText().toString());
+
         json.put("a303",
                 bi.a303a.isChecked() ? "1" :
                         bi.a303b.isChecked() ? "2" :
@@ -225,16 +263,19 @@ public class SectionA31Activity extends AppCompatActivity {
                                         bi.a314d.isChecked() ? "4" :
                                                 bi.a314e.isChecked() ? "5" :
                                                         bi.a314f.isChecked() ? "6" :
-                                                                bi.a314x.isChecked() ? "96" :
+                                                                bi.a31496.isChecked() ? "96" :
                                                                         "0");
-        json.put("a314xt", bi.a314xt.getText().toString());
+        json.put("a31496x", bi.a31496x.getText().toString());
+
         json.put("a315", bi.a315.getText().toString());
+
         json.put("a316",
                 bi.a316a.isChecked() ? "1" :
                         bi.a316b.isChecked() ? "2" :
-                                bi.a316x.isChecked() ? "96" :
+                                bi.a31696.isChecked() ? "96" :
                                         "0");
-        json.put("a316xt", bi.a316xt.getText().toString());
+        json.put("a31696x", bi.a31696x.getText().toString());
+
         json.put("a317",
                 bi.a317a.isChecked() ? "1" :
                         bi.a317b.isChecked() ? "2" :

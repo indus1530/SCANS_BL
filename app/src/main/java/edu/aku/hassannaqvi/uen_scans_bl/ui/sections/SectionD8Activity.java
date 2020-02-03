@@ -1,6 +1,8 @@
 package edu.aku.hassannaqvi.uen_scans_bl.ui.sections;
 
+import android.content.Intent;
 import android.os.Bundle;
+import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.databinding.DataBindingUtil;
@@ -38,7 +40,9 @@ public class SectionD8Activity extends AppCompatActivity {
             }
             if (UpdateDB()) {
                 finish();
-                //startActivity(new Intent(SectionA31Activity.this, FamilyMembersListActivity.class).putExtra("sno", Integer.valueOf(bl.getSno())));
+                startActivity(new Intent(this, SectionD9Activity.class));
+            } else {
+                Toast.makeText(this, "Failed to Update Database!", Toast.LENGTH_SHORT).show();
             }
         }
     }
@@ -85,7 +89,13 @@ public class SectionD8Activity extends AppCompatActivity {
 
 
     private boolean formValidation() {
-        return Validator.emptyCheckingContainer(this, bi.GrpName);
+        return Validator.emptyCheckingContainer(this, bi.fldGrpSectionD8);
+
+    }
+
+    @Override
+    public void onBackPressed() {
+        Toast.makeText(this, "You can't go back", Toast.LENGTH_SHORT).show();
     }
 
 

@@ -46,8 +46,7 @@
 
                     <RadioGroup
                         android:id="@+id/a301"
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent">
+                        style="@style/radiogroup">
 
                         <RadioButton
                             android:id="@+id/a301a"
@@ -100,19 +99,16 @@
                             android:text="@string/a301j" />
 
                         <RadioButton
-                            android:id="@+id/a301x"
+                            android:id="@+id/a30196"
                             style="@style/radiobutton"
-                            android:text="@string/a301x" />
+                            android:text="@string/other" />
 
                         <EditText
-                            android:id="@+id/a301xt"
-                            style="@style/radiobutton"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:hint="@string/a301x"
-                            android:tag="a301x"
-                            android:text='@{a301x.checked? a301xt.getText().toString() : ""}'
-                            android:visibility='@{a301x.checked? View.VISIBLE : View.GONE}' />
+                            android:id="@+id/a30196x"
+                            style="@style/EditTextAlpha"
+                            android:hint="@string/specify"
+                            android:text='@{a30196.checked? a30196x.getText().toString() : ""}'
+                            android:visibility='@{a30196.checked? View.VISIBLE : View.GONE}' />
 
                     </RadioGroup>
 
@@ -1026,25 +1022,31 @@
 
                     <RadioGroup
                         android:id="@+id/a313"
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent">
+                        style="@style/radiogroup"
+                        android:orientation="horizontal">
 
                         <RadioButton
                             android:id="@+id/a313a"
                             style="@style/radiobutton"
-                            android:text="@string/a313a" />
+                            android:layout_weight="1"
+                            android:text="@string/yes" />
 
                         <RadioButton
                             android:id="@+id/a313b"
                             style="@style/radiobutton"
-                            android:text="@string/a313b" />
+                            android:layout_weight="1"
+                            android:text="@string/no" />
 
                         <RadioButton
                             android:id="@+id/a313c"
                             style="@style/radiobutton"
-                            android:text="@string/a313c" />
+                            android:layout_weight="1"
+                            android:text="@string/dkn" />
+
                     </RadioGroup>
+
                 </LinearLayout>
+
             </androidx.cardview.widget.CardView>
 
             <!-- a314  Radio   -->
@@ -1063,8 +1065,7 @@
 
                     <RadioGroup
                         android:id="@+id/a314"
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent">
+                        style="@style/radiogroup">
 
                         <RadioButton
                             android:id="@+id/a314a"
@@ -1097,21 +1098,21 @@
                             android:text="@string/a314f" />
 
                         <RadioButton
-                            android:id="@+id/a314x"
+                            android:id="@+id/a31496"
                             style="@style/radiobutton"
-                            android:text="@string/a314x" />
+                            android:text="@string/other" />
 
                         <EditText
-                            android:id="@+id/a314xt"
-                            style="@style/radiobutton"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:hint="@string/a314x"
-                            android:tag="a314x"
-                            android:text='@{a314x.checked? a314xt.getText().toString() : ""}'
-                            android:visibility='@{a314x.checked? View.VISIBLE : View.GONE}' />
+                            android:id="@+id/a31496x"
+                            style="@style/EditTextAlpha"
+                            android:hint="@string/specify"
+                            android:text='@{a31496.checked? a31496x.getText().toString() : ""}'
+                            android:visibility='@{a31496.checked? View.VISIBLE : View.GONE}' />
+
                     </RadioGroup>
+
                 </LinearLayout>
+
             </androidx.cardview.widget.CardView>
 
             <!-- a315  Input-Numeric   -->
@@ -1130,16 +1131,15 @@
 
                     <com.edittextpicker.aliazaz.EditTextPicker
                         android:id="@+id/a315"
-                        style="@style/EditTextAlphaNumeric"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:hint="@string/a315"
-                        android:inputType="number"
-                        app:mask="##"
+                        style="@style/EditTextNum"
+                        android:hint="@string/num"
+                        android:maxLength="2"
                         app:maxValue="10"
                         app:minValue="1"
                         app:type="range" />
+
                 </LinearLayout>
+
             </androidx.cardview.widget.CardView>
 
             <!-- a316  Radio   -->
@@ -1158,8 +1158,7 @@
 
                     <RadioGroup
                         android:id="@+id/a316"
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent">
+                        style="@style/radiogroup">
 
                         <RadioButton
                             android:id="@+id/a316a"
@@ -1172,21 +1171,21 @@
                             android:text="@string/a316b" />
 
                         <RadioButton
-                            android:id="@+id/a316x"
+                            android:id="@+id/a31696"
                             style="@style/radiobutton"
-                            android:text="@string/a316x" />
+                            android:text="@string/other" />
 
                         <EditText
-                            android:id="@+id/a316xt"
-                            style="@style/radiobutton"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:hint="@string/a316x"
-                            android:tag="a316x"
-                            android:text='@{a316x.checked? a316xt.getText().toString() : ""}'
-                            android:visibility='@{a316x.checked? View.VISIBLE : View.GONE}' />
+                            android:id="@+id/a31696x"
+                            style="@style/EditTextAlpha"
+                            android:hint="@string/specify"
+                            android:text='@{a31696.checked? a31696x.getText().toString() : ""}'
+                            android:visibility='@{a31696.checked? View.VISIBLE : View.GONE}' />
+
                     </RadioGroup>
+
                 </LinearLayout>
+
             </androidx.cardview.widget.CardView>
 
             <!-- a317  Radio   -->
