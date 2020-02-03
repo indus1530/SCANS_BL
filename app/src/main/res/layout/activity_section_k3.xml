@@ -20,163 +20,37 @@
         android:scrollbarSize="10dip">
 
         <LinearLayout
-            android:id="@+id/fldGrpSectionK3"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="vertical">
 
-            <!-- k221_title  Title   -->
-            <androidx.cardview.widget.CardView
-                android:id="@+id/fldGrpCVk221_title"
-                style="@style/cardView">
-
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:orientation="vertical">
-
-                    <TextView
-                        style="@style/i_textviewhint"
-                        android:text="@string/tk2headinghint3" />
-
-                </LinearLayout>
-
-            </androidx.cardview.widget.CardView>
-
-            <!-- k221  Spinner and Input   -->
-            <androidx.cardview.widget.CardView
-                android:id="@+id/fldGrpCVk221"
-                style="@style/cardView">
-
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:orientation="vertical">
-
-                    <TextView
-                        style="@style/i_textview"
-                        android:text="@string/k221" />
-
-                    <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:orientation="horizontal">
-
-                        <com.edittextpicker.aliazaz.EditTextPicker
-                            android:id="@+id/k221a"
-                            style="@style/EditTextNum"
-                            android:layout_width="0dp"
-                            android:layout_weight="1"
-                            android:hint="@string/cm"
-                            app:mask="###.#"
-                            app:maxValue="100"
-                            app:minValue="1"
-                            app:type="range" />
-
-                        <Spinner
-                            android:id="@+id/k221b"
-                            style="@style/spinner"
-                            android:layout_width="0dp"
-                            android:layout_margin="10dp"
-                            android:layout_weight="1" />
-
-                    </LinearLayout>
-
-                </LinearLayout>
-
-            </androidx.cardview.widget.CardView>
-
-            <!-- k222  Spinner and Input   -->
-            <androidx.cardview.widget.CardView
-                android:id="@+id/fldGrpCVk222"
-                style="@style/cardView">
-
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:orientation="vertical">
-
-                    <TextView
-                        style="@style/i_textview"
-                        android:text="@string/k222" />
-
-                    <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:orientation="horizontal">
-
-                        <com.edittextpicker.aliazaz.EditTextPicker
-                            android:id="@+id/k222a"
-                            style="@style/EditTextNum"
-                            android:layout_width="0dp"
-                            android:layout_weight="1"
-                            android:hint="@string/cm"
-                            app:mask="###.#"
-                            app:maxValue="100"
-                            app:minValue="1"
-                            app:type="range" />
-
-                        <Spinner
-                            android:id="@+id/k222b"
-                            style="@style/spinner"
-                            android:layout_width="0dp"
-                            android:layout_margin="10dp"
-                            android:layout_weight="1" />
-
-                    </LinearLayout>
-
-                </LinearLayout>
-
-            </androidx.cardview.widget.CardView>
-
-            <!-- k223  Radio   -->
-            <androidx.cardview.widget.CardView
-                android:id="@+id/fldGrpCVk223"
-                style="@style/cardView">
-
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:orientation="vertical">
-
-                    <TextView
-                        style="@style/i_textview"
-                        android:text="@string/k223" />
-
-                    <RadioGroup
-                        android:id="@+id/k223"
-                        style="@style/radiogroup"
-                        android:orientation="horizontal">
-
-                        <RadioButton
-                            android:id="@+id/k223a"
-                            style="@style/radiobutton"
-                            android:layout_weight="1"
-                            android:text="@string/yes" />
-
-                        <RadioButton
-                            android:id="@+id/k223b"
-                            style="@style/radiobutton"
-                            android:layout_weight="1"
-                            android:text="@string/no" />
-
-                    </RadioGroup>
-
-                </LinearLayout>
-
-            </androidx.cardview.widget.CardView>
-
-            <!-- k224  Spinner and Input-Numeric   -->
             <LinearLayout
-                android:id="@+id/fldGrpCVk04"
+                android:id="@+id/fldGrpSectionK3"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:orientation="vertical"
-                android:visibility='@{k223b.checked? View.VISIBLE : View.GONE}'>
+                android:orientation="vertical">
 
-                <!-- k224  Spinner and Input   -->
+                <!-- k221_title  Title   -->
                 <androidx.cardview.widget.CardView
-                    android:id="@+id/fldGrpCVk224"
+                    android:id="@+id/fldGrpCVk221_title"
+                    style="@style/cardView">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <TextView
+                            style="@style/i_textviewhint"
+                            android:text="@string/tk2headinghint3" />
+
+                    </LinearLayout>
+
+                </androidx.cardview.widget.CardView>
+
+                <!-- k221  Spinner and Input   -->
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/fldGrpCVk221"
                     style="@style/cardView">
 
                     <LinearLayout
@@ -186,7 +60,7 @@
 
                         <TextView
                             style="@style/i_textview"
-                            android:text="@string/k224" />
+                            android:text="@string/k221" />
 
                         <LinearLayout
                             android:layout_width="match_parent"
@@ -194,7 +68,7 @@
                             android:orientation="horizontal">
 
                             <com.edittextpicker.aliazaz.EditTextPicker
-                                android:id="@+id/k224a"
+                                android:id="@+id/k221a"
                                 style="@style/EditTextNum"
                                 android:layout_width="0dp"
                                 android:layout_weight="1"
@@ -205,7 +79,7 @@
                                 app:type="range" />
 
                             <Spinner
-                                android:id="@+id/k224b"
+                                android:id="@+id/k221b"
                                 style="@style/spinner"
                                 android:layout_width="0dp"
                                 android:layout_margin="10dp"
@@ -217,9 +91,9 @@
 
                 </androidx.cardview.widget.CardView>
 
-                <!-- k225  Spinner and Input   -->
+                <!-- k222  Spinner and Input   -->
                 <androidx.cardview.widget.CardView
-                    android:id="@+id/fldGrpCVk225"
+                    android:id="@+id/fldGrpCVk222"
                     style="@style/cardView">
 
                     <LinearLayout
@@ -229,7 +103,7 @@
 
                         <TextView
                             style="@style/i_textview"
-                            android:text="@string/k225" />
+                            android:text="@string/k222" />
 
                         <LinearLayout
                             android:layout_width="match_parent"
@@ -237,7 +111,7 @@
                             android:orientation="horizontal">
 
                             <com.edittextpicker.aliazaz.EditTextPicker
-                                android:id="@+id/k225a"
+                                android:id="@+id/k222a"
                                 style="@style/EditTextNum"
                                 android:layout_width="0dp"
                                 android:layout_weight="1"
@@ -248,7 +122,7 @@
                                 app:type="range" />
 
                             <Spinner
-                                android:id="@+id/k225b"
+                                android:id="@+id/k222b"
                                 style="@style/spinner"
                                 android:layout_width="0dp"
                                 android:layout_margin="10dp"
@@ -260,9 +134,9 @@
 
                 </androidx.cardview.widget.CardView>
 
-                <!-- k226  Spinner and Input   -->
+                <!-- k223  Radio   -->
                 <androidx.cardview.widget.CardView
-                    android:id="@+id/fldGrpCVk226"
+                    android:id="@+id/fldGrpCVk223"
                     style="@style/cardView">
 
                     <LinearLayout
@@ -272,133 +146,264 @@
 
                         <TextView
                             style="@style/i_textview"
-                            android:text="@string/k226" />
+                            android:text="@string/k223" />
 
-                        <LinearLayout
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
+                        <RadioGroup
+                            android:id="@+id/k223"
+                            style="@style/radiogroup"
                             android:orientation="horizontal">
 
-                            <com.edittextpicker.aliazaz.EditTextPicker
-                                android:id="@+id/k226a"
-                                style="@style/EditTextNum"
-                                android:layout_width="0dp"
+                            <RadioButton
+                                android:id="@+id/k223a"
+                                style="@style/radiobutton"
                                 android:layout_weight="1"
-                                android:hint="@string/cm"
-                                app:mask="###.#"
-                                app:maxValue="100"
-                                app:minValue="1"
-                                app:type="range" />
+                                android:text="@string/yes" />
 
-                            <Spinner
-                                android:id="@+id/k226b"
-                                style="@style/spinner"
-                                android:layout_width="0dp"
-                                android:layout_margin="10dp"
-                                android:layout_weight="1" />
+                            <RadioButton
+                                android:id="@+id/k223b"
+                                style="@style/radiobutton"
+                                android:layout_weight="1"
+                                android:text="@string/no" />
 
-                        </LinearLayout>
+                        </RadioGroup>
 
                     </LinearLayout>
 
                 </androidx.cardview.widget.CardView>
 
-                <!-- k227  Radio   -->
-                <androidx.cardview.widget.CardView
-                android:id="@+id/fldGrpCVk227"
-                style="@style/cardView">
-
+                <!-- k224  Spinner and Input-Numeric   -->
                 <LinearLayout
+                    android:id="@+id/fldGrpCVk04"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:orientation="vertical">
+                    android:orientation="vertical"
+                    android:visibility='@{k223b.checked? View.VISIBLE : View.GONE}'>
 
-                    <TextView
-                        style="@style/i_textview"
-                        android:text="@string/k227" />
+                    <!-- k224  Spinner and Input   -->
+                    <androidx.cardview.widget.CardView
+                        android:id="@+id/fldGrpCVk224"
+                        style="@style/cardView">
 
-                    <RadioGroup
-                        android:id="@+id/k227"
-                        style="@style/radiogroup"
-                        android:orientation="horizontal">
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical">
 
-                        <RadioButton
-                            android:id="@+id/k227a"
-                            style="@style/radiobutton"
-                            android:layout_weight="1"
-                            android:text="@string/k227a" />
+                            <TextView
+                                style="@style/i_textview"
+                                android:text="@string/k224" />
 
-                        <RadioButton
-                            android:id="@+id/k227b"
-                            style="@style/radiobutton"
-                            android:layout_weight="1"
-                            android:text="@string/k227b" />
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="horizontal">
 
-                    </RadioGroup>
+                                <com.edittextpicker.aliazaz.EditTextPicker
+                                    android:id="@+id/k224a"
+                                    style="@style/EditTextNum"
+                                    android:layout_width="0dp"
+                                    android:layout_weight="1"
+                                    android:hint="@string/cm"
+                                    app:mask="###.#"
+                                    app:maxValue="100"
+                                    app:minValue="1"
+                                    app:type="range" />
+
+                                <Spinner
+                                    android:id="@+id/k224b"
+                                    style="@style/spinner"
+                                    android:layout_width="0dp"
+                                    android:layout_margin="10dp"
+                                    android:layout_weight="1" />
+
+                            </LinearLayout>
+
+                        </LinearLayout>
+
+                    </androidx.cardview.widget.CardView>
+
+                    <!-- k225  Spinner and Input   -->
+                    <androidx.cardview.widget.CardView
+                        android:id="@+id/fldGrpCVk225"
+                        style="@style/cardView">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical">
+
+                            <TextView
+                                style="@style/i_textview"
+                                android:text="@string/k225" />
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="horizontal">
+
+                                <com.edittextpicker.aliazaz.EditTextPicker
+                                    android:id="@+id/k225a"
+                                    style="@style/EditTextNum"
+                                    android:layout_width="0dp"
+                                    android:layout_weight="1"
+                                    android:hint="@string/cm"
+                                    app:mask="###.#"
+                                    app:maxValue="100"
+                                    app:minValue="1"
+                                    app:type="range" />
+
+                                <Spinner
+                                    android:id="@+id/k225b"
+                                    style="@style/spinner"
+                                    android:layout_width="0dp"
+                                    android:layout_margin="10dp"
+                                    android:layout_weight="1" />
+
+                            </LinearLayout>
+
+                        </LinearLayout>
+
+                    </androidx.cardview.widget.CardView>
+
+                    <!-- k226  Spinner and Input   -->
+                    <androidx.cardview.widget.CardView
+                        android:id="@+id/fldGrpCVk226"
+                        style="@style/cardView">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical">
+
+                            <TextView
+                                style="@style/i_textview"
+                                android:text="@string/k226" />
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="horizontal">
+
+                                <com.edittextpicker.aliazaz.EditTextPicker
+                                    android:id="@+id/k226a"
+                                    style="@style/EditTextNum"
+                                    android:layout_width="0dp"
+                                    android:layout_weight="1"
+                                    android:hint="@string/cm"
+                                    app:mask="###.#"
+                                    app:maxValue="100"
+                                    app:minValue="1"
+                                    app:type="range" />
+
+                                <Spinner
+                                    android:id="@+id/k226b"
+                                    style="@style/spinner"
+                                    android:layout_width="0dp"
+                                    android:layout_margin="10dp"
+                                    android:layout_weight="1" />
+
+                            </LinearLayout>
+
+                        </LinearLayout>
+
+                    </androidx.cardview.widget.CardView>
+
+                    <!-- k227  Radio   -->
+                    <androidx.cardview.widget.CardView
+                        android:id="@+id/fldGrpCVk227"
+                        style="@style/cardView">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical">
+
+                            <TextView
+                                style="@style/i_textview"
+                                android:text="@string/k227" />
+
+                            <RadioGroup
+                                android:id="@+id/k227"
+                                style="@style/radiogroup"
+                                android:orientation="horizontal">
+
+                                <RadioButton
+                                    android:id="@+id/k227a"
+                                    style="@style/radiobutton"
+                                    android:layout_weight="1"
+                                    android:text="@string/k227a" />
+
+                                <RadioButton
+                                    android:id="@+id/k227b"
+                                    style="@style/radiobutton"
+                                    android:layout_weight="1"
+                                    android:text="@string/k227b" />
+
+                            </RadioGroup>
+
+                        </LinearLayout>
+
+                    </androidx.cardview.widget.CardView>
 
                 </LinearLayout>
 
-                </androidx.cardview.widget.CardView>
+                <!-- k228  Spinner and Input-Numeric   -->
+                <LinearLayout
+                    android:id="@+id/fldGrpCVk05"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:visibility='@{k227b.checked? View.VISIBLE : View.GONE}'>
+
+                    <!-- k228  Spinner and Input   -->
+                    <androidx.cardview.widget.CardView
+                        android:id="@+id/fldGrpCVk228"
+                        style="@style/cardView">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical">
+
+                            <TextView
+                                style="@style/i_textview"
+                                android:text="@string/k228" />
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="horizontal">
+
+                                <com.edittextpicker.aliazaz.EditTextPicker
+                                    android:id="@+id/k228a"
+                                    style="@style/EditTextNum"
+                                    android:layout_width="0dp"
+                                    android:layout_weight="1"
+                                    android:hint="@string/kg"
+                                    app:mask="###"
+                                    app:maxValue="100"
+                                    app:minValue="1"
+                                    app:type="range" />
+
+                                <Spinner
+                                    android:id="@+id/k228b"
+                                    style="@style/spinner"
+                                    android:layout_width="0dp"
+                                    android:layout_margin="10dp"
+                                    android:layout_weight="1" />
+
+                            </LinearLayout>
+
+                        </LinearLayout>
+
+                    </androidx.cardview.widget.CardView>
+
+                </LinearLayout>
 
             </LinearLayout>
 
-            <!-- k228  Spinner and Input-Numeric   -->
+
             <LinearLayout
-                android:id="@+id/fldGrpCVk05"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="vertical"
-                android:visibility='@{k227b.checked? View.VISIBLE : View.GONE}'>
-
-                <!-- k228  Spinner and Input   -->
-                <androidx.cardview.widget.CardView
-                    android:id="@+id/fldGrpCVk228"
-                    style="@style/cardView">
-
-                    <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:orientation="vertical">
-
-                        <TextView
-                            style="@style/i_textview"
-                            android:text="@string/k228" />
-
-                        <LinearLayout
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:orientation="horizontal">
-
-                            <com.edittextpicker.aliazaz.EditTextPicker
-                                android:id="@+id/k228a"
-                                style="@style/EditTextNum"
-                                android:layout_width="0dp"
-                                android:layout_weight="1"
-                                android:hint="@string/kg"
-                                app:mask="###"
-                                app:maxValue="100"
-                                app:minValue="1"
-                                app:type="range" />
-
-                            <Spinner
-                                android:id="@+id/k228b"
-                                style="@style/spinner"
-                                android:layout_width="0dp"
-                                android:layout_margin="10dp"
-                                android:layout_weight="1" />
-
-                        </LinearLayout>
-
-                    </LinearLayout>
-
-                </androidx.cardview.widget.CardView>
-
-            </LinearLayout>
-
-        </LinearLayout>
-
-
-        <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_gravity="end"
@@ -421,6 +426,8 @@
                     android:text="@string/nextSection" />
 
             </LinearLayout>
+
+        </LinearLayout>
 
 
     </ScrollView>

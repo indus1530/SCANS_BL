@@ -78,23 +78,23 @@ public class SectionB1Activity extends AppCompatActivity {
             }
         }));
 
-        bi.b114.setOnCheckedChangeListener(((radioGroup, i) -> {
+        bi.b113.setOnCheckedChangeListener(((radioGroup, i) -> {
 
-            if (i != bi.b114a.getId()) {
+            if (i != bi.b113a.getId()) {
                 ClearClass.ClearAllFields(bi.fldGrpCVb114, null);
             }
         }));
 
-        bi.b116.setOnCheckedChangeListener(((radioGroup, i) -> {
+        bi.b115.setOnCheckedChangeListener(((radioGroup, i) -> {
 
-            if (i != bi.b116a.getId()) {
+            if (i != bi.b115a.getId()) {
                 ClearClass.ClearAllFields(bi.fldGrpCVb116, null);
             }
         }));
 
-        bi.b118.setOnCheckedChangeListener(((radioGroup, i) -> {
+        bi.b117.setOnCheckedChangeListener(((radioGroup, i) -> {
 
-            if (i != bi.b118a.getId()) {
+            if (i != bi.b117a.getId()) {
                 ClearClass.ClearAllFields(bi.fldGrpCVb118, null);
             }
         }));

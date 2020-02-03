@@ -15,6 +15,7 @@
         android:fadeScrollbars="false"
         android:fillViewport="true"
         android:scrollbarSize="10dip"
+        android:layoutDirection="ltr"
         tools:context=".ui.sections.SectionD3Activity">
 
         <LinearLayout

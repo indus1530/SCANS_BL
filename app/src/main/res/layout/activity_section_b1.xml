@@ -552,7 +552,7 @@
             <androidx.cardview.widget.CardView
                 android:id="@+id/fldGrpCVb114"
                 style="@style/cardView"
-                android:visibility='@{b114a.checked? View.VISIBLE : View.GONE}'>
+                android:visibility='@{b113a.checked? View.VISIBLE : View.GONE}'>
 
                 <LinearLayout
                     android:layout_width="match_parent"
@@ -632,7 +632,7 @@
             <androidx.cardview.widget.CardView
                 android:id="@+id/fldGrpCVb116"
                 style="@style/cardView"
-                android:visibility='@{b116a.checked? View.VISIBLE : View.GONE}'>
+                android:visibility='@{b115a.checked? View.VISIBLE : View.GONE}'>
 
                 <LinearLayout
                     android:layout_width="match_parent"
@@ -712,7 +712,7 @@
             <androidx.cardview.widget.CardView
                 android:id="@+id/fldGrpCVb118"
                 style="@style/cardView"
-                android:visibility='@{b118a.checked? View.VISIBLE : View.GONE}'>
+                android:visibility='@{b117a.checked? View.VISIBLE : View.GONE}'>
 
                 <LinearLayout
                     android:layout_width="match_parent"

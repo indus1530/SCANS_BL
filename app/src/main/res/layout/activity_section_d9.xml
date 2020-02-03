@@ -818,6 +818,7 @@
                             android:tag="d905eb"
                             android:text='@{d905eb.checked? d905ebt.getText().toString() : ""}'
                             android:visibility='@{d905eb.checked? View.VISIBLE : View.GONE}' />
+
                     </RadioGroup>
                 </LinearLayout>
             </androidx.cardview.widget.CardView>
@@ -846,10 +847,25 @@
                             style="@style/radiobutton"
                             android:text="@string/d905fa" />
 
+                        <EditText
+                            android:id="@+id/d905fat"
+                            style="@style/EditTextNum"
+                            android:hint="@string/d905fa"
+                            android:text='@{d905fa.checked? d905fat.getText().toString() : ""}'
+                            android:visibility='@{d905fa.checked? View.VISIBLE : View.GONE}' />
+
                         <RadioButton
                             android:id="@+id/d905fb"
                             style="@style/radiobutton"
                             android:text="@string/d905fb" />
+
+                        <EditText
+                            android:id="@+id/d905fbt"
+                            style="@style/EditTextNum"
+                            android:hint="@string/d905fb"
+                            android:text='@{d905fb.checked? d905fbt.getText().toString() : ""}'
+                            android:visibility='@{d905fb.checked? View.VISIBLE : View.GONE}' />
+
                     </RadioGroup>
                 </LinearLayout>
             </androidx.cardview.widget.CardView>
@@ -878,10 +894,25 @@
                             style="@style/radiobutton"
                             android:text="@string/d905ga" />
 
+                        <EditText
+                            android:id="@+id/d905gat"
+                            style="@style/EditTextNum"
+                            android:hint="@string/d905ga"
+                            android:text='@{d905ga.checked? d905gat.getText().toString() : ""}'
+                            android:visibility='@{d905ga.checked? View.VISIBLE : View.GONE}' />
+
                         <RadioButton
                             android:id="@+id/d905gb"
                             style="@style/radiobutton"
                             android:text="@string/d905gb" />
+
+                        <EditText
+                            android:id="@+id/d905gbt"
+                            style="@style/EditTextNum"
+                            android:hint="@string/d905gb"
+                            android:text='@{d905gb.checked? d905gbt.getText().toString() : ""}'
+                            android:visibility='@{d905gb.checked? View.VISIBLE : View.GONE}' />
+
                     </RadioGroup>
                 </LinearLayout>
             </androidx.cardview.widget.CardView>

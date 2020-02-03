@@ -129,10 +129,14 @@ public class SectionD9Activity extends AppCompatActivity {
                 bi.d905fa.isChecked() ? "1" :
                         bi.d905fb.isChecked() ? "2" :
                                 "0");
+        json.put("d905fat", bi.d905fat.getText().toString());
+        json.put("d905fbt", bi.d905fbt.getText().toString());
         json.put("d905g",
                 bi.d905ga.isChecked() ? "1" :
                         bi.d905gb.isChecked() ? "2" :
                                 "0");
+        json.put("d905gat", bi.d905gat.getText().toString());
+        json.put("d905gbt", bi.d905gbt.getText().toString());
         json.put("d906a",
                 bi.d906aa.isChecked() ? "1" :
                         bi.d906ab.isChecked() ? "2" :

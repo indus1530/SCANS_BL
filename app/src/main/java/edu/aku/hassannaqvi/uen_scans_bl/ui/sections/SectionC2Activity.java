@@ -113,8 +113,9 @@ public class SectionC2Activity extends AppCompatActivity {
                 bi.c202a.isChecked() ? "1" :
                         bi.c202b.isChecked() ? "2" :
                                 bi.c202c.isChecked() ? "3" :
-                                        bi.c202x.isChecked() ? "96" :
+                                        bi.c20296.isChecked() ? "96" :
                                                 "0");
+        f1.put("c20296x", bi.c20296x.getText().toString());
 
         f1.put("c203",
                 bi.c203a.isChecked() ? "1" :
@@ -164,8 +165,9 @@ public class SectionC2Activity extends AppCompatActivity {
                                 bi.c208c.isChecked() ? "3" :
                                         bi.c208d.isChecked() ? "4" :
                                                 bi.c208e.isChecked() ? "5" :
-                                                        bi.c208x.isChecked() ? "96" :
+                                                        bi.c20896.isChecked() ? "96" :
                                                                 "0");
+        f1.put("c20896x", bi.c20896x.getText().toString());
 
         f1.put("c209",
                 bi.c209a.isChecked() ? "1" :
@@ -175,8 +177,9 @@ public class SectionC2Activity extends AppCompatActivity {
                                                 bi.c209e.isChecked() ? "5" :
                                                         bi.c209f.isChecked() ? "6" :
                                                                 bi.c209g.isChecked() ? "98" :
-                                                                        bi.c209x.isChecked() ? "96" :
+                                                                        bi.c20996.isChecked() ? "96" :
                                                                                 "0");
+        f1.put("c20996x", bi.c20996x.getText().toString());
 
         f1.put("c210",
                 bi.c210a.isChecked() ? "1" :
@@ -193,8 +196,9 @@ public class SectionC2Activity extends AppCompatActivity {
                                                         bi.c211f.isChecked() ? "6" :
                                                                 bi.c211g.isChecked() ? "7" :
                                                                         bi.c211h.isChecked() ? "98" :
-                                                                                bi.c211x.isChecked() ? "96" :
+                                                                                bi.c21196.isChecked() ? "96" :
                                                                                         "0");
+        f1.put("c21196x", bi.c21196x.getText().toString());
 
         f1.put("c212",
                 bi.c212a.isChecked() ? "1" :
@@ -202,8 +206,9 @@ public class SectionC2Activity extends AppCompatActivity {
                                 bi.c212c.isChecked() ? "3" :
                                         bi.c212d.isChecked() ? "4" :
                                                 bi.c212e.isChecked() ? "98" :
-                                                        bi.c212x.isChecked() ? "96" :
+                                                        bi.c21296.isChecked() ? "96" :
                                                                 "0");
+        f1.put("c21296x", bi.c21296x.getText().toString());
 
         f1.put("c213a", bi.c213a.isChecked() ? "1" : "0");
         f1.put("c213b", bi.c213b.isChecked() ? "2" : "0");
