@@ -465,6 +465,7 @@
                             <EditText
                                 android:id="@+id/a115"
                                 style="@style/EditTextNum"
+                                android:maxLength="2"
                                 android:hint="@string/num" />
 
                         </LinearLayout>

@@ -193,8 +193,8 @@
                         android:layout_height="match_parent">
 
                         <TextView
-                            style="@style/i_textview"
-                            android:text="@string/a303a_title" />
+                            style="@style/i_textviewhint"
+                            android:text="@string/a303hint" />
 
                         <RadioButton
                             android:id="@+id/a303a"
@@ -207,8 +207,8 @@
                             android:text="@string/a303b" />
 
                         <TextView
-                            style="@style/i_textview"
-                            android:text="@string/a303c_title" />
+                            style="@style/i_textviewhint"
+                            android:text="@string/a303hint1" />
 
                         <RadioButton
                             android:id="@+id/a303c"
@@ -221,8 +221,8 @@
                             android:text="@string/a303d" />
 
                         <TextView
-                            style="@style/i_textview"
-                            android:text="@string/a303e_title" />
+                            style="@style/i_textviewhint"
+                            android:text="@string/a303hint2" />
 
                         <RadioButton
                             android:id="@+id/a303e"
@@ -273,8 +273,11 @@
                             android:tag="a303x"
                             android:text='@{a303x.checked? a303xt.getText().toString() : ""}'
                             android:visibility='@{a303x.checked? View.VISIBLE : View.GONE}' />
+
                     </RadioGroup>
+
                 </LinearLayout>
+
             </androidx.cardview.widget.CardView>
 
             <!-- a304  Radio   -->
