@@ -45,6 +45,7 @@ public class SectionA1Activity extends AppCompatActivity {
 
 
     private void setUIComponent() {
+
         bi.a101.addTextChangedListener(new TextWatcher() {
             @Override
             public void beforeTextChanged(CharSequence s, int start, int count, int after) {
@@ -68,6 +69,8 @@ public class SectionA1Activity extends AppCompatActivity {
 
             }
         });
+
+
         bi.a112.addTextChangedListener(new TextWatcher() {
             @Override
             public void beforeTextChanged(CharSequence s, int start, int count, int after) {
@@ -90,6 +93,29 @@ public class SectionA1Activity extends AppCompatActivity {
 
             }
         });
+
+
+        bi.a115.addTextChangedListener(new TextWatcher() {
+            @Override
+            public void beforeTextChanged(CharSequence s, int start, int count, int after) {
+
+            }
+
+            @Override
+            public void onTextChanged(CharSequence s, int start, int before, int count) {
+
+
+            }
+
+            @Override
+            public void afterTextChanged(Editable s) {
+
+
+            }
+        });
+
+
+
     }
 
 

@@ -227,8 +227,8 @@
     <!--    <string name="a102"> a102:\t Time of interview: In 24 hours format</string>-->
     <string name="a102hh"> Hours</string>
     <string name="a102mm"> Minutes</string>
-    <string name="a103a"> a103a:\t Interviewer’s Name </string>
-    <string name="a103b"> a103b:\t Interviewer’s Code</string>
+    <string name="a103a"> A103a:\t Interviewer’s Name </string>
+    <string name="a103b"> A103b:\t Interviewer’s Code </string>
     <!--    <string name="a104a"> a104a:\t Team Leader’s name</string>-->
     <!--    <string name="a104b"> a104b:\t Team Leader’s Code</string>-->
     <!--    <string name="a105"> a105:\t Cluster number</string>-->
@@ -314,6 +314,7 @@
     <string name="a208"> A208:\t Has (Name) ever attended school (3 years and above)</string>
     <string name="a208a"> Yes</string>
     <string name="a208b"> No</string>
+
     <string name="a209"> A209:\t EDUCATION (3 years and above)</string>
     <string name="a209a"> less than 1 YEAR completed</string>
     <string name="a209b"> class 1 </string>
@@ -380,13 +381,13 @@
     <string name="a302x"> Other Specify </string>
 
     <string name="a303"> A303:\t Main material of the floor RECORD OBSERVATION</string>
-    <string name="a303a_title"> Natural Floor </string>
+    <string name="a303hint1"> Natural Floor </string>
     <string name="a303a"> Mud/Clay/Earth/Sand/  </string>
     <string name="a303b"> Dung </string>
-    <string name="a303c_title"> Rudimentary/Floor </string>
+    <string name="a303hint2"> Rudimentary/Floor </string>
     <string name="a303c"> Wood planks </string>
     <string name="a303d"> Palm/Bamboo </string>
-    <string name="a303e_title"> Finished Floor </string>
+    <string name="a303hint"> Finished Floor </string>
     <string name="a303e"> Parquet or polished wood</string>
     <string name="a303f"> Vinyl or asphalt strips</string>
     <string name="a303g"> Ceramic tiles</string>
@@ -395,6 +396,7 @@
     <string name="a303j"> Bricks </string>
     <string name="a303k"> Lime</string>
     <string name="a303x"> Other specify</string>
+
     <string name="a304"> a304:\t Main material of the roof RECORD OBSERVATION</string>
     <string name="a304a_title"> Natural Roofing </string>
     <string name="a304a"> No roof </string>

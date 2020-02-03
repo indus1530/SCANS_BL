@@ -44,6 +44,12 @@ import edu.aku.hassannaqvi.uen_scans_bl.core.DatabaseHelper;
 import edu.aku.hassannaqvi.uen_scans_bl.core.MainApp;
 import edu.aku.hassannaqvi.uen_scans_bl.databinding.ActivityMainBinding;
 import edu.aku.hassannaqvi.uen_scans_bl.ui.sections.SectionA1Activity;
+import edu.aku.hassannaqvi.uen_scans_bl.ui.sections.SectionB1Activity;
+import edu.aku.hassannaqvi.uen_scans_bl.ui.sections.SectionC1Activity;
+import edu.aku.hassannaqvi.uen_scans_bl.ui.sections.SectionD1Activity;
+import edu.aku.hassannaqvi.uen_scans_bl.ui.sections.SectionK1Activity;
+import edu.aku.hassannaqvi.uen_scans_bl.ui.sections.SectionLActivity;
+import edu.aku.hassannaqvi.uen_scans_bl.ui.sections.SectionMActivity;
 import edu.aku.hassannaqvi.uen_scans_bl.ui.sync.SyncActivity;
 
 public class MainActivity extends AppCompatActivity {
@@ -262,15 +268,39 @@ public class MainActivity extends AppCompatActivity {
 
     }
 
-    public void OpenFormFunc() {
-        Intent oF;
-        if (!MainApp.userName.equals("0000")) {
-            oF = new Intent(MainActivity.this, SectionA1Activity.class);
-            startActivity(oF);
-        } else {
-            Toast.makeText(getApplicationContext(), "Please login Again!", Toast.LENGTH_LONG).show();
+
+    public void openForm(View v) {
+        OpenFormFunc(v.getId());
+    }
+
+    public void OpenFormFunc(int id) {
+        Intent oF = null;
+        switch (id) {
+            case R.id.formA:
+                oF = new Intent(MainActivity.this, SectionA1Activity.class);
+                break;
+            case R.id.formB:
+                oF = new Intent(MainActivity.this, SectionB1Activity.class);
+                break;
+            case R.id.formC:
+                oF = new Intent(MainActivity.this, SectionC1Activity.class);
+                break;
+            case R.id.formD:
+                oF = new Intent(MainActivity.this, SectionD1Activity.class);
+                break;
+            case R.id.formK:
+                oF = new Intent(MainActivity.this, SectionK1Activity.class);
+                break;
+            case R.id.formL:
+                oF = new Intent(MainActivity.this, SectionLActivity.class);
+                break;
+            case R.id.formM:
+                oF = new Intent(MainActivity.this, SectionMActivity.class);
+                break;
         }
 
+        //oF = new Intent(MainActivity.this, SectionA1Activity.class);
+            startActivity(oF);
     }
 
     public void openDB() {
