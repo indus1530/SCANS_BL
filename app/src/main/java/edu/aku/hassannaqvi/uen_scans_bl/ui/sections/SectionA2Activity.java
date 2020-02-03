@@ -176,7 +176,7 @@ public class SectionA2Activity extends AppCompatActivity {
 
 
     private boolean formValidation() {
-        return Validator.emptyCheckingContainer(this, bi.fldGrpSectionA2);
+        return Validator.emptyCheckingContainer(this, bi.GrpName);
 
     }
 
