@@ -316,21 +316,23 @@ public class SectionA32Activity extends AppCompatActivity {
                         bi.a328b.isChecked() ? "2" :
                                 bi.a328c.isChecked() ? "98" :
                                         "0");
+
         json.put("a329a", bi.a329a.getText().toString());
         json.put("a329b", bi.a329b.getText().toString());
         json.put("a329c", bi.a329c.getText().toString());
         json.put("a329d", bi.a329d.getText().toString());
         json.put("a329e", bi.a329e.getText().toString());
         json.put("a329f", bi.a329f.getText().toString());
+
         json.put("a330",
                 bi.a330a.isChecked() ? "1" :
                         bi.a330b.isChecked() ? "2" :
-                                bi.a330c.isChecked() ? "98" :
+                                bi.a33098.isChecked() ? "98" :
                                         "0");
         json.put("a331",
                 bi.a331a.isChecked() ? "1" :
                         bi.a331b.isChecked() ? "2" :
-                                bi.a331c.isChecked() ? "98" :
+                                bi.a33198.isChecked() ? "98" :
                                         "0");
 
         json.put("a332a", bi.a332a.isChecked() ? "1" : "0");
@@ -344,8 +346,8 @@ public class SectionA32Activity extends AppCompatActivity {
         json.put("a333a", bi.a333a.isChecked() ? "1" : "0");
         json.put("a333b", bi.a333b.isChecked() ? "2" : "0");
         json.put("a333c", bi.a333c.isChecked() ? "3" : "0");
-        json.put("a333x", bi.a333x.isChecked() ? "96" : "0");
-        json.put("a333xt", bi.a333xt.getText().toString());
+        json.put("a333x", bi.a33396.isChecked() ? "96" : "0");
+        json.put("a333xt", bi.a33396x.getText().toString());
 
 
     }
