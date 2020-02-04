@@ -166,7 +166,7 @@
 
                         <EditText
                             android:id="@+id/k104"
-                            style="@style/EditTextAlpha"
+                            style="@style/EditTextNum"
                             android:layout_weight="1"
                             android:hint="@string/k104a"
                             android:enabled='@{k10498.checked ? false : true}'

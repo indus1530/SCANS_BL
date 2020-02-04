@@ -195,7 +195,7 @@
 
                             <EditText
                                 android:id="@+id/k204b"
-                                style="@style/EditTextAlpha"
+                                style="@style/EditTextNum"
                                 android:layout_width="0dp"
                                 android:layout_weight="1"
                                 android:enabled="false"
@@ -235,7 +235,7 @@
 
                             <EditText
                                 android:id="@+id/k205b"
-                                style="@style/EditTextAlpha"
+                                style="@style/EditTextNum"
                                 android:layout_width="0dp"
                                 android:layout_weight="1"
                                 android:enabled="false"
