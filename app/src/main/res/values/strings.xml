@@ -699,45 +699,53 @@
     <string name="a324a"> Other household only (not public) </string>
     <string name="a324b"> Public facility  </string>
 
-    <string name="a325"> A325:\t How many households in total use this toilet facility, including your own household?</string>
+    <string name="a325"> A325:\t How many households in total use this toilet facility, including your own household ? </string>
     <string name="a325a_title"> Number of household </string>
     <string name="a325a"> If less than 10  </string>
     <string name="a325b"> Ten or more household  </string>
     <string name="a325x"> Don’t Know </string>
-    <string name="a326"> A326:\t Does any member of this household own any agricultural land?</string>
+
+    <string name="a326"> A326:\t Does any member of this household own any agricultural land ? </string>
     <string name="a326a"> Yes</string>
     <string name="a326b"> No </string>
     <string name="a326c"> Don’t Know </string>
-    <string name="a327"> A327:\t How many acres or kanals of agricultural land do members of this household own?</string>
-    <string name="a327a"> How many acres or kanals of agricultural land do members of this household own? Acre</string>
-    <string name="a327b"> How many acres or kanals of agricultural land do members of this household own? Kanals</string>
-    <string name="a327c"> Don’t Know </string>
-    <string name="a328"> A328:\t Does this household own any livestock, herds, other farm animals or poultry?</string>
+
+    <string name="a327"> A327:\t How many Acres or Kanals of agricultural land do members of this household own ? </string>
+    <string name="a327a"> Acres </string>
+    <string name="a327b"> Kanals </string>
+    <string name="a32798"> Don’t Know </string>
+
+    <string name="a328"> A328:\t Does this household own any livestock, herds, other farm animals or poultry ? </string>
     <string name="a328a"> Yes </string>
     <string name="a328b"> No </string>
     <string name="a328c"> Don’t Know </string>
-    <string name="a329"> A329:\t How many of the following animals do the household own?</string>
+
+    <string name="a329"> A329:\t How many of the following animals do the household own ? </string>
     <string name="a329a"> Cows/Bulls/Buffalo  </string>
     <string name="a329b"> Horses/Donkeys/Mules </string>
     <string name="a329c"> Goats  </string>
     <string name="a329d"> Sheep</string>
     <string name="a329e"> Chickens </string>
     <string name="a329f"> Camels </string>
-    <string name="a330"> A330:\t Does any member of this household have a bank account?</string>
+
+    <string name="a330"> A330:\t Does any member of this household have a bank account ? </string>
     <string name="a330a"> Yes </string>
     <string name="a330b"> No </string>
     <string name="a330c"> Don’t Know </string>
-    <string name="a331"> A331:\t What is total monthly household income of this house?</string>
+
+    <string name="a331"> A331:\t What is total monthly household income of this house ? </string>
     <string name="a331a"> Rupees </string>
     <string name="a331b"> Don’t Want to Share</string>
     <string name="a331c"> Don’t Know </string>
-    <string name="a332"> A332:\t Do you or your family receive any support in the form of cash or kind? (select as many as apply) </string>
+
+    <string name="a332"> A332:\t Do you or your family receive any support in the form of cash or kind ? </string>
     <string name="a332a"> BISP </string>
     <string name="a332b"> Food Voucher per month </string>
     <string name="a332c"> Cash Per month (other than BISP) </string>
     <string name="a332d"> Student Scholarship </string>
     <string name="a332e"> None </string>
     <string name="a332x"> Other specify </string>
+
     <string name="a333"> A333:\t Who provides this support? (select as many as apply)</string>
     <string name="a333a"> Government </string>
     <string name="a333b"> NGO </string>

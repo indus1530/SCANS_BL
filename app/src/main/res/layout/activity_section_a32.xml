@@ -1347,6 +1347,10 @@
                             style="@style/i_textview"
                             android:text="@string/a322" />
 
+                        <TextView
+                            style="@style/i_textviewhint"
+                            android:text="@string/a322hint" />
+
                         <RadioGroup
                             android:id="@+id/a322"
                             style="@style/radiogroup">
