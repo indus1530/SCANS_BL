@@ -90,9 +90,9 @@ public class SectionA2Activity extends AppCompatActivity {
                                                                                                         bi.a203l.isChecked() ? "12" :
                                                                                                                 bi.a203m.isChecked() ? "13" :
                                                                                                                         bi.a203n.isChecked() ? "14" :
-                                                                                                                                bi.a203x.isChecked() ? "96" :
+                                                                                                                                bi.a20396.isChecked() ? "96" :
                                                                                                                                         "0");
-        f1.put("a203xt", bi.a203xt.getText().toString());
+        f1.put("a20396x", bi.a20396x.getText().toString());
 
         f1.put("a204",
                 bi.a204a.isChecked() ? "1" :
@@ -104,11 +104,9 @@ public class SectionA2Activity extends AppCompatActivity {
         f1.put("a205mm", bi.a205mm.getText().toString());
         f1.put("a205yy", bi.a205yy.getText().toString());
 
-        f1.put("a206dd", bi.a206dd.getText().toString());
-        f1.put("a206mm", bi.a206mm.getText().toString());
-        f1.put("a206yy", bi.a206yy.getText().toString());
-        f1.put("a207",
+        f1.put("a206", bi.a20698.isChecked() ? "98" : bi.a206.getText().toString());
 
+        f1.put("a207",
                 bi.a207a.isChecked() ? "1" :
                         bi.a207b.isChecked() ? "2" :
                                 bi.a207c.isChecked() ? "3" :

@@ -41,6 +41,7 @@
 
                     <TextView
                         style="@style/i_textview"
+                        android:layout_height="match_parent"
                         android:layout_width="0dp"
                         android:layout_weight="1"
                         android:text="@string/d901" />
@@ -48,6 +49,7 @@
                     <Spinner
                         android:id="@+id/d901"
                         style="@style/spinner"
+                        android:layout_height="match_parent"
                         android:layout_width="0dp"
                         android:layout_weight="1" />
 
