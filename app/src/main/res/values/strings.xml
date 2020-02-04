@@ -795,20 +795,23 @@
     <string name="a40697"> Never </string>
 
     <string name="tb1heading">SECTION B1: HOUSEHOLD FOOD INSECURITY EXPERIENCE SCALE </string>
-    <string name="b101"> B101:\t You or others in your household worried about not having enough food to eat because of a lack of money or other resources?</string>
-    <string name="b101a"> Yes  </string>
-    <string name="b101b"> No</string>
-    <string name="b101c"> Don’t Know </string>
-    <string name="b101d"> Refused </string>
-    <string name="b102"> B102:\t How often did this happen?      </string>
-    <string name="b102a"> Rarely (once or twice in the past four weeks)</string>
-    <string name="b102b"> Sometimes (three to ten times in the past four weeks)</string>
-    <string name="b102c"> Often (more than ten times in the past four weeks)</string>
-    <string name="b103"> B103:\t Still thinking about the last 12 months, was there a time when you or others in your household were unable to eat healthy and nutritious food because of lack of money or other resources?</string>
+    <string name="b101"> B101:\t You or others in your household worried about not having enough food to eat because of a lack of money or other resources ? </string>
+    <string name="b101a"> Yes </string>
+    <string name="b101b"> No </string>
+    <string name="b10198"> Don’t Know </string>
+    <string name="b10199"> Refused </string>
+
+    <string name="b102"> B102:\t How often did this happen ? </string>
+    <string name="b102a"> Rarely (once or twice in the past four weeks) </string>
+    <string name="b102b"> Sometimes (three to ten times in the past four weeks) </string>
+    <string name="b102c"> Often (more than ten times in the past four weeks) </string>
+
+    <string name="b103"> B103:\t Still thinking about the last 12 months, was there a time when you or others in your household were unable to eat healthy and nutritious food because of lack of money or other resources ? </string>
     <string name="b103a"> Yes </string>
     <string name="b103b"> No</string>
     <string name="b103c"> Don’t Know </string>
     <string name="b103d"> Refused</string>
+
     <string name="b104"> B104:\t How often did this happen?       </string>
     <string name="b104a"> Rarely (once or twice in the past four weeks)</string>
     <string name="b104b"> Sometimes (three to ten times in the past four weeks)</string>
