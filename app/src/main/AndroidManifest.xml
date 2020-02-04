@@ -24,13 +24,13 @@
         android:theme="@style/AppTheme1">
         <activity
             android:name=".ui.other.SplashscreenActivity"
-            android:screenOrientation="portrait">
+            android:screenOrientation="portrait" /><!--
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
-        </activity>
+        </activity>-->
 
         <activity
             android:name=".ui.other.LoginActivity"
@@ -151,7 +151,11 @@
             android:name=".ui.sections.SectionD9Activity"
             android:label="@string/td9heading"
             android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
 
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
         </activity>
 
         <activity
