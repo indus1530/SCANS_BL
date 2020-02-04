@@ -172,7 +172,7 @@
 
                         <EditText
                             android:id="@+id/d9051a"
-                            style="@style/EditTextNum"
+                            style="@style/EditTextAlpha"
                             android:layout_width="0dp"
                             android:layout_weight="1"
                             android:hint="@string/d905a" />
@@ -395,7 +395,7 @@
 
                     <EditText
                         android:id="@+id/d9052a"
-                        style="@style/EditTextNum"
+                        style="@style/EditTextAlpha"
                         android:layout_width="0dp"
                         android:layout_weight="1"
                         android:hint="@string/d905a" />
@@ -618,7 +618,7 @@
 
                     <EditText
                         android:id="@+id/d9053a"
-                        style="@style/EditTextNum"
+                        style="@style/EditTextAlpha"
                         android:layout_width="0dp"
                         android:layout_weight="1"
                         android:hint="@string/d905a" />
@@ -841,7 +841,7 @@
 
                     <EditText
                         android:id="@+id/d9054a"
-                        style="@style/EditTextNum"
+                        style="@style/EditTextAlpha"
                         android:layout_width="0dp"
                         android:layout_weight="1"
                         android:hint="@string/d905a" />
@@ -1064,7 +1064,7 @@
 
                     <EditText
                         android:id="@+id/d9055a"
-                        style="@style/EditTextNum"
+                        style="@style/EditTextAlpha"
                         android:layout_width="0dp"
                         android:layout_weight="1"
                         android:hint="@string/d905a" />
@@ -1287,7 +1287,7 @@
 
                     <EditText
                         android:id="@+id/d9056a"
-                        style="@style/EditTextNum"
+                        style="@style/EditTextAlpha"
                         android:layout_width="0dp"
                         android:layout_weight="1"
                         android:hint="@string/d905a" />
@@ -1510,7 +1510,7 @@
 
                     <EditText
                         android:id="@+id/d9057a"
-                        style="@style/EditTextNum"
+                        style="@style/EditTextAlpha"
                         android:layout_width="0dp"
                         android:layout_weight="1"
                         android:hint="@string/d905a" />
