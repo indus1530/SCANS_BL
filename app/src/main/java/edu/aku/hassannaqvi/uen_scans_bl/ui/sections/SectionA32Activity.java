@@ -61,7 +61,7 @@ public class SectionA32Activity extends AppCompatActivity {
         }));
 
         bi.a326.setOnCheckedChangeListener(((radioGroup, i) -> {
-            if (i == bi.a323a.getId()) {
+            if (i == bi.a326a.getId()) {
                 bi.fldGrpCVa327.setVisibility(View.VISIBLE);
             } else {
                 ClearClass.ClearAllFields(bi.fldGrpCVa327, null);
