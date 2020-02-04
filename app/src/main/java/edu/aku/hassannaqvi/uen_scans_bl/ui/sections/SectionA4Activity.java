@@ -40,7 +40,7 @@ public class SectionA4Activity extends AppCompatActivity {
         //a401
         bi.a401.setOnCheckedChangeListener((group, checkedId) -> {
 
-            if (checkedId == bi.a401a.getId() || checkedId == bi.a401x.getId()) {
+            if (checkedId == bi.a401a.getId() || checkedId == bi.a40196.getId()) {
                 bi.fldGrpCVa01.setVisibility(View.VISIBLE);
 
             } else {
@@ -50,8 +50,8 @@ public class SectionA4Activity extends AppCompatActivity {
             }
         });
 
-        //a403e
-        bi.a403e.setOnCheckedChangeListener((compoundButton, b) -> {
+        //a40397
+        bi.a40397.setOnCheckedChangeListener((compoundButton, b) -> {
             if (b) {
                 bi.fldGrpCVa02.setVisibility(View.VISIBLE);
             } else {
@@ -117,9 +117,9 @@ public class SectionA4Activity extends AppCompatActivity {
                         bi.a401b.isChecked() ?"2" :
                                 bi.a401c.isChecked() ?"3" :
                                         bi.a401d.isChecked() ?"4" :
-                                                bi.a401x.isChecked() ?"96" :
+                                                bi.a40196.isChecked() ? "96" :
                                                         "0");
-        f1.put("a401xt", bi.a401xt.getText().toString());
+        f1.put("a40196x", bi.a40196x.getText().toString());
 
         f1.put("a402",
                 bi.a402a.isChecked() ?"1" :
@@ -130,7 +130,7 @@ public class SectionA4Activity extends AppCompatActivity {
         f1.put("a403b",bi.a403b.isChecked() ?"2" :"0");
         f1.put("a403c",bi.a403c.isChecked() ?"3" :"0");
         f1.put("a403d",bi.a403d.isChecked() ?"4" :"0");
-        f1.put("a403e",bi.a403e.isChecked() ?"97" :"0");
+        f1.put("a40397", bi.a40397.isChecked() ? "97" : "0");
 
         f1.put("a404",
                 bi.a404a.isChecked() ?"1" :
@@ -141,7 +141,7 @@ public class SectionA4Activity extends AppCompatActivity {
         f1.put("a405b",bi.a405b.isChecked() ?"2" :"0");
         f1.put("a405c",bi.a405c.isChecked() ?"3" :"0");
         f1.put("a405d",bi.a405d.isChecked() ?"4" :"0");
-        f1.put("a405e",bi.a405e.isChecked() ?"97" :"0");
+        f1.put("a40597", bi.a40597.isChecked() ? "97" : "0");
 
         f1.put("a406a",bi.a406a.isChecked() ?"1" :"0");
         f1.put("a406b",bi.a406b.isChecked() ?"2" :"0");
@@ -151,7 +151,7 @@ public class SectionA4Activity extends AppCompatActivity {
         f1.put("a406f",bi.a406f.isChecked() ?"6" :"0");
         f1.put("a406g",bi.a406g.isChecked() ?"7" :"0");
         f1.put("a406h",bi.a406h.isChecked() ?"8" :"0");
-        f1.put("a406i",bi.a406i.isChecked() ?"97" :"0");
+        f1.put("a40697", bi.a40697.isChecked() ? "97" : "0");
 
     }
 

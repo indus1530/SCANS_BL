@@ -167,6 +167,7 @@
                         <EditText
                             android:id="@+id/k104"
                             style="@style/EditTextNum"
+                            android:layout_width="0dp"
                             android:layout_weight="1"
                             android:hint="@string/k104a"
                             android:enabled='@{k10498.checked ? false : true}'
@@ -175,7 +176,9 @@
                         <CheckBox
                             android:id="@+id/k10498"
                             style="@style/checkbox"
+                            android:layout_width="0dp"
                             android:layout_weight="1"
+                            android:tag="-1"
                             android:text="@string/dkn" />
 
                     </LinearLayout>

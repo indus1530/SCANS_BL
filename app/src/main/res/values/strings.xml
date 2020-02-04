@@ -750,44 +750,49 @@
     <string name="a333a"> Government </string>
     <string name="a333b"> NGO </string>
     <string name="a333c"> Individual </string>
-    <string name="a333x"> Other specify </string>
+    <string name="a33396"> Other </string>
 
-    <string name="ta4heading">SECTION A4: HAND-WASHING </string>
-    <string name="a401"> A401:\t Please show us where you and members of your household most often wash their hands. </string>
-    <string name="a401a"> Observed  </string>
-    <string name="a401b"> Not observed</string>
-    <string name="a401c"> Not in dwelling/plot/yard </string>
-    <string name="a401d"> No permission to see</string>
+    <string name="ta4heading"> SECTION A4: HAND-WASHING </string>
+    <string name="a401"> A401:\t Please show us where you and members of your household most often wash their hands . </string>
+    <string name="a401a"> Observed </string>
+    <string name="a401b"> Not observed </string>
+    <string name="a401c"> Not in Dwelling / Plot / Yard </string>
+    <string name="a401d"> No permission to see </string>
     <string name="a401x"> Other specify </string>
-    <string name="a402"> A402:\t Observe presence of water at the specific place for hand washing. </string>
-    <string name="a402a"> Water is available</string>
-    <string name="a402b"> Water is not available </string>
-    <string name="a403"> A403:\t Record if soap or detergent is present at the specific place for hand washing [Multiple responses]  </string>
-    <string name="a403a"> Bar soap</string>
-    <string name="a403b"> Detergent (powder/liquid/paste) </string>
-    <string name="a403c"> Liquid soap</string>
-    <string name="a403d"> Ash/mud/sand </string>
-    <string name="a403e"> None</string>
-    <string name="a404"> A404:\t Do you have any soap or detergent in your household for hand washing? </string>
+
+    <string name="a402"> A402:\t Observe presence of water at the specific place for hand washing . </string>
+    <string name="a402a"> Water is Available </string>
+    <string name="a402b"> Water is Not Available </string>
+
+    <string name="a403"> A403:\t Record if soap or detergent is present at the specific place for hand washing </string>
+    <string name="a403a"> Bar Soap </string>
+    <string name="a403b"> Detergent (Powder / Liquid / Paste) </string>
+    <string name="a403c"> Liquid Soap </string>
+    <string name="a403d"> Ash / Mud / Sand </string>
+    <string name="a403e"> None </string>
+
+    <string name="a404"> A404:\t Do you have any soap or detergent in your household for hand washing ? </string>
     <string name="a404a"> Yes </string>
     <string name="a404b"> No </string>
-    <string name="a405"> A405:\t If yes, can you please show it to me?  [Multiple responses] </string>
-    <string name="a405a"> Bar soap</string>
-    <string name="a405b"> Detergent (powder/liquid/paste) </string>
-    <string name="a405c"> Liquid soap </string>
-    <string name="a405d"> Ash/mud/sand </string>
+
+    <string name="a405"> A405:\t If yes, can you please show it to me ?  </string>
+    <string name="a405a"> Bar Soap </string>
+    <string name="a405b"> Detergent (Powder / Liquid / Paste) </string>
+    <string name="a405c"> Liquid Soap </string>
+    <string name="a405d"> Ash / Mud / Sand </string>
     <string name="a405e"> None </string>
-    <string name="a406"> A406:\t How often you wash your hands with soap or detergent or ash/mud/sand? [Multiple responses]</string>
-    <string name="a406a_title"> Daily</string>
+
+    <string name="a406"> A406:\t How often you wash your hands with soap or detergent or Ash / Mud / Sand ? </string>
+    <string name="a406a_title"> Daily </string>
     <string name="a406a"> After using toilet </string>
-    <string name="a406b"> Before eating food  </string>
-    <string name="a406c"> After eating food</string>
-    <string name="a406d"> After field work</string>
-    <string name="a406e"> After changing dippers/cleaning baby</string>
+    <string name="a406b"> Before eating food </string>
+    <string name="a406c"> After eating food </string>
+    <string name="a406d"> After field work </string>
+    <string name="a406e"> After changing dippers / cleaning baby </string>
     <string name="a406f"> Before feeding baby </string>
-    <string name="a406g"> Before cooking  </string>
+    <string name="a406g"> Before cooking </string>
     <string name="a406h"> Sometimes </string>
-    <string name="a406i"> Never  </string>
+    <string name="a40697"> Never </string>
 
     <string name="tb1heading">SECTION B1: HOUSEHOLD FOOD INSECURITY EXPERIENCE SCALE </string>
     <string name="b101"> B101:\t You or others in your household worried about not having enough food to eat because of a lack of money or other resources?</string>

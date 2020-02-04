@@ -51,13 +51,7 @@
         <activity
             android:name=".ui.sections.SectionA31Activity"
             android:label="@string/ta3heading"
-            android:screenOrientation="portrait">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
-        </activity>
+            android:screenOrientation="portrait" />
 
         <activity
             android:name=".ui.sections.SectionA32Activity"
@@ -67,7 +61,13 @@
         <activity
             android:name=".ui.sections.SectionA4Activity"
             android:label="@string/ta4heading"
-            android:screenOrientation="portrait" />
+            android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
 
         <activity
             android:name=".ui.sections.SectionB1Activity"
