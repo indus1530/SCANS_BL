@@ -41,16 +41,15 @@
 
                     <com.edittextpicker.aliazaz.EditTextPicker
                         android:id="@+id/b201"
-                        style="@style/EditTextAlphaNumeric"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:hint="@string/b201"
-                        android:inputType="number"
-                        app:mask="##"
-                        app:maxValue="5"
+                        style="@style/EditTextNum"
+                        android:hint="@string/b201a"
+                        android:maxLength="1"
+                        app:maxValue="9"
                         app:minValue="1"
                         app:type="range" />
+
                 </LinearLayout>
+
             </androidx.cardview.widget.CardView>
 
             <!-- b202  Radio   -->
@@ -69,25 +68,34 @@
 
                     <RadioGroup
                         android:id="@+id/b202"
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent">
+                        style="@style/radiogroup"
+                        android:orientation="horizontal">
 
                         <RadioButton
                             android:id="@+id/b202a"
                             style="@style/radiobutton"
+                            android:layout_width="0dp"
+                            android:layout_weight="1"
                             android:text="@string/b202a" />
 
                         <RadioButton
                             android:id="@+id/b202b"
                             style="@style/radiobutton"
+                            android:layout_width="0dp"
+                            android:layout_weight="1"
                             android:text="@string/b202b" />
 
                         <RadioButton
                             android:id="@+id/b202c"
                             style="@style/radiobutton"
+                            android:layout_width="0dp"
+                            android:layout_weight="1"
                             android:text="@string/b202c" />
+
                     </RadioGroup>
+
                 </LinearLayout>
+
             </androidx.cardview.widget.CardView>
 
             <!-- b203  Input-Numeric   -->
@@ -106,16 +114,15 @@
 
                     <com.edittextpicker.aliazaz.EditTextPicker
                         android:id="@+id/b203"
-                        style="@style/EditTextAlphaNumeric"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:hint="@string/b203"
-                        android:inputType="number"
-                        app:mask="##"
-                        app:maxValue="5"
+                        style="@style/EditTextNum"
+                        android:hint="@string/b203a"
+                        android:maxLength="1"
+                        app:maxValue="9"
                         app:minValue="1"
                         app:type="range" />
+
                 </LinearLayout>
+
             </androidx.cardview.widget.CardView>
 
             <!-- b204  Radio   -->
@@ -134,25 +141,34 @@
 
                     <RadioGroup
                         android:id="@+id/b204"
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent">
+                        style="@style/radiogroup"
+                        android:orientation="horizontal">
 
                         <RadioButton
                             android:id="@+id/b204a"
                             style="@style/radiobutton"
+                            android:layout_width="0dp"
+                            android:layout_weight="1"
                             android:text="@string/b204a" />
 
                         <RadioButton
                             android:id="@+id/b204b"
                             style="@style/radiobutton"
+                            android:layout_width="0dp"
+                            android:layout_weight="1"
                             android:text="@string/b204b" />
 
                         <RadioButton
                             android:id="@+id/b204c"
                             style="@style/radiobutton"
+                            android:layout_width="0dp"
+                            android:layout_weight="1"
                             android:text="@string/b204c" />
+
                     </RadioGroup>
+
                 </LinearLayout>
+
             </androidx.cardview.widget.CardView>
 
 

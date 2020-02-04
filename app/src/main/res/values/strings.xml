@@ -861,32 +861,43 @@
     <string name="b114a"> Rarely (once or twice in the past four weeks)</string>
     <string name="b114b"> Sometimes (three to ten times in the past four weeks)</string>
     <string name="b114c"> Often (more than ten times in the past four weeks)</string>
-    <string name="b115"> B115:\t Was there a time when you or others in your household were hungry but did not eat because there was not enough money or other resources?</string>
-    <string name="b115a"> Yes</string>
-    <string name="b115b"> No</string>
+
+    <string name="b115"> B115:\t Was there a time when you or others in your household were hungry but did not eat because there was not enough money or other resources ? </string>
+    <string name="b115a"> Yes </string>
+    <string name="b115b"> No </string>
     <string name="b115c"> Don’t Know </string>
-    <string name="b115d"> Refused</string>
-    <string name="b116"> B116:\t How often did this happen?       </string>
-    <string name="b116a"> Rarely (once or twice in the past four weeks)</string>
-    <string name="b116b"> Sometimes (three to ten times in the past four weeks)</string>
-    <string name="b116c"> Often (more than ten times in the past four weeks)</string>
-    <string name="b117"> B117:\t Was there a time when you or others in your household went without eating for a whole day because of a lack of money or other resources?</string>
+    <string name="b115d"> Refused </string>
+
+    <string name="b116"> B116:\t How often did this happen ? </string>
+    <string name="b116a"> Rarely (once or twice in the past four weeks) </string>
+    <string name="b116b"> Sometimes (three to ten times in the past four weeks) </string>
+    <string name="b116c"> Often (more than ten times in the past four weeks) </string>
+
+    <string name="b117"> B117:\t Was there a time when you or others in your household went without eating for a whole day because of a lack of money or other resources ? </string>
     <string name="b117a"> Yes </string>
-    <string name="b117b"> No</string>
+    <string name="b117b"> No </string>
     <string name="b117c"> Don’t Know </string>
-    <string name="b117d"> Refused</string>
-    <string name="b118"> B118:\t How often did this happen?       </string>
+    <string name="b117d"> Refused </string>
+
+    <string name="b118"> B118:\t How often did this happen ? </string>
     <string name="b118a"> Rarely (once or twice in the past four weeks)</string>
     <string name="b118b"> Sometimes (three to ten times in the past four weeks)</string>
     <string name="b118c"> Often (more than ten times in the past four weeks)</string>
 
+
     <string name="tb2heading">SECTION B2: FOOD CONSUMPTION </string>
-    <string name="b201"> B201:\t Yesterday, how many meals were eaten by adults?</string>
+
+    <string name="b201"> B201:\t Yesterday, how many meals were eaten by adults ? </string>
+    <string name="b201a"> meals </string>
+
     <string name="b202"> B202:\t How does this compare to usual for the adults?</string>
     <string name="b202a"> Less </string>
     <string name="b202b"> Same</string>
     <string name="b202c"> More </string>
+
     <string name="b203"> B203:\t Yesterday, how many meals were eaten by children</string>
+    <string name="b203a"> meals </string>
+
     <string name="b204"> B204:\t How does this compare to usual for the children?</string>
     <string name="b204a"> Less</string>
     <string name="b204b"> Same</string>
