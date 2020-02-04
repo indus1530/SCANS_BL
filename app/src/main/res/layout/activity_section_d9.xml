@@ -588,11 +588,8 @@
 
                         <EditText
                             android:id="@+id/d905aat"
-                            style="@style/radiobutton"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
+                            style="@style/EditTextNum"
                             android:hint="@string/d905aa"
-                            android:tag="d905aa"
                             android:text='@{d905aa.checked? d905aat.getText().toString() : ""}'
                             android:visibility='@{d905aa.checked? View.VISIBLE : View.GONE}' />
 
@@ -603,13 +600,11 @@
 
                         <EditText
                             android:id="@+id/d905abt"
-                            style="@style/radiobutton"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
+                            style="@style/EditTextNum"
                             android:hint="@string/d905ab"
-                            android:tag="d905ab"
                             android:text='@{d905ab.checked? d905abt.getText().toString() : ""}'
                             android:visibility='@{d905ab.checked? View.VISIBLE : View.GONE}' />
+
                     </RadioGroup>
                 </LinearLayout>
             </androidx.cardview.widget.CardView>
@@ -640,11 +635,8 @@
 
                         <EditText
                             android:id="@+id/d905bat"
-                            style="@style/radiobutton"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
+                            style="@style/EditTextNum"
                             android:hint="@string/d905ba"
-                            android:tag="d905ba"
                             android:text='@{d905ba.checked? d905bat.getText().toString() : ""}'
                             android:visibility='@{d905ba.checked? View.VISIBLE : View.GONE}' />
 
@@ -655,13 +647,11 @@
 
                         <EditText
                             android:id="@+id/d905bbt"
-                            style="@style/radiobutton"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
+                            style="@style/EditTextNum"
                             android:hint="@string/d905bb"
-                            android:tag="d905bb"
                             android:text='@{d905bb.checked? d905bbt.getText().toString() : ""}'
                             android:visibility='@{d905bb.checked? View.VISIBLE : View.GONE}' />
+
                     </RadioGroup>
                 </LinearLayout>
             </androidx.cardview.widget.CardView>
@@ -692,11 +682,8 @@
 
                         <EditText
                             android:id="@+id/d905cat"
-                            style="@style/radiobutton"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
+                            style="@style/EditTextNum"
                             android:hint="@string/d905ca"
-                            android:tag="d905ca"
                             android:text='@{d905ca.checked? d905cat.getText().toString() : ""}'
                             android:visibility='@{d905ca.checked? View.VISIBLE : View.GONE}' />
 
@@ -707,13 +694,11 @@
 
                         <EditText
                             android:id="@+id/d905cbt"
-                            style="@style/radiobutton"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
+                            style="@style/EditTextNum"
                             android:hint="@string/d905cb"
-                            android:tag="d905cb"
                             android:text='@{d905cb.checked? d905cbt.getText().toString() : ""}'
                             android:visibility='@{d905cb.checked? View.VISIBLE : View.GONE}' />
+
                     </RadioGroup>
                 </LinearLayout>
             </androidx.cardview.widget.CardView>
@@ -744,11 +729,8 @@
 
                         <EditText
                             android:id="@+id/d905dat"
-                            style="@style/radiobutton"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
+                            style="@style/EditTextNum"
                             android:hint="@string/d905da"
-                            android:tag="d905da"
                             android:text='@{d905da.checked? d905dat.getText().toString() : ""}'
                             android:visibility='@{d905da.checked? View.VISIBLE : View.GONE}' />
 
@@ -759,13 +741,11 @@
 
                         <EditText
                             android:id="@+id/d905dbt"
-                            style="@style/radiobutton"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
+                            style="@style/EditTextNum"
                             android:hint="@string/d905db"
-                            android:tag="d905db"
                             android:text='@{d905db.checked? d905dbt.getText().toString() : ""}'
                             android:visibility='@{d905db.checked? View.VISIBLE : View.GONE}' />
+
                     </RadioGroup>
                 </LinearLayout>
             </androidx.cardview.widget.CardView>
@@ -796,11 +776,8 @@
 
                         <EditText
                             android:id="@+id/d905eat"
-                            style="@style/radiobutton"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
+                            style="@style/EditTextNum"
                             android:hint="@string/d905ea"
-                            android:tag="d905ea"
                             android:text='@{d905ea.checked? d905eat.getText().toString() : ""}'
                             android:visibility='@{d905ea.checked? View.VISIBLE : View.GONE}' />
 
@@ -811,11 +788,8 @@
 
                         <EditText
                             android:id="@+id/d905ebt"
-                            style="@style/radiobutton"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
+                            style="@style/EditTextNum"
                             android:hint="@string/d905eb"
-                            android:tag="d905eb"
                             android:text='@{d905eb.checked? d905ebt.getText().toString() : ""}'
                             android:visibility='@{d905eb.checked? View.VISIBLE : View.GONE}' />
 

@@ -15,7 +15,6 @@ import org.json.JSONObject;
 import edu.aku.hassannaqvi.uen_scans_bl.R;
 import edu.aku.hassannaqvi.uen_scans_bl.core.MainApp;
 import edu.aku.hassannaqvi.uen_scans_bl.databinding.ActivitySectionD9Binding;
-import edu.aku.hassannaqvi.uen_scans_bl.ui.other.EndingActivity;
 import edu.aku.hassannaqvi.uen_scans_bl.utils.Util;
 
 public class SectionD9Activity extends AppCompatActivity {
@@ -41,7 +40,7 @@ public class SectionD9Activity extends AppCompatActivity {
             }
             if (UpdateDB()) {
                 finish();
-                startActivity(new Intent(this, EndingActivity.class).putExtra("complete", true));
+                startActivity(new Intent(this, SectionK1Activity.class));
             } else {
                 Toast.makeText(this, "Failed to Update Database!", Toast.LENGTH_SHORT).show();
             }

@@ -150,7 +150,9 @@
         <activity
             android:name=".ui.sections.SectionD9Activity"
             android:label="@string/td9heading"
-            android:screenOrientation="portrait" />
+            android:screenOrientation="portrait">
+
+        </activity>
 
         <activity
             android:name=".ui.list_activity.FamilyMembersListActivity"
@@ -170,7 +172,9 @@
         <activity
             android:name=".ui.sections.SectionK3Activity"
             android:label="@string/tk3heading"
-            android:screenOrientation="portrait" />
+            android:screenOrientation="portrait">
+
+        </activity>
 
         <activity
             android:name=".ui.sections.SectionLActivity"
