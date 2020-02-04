@@ -334,6 +334,7 @@ public class SectionA32Activity extends AppCompatActivity {
                         bi.a331b.isChecked() ? "2" :
                                 bi.a33198.isChecked() ? "98" :
                                         "0");
+        json.put("a331x", bi.a331x.getText().toString());
 
         json.put("a332a", bi.a332a.isChecked() ? "1" : "0");
         json.put("a332b", bi.a332b.isChecked() ? "2" : "0");

@@ -1963,6 +1963,17 @@
 
                         </RadioGroup>
 
+                        <com.edittextpicker.aliazaz.EditTextPicker
+                            android:id="@+id/a331x"
+                            style="@style/EditTextNum"
+                            android:hint="@string/rupees"
+                            android:maxLength="4"
+                            android:text='@{a331a.checked ? a331x.getText().toString() : "" }'
+                            android:visibility='@{a331a.checked ? View.VISIBLE : View.GONE }'
+                            app:maxValue="9999"
+                            app:minValue="1"
+                            app:type="range" />
+
                     </LinearLayout>
 
                 </androidx.cardview.widget.CardView>
