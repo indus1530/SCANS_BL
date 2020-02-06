@@ -324,8 +324,8 @@
                                     android:hint="@string/k206yy"
                                     android:maxLength="4"
                                     app:defaultValue="00"
-                                    app:maxValue="0"
-                                    app:minValue="0"
+                                    app:maxValue="2020"
+                                    app:minValue="2019"
                                     app:type="range" />
 
                             </LinearLayout>
