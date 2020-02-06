@@ -45,8 +45,7 @@
 
                     <RadioGroup
                         android:id="@+id/d801"
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent">
+                        style="@style/radiogroup">
 
                         <RadioButton
                             android:id="@+id/d801a"
@@ -72,8 +71,11 @@
                             android:id="@+id/d801e"
                             style="@style/radiobutton"
                             android:text="@string/d801e" />
+
                     </RadioGroup>
+
                 </LinearLayout>
+
             </androidx.cardview.widget.CardView>
 
         </LinearLayout>
