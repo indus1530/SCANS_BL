@@ -1447,6 +1447,7 @@
     <string name="c501e"> 3 hour </string>
     <string name="c501f"> 4 hour</string>
     <string name="c501g"> 5 or more hours </string>
+
     <string name="c502"> C502:\t On a school day, how many hours on average does (child name) play video or computer/tablets/mobile phone games or use a computer for something that was not schoolwork?</string>
     <string name="c502a"> None </string>
     <string name="c502b"> &lt;1 hour </string>
@@ -1455,6 +1456,7 @@
     <string name="c502e"> 3 hour </string>
     <string name="c502f"> 4 hour</string>
     <string name="c502g"> 5 or more hours </string>
+
     <string name="c503"> C503:\t On a school day how many hours on average does (child name) spend outside before school</string>
     <string name="c503a"> None </string>
     <string name="c503b"> &lt;1 hour </string>
@@ -1463,6 +1465,7 @@
     <string name="c503e"> 3 hour </string>
     <string name="c503f"> 4 hour</string>
     <string name="c503g"> 5 or more hours </string>
+
     <string name="c504"> C504:\t On a school day how many hours on average does (child name) spend outside after school before bedtime</string>
     <string name="c504a"> None </string>
     <string name="c504b"> &lt;1 hour </string>
@@ -1471,7 +1474,8 @@
     <string name="c504e"> 3 hour </string>
     <string name="c504f"> 4 hour</string>
     <string name="c504g"> 5 or more hours </string>
-    <string name="c505_title"> C505_title:\t On a weekend day                       </string>
+
+    <string name="c505_title"> On a Weekend Day </string>
     <string name="c505"> c505:\t On a weekend day during the school year, how many hours on average did (child name) watch TV?</string>
     <string name="c505a"> None </string>
     <string name="c505b"> &lt;1 hour </string>
@@ -1480,6 +1484,7 @@
     <string name="c505e"> 3 hour </string>
     <string name="c505f"> 4 hour</string>
     <string name="c505g"> 5 or more hours </string>
+
     <string name="c506"> C506:\t On a weekend day during the school year, how many hours on average did (child name) play video or computer/tablets/mobile phone games or use a computer for something that was not school work?</string>
     <string name="c506a"> None </string>
     <string name="c506b"> &lt;1 hour </string>
@@ -1488,6 +1493,7 @@
     <string name="c506e"> 3 hour </string>
     <string name="c506f"> 4 hour</string>
     <string name="c506g"> 5 or more hours </string>
+
     <string name="c507"> C507:\t On a weekend day during the school year, how many hours on average did (child name) spend outside?</string>
     <string name="c507a"> None </string>
     <string name="c507b"> &lt;1 hour </string>
@@ -1496,6 +1502,7 @@
     <string name="c507e"> 3 hour </string>
     <string name="c507f"> 4 hour</string>
     <string name="c507g"> 5 or more hours </string>
+
     <string name="c508"> C508:\t During the past week (7 days), on how many days were (child name) physically active for a total of at least 60 minutes per day? (all the time you spent in activities that increased your heart rate and made you breathe hard)</string>
     <string name="c508a"> 0 days </string>
     <string name="c508b"> 1 day </string>
@@ -1505,7 +1512,8 @@
     <string name="c508f"> 5 days </string>
     <string name="c508g"> 6 days </string>
     <string name="c508h"> 7 days </string>
-    <string name="c509_title"> C509_title:\t PART B: OUT &#8211; OF &#8211; SCHOOL CHILDREN:</string>
+
+    <string name="c509_title"> PART B: OUT &#8211; OF &#8211; SCHOOL CHILDREN: </string>
     <string name="c509"> C509:\t How many hours on average does (child name) usually watch TV?</string>
     <string name="c509a"> Did not watch </string>
     <string name="c509b"> &lt;1 hour </string>
@@ -1514,6 +1522,7 @@
     <string name="c509e"> 3 hour </string>
     <string name="c509f"> 4 hour</string>
     <string name="c509g"> 5 or more hours </string>
+
     <string name="c510"> C510:\t How many hours on average did (child name) play video or games on computer/Tablet/Mobile Phone?</string>
     <string name="c510a"> Did not watch </string>
     <string name="c510b"> &lt;1 hour </string>
@@ -1522,6 +1531,7 @@
     <string name="c510e"> 3 hour </string>
     <string name="c510f"> 4 hour</string>
     <string name="c510g"> 5 or more hours </string>
+
     <string name="c511"> C511:\t How many hours on average did (child name) spend outside?</string>
     <string name="c511a"> Did not watch </string>
     <string name="c511b"> &lt;1 hour </string>
@@ -1530,6 +1540,7 @@
     <string name="c511e"> 3 hour </string>
     <string name="c511f"> 4 hour</string>
     <string name="c511g"> 5 or more hours </string>
+
     <string name="c512"> C512:\t During the past week (7 days), on how many days were (child name) physically active for a total of at least 60 minutes per day? (all the time you spent in activities that increased your heart rate and made you breathe hard)</string>
     <string name="c512a"> 0 days </string>
     <string name="c512b"> 1 day </string>
@@ -1545,6 +1556,7 @@
     <string name="ca601"> ca601:\t During the weekdays, what time (child name) usually gone to sleep?    (AM | PM))</string>
     <string name="ca601a"> AM</string>
     <string name="ca601b"> PM</string>
+
     <string name="ca602"> CA602:\t During the weekdays, at what time (child name) usually woken up in the morning? AM / PM (circle AM or PM)</string>
     <string name="ca602a"> AM</string>
     <string name="ca602b"> PM</string>
