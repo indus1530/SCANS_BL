@@ -13,9 +13,6 @@ import org.json.JSONException;
 import org.json.JSONObject;
 
 import edu.aku.hassannaqvi.uen_scans_bl.R;
-import edu.aku.hassannaqvi.uen_scans_bl.contracts.KishMWRAContract;
-import edu.aku.hassannaqvi.uen_scans_bl.core.DatabaseHelper;
-import edu.aku.hassannaqvi.uen_scans_bl.core.MainApp;
 import edu.aku.hassannaqvi.uen_scans_bl.databinding.ActivitySectionB1Binding;
 import edu.aku.hassannaqvi.uen_scans_bl.utils.Util;
 import edu.aku.hassannaqvi.uen_scans_bl.validator.ClearClass;
@@ -81,23 +78,23 @@ public class SectionB1Activity extends AppCompatActivity {
             }
         }));
 
-        bi.b114.setOnCheckedChangeListener(((radioGroup, i) -> {
+        bi.b113.setOnCheckedChangeListener(((radioGroup, i) -> {
 
-            if (i != bi.b114a.getId()) {
+            if (i != bi.b113a.getId()) {
                 ClearClass.ClearAllFields(bi.fldGrpCVb114, null);
             }
         }));
 
-        bi.b116.setOnCheckedChangeListener(((radioGroup, i) -> {
+        bi.b115.setOnCheckedChangeListener(((radioGroup, i) -> {
 
-            if (i != bi.b116a.getId()) {
+            if (i != bi.b115a.getId()) {
                 ClearClass.ClearAllFields(bi.fldGrpCVb116, null);
             }
         }));
 
-        bi.b118.setOnCheckedChangeListener(((radioGroup, i) -> {
+        bi.b117.setOnCheckedChangeListener(((radioGroup, i) -> {
 
-            if (i != bi.b118a.getId()) {
+            if (i != bi.b117a.getId()) {
                 ClearClass.ClearAllFields(bi.fldGrpCVb118, null);
             }
         }));
@@ -130,14 +127,15 @@ public class SectionB1Activity extends AppCompatActivity {
 
     private boolean UpdateDB() {
 
-        DatabaseHelper db = MainApp.appInfo.getDbHelper();
+        /*DatabaseHelper db = MainApp.appInfo.getDbHelper();
         int updcount = db.updatesKishMWRAColumn(KishMWRAContract.SingleKishMWRA.COLUMN_SK, MainApp.kish.getsK());
         if (updcount == 1) {
             return true;
         } else {
             Toast.makeText(this, "Updating Database... ERROR!", Toast.LENGTH_SHORT).show();
             return false;
-        }
+        }*/
+        return true;
     }
 
 
@@ -148,8 +146,8 @@ public class SectionB1Activity extends AppCompatActivity {
         f1.put("b101",
                 bi.b101a.isChecked() ? "1" :
                         bi.b101b.isChecked() ? "2" :
-                                bi.b101c.isChecked() ? "98" :
-                                        bi.b101d.isChecked() ? "99" :
+                                bi.b10198.isChecked() ? "98" :
+                                        bi.b10199.isChecked() ? "99" :
                                                 "0");
 
         f1.put("b102",
@@ -161,8 +159,8 @@ public class SectionB1Activity extends AppCompatActivity {
         f1.put("b103",
                 bi.b103a.isChecked() ? "1" :
                         bi.b103b.isChecked() ? "2" :
-                                bi.b103c.isChecked() ? "98" :
-                                        bi.b103d.isChecked() ? "99" :
+                                bi.b10398.isChecked() ? "98" :
+                                        bi.b10399.isChecked() ? "99" :
                                                 "0");
 
         f1.put("b104",
@@ -174,8 +172,8 @@ public class SectionB1Activity extends AppCompatActivity {
         f1.put("b105",
                 bi.b105a.isChecked() ? "1" :
                         bi.b105b.isChecked() ? "2" :
-                                bi.b105c.isChecked() ? "98" :
-                                        bi.b105d.isChecked() ? "99" :
+                                bi.b10598.isChecked() ? "98" :
+                                        bi.b10599.isChecked() ? "99" :
                                                 "0");
 
         f1.put("b106",
@@ -187,8 +185,8 @@ public class SectionB1Activity extends AppCompatActivity {
         f1.put("b107",
                 bi.b107a.isChecked() ? "1" :
                         bi.b107b.isChecked() ? "2" :
-                                bi.b107c.isChecked() ? "98" :
-                                        bi.b107d.isChecked() ? "99" :
+                                bi.b10798.isChecked() ? "98" :
+                                        bi.b10799.isChecked() ? "99" :
                                                 "0");
 
         f1.put("b108",
@@ -200,8 +198,8 @@ public class SectionB1Activity extends AppCompatActivity {
         f1.put("b109",
                 bi.b109a.isChecked() ? "1" :
                         bi.b109b.isChecked() ? "2" :
-                                bi.b109c.isChecked() ? "98" :
-                                        bi.b109d.isChecked() ? "99" :
+                                bi.b10998.isChecked() ? "98" :
+                                        bi.b10999.isChecked() ? "99" :
                                                 "0");
 
         f1.put("b110",
@@ -213,8 +211,8 @@ public class SectionB1Activity extends AppCompatActivity {
         f1.put("b111",
                 bi.b111a.isChecked() ? "1" :
                         bi.b111b.isChecked() ? "2" :
-                                bi.b111c.isChecked() ? "98" :
-                                        bi.b111d.isChecked() ? "99" :
+                                bi.b11198.isChecked() ? "98" :
+                                        bi.b11199.isChecked() ? "99" :
                                                 "0");
 
         f1.put("b112",
@@ -226,8 +224,8 @@ public class SectionB1Activity extends AppCompatActivity {
         f1.put("b113",
                 bi.b113a.isChecked() ? "1" :
                         bi.b113b.isChecked() ? "2" :
-                                bi.b113c.isChecked() ? "98" :
-                                        bi.b113d.isChecked() ? "99" :
+                                bi.b11398.isChecked() ? "98" :
+                                        bi.b11399.isChecked() ? "99" :
                                                 "0");
 
         f1.put("b114",
@@ -239,8 +237,8 @@ public class SectionB1Activity extends AppCompatActivity {
         f1.put("b115",
                 bi.b115a.isChecked() ? "1" :
                         bi.b115b.isChecked() ? "2" :
-                                bi.b115c.isChecked() ? "98" :
-                                        bi.b115d.isChecked() ? "99" :
+                                bi.b11598.isChecked() ? "98" :
+                                        bi.b11599.isChecked() ? "99" :
                                                 "0");
 
         f1.put("b116",
@@ -252,8 +250,8 @@ public class SectionB1Activity extends AppCompatActivity {
         f1.put("b117",
                 bi.b117a.isChecked() ? "1" :
                         bi.b117b.isChecked() ? "2" :
-                                bi.b117c.isChecked() ? "98" :
-                                        bi.b117d.isChecked() ? "99" :
+                                bi.b11798.isChecked() ? "98" :
+                                        bi.b11799.isChecked() ? "99" :
                                                 "0");
 
         f1.put("b118",
@@ -271,8 +269,10 @@ public class SectionB1Activity extends AppCompatActivity {
     }
 
 
-    @Override
+    /*@Override
     public void onBackPressed() {
         Toast.makeText(this, "You can't go back", Toast.LENGTH_SHORT).show();
-    }
+    }*/
+
+
 }

@@ -24,21 +24,19 @@ import edu.aku.hassannaqvi.uen_scans_bl.contracts.EnumBlockContract;
 import edu.aku.hassannaqvi.uen_scans_bl.contracts.FormsContract;
 import edu.aku.hassannaqvi.uen_scans_bl.core.DatabaseHelper;
 import edu.aku.hassannaqvi.uen_scans_bl.core.MainApp;
-import edu.aku.hassannaqvi.uen_scans_bl.databinding.ActivitySectionABinding;
-import edu.aku.hassannaqvi.uen_scans_bl.ui.list_activity.FamilyMembersListActivity;
+import edu.aku.hassannaqvi.uen_scans_bl.databinding.ActivitySectionA1Binding;
 import edu.aku.hassannaqvi.uen_scans_bl.utils.Util;
 
-public class SectionAActivity extends AppCompatActivity {
+public class SectionA1Activity extends AppCompatActivity {
 
-    ActivitySectionABinding bi;
+    ActivitySectionA1Binding bi;
     private DatabaseHelper db;
     private BLRandomContract bl;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-
-        bi = DataBindingUtil.setContentView(this, R.layout.activity_section_a);
+        bi = DataBindingUtil.setContentView(this, R.layout.activity_section_a1);
         bi.setCallback(this);
         db = MainApp.appInfo.getDbHelper();
 
@@ -47,6 +45,7 @@ public class SectionAActivity extends AppCompatActivity {
 
 
     private void setUIComponent() {
+
         bi.a101.addTextChangedListener(new TextWatcher() {
             @Override
             public void beforeTextChanged(CharSequence s, int start, int count, int after) {
@@ -70,6 +69,8 @@ public class SectionAActivity extends AppCompatActivity {
 
             }
         });
+
+
         bi.a112.addTextChangedListener(new TextWatcher() {
             @Override
             public void beforeTextChanged(CharSequence s, int start, int count, int after) {
@@ -92,6 +93,29 @@ public class SectionAActivity extends AppCompatActivity {
 
             }
         });
+
+
+        bi.a115.addTextChangedListener(new TextWatcher() {
+            @Override
+            public void beforeTextChanged(CharSequence s, int start, int count, int after) {
+
+            }
+
+            @Override
+            public void onTextChanged(CharSequence s, int start, int before, int count) {
+
+
+            }
+
+            @Override
+            public void afterTextChanged(Editable s) {
+
+
+            }
+        });
+
+
+
     }
 
 
@@ -104,14 +128,16 @@ public class SectionAActivity extends AppCompatActivity {
             }
             if (UpdateDB()) {
                 finish();
-                startActivity(new Intent(SectionAActivity.this, FamilyMembersListActivity.class).putExtra("sno", Integer.valueOf(bl.getSno())));
+                startActivity(new Intent(this, SectionA2Activity.class));
+            } else {
+                Toast.makeText(this, "Failed to Update Database!", Toast.LENGTH_SHORT).show();
             }
         }
     }
 
 
     private boolean UpdateDB() {
-        long updcount = db.addForm(MainApp.fc);
+        /*long updcount = db.addForm(MainApp.fc);
         MainApp.fc.set_ID(String.valueOf(updcount));
         if (updcount > 0) {
             MainApp.fc.set_UID(MainApp.fc.getDeviceID() + MainApp.fc.get_ID());
@@ -120,7 +146,8 @@ public class SectionAActivity extends AppCompatActivity {
         } else {
             Toast.makeText(this, "Updating Database... ERROR!", Toast.LENGTH_SHORT).show();
             return false;
-        }
+        }*/
+        return true;
 
     }
 
@@ -163,9 +190,11 @@ public class SectionAActivity extends AppCompatActivity {
 
     }
 
+
     private boolean formValidation() {
-        return Validator.emptyCheckingContainer(this, bi.fldGrpSectionA);
+        return Validator.emptyCheckingContainer(this, bi.GrpName);
     }
+
 
     public void BtnEnd() {
         Util.openEndActivity(this);

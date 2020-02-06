@@ -13,7 +13,6 @@ import java.text.SimpleDateFormat;
 import java.util.Date;
 
 import edu.aku.hassannaqvi.uen_scans_bl.R;
-import edu.aku.hassannaqvi.uen_scans_bl.core.DatabaseHelper;
 import edu.aku.hassannaqvi.uen_scans_bl.core.MainApp;
 import edu.aku.hassannaqvi.uen_scans_bl.databinding.ActivityEndingBinding;
 
@@ -64,6 +63,8 @@ public class EndingActivity extends AppCompatActivity {
                 : bi.istatuse.isChecked() ? "5"
                 : bi.istatusf.isChecked() ? "6"
                 : bi.istatusg.isChecked() ? "7"
+                : bi.istatush.isChecked() ? "8"
+                : bi.istatusi.isChecked() ? "9"
                 : bi.istatus96.isChecked() ? "96"
                 : "0");
 
@@ -73,14 +74,15 @@ public class EndingActivity extends AppCompatActivity {
 
     public boolean UpdateDB() {
 
-        DatabaseHelper db = MainApp.appInfo.getDbHelper();
+        /*DatabaseHelper db = MainApp.appInfo.getDbHelper();
         int updcount = db.updateEnding();
         if (updcount == 1) {
             return true;
         } else {
             Toast.makeText(this, "Updating Database... ERROR!", Toast.LENGTH_SHORT).show();
             return false;
-        }
+        }*/
+        return true;
 
     }
 

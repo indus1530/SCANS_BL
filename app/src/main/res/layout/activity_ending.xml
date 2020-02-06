@@ -23,20 +23,17 @@
             android:id="@+id/fldGrpEnd"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layoutDirection="rtl"
+            android:layoutDirection="ltr"
             android:orientation="vertical">
 
             <!--Status-->
             <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="16dp"
-                android:background="@color/colorPrimary"
-                android:gravity="center"
-                android:padding="10dp"
-                android:text="@string/istatus"
-                android:textAppearance="?android:attr/textAppearanceLarge"
-                android:textColor="@android:color/white" />
+                style="@style/i_textview"
+                android:text="@string/a119" />
+
+            <TextView
+                style="@style/i_textviewhint"
+                android:text="@string/a119hint" />
 
             <RadioGroup
                 android:id="@+id/istatus"
@@ -45,37 +42,47 @@
                 <RadioButton
                     android:id="@+id/istatusa"
                     style="@style/radiobutton"
-                    android:text="@string/istatusa" />
+                    android:text="@string/a119a" />
 
                 <RadioButton
                     android:id="@+id/istatusb"
                     style="@style/radiobutton"
-                    android:text="@string/istatusb" />
+                    android:text="@string/a119b" />
 
                 <RadioButton
                     android:id="@+id/istatusc"
                     style="@style/radiobutton"
-                    android:text="@string/istatusc" />
+                    android:text="@string/a119c" />
 
                 <RadioButton
                     android:id="@+id/istatusd"
                     style="@style/radiobutton"
-                    android:text="@string/istatusd" />
+                    android:text="@string/a119d" />
 
                 <RadioButton
                     android:id="@+id/istatuse"
                     style="@style/radiobutton"
-                    android:text="@string/istatuse" />
+                    android:text="@string/a119e" />
 
                 <RadioButton
                     android:id="@+id/istatusf"
                     style="@style/radiobutton"
-                    android:text="@string/istatusf" />
+                    android:text="@string/a119f" />
 
                 <RadioButton
                     android:id="@+id/istatusg"
                     style="@style/radiobutton"
-                    android:text="@string/istatusg" />
+                    android:text="@string/a119g" />
+
+                <RadioButton
+                    android:id="@+id/istatush"
+                    style="@style/radiobutton"
+                    android:text="@string/a119h" />
+
+                <RadioButton
+                    android:id="@+id/istatusi"
+                    style="@style/radiobutton"
+                    android:text="@string/a119i" />
 
                 <RadioButton
                     android:id="@+id/istatus96"
@@ -86,7 +93,7 @@
                 <EditText
                     android:id="@+id/istatus96x"
                     style="@style/EditTextAlpha"
-                    android:hint="@string/other"
+                    android:hint="@string/specify"
                     android:maxLength="40"
                     android:text='@{istatus96.checked? istatus96x.getText().toString(): ""}'
                     android:visibility='@{istatus96.checked? View.VISIBLE : View.GONE}' />
@@ -110,5 +117,7 @@
             </LinearLayout>
 
         </LinearLayout>
+
     </ScrollView>
+
 </layout>
