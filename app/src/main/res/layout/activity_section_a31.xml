@@ -103,14 +103,14 @@
                             style="@style/radiobutton"
                             android:text="@string/other" />
 
-                    </RadioGroup>
+                        <EditText
+                            android:id="@+id/a30196x"
+                            style="@style/EditTextAlpha"
+                            android:hint="@string/specify"
+                            android:text='@{a30196.checked? a30196x.getText().toString() : ""}'
+                            android:visibility='@{a30196.checked? View.VISIBLE : View.GONE}' />
 
-                    <EditText
-                        android:id="@+id/a30196x"
-                        style="@style/EditTextAlpha"
-                        android:hint="@string/specify"
-                        android:text='@{a30196.checked? a30196x.getText().toString() : ""}'
-                        android:visibility='@{a30196.checked? View.VISIBLE : View.GONE}' />
+                    </RadioGroup>
 
                 </LinearLayout>
 
@@ -1186,7 +1186,7 @@
                         android:hint="@string/num"
                         android:maxLength="2"
                         app:maxValue="10"
-                        app:minValue="1"
+                        app:minValue="0"
                         app:type="range" />
 
                 </LinearLayout>
@@ -1293,14 +1293,14 @@
                             style="@style/radiobutton"
                             android:text="@string/other" />
 
-                    </RadioGroup>
+                        <EditText
+                            android:id="@+id/a31796x"
+                            style="@style/EditTextAlpha"
+                            android:hint="@string/specify"
+                            android:text='@{a31796.checked? a31796x.getText().toString() : ""}'
+                            android:visibility='@{a31796.checked? View.VISIBLE : View.GONE}' />
 
-                    <EditText
-                        android:id="@+id/a31796x"
-                        style="@style/radiobutton"
-                        android:hint="@string/specify"
-                        android:text='@{a31796.checked? a31796x.getText().toString() : ""}'
-                        android:visibility='@{a31796.checked? View.VISIBLE : View.GONE}' />
+                    </RadioGroup>
 
                 </LinearLayout>
 
