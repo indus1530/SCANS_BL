@@ -1140,40 +1140,45 @@
     <string name="c114d"> Poor </string>
 
     <string name="tc2heading">SECTION C2: DENTAL HYGIENE </string>
-    <string name="c201"> C201:\t How often does (child name) clean his/her teeth?</string>
+    <string name="c201"> C201:\t How often does (child name) clean his/her teeth ? </string>
     <string name="c201a"> Daily</string>
     <string name="c201b"> Twice daily </string>
     <string name="c201c"> Once a week </string>
     <string name="c201d"> Twice a week </string>
     <string name="c201e"> Three to six time a week </string>
-    <string name="c201f"> Some times </string>
-    <string name="c201g"> Never</string>
+    <string name="c201f"> Sometimes </string>
+    <string name="c201g"> Never </string>
+
     <string name="c202"> C202:\t What does (child name) usually use to clean his/her teeth?</string>
     <string name="c202a"> Tooth Paste </string>
-    <string name="c202b"> Miswak</string>
+    <string name="c202b"> Miswak </string>
     <string name="c202c"> Tooth Powder </string>
     <string name="c202x"> Other Specify </string>
-    <string name="c203"> C203:\t Does (child name) frequently use any of the following? [Multiple responses]  </string>
-    <string name="c203a"> Chaalia</string>
-    <string name="c203b"> Chewing tobacco/gutka </string>
-    <string name="c203c"> Paan</string>
-    <string name="c203d"> Cigarettes</string>
-    <string name="c203e"> None</string>
+
+    <string name="c203"> C203:\t Does (child name) frequently use any of the following ? </string>
+    <string name="c203a"> Chaalia </string>
+    <string name="c203b"> Chewing tobacco / gutka </string>
+    <string name="c203c"> Paan </string>
+    <string name="c203d"> Cigarettes </string>
+    <string name="c203e"> None </string>
+
     <string name="c204"> C204:\t How would you describe the health of (child name) teeth and gums?</string>
-    <string name="c204a"> Excellent  </string>
-    <string name="c204b"> Very good   	</string>
-    <string name="c204c"> GOOD</string>
+    <string name="c204a"> Excellent </string>
+    <string name="c204b"> Very good </string>
+    <string name="c204c"> Good </string>
     <string name="c204d"> Average </string>
     <string name="c204e"> Poor </string>
     <string name="c204f"> Don’t know </string>
-    <string name="c205"> C205:\t Because of the state of (child name) teeth and mouth, have they experienced any of the following problems during the past year? </string>
-    <string name="c205a"> Have difficulty biting hard foods</string>
+
+    <string name="c205"> C205:\t Because of the state of (child name) teeth and mouth, have they experienced any of the following problems during the past year ? </string>
+    <string name="c205a"> Have difficulty biting hard foods </string>
     <string name="c205b"> Have difficulty in chewing </string>
-    <string name="c205c"> Miss school for whole days</string>
-    <string name="c205d"> Dissatisfied with appearance of teeth</string>
-    <string name="c205e"> Avoids smiling and laughing due to teeth</string>
+    <string name="c205c"> Miss school for whole days </string>
+    <string name="c205d"> Dissatisfied with appearance of teeth </string>
+    <string name="c205e"> Avoids smiling and laughing due to teeth </string>
     <string name="c205f"> Other children make fun of teeth </string>
     <string name="c205g"> No such problem </string>
+
     <string name="c206"> C206:\t How often during the past 12 months has (child name) had a toothache or felt discomfort due to his/her teeth  </string>
     <string name="c206a"> Often (&gt;3 times) </string>
     <string name="c206b"> Occasionally (2 to 3 times)</string>

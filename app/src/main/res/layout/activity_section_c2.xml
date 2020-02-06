@@ -16,7 +16,7 @@
         android:fillViewport="true"
         android:scrollbarSize="10dip"
         android:layoutDirection="ltr"
-        tools:context=".ui.Myactivity">
+        tools:context=".ui.sections.SectionC2Activity">
 
         <LinearLayout
             android:id="@+id/fldGrpSectionC2"
@@ -73,7 +73,7 @@
                             android:text="@string/c201f" />
 
                         <RadioButton
-                            android:id="@+id/c201g"
+                            android:id="@+id/c20197"
                             style="@style/radiobutton"
                             android:text="@string/c201g" />
 
@@ -120,12 +120,12 @@
                         <RadioButton
                             android:id="@+id/c20296"
                             style="@style/radiobutton"
-                            android:text="@string/c202x" />
+                            android:text="@string/other" />
 
                         <EditText
                             android:id="@+id/c20296x"
-                            style="@style/textInput"
-                            android:hint="@string/c202x"
+                            style="@style/EditTextAlpha"
+                            android:hint="@string/specify"
                             android:tag="c20296"
                             android:text='@{c20296.checked? c20296x.getText().toString() : ""}'
                             android:visibility='@{c20296.checked? View.VISIBLE : View.GONE}' />
@@ -175,7 +175,7 @@
                             android:text="@string/c203d" />
 
                         <RadioButton
-                            android:id="@+id/c203e"
+                            android:id="@+id/c20397"
                             style="@style/radiobutton"
                             android:text="@string/c203e" />
 
@@ -229,7 +229,7 @@
                             android:text="@string/c204e" />
 
                         <RadioButton
-                            android:id="@+id/c204f"
+                            android:id="@+id/c20498"
                             style="@style/radiobutton"
                             android:text="@string/c204f" />
 
@@ -263,31 +263,43 @@
                         <CheckBox
                             android:id="@+id/c205a"
                             style="@style/checkbox"
+                            android:checked='@{c205g.checked? false : false }'
+                            android:enabled='@{c205g.checked? false : true }'
                             android:text="@string/c205a" />
 
                         <CheckBox
                             android:id="@+id/c205b"
                             style="@style/checkbox"
+                            android:checked='@{c205g.checked? false : false }'
+                            android:enabled='@{c205g.checked? false : true }'
                             android:text="@string/c205b" />
 
                         <CheckBox
                             android:id="@+id/c205c"
                             style="@style/checkbox"
+                            android:checked='@{c205g.checked? false : false }'
+                            android:enabled='@{c205g.checked? false : true }'
                             android:text="@string/c205c" />
 
                         <CheckBox
                             android:id="@+id/c205d"
                             style="@style/checkbox"
+                            android:checked='@{c205g.checked? false : false }'
+                            android:enabled='@{c205g.checked? false : true }'
                             android:text="@string/c205d" />
 
                         <CheckBox
                             android:id="@+id/c205e"
                             style="@style/checkbox"
+                            android:checked='@{c205g.checked? false : false }'
+                            android:enabled='@{c205g.checked? false : true }'
                             android:text="@string/c205e" />
 
                         <CheckBox
                             android:id="@+id/c205f"
                             style="@style/checkbox"
+                            android:checked='@{c205g.checked? false : false }'
+                            android:enabled='@{c205g.checked? false : true }'
                             android:text="@string/c205f" />
 
                         <CheckBox
@@ -335,12 +347,12 @@
                             android:text="@string/c206c" />
 
                         <RadioButton
-                            android:id="@+id/c206d"
+                            android:id="@+id/c20697"
                             style="@style/radiobutton"
                             android:text="@string/c206d" />
 
                         <RadioButton
-                            android:id="@+id/c206e"
+                            android:id="@+id/c20698"
                             style="@style/radiobutton"
                             android:text="@string/c206e" />
 
@@ -389,12 +401,12 @@
                             android:text="@string/c207d" />
 
                         <RadioButton
-                            android:id="@+id/c207e"
+                            android:id="@+id/c20797"
                             style="@style/radiobutton"
                             android:text="@string/c207e" />
 
                         <RadioButton
-                            android:id="@+id/c207f"
+                            android:id="@+id/c20798"
                             style="@style/radiobutton"
                             android:text="@string/c207f" />
 
@@ -451,20 +463,19 @@
                                 android:text="@string/c208d" />
 
                             <RadioButton
-                                android:id="@+id/c208e"
+                                android:id="@+id/c20898"
                                 style="@style/radiobutton"
                                 android:text="@string/c208e" />
 
                             <RadioButton
                                 android:id="@+id/c20896"
                                 style="@style/radiobutton"
-                                android:text="@string/c208x" />
+                                android:text="@string/other" />
 
                             <EditText
                                 android:id="@+id/c20896x"
-                                style="@style/textInput"
-                                android:hint="@string/c202x"
-                                android:tag="c20896"
+                                style="@style/EditTextAlpha"
+                                android:hint="@string/specify"
                                 android:text='@{c20896.checked? c20896x.getText().toString() : ""}'
                                 android:visibility='@{c20896.checked? View.VISIBLE : View.GONE}' />
 
@@ -523,20 +534,19 @@
                                 android:text="@string/c209f" />
 
                             <RadioButton
-                                android:id="@+id/c209g"
+                                android:id="@+id/c20998"
                                 style="@style/radiobutton"
                                 android:text="@string/c209g" />
 
                             <RadioButton
                                 android:id="@+id/c20996"
                                 style="@style/radiobutton"
-                                android:text="@string/c209x" />
+                                android:text="@string/other" />
 
                             <EditText
                                 android:id="@+id/c20996x"
-                                style="@style/textInput"
-                                android:hint="@string/c209x"
-                                android:tag="c20996"
+                                style="@style/EditTextAlpha"
+                                android:hint="@string/specify"
                                 android:text='@{c20996.checked? c20996x.getText().toString() : ""}'
                                 android:visibility='@{c20996.checked? View.VISIBLE : View.GONE}' />
 
@@ -562,22 +572,29 @@
 
                         <RadioGroup
                             android:id="@+id/c210"
-                            style="@style/radiogroup">
+                            style="@style/radiogroup"
+                            android:orientation="horizontal">
 
                             <RadioButton
                                 android:id="@+id/c210a"
                                 style="@style/radiobutton"
-                                android:text="@string/c210a" />
+                                android:layout_width="0dp"
+                                android:layout_weight="1"
+                                android:text="@string/yes" />
 
                             <RadioButton
                                 android:id="@+id/c210b"
                                 style="@style/radiobutton"
-                                android:text="@string/c210b" />
+                                android:layout_width="0dp"
+                                android:layout_weight="1"
+                                android:text="@string/no" />
 
                             <RadioButton
-                                android:id="@+id/c210c"
+                                android:id="@+id/c21098"
                                 style="@style/radiobutton"
-                                android:text="@string/c210c" />
+                                android:layout_width="0dp"
+                                android:layout_weight="1"
+                                android:text="@string/dkn" />
 
                         </RadioGroup>
 
@@ -647,20 +664,19 @@
                                     android:text="@string/c211g" />
 
                                 <RadioButton
-                                    android:id="@+id/c211h"
+                                    android:id="@+id/c21198"
                                     style="@style/radiobutton"
-                                    android:text="@string/c211h" />
+                                    android:text="@string/dkn" />
 
                                 <RadioButton
                                     android:id="@+id/c21196"
                                     style="@style/radiobutton"
-                                    android:text="@string/c211x" />
+                                    android:text="@string/other" />
 
                                 <EditText
                                     android:id="@+id/c21196x"
-                                    style="@style/textInput"
-                                    android:hint="@string/c211x"
-                                    android:tag="c21196"
+                                    style="@style/EditTextAlpha"
+                                    android:hint="@string/specify"
                                     android:text='@{c21196.checked? c21196x.getText().toString() : ""}'
                                     android:visibility='@{c21196.checked? View.VISIBLE : View.GONE}' />
 
@@ -709,20 +725,19 @@
                                     android:text="@string/c212d" />
 
                                 <RadioButton
-                                    android:id="@+id/c212e"
+                                    android:id="@+id/c21298"
                                     style="@style/radiobutton"
-                                    android:text="@string/c212e" />
+                                    android:text="@string/dkn" />
 
                                 <RadioButton
                                     android:id="@+id/c21296"
                                     style="@style/radiobutton"
-                                    android:text="@string/c212x" />
+                                    android:text="@string/other" />
 
                                 <EditText
                                     android:id="@+id/c21296x"
-                                    style="@style/textInput"
-                                    android:hint="@string/c212x"
-                                    android:tag="c21296"
+                                    style="@style/EditTextAlpha"
+                                    android:hint="@string/specify"
                                     android:text='@{c21296.checked? c21296x.getText().toString() : ""}'
                                     android:visibility='@{c21296.checked? View.VISIBLE : View.GONE}' />
 
@@ -762,49 +777,68 @@
                         <CheckBox
                             android:id="@+id/c213a"
                             style="@style/checkbox"
+                            android:checked='@{c21397.checked? false : false }'
+                            android:enabled='@{c21397.checked? false : true }'
                             android:text="@string/c213a" />
 
                         <CheckBox
                             android:id="@+id/c213b"
                             style="@style/checkbox"
+                            android:checked='@{c21397.checked? false : false }'
+                            android:enabled='@{c21397.checked? false : true }'
                             android:text="@string/c213b" />
 
                         <CheckBox
                             android:id="@+id/c213c"
                             style="@style/checkbox"
+                            android:checked='@{c21397.checked? false : false }'
+                            android:enabled='@{c21397.checked? false : true }'
                             android:text="@string/c213c" />
 
                         <CheckBox
                             android:id="@+id/c213d"
                             style="@style/checkbox"
+                            android:checked='@{c21397.checked? false : false }'
+                            android:enabled='@{c21397.checked? false : true }'
                             android:text="@string/c213d" />
 
                         <CheckBox
                             android:id="@+id/c213e"
                             style="@style/checkbox"
+                            android:checked='@{c21397.checked? false : false }'
+                            android:enabled='@{c21397.checked? false : true }'
                             android:text="@string/c213e" />
 
                         <CheckBox
                             android:id="@+id/c213f"
                             style="@style/checkbox"
+                            android:checked='@{c21397.checked? false : false }'
+                            android:enabled='@{c21397.checked? false : true }'
                             android:text="@string/c213f" />
 
                         <CheckBox
                             android:id="@+id/c213g"
                             style="@style/checkbox"
+                            android:checked='@{c21397.checked? false : false }'
+                            android:enabled='@{c21397.checked? false : true }'
                             android:text="@string/c213g" />
 
                         <CheckBox
                             android:id="@+id/c213h"
                             style="@style/checkbox"
+                            android:checked='@{c21397.checked? false : false }'
+                            android:enabled='@{c21397.checked? false : true }'
                             android:text="@string/c213h" />
 
                         <CheckBox
-                            android:id="@+id/c213i"
+                            android:id="@+id/c21397"
                             style="@style/checkbox"
                             android:text="@string/c213i" />
+
                     </LinearLayout>
+
                 </LinearLayout>
+
             </androidx.cardview.widget.CardView>
 
 

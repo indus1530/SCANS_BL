@@ -37,14 +37,14 @@ public class SectionC2Activity extends AppCompatActivity {
 
         bi.c201.setOnCheckedChangeListener(((radioGroup, i) -> {
 
-            if (i == bi.c201g.getId()) {
+            if (i == bi.c20197.getId()) {
                 ClearClass.ClearAllFields(bi.fldGrpCVc202, null);
             }
 
         }));
 
         bi.c207.setOnCheckedChangeListener(((radioGroup, i) -> {
-            if (i == bi.c207e.getId()) {
+            if (i == bi.c20797.getId()) {
                 ClearClass.ClearAllFields(bi.fldGrpCVC201, null);
             }
         }));
@@ -106,7 +106,7 @@ public class SectionC2Activity extends AppCompatActivity {
                                         bi.c201d.isChecked() ? "4" :
                                                 bi.c201e.isChecked() ? "5" :
                                                         bi.c201f.isChecked() ? "6" :
-                                                                bi.c201g.isChecked() ? "97" :
+                                                                bi.c20197.isChecked() ? "97" :
                                                                         "0");
 
         f1.put("c202",
@@ -122,7 +122,7 @@ public class SectionC2Activity extends AppCompatActivity {
                         bi.c203b.isChecked() ? "2" :
                                 bi.c203c.isChecked() ? "3" :
                                         bi.c203d.isChecked() ? "4" :
-                                                bi.c203e.isChecked() ? "97" :
+                                                bi.c20397.isChecked() ? "97" :
                                                         "0");
 
         f1.put("c204",
@@ -131,7 +131,7 @@ public class SectionC2Activity extends AppCompatActivity {
                                 bi.c204c.isChecked() ? "3" :
                                         bi.c204d.isChecked() ? "4" :
                                                 bi.c204e.isChecked() ? "5" :
-                                                        bi.c204f.isChecked() ? "98" :
+                                                        bi.c20498.isChecked() ? "98" :
                                                                 "0");
 
         f1.put("c205a", bi.c205a.isChecked() ? "1" : "0");
@@ -146,8 +146,8 @@ public class SectionC2Activity extends AppCompatActivity {
                 bi.c206a.isChecked() ? "1" :
                         bi.c206b.isChecked() ? "2" :
                                 bi.c206c.isChecked() ? "3" :
-                                        bi.c206d.isChecked() ? "97" :
-                                                bi.c206e.isChecked() ? "98" :
+                                        bi.c20697.isChecked() ? "97" :
+                                                bi.c20698.isChecked() ? "98" :
                                                         "0");
 
         f1.put("c207",
@@ -155,8 +155,8 @@ public class SectionC2Activity extends AppCompatActivity {
                         bi.c207b.isChecked() ? "2" :
                                 bi.c207c.isChecked() ? "3" :
                                         bi.c207d.isChecked() ? "4" :
-                                                bi.c207e.isChecked() ? "97" :
-                                                        bi.c207f.isChecked() ? "98" :
+                                                bi.c20797.isChecked() ? "97" :
+                                                        bi.c20798.isChecked() ? "98" :
                                                                 "0");
 
         f1.put("c208",
@@ -164,7 +164,7 @@ public class SectionC2Activity extends AppCompatActivity {
                         bi.c208b.isChecked() ? "2" :
                                 bi.c208c.isChecked() ? "3" :
                                         bi.c208d.isChecked() ? "4" :
-                                                bi.c208e.isChecked() ? "5" :
+                                                bi.c20898.isChecked() ? "98" :
                                                         bi.c20896.isChecked() ? "96" :
                                                                 "0");
         f1.put("c20896x", bi.c20896x.getText().toString());
@@ -176,7 +176,7 @@ public class SectionC2Activity extends AppCompatActivity {
                                         bi.c209d.isChecked() ? "4" :
                                                 bi.c209e.isChecked() ? "5" :
                                                         bi.c209f.isChecked() ? "6" :
-                                                                bi.c209g.isChecked() ? "98" :
+                                                                bi.c20998.isChecked() ? "98" :
                                                                         bi.c20996.isChecked() ? "96" :
                                                                                 "0");
         f1.put("c20996x", bi.c20996x.getText().toString());
@@ -184,7 +184,7 @@ public class SectionC2Activity extends AppCompatActivity {
         f1.put("c210",
                 bi.c210a.isChecked() ? "1" :
                         bi.c210b.isChecked() ? "2" :
-                                bi.c210c.isChecked() ? "98" :
+                                bi.c21098.isChecked() ? "98" :
                                         "0");
 
         f1.put("c211",
@@ -195,7 +195,7 @@ public class SectionC2Activity extends AppCompatActivity {
                                                 bi.c211e.isChecked() ? "5" :
                                                         bi.c211f.isChecked() ? "6" :
                                                                 bi.c211g.isChecked() ? "7" :
-                                                                        bi.c211h.isChecked() ? "98" :
+                                                                        bi.c21198.isChecked() ? "98" :
                                                                                 bi.c21196.isChecked() ? "96" :
                                                                                         "0");
         f1.put("c21196x", bi.c21196x.getText().toString());
@@ -205,7 +205,7 @@ public class SectionC2Activity extends AppCompatActivity {
                         bi.c212b.isChecked() ? "2" :
                                 bi.c212c.isChecked() ? "3" :
                                         bi.c212d.isChecked() ? "4" :
-                                                bi.c212e.isChecked() ? "98" :
+                                                bi.c21298.isChecked() ? "98" :
                                                         bi.c21296.isChecked() ? "96" :
                                                                 "0");
         f1.put("c21296x", bi.c21296x.getText().toString());
@@ -218,7 +218,7 @@ public class SectionC2Activity extends AppCompatActivity {
         f1.put("c213f", bi.c213f.isChecked() ? "6" : "0");
         f1.put("c213g", bi.c213g.isChecked() ? "7" : "0");
         f1.put("c213h", bi.c213h.isChecked() ? "8" : "0");
-        f1.put("c213i", bi.c213i.isChecked() ? "97" : "0");
+        f1.put("c21397", bi.c21397.isChecked() ? "97" : "0");
 
     }
 
