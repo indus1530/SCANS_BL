@@ -1552,45 +1552,54 @@
     <string name="c512h"> 7 days </string>
 
     <string name="tc6heading">SECTION C6: SLEEP </string>
-    <string name="ca601_title"> CA601_title:\t PART A: IN &#8211; SCHOOL </string>
-    <string name="ca601"> ca601:\t During the weekdays, what time (child name) usually gone to sleep?    (AM | PM))</string>
-    <string name="ca601a"> AM</string>
-    <string name="ca601b"> PM</string>
+    <string name="ca601_title"> PART A: IN &#8211; SCHOOL </string>
+    <string name="ca601"> ca601:\t During the weekdays, what time (child name) usually gone to sleep ? </string>
+    <string name="ca601a"> AM </string>
+    <string name="ca601b"> PM </string>
 
-    <string name="ca602"> CA602:\t During the weekdays, at what time (child name) usually woken up in the morning? AM / PM (circle AM or PM)</string>
+    <string name="ca602"> CA602:\t During the weekdays, at what time (child name) usually woken up in the morning ? </string>
     <string name="ca602a"> AM</string>
     <string name="ca602b"> PM</string>
-    <string name="ca603"> CA603:\t During the weekdays, does the child name afternoon nap?</string>
-    <string name="ca603a"> Yes   </string>
-    <string name="ca603b"> No. </string>
-    <string name="ca604"> CA604:\t During the weekend days, what time (child name) gone to sleep?                                     </string>
-    <string name="ca604a"> AM</string>
-    <string name="ca604b"> PM</string>
+
+    <string name="ca603"> CA603:\t During the weekdays, does the child name afternoon nap ? </string>
+    <string name="ca603a"> Yes </string>
+    <string name="ca603b"> No </string>
+
+    <string name="ca604"> CA604:\t During the weekend days, what time (child name) gone to sleep ? </string>
+    <string name="ca604a"> AM </string>
+    <string name="ca604b"> PM </string>
+
     <string name="ca605"> CA605:\t During the weekend days, at what time (child name) usually woken up in the morning?</string>
     <string name="ca605a"> AM</string>
     <string name="ca605b"> PM</string>
+
     <string name="ca606"> CA606:\t During the weekend days, does the (child name) afternoon nap?</string>
     <string name="ca606a"> Yes   </string>
     <string name="ca606b"> No. </string>
+
     <string name="ca607"> CA607:\t During the school year, how would you rate (child name) sleep quality overall (how well (child name) sleep)?</string>
     <string name="ca607a"> Very good</string>
     <string name="ca607b"> Fairly good </string>
     <string name="ca607c"> Fairly bad </string>
     <string name="ca607d"> Very bad </string>
-    <string name="cb601_title"> CB601_title:\t PART B: OUT &#8211; OF &#8211; SCHOOL CHILDREN                                                                                                                                              </string>
-    <string name="cb601"> CB601:\t During the past week, what time (child name) usually gone to sleep?</string>
-    <string name="cb601a"> AM</string>
-    <string name="cb601b"> PM</string>
-    <string name="cb602"> CB602:\t During the past week, at what time (child name) usually woken up in the morning?</string>
-    <string name="cb602a"> AM</string>
-    <string name="cb602b"> PM</string>
-    <string name="cb603"> CB603:\t During the past week, does the child name afternoon nap?</string>
+
+    <string name="cb601_title"> PART B: OUT&#8211;OF&#8211;SCHOOL CHILDREN                                                                                                                                              </string>
+    <string name="cb601"> CB601:\t During the past week, what time (child name) usually gone to sleep ? </string>
+    <string name="cb601a"> AM </string>
+    <string name="cb601b"> PM </string>
+
+    <string name="cb602"> CB602:\t During the past week, at what time (child name) usually woken up in the morning ? </string>
+    <string name="cb602a"> AM </string>
+    <string name="cb602b"> PM </string>
+
+    <string name="cb603"> CB603:\t During the past week, does the child name afternoon nap ? </string>
     <string name="cb603a"> Yes </string>
-    <string name="cb603b"> No. </string>
-    <string name="cb604"> CB604:\t During the past week, how would you rate (child name) sleep quality overall (how well (child name) sleep)?</string>
-    <string name="cb604a"> Very good</string>
+    <string name="cb603b"> No </string>
+
+    <string name="cb604"> CB604:\t During the past week, how would you rate (child name) sleep quality overall (how well (child name) sleep) ? </string>
+    <string name="cb604a"> Very good </string>
     <string name="cb604b"> Fairly good </string>
-    <string name="cb604c"> Fairly bad کافی بری </string>
+    <string name="cb604c"> Fairly bad </string>
     <string name="cb604d"> Very bad </string>
 
     <string name="td1heading">SECTION D1: BEVERAGES </string>

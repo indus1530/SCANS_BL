@@ -17,7 +17,7 @@
         android:fillViewport="true"
         android:scrollbarSize="10dip"
         android:layoutDirection="ltr"
-        tools:context=".ui.Myactivity">
+        tools:context=".ui.sections.SectionC6Activity">
 
         <LinearLayout
             android:id="@+id/fldGrpSectionC6"
@@ -36,9 +36,11 @@
                     android:orientation="vertical">
 
                     <TextView
-                        style="@style/i_textview"
+                        style="@style/HeadingTitle"
                         android:text="@string/ca601_title" />
+
                 </LinearLayout>
+
             </androidx.cardview.widget.CardView>
 
             <!-- ca601  Input-Numeric   -->
@@ -57,9 +59,8 @@
 
                     <io.blackbox_vision.datetimepickeredittext.view.TimePickerInputEditText
                         android:id="@+id/ca601"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:hint="@string/ca601"
+                        style="@style/EditTextNum"
+                        android:hint="@string/time"
                         app:is24HourView="true"
                         app:timeFormat="HH:mm" />
 
@@ -83,13 +84,13 @@
 
                     <io.blackbox_vision.datetimepickeredittext.view.TimePickerInputEditText
                         android:id="@+id/ca602"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:hint="@string/ca602"
+                        style="@style/EditTextNum"
+                        android:hint="@string/time"
                         app:is24HourView="true"
                         app:timeFormat="HH:mm" />
 
                 </LinearLayout>
+
             </androidx.cardview.widget.CardView>
 
             <!-- ca603  Radio   -->
@@ -108,20 +109,27 @@
 
                     <RadioGroup
                         android:id="@+id/ca603"
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent">
+                        style="@style/radiogroup"
+                        android:orientation="horizontal">
 
                         <RadioButton
                             android:id="@+id/ca603a"
                             style="@style/radiobutton"
-                            android:text="@string/ca603a" />
+                            android:layout_width="0dp"
+                            android:layout_weight="1"
+                            android:text="@string/yes" />
 
                         <RadioButton
                             android:id="@+id/ca603b"
                             style="@style/radiobutton"
-                            android:text="@string/ca603b" />
+                            android:layout_width="0dp"
+                            android:layout_weight="1"
+                            android:text="@string/no" />
+
                     </RadioGroup>
+
                 </LinearLayout>
+
             </androidx.cardview.widget.CardView>
 
             <!-- ca604  Input-Numeric   -->
@@ -140,13 +148,13 @@
 
                     <io.blackbox_vision.datetimepickeredittext.view.TimePickerInputEditText
                         android:id="@+id/ca604"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:hint="@string/ca604"
+                        style="@style/EditTextNum"
+                        android:hint="@string/time"
                         app:is24HourView="true"
                         app:timeFormat="HH:mm" />
 
                 </LinearLayout>
+
             </androidx.cardview.widget.CardView>
 
             <!-- ca605  Input-Numeric   -->
@@ -165,13 +173,13 @@
 
                     <io.blackbox_vision.datetimepickeredittext.view.TimePickerInputEditText
                         android:id="@+id/ca605"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:hint="@string/ca605"
+                        style="@style/EditTextNum"
+                        android:hint="@string/time"
                         app:is24HourView="true"
                         app:timeFormat="HH:mm" />
 
                 </LinearLayout>
+
             </androidx.cardview.widget.CardView>
 
             <!-- ca606  Radio   -->
@@ -190,20 +198,27 @@
 
                     <RadioGroup
                         android:id="@+id/ca606"
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent">
+                        style="@style/radiogroup"
+                        android:orientation="horizontal">
 
                         <RadioButton
                             android:id="@+id/ca606a"
                             style="@style/radiobutton"
-                            android:text="@string/ca606a" />
+                            android:layout_width="0dp"
+                            android:layout_weight="1"
+                            android:text="@string/yes" />
 
                         <RadioButton
                             android:id="@+id/ca606b"
                             style="@style/radiobutton"
-                            android:text="@string/ca606b" />
+                            android:layout_width="0dp"
+                            android:layout_weight="1"
+                            android:text="@string/no" />
+
                     </RadioGroup>
+
                 </LinearLayout>
+
             </androidx.cardview.widget.CardView>
 
             <!-- ca607  Radio   -->
@@ -222,8 +237,7 @@
 
                     <RadioGroup
                         android:id="@+id/ca607"
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent">
+                        style="@style/radiogroup">
 
                         <RadioButton
                             android:id="@+id/ca607a"
@@ -244,8 +258,11 @@
                             android:id="@+id/ca607d"
                             style="@style/radiobutton"
                             android:text="@string/ca607d" />
+
                     </RadioGroup>
+
                 </LinearLayout>
+
             </androidx.cardview.widget.CardView>
 
             <!-- cb601_title  Title   -->
@@ -259,9 +276,11 @@
                     android:orientation="vertical">
 
                     <TextView
-                        style="@style/i_textview"
+                        style="@style/HeadingTitle"
                         android:text="@string/cb601_title" />
+
                 </LinearLayout>
+
             </androidx.cardview.widget.CardView>
 
             <!-- cb601  Input-Numeric   -->
@@ -280,13 +299,13 @@
 
                     <io.blackbox_vision.datetimepickeredittext.view.TimePickerInputEditText
                         android:id="@+id/cb601"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:hint="@string/cb601"
+                        style="@style/EditTextNum"
+                        android:hint="@string/time"
                         app:is24HourView="true"
                         app:timeFormat="HH:mm" />
 
                 </LinearLayout>
+
             </androidx.cardview.widget.CardView>
 
             <!-- cb602  Input-Numeric   -->
@@ -305,13 +324,13 @@
 
                     <io.blackbox_vision.datetimepickeredittext.view.TimePickerInputEditText
                         android:id="@+id/cb602"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:hint="@string/cb602"
+                        style="@style/EditTextNum"
+                        android:hint="@string/time"
                         app:is24HourView="true"
                         app:timeFormat="HH:mm" />
 
                 </LinearLayout>
+
             </androidx.cardview.widget.CardView>
 
             <!-- cb603  Radio   -->
@@ -330,20 +349,27 @@
 
                     <RadioGroup
                         android:id="@+id/cb603"
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent">
+                        style="@style/radiogroup"
+                        android:orientation="horizontal">
 
                         <RadioButton
                             android:id="@+id/cb603a"
                             style="@style/radiobutton"
-                            android:text="@string/cb603a" />
+                            android:layout_width="0dp"
+                            android:layout_weight="1"
+                            android:text="@string/yes" />
 
                         <RadioButton
                             android:id="@+id/cb603b"
                             style="@style/radiobutton"
-                            android:text="@string/cb603b" />
+                            android:layout_width="0dp"
+                            android:layout_weight="1"
+                            android:text="@string/no" />
+
                     </RadioGroup>
+
                 </LinearLayout>
+
             </androidx.cardview.widget.CardView>
 
             <!-- cb604  Radio   -->
@@ -362,8 +388,7 @@
 
                     <RadioGroup
                         android:id="@+id/cb604"
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent">
+                        style="@style/radiogroup">
 
                         <RadioButton
                             android:id="@+id/cb604a"
@@ -384,8 +409,11 @@
                             android:id="@+id/cb604d"
                             style="@style/radiobutton"
                             android:text="@string/cb604d" />
+
                     </RadioGroup>
+
                 </LinearLayout>
+
             </androidx.cardview.widget.CardView>
 
 
