@@ -40,8 +40,7 @@
 
                     <RadioGroup
                         android:id="@+id/c201"
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent">
+                        style="@style/radiogroup">
 
                         <RadioButton
                             android:id="@+id/c201a"
@@ -77,8 +76,11 @@
                             android:id="@+id/c201g"
                             style="@style/radiobutton"
                             android:text="@string/c201g" />
+
                     </RadioGroup>
+
                 </LinearLayout>
+
             </androidx.cardview.widget.CardView>
 
             <!-- c202  Radio   -->
@@ -98,8 +100,7 @@
 
                     <RadioGroup
                         android:id="@+id/c202"
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent">
+                        style="@style/radiogroup">
 
                         <RadioButton
                             android:id="@+id/c202a"
@@ -123,16 +124,16 @@
 
                         <EditText
                             android:id="@+id/c20296x"
-                            style="@style/radiobutton"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
+                            style="@style/textInput"
                             android:hint="@string/c202x"
                             android:tag="c20296"
                             android:text='@{c20296.checked? c20296x.getText().toString() : ""}'
                             android:visibility='@{c20296.checked? View.VISIBLE : View.GONE}' />
 
                     </RadioGroup>
+
                 </LinearLayout>
+
             </androidx.cardview.widget.CardView>
 
             <!-- c203  Radio   -->
@@ -151,8 +152,7 @@
 
                     <RadioGroup
                         android:id="@+id/c203"
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent">
+                        style="@style/radiogroup">
 
                         <RadioButton
                             android:id="@+id/c203a"
@@ -178,8 +178,11 @@
                             android:id="@+id/c203e"
                             style="@style/radiobutton"
                             android:text="@string/c203e" />
+
                     </RadioGroup>
+
                 </LinearLayout>
+
             </androidx.cardview.widget.CardView>
 
             <!-- c204  Radio   -->
@@ -198,8 +201,7 @@
 
                     <RadioGroup
                         android:id="@+id/c204"
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent">
+                        style="@style/radiogroup">
 
                         <RadioButton
                             android:id="@+id/c204a"
@@ -230,8 +232,11 @@
                             android:id="@+id/c204f"
                             style="@style/radiobutton"
                             android:text="@string/c204f" />
+
                     </RadioGroup>
+
                 </LinearLayout>
+
             </androidx.cardview.widget.CardView>
 
             <!-- c205  CheckBox   -->
@@ -289,8 +294,11 @@
                             android:id="@+id/c205g"
                             style="@style/checkbox"
                             android:text="@string/c205g" />
+
                     </LinearLayout>
+
                 </LinearLayout>
+
             </androidx.cardview.widget.CardView>
 
             <!-- c206  Radio   -->
@@ -309,8 +317,7 @@
 
                     <RadioGroup
                         android:id="@+id/c206"
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent">
+                        style="@style/radiogroup">
 
                         <RadioButton
                             android:id="@+id/c206a"
@@ -336,8 +343,11 @@
                             android:id="@+id/c206e"
                             style="@style/radiobutton"
                             android:text="@string/c206e" />
+
                     </RadioGroup>
+
                 </LinearLayout>
+
             </androidx.cardview.widget.CardView>
 
             <!-- c207  Radio   -->
@@ -356,8 +366,7 @@
 
                     <RadioGroup
                         android:id="@+id/c207"
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent">
+                        style="@style/radiogroup">
 
                         <RadioButton
                             android:id="@+id/c207a"
@@ -388,8 +397,11 @@
                             android:id="@+id/c207f"
                             style="@style/radiobutton"
                             android:text="@string/c207f" />
+
                     </RadioGroup>
+
                 </LinearLayout>
+
             </androidx.cardview.widget.CardView>
 
 
@@ -416,8 +428,7 @@
 
                         <RadioGroup
                             android:id="@+id/c208"
-                            android:layout_width="match_parent"
-                            android:layout_height="match_parent">
+                            style="@style/radiogroup">
 
                             <RadioButton
                                 android:id="@+id/c208a"
@@ -451,9 +462,7 @@
 
                             <EditText
                                 android:id="@+id/c20896x"
-                                style="@style/radiobutton"
-                                android:layout_width="match_parent"
-                                android:layout_height="wrap_content"
+                                style="@style/textInput"
                                 android:hint="@string/c202x"
                                 android:tag="c20896"
                                 android:text='@{c20896.checked? c20896x.getText().toString() : ""}'
@@ -481,8 +490,7 @@
 
                         <RadioGroup
                             android:id="@+id/c209"
-                            android:layout_width="match_parent"
-                            android:layout_height="match_parent">
+                            style="@style/radiogroup">
 
                             <RadioButton
                                 android:id="@+id/c209a"
@@ -526,9 +534,7 @@
 
                             <EditText
                                 android:id="@+id/c20996x"
-                                style="@style/radiobutton"
-                                android:layout_width="match_parent"
-                                android:layout_height="wrap_content"
+                                style="@style/textInput"
                                 android:hint="@string/c209x"
                                 android:tag="c20996"
                                 android:text='@{c20996.checked? c20996x.getText().toString() : ""}'
@@ -556,8 +562,7 @@
 
                         <RadioGroup
                             android:id="@+id/c210"
-                            android:layout_width="match_parent"
-                            android:layout_height="match_parent">
+                            style="@style/radiogroup">
 
                             <RadioButton
                                 android:id="@+id/c210a"
@@ -573,8 +578,11 @@
                                 android:id="@+id/c210c"
                                 style="@style/radiobutton"
                                 android:text="@string/c210c" />
+
                         </RadioGroup>
+
                     </LinearLayout>
+
                 </androidx.cardview.widget.CardView>
 
 
@@ -601,8 +609,7 @@
 
                             <RadioGroup
                                 android:id="@+id/c211"
-                                android:layout_width="match_parent"
-                                android:layout_height="match_parent">
+                                style="@style/radiogroup">
 
                                 <RadioButton
                                     android:id="@+id/c211a"
@@ -651,9 +658,7 @@
 
                                 <EditText
                                     android:id="@+id/c21196x"
-                                    style="@style/radiobutton"
-                                    android:layout_width="match_parent"
-                                    android:layout_height="wrap_content"
+                                    style="@style/textInput"
                                     android:hint="@string/c211x"
                                     android:tag="c21196"
                                     android:text='@{c21196.checked? c21196x.getText().toString() : ""}'
@@ -681,8 +686,7 @@
 
                             <RadioGroup
                                 android:id="@+id/c212"
-                                android:layout_width="match_parent"
-                                android:layout_height="match_parent">
+                                style="@style/radiogroup">
 
                                 <RadioButton
                                     android:id="@+id/c212a"
@@ -716,9 +720,7 @@
 
                                 <EditText
                                     android:id="@+id/c21296x"
-                                    style="@style/radiobutton"
-                                    android:layout_width="match_parent"
-                                    android:layout_height="wrap_content"
+                                    style="@style/textInput"
                                     android:hint="@string/c212x"
                                     android:tag="c21296"
                                     android:text='@{c21296.checked? c21296x.getText().toString() : ""}'
