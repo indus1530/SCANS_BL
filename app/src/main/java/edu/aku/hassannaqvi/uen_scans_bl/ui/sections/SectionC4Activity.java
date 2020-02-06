@@ -57,6 +57,17 @@ public class SectionC4Activity extends AppCompatActivity {
 
         }));
 
+        //c402h
+        bi.c402h.setOnCheckedChangeListener((compoundButton, b) -> {
+            if (b) {
+                ClearClass.ClearAllFields(bi.c402check, false);
+                bi.c402check.setTag("-1");
+            } else {
+                ClearClass.ClearAllFields(bi.c402check, true);
+                bi.c402check.setTag("0");
+            }
+        });
+
         bi.c404.setOnCheckedChangeListener(((radioGroup, i) -> {
 
             if (i == bi.c404a.getId()) {
