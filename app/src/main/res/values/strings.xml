@@ -482,13 +482,13 @@
     <string name="a307k"> Tanker truck </string>
     <string name="a307l"> Cart with small tank </string>
     <string name="a307m"> Surface water (river/dam/lake/pond/canal Irrigation channel) </string>
-    <string name="a307n"> Bottled water </string>
-    <string name="a307x"> Other specify </string>
+    <string name="a307n"> Bottled water  </string>
+    <string name="a307x"> Other specify  </string>
 
     <string name="a307aa"> A307aa:\t What is the main source of water used by your household for other purposes such as cooking and hand washing? Municipal Community Water Connection</string>
     <string name="a307aaa"> Yes</string>
     <string name="a307aab"> No</string>
-
+>>>>>>> Stashed changes
     <string name="a308"> A308:\t Where is that water source located?</string>
     <string name="a308a"> In own dwelling </string>
     <string name="a308b"> In own yard / plot out of dwelling </string>
@@ -498,7 +498,7 @@
     <string name="a309a"> Number of minutes </string>
     <string name="a30998"> Don\'t Know </string>
 
-    <string name="a310"> A310:\t Who usually goes to this source to collect water for the household? Is this person under age 15 ? What gender ? </string>
+    <string name="a310"> A310:\t Who usually goes to this source to collect water for the household? Is this person under age 15? What sex?</string>
     <string name="a310a"> Adult woman (age 15+ years) </string>
     <string name="a310b"> Adult man (age 15+ years) </string>
     <string name="a310c"> Female child (under 15) </string>
