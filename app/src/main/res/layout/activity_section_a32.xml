@@ -1746,7 +1746,7 @@
                                 android:hint="@string/num"
                                 android:maxLength="2"
                                 app:maxValue="10"
-                                app:minValue="1"
+                                app:minValue="0"
                                 app:type="range" />
 
                         </LinearLayout>
@@ -1770,7 +1770,7 @@
                                 android:hint="@string/num"
                                 android:maxLength="2"
                                 app:maxValue="10"
-                                app:minValue="1"
+                                app:minValue="0"
                                 app:type="range" />
 
                         </LinearLayout>
@@ -1794,7 +1794,7 @@
                                 android:hint="@string/num"
                                 android:maxLength="2"
                                 app:maxValue="10"
-                                app:minValue="1"
+                                app:minValue="0"
                                 app:type="range" />
 
                         </LinearLayout>
@@ -1818,7 +1818,7 @@
                                 android:hint="@string/num"
                                 android:maxLength="2"
                                 app:maxValue="10"
-                                app:minValue="1"
+                                app:minValue="0"
                                 app:type="range" />
 
                         </LinearLayout>
@@ -1842,7 +1842,7 @@
                                 android:hint="@string/num"
                                 android:maxLength="2"
                                 app:maxValue="10"
-                                app:minValue="1"
+                                app:minValue="0"
                                 app:type="range" />
 
                         </LinearLayout>
@@ -1866,7 +1866,7 @@
                                 android:hint="@string/num"
                                 android:maxLength="2"
                                 app:maxValue="10"
-                                app:minValue="1"
+                                app:minValue="0"
                                 app:type="range" />
 
                         </LinearLayout>

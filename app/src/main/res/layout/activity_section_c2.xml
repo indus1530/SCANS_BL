@@ -150,36 +150,47 @@
                         style="@style/i_textview"
                         android:text="@string/c203" />
 
-                    <RadioGroup
-                        android:id="@+id/c203"
-                        style="@style/radiogroup">
+                    <LinearLayout
+                        android:id="@+id/c203check"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:tag="0">
 
-                        <RadioButton
+                        <CheckBox
                             android:id="@+id/c203a"
-                            style="@style/radiobutton"
+                            style="@style/checkbox"
+                            android:checked='@{c20397.checked ? false : false }'
+                            android:enabled='@{c20397.checked ? false : true }'
                             android:text="@string/c203a" />
 
-                        <RadioButton
+                        <CheckBox
                             android:id="@+id/c203b"
-                            style="@style/radiobutton"
+                            style="@style/checkbox"
+                            android:checked='@{c20397.checked ? false : false }'
+                            android:enabled='@{c20397.checked ? false : true }'
                             android:text="@string/c203b" />
 
-                        <RadioButton
+                        <CheckBox
                             android:id="@+id/c203c"
-                            style="@style/radiobutton"
+                            style="@style/checkbox"
+                            android:checked='@{c20397.checked ? false : false }'
+                            android:enabled='@{c20397.checked ? false : true }'
                             android:text="@string/c203c" />
 
-                        <RadioButton
+                        <CheckBox
                             android:id="@+id/c203d"
-                            style="@style/radiobutton"
+                            style="@style/checkbox"
+                            android:checked='@{c20397.checked ? false : false }'
+                            android:enabled='@{c20397.checked ? false : true }'
                             android:text="@string/c203d" />
 
-                        <RadioButton
+                        <CheckBox
                             android:id="@+id/c20397"
-                            style="@style/radiobutton"
+                            style="@style/checkbox"
                             android:text="@string/c203e" />
 
-                    </RadioGroup>
+                    </LinearLayout>
 
                 </LinearLayout>
 
@@ -608,7 +619,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:orientation="vertical"
-                    android:visibility='@{c210a.checked? View.VISIBLE : View.GONE}'>
+                    android:visibility='@{c210b.checked? View.GONE : View.VISIBLE}'>
 
                     <!-- c211  Radio   -->
                     <androidx.cardview.widget.CardView

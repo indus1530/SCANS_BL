@@ -50,7 +50,7 @@ public class SectionC2Activity extends AppCompatActivity {
         }));
 
         bi.c210.setOnCheckedChangeListener(((radioGroup, i) -> {
-            if (i != bi.c210a.getId()) {
+            if (i == bi.c210b.getId()) {
                 ClearClass.ClearAllFields(bi.fldGrpCVC202, null);
             }
         }));
@@ -117,13 +117,11 @@ public class SectionC2Activity extends AppCompatActivity {
                                                 "0");
         f1.put("c20296x", bi.c20296x.getText().toString());
 
-        f1.put("c203",
-                bi.c203a.isChecked() ? "1" :
-                        bi.c203b.isChecked() ? "2" :
-                                bi.c203c.isChecked() ? "3" :
-                                        bi.c203d.isChecked() ? "4" :
-                                                bi.c20397.isChecked() ? "97" :
-                                                        "0");
+        f1.put("c203a", bi.c203a.isChecked() ? "1" : "0");
+        f1.put("c203b", bi.c203b.isChecked() ? "2" : "0");
+        f1.put("c203c", bi.c203c.isChecked() ? "3" : "0");
+        f1.put("c203d", bi.c203d.isChecked() ? "4" : "0");
+        f1.put("c20397", bi.c20397.isChecked() ? "97" : "0");
 
         f1.put("c204",
                 bi.c204a.isChecked() ? "1" :
