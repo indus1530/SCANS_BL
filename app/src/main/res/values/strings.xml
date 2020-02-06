@@ -383,32 +383,32 @@
 
     <string name="a303"> A303:\t Main material of the floor RECORD OBSERVATION</string>
     <string name="a303hint1"> Natural Floor </string>
-    <string name="a303a"> Mud / Clay / Earth / Sand </string>
+    <string name="a303a"> Mud/Clay/Earth/Sand/  </string>
     <string name="a303b"> Dung </string>
-    <string name="a303hint2"> Rudimentary / Floor </string>
+    <string name="a303hint2"> Rudimentary/Floor </string>
     <string name="a303c"> Wood planks </string>
     <string name="a303d"> Palm/Bamboo </string>
-    <string name="a303hint3"> Finished Floor </string>
-    <string name="a303e"> Parquet or polished wood </string>
-    <string name="a303f"> Vinyl or asphalt strips </string>
+    <string name="a303hint"> Finished Floor </string>
+    <string name="a303e"> Parquet or polished wood</string>
+    <string name="a303f"> Vinyl or asphalt strips</string>
     <string name="a303g"> Ceramic tiles</string>
-    <string name="a303h"> Cement </string>
+    <string name="a303h"> Cement</string>
     <string name="a303i"> Carpet </string>
     <string name="a303j"> Bricks </string>
-    <string name="a303k"> Lime </string>
+    <string name="a303k"> Lime</string>
     <string name="a303x"> Other specify</string>
 
     <string name="a304"> A304:\t Main material of the roof RECORD OBSERVATION</string>
-    <string name="a304hint1"> Natural Roofing </string>
+    <string name="a304a_title"> Natural Roofing </string>
     <string name="a304a"> No roof </string>
     <string name="a304b"> Thatch/palm leaf</string>
     <string name="a304c"> Sod </string>
-    <string name="a304hint2"> Rudimentary Roofing </string>
+    <string name="a304d_title"> Rudimentary Roofing</string>
     <string name="a304d"> Rustic mat </string>
     <string name="a304e"> Palm/Bamboo </string>
     <string name="a304f"> Wood planks </string>
     <string name="a304g"> Cardboard</string>
-    <string name="a304hint3"> Finished Roofing </string>
+    <string name="a304h_title"> Finished Roofing </string>
     <string name="a304h"> Cloth/Tent</string>
     <string name="a304i"> Metal/Tin/CGI </string>
     <string name="a304j"> Wood </string>
@@ -418,263 +418,214 @@
     <string name="a304n"> Roofing shingles</string>
     <string name="a304o"> Bricks </string>
     <string name="a304x"> Other specify </string>
-
-    <string name="a305"> A305:\t Main material of the walls RECORD OBSERVATION </string>
-    <string name="a305ah"> Natural walls  </string>
+    <string name="a305"> A305:\t Main material of the walls RECORD OBSERVATION</string>
+    <string name="a305a_title"> Natural walls  </string>
     <string name="a305a"> No walls </string>
-    <string name="a305b"> Cane / Palm / Trunks </string>
-    <string name="a305c"> Mud / Dirt </string>
-    <string name="a305dh"> Rudimentary walls </string>
+    <string name="a305b"> Cane/Palm/Trunks </string>
+    <string name="a305c"> Mud/Dirt</string>
+    <string name="a305d_title"> Rudimentary walls   </string>
     <string name="a305d"> Bamboo with mud </string>
-    <string name="a305e"> Stone with mud </string>
-    <string name="a305f"> Uncovered adobe </string>
+    <string name="a305e"> Stone with mud  </string>
+    <string name="a305f"> Uncovered adobe</string>
     <string name="a305g"> Plywood </string>
     <string name="a305h"> Cardboard </string>
     <string name="a305i"> Reused wood </string>
-    <string name="a305j"> Cloth / Curtain / Tent </string>
-    <string name="a305kh"> Finished walls </string>
+    <string name="a305j"> Cloth/Curtain/Tent </string>
+    <string name="a305k_title"> Finished walls</string>
     <string name="a305k"> Cement </string>
-    <string name="a305l"> Stone with cement / lime </string>
+    <string name="a305l"> Stone with cement/lime </string>
     <string name="a305m"> Bricks </string>
-    <string name="a305n"> Cement blocks </string>
-    <string name="a305o"> Covered adobe </string>
-    <string name="a305p"> Wood planks / shingles </string>
+    <string name="a305n"> Cement blocks</string>
+    <string name="a305o"> Covered adobe</string>
+    <string name="a305p"> Wood planks/shingles/ </string>
     <string name="a305x"> Other specify  </string>
-
-    <string name="a306"> A306:\t What is the main source of drinking water for members of your household ? </string>
-    <string name="a306ah"> Piped water </string>
-    <string name="a306a"> Piped into dwelling </string>
-    <string name="a306b"> Piped to yard / plot </string>
-    <string name="a306c"> Piped to neighbor </string>
-    <string name="a306d"> Public tap / standpipe </string>
+    <string name="a306"> A306:\t What is the main source of drinking water for members of your household?</string>
+    <string name="a306a_title"> Piped water</string>
+    <string name="a306a"> Piped into dwelling  </string>
+    <string name="a306b"> Piped to yard/plot  </string>
+    <string name="a306c"> Piped to neighbor  </string>
+    <string name="a306d"> Public tap/standpipe </string>
     <string name="a306e"> Filtration plant </string>
-    <string name="a306fh"> Underground Water </string>
-    <string name="a306f"> Tube well or borehole </string>
-    <string name="a306g"> Hand pump </string>
-    <string name="a306hh"> Dug Well </string>
+    <string name="a306f_title"> UNDERGROUND WATER </string>
+    <string name="a306f"> Tube well or borehole</string>
+    <string name="a306g"> Hand pump</string>
+    <string name="a306h_title"> DUG WELL</string>
     <string name="a306h"> Protected Well </string>
     <string name="a306i"> Unprotected Well </string>
-    <string name="a306j"> Rainwater </string>
+    <string name="a306j"> Rainwater</string>
     <string name="a306k"> Tanker truck </string>
     <string name="a306l"> Cart with small tank </string>
-    <string name="a306m"> Surface water (river / dam / lake / pond / canal Irrigation channel) </string>
-    <string name="a306n"> Bottled water </string>
-    <string name="a306x"> Other specify </string>
-
-    <string name="a306aa"> A306aa:\t What is the main source of drinking water for members of your household? Municipal Community Water Connection </string>
+    <string name="a306m"> Surface water (river/dam/lake/pond/canal Irrigation channel) </string>
+    <string name="a306n"> Bottled water  </string>
+    <string name="a306x"> Other specify  </string>
+    <string name="a306aa"> a306aa:\t What is the main source of drinking water for members of your household? Municipal Community Water Connection</string>
     <string name="a306aaa"> Yes</string>
     <string name="a306aab"> No</string>
-
-    <string name="a307"> A307:\t What is the main source of drinking water for members of your household ? </string>
-    <string name="a307ah"> Piped water </string>
-    <string name="a307a"> Piped into dwelling </string>
-    <string name="a307b"> Piped to yard / plot </string>
-    <string name="a307c"> Piped to neighbor </string>
-    <string name="a307d"> Public tap / standpipe </string>
-    <string name="a307eh"> Underground Water </string>
+    <string name="a307"> A307:\t What is the main source of drinking water for members of your household?</string>
+    <string name="a307a_title"> Piped water</string>
+    <string name="a307a"> Piped into dwelling  </string>
+    <string name="a307b"> Piped to yard/plot  </string>
+    <string name="a307c"> Piped to neighbor  </string>
+    <string name="a307d"> Public tap/standpipe </string>
+    <string name="a307e_title"> UNDERGROUND WATER</string>
     <string name="a307e"> Filtration plant </string>
     <string name="a307f"> Tube well or borehole</string>
-    <string name="a307g"> Hand pump </string>
-    <string name="a307hh"> Dug Well </string>
+    <string name="a307g"> Hand pump</string>
+    <string name="a307h_title"> DUG WELL </string>
     <string name="a307h"> Protected Well </string>
     <string name="a307i"> Unprotected Well </string>
-    <string name="a307j"> Rainwater </string>
+    <string name="a307j"> Rainwater</string>
     <string name="a307k"> Tanker truck </string>
     <string name="a307l"> Cart with small tank </string>
     <string name="a307m"> Surface water (river/dam/lake/pond/canal Irrigation channel) </string>
-    <string name="a307n"> Bottled water </string>
-    <string name="a307x"> Other specify </string>
-
+    <string name="a307n"> Bottled water  </string>
+    <string name="a307x"> Other specify  </string>
     <string name="a307aa"> A307aa:\t What is the main source of water used by your household for other purposes such as cooking and hand washing? Municipal Community Water Connection</string>
     <string name="a307aaa"> Yes</string>
     <string name="a307aab"> No</string>
-
     <string name="a308"> A308:\t Where is that water source located?</string>
     <string name="a308a"> In own dwelling </string>
     <string name="a308b"> In own yard / plot out of dwelling </string>
     <string name="a308c"> Elsewhere </string>
-
-    <string name="a309"> A309:\t How long does it take to get to the water source to get water and come back ? </string>
-    <string name="a309a"> Number of minutes </string>
-    <string name="a30998"> Don\'t Know </string>
-
-    <string name="a310"> A310:\t Who usually goes to this source to collect water for the household? Is this person under age 15 ? What gender ? </string>
+    <string name="a309"> A309:\t How long does it take to get to the water source to get water and come back? Number of minutes </string>
+    <string name="a309a"> Don’t Know </string>
+    <string name="a310"> A310:\t Who usually goes to this source to collect water for the household? Is this person under age 15? What sex?</string>
     <string name="a310a"> Adult woman (age 15+ years) </string>
     <string name="a310b"> Adult man (age 15+ years) </string>
     <string name="a310c"> Female child (under 15) </string>
     <string name="a310d"> Male child (under 15) </string>
     <string name="a310e"> Whoever is available </string>
-
-    <string name="a311"> A311:\t How does that water in the household taste ? </string>
+    <string name="a311"> A311:\t How does that water in the household taste?</string>
     <string name="a311a"> Sweet </string>
-    <string name="a311b"> Brackish </string>
-
-    <string name="a312"> A312:\t Was the water for drinking clear or muddy at the time of collection ? </string>
+    <string name="a311b"> Brackish</string>
+    <string name="a312"> A312:\t Was the water for drinking clear or muddy at the time of collection?</string>
     <string name="a312a"> Clear </string>
-    <string name="a312b"> Muddy Colored </string>
+    <string name="a312b"> Muddy/colored </string>
     <string name="a312c"> Don’t Know </string>
-
-    <string name="a313"> A313:\t Do you do anything to the water to make it safer to drink ? </string>
+    <string name="a313"> A313:\t Do you do anything to the water to make it safer to drink?</string>
     <string name="a313a"> Yes </string>
     <string name="a313b"> No  </string>
     <string name="a313c"> Don’t Know </string>
-
-    <string name="a314"> A314:\t What do you usually do to make the water safer to drink ? </string>
+    <string name="a314"> A314:\t What do you usually do to make the water safer to drink?</string>
     <string name="a314a"> Boil </string>
     <string name="a314b"> Add bleach/chlorine </string>
     <string name="a314c"> Strain through a cloth </string>
-    <string name="a314d"> Use water filter </string>
+    <string name="a314d"> Use water filter</string>
     <string name="a314e"> Solar disinfection  </string>
     <string name="a314f"> Let it stand and settle </string>
     <string name="a314x"> Other specify </string>
-
-    <string name="a315"> A315:\t How many rooms in this house are used for sleeping? Number of rooms </string>
-
-    <string name="a316"> A316:\t Do you own or rent the house that you live in ? </string>
+    <string name="a315"> A315:\t How many rooms in this house are used for sleeping? Number of rooms  </string>
+    <string name="a316"> A316:\t Do you own or rent the house that you live in?</string>
     <string name="a316a"> Own </string>
-    <string name="a316b"> Rent </string>
-    <string name="a316x"> Other (specify) </string>
-
-    <string name="a317"> A317:\t Is the cooking usually done in the house, in a separate building, or outdoors ? </string>
-    <string name="a317ah"> In the house </string>
-    <string name="a317a"> Separate room used as a kitchen </string>
+    <string name="a316b"> Rent</string>
+    <string name="a316x"> Other (specify)</string>
+    <string name="a317"> A317:\t Is the cooking usually done in the house, in a separate building, or outdoors?</string>
+    <string name="a317a_title"> In the house</string>
+    <string name="a317a"> Separate room used as a kitchen</string>
     <string name="a317b"> Elsewhere in the house </string>
-    <string name="a317c"> In a separate building </string>
+    <string name="a317c"> In a separate building</string>
     <string name="a317d"> Outdoors (open place)  </string>
-    <string name="a317x"> Others (Specify) </string>
-
-    <string name="a318"> A318:\t What type of fuel does your household Mainly use for cooking ? </string>
+    <string name="a317x"> Others (Specify)</string>
+    <string name="a318"> A318:\t What type of fuel does your household Mainly use for cooking? </string>
     <string name="a318a"> Natural Gas </string>
     <string name="a318b"> Liquefied Petroleum Gas LPG </string>
     <string name="a318c"> Bio &#8211; gas</string>
     <string name="a318d"> Electricity </string>
     <string name="a318e"> Kerosene </string>
-    <string name="a318f"> Coal / Lignite </string>
-    <string name="a318g"> Charcoal </string>
-    <string name="a318h"> Wood </string>
-    <string name="a318i"> Agricultural Crop Residue </string>
+    <string name="a318f"> Coal/Lignite</string>
+    <string name="a318g"> Charcoal</string>
+    <string name="a318h"> Wood</string>
+    <string name="a318i"> Agricultural Crop Residue  </string>
     <string name="a318j"> Animal Dung </string>
-    <string name="a318k"> No food cooked in household </string>
-    <string name="a318x"> Other specify </string>
-
-    <string name="a319"> A319:\t Does your household have ? </string>
-
-    <string name="a319a"> Electricity Connection </string>
+    <string name="a318k"> No food cooked in household</string>
+    <string name="a318x"> Other specify</string>
+    <string name="a319"> A319:\t Does your household have? Multiple Response</string>
+    <string name="a319a"> A319a:\t Electricity Connection </string>
     <string name="a319aa"> Yes </string>
     <string name="a319ab"> No </string>
-
-    <string name="a319b"> Radio </string>
+    <string name="a319b"> A319b:\t Radio </string>
     <string name="a319ba"> Yes </string>
     <string name="a319bb"> No </string>
-
-    <string name="a319c"> Television </string>
+    <string name="a319c"> A319c:\t Television </string>
     <string name="a319ca"> Yes </string>
     <string name="a319cb"> No </string>
-
-    <string name="a319d"> Landline phone </string>
+    <string name="a319d"> A319d:\t Landline phone </string>
     <string name="a319da"> Yes </string>
     <string name="a319db"> No</string>
-
-    <string name="a319e"> Refrigerator </string>
+    <string name="a319e"> A319e:\t Refrigerator </string>
     <string name="a319ea"> Yes </string>
     <string name="a319eb"> No </string>
-
-    <string name="a319f"> Almirah/Cabinet </string>
+    <string name="a319f"> A319f:\t Almirah/Cabinet </string>
     <string name="a319fa"> Yes </string>
     <string name="a319fb"> No</string>
-
-    <string name="a319g"> Chair </string>
+    <string name="a319g"> A319g:\t Chair </string>
     <string name="a319ga"> Yes</string>
     <string name="a319gb"> No</string>
-
-    <string name="a319h"> Room Cooler </string>
+    <string name="a319h"> A319h:\t Room Cooler </string>
     <string name="a319ha"> Yes </string>
     <string name="a319hb"> No </string>
-
-    <string name="a319i"> Air conditioner </string>
+    <string name="a319i"> A319i:\t Air conditioner </string>
     <string name="a319ia"> Yes</string>
     <string name="a319ib"> No </string>
-
-    <string name="a319j"> Washing machine </string>
+    <string name="a319j"> A319j:\t Washing machine</string>
     <string name="a319ja"> Yes </string>
     <string name="a319jb"> No </string>
-
-    <string name="a319k"> Water Pump </string>
+    <string name="a319k"> A319k:\t Water Pump </string>
     <string name="a319ka"> Yes</string>
     <string name="a319kb"> No</string>
-
-    <string name="a319l"> Bed </string>
+    <string name="a319l"> A319l:\t Bed</string>
     <string name="a319la"> Yes </string>
     <string name="a319lb"> No </string>
-
-    <string name="a319m"> Clock </string>
+    <string name="a319m"> A319m:\t Clock </string>
     <string name="a319ma"> Yes </string>
     <string name="a319mb"> No </string>
-
-    <string name="a319n"> Sofa </string>
+    <string name="a319n"> A319n:\t Sofa </string>
     <string name="a319na"> Yes </string>
     <string name="a319nb"> No </string>
-
-    <string name="a319o"> Camera </string>
+    <string name="a319o"> A319o:\t Camera </string>
     <string name="a319oa"> Yes </string>
     <string name="a319ob"> No</string>
-
-    <string name="a319p"> Sewing machine </string>
+    <string name="a319p"> A319p:\t Sewing machine </string>
     <string name="a319pa"> Yes  </string>
     <string name="a319pb"> No </string>
-
-    <string name="a319q"> Computer/laptop  </string>
+    <string name="a319q"> A319q:\t Computer/laptop  </string>
     <string name="a319qa"> Yes </string>
     <string name="a319qb"> No </string>
-
-    <string name="a319r"> Internet connection </string>
+    <string name="a319r"> A319r:\t Internet connection </string>
     <string name="a319ra"> Yes </string>
     <string name="a319rb"> No </string>
-
-    <string name="a320"> A320:\t Do you have your own mobile phone sepretelly ? </string>
+    <string name="a320"> A320:\t Do you have your own mobile phone sepretelly? </string>
     <string name="a320a"> Yes </string>
     <string name="a320b"> No </string>
-
-    <string name="a321"> A321:\t Does any member of this household own ? </string>
-
-    <string name="a321a"> Watch </string>
+    <string name="a321"> A321:\t Does any member of this household own? Multiple Response</string>
+    <string name="a321a"> A321a:\t Watch</string>
     <string name="a321aa"> Yes </string>
     <string name="a321ab"> No </string>
-
-    <string name="a321b"> Mobile Phone </string>
+    <string name="a321b"> A321b:\t Mobile Phone </string>
     <string name="a321ba"> Yes </string>
     <string name="a321bb"> No </string>
-
-    <string name="a321c"> Bicycle </string>
+    <string name="a321c"> A321c:\t Bicycle</string>
     <string name="a321ca"> Yes </string>
     <string name="a321cb"> No</string>
-
-    <string name="a321d"> Motorcycle or scooter </string>
+    <string name="a321d"> A321d:\t Motorcycle or scooter </string>
     <string name="a321da"> Yes </string>
     <string name="a321db"> No </string>
-
-    <string name="a321e"> Animal &#8211; drawn cart </string>
+    <string name="a321e"> A321e:\t Animal &#8211; drawn cart </string>
     <string name="a321ea"> Yes </string>
     <string name="a321eb"> No </string>
-
-    <string name="a321f"> Car or truck or bus </string>
+    <string name="a321f"> A321f:\t Car or truck or bus </string>
     <string name="a321fa"> Yes </string>
     <string name="a321fb"> No</string>
-
-    <string name="a321g"> Tractor </string>
+    <string name="a321g"> A321g:\t Tractor </string>
     <string name="a321ga"> Yes </string>
     <string name="a321gb"> No</string>
-
-    <string name="a321h"> Boat with a motor </string>
+    <string name="a321h"> A321h:\t Boat with a motor </string>
     <string name="a321ha"> Yes </string>
     <string name="a321hb"> No </string>
-
-    <string name="a321i"> Boat without motor </string>
+    <string name="a321i"> A321i:\t Boat without motor  </string>
     <string name="a321ia"> Yes </string>
     <string name="a321ib"> No </string>
-
-    <string name="a322"> A322:\t What kind of toilet facility do members of your household usually use ? </string>
-    <string name="a322hint"> Note for DC: (If not possible to determine, ask permission to observe the facility) </string>
+    <string name="a322"> A322:\t What kind of toilet facility do members of your household usually use? Note for DC: (If not possible to determine, ask permission to observe the facility)</string>
     <string name="a322hint1"> Flush or Pour Flush Toilet</string>
     <string name="a322a"> Flush to piped sewer system</string>
     <string name="a322b"> Flush to septic tank </string>
@@ -689,129 +640,110 @@
     <string name="a322j"> Bucket toilet </string>
     <string name="a322k"> No facility/bush/field/OD </string>
     <string name="a322x"> Other specify </string>
-
-    <string name="a323"> A323:\t Do you share this facility with others who are not members of your household ? </string>
+    <string name="a323"> A323:\t Do you share this facility with others who are not members of your household?</string>
     <string name="a323a"> Yes </string>
     <string name="a323b"> No </string>
-    <string name="a323c"> Don’t Know </string>
-
-    <string name="a324"> A324:\t Do you share this facility only with members of other households that you know, or is the facility open to the use of the general public ? </string>
+    <string name="a323c"> Don’t Know</string>
+    <string name="a324"> A324:\t Do you share this facility only with members of other households that you know, or is the facility open to the use of the general public?</string>
     <string name="a324a"> Other household only (not public) </string>
     <string name="a324b"> Public facility  </string>
-
-    <string name="a325"> A325:\t How many households in total use this toilet facility, including your own household ? </string>
+    <string name="a325"> A325:\t How many households in total use this toilet facility, including your own household?</string>
     <string name="a325a_title"> Number of household </string>
     <string name="a325a"> If less than 10  </string>
     <string name="a325b"> Ten or more household  </string>
     <string name="a325x"> Don’t Know </string>
-
-    <string name="a326"> A326:\t Does any member of this household own any agricultural land ? </string>
+    <string name="a326"> A326:\t Does any member of this household own any agricultural land?</string>
     <string name="a326a"> Yes</string>
     <string name="a326b"> No </string>
     <string name="a326c"> Don’t Know </string>
-
-    <string name="a327"> A327:\t How many Acres or Kanals of agricultural land do members of this household own ? </string>
-    <string name="a327a"> Acres </string>
-    <string name="a327b"> Kanals </string>
-    <string name="a32798"> Don’t Know </string>
-
-    <string name="a328"> A328:\t Does this household own any livestock, herds, other farm animals or poultry ? </string>
+    <string name="a327"> A327:\t How many acres or kanals of agricultural land do members of this household own?</string>
+    <string name="a327a"> How many acres or kanals of agricultural land do members of this household own? Acre</string>
+    <string name="a327b"> How many acres or kanals of agricultural land do members of this household own? Kanals</string>
+    <string name="a327c"> Don’t Know </string>
+    <string name="a328"> A328:\t Does this household own any livestock, herds, other farm animals or poultry?</string>
     <string name="a328a"> Yes </string>
     <string name="a328b"> No </string>
     <string name="a328c"> Don’t Know </string>
-
-    <string name="a329"> A329:\t How many of the following animals do the household own ? </string>
+    <string name="a329"> A329:\t How many of the following animals do the household own?</string>
     <string name="a329a"> Cows/Bulls/Buffalo  </string>
     <string name="a329b"> Horses/Donkeys/Mules </string>
     <string name="a329c"> Goats  </string>
     <string name="a329d"> Sheep</string>
     <string name="a329e"> Chickens </string>
     <string name="a329f"> Camels </string>
-
-    <string name="a330"> A330:\t Does any member of this household have a bank account ? </string>
+    <string name="a330"> A330:\t Does any member of this household have a bank account?</string>
     <string name="a330a"> Yes </string>
     <string name="a330b"> No </string>
     <string name="a330c"> Don’t Know </string>
-
-    <string name="a331"> A331:\t What is total monthly household income of this house ? </string>
+    <string name="a331"> A331:\t What is total monthly household income of this house?</string>
     <string name="a331a"> Rupees </string>
     <string name="a331b"> Don’t Want to Share</string>
     <string name="a331c"> Don’t Know </string>
-
-    <string name="a332"> A332:\t Do you or your family receive any support in the form of cash or kind ? </string>
+    <string name="a332"> A332:\t Do you or your family receive any support in the form of cash or kind? (select as many as apply) </string>
     <string name="a332a"> BISP </string>
     <string name="a332b"> Food Voucher per month </string>
     <string name="a332c"> Cash Per month (other than BISP) </string>
     <string name="a332d"> Student Scholarship </string>
     <string name="a332e"> None </string>
     <string name="a332x"> Other specify </string>
-
     <string name="a333"> A333:\t Who provides this support? (select as many as apply)</string>
     <string name="a333a"> Government </string>
     <string name="a333b"> NGO </string>
     <string name="a333c"> Individual </string>
-    <string name="a33396"> Other </string>
+    <string name="a333x"> Other specify </string>
 
-    <string name="ta4heading"> SECTION A4: HAND-WASHING </string>
-    <string name="a401"> A401:\t Please show us where you and members of your household most often wash their hands . </string>
-    <string name="a401a"> Observed </string>
-    <string name="a401b"> Not observed </string>
-    <string name="a401c"> Not in Dwelling / Plot / Yard </string>
-    <string name="a401d"> No permission to see </string>
+    <string name="ta4heading">SECTION A4: HAND-WASHING </string>
+    <string name="a401"> A401:\t Please show us where you and members of your household most often wash their hands. </string>
+    <string name="a401a"> Observed  </string>
+    <string name="a401b"> Not observed</string>
+    <string name="a401c"> Not in dwelling/plot/yard </string>
+    <string name="a401d"> No permission to see</string>
     <string name="a401x"> Other specify </string>
-
-    <string name="a402"> A402:\t Observe presence of water at the specific place for hand washing . </string>
-    <string name="a402a"> Water is Available </string>
-    <string name="a402b"> Water is Not Available </string>
-
-    <string name="a403"> A403:\t Record if soap or detergent is present at the specific place for hand washing </string>
-    <string name="a403a"> Bar Soap </string>
-    <string name="a403b"> Detergent (Powder / Liquid / Paste) </string>
-    <string name="a403c"> Liquid Soap </string>
-    <string name="a403d"> Ash / Mud / Sand </string>
-    <string name="a403e"> None </string>
-
-    <string name="a404"> A404:\t Do you have any soap or detergent in your household for hand washing ? </string>
+    <string name="a402"> A402:\t Observe presence of water at the specific place for hand washing. </string>
+    <string name="a402a"> Water is available</string>
+    <string name="a402b"> Water is not available </string>
+    <string name="a403"> A403:\t Record if soap or detergent is present at the specific place for hand washing [Multiple responses]  </string>
+    <string name="a403a"> Bar soap</string>
+    <string name="a403b"> Detergent (powder/liquid/paste) </string>
+    <string name="a403c"> Liquid soap</string>
+    <string name="a403d"> Ash/mud/sand </string>
+    <string name="a403e"> None</string>
+    <string name="a404"> A404:\t Do you have any soap or detergent in your household for hand washing? </string>
     <string name="a404a"> Yes </string>
     <string name="a404b"> No </string>
-
-    <string name="a405"> A405:\t If yes, can you please show it to me ?  </string>
-    <string name="a405a"> Bar Soap </string>
-    <string name="a405b"> Detergent (Powder / Liquid / Paste) </string>
-    <string name="a405c"> Liquid Soap </string>
-    <string name="a405d"> Ash / Mud / Sand </string>
+    <string name="a405"> A405:\t If yes, can you please show it to me?  [Multiple responses] </string>
+    <string name="a405a"> Bar soap</string>
+    <string name="a405b"> Detergent (powder/liquid/paste) </string>
+    <string name="a405c"> Liquid soap </string>
+    <string name="a405d"> Ash/mud/sand </string>
     <string name="a405e"> None </string>
-
-    <string name="a406"> A406:\t How often you wash your hands with soap or detergent or Ash / Mud / Sand ? </string>
-    <string name="a406a_title"> Daily </string>
+    <string name="a406"> A406:\t How often you wash your hands with soap or detergent or ash/mud/sand? [Multiple responses]</string>
+    <string name="a406a_title"> Daily</string>
     <string name="a406a"> After using toilet </string>
-    <string name="a406b"> Before eating food </string>
-    <string name="a406c"> After eating food </string>
-    <string name="a406d"> After field work </string>
-    <string name="a406e"> After changing dippers / cleaning baby </string>
+    <string name="a406b"> Before eating food  </string>
+    <string name="a406c"> After eating food</string>
+    <string name="a406d"> After field work</string>
+    <string name="a406e"> After changing dippers/cleaning baby</string>
     <string name="a406f"> Before feeding baby </string>
-    <string name="a406g"> Before cooking </string>
+    <string name="a406g"> Before cooking  </string>
     <string name="a406h"> Sometimes </string>
-    <string name="a40697"> Never </string>
+    <string name="a406i"> Never  </string>
 
     <string name="tb1heading">SECTION B1: HOUSEHOLD FOOD INSECURITY EXPERIENCE SCALE </string>
-    <string name="b101"> B101:\t You or others in your household worried about not having enough food to eat because of a lack of money or other resources ? </string>
-    <string name="b101a"> Yes </string>
-    <string name="b101b"> No </string>
-    <string name="b10198"> Don’t Know </string>
-    <string name="b10199"> Refused </string>
-
-    <string name="b102"> B102:\t How often did this happen ? </string>
-    <string name="b102a"> Rarely (once or twice in the past four weeks) </string>
-    <string name="b102b"> Sometimes (three to ten times in the past four weeks) </string>
-    <string name="b102c"> Often (more than ten times in the past four weeks) </string>
-
-    <string name="b103"> B103:\t Still thinking about the last 12 months, was there a time when you or others in your household were unable to eat healthy and nutritious food because of lack of money or other resources ? </string>
+    <string name="b101"> B101:\t You or others in your household worried about not having enough food to eat because of a lack of money or other resources?</string>
+    <string name="b101a"> Yes  </string>
+    <string name="b101b"> No</string>
+    <string name="b101c"> Don’t Know </string>
+    <string name="b101d"> Refused </string>
+    <string name="b102"> B102:\t How often did this happen?      </string>
+    <string name="b102a"> Rarely (once or twice in the past four weeks)</string>
+    <string name="b102b"> Sometimes (three to ten times in the past four weeks)</string>
+    <string name="b102c"> Often (more than ten times in the past four weeks)</string>
+    <string name="b103"> B103:\t Still thinking about the last 12 months, was there a time when you or others in your household were unable to eat healthy and nutritious food because of lack of money or other resources?</string>
     <string name="b103a"> Yes </string>
     <string name="b103b"> No</string>
     <string name="b103c"> Don’t Know </string>
     <string name="b103d"> Refused</string>
-
     <string name="b104"> B104:\t How often did this happen?       </string>
     <string name="b104a"> Rarely (once or twice in the past four weeks)</string>
     <string name="b104b"> Sometimes (three to ten times in the past four weeks)</string>
@@ -861,43 +793,32 @@
     <string name="b114a"> Rarely (once or twice in the past four weeks)</string>
     <string name="b114b"> Sometimes (three to ten times in the past four weeks)</string>
     <string name="b114c"> Often (more than ten times in the past four weeks)</string>
-
-    <string name="b115"> B115:\t Was there a time when you or others in your household were hungry but did not eat because there was not enough money or other resources ? </string>
-    <string name="b115a"> Yes </string>
-    <string name="b115b"> No </string>
+    <string name="b115"> B115:\t Was there a time when you or others in your household were hungry but did not eat because there was not enough money or other resources?</string>
+    <string name="b115a"> Yes</string>
+    <string name="b115b"> No</string>
     <string name="b115c"> Don’t Know </string>
-    <string name="b115d"> Refused </string>
-
-    <string name="b116"> B116:\t How often did this happen ? </string>
-    <string name="b116a"> Rarely (once or twice in the past four weeks) </string>
-    <string name="b116b"> Sometimes (three to ten times in the past four weeks) </string>
-    <string name="b116c"> Often (more than ten times in the past four weeks) </string>
-
-    <string name="b117"> B117:\t Was there a time when you or others in your household went without eating for a whole day because of a lack of money or other resources ? </string>
+    <string name="b115d"> Refused</string>
+    <string name="b116"> B116:\t How often did this happen?       </string>
+    <string name="b116a"> Rarely (once or twice in the past four weeks)</string>
+    <string name="b116b"> Sometimes (three to ten times in the past four weeks)</string>
+    <string name="b116c"> Often (more than ten times in the past four weeks)</string>
+    <string name="b117"> B117:\t Was there a time when you or others in your household went without eating for a whole day because of a lack of money or other resources?</string>
     <string name="b117a"> Yes </string>
-    <string name="b117b"> No </string>
+    <string name="b117b"> No</string>
     <string name="b117c"> Don’t Know </string>
-    <string name="b117d"> Refused </string>
-
-    <string name="b118"> B118:\t How often did this happen ? </string>
+    <string name="b117d"> Refused</string>
+    <string name="b118"> B118:\t How often did this happen?       </string>
     <string name="b118a"> Rarely (once or twice in the past four weeks)</string>
     <string name="b118b"> Sometimes (three to ten times in the past four weeks)</string>
     <string name="b118c"> Often (more than ten times in the past four weeks)</string>
 
-
     <string name="tb2heading">SECTION B2: FOOD CONSUMPTION </string>
-
-    <string name="b201"> B201:\t Yesterday, how many meals were eaten by adults ? </string>
-    <string name="b201a"> meals </string>
-
+    <string name="b201"> B201:\t Yesterday, how many meals were eaten by adults?</string>
     <string name="b202"> B202:\t How does this compare to usual for the adults?</string>
     <string name="b202a"> Less </string>
     <string name="b202b"> Same</string>
     <string name="b202c"> More </string>
-
     <string name="b203"> B203:\t Yesterday, how many meals were eaten by children</string>
-    <string name="b203a"> meals </string>
-
     <string name="b204"> B204:\t How does this compare to usual for the children?</string>
     <string name="b204a"> Less</string>
     <string name="b204b"> Same</string>
