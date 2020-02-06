@@ -290,12 +290,12 @@
                                 style="@style/EditTextNum"
                                 android:layout_width="0dp"
                                 android:layout_weight="1"
-                                android:enabled='@{c40598.checked ? false : true}'
                                 android:hint="@string/c405a"
                                 android:maxLength="4"
-                                android:text='@{c40598.checked ? "" : c405a.getText().toString()}'
                                 app:maxValue="2020"
                                 app:minValue="1970"
+                                android:enabled='@{c40598.checked ? false : true}'
+                                android:text='@{c40598.checked ? "" : c405.getText().toString()}'
                                 app:type="range" />
 
                             <CheckBox
@@ -338,10 +338,10 @@
                             android:layout_weight="1"
                             android:hint="@string/c406a"
                             app:maxValue="10"
-                            android:enabled='@{c40698.checked ? false : true }'
                             android:maxLength="2"
-                            android:text='@{c40698.checked ? "" : c406a.getText().toString() }'
                             app:minValue="0"
+                            android:enabled='@{c40698.checked ? false : true }'
+                            android:text='@{c40698.checked ? "" : c406.getText().toString() }'
                             app:type="range" />
 
                         <CheckBox
