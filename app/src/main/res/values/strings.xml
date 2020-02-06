@@ -1261,55 +1261,64 @@
     <string name="c302h"> Not Applicable</string>
     <string name="c303"> C303:\t How often meals (breakfast, lunch or dinner) did you get that were prepared away from home in places such as restaurants, fast food places, food stands, grocery stores or vending machines? (please do not include meals provided as part of school breakfast or school lunch)</string>
     <string name="c303a"> Never</string>
-    <string name="c303b"> Occasion &#8211; ally</string>
-    <string name="c303c"> Once a week</string>
-    <string name="c303d"> 2 &#8211; 4 days a week</string>
-    <string name="c303e"> 5 &#8211; 6 days a week</string>
-    <string name="c303f"> Every day</string>
-    <string name="c303g"> On weekends Only</string>
-    <string name="c303h"> Not Applicable</string>
-    <string name="c304_title"> C304_title:\t Where does (child name) usually eat?   </string>
-    <string name="c304a"> C304a:\t Table/cart  </string>
+    <string name="c303b"> Occasion &#8211; ally </string>
+    <string name="c303c"> Once a week </string>
+    <string name="c303d"> 2 &#8211; 4 days a week </string>
+    <string name="c303e"> 5 &#8211; 6 days a week </string>
+    <string name="c303f"> Every day </string>
+    <string name="c303g"> On weekends Only </string>
+    <string name="c303h"> Not Applicable </string>
+
+    <string name="c304"> C304:\t Where does (child name) usually eat ? </string>
+    <string name="c304a"> Table / Cart </string>
     <string name="c304aa"> Never </string>
     <string name="c304ab"> Once a week  </string>
     <string name="c304ac"> 2 &#8211; 4 days a week </string>
     <string name="c304ad"> 5 &#8211; 6 days a week </string>
     <string name="c304ae"> Every day</string>
     <string name="c304af"> Occasion &#8211; ally </string>
-    <string name="c304b"> C304b:\t Floor </string>
+
+    <string name="c304b"> Floor </string>
     <string name="c304ba"> Never </string>
     <string name="c304bb"> Once a week  </string>
     <string name="c304bc"> 2 &#8211; 4 days a week </string>
     <string name="c304bd"> 5 &#8211; 6 days a week </string>
     <string name="c304be"> Every day</string>
     <string name="c304bf"> Occasion &#8211; ally </string>
-    <string name="c304c"> C304c:\t In front of TV/Mobile/tablet/IPad  </string>
+
+    <string name="c304c"> In front of TV / Mobile / tablet / IPad  </string>
     <string name="c304ca"> Never </string>
     <string name="c304cb"> Once a week  </string>
     <string name="c304cc"> 2 &#8211; 4 days a week </string>
     <string name="c304cd"> 5 &#8211; 6 days a week </string>
     <string name="c304ce"> Every day</string>
     <string name="c304cf"> Occasion-ally </string>
-    <string name="c305"> C305:\t When (child name) is worried s/he eat more</string>
-    <string name="c305a"> Never or Almost Never</string>
+
+    <string name="c305"> C305:\t When (child name) is worried s/he eat more </string>
+    <string name="c305a"> Never or Almost Never </string>
     <string name="c305b"> Sometimes </string>
     <string name="c305c"> Usually or Always </string>
-    <string name="c306"> C306:\t (child name) eats more when s/he is mad</string>
-    <string name="c306a"> Never or Almost Never</string>
+
+    <string name="c306"> C306:\t (child name) eats more when s/he is mad </string>
+    <string name="c306a"> Never or Almost Never </string>
     <string name="c306b"> Sometimes </string>
     <string name="c306c"> Usually or Always </string>
-    <string name="c307"> C307:\t When (child name) does something well s/he give him/herself a food treat</string>
-    <string name="c307a"> Never or Almost Never</string>
+
+    <string name="c307"> C307:\t When (child name) does something well s/he give him/herself a food treat </string>
+    <string name="c307a"> Never or Almost Never </string>
     <string name="c307b"> Sometimes </string>
     <string name="c307c"> Usually or Always </string>
-    <string name="c308"> C308:\t When (child name) is sad s/he eats more</string>
-    <string name="c308a"> Never or Almost Never</string>
+
+    <string name="c308"> C308:\t When (child name) is sad s/he eats more </string>
+    <string name="c308a"> Never or Almost Never </string>
     <string name="c308b"> Sometimes </string>
     <string name="c308c"> Usually or Always </string>
+
     <string name="c309"> C309:\t When (child name) is happy s/he eats more </string>
-    <string name="c309a"> Never or Almost Never</string>
+    <string name="c309a"> Never or Almost Never </string>
     <string name="c309b"> Sometimes </string>
     <string name="c309c"> Usually or Always </string>
+
     <string name="c310"> C310:\t When (child name) is bored s/he eats more</string>
     <string name="c310a"> Never or Almost Never</string>
     <string name="c310b"> Sometimes </string>
