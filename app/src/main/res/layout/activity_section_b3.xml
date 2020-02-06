@@ -35,9 +35,11 @@
                     android:orientation="vertical">
 
                     <TextView
-                        style="@style/i_textview"
-                        android:text="@string/b301_title1" />
+                        style="@style/textView3Head"
+                        android:text="@string/b301hint1" />
+
                 </LinearLayout>
+
             </androidx.cardview.widget.CardView>
 
             <!-- b301_title2  Title   -->
@@ -51,9 +53,11 @@
                     android:orientation="vertical">
 
                     <TextView
-                        style="@style/i_textview"
-                        android:text="@string/b301_title2" />
+                        style="@style/textView3Head"
+                        android:text="@string/b301hint2" />
+
                 </LinearLayout>
+
             </androidx.cardview.widget.CardView>
 
             <!-- b301  CheckBox   -->
@@ -118,21 +122,22 @@
                             android:text="@string/b301h" />
 
                         <CheckBox
-                            android:id="@+id/b301x"
+                            android:id="@+id/b30196"
                             style="@style/checkbox"
-                            android:text="@string/b301x" />
+                            android:text="@string/other" />
 
                         <EditText
-                            android:id="@+id/b301xt"
-                            style="@style/radiobutton"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:hint="@string/b301x"
-                            android:tag="b301x"
-                            android:text='@{b301x.checked? b301xt.getText().toString() : ""}'
-                            android:visibility='@{b301x.checked? View.VISIBLE : View.GONE}' />
+                            android:id="@+id/b30196x"
+                            style="@style/EditTextAlpha"
+                            android:hint="@string/specify"
+                            android:tag="b30196"
+                            android:text='@{b30196.checked? b30196x.getText().toString() : ""}'
+                            android:visibility='@{b30196.checked? View.VISIBLE : View.GONE}' />
+
                     </LinearLayout>
+
                 </LinearLayout>
+
             </androidx.cardview.widget.CardView>
 
             <!-- b302  CheckBox   -->
@@ -197,21 +202,22 @@
                             android:text="@string/b302h" />
 
                         <CheckBox
-                            android:id="@+id/b302x"
+                            android:id="@+id/b30296"
                             style="@style/checkbox"
-                            android:text="@string/b302x" />
+                            android:text="@string/other" />
 
                         <EditText
-                            android:id="@+id/b302xt"
-                            style="@style/radiobutton"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:hint="@string/b302x"
-                            android:tag="b302x"
-                            android:text='@{b302x.checked? b302xt.getText().toString() : ""}'
-                            android:visibility='@{b302x.checked? View.VISIBLE : View.GONE}' />
+                            android:id="@+id/b30296x"
+                            style="@style/EditTextAlpha"
+                            android:hint="@string/specify"
+                            android:tag="b30296"
+                            android:text='@{b30296.checked? b30296x.getText().toString() : ""}'
+                            android:visibility='@{b30296.checked? View.VISIBLE : View.GONE}' />
+
                     </LinearLayout>
+
                 </LinearLayout>
+
             </androidx.cardview.widget.CardView>
 
             <!-- b303  CheckBox   -->
@@ -276,21 +282,22 @@
                             android:text="@string/b303h" />
 
                         <CheckBox
-                            android:id="@+id/b303x"
+                            android:id="@+id/b30396"
                             style="@style/checkbox"
-                            android:text="@string/b303x" />
+                            android:text="@string/other" />
 
                         <EditText
-                            android:id="@+id/b303xt"
-                            style="@style/radiobutton"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:hint="@string/b303x"
-                            android:tag="b303x"
-                            android:text='@{b303x.checked? b303xt.getText().toString() : ""}'
-                            android:visibility='@{b303x.checked? View.VISIBLE : View.GONE}' />
+                            android:id="@+id/b30396x"
+                            style="@style/EditTextAlpha"
+                            android:hint="@string/specify"
+                            android:tag="b30396"
+                            android:text='@{b30396.checked? b30396x.getText().toString() : ""}'
+                            android:visibility='@{b30396.checked? View.VISIBLE : View.GONE}' />
+
                     </LinearLayout>
+
                 </LinearLayout>
+
             </androidx.cardview.widget.CardView>
 
             <!-- b304  CheckBox   -->
@@ -355,21 +362,22 @@
                             android:text="@string/b304h" />
 
                         <CheckBox
-                            android:id="@+id/b304x"
+                            android:id="@+id/b30496"
                             style="@style/checkbox"
-                            android:text="@string/b304x" />
+                            android:text="@string/other" />
 
                         <EditText
-                            android:id="@+id/b304xt"
-                            style="@style/radiobutton"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:hint="@string/b304x"
-                            android:tag="b304x"
-                            android:text='@{b304x.checked? b304xt.getText().toString() : ""}'
-                            android:visibility='@{b304x.checked? View.VISIBLE : View.GONE}' />
+                            android:id="@+id/b30496x"
+                            style="@style/EditTextAlpha"
+                            android:hint="@string/specify"
+                            android:tag="b30496"
+                            android:text='@{b30496.checked? b30496x.getText().toString() : ""}'
+                            android:visibility='@{b30496.checked? View.VISIBLE : View.GONE}' />
+
                     </LinearLayout>
+
                 </LinearLayout>
+
             </androidx.cardview.widget.CardView>
 
             <!-- b305  CheckBox   -->
@@ -434,21 +442,22 @@
                             android:text="@string/b305h" />
 
                         <CheckBox
-                            android:id="@+id/b305x"
+                            android:id="@+id/b30596"
                             style="@style/checkbox"
-                            android:text="@string/b305x" />
+                            android:text="@string/other" />
 
                         <EditText
-                            android:id="@+id/b305xt"
-                            style="@style/radiobutton"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:hint="@string/b305x"
-                            android:tag="b305x"
-                            android:text='@{b305x.checked? b305xt.getText().toString() : ""}'
-                            android:visibility='@{b305x.checked? View.VISIBLE : View.GONE}' />
+                            android:id="@+id/b30596x"
+                            style="@style/EditTextAlpha"
+                            android:hint="@string/specify"
+                            android:tag="b30596"
+                            android:text='@{b30596.checked? b30596x.getText().toString() : ""}'
+                            android:visibility='@{b30596.checked? View.VISIBLE : View.GONE}' />
+
                     </LinearLayout>
+
                 </LinearLayout>
+
             </androidx.cardview.widget.CardView>
 
             <!-- b306  CheckBox   -->
@@ -513,21 +522,22 @@
                             android:text="@string/b306h" />
 
                         <CheckBox
-                            android:id="@+id/b306x"
+                            android:id="@+id/b30696"
                             style="@style/checkbox"
-                            android:text="@string/b306x" />
+                            android:text="@string/other" />
 
                         <EditText
-                            android:id="@+id/b306xt"
-                            style="@style/radiobutton"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:hint="@string/b306x"
-                            android:tag="b306x"
-                            android:text='@{b306x.checked? b306xt.getText().toString() : ""}'
-                            android:visibility='@{b306x.checked? View.VISIBLE : View.GONE}' />
+                            android:id="@+id/b30696x"
+                            style="@style/EditTextAlpha"
+                            android:hint="@string/specify"
+                            android:tag="b30696"
+                            android:text='@{b30696.checked? b30696x.getText().toString() : ""}'
+                            android:visibility='@{b30696.checked? View.VISIBLE : View.GONE}' />
+
                     </LinearLayout>
+
                 </LinearLayout>
+
             </androidx.cardview.widget.CardView>
 
             <!-- b307  CheckBox   -->
@@ -592,21 +602,22 @@
                             android:text="@string/b307h" />
 
                         <CheckBox
-                            android:id="@+id/b307x"
+                            android:id="@+id/b30796"
                             style="@style/checkbox"
-                            android:text="@string/b307x" />
+                            android:text="@string/other" />
 
                         <EditText
-                            android:id="@+id/b307xt"
-                            style="@style/radiobutton"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:hint="@string/b307x"
-                            android:tag="b307x"
-                            android:text='@{b307x.checked? b307xt.getText().toString() : ""}'
-                            android:visibility='@{b307x.checked? View.VISIBLE : View.GONE}' />
+                            android:id="@+id/b30796x"
+                            style="@style/EditTextAlpha"
+                            android:hint="@string/specify"
+                            android:tag="b30796"
+                            android:text='@{b30796.checked? b30796x.getText().toString() : ""}'
+                            android:visibility='@{b30796.checked? View.VISIBLE : View.GONE}' />
+
                     </LinearLayout>
+
                 </LinearLayout>
+
             </androidx.cardview.widget.CardView>
 
             <!-- b308  CheckBox   -->
@@ -671,21 +682,22 @@
                             android:text="@string/b308h" />
 
                         <CheckBox
-                            android:id="@+id/b308x"
+                            android:id="@+id/b30896"
                             style="@style/checkbox"
-                            android:text="@string/b308x" />
+                            android:text="@string/other" />
 
                         <EditText
-                            android:id="@+id/b308xt"
-                            style="@style/radiobutton"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:hint="@string/b308x"
-                            android:tag="b308x"
-                            android:text='@{b308x.checked? b308xt.getText().toString() : ""}'
-                            android:visibility='@{b308x.checked? View.VISIBLE : View.GONE}' />
+                            android:id="@+id/b30896x"
+                            style="@style/EditTextAlpha"
+                            android:hint="@string/specify"
+                            android:tag="b30896"
+                            android:text='@{b30896.checked? b30896x.getText().toString() : ""}'
+                            android:visibility='@{b30896.checked? View.VISIBLE : View.GONE}' />
+
                     </LinearLayout>
+
                 </LinearLayout>
+
             </androidx.cardview.widget.CardView>
 
             <!-- b309  CheckBox   -->
@@ -750,21 +762,22 @@
                             android:text="@string/b309h" />
 
                         <CheckBox
-                            android:id="@+id/b309x"
+                            android:id="@+id/b30996"
                             style="@style/checkbox"
-                            android:text="@string/b309x" />
+                            android:text="@string/other" />
 
                         <EditText
-                            android:id="@+id/b309xt"
-                            style="@style/radiobutton"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:hint="@string/b309x"
-                            android:tag="b309x"
-                            android:text='@{b309x.checked? b309xt.getText().toString() : ""}'
-                            android:visibility='@{b309x.checked? View.VISIBLE : View.GONE}' />
+                            android:id="@+id/b30996x"
+                            style="@style/EditTextAlpha"
+                            android:hint="@string/specify"
+                            android:tag="b30996"
+                            android:text='@{b30996.checked? b30996x.getText().toString() : ""}'
+                            android:visibility='@{b30996.checked? View.VISIBLE : View.GONE}' />
+
                     </LinearLayout>
+
                 </LinearLayout>
+
             </androidx.cardview.widget.CardView>
 
             <!-- b310  CheckBox   -->
@@ -829,21 +842,22 @@
                             android:text="@string/b310h" />
 
                         <CheckBox
-                            android:id="@+id/b310x"
+                            android:id="@+id/b31096"
                             style="@style/checkbox"
-                            android:text="@string/b310x" />
+                            android:text="@string/other" />
 
                         <EditText
-                            android:id="@+id/b310xt"
-                            style="@style/radiobutton"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:hint="@string/b310x"
-                            android:tag="b310x"
-                            android:text='@{b310x.checked? b310xt.getText().toString() : ""}'
-                            android:visibility='@{b310x.checked? View.VISIBLE : View.GONE}' />
+                            android:id="@+id/b31096x"
+                            style="@style/EditTextAlpha"
+                            android:hint="@string/specify"
+                            android:tag="b31096"
+                            android:text='@{b31096.checked? b31096x.getText().toString() : ""}'
+                            android:visibility='@{b31096.checked? View.VISIBLE : View.GONE}' />
+
                     </LinearLayout>
+
                 </LinearLayout>
+
             </androidx.cardview.widget.CardView>
 
             <!-- b311  CheckBox   -->
@@ -908,21 +922,22 @@
                             android:text="@string/b311h" />
 
                         <CheckBox
-                            android:id="@+id/b311x"
+                            android:id="@+id/b31196"
                             style="@style/checkbox"
-                            android:text="@string/b311x" />
+                            android:text="@string/other" />
 
                         <EditText
-                            android:id="@+id/b311xt"
-                            style="@style/radiobutton"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:hint="@string/b311x"
-                            android:tag="b311x"
-                            android:text='@{b311x.checked? b311xt.getText().toString() : ""}'
-                            android:visibility='@{b311x.checked? View.VISIBLE : View.GONE}' />
+                            android:id="@+id/b31196x"
+                            style="@style/EditTextAlpha"
+                            android:hint="@string/specify"
+                            android:tag="b31196"
+                            android:text='@{b31196.checked? b31196x.getText().toString() : ""}'
+                            android:visibility='@{b31196.checked? View.VISIBLE : View.GONE}' />
+
                     </LinearLayout>
+
                 </LinearLayout>
+
             </androidx.cardview.widget.CardView>
 
             <!-- b312  CheckBox   -->
@@ -987,21 +1002,22 @@
                             android:text="@string/b312h" />
 
                         <CheckBox
-                            android:id="@+id/b312x"
+                            android:id="@+id/b31296"
                             style="@style/checkbox"
-                            android:text="@string/b312x" />
+                            android:text="@string/other" />
 
                         <EditText
-                            android:id="@+id/b312xt"
-                            style="@style/radiobutton"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:hint="@string/b312x"
-                            android:tag="b312x"
-                            android:text='@{b312x.checked? b312xt.getText().toString() : ""}'
-                            android:visibility='@{b312x.checked? View.VISIBLE : View.GONE}' />
+                            android:id="@+id/b31296x"
+                            style="@style/EditTextAlpha"
+                            android:hint="@string/specify"
+                            android:tag="b31296"
+                            android:text='@{b31296.checked? b31296x.getText().toString() : ""}'
+                            android:visibility='@{b31296.checked? View.VISIBLE : View.GONE}' />
+
                     </LinearLayout>
+
                 </LinearLayout>
+
             </androidx.cardview.widget.CardView>
 
             <!-- b313  CheckBox   -->
@@ -1066,21 +1082,22 @@
                             android:text="@string/b313h" />
 
                         <CheckBox
-                            android:id="@+id/b313x"
+                            android:id="@+id/b31396"
                             style="@style/checkbox"
-                            android:text="@string/b313x" />
+                            android:text="@string/other" />
 
                         <EditText
-                            android:id="@+id/b313xt"
+                            android:id="@+id/b31396x"
                             style="@style/radiobutton"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:hint="@string/b313x"
-                            android:tag="b313x"
-                            android:text='@{b313x.checked? b313xt.getText().toString() : ""}'
-                            android:visibility='@{b313x.checked? View.VISIBLE : View.GONE}' />
+                            android:hint="@string/specify"
+                            android:tag="b31396"
+                            android:text='@{b31396.checked? b31396x.getText().toString() : ""}'
+                            android:visibility='@{b31396.checked? View.VISIBLE : View.GONE}' />
+
                     </LinearLayout>
+
                 </LinearLayout>
+
             </androidx.cardview.widget.CardView>
 
             <!-- b314  CheckBox   -->
@@ -1145,21 +1162,22 @@
                             android:text="@string/b314h" />
 
                         <CheckBox
-                            android:id="@+id/b314x"
+                            android:id="@+id/b31496"
                             style="@style/checkbox"
-                            android:text="@string/b314x" />
+                            android:text="@string/other" />
 
                         <EditText
-                            android:id="@+id/b314xt"
-                            style="@style/radiobutton"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:hint="@string/b314x"
-                            android:tag="b314x"
-                            android:text='@{b314x.checked? b314xt.getText().toString() : ""}'
-                            android:visibility='@{b314x.checked? View.VISIBLE : View.GONE}' />
+                            android:id="@+id/b31496x"
+                            style="@style/EditTextAlpha"
+                            android:hint="@string/specify"
+                            android:tag="b31496"
+                            android:text='@{b31496.checked? b31496x.getText().toString() : ""}'
+                            android:visibility='@{b31496.checked? View.VISIBLE : View.GONE}' />
+
                     </LinearLayout>
+
                 </LinearLayout>
+
             </androidx.cardview.widget.CardView>
 
 

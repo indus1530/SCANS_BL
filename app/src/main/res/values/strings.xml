@@ -904,18 +904,19 @@
     <string name="b204c"> More</string>
 
     <string name="tb3heading">SECTION B3: HOUSEHOLD DIETRY DIVERSITY AND SOURCE ASSESMENT </string>
-    <string name="b301_title1"> B301_title1:\t Food group</string>
-    <string name="b301_title2"> B301_title2:\t How was the food acquired?                                </string>
+    <string name="b301hint1"> Food group </string>
+    <string name="b301hint2"> How was the food acquired ? </string>
     <string name="b301"> B301:\t Foods made from grains (bread, wheat, rice, maize, etc) </string>
     <string name="b301a"> Not Consumed </string>
-    <string name="b301b"> own production</string>
-    <string name="b301c"> Purchase</string>
-    <string name="b301d"> borrow/on credit</string>
-    <string name="b301e"> barter/ trade</string>
-    <string name="b301f"> Work for food</string>
-    <string name="b301g"> Gift</string>
-    <string name="b301h"> food aid</string>
-    <string name="b301x"> Other</string>
+    <string name="b301b"> own production </string>
+    <string name="b301c"> Purchase </string>
+    <string name="b301d"> borrow/on credit </string>
+    <string name="b301e"> barter / trade </string>
+    <string name="b301f"> Work for food </string>
+    <string name="b301g"> Gift </string>
+    <string name="b301h"> food aid </string>
+    <string name="b30196"> Other </string>
+
     <string name="b302"> B302:\t White roots and tubers and plantains (potato, sweet potato, etc) </string>
     <string name="b302a"> Not Consumed </string>
     <string name="b302b"> own production</string>

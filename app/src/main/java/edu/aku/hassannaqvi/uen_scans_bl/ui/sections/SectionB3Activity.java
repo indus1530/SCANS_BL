@@ -80,8 +80,8 @@ public class SectionB3Activity extends AppCompatActivity {
         f1.put("b301f", bi.b301f.isChecked() ? "6" : "0");
         f1.put("b301g", bi.b301g.isChecked() ? "7" : "0");
         f1.put("b301h", bi.b301h.isChecked() ? "8" : "0");
-        f1.put("b301x", bi.b301x.isChecked() ? "96" : "0");
-        f1.put("b301xt", bi.b301xt.getText().toString());
+        f1.put("b301x", bi.b30196.isChecked() ? "96" : "0");
+        f1.put("b301xt", bi.b30196x.getText().toString());
 
         f1.put("b302a", bi.b302a.isChecked() ? "1" : "0");
         f1.put("b302b", bi.b302b.isChecked() ? "2" : "0");
@@ -91,8 +91,8 @@ public class SectionB3Activity extends AppCompatActivity {
         f1.put("b302f", bi.b302f.isChecked() ? "6" : "0");
         f1.put("b302g", bi.b302g.isChecked() ? "7" : "0");
         f1.put("b302h", bi.b302h.isChecked() ? "8" : "0");
-        f1.put("b302x", bi.b302x.isChecked() ? "96" : "0");
-        f1.put("b302xt", bi.b302xt.getText().toString());
+        f1.put("b302x", bi.b30296.isChecked() ? "96" : "0");
+        f1.put("b302xt", bi.b30296x.getText().toString());
 
         f1.put("b303a", bi.b303a.isChecked() ? "1" : "0");
         f1.put("b303b", bi.b303b.isChecked() ? "2" : "0");
@@ -102,8 +102,8 @@ public class SectionB3Activity extends AppCompatActivity {
         f1.put("b303f", bi.b303f.isChecked() ? "6" : "0");
         f1.put("b303g", bi.b303g.isChecked() ? "7" : "0");
         f1.put("b303h", bi.b303h.isChecked() ? "8" : "0");
-        f1.put("b303x", bi.b303x.isChecked() ? "96" : "0");
-        f1.put("b303xt", bi.b303xt.getText().toString());
+        f1.put("b303x", bi.b30396.isChecked() ? "96" : "0");
+        f1.put("b303xt", bi.b30396x.getText().toString());
 
         f1.put("b304a", bi.b304a.isChecked() ? "1" : "0");
         f1.put("b304b", bi.b304b.isChecked() ? "2" : "0");
@@ -113,8 +113,8 @@ public class SectionB3Activity extends AppCompatActivity {
         f1.put("b304f", bi.b304f.isChecked() ? "6" : "0");
         f1.put("b304g", bi.b304g.isChecked() ? "7" : "0");
         f1.put("b304h", bi.b304h.isChecked() ? "8" : "0");
-        f1.put("b304x", bi.b304x.isChecked() ? "96" : "0");
-        f1.put("b304xt", bi.b304xt.getText().toString());
+        f1.put("b304x", bi.b30496.isChecked() ? "96" : "0");
+        f1.put("b304xt", bi.b30496x.getText().toString());
 
         f1.put("b305a", bi.b305a.isChecked() ? "1" : "0");
         f1.put("b305b", bi.b305b.isChecked() ? "2" : "0");
@@ -124,8 +124,8 @@ public class SectionB3Activity extends AppCompatActivity {
         f1.put("b305f", bi.b305f.isChecked() ? "6" : "0");
         f1.put("b305g", bi.b305g.isChecked() ? "7" : "0");
         f1.put("b305h", bi.b305h.isChecked() ? "8" : "0");
-        f1.put("b305x", bi.b305x.isChecked() ? "96" : "0");
-        f1.put("b305xt", bi.b305xt.getText().toString());
+        f1.put("b305x", bi.b30596.isChecked() ? "96" : "0");
+        f1.put("b305xt", bi.b30596x.getText().toString());
 
         f1.put("b306a", bi.b306a.isChecked() ? "1" : "0");
         f1.put("b306b", bi.b306b.isChecked() ? "2" : "0");
@@ -135,8 +135,8 @@ public class SectionB3Activity extends AppCompatActivity {
         f1.put("b306f", bi.b306f.isChecked() ? "6" : "0");
         f1.put("b306g", bi.b306g.isChecked() ? "7" : "0");
         f1.put("b306h", bi.b306h.isChecked() ? "8" : "0");
-        f1.put("b306x", bi.b306x.isChecked() ? "96" : "0");
-        f1.put("b306xt", bi.b306xt.getText().toString());
+        f1.put("b306x", bi.b30696.isChecked() ? "96" : "0");
+        f1.put("b306xt", bi.b30696x.getText().toString());
 
         f1.put("b307a", bi.b307a.isChecked() ? "1" : "0");
         f1.put("b307b", bi.b307b.isChecked() ? "2" : "0");
@@ -146,8 +146,8 @@ public class SectionB3Activity extends AppCompatActivity {
         f1.put("b307f", bi.b307f.isChecked() ? "6" : "0");
         f1.put("b307g", bi.b307g.isChecked() ? "7" : "0");
         f1.put("b307h", bi.b307h.isChecked() ? "8" : "0");
-        f1.put("b307x", bi.b307x.isChecked() ? "96" : "0");
-        f1.put("b307xt", bi.b307xt.getText().toString());
+        f1.put("b307x", bi.b30796.isChecked() ? "96" : "0");
+        f1.put("b307xt", bi.b30796x.getText().toString());
 
         f1.put("b308a", bi.b308a.isChecked() ? "1" : "0");
         f1.put("b308b", bi.b308b.isChecked() ? "2" : "0");
@@ -157,8 +157,8 @@ public class SectionB3Activity extends AppCompatActivity {
         f1.put("b308f", bi.b308f.isChecked() ? "6" : "0");
         f1.put("b308g", bi.b308g.isChecked() ? "7" : "0");
         f1.put("b308h", bi.b308h.isChecked() ? "8" : "0");
-        f1.put("b308x", bi.b308x.isChecked() ? "96" : "0");
-        f1.put("b308xt", bi.b308xt.getText().toString());
+        f1.put("b308x", bi.b30896.isChecked() ? "96" : "0");
+        f1.put("b308xt", bi.b30896x.getText().toString());
 
         f1.put("b309a", bi.b309a.isChecked() ? "1" : "0");
         f1.put("b309b", bi.b309b.isChecked() ? "2" : "0");
@@ -168,8 +168,8 @@ public class SectionB3Activity extends AppCompatActivity {
         f1.put("b309f", bi.b309f.isChecked() ? "6" : "0");
         f1.put("b309g", bi.b309g.isChecked() ? "7" : "0");
         f1.put("b309h", bi.b309h.isChecked() ? "8" : "0");
-        f1.put("b309x", bi.b309x.isChecked() ? "96" : "0");
-        f1.put("b309xt", bi.b309xt.getText().toString());
+        f1.put("b309x", bi.b30996.isChecked() ? "96" : "0");
+        f1.put("b309xt", bi.b30996x.getText().toString());
 
         f1.put("b310a", bi.b310a.isChecked() ? "1" : "0");
         f1.put("b310b", bi.b310b.isChecked() ? "2" : "0");
@@ -179,8 +179,8 @@ public class SectionB3Activity extends AppCompatActivity {
         f1.put("b310f", bi.b310f.isChecked() ? "6" : "0");
         f1.put("b310g", bi.b310g.isChecked() ? "7" : "0");
         f1.put("b310h", bi.b310h.isChecked() ? "8" : "0");
-        f1.put("b310x", bi.b310x.isChecked() ? "96" : "0");
-        f1.put("b310xt", bi.b310xt.getText().toString());
+        f1.put("b310x", bi.b31096.isChecked() ? "96" : "0");
+        f1.put("b310xt", bi.b31096x.getText().toString());
 
         f1.put("b311a", bi.b311a.isChecked() ? "1" : "0");
         f1.put("b311b", bi.b311b.isChecked() ? "2" : "0");
@@ -190,8 +190,8 @@ public class SectionB3Activity extends AppCompatActivity {
         f1.put("b311f", bi.b311f.isChecked() ? "6" : "0");
         f1.put("b311g", bi.b311g.isChecked() ? "7" : "0");
         f1.put("b311h", bi.b311h.isChecked() ? "8" : "0");
-        f1.put("b311x", bi.b311x.isChecked() ? "96" : "0");
-        f1.put("b311xt", bi.b311xt.getText().toString());
+        f1.put("b311x", bi.b31196.isChecked() ? "96" : "0");
+        f1.put("b311xt", bi.b31196x.getText().toString());
 
         f1.put("b312a", bi.b312a.isChecked() ? "1" : "0");
         f1.put("b312b", bi.b312b.isChecked() ? "2" : "0");
@@ -201,8 +201,8 @@ public class SectionB3Activity extends AppCompatActivity {
         f1.put("b312f", bi.b312f.isChecked() ? "6" : "0");
         f1.put("b312g", bi.b312g.isChecked() ? "7" : "0");
         f1.put("b312h", bi.b312h.isChecked() ? "8" : "0");
-        f1.put("b312x", bi.b312x.isChecked() ? "96" : "0");
-        f1.put("b312xt", bi.b312xt.getText().toString());
+        f1.put("b312x", bi.b31296.isChecked() ? "96" : "0");
+        f1.put("b312xt", bi.b31296x.getText().toString());
 
         f1.put("b313a", bi.b313a.isChecked() ? "1" : "0");
         f1.put("b313b", bi.b313b.isChecked() ? "2" : "0");
@@ -212,8 +212,8 @@ public class SectionB3Activity extends AppCompatActivity {
         f1.put("b313f", bi.b313f.isChecked() ? "6" : "0");
         f1.put("b313g", bi.b313g.isChecked() ? "7" : "0");
         f1.put("b313h", bi.b313h.isChecked() ? "8" : "0");
-        f1.put("b313x", bi.b313x.isChecked() ? "96" : "0");
-        f1.put("b313xt", bi.b313xt.getText().toString());
+        f1.put("b313x", bi.b31396.isChecked() ? "96" : "0");
+        f1.put("b313xt", bi.b31396x.getText().toString());
 
         f1.put("b314a", bi.b314a.isChecked() ? "1" : "0");
         f1.put("b314b", bi.b314b.isChecked() ? "2" : "0");
@@ -223,8 +223,8 @@ public class SectionB3Activity extends AppCompatActivity {
         f1.put("b314f", bi.b314f.isChecked() ? "6" : "0");
         f1.put("b314g", bi.b314g.isChecked() ? "7" : "0");
         f1.put("b314h", bi.b314h.isChecked() ? "8" : "0");
-        f1.put("b314x", bi.b314x.isChecked() ? "96" : "0");
-        f1.put("b314xt", bi.b314xt.getText().toString());
+        f1.put("b314x", bi.b31496.isChecked() ? "96" : "0");
+        f1.put("b314xt", bi.b31496x.getText().toString());
 
     }
 
