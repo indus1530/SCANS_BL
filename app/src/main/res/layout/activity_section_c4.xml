@@ -164,7 +164,8 @@
             <!-- c403  Radio   -->
             <androidx.cardview.widget.CardView
                 android:id="@+id/fldGrpCVc403"
-                style="@style/cardView">
+                style="@style/cardView"
+                android:visibility='@{c401b.checked? View.GONE : View.VISIBLE}'>
 
                 <LinearLayout
                     android:layout_width="match_parent"
@@ -220,7 +221,8 @@
             <!-- c404  Radio   -->
             <androidx.cardview.widget.CardView
                 android:id="@+id/fldGrpCVc404"
-                style="@style/cardView">
+                style="@style/cardView"
+                android:visibility='@{c401b.checked? View.GONE : View.VISIBLE}'>
 
                 <LinearLayout
                     android:layout_width="match_parent"
@@ -262,7 +264,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="vertical"
-                android:visibility='@{c404a.checked? View.GONE : View.VISIBLE}'>
+                android:visibility='@{c404a.checked || c401b.checked ? View.GONE : View.VISIBLE}'>
 
                 <!-- c405  Title   -->
                 <androidx.cardview.widget.CardView
@@ -335,11 +337,11 @@
                             android:layout_width="0dp"
                             android:layout_weight="1"
                             android:hint="@string/c406a"
-                            android:enabled='@{c40698.checked ? false : true }'
                             app:maxValue="10"
-                            app:minValue="1"
+                            android:enabled='@{c40698.checked ? false : true }'
                             android:maxLength="2"
                             android:text='@{c40698.checked ? "" : c406a.getText().toString() }'
+                            app:minValue="0"
                             app:type="range" />
 
                         <CheckBox
@@ -362,7 +364,8 @@
             <!-- c407  Input-Numeric   -->
             <androidx.cardview.widget.CardView
                 android:id="@+id/fldGrpCVc407"
-                style="@style/cardView">
+                style="@style/cardView"
+                android:visibility='@{c401b.checked? View.GONE : View.VISIBLE}'>
 
                 <LinearLayout
                     android:layout_width="match_parent"
@@ -389,7 +392,8 @@
             <!-- c408  Radio   -->
             <androidx.cardview.widget.CardView
                 android:id="@+id/fldGrpCVc408"
-                style="@style/cardView">
+                style="@style/cardView"
+                android:visibility='@{c401b.checked? View.GONE : View.VISIBLE}'>
 
                 <LinearLayout
                     android:layout_width="match_parent"
@@ -429,7 +433,7 @@
             <androidx.cardview.widget.CardView
                 android:id="@+id/fldGrpCVc409"
                 style="@style/cardView"
-                android:visibility='@{c408b.checked? View.GONE : View.VISIBLE}'>
+                android:visibility='@{c401b.checked || c408b.checked ? View.GONE : View.VISIBLE}'>
 
                 <LinearLayout
                     android:layout_width="match_parent"
@@ -505,7 +509,8 @@
             <!-- c410  Radio   -->
             <androidx.cardview.widget.CardView
                 android:id="@+id/fldGrpCVc410"
-                style="@style/cardView">
+                style="@style/cardView"
+                android:visibility='@{c401b.checked ? View.GONE : View.VISIBLE}'>
 
                 <LinearLayout
                     android:layout_width="match_parent"
@@ -565,7 +570,8 @@
             <!-- c411  Radio   -->
             <androidx.cardview.widget.CardView
                 android:id="@+id/fldGrpCVc411"
-                style="@style/cardView">
+                style="@style/cardView"
+                android:visibility='@{c401b.checked ? View.GONE : View.VISIBLE}'>
 
                 <LinearLayout
                     android:layout_width="match_parent"
@@ -624,7 +630,8 @@
             <!-- c412  Radio   -->
             <androidx.cardview.widget.CardView
                 android:id="@+id/fldGrpCVc412"
-                style="@style/cardView">
+                style="@style/cardView"
+                android:visibility='@{c401b.checked ? View.GONE : View.VISIBLE}'>
 
                 <LinearLayout
                     android:layout_width="match_parent"
@@ -683,7 +690,8 @@
             <!-- c413  Radio   -->
             <androidx.cardview.widget.CardView
                 android:id="@+id/fldGrpCVc413"
-                style="@style/cardView">
+                style="@style/cardView"
+                android:visibility='@{c401b.checked ? View.GONE : View.VISIBLE}'>
 
                 <LinearLayout
                     android:layout_width="match_parent"
@@ -722,7 +730,8 @@
             <!-- c414  Radio   -->
             <androidx.cardview.widget.CardView
                 android:id="@+id/fldGrpCVc414"
-                style="@style/cardView">
+                style="@style/cardView"
+                android:visibility='@{c401b.checked ? View.GONE : View.VISIBLE}'>
 
                 <LinearLayout
                     android:layout_width="match_parent"
@@ -761,7 +770,8 @@
             <!-- c415  Radio   -->
             <androidx.cardview.widget.CardView
                 android:id="@+id/fldGrpCVc415"
-                style="@style/cardView">
+                style="@style/cardView"
+                android:visibility='@{c401b.checked ? View.GONE : View.VISIBLE}'>
 
                 <LinearLayout
                     android:layout_width="match_parent"

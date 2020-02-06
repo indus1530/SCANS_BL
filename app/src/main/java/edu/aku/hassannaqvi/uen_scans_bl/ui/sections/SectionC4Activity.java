@@ -39,6 +39,20 @@ public class SectionC4Activity extends AppCompatActivity {
 
             if (i == bi.c401a.getId()) {
                 ClearClass.ClearAllFields(bi.fldGrpCVc402, null);
+            } else if (i == bi.c401b.getId()) {
+                ClearClass.ClearAllFields(bi.fldGrpCVc403, null);
+                ClearClass.ClearAllFields(bi.fldGrpCVc404, null);
+                ClearClass.ClearAllFields(bi.fldGrpCVC401, null);
+                ClearClass.ClearAllFields(bi.fldGrpCVc407, null);
+                ClearClass.ClearAllFields(bi.fldGrpCVc408, null);
+                ClearClass.ClearAllFields(bi.fldGrpCVc409, null);
+                ClearClass.ClearAllFields(bi.fldGrpCVc410, null);
+                ClearClass.ClearAllFields(bi.fldGrpCVc411, null);
+                ClearClass.ClearAllFields(bi.fldGrpCVc412, null);
+                ClearClass.ClearAllFields(bi.fldGrpCVc413, null);
+                ClearClass.ClearAllFields(bi.fldGrpCVc414, null);
+                ClearClass.ClearAllFields(bi.fldGrpCVc415, null);
+
             }
 
         }));
