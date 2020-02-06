@@ -1291,7 +1291,7 @@
     <string name="c304cb"> Once a week  </string>
     <string name="c304cc"> 2 &#8211; 4 days a week </string>
     <string name="c304cd"> 5 &#8211; 6 days a week </string>
-    <string name="c304ce"> Every day</string>
+    <string name="c304ce"> Every day </string>
     <string name="c304cf"> Occasion-ally </string>
 
     <string name="c305"> C305:\t When (child name) is worried s/he eat more </string>
@@ -1319,76 +1319,91 @@
     <string name="c309b"> Sometimes </string>
     <string name="c309c"> Usually or Always </string>
 
-    <string name="c310"> C310:\t When (child name) is bored s/he eats more</string>
-    <string name="c310a"> Never or Almost Never</string>
+    <string name="c310"> C310:\t When (child name) is bored s/he eats more </string>
+    <string name="c310a"> Never or Almost Never </string>
     <string name="c310b"> Sometimes </string>
     <string name="c310c"> Usually or Always </string>
-    <string name="c311"> C311:\t (child name) eats between meals even when s/he is not hungry</string>
-    <string name="c311a"> Never or Almost Never</string>
+
+    <string name="c311"> C311:\t (child name) eats between meals even when s/he is not hungry </string>
+    <string name="c311a"> Never or Almost Never </string>
     <string name="c311b"> Sometimes </string>
     <string name="c311c"> Usually or Always </string>
-    <string name="c312"> C312:\t Does your (child name) now take vitamins?</string>
-    <string name="c312a"> Yes</string>
-    <string name="c312b"> No</string>
-    <string name="c312c"> Dont Know</string>
-    <string name="c313"> C313:\t What type?                                   </string>
+
+    <string name="c312"> C312:\t Does your (child name) now take vitamins ? </string>
+    <string name="c312a"> Yes </string>
+    <string name="c312b"> No </string>
+    <string name="c312c"> Don\'t Know </string>
+
+    <string name="c313"> C313:\t What type ? </string>
     <string name="c313a"> Multivitamin </string>
     <string name="c313b"> Single vitamin or mineral pill </string>
-    <string name="c314"> C314:\t How many does your (child name) take per week? </string>
-    <string name="c314a"> 1 &#8211; 2</string>
-    <string name="c314b"> 3 &#8211;  5</string>
-    <string name="c314c"> 6 &#8211; 9</string>
-    <string name="c314d"> 10 or more</string>
+
+    <string name="c314"> C314:\t How many does your (child name) take per week ? </string>
+    <string name="c314a"> 1 &#8211; 2 </string>
+    <string name="c314b"> 3 &#8211;  5 </string>
+    <string name="c314c"> 6 &#8211; 9 </string>
+    <string name="c314d"> 10 or more </string>
 
     <string name="tc4heading">SECTION C4: SCHOOLING </string>
-    <string name="c401"> C401:\t Have (child name) ever attended school? If no, probe.</string>
+    <string name="c401"> C401:\t Have (child name) ever attended school? If no, probe. </string>
     <string name="c401a"> Yes </string>
-    <string name="c401b"> No  </string>
-    <string name="c402"> C402:\t Why (child name) didn’t attend school?    [Multiple responses]</string>
+    <string name="c401b"> No </string>
+
+    <string name="c402"> C402:\t Why (child name) didn’t attend school ? </string>
     <string name="c402a"> Domestic household chores unpaid (e.g. child care, washing etc.) </string>
     <string name="c402b"> Child work for household unpaid (e.g. farming, family business) </string>
-    <string name="c402c"> Child work for cash or food (e.g. casual work, petty trade, begging etc.)</string>
+    <string name="c402c"> Child work for cash or food (e.g. casual work, petty trade, begging etc.) </string>
     <string name="c402d"> Early girl marriage </string>
-    <string name="c402e"> No girl school/no female teacher available</string>
-    <string name="c402f"> No boarding school available</string>
-    <string name="c402g"> Not interested</string>
-    <string name="c402h"> Not applicable</string>
-    <string name="c402x"> Other specify </string>
-    <string name="c403"> C403:\t What type of school does (child name) attend? </string>
-    <string name="c403a"> Private   </string>
-    <string name="c403b"> Public. </string>
+    <string name="c402e"> No girl school/no female teacher available </string>
+    <string name="c402f"> No boarding school available </string>
+    <string name="c402g"> Not Interested </string>
+    <string name="c402h"> Not Applicable </string>
+    <string name="c402x"> Other Specify </string>
+
+    <string name="c403"> C403:\t What type of school does (child name) attend ? </string>
+    <string name="c403a"> Private </string>
+    <string name="c403b"> Public </string>
     <string name="c403c"> Madrassa </string>
-    <string name="c403d"> Trust (NGO)</string>
-    <string name="c403x"> Other specify</string>
+    <string name="c403d"> Trust (NGO )</string>
+    <string name="c403x"> Other specify </string>
+
     <string name="c404"> C404:\t Does (child name) currently attend school ?</string>
-    <string name="c404a"> Yes</string>
+    <string name="c404a"> Yes </string>
     <string name="c404b"> No </string>
-    <string name="c405"> C405:\t In which calendar year did (child name) last attend school?</string>
-    <string name="c405a"> Year</string>
-    <string name="c405b"> Don’t Know</string>
-    <string name="c406"> C406:\t In which calendar year did (child name) last attend school?</string>
-    <string name="c406a"> Year</string>
-    <string name="c406b"> Don’t Know</string>
-    <string name="c407"> c407:\t What is the highest class that (child name) has completed?    Grade/Class</string>
-    <string name="c408"> c408:\t Did (child name) miss school for at least 1 month in the last year?  </string>
-    <string name="c408a"> Yes</string>
+
+    <string name="c405"> C405:\t In which calendar year did (child name) last attend school ? </string>
+    <string name="c405a"> Year </string>
+    <string name="c405b"> Don’t Know </string>
+
+    <string name="c406"> C406:\t How old were your (child name) when s/he stopped attending school ? </string>
+    <string name="c406a"> Years Old </string>
+    <string name="c406b"> Don’t Know </string>
+
+    <string name="c407"> C407:\t What is the highest class that (child name) has completed ? </string>
+    <string name="c407a"> Grade / Class </string>
+
+    <string name="c408"> C408:\t Did (child name) miss school for at least 1 month in the last year ?  </string>
+    <string name="c408a"> Yes </string>
     <string name="c408b"> No </string>
-    <string name="c409"> C409:\t What was the main reason (child name) did not attend school regularly?</string>
+
+    <string name="c409"> C409:\t What was the main reason (child name) did not attend school regularly ? </string>
     <string name="c409a"> Domestic household chores unpaid (e.g. child care, washing etc.) </string>
     <string name="c409b"> Child work for household unpaid (e.g. farming, family business) </string>
-    <string name="c409c">  Child work for cash or food (e.g. casual work, petty trade, begging etc.)</string>
+    <string name="c409c"> Child work for cash or food (e.g. casual work, petty trade, begging etc.) </string>
     <string name="c409d"> Early girl marriage </string>
-    <string name="c409e"> No girl school/no female teacher available</string>
-    <string name="c409f"> No boarding school available</string>
-    <string name="c409g"> Not interested</string>
-    <string name="c409h"> Not applicable</string>
+    <string name="c409e"> No girl school/no female teacher available </string>
+    <string name="c409f"> No boarding school available </string>
+    <string name="c409g"> Not Interested </string>
+    <string name="c409h"> Not Applicable </string>
     <string name="c409x"> Other specify </string>
+
     <string name="c410"> C410:\t What is the main language of instruction at this school?</string>
     <string name="c410a"> English </string>
     <string name="c410b"> Urdu </string>
     <string name="c410c"> Sindhi </string>
     <string name="c410x"> Other specify</string>
-    <string name="c411"> C411:\t During the school year, on how many days in a week did (child name) walk or ride a bicycle to and from school?</string>
+
+    <string name="c411"> C411:\t During the school year, on how many days in a week did (child name) walk or ride a bicycle to and from school ? </string>
     <string name="c411a"> 0 days </string>
     <string name="c411b"> 1 day</string>
     <string name="c411c"> 2 days </string>
@@ -1396,6 +1411,7 @@
     <string name="c411e"> 4 days </string>
     <string name="c411f"> 5 days </string>
     <string name="c411g"> 6 days </string>
+
     <string name="c412"> C412:\t During the school year, how long did it usually take for (child name) to get to and from school each day? Add up the time you spend going to and coming home from school.</string>
     <string name="c412a"> Less than 10 minutes per day</string>
     <string name="c412b"> 10 &#8211; 19 minutes per day </string>
@@ -1404,12 +1420,15 @@
     <string name="c412e"> 40 &#8211; 49 minutes per day </string>
     <string name="c412f"> 50 &#8211; 59 minutes per day  </string>
     <string name="c412g"> 60 or more minutes per day</string>
+
     <string name="c413"> C413:\t Is there a source of clean water for drinking at school?</string>
     <string name="c413a"> Yes</string>
     <string name="c413b"> No </string>
+
     <string name="c414"> C414:\t Are there toilets available at school?</string>
     <string name="c414a"> Yes</string>
     <string name="c414b"> No </string>
+
     <string name="c415"> C415:\t Does (child name) work (paid or unpaid)?</string>
     <string name="c415a"> Domestic (not in own home)</string>
     <string name="c415b"> Agriculture, gardening</string>
@@ -1419,7 +1438,7 @@
     <string name="c415x"> Other specify</string>
 
     <string name="tc5heading">SECTION C5: LIFESTYLE AND PHYSICAL ACTIVITY </string>
-    <string name="c501_title"> C501_title:\t PART A: IN &#8211; SCHOOL</string>
+    <string name="c501_title"> PART A: IN &#8211; SCHOOL</string>
     <string name="c501"> C501:\t On a school day, how many hours on average does (child name) watch TV?</string>
     <string name="c501a"> None </string>
     <string name="c501b"> &lt;1 hour </string>

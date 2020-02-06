@@ -15,8 +15,8 @@
         style="@style/i_scrollview"
         android:fadeScrollbars="false"
         android:fillViewport="true"
-        android:scrollbarSize="10dip"
         android:layoutDirection="ltr"
+        android:scrollbarSize="10dip"
         tools:context=".ui.Myactivity">
 
         <LinearLayout
@@ -41,20 +41,27 @@
 
                     <RadioGroup
                         android:id="@+id/c401"
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent">
+                        style="@style/radiogroup"
+                        android:orientation="horizontal">
 
                         <RadioButton
                             android:id="@+id/c401a"
                             style="@style/radiobutton"
-                            android:text="@string/c401a" />
+                            android:layout_width="0dp"
+                            android:layout_weight="1"
+                            android:text="@string/yes" />
 
                         <RadioButton
                             android:id="@+id/c401b"
                             style="@style/radiobutton"
-                            android:text="@string/c401b" />
+                            android:layout_width="0dp"
+                            android:layout_weight="1"
+                            android:text="@string/no" />
+
                     </RadioGroup>
+
                 </LinearLayout>
+
             </androidx.cardview.widget.CardView>
 
             <!-- c402  CheckBox   -->
@@ -82,36 +89,50 @@
                         <CheckBox
                             android:id="@+id/c402a"
                             style="@style/checkbox"
+                            android:checked='@{c402h.checked? false : false }'
+                            android:enabled='@{c402h.checked? false : true }'
                             android:text="@string/c402a" />
 
                         <CheckBox
                             android:id="@+id/c402b"
                             style="@style/checkbox"
+                            android:checked='@{c402h.checked? false : false }'
+                            android:enabled='@{c402h.checked? false : true }'
                             android:text="@string/c402b" />
 
                         <CheckBox
                             android:id="@+id/c402c"
                             style="@style/checkbox"
+                            android:checked='@{c402h.checked? false : false }'
+                            android:enabled='@{c402h.checked? false : true }'
                             android:text="@string/c402c" />
 
                         <CheckBox
                             android:id="@+id/c402d"
                             style="@style/checkbox"
+                            android:checked='@{c402h.checked? false : false }'
+                            android:enabled='@{c402h.checked? false : true }'
                             android:text="@string/c402d" />
 
                         <CheckBox
                             android:id="@+id/c402e"
                             style="@style/checkbox"
+                            android:checked='@{c402h.checked? false : false }'
+                            android:enabled='@{c402h.checked? false : true }'
                             android:text="@string/c402e" />
 
                         <CheckBox
                             android:id="@+id/c402f"
                             style="@style/checkbox"
+                            android:checked='@{c402h.checked? false : false }'
+                            android:enabled='@{c402h.checked? false : true }'
                             android:text="@string/c402f" />
 
                         <CheckBox
                             android:id="@+id/c402g"
                             style="@style/checkbox"
+                            android:checked='@{c402h.checked? false : false }'
+                            android:enabled='@{c402h.checked? false : true }'
                             android:text="@string/c402g" />
 
                         <CheckBox
@@ -120,21 +141,24 @@
                             android:text="@string/c402h" />
 
                         <CheckBox
-                            android:id="@+id/c402x"
+                            android:id="@+id/c40296"
                             style="@style/checkbox"
-                            android:text="@string/c402x" />
+                            android:checked='@{c402h.checked? false : false }'
+                            android:enabled='@{c402h.checked? false : true }'
+                            android:text="@string/other" />
 
                         <EditText
-                            android:id="@+id/c402xt"
-                            style="@style/radiobutton"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:hint="@string/c402x"
-                            android:tag="c402x"
-                            android:text='@{c402x.checked? c402xt.getText().toString() : ""}'
-                            android:visibility='@{c402x.checked? View.VISIBLE : View.GONE}' />
+                            android:id="@+id/c40296x"
+                            style="@style/EditTextAlpha"
+                            android:hint="@string/specify"
+                            android:tag="c40296"
+                            android:text='@{c40296.checked? c40296x.getText().toString() : ""}'
+                            android:visibility='@{c40296.checked? View.VISIBLE : View.GONE}' />
+
                     </LinearLayout>
+
                 </LinearLayout>
+
             </androidx.cardview.widget.CardView>
 
             <!-- c403  Radio   -->
@@ -153,8 +177,7 @@
 
                     <RadioGroup
                         android:id="@+id/c403"
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent">
+                        style="@style/radiogroup">
 
                         <RadioButton
                             android:id="@+id/c403a"
@@ -177,11 +200,21 @@
                             android:text="@string/c403d" />
 
                         <RadioButton
-                            android:id="@+id/c403x"
+                            android:id="@+id/c40396"
                             style="@style/radiobutton"
-                            android:text="@string/c403x" />
+                            android:text="@string/other" />
+
+                        <EditText
+                            android:id="@+id/c40396x"
+                            style="@style/EditTextAlpha"
+                            android:hint="@string/specify"
+                            android:text='@{c40396.checked? c40396x.getText().toString() : "" }'
+                            android:visibility='@{c40396.checked? View.VISIBLE : View.GONE }' />
+
                     </RadioGroup>
+
                 </LinearLayout>
+
             </androidx.cardview.widget.CardView>
 
             <!-- c404  Radio   -->
@@ -200,20 +233,27 @@
 
                     <RadioGroup
                         android:id="@+id/c404"
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent">
+                        style="@style/radiogroup"
+                        android:orientation="horizontal">
 
                         <RadioButton
                             android:id="@+id/c404a"
                             style="@style/radiobutton"
+                            android:layout_width="0dp"
+                            android:layout_weight="1"
                             android:text="@string/c404a" />
 
                         <RadioButton
                             android:id="@+id/c404b"
                             style="@style/radiobutton"
+                            android:layout_width="0dp"
+                            android:layout_weight="1"
                             android:text="@string/c404b" />
+
                     </RadioGroup>
+
                 </LinearLayout>
+
             </androidx.cardview.widget.CardView>
 
 
@@ -238,29 +278,36 @@
                             style="@style/i_textview"
                             android:text="@string/c405" />
 
-                        <TextView
-                            style="@style/i_textview"
-                            android:text="@string/c405a" />
-
-                        <com.edittextpicker.aliazaz.EditTextPicker
-                            android:id="@+id/c405a"
-                            style="@style/EditTextAlphaNumeric"
+                        <LinearLayout
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:hint="@string/c405a"
-                            android:inputType="number"
-                            app:mask="##"
-                            app:maxValue="10"
-                            app:minValue="1"
-                            android:enabled='@{c405b.checked? false : true}'
-                            android:text='@{c405b.checked ? "" : c405a.getText().toString()}'
-                            app:type="range" />
+                            android:orientation="horizontal">
 
-                        <CheckBox
-                            android:id="@+id/c405b"
-                            style="@style/checkbox"
-                            android:text="@string/c405b" />
+                            <com.edittextpicker.aliazaz.EditTextPicker
+                                android:id="@+id/c405"
+                                style="@style/EditTextNum"
+                                android:layout_width="0dp"
+                                android:layout_weight="1"
+                                android:enabled='@{c40598.checked ? false : true}'
+                                android:hint="@string/c405a"
+                                android:maxLength="4"
+                                android:text='@{c40598.checked ? "" : c405a.getText().toString()}'
+                                app:maxValue="2020"
+                                app:minValue="1970"
+                                app:type="range" />
+
+                            <CheckBox
+                                android:id="@+id/c40598"
+                                style="@style/checkbox"
+                                android:layout_width="0dp"
+                                android:layout_weight="1"
+                                android:tag="-1"
+                                android:text="@string/dkn" />
+
+                        </LinearLayout>
+
                     </LinearLayout>
+
                 </androidx.cardview.widget.CardView>
 
                 <!-- c406  Title   -->
@@ -277,30 +324,36 @@
                             style="@style/i_textview"
                             android:text="@string/c406" />
 
-                        <TextView
-                            style="@style/i_textview"
-                            android:text="@string/c406a" />
-
-                        <com.edittextpicker.aliazaz.EditTextPicker
-                            android:id="@+id/c406a"
-                            style="@style/EditTextAlphaNumeric"
+                        <LinearLayout
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
+                            android:orientation="horizontal">
+
+                        <com.edittextpicker.aliazaz.EditTextPicker
+                            android:id="@+id/c406"
+                            style="@style/EditTextNum"
+                            android:layout_width="0dp"
+                            android:layout_weight="1"
                             android:hint="@string/c406a"
-                            android:inputType="number"
-                            app:mask="##"
+                            android:enabled='@{c40698.checked ? false : true }'
                             app:maxValue="10"
                             app:minValue="1"
-                            android:enabled='@{c406b.checked? false : true}'
-                            android:text='@{c406b.checked ? "" : c406a.getText().toString()}'
+                            android:maxLength="2"
+                            android:text='@{c40698.checked ? "" : c406a.getText().toString() }'
                             app:type="range" />
 
                         <CheckBox
-                            android:id="@+id/c406b"
+                            android:id="@+id/c40698"
                             style="@style/checkbox"
+                            android:layout_width="0dp"
+                            android:layout_weight="1"
+                            android:tag="-1"
                             android:text="@string/c406b" />
 
+                        </LinearLayout>
+
                     </LinearLayout>
+
                 </androidx.cardview.widget.CardView>
 
             </LinearLayout>
@@ -322,16 +375,15 @@
 
                     <com.edittextpicker.aliazaz.EditTextPicker
                         android:id="@+id/c407"
-                        style="@style/EditTextAlphaNumeric"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:hint="@string/c407"
-                        android:inputType="number"
-                        app:mask="##"
-                        app:maxValue="0"
-                        app:minValue="0"
+                        style="@style/EditTextNum"
+                        android:hint="@string/c407a"
+                        android:maxLength="2"
+                        app:maxValue="12"
+                        app:minValue="1"
                         app:type="range" />
+
                 </LinearLayout>
+
             </androidx.cardview.widget.CardView>
 
             <!-- c408  Radio   -->
@@ -350,20 +402,27 @@
 
                     <RadioGroup
                         android:id="@+id/c408"
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent">
+                        style="@style/radiogroup"
+                        android:orientation="horizontal">
 
                         <RadioButton
                             android:id="@+id/c408a"
                             style="@style/radiobutton"
-                            android:text="@string/c408a" />
+                            android:layout_width="0dp"
+                            android:layout_weight="1"
+                            android:text="@string/yes" />
 
                         <RadioButton
                             android:id="@+id/c408b"
                             style="@style/radiobutton"
-                            android:text="@string/c408b" />
+                            android:layout_width="0dp"
+                            android:layout_weight="1"
+                            android:text="@string/no" />
+
                     </RadioGroup>
+
                 </LinearLayout>
+
             </androidx.cardview.widget.CardView>
 
             <!-- c409  Radio   -->
@@ -383,8 +442,7 @@
 
                     <RadioGroup
                         android:id="@+id/c409"
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent">
+                        style="@style/radiogroup">
 
                         <RadioButton
                             android:id="@+id/c409a"
@@ -427,11 +485,21 @@
                             android:text="@string/c409h" />
 
                         <RadioButton
-                            android:id="@+id/c409x"
+                            android:id="@+id/c40996"
                             style="@style/radiobutton"
-                            android:text="@string/c409x" />
+                            android:text="@string/other" />
+
+                        <EditText
+                            android:id="@+id/c40996x"
+                            style="@style/EditTextAlpha"
+                            android:hint="@string/specify"
+                            android:text='@{c40996.checked ? c40996x.getText().toString() : "" }'
+                            android:visibility='@{c40996.checked ? View.VISIBLE : View.GONE }' />
+
                     </RadioGroup>
+
                 </LinearLayout>
+
             </androidx.cardview.widget.CardView>
 
             <!-- c410  Radio   -->
@@ -450,30 +518,48 @@
 
                     <RadioGroup
                         android:id="@+id/c410"
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent">
+                        style="@style/radiogroup"
+                        android:orientation="horizontal">
 
                         <RadioButton
                             android:id="@+id/c410a"
                             style="@style/radiobutton"
+                            android:layout_width="0dp"
+                            android:layout_weight="1"
                             android:text="@string/c410a" />
 
                         <RadioButton
                             android:id="@+id/c410b"
                             style="@style/radiobutton"
+                            android:layout_width="0dp"
+                            android:layout_weight="1"
                             android:text="@string/c410b" />
 
                         <RadioButton
                             android:id="@+id/c410c"
                             style="@style/radiobutton"
+                            android:layout_width="0dp"
+                            android:layout_weight="1"
                             android:text="@string/c410c" />
 
                         <RadioButton
-                            android:id="@+id/c410x"
+                            android:id="@+id/c41096"
                             style="@style/radiobutton"
-                            android:text="@string/c410x" />
+                            android:layout_width="0dp"
+                            android:layout_weight="1"
+                            android:text="@string/other" />
+
                     </RadioGroup>
+
+                    <EditText
+                        android:id="@+id/c41096x"
+                        style="@style/EditTextAlpha"
+                        android:hint="@string/specify"
+                        android:text='@{c41096.checked ? c41096x.getText().toString() : "" }'
+                        android:visibility='@{c41096.checked ? View.VISIBLE : View.GONE }' />
+
                 </LinearLayout>
+
             </androidx.cardview.widget.CardView>
 
             <!-- c411  Radio   -->
@@ -492,8 +578,7 @@
 
                     <RadioGroup
                         android:id="@+id/c411"
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent">
+                        style="@style/radiogroup">
 
                         <RadioButton
                             android:id="@+id/c411a"
@@ -529,8 +614,11 @@
                             android:id="@+id/c411g"
                             style="@style/radiobutton"
                             android:text="@string/c411g" />
+
                     </RadioGroup>
+
                 </LinearLayout>
+
             </androidx.cardview.widget.CardView>
 
             <!-- c412  Radio   -->
@@ -549,8 +637,7 @@
 
                     <RadioGroup
                         android:id="@+id/c412"
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent">
+                        style="@style/radiogroup">
 
                         <RadioButton
                             android:id="@+id/c412a"
@@ -586,8 +673,11 @@
                             android:id="@+id/c412g"
                             style="@style/radiobutton"
                             android:text="@string/c412g" />
+
                     </RadioGroup>
+
                 </LinearLayout>
+
             </androidx.cardview.widget.CardView>
 
             <!-- c413  Radio   -->
@@ -606,20 +696,27 @@
 
                     <RadioGroup
                         android:id="@+id/c413"
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent">
+                        style="@style/radiogroup"
+                        android:orientation="horizontal">
 
                         <RadioButton
                             android:id="@+id/c413a"
                             style="@style/radiobutton"
-                            android:text="@string/c413a" />
+                            android:layout_width="0dp"
+                            android:layout_weight="1"
+                            android:text="@string/yes" />
 
                         <RadioButton
                             android:id="@+id/c413b"
                             style="@style/radiobutton"
-                            android:text="@string/c413b" />
+                            android:layout_width="0dp"
+                            android:layout_weight="1"
+                            android:text="@string/no" />
+
                     </RadioGroup>
+
                 </LinearLayout>
+
             </androidx.cardview.widget.CardView>
 
             <!-- c414  Radio   -->
@@ -638,20 +735,27 @@
 
                     <RadioGroup
                         android:id="@+id/c414"
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent">
+                        style="@style/radiogroup"
+                        android:orientation="horizontal">
 
                         <RadioButton
                             android:id="@+id/c414a"
                             style="@style/radiobutton"
-                            android:text="@string/c414a" />
+                            android:layout_width="0dp"
+                            android:layout_weight="1"
+                            android:text="@string/yes" />
 
                         <RadioButton
                             android:id="@+id/c414b"
                             style="@style/radiobutton"
-                            android:text="@string/c414b" />
+                            android:layout_width="0dp"
+                            android:layout_weight="1"
+                            android:text="@string/no" />
+
                     </RadioGroup>
+
                 </LinearLayout>
+
             </androidx.cardview.widget.CardView>
 
             <!-- c415  Radio   -->
@@ -670,8 +774,7 @@
 
                     <RadioGroup
                         android:id="@+id/c415"
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent">
+                        style="@style/radiogroup">
 
                         <RadioButton
                             android:id="@+id/c415a"
@@ -699,9 +802,16 @@
                             android:text="@string/c415e" />
 
                         <RadioButton
-                            android:id="@+id/c415x"
+                            android:id="@+id/c41596"
                             style="@style/radiobutton"
-                            android:text="@string/c415x" />
+                            android:text="@string/other" />
+
+                        <EditText
+                            android:id="@+id/c41596x"
+                            style="@style/EditTextAlpha"
+                            android:hint="@string/specify"
+                            android:text='@{c41596.checked ? c41596x.getText().toString() : "" }'
+                            android:visibility='@{c41596.checked ? View.VISIBLE : View.GONE }' />
 
                     </RadioGroup>
 
@@ -710,30 +820,31 @@
             </androidx.cardview.widget.CardView>
 
 
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="end"
-                    android:layout_marginTop="20dp"
-                    android:orientation="horizontal">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="end"
+                android:layout_marginTop="20dp"
+                android:orientation="horizontal">
 
-                    <Button
-                        android:id="@+id/btnEnd"
-                        style="@style/buttons_bottom"
-                        android:background="@android:color/holo_orange_light"
-                        android:onClick="@{() -> callback.BtnEnd()}"
-                        android:text="@string/end_interview" />
+                <Button
+                    android:id="@+id/btnEnd"
+                    style="@style/buttons_bottom"
+                    android:background="@android:color/holo_orange_light"
+                    android:onClick="@{() -> callback.BtnEnd()}"
+                    android:text="@string/end_interview" />
 
-                    <Button
-                        android:id="@+id/btnNext"
-                        style="@style/buttons_bottom"
-                        android:background="@android:color/holo_blue_dark"
-                        android:onClick="@{() -> callback.BtnContinue()}"
-                        android:text="@string/nextSection" />
-
-                </LinearLayout>
+                <Button
+                    android:id="@+id/btnNext"
+                    style="@style/buttons_bottom"
+                    android:background="@android:color/holo_blue_dark"
+                    android:onClick="@{() -> callback.BtnContinue()}"
+                    android:text="@string/nextSection" />
 
             </LinearLayout>
+
+        </LinearLayout>
+
     </ScrollView>
 
 </layout>
