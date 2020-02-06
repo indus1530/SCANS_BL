@@ -131,9 +131,10 @@ public class SectionD2Activity extends AppCompatActivity {
                         bi.d206b.isChecked() ? "2" :
                                 bi.d206c.isChecked() ? "3" :
                                         bi.d206d.isChecked() ? "4" :
-                                                bi.d206x.isChecked() ? "96" :
+                                                bi.d20696.isChecked() ? "96" :
                                                         "0");
-        json.put("d206xt", bi.d206xt.getText().toString());
+        json.put("d20696x", bi.d20696x.getText().toString());
+
         json.put("d206sub",
                 bi.d206suba.isChecked() ? "1" :
                         bi.d206subb.isChecked() ? "2" :
