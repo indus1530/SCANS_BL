@@ -26,6 +26,7 @@ import edu.aku.hassannaqvi.uen_scans_bl.core.DatabaseHelper;
 import edu.aku.hassannaqvi.uen_scans_bl.core.MainApp;
 import edu.aku.hassannaqvi.uen_scans_bl.databinding.ActivitySectionA1Binding;
 import edu.aku.hassannaqvi.uen_scans_bl.utils.Util;
+import edu.aku.hassannaqvi.uen_scans_bl.validator.ClearClass;
 
 public class SectionA1Activity extends AppCompatActivity {
 
@@ -93,6 +94,29 @@ public class SectionA1Activity extends AppCompatActivity {
 
             }
         });
+
+        bi.a113.setOnCheckedChangeListener(((radioGroup, i) -> {
+
+            if (i == bi.a113a.getId()) {
+                bi.fldGrpCVa114.setVisibility(View.VISIBLE);
+                bi.fldGrpCVa115.setVisibility(View.VISIBLE);
+                bi.fldGrpCVa116.setVisibility(View.VISIBLE);
+                bi.fldGrpCVa117.setVisibility(View.VISIBLE);
+                bi.fldGrpCVa118.setVisibility(View.VISIBLE);
+            } else {
+                ClearClass.ClearAllFields(bi.fldGrpCVa114, null);
+                ClearClass.ClearAllFields(bi.fldGrpCVa115, null);
+                ClearClass.ClearAllFields(bi.fldGrpCVa116, null);
+                ClearClass.ClearAllFields(bi.fldGrpCVa117, null);
+                ClearClass.ClearAllFields(bi.fldGrpCVa118, null);
+                bi.fldGrpCVa114.setVisibility(View.GONE);
+                bi.fldGrpCVa115.setVisibility(View.GONE);
+                bi.fldGrpCVa116.setVisibility(View.GONE);
+                bi.fldGrpCVa117.setVisibility(View.GONE);
+                bi.fldGrpCVa118.setVisibility(View.GONE);
+            }
+
+        }));
 
 
         bi.a115.addTextChangedListener(new TextWatcher() {

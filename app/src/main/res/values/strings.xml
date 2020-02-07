@@ -441,6 +441,10 @@
     <string name="a305p"> Wood planks / shingles </string>
     <string name="a305x"> Other specify  </string>
 
+    <string name="a306aa"> A306A:\t Piped water Municipal Community Water Connection </string>
+    <string name="a306aaa"> Yes </string>
+    <string name="a306aab"> No </string>
+
     <string name="a306"> A306:\t What is the main source of drinking water for members of your household ? </string>
     <string name="a306ah"> Piped water </string>
     <string name="a306a"> Piped into dwelling </string>
@@ -461,11 +465,11 @@
     <string name="a306n"> Bottled water </string>
     <string name="a306x"> Other specify </string>
 
-    <string name="a306aa"> A306aa:\t What is the main source of drinking water for members of your household? Municipal Community Water Connection </string>
-    <string name="a306aaa"> Yes</string>
-    <string name="a306aab"> No</string>
+    <string name="a307aa"> A307A:\t Piped water Municipal Community Water Connection </string>
+    <string name="a307aaa"> Yes </string>
+    <string name="a307aab"> No </string>
 
-    <string name="a307"> A307:\t What is the main source of drinking water for members of your household ? </string>
+    <string name="a307"> A307:\t What is the main source of water used by your household for other purposes such as cooking and hand washing ? </string>
     <string name="a307ah"> Piped water </string>
     <string name="a307a"> Piped into dwelling </string>
     <string name="a307b"> Piped to yard / plot </string>
@@ -485,10 +489,6 @@
     <string name="a307n"> Bottled water  </string>
     <string name="a307x"> Other specify  </string>
 
-    <string name="a307aa"> A307aa:\t What is the main source of water used by your household for other purposes such as cooking and hand washing? Municipal Community Water Connection</string>
-    <string name="a307aaa"> Yes</string>
-    <string name="a307aab"> No</string>
->>>>>>> Stashed changes
     <string name="a308"> A308:\t Where is that water source located?</string>
     <string name="a308a"> In own dwelling </string>
     <string name="a308b"> In own yard / plot out of dwelling </string>
@@ -498,7 +498,7 @@
     <string name="a309a"> Number of minutes </string>
     <string name="a30998"> Don\'t Know </string>
 
-    <string name="a310"> A310:\t Who usually goes to this source to collect water for the household? Is this person under age 15? What sex?</string>
+    <string name="a310"> A310:\t Who usually goes to this source to collect water for the household? Is this person under age 15? What sex ? </string>
     <string name="a310a"> Adult woman (age 15+ years) </string>
     <string name="a310b"> Adult man (age 15+ years) </string>
     <string name="a310c"> Female child (under 15) </string>
