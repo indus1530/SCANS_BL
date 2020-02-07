@@ -398,24 +398,24 @@
     <string name="a303k"> Lime </string>
     <string name="a303x"> Other specify</string>
 
-    <string name="a304"> A304:\t Main material of the roof RECORD OBSERVATION</string>
+    <string name="a304"> A304:\t Main material of the roof RECORD OBSERVATION </string>
     <string name="a304hint1"> Natural Roofing </string>
     <string name="a304a"> No roof </string>
-    <string name="a304b"> Thatch/palm leaf</string>
+    <string name="a304b"> Thatch / palm leaf </string>
     <string name="a304c"> Sod </string>
     <string name="a304hint2"> Rudimentary Roofing </string>
     <string name="a304d"> Rustic mat </string>
-    <string name="a304e"> Palm/Bamboo </string>
+    <string name="a304e"> Palm / Bamboo </string>
     <string name="a304f"> Wood planks </string>
-    <string name="a304g"> Cardboard</string>
+    <string name="a304g"> Cardboard </string>
+    <string name="a304h"> Cloth / Tent </string>
     <string name="a304hint3"> Finished Roofing </string>
-    <string name="a304h"> Cloth/Tent</string>
-    <string name="a304i"> Metal/Tin/CGI </string>
+    <string name="a304i"> Metal / Tin / CGI </string>
     <string name="a304j"> Wood </string>
     <string name="a304k"> Calamine / Cement fiber </string>
-    <string name="a304l"> Ceramic tiles</string>
+    <string name="a304l"> Ceramic tiles </string>
     <string name="a304m"> Cement RCC </string>
-    <string name="a304n"> Roofing shingles</string>
+    <string name="a304n"> Roofing shingles </string>
     <string name="a304o"> Bricks </string>
     <string name="a304x"> Other specify </string>
 
