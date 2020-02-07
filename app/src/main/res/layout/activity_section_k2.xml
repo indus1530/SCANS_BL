@@ -59,7 +59,7 @@
                         android:orientation="vertical">
 
                         <TextView
-                            style="@style/HeadingTitle"
+                            style="@style/textView3Head"
                             android:text="@string/tk2headinghint1" />
 
                     </LinearLayout>
