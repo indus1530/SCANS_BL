@@ -331,7 +331,7 @@
                             <EditText
                                 android:id="@+id/a109"
                                 style="@style/EditTextAlpha"
-                                android:hint="@string/a109"
+                                android:hint="@string/name"
                                 android:textColor="@android:color/black" />
 
                         </LinearLayout>
@@ -355,7 +355,7 @@
                             <EditText
                                 android:id="@+id/a110"
                                 style="@style/EditTextAlphaNumeric"
-                                android:hint="@string/a110"
+                                android:hint="@string/name"
                                 android:textColor="@android:color/black" />
 
                         </LinearLayout>
@@ -379,7 +379,7 @@
                             <EditText
                                 android:id="@+id/a111"
                                 style="@style/EditTextAlphaNumeric"
-                                android:hint="@string/a111"
+                                android:hint="@string/name"
                                 android:textColor="@android:color/black" />
 
                         </LinearLayout>
@@ -462,11 +462,14 @@
                                 style="@style/i_textview"
                                 android:text="@string/a115" />
 
-                            <EditText
+                            <com.edittextpicker.aliazaz.EditTextPicker
                                 android:id="@+id/a115"
                                 style="@style/EditTextNum"
+                                android:hint="@string/num"
                                 android:maxLength="2"
-                                android:hint="@string/num" />
+                                app:maxValue="99"
+                                app:minValue="5"
+                                app:type="range" />
 
                         </LinearLayout>
 

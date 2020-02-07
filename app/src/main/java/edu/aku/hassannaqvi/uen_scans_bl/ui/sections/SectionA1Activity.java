@@ -134,14 +134,25 @@ public class SectionA1Activity extends AppCompatActivity {
 
             @Override
             public void afterTextChanged(Editable s) {
-
-
+                if (bi.a115.getText().hashCode() == s.hashCode()) {
+                    if (bi.a115.getText().toString().trim().length() > 0 && Integer.parseInt(bi.a115.getText().toString().trim()) < 18) {
+                        ClearClass.ClearAllFields(bi.fldGrpCVa116, null);
+                        ClearClass.ClearAllFields(bi.fldGrpCVa117, null);
+                        ClearClass.ClearAllFields(bi.fldGrpCVa118, null);
+                        bi.fldGrpCVa116.setVisibility(View.GONE);
+                        bi.fldGrpCVa117.setVisibility(View.GONE);
+                        bi.fldGrpCVa118.setVisibility(View.GONE);
+                    } else {
+                        bi.fldGrpCVa116.setVisibility(View.VISIBLE);
+                        bi.fldGrpCVa117.setVisibility(View.VISIBLE);
+                        bi.fldGrpCVa118.setVisibility(View.VISIBLE);
+                    }
+                }
             }
         });
 
-
-
     }
+
 
 
     public void BtnContinue() {
@@ -153,10 +164,10 @@ public class SectionA1Activity extends AppCompatActivity {
             }
             if (UpdateDB()) {
                 finish();
-                if (bi.a113a.isChecked()) {
-                    startActivity(new Intent(this, SectionA2Activity.class));
-                } else {
+                if (bi.a113b.isChecked() || (bi.a115.getText().toString().trim().length() > 0 && Integer.parseInt(bi.a115.getText().toString().trim()) < 18)) {
                     startActivity(new Intent(this, EndingActivity.class).putExtra("complete", true));
+                } else {
+                    startActivity(new Intent(this, SectionA2Activity.class));
                 }
             } else {
                 Toast.makeText(this, "Failed to Update Database!", Toast.LENGTH_SHORT).show();

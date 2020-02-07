@@ -248,9 +248,9 @@
     <string name="a113a"> Yes </string>
     <string name="a113b"> No</string>
 
-    <string name="a114"> A114:\t Name of the Respondent</string>
+    <string name="a114"> A114:\t Name of the Respondent </string>
 
-    <string name="a115"> A115:\t Age of Respondent in completed </string>
+    <string name="a115"> A115:\t Age of Respondent in completed years </string>
 
     <string name="a116"> A116:\t Does your HH Have a child aged 5 &#8211; 10 Years ? </string>
     <string name="a116a"> Yes </string>
