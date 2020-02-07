@@ -336,14 +336,14 @@
                             style="@style/radiobutton"
                             android:text="@string/a304g" />
 
-                        <TextView
-                            style="@style/i_textviewhint"
-                            android:text="@string/a304hint3" />
-
                         <RadioButton
                             android:id="@+id/a304h"
                             style="@style/radiobutton"
                             android:text="@string/a304h" />
+
+                        <TextView
+                            style="@style/i_textviewhint"
+                            android:text="@string/a304hint3" />
 
                         <RadioButton
                             android:id="@+id/a304i"
@@ -764,14 +764,14 @@
                             style="@style/radiobutton"
                             android:text="@string/a307d" />
 
-                        <TextView
-                            style="@style/i_textviewhint"
-                            android:text="@string/a307eh" />
-
                         <RadioButton
                             android:id="@+id/a307e"
                             style="@style/radiobutton"
                             android:text="@string/a307e" />
+
+                        <TextView
+                            style="@style/i_textviewhint"
+                            android:text="@string/a307eh" />
 
                         <RadioButton
                             android:id="@+id/a307f"
