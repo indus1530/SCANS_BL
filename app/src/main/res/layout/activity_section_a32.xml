@@ -1967,10 +1967,10 @@
                             android:id="@+id/a331x"
                             style="@style/EditTextNum"
                             android:hint="@string/rupees"
-                            android:maxLength="6"
+                            android:maxLength="5"
                             android:text='@{a331a.checked ? a331x.getText().toString() : "" }'
                             android:visibility='@{a331a.checked ? View.VISIBLE : View.GONE }'
-                            app:maxValue="999999"
+                            app:maxValue="99999"
                             app:minValue="1"
                             app:type="range" />
 
