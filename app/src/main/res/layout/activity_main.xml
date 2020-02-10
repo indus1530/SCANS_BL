@@ -126,7 +126,7 @@
                     <androidx.cardview.widget.CardView
                         android:id="@+id/formA"
                         android:layout_width="0dp"
-                        android:layout_height="50dp"
+                        android:layout_height="100dp"
                         android:layout_margin="@dimen/cardview_compat_inset_shadow"
                         android:layout_weight="1"
                         android:clickable="true"
@@ -155,7 +155,7 @@
                     <androidx.cardview.widget.CardView
                         android:id="@+id/formB"
                         android:layout_width="0dp"
-                        android:layout_height="50dp"
+                        android:layout_height="100dp"
                         android:layout_margin="@dimen/cardview_compat_inset_shadow"
                         android:layout_weight="1"
                         android:clickable="true"
@@ -184,7 +184,7 @@
                     <androidx.cardview.widget.CardView
                         android:id="@+id/formC"
                         android:layout_width="0dp"
-                        android:layout_height="50dp"
+                        android:layout_height="100dp"
                         android:layout_margin="@dimen/cardview_compat_inset_shadow"
                         android:layout_weight="1"
                         android:clickable="true"
