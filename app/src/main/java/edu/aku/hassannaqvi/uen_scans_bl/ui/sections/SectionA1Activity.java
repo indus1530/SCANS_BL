@@ -167,7 +167,7 @@ public class SectionA1Activity extends AppCompatActivity {
                 if (bi.a113b.isChecked() || (bi.a115.getText().toString().trim().length() > 0 && Integer.parseInt(bi.a115.getText().toString().trim()) < 18)) {
                     startActivity(new Intent(this, EndingActivity.class).putExtra("complete", true));
                 } else {
-                    startActivity(new Intent(this, SectionA2Activity.class));
+                    startActivity(new Intent(this, SectionA201Activity.class));
                 }
             } else {
                 Toast.makeText(this, "Failed to Update Database!", Toast.LENGTH_SHORT).show();
