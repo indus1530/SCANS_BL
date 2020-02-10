@@ -304,14 +304,11 @@
     <string name="a204c"> Transgender</string>
 
     <string name="a205"> A205:\t What is (name)’s date of birth?</string>
-    <string name="a205dd"> Day</string>
-    <string name="a205mm"> Month</string>
-    <string name="a205yy"> Year</string>
+    <string name="a205a"> Day</string>
+    <string name="a205b"> Month</string>
+    <string name="a205c"> Year</string>
 
     <string name="a206"> A206:\t How old is (name)?Record in completed years.98 DON’T KNOW</string>
-    <string name="a206dd"> Day</string>
-    <string name="a206mm"> Month</string>
-    <string name="a206yy"> Year</string>
 
     <string name="a207"> A207:\t Marital Status (10 years or above)</string>
     <string name="a207a">  Married</string>
