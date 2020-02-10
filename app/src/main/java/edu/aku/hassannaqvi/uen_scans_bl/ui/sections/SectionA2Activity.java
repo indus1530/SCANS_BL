@@ -2,6 +2,8 @@ package edu.aku.hassannaqvi.uen_scans_bl.ui.sections;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.text.Editable;
+import android.text.TextWatcher;
 import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
@@ -12,6 +14,9 @@ import com.validatorcrawler.aliazaz.Validator;
 import org.json.JSONException;
 import org.json.JSONObject;
 
+import java.text.SimpleDateFormat;
+import java.util.Date;
+
 import edu.aku.hassannaqvi.uen_scans_bl.R;
 import edu.aku.hassannaqvi.uen_scans_bl.databinding.ActivitySectionA2Binding;
 import edu.aku.hassannaqvi.uen_scans_bl.utils.Util;
@@ -19,6 +24,7 @@ import edu.aku.hassannaqvi.uen_scans_bl.utils.Util;
 public class SectionA2Activity extends AppCompatActivity {
 
     ActivitySectionA2Binding bi;
+    String dtToday = new SimpleDateFormat("dd-MM-yy HH:mm").format(new Date().getTime());
 
 
     @Override
@@ -26,8 +32,36 @@ public class SectionA2Activity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         bi = DataBindingUtil.setContentView(this, R.layout.activity_section_a2);
         bi.setCallback(this);
+        setlistener();
 
     }
+
+
+    private void setlistener() {
+        bi.a205yy.addTextChangedListener(new TextWatcher() {
+            @Override
+            public void beforeTextChanged(CharSequence s, int start, int count, int after) {
+
+                if (s.toString().equals("")) {
+                    if (bi.a203a.isChecked()) {
+                        bi.a205yy.setMaxvalue(2002);
+                    } else {
+                        bi.a205yy.setMaxvalue(2020);
+                    }
+                }
+
+            }
+
+            @Override
+            public void onTextChanged(CharSequence s, int start, int before, int count) {
+            }
+
+            @Override
+            public void afterTextChanged(Editable s) {
+            }
+        });
+    }
+
 
 
     public void BtnContinue() {

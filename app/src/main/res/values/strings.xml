@@ -278,7 +278,9 @@
     <string name="a119x"> Other</string>
 
     <string name="a201"> A201:\t Line number </string>
+
     <string name="a202"> A202:\t First, please tell me the name of each person who usually lives here, starting with the head of the household. Probe for additional household members.</string>
+
     <string name="a203"> A203:\t relationship with  Head of household)? </string>
     <string name="a203a"> Head of HH</string>
     <string name="a203b"> Wife/Husband</string>
@@ -295,23 +297,28 @@
     <string name="a203m"> Adopted/Stepchild </string>
     <string name="a203n"> Domestic Servant</string>
     <string name="a203x"> Other </string>
+
     <string name="a204"> A204:\t Gender </string>
     <string name="a204a"> Male</string>
     <string name="a204b"> Female</string>
     <string name="a204c"> Transgender</string>
+
     <string name="a205"> A205:\t What is (name)’s date of birth?</string>
     <string name="a205dd"> Day</string>
     <string name="a205mm"> Month</string>
     <string name="a205yy"> Year</string>
+
     <string name="a206"> A206:\t How old is (name)?Record in completed years.98 DON’T KNOW</string>
     <string name="a206dd"> Day</string>
     <string name="a206mm"> Month</string>
     <string name="a206yy"> Year</string>
+
     <string name="a207"> A207:\t Marital Status (10 years or above)</string>
     <string name="a207a">  Married</string>
     <string name="a207b"> Unmarried</string>
     <string name="a207c"> Widowed </string>
     <string name="a207d"> Divorced/Separated</string>
+
     <string name="a208"> A208:\t Has (Name) ever attended school (3 years and above)</string>
     <string name="a208a"> Yes</string>
     <string name="a208b"> No</string>
@@ -340,6 +347,7 @@
     <string name="a209u"> class 20 </string>
     <string name="a209v"> Dont Know </string>
     <string name="a209w"> Not Applicable </string>
+
     <string name="a210"> A210:\t Occupation (10YEARS AND ABOVE)</string>
     <string name="a210a"> Housewife</string>
     <string name="a210b"> Professional /Managerial</string>
@@ -354,10 +362,13 @@
     <string name="a210k"> Retired</string>
     <string name="a210l"> Teacher</string>
     <string name="a210m"> Not Applicable </string>
+
     <string name="a211"> A211:\t Is [name] available?</string>
     <string name="a211a"> Yes</string>
     <string name="a211b"> No</string>
-    <string name="a212"> a212:\t Father Line No  (Only for 5 &#8211; 10 year Children)</string>
+
+    <string name="a212"> A212:\t Father Line No  (Only for 5 &#8211; 10 year Children)</string>
+
     <string name="a213"> A213:\t Mother Line No   (Only for U5 Children)</string>
 
     <string name="ta3heading">SECTION A3: SOCIAL ECONOMIC STATUS OF HOUSEHOLD </string>
