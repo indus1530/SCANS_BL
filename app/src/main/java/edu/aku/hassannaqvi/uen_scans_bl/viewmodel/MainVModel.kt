@@ -78,13 +78,18 @@ class MainVModel : ViewModel() {
         return familyMemLst.value?.find { it.serialno.toInt() == index }
     }
 
-    fun getAllMenWomenName02(gender: Int, currentPersonSerial: Int): Pair<List<Int>?, List<String>?> {
+    fun getAllMenWomenName(gender: Int, currentPersonSerial: Int): Pair<List<Int>?, List<String>?> {
         val family = familyMemLst.value?.filter { it -> it.age.toInt() >= 15 && it.marital.toInt() != 2 && it.gender.toInt() == gender }
         return Pair(family?.map { it.serialno.toInt() }?.filter { it != currentPersonSerial }, family?.map { it.name })
     }
 
+    /* fun getAllWomenName(): Pair<List<Int>?, List<String>?> {
+         val family = familyMemLst.value?.filter { it -> (it.age.toInt() in 15..50) && it.marital.toInt() != 2 && it.gender.toInt() == 2 }
+         return Pair(family?.map { it.serialno.toInt() }, family?.map { it.name })
+     }*/
+
     fun getAllWomenName(): Pair<List<Int>?, List<String>?> {
-        val family = familyMemLst.value?.filter { it -> (it.age.toInt() in 15..50) && it.marital.toInt() != 2 && it.gender.toInt() == 2 }
+        val family = mwraLst.value
         return Pair(family?.map { it.serialno.toInt() }, family?.map { it.name })
     }
 

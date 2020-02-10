@@ -7,7 +7,7 @@ import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import androidx.databinding.DataBindingUtil
 import androidx.lifecycle.Observer
-import androidx.lifecycle.ViewModelProviders
+import androidx.lifecycle.ViewModelProvider
 import androidx.recyclerview.widget.LinearLayoutManager
 import edu.aku.hassannaqvi.uen_scans_bl.CONSTANTS
 import edu.aku.hassannaqvi.uen_scans_bl.CONSTANTS.Companion.SERIAL_EXTRA
@@ -19,8 +19,9 @@ import edu.aku.hassannaqvi.uen_scans_bl.core.MainApp.openDialog
 import edu.aku.hassannaqvi.uen_scans_bl.databinding.ActivityFamilyMembersListBinding
 import edu.aku.hassannaqvi.uen_scans_bl.databinding.ItemMemListBinding
 import edu.aku.hassannaqvi.uen_scans_bl.otherClasses.KishGrid
+import edu.aku.hassannaqvi.uen_scans_bl.ui.sections.SectionA2Activity
+import edu.aku.hassannaqvi.uen_scans_bl.ui.sections.SectionA31Activity
 import edu.aku.hassannaqvi.uen_scans_bl.ui.sections.SectionD1Activity
-import edu.aku.hassannaqvi.uen_scans_bl.ui.sections.SectionMActivity
 import edu.aku.hassannaqvi.uen_scans_bl.utils.Util
 import edu.aku.hassannaqvi.uen_scans_bl.viewmodel.MainVModel
 import kotlinx.android.synthetic.main.activity_family_members_list.*
@@ -80,10 +81,10 @@ class FamilyMembersListActivity : AppCompatActivity() {
                         run {
                             when (item.id) {
                                 0 -> {
-                                    startActivityForResult(Intent(this, SectionD1Activity::class.java).putExtra(SERIAL_EXTRA, serial), CONSTANTS.MEMBER_ITEM)
+                                    startActivityForResult(Intent(this, SectionA2Activity::class.java).putExtra(SERIAL_EXTRA, serial), CONSTANTS.MEMBER_ITEM)
                                 }
                                 1 -> {
-                                    if (memSelectedCounter == 0) return@run
+                                    /*if (memSelectedCounter == 0) return@run
 
                                     if (memSelectedCounter != serial - 1) return@run
 
@@ -91,7 +92,9 @@ class FamilyMembersListActivity : AppCompatActivity() {
 
                                     MainApp.selectedKishMWRA = mainVModel.mwraChildU5Lst.value?.get(kishSelectedMWRA(intent.getIntExtra("sno", 0), mainVModel.mwraChildU5Lst.value!!.size) - 1)
 
-                                    startActivity(Intent(this, if (bi.contentScroll.mwra.text.toString().toInt() > 0) SectionMActivity::class.java else SectionMActivity::class.java))
+                                    startActivity(Intent(this, if (bi.contentScroll.mwra.text.toString().toInt() > 0) SectionMActivity::class.java else SectionMActivity::class.java))*/
+
+                                    startActivity(Intent(this, SectionA31Activity::class.java))
                                 }
                                 else -> Util.openEndActivity(this)
                             }
@@ -107,7 +110,7 @@ class FamilyMembersListActivity : AppCompatActivity() {
 
     private fun settingValue() {
         mainVModel = this.run {
-            ViewModelProviders.of(this)[MainVModel::class.java]
+            ViewModelProvider(this)[MainVModel::class.java]
         }
         mainVModel.childLstU5.observe(this, Observer { item -> bi.contentScroll.under5.text = String.format("%02d", item.size) })
         mainVModel.mwraLst.observe(this, Observer { item -> bi.contentScroll.mwra.text = String.format("%02d", item.size) })
