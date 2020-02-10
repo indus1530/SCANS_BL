@@ -3,6 +3,8 @@ package edu.aku.hassannaqvi.uen_scans_bl.ui.sections;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.CheckBox;
+import android.widget.CompoundButton;
 import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
@@ -35,6 +37,18 @@ public class SectionA4Activity extends AppCompatActivity {
     }
 
 
+    public CheckBox.OnCheckedChangeListener check403 = new CompoundButton.OnCheckedChangeListener() {
+        @Override
+        public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
+            if (bi.a403a.isChecked() || bi.a403b.isChecked() || bi.a403c.isChecked() || bi.a403d.isChecked()) {
+                ClearClass.ClearAllFields(bi.fldGrpCVa02, null);
+                bi.fldGrpCVa02.setVisibility(View.GONE);
+            } else {
+                bi.fldGrpCVa02.setVisibility(View.VISIBLE);
+            }
+        }
+    };
+
     private void setlistener() {
 
         //a401
@@ -46,15 +60,26 @@ public class SectionA4Activity extends AppCompatActivity {
             } else {
                 ClearClass.ClearAllFields(bi.fldGrpCVa01, null);
                 bi.fldGrpCVa01.setVisibility(View.GONE);
+                bi.fldGrpCVa02.setVisibility(View.VISIBLE);
 
             }
         });
 
+
+        bi.a403a.setOnCheckedChangeListener(check403);
+        bi.a403b.setOnCheckedChangeListener(check403);
+        bi.a403c.setOnCheckedChangeListener(check403);
+        bi.a403d.setOnCheckedChangeListener(check403);
+
         //a40397
         bi.a40397.setOnCheckedChangeListener((compoundButton, b) -> {
             if (b) {
+                ClearClass.ClearAllFields(bi.a403check, false);
+                bi.a403check.setTag("-1");
                 bi.fldGrpCVa02.setVisibility(View.VISIBLE);
             } else {
+                ClearClass.ClearAllFields(bi.a403check, true);
+                bi.a403check.setTag("0");
                 ClearClass.ClearAllFields(bi.fldGrpCVa02, null);
                 bi.fldGrpCVa02.setVisibility(View.GONE);
             }
