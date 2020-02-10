@@ -148,7 +148,7 @@
 
                     <EditText
                         android:id="@+id/d9041"
-                        style="@style/EditTextAlpha"
+                        style="@style/EditTextComa"
                         android:layout_width="0dp"
                         android:layout_weight="1"
                         android:hint="@string/specify" />
@@ -181,7 +181,8 @@
 
                         <EditText
                             android:id="@+id/d9051b"
-                            style="@style/EditTextNum"
+                            style="@style/EditTextdeci"
+                            android:maxLength="4"
                             android:layout_width="0dp"
                             android:layout_weight="1"
                             android:hint="@string/d905b" />
@@ -371,7 +372,7 @@
 
                     <EditText
                         android:id="@+id/d9042"
-                        style="@style/EditTextAlpha"
+                        style="@style/EditTextComa"
                         android:layout_width="0dp"
                         android:layout_weight="1"
                         android:hint="@string/specify" />
@@ -404,7 +405,8 @@
 
                     <EditText
                         android:id="@+id/d9052b"
-                        style="@style/EditTextNum"
+                        style="@style/EditTextdeci"
+                        android:maxLength="4"
                         android:layout_width="0dp"
                         android:layout_weight="1"
                         android:hint="@string/d905b" />
@@ -594,7 +596,7 @@
 
                     <EditText
                         android:id="@+id/d9043"
-                        style="@style/EditTextAlpha"
+                        style="@style/EditTextComa"
                         android:layout_width="0dp"
                         android:layout_weight="1"
                         android:hint="@string/specify" />
@@ -627,7 +629,8 @@
 
                     <EditText
                         android:id="@+id/d9053b"
-                        style="@style/EditTextNum"
+                        style="@style/EditTextdeci"
+                        android:maxLength="4"
                         android:layout_width="0dp"
                         android:layout_weight="1"
                         android:hint="@string/d905b" />
@@ -817,7 +820,7 @@
 
                     <EditText
                         android:id="@+id/d9044"
-                        style="@style/EditTextAlpha"
+                        style="@style/EditTextComa"
                         android:layout_width="0dp"
                         android:layout_weight="1"
                         android:hint="@string/specify" />
@@ -850,7 +853,8 @@
 
                     <EditText
                         android:id="@+id/d9054b"
-                        style="@style/EditTextNum"
+                        style="@style/EditTextdeci"
+                        android:maxLength="4"
                         android:layout_width="0dp"
                         android:layout_weight="1"
                         android:hint="@string/d905b" />
@@ -1040,7 +1044,7 @@
 
                     <EditText
                         android:id="@+id/d9045"
-                        style="@style/EditTextAlpha"
+                        style="@style/EditTextComa"
                         android:layout_width="0dp"
                         android:layout_weight="1"
                         android:hint="@string/specify" />
@@ -1073,7 +1077,8 @@
 
                     <EditText
                         android:id="@+id/d9055b"
-                        style="@style/EditTextNum"
+                        style="@style/EditTextdeci"
+                        android:maxLength="4"
                         android:layout_width="0dp"
                         android:layout_weight="1"
                         android:hint="@string/d905b" />
@@ -1263,7 +1268,7 @@
 
                     <EditText
                         android:id="@+id/d9046"
-                        style="@style/EditTextAlpha"
+                        style="@style/EditTextComa"
                         android:layout_width="0dp"
                         android:layout_weight="1"
                         android:hint="@string/specify" />
@@ -1296,7 +1301,8 @@
 
                     <EditText
                         android:id="@+id/d9056b"
-                        style="@style/EditTextNum"
+                        style="@style/EditTextdeci"
+                        android:maxLength="4"
                         android:layout_width="0dp"
                         android:layout_weight="1"
                         android:hint="@string/d905b" />
@@ -1486,7 +1492,7 @@
 
                     <EditText
                         android:id="@+id/d9047"
-                        style="@style/EditTextAlpha"
+                        style="@style/EditTextComa"
                         android:layout_width="0dp"
                         android:layout_weight="1"
                         android:hint="@string/specify" />
@@ -1519,7 +1525,8 @@
 
                     <EditText
                         android:id="@+id/d9057b"
-                        style="@style/EditTextNum"
+                        style="@style/EditTextdeci"
+                        android:maxLength="4"
                         android:layout_width="0dp"
                         android:layout_weight="1"
                         android:hint="@string/d905b" />

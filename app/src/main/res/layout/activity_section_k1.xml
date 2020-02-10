@@ -166,7 +166,7 @@
 
                         <EditText
                             android:id="@+id/k104"
-                            style="@style/EditTextNum"
+                            style="@style/EditTextdeci"
                             android:layout_width="0dp"
                             android:layout_weight="1"
                             android:hint="@string/k104a"

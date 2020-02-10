@@ -68,6 +68,10 @@
         <item name="android:paddingBottom">5sp</item>
     </style>
 
+    <style name="EditTextComa" parent="@style/textInput">
+        <item name="android:digits">abcdefghijklmnopqrstuvwxyz ABCDEFGHIJKLMNOPQRSTUVWXYZ , .</item>
+    </style>
+
     <style name="EditTextAlpha" parent="@style/textInput">
         <item name="android:digits">abcdefghijklmnopqrstuvwxyz ABCDEFGHIJKLMNOPQRSTUVWXYZ</item>
     </style>
@@ -80,7 +84,10 @@
 
     <style name="EditTextNum" parent="@style/textInput">
         <item name="android:inputType">number</item>
+    </style>
 
+    <style name="EditTextdeci" parent="@style/textInput">
+        <item name="android:inputType">numberDecimal</item>
     </style>
 
     <style name="TestDisabled">
