@@ -21,7 +21,6 @@ import edu.aku.hassannaqvi.uen_scans_bl.otherClasses.KishGrid
 import edu.aku.hassannaqvi.uen_scans_bl.ui.other.EndingActivity
 import edu.aku.hassannaqvi.uen_scans_bl.ui.sections.SectionA2Activity
 import edu.aku.hassannaqvi.uen_scans_bl.ui.sections.SectionA31Activity
-import edu.aku.hassannaqvi.uen_scans_bl.ui.sections.SectionC1Activity
 import edu.aku.hassannaqvi.uen_scans_bl.ui.sections.SectionD1Activity
 import edu.aku.hassannaqvi.uen_scans_bl.utils.Util
 import edu.aku.hassannaqvi.uen_scans_bl.viewmodel.MainVModel
@@ -102,7 +101,6 @@ class FamilyMembersListActivity : AppCompatActivity() {
 
                                     startActivity(Intent(this, when {
                                         selectedKishMWRA != null -> SectionA31Activity::class.java
-                                        selectedKishMWRAChild != null -> SectionC1Activity::class.java
                                         else -> EndingActivity::class.java
                                     }).putExtra("complete", true))
                                 }

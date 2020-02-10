@@ -32,6 +32,9 @@ public class SectionC1Activity extends AppCompatActivity {
         bi = DataBindingUtil.setContentView(this, R.layout.activity_section_c1);
         bi.setCallback(this);
 
+        bi.txtHeadLbl.setText(new StringBuilder(MainApp.selectedKishMWRAChild.getName().toUpperCase()).append("\n")
+                .append(MainApp.selectedKishMWRA.getMother_name().toUpperCase()));
+
     }
 
 

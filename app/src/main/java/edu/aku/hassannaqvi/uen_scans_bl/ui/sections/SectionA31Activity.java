@@ -15,6 +15,7 @@ import org.json.JSONObject;
 
 import edu.aku.hassannaqvi.uen_scans_bl.R;
 import edu.aku.hassannaqvi.uen_scans_bl.core.DatabaseHelper;
+import edu.aku.hassannaqvi.uen_scans_bl.core.MainApp;
 import edu.aku.hassannaqvi.uen_scans_bl.databinding.ActivitySectionA31Binding;
 import edu.aku.hassannaqvi.uen_scans_bl.utils.Util;
 import edu.aku.hassannaqvi.uen_scans_bl.validator.ClearClass;
@@ -31,6 +32,9 @@ public class SectionA31Activity extends AppCompatActivity {
         bi.setCallback(this);
         setupSkips();
 
+        bi.txtHeadLbl.setText(new StringBuilder(MainApp.selectedKishMWRA.getName().toUpperCase()).append("\n")
+                .append("Serial:")
+                .append(MainApp.selectedKishMWRA.getSerialno()));
 
     }
 
