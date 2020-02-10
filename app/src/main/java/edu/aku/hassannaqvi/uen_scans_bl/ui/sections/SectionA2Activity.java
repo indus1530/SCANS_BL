@@ -2,8 +2,7 @@ package edu.aku.hassannaqvi.uen_scans_bl.ui.sections;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.text.Editable;
-import android.text.TextWatcher;
+import android.view.View;
 import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
@@ -20,6 +19,7 @@ import java.util.Date;
 import edu.aku.hassannaqvi.uen_scans_bl.R;
 import edu.aku.hassannaqvi.uen_scans_bl.databinding.ActivitySectionA2Binding;
 import edu.aku.hassannaqvi.uen_scans_bl.utils.Util;
+import edu.aku.hassannaqvi.uen_scans_bl.validator.ClearClass;
 
 public class SectionA2Activity extends AppCompatActivity {
 
@@ -38,28 +38,26 @@ public class SectionA2Activity extends AppCompatActivity {
 
 
     private void setlistener() {
-        bi.a205yy.addTextChangedListener(new TextWatcher() {
-            @Override
-            public void beforeTextChanged(CharSequence s, int start, int count, int after) {
 
-                if (s.toString().equals("")) {
-                    if (bi.a203a.isChecked()) {
-                        bi.a205yy.setMaxvalue(2002);
-                    } else {
-                        bi.a205yy.setMaxvalue(2020);
-                    }
-                }
+        //a203
+        bi.a203.setOnCheckedChangeListener((group, checkedId) -> {
 
-            }
+            if (checkedId != bi.a203a.getId()) {
+                bi.fldGrpCVa212.setVisibility(View.VISIBLE);
+                bi.fldGrpCVa213.setVisibility(View.VISIBLE);
+                bi.a205yy.setMaxvalue(2020);
+                bi.a206.setMinvalue(1);
 
-            @Override
-            public void onTextChanged(CharSequence s, int start, int before, int count) {
-            }
-
-            @Override
-            public void afterTextChanged(Editable s) {
+            } else {
+                ClearClass.ClearAllFields(bi.fldGrpCVa212, null);
+                ClearClass.ClearAllFields(bi.fldGrpCVa213, null);
+                bi.fldGrpCVa212.setVisibility(View.GONE);
+                bi.fldGrpCVa213.setVisibility(View.GONE);
+                bi.a205yy.setMaxvalue(2002);
+                bi.a206.setMinvalue(18);
             }
         });
+
     }
 
 
