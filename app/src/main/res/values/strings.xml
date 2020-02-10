@@ -308,7 +308,8 @@
     <string name="a205b"> Month</string>
     <string name="a205c"> Year</string>
 
-    <string name="a206"> A206:\t How old is (name)?Record in completed years.98 DON’T KNOW</string>
+    <string name="a206"> A206:\t How old is (name) ? </string>
+    <string name="a206hint"> Record in completed years . 98 DON’T KNOW </string>
 
     <string name="a207"> A207:\t Marital Status (10 years or above)</string>
     <string name="a207a">  Married</string>

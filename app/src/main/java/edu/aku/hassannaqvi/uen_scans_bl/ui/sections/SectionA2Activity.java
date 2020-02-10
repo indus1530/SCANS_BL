@@ -210,6 +210,10 @@ public class SectionA2Activity extends AppCompatActivity {
         sd.put("a206", bi.a206.getText().toString());
         fmc.setAge(bi.a206.getText().toString());
 
+        sd.put("a208", bi.a208a.isChecked() ? "1"
+                : bi.a208b.isChecked() ? "2"
+                : "0");
+
         sd.put("a209", bi.a209a.isChecked() ? "0" :
                 bi.a209b.isChecked() ? "1" :
                         bi.a209c.isChecked() ? "2" :
