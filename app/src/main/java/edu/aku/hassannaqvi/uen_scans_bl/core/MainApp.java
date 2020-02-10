@@ -75,6 +75,7 @@ public class MainApp extends Application {
     public static KishMWRAContract kish;
     public static ChildContract child;
     public static FamilyMembersContract selectedKishMWRA;
+    public static FamilyMembersContract selectedKishMWRAChild;
     public static String userName = "0000";
     public static int deathCount = 0;
     public static String DeviceURL = "devices.php";

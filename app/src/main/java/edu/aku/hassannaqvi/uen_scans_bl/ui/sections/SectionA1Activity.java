@@ -25,6 +25,7 @@ import edu.aku.hassannaqvi.uen_scans_bl.contracts.FormsContract;
 import edu.aku.hassannaqvi.uen_scans_bl.core.DatabaseHelper;
 import edu.aku.hassannaqvi.uen_scans_bl.core.MainApp;
 import edu.aku.hassannaqvi.uen_scans_bl.databinding.ActivitySectionA1Binding;
+import edu.aku.hassannaqvi.uen_scans_bl.ui.list_activity.FamilyMembersListActivity;
 import edu.aku.hassannaqvi.uen_scans_bl.ui.other.EndingActivity;
 import edu.aku.hassannaqvi.uen_scans_bl.utils.Util;
 import edu.aku.hassannaqvi.uen_scans_bl.validator.ClearClass;
@@ -154,7 +155,6 @@ public class SectionA1Activity extends AppCompatActivity {
     }
 
 
-
     public void BtnContinue() {
         if (formValidation()) {
             try {
@@ -167,7 +167,7 @@ public class SectionA1Activity extends AppCompatActivity {
                 if (bi.a113b.isChecked() || (bi.a115.getText().toString().trim().length() > 0 && Integer.parseInt(bi.a115.getText().toString().trim()) < 18)) {
                     startActivity(new Intent(this, EndingActivity.class).putExtra("complete", true));
                 } else {
-                    startActivity(new Intent(this, SectionA201Activity.class));
+                    startActivity(new Intent(this, FamilyMembersListActivity.class));
                 }
             } else {
                 Toast.makeText(this, "Failed to Update Database!", Toast.LENGTH_SHORT).show();

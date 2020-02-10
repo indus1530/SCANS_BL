@@ -12,10 +12,10 @@ class MainVModel : ViewModel() {
     var mwraLst = MutableLiveData<MutableList<FamilyMembersContract>>()
         private set
 
-    var childLstU5 = MutableLiveData<MutableList<FamilyMembersContract>>()
+    var childLstU5to10 = MutableLiveData<MutableList<FamilyMembersContract>>()
         private set
 
-    var mwraChildU5Lst = MutableLiveData<MutableList<FamilyMembersContract>>()
+    var mwraChildU5to10Lst = MutableLiveData<MutableList<FamilyMembersContract>>()
         private set
 
     var checkedItems = MutableLiveData<MutableList<Int>>()
@@ -35,25 +35,25 @@ class MainVModel : ViewModel() {
         familyMemLst.value = lst
     }
 
-    fun setChildU5(item: FamilyMembersContract) {
-        var lst = childLstU5.value
+    fun setChildU5to10(item: FamilyMembersContract) {
+        var lst = childLstU5to10.value
         if (lst.isNullOrEmpty())
             lst = mutableListOf()
         lst.add(item)
-        childLstU5.value = lst
+        childLstU5to10.value = lst
     }
 
-    fun setMwraChildU5(item: FamilyMembersContract) {
-        var lst = mwraChildU5Lst.value
+    fun setMwraChildU5to10(item: FamilyMembersContract) {
+        var lst = mwraChildU5to10Lst.value
         if (lst.isNullOrEmpty()) {
             lst = mutableListOf()
             lst.add(item)
         } else {
-            val fmc = mwraChildU5Lst.value?.find { it.serialno.toInt() == item.serialno.toInt() }
+            val fmc = mwraChildU5to10Lst.value?.find { it.serialno.toInt() == item.serialno.toInt() }
             fmc?.let { lst.map { if (it.serialno.toInt() == fmc.serialno.toInt()) item else it } }
                     ?: lst.add(item)
         }
-        mwraChildU5Lst.value = lst
+        mwraChildU5to10Lst.value = lst
     }
 
     fun setCheckedItemValues(index: Int) {
@@ -81,6 +81,10 @@ class MainVModel : ViewModel() {
     fun getAllMenWomenName(gender: Int, currentPersonSerial: Int): Pair<List<Int>?, List<String>?> {
         val family = familyMemLst.value?.filter { it -> it.age.toInt() >= 15 && it.marital.toInt() != 2 && it.gender.toInt() == gender }
         return Pair(family?.map { it.serialno.toInt() }?.filter { it != currentPersonSerial }, family?.map { it.name })
+    }
+
+    fun getAllChildrenOfSelMWRA(mwraSerial: Int): List<FamilyMembersContract>? {
+        return childLstU5to10.value?.filter { it -> it.mother_serial.toInt() == mwraSerial }
     }
 
     /* fun getAllWomenName(): Pair<List<Int>?, List<String>?> {

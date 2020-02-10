@@ -15,12 +15,13 @@ import edu.aku.hassannaqvi.uen_scans_bl.R
 import edu.aku.hassannaqvi.uen_scans_bl.adapter.FamilyMemberListAdapter
 import edu.aku.hassannaqvi.uen_scans_bl.contracts.FamilyMembersContract
 import edu.aku.hassannaqvi.uen_scans_bl.core.MainApp
-import edu.aku.hassannaqvi.uen_scans_bl.core.MainApp.openDialog
+import edu.aku.hassannaqvi.uen_scans_bl.core.MainApp.*
 import edu.aku.hassannaqvi.uen_scans_bl.databinding.ActivityFamilyMembersListBinding
-import edu.aku.hassannaqvi.uen_scans_bl.databinding.ItemMemListBinding
 import edu.aku.hassannaqvi.uen_scans_bl.otherClasses.KishGrid
+import edu.aku.hassannaqvi.uen_scans_bl.ui.other.EndingActivity
 import edu.aku.hassannaqvi.uen_scans_bl.ui.sections.SectionA2Activity
 import edu.aku.hassannaqvi.uen_scans_bl.ui.sections.SectionA31Activity
+import edu.aku.hassannaqvi.uen_scans_bl.ui.sections.SectionC1Activity
 import edu.aku.hassannaqvi.uen_scans_bl.ui.sections.SectionD1Activity
 import edu.aku.hassannaqvi.uen_scans_bl.utils.Util
 import edu.aku.hassannaqvi.uen_scans_bl.viewmodel.MainVModel
@@ -35,7 +36,6 @@ class FamilyMembersListActivity : AppCompatActivity() {
     private var memSelectedCounter = 0
     private lateinit var adapter: FamilyMemberListAdapter
     private lateinit var bi: ActivityFamilyMembersListBinding
-    private var viewHolder: ItemMemListBinding? = null
     private var currentFM: FamilyMembersContract? = null
     private lateinit var clickLst: MutableList<FamilyMembersContract>
 
@@ -84,17 +84,27 @@ class FamilyMembersListActivity : AppCompatActivity() {
                                     startActivityForResult(Intent(this, SectionA2Activity::class.java).putExtra(SERIAL_EXTRA, serial), CONSTANTS.MEMBER_ITEM)
                                 }
                                 1 -> {
-                                    /*if (memSelectedCounter == 0) return@run
+                                    if (memSelectedCounter == 0) return@run
 
                                     if (memSelectedCounter != serial - 1) return@run
 
-                                    MainApp.pragnantWoman = mainVModel.getAllWomenName()
+                                    selectedKishMWRA = mainVModel.mwraChildU5to10Lst.value?.get(
+                                            kishSelectedMWRA(intent.getIntExtra("sno", 0),
+                                                    mainVModel.mwraChildU5to10Lst.value!!.size) - 1)
 
-                                    MainApp.selectedKishMWRA = mainVModel.mwraChildU5Lst.value?.get(kishSelectedMWRA(intent.getIntExtra("sno", 0), mainVModel.mwraChildU5Lst.value!!.size) - 1)
+                                    if (selectedKishMWRA != null) {
+                                        val childLst = mainVModel.getAllChildrenOfSelMWRA(selectedKishMWRA.serialno.toInt())
+                                        selectedKishMWRAChild = childLst?.let {
+                                            mainVModel.childLstU5to10.value?.get(kishSelectedMWRA(intent.getIntExtra("sno", 0),
+                                                    childLst.size) - 1)
+                                        }
+                                    }
 
-                                    startActivity(Intent(this, if (bi.contentScroll.mwra.text.toString().toInt() > 0) SectionMActivity::class.java else SectionMActivity::class.java))*/
-
-                                    startActivity(Intent(this, SectionA31Activity::class.java))
+                                    startActivity(Intent(this, when {
+                                        selectedKishMWRA != null -> SectionA31Activity::class.java
+                                        selectedKishMWRAChild != null -> SectionC1Activity::class.java
+                                        else -> EndingActivity::class.java
+                                    }).putExtra("complete", true))
                                 }
                                 else -> Util.openEndActivity(this)
                             }
@@ -112,7 +122,7 @@ class FamilyMembersListActivity : AppCompatActivity() {
         mainVModel = this.run {
             ViewModelProvider(this)[MainVModel::class.java]
         }
-        mainVModel.childLstU5.observe(this, Observer { item -> bi.contentScroll.under5.text = String.format("%02d", item.size) })
+        mainVModel.childLstU5to10.observe(this, Observer { item -> bi.contentScroll.under5To10.text = String.format("%02d", item.size) })
         mainVModel.mwraLst.observe(this, Observer { item -> bi.contentScroll.mwra.text = String.format("%02d", item.size) })
         mainVModel.familyMemLst.observe(this, Observer { item ->
             bi.contentScroll.total.text = String.format("%02d", item.size)
@@ -155,39 +165,6 @@ class FamilyMembersListActivity : AppCompatActivity() {
     }
 
     private fun handlingHolder() {
-        /*viewHolder?.let {
-            viewHolder!!.parentLayout.isEnabled = flag
-            viewHolder!!.parentLayout.checkIcon.visibility = if (flag) View.GONE else View.VISIBLE
-            viewHolder = null
-            if (flag) memSelectedCounter--
-        }*/
-
-        /*currentFM?.let {
-            mainVModel.getHolder(currentFM!!)?.let {
-                it.parentLayout.isEnabled = flag
-                it.parentLayout.checkIcon.visibility = if (flag) View.GONE else View.VISIBLE
-                if (flag) memSelectedCounter--
-            }
-        }*/
-
-        /*if (flag) {
-            memSelectedCounter--
-            return
-        } else {
-            currentFM?.let {
-                clickLst.add(currentFM!!)
-            }
-        }
-
-        for (item in clickLst) {
-
-            val view = mainVModel.getHolder(item)
-            view?.let {
-                bi.contentScroll.recyclerView.getChildAt(view).parentLayout?.isEnabled = false
-                bi.contentScroll.recyclerView.getChildAt(view).checkIcon?.visibility = View.VISIBLE
-            }
-
-        }*/
         memSelectedCounter++
         currentFM?.let {
             mainVModel.setCheckedItemValues(currentFM!!.serialno.toInt())

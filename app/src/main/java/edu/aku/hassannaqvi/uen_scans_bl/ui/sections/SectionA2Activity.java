@@ -189,17 +189,20 @@ public class SectionA2Activity extends AppCompatActivity {
         sd.put("tagid", MainApp.appInfo.getTagName());
         sd.put("appversion", MainApp.appInfo.getAppVersion());
 
-        sd.put("a212", menSLst.getFirst().size() != 0 && bi.a212.getSelectedItemPosition() != 1
-                ? mainVModel.getMemberInfo(menSLst.getFirst().get(bi.a212.getSelectedItemPosition() - 2)).getSerialno() : "97");
-        fmc.setfName(bi.a212.getSelectedItem().toString());
+        FamilyMembersContract motherFMC = null;
+        if (bi.fldGrpCVa212.getVisibility() == View.VISIBLE) {
+            sd.put("a212", menSLst.getFirst().size() != 0 && bi.a212.getSelectedItemPosition() != 1
+                    ? mainVModel.getMemberInfo(menSLst.getFirst().get(bi.a212.getSelectedItemPosition() - 2)).getSerialno() : "97");
+            fmc.setfName(bi.a212.getSelectedItem().toString());
 
-        FamilyMembersContract motherFMC = womenSLst.getFirst().size() != 0 && bi.a213.getSelectedItemPosition() != 1
-                ? mainVModel.getMemberInfo(womenSLst.getFirst().get(bi.a213.getSelectedItemPosition() - 2)) : null;
-        String motherSerial = womenSLst.getFirst().size() != 0 && bi.a213.getSelectedItemPosition() != 1
-                ? mainVModel.getMemberInfo(womenSLst.getFirst().get(bi.a213.getSelectedItemPosition() - 2)).getSerialno() : "97";
-        fmc.setMother_name(bi.a213.getSelectedItem().toString());
-        sd.put("a213", motherSerial);
-        fmc.setMother_serial(motherSerial);
+            motherFMC = womenSLst.getFirst().size() != 0 && bi.a213.getSelectedItemPosition() != 1
+                    ? mainVModel.getMemberInfo(womenSLst.getFirst().get(bi.a213.getSelectedItemPosition() - 2)) : null;
+            String motherSerial = womenSLst.getFirst().size() != 0 && bi.a213.getSelectedItemPosition() != 1
+                    ? mainVModel.getMemberInfo(womenSLst.getFirst().get(bi.a213.getSelectedItemPosition() - 2)).getSerialno() : "97";
+            fmc.setMother_name(bi.a213.getSelectedItem().toString());
+            sd.put("a213", motherSerial);
+            fmc.setMother_serial(motherSerial);
+        }
 
         sd.put("a205a", bi.a205a.getText().toString());
         sd.put("a205b", bi.a205b.getText().toString());
@@ -232,8 +235,7 @@ public class SectionA2Activity extends AppCompatActivity {
                                                                         bi.a210i.isChecked() ? "9" :
                                                                                 bi.a210j.isChecked() ? "99" : "0");
 
-        sd.put("a211", bi.a211a.isChecked() ? "1" :
-                bi.a211b.isChecked() ? "2" : "0");
+        sd.put("a211", bi.a211a.isChecked() ? "1" : bi.a211b.isChecked() ? "2" : "0");
 
         fmc.setAvailable(bi.a211a.isChecked() ? "1" : bi.a211b.isChecked() ? "2" : "0");
 
@@ -245,10 +247,10 @@ public class SectionA2Activity extends AppCompatActivity {
         if (Integer.valueOf(fmc.getAge()) >= 15 && Integer.valueOf(fmc.getAge()) <= 49 && fmc.getGender().equals("2") && !bi.a207b.isChecked())
             mainVModel.setMWRA(fmc);
         else if (Integer.valueOf(fmc.getAge()) >= 5 && Integer.valueOf(fmc.getAge()) <= 10) {
-            mainVModel.setChildU5(fmc);
+            mainVModel.setChildU5to10(fmc);
             if (motherFMC == null) return;
             if (Integer.valueOf(motherFMC.getAge()) >= 15 && Integer.valueOf(motherFMC.getAge()) <= 49 && motherFMC.getAvailable().equals("1"))
-                mainVModel.setMwraChildU5(motherFMC);
+                mainVModel.setMwraChildU5to10(motherFMC);
         }
 
     }
@@ -401,8 +403,10 @@ public class SectionA2Activity extends AppCompatActivity {
         if (calAge > 20) {
             Clear.clearAllFields(bi.a209, true);
             Clear.clearAllFields(bi.a210, true);
-
         }
+
+        bi.fldGrpCVa212.setVisibility(calAge >= 5 && calAge <= 10 ? View.VISIBLE : View.GONE);
+        bi.fldGrpCVa213.setVisibility(calAge >= 5 && calAge <= 10 ? View.VISIBLE : View.GONE);
 
     }
 
