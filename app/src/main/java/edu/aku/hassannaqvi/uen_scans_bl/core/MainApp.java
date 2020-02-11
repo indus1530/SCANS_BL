@@ -26,6 +26,7 @@ import androidx.databinding.DataBindingUtil;
 import java.util.List;
 
 import edu.aku.hassannaqvi.uen_scans_bl.R;
+import edu.aku.hassannaqvi.uen_scans_bl.contracts.AnthroContract;
 import edu.aku.hassannaqvi.uen_scans_bl.contracts.ChildContract;
 import edu.aku.hassannaqvi.uen_scans_bl.contracts.FamilyMembersContract;
 import edu.aku.hassannaqvi.uen_scans_bl.contracts.FormsContract;
@@ -73,6 +74,7 @@ public class MainApp extends Application {
     public static FormsContract fc;
     public static KishMWRAContract kish;
     public static ChildContract child;
+    public static AnthroContract anthro;
     public static FamilyMembersContract indexKishMWRA;
     public static FamilyMembersContract indexKishMWRAChild;
     public static String userName = "0000";
