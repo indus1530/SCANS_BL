@@ -32,9 +32,9 @@ public class SectionA31Activity extends AppCompatActivity {
         bi.setCallback(this);
         setupSkips();
 
-        bi.txtHeadLbl.setText(new StringBuilder(MainApp.selectedKishMWRA.getName().toUpperCase()).append("\n")
+        bi.txtHeadLbl.setText(new StringBuilder(MainApp.indexKishMWRA.getName().toUpperCase()).append("\n")
                 .append("Serial:")
-                .append(MainApp.selectedKishMWRA.getSerialno()));
+                .append(MainApp.indexKishMWRA.getSerialno()));
 
     }
 
@@ -311,10 +311,10 @@ public class SectionA31Activity extends AppCompatActivity {
     }
 
 
-    /*@Override
+    @Override
     public void onBackPressed() {
         Toast.makeText(this, "You can't go back", Toast.LENGTH_SHORT).show();
-    }*/
+    }
 
 
 }

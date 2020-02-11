@@ -32,8 +32,8 @@ public class SectionC1Activity extends AppCompatActivity {
         bi = DataBindingUtil.setContentView(this, R.layout.activity_section_c1);
         bi.setCallback(this);
 
-        bi.txtHeadLbl.setText(new StringBuilder(MainApp.selectedKishMWRAChild.getName().toUpperCase()).append("\n")
-                .append(MainApp.selectedKishMWRA.getMother_name().toUpperCase()));
+        bi.txtHeadLbl.setText(new StringBuilder(MainApp.indexKishMWRAChild.getName().toUpperCase()).append("\n")
+                .append(MainApp.indexKishMWRA.getMother_name().toUpperCase()));
 
     }
 
@@ -197,10 +197,10 @@ public class SectionC1Activity extends AppCompatActivity {
     }
 
 
-    /*@Override
+    @Override
     public void onBackPressed() {
         Toast.makeText(this, "You can't go back", Toast.LENGTH_SHORT).show();
-    }*/
+    }
 
 
 }
