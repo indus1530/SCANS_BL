@@ -2,6 +2,8 @@ package edu.aku.hassannaqvi.uen_scans_bl.ui.sections;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.view.View;
+import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.Spinner;
 import android.widget.Toast;
@@ -14,17 +16,24 @@ import com.validatorcrawler.aliazaz.Validator;
 import org.json.JSONException;
 import org.json.JSONObject;
 
+import java.util.ArrayList;
+import java.util.List;
+
 import edu.aku.hassannaqvi.uen_scans_bl.R;
 import edu.aku.hassannaqvi.uen_scans_bl.core.DatabaseHelper;
+import edu.aku.hassannaqvi.uen_scans_bl.core.MainApp;
 import edu.aku.hassannaqvi.uen_scans_bl.databinding.ActivitySectionK2Binding;
 import edu.aku.hassannaqvi.uen_scans_bl.utils.Util;
 import edu.aku.hassannaqvi.uen_scans_bl.validator.ClearClass;
+
+import static edu.aku.hassannaqvi.uen_scans_bl.ui.list_activity.FamilyMembersListActivity.mainVModel;
 
 public class SectionK2Activity extends AppCompatActivity {
 
     ActivitySectionK2Binding bi;
     Spinner[] userSpinners;
     DatabaseHelper db;
+    int position;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -41,6 +50,26 @@ public class SectionK2Activity extends AppCompatActivity {
         for (Spinner singleSpinner : userSpinners) {
             singleSpinner.setAdapter(new ArrayAdapter<>(this, android.R.layout.simple_dropdown_item_1line, db.getUsers()));
         }
+
+        List<String> childLst = new ArrayList<String>() {
+            {
+                add("....");
+                addAll(MainApp.mwraChildren.getSecond());
+            }
+        };
+
+        bi.k201.setAdapter(new ArrayAdapter<>(this, android.R.layout.simple_list_item_1, childLst));
+
+        bi.k201.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+            @Override
+            public void onItemSelected(AdapterView<?> adapterView, View view, int i, long l) {
+                position = i;
+            }
+
+            @Override
+            public void onNothingSelected(AdapterView<?> adapterView) {
+            }
+        });
     }
 
     private void setupSkips() {
@@ -76,6 +105,9 @@ public class SectionK2Activity extends AppCompatActivity {
                 e.printStackTrace();
             }
             if (UpdateDB()) {
+
+                MainApp.mwraChildren = mainVModel.getAllChildrenPairOfSelMWRA(Integer.valueOf(MainApp.indexKishMWRA.getSerialno()));
+
                 finish();
                 startActivity(new Intent(this, SectionK3Activity.class));
             } else {
@@ -168,6 +200,10 @@ public class SectionK2Activity extends AppCompatActivity {
         json.put("k220a", bi.k220a.getText().toString());
         json.put("k220b", bi.k220b.getSelectedItem().toString());
 
+        // Deleting item in list
+        MainApp.mwraChildren.getFirst().remove(position - 1);
+        MainApp.mwraChildren.getSecond().remove(position - 1);
+
     }
 
 
@@ -177,10 +213,10 @@ public class SectionK2Activity extends AppCompatActivity {
     }
 
 
-    /*@Override
+    @Override
     public void onBackPressed() {
         Toast.makeText(this, "You can't go back", Toast.LENGTH_SHORT).show();
-    }*/
+    }
 
 
 }

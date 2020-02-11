@@ -63,8 +63,6 @@
         <item name="android:layout_marginBottom">5sp</item>
         <item name="android:fadeScrollbars">false</item>
         <item name="android:layoutDirection">rtl</item>
-        <item name="android:paddingLeft">5sp</item>
-        <item name="android:paddingRight">5sp</item>
         <item name="android:paddingBottom">5sp</item>
     </style>
 

@@ -92,8 +92,8 @@ class MainVModel : ViewModel() {
          return Pair(family?.map { it.serialno.toInt() }, family?.map { it.name })
      }*/
 
-    fun getAllWomenName(): Pair<List<Int>?, List<String>?> {
-        val family = mwraLst.value
+    fun getAllChildrenPairOfSelMWRA(mwraSerial: Int): Pair<List<Int>?, List<String>?> {
+        val family = childLstU5to10.value?.filter { it -> it.mother_serial.toInt() == mwraSerial }
         return Pair(family?.map { it.serialno.toInt() }, family?.map { it.name })
     }
 

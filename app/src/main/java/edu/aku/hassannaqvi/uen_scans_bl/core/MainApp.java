@@ -68,23 +68,19 @@ public class MainApp extends Application {
     public static final long MILLISECONDS_IN_2Years = MILLIS_IN_SECOND * SECONDS_IN_MINUTE * MINUTES_IN_HOUR * HOURS_IN_DAY * DAYS_IN_2_YEAR;
     public static String deviceId;
     public static OnItemClick itemClick;
-    public static OnItemClick countItemClick;
     public static AppInfo appInfo;
     public static Boolean admin = false;
     public static FormsContract fc;
     public static KishMWRAContract kish;
     public static ChildContract child;
-    public static FamilyMembersContract selectedKishMWRA;
-    public static FamilyMembersContract selectedKishMWRAChild;
+    public static FamilyMembersContract indexKishMWRA;
+    public static FamilyMembersContract indexKishMWRAChild;
     public static String userName = "0000";
-    public static int deathCount = 0;
     public static String DeviceURL = "devices.php";
     public static String IMEI;
     public static SharedPreferences sharedPref;
     public static String TAG = "AppMain";
-    public static int noOfPragnencies = 0;
-    public static boolean twinFlag = false;
-    public static Pair<List<Integer>, List<String>> pragnantWoman;
+    public static Pair<List<Integer>, List<String>> mwraChildren;
     protected static LocationManager locationManager;
 
     public static String DIST_ID;

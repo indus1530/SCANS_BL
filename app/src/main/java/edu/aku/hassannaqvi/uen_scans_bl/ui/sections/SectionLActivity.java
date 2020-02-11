@@ -73,6 +73,9 @@ public class SectionLActivity extends AppCompatActivity {
             }
         });
 
+        bi.txtHeadLbl.setText(new StringBuilder(MainApp.indexKishMWRAChild.getName().toUpperCase()).append("\n")
+                .append(MainApp.indexKishMWRA.getMother_name().toUpperCase()));
+
     }
 
 
@@ -150,10 +153,10 @@ public class SectionLActivity extends AppCompatActivity {
     }
 
 
-    /*@Override
+    @Override
     public void onBackPressed() {
         Toast.makeText(this, "You can't go back", Toast.LENGTH_SHORT).show();
-    }*/
+    }
 
 
 }
