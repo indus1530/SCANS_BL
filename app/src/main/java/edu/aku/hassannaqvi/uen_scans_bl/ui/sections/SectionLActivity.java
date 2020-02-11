@@ -59,22 +59,32 @@ public class SectionLActivity extends AppCompatActivity {
         bi.l104.addTextChangedListener(new TextWatcher() {
             @Override
             public void beforeTextChanged(CharSequence s, int start, int count, int after) {
-
             }
 
             @Override
             public void onTextChanged(CharSequence s, int start, int before, int count) {
+                if (bi.l104.getText().toString().trim().length() > 0) {
+                    ClearClass.ClearAllFields(bi.fldGrpCVl103, null);
+                    bi.l103a.setEnabled(true);
+                    bi.l103b.setEnabled(false);
+                    bi.l103c.setEnabled(false);
+                }
             }
 
             @Override
             public void afterTextChanged(Editable s) {
-                if (bi.l104.getText().toString().isEmpty()) return;
-                int calAge = Integer.valueOf(bi.l104.getText().toString());
+                if (bi.l104.getText().toString().trim().length() <= 0) {
+                    ClearClass.ClearAllFields(bi.fldGrpCVl103, null);
+                    bi.l103a.setEnabled(false);
+                    bi.l103b.setEnabled(true);
+                    bi.l103c.setEnabled(true);
+
+                }
             }
         });
 
-        bi.txtHeadLbl.setText(new StringBuilder(MainApp.indexKishMWRAChild.getName().toUpperCase()).append("\n")
-                .append(MainApp.indexKishMWRA.getMother_name().toUpperCase()));
+        /*bi.txtHeadLbl.setText(new StringBuilder(MainApp.indexKishMWRAChild.getName().toUpperCase()).append("\n")
+                .append(MainApp.indexKishMWRA.getMother_name().toUpperCase()));*/
 
     }
 
@@ -128,8 +138,6 @@ public class SectionLActivity extends AppCompatActivity {
         MainApp.setGPS(this); // Set GPS
 
         JSONObject json = new JSONObject();
-
-        json.put("l101", bi.l101.getSelectedItem().toString());
 
         json.put("l102",
                 bi.l102a.isChecked() ? "1" :
