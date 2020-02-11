@@ -22,7 +22,7 @@
         android:label="@string/app_name"
         android:screenOrientation="portrait"
         android:theme="@style/AppTheme1">
-
+        <activity android:name=".ui.other.AnthroEndingActivity"></activity>
         <activity
             android:name=".ui.other.SplashscreenActivity"
             android:screenOrientation="portrait">
@@ -32,87 +32,70 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-
         <activity
             android:name=".ui.other.LoginActivity"
             android:screenOrientation="portrait"
             android:theme="@style/AppTheme" />
-
         <activity
             android:name=".ui.sections.SectionA1Activity"
             android:label="@string/ta1heading"
             android:screenOrientation="portrait" />
-
         <activity
             android:name=".ui.sections.SectionA2Activity"
             android:label="@string/ta2heading"
             android:screenOrientation="portrait" />
-
         <activity
             android:name=".ui.sections.SectionA201Activity"
             android:label="@string/ta2heading"
             android:screenOrientation="portrait" />
-
         <activity
             android:name=".ui.sections.SectionA31Activity"
             android:label="@string/ta3heading"
             android:screenOrientation="portrait" />
-
         <activity
             android:name=".ui.sections.SectionA32Activity"
             android:label="@string/ta3heading"
             android:screenOrientation="portrait" />
-
         <activity
             android:name=".ui.sections.SectionA4Activity"
             android:label="@string/ta4heading"
             android:screenOrientation="portrait" />
-
         <activity
             android:name=".ui.sections.SectionB1Activity"
             android:label="@string/tb1heading"
             android:screenOrientation="portrait" />
-
         <activity
             android:name=".ui.sections.SectionB2Activity"
             android:label="@string/tb2heading"
             android:screenOrientation="portrait" />
-
         <activity
             android:name=".ui.sections.SectionB3Activity"
             android:label="@string/tb3heading"
             android:screenOrientation="portrait" />
-
         <activity
             android:name=".ui.sections.SectionC1Activity"
             android:label="@string/tc1heading"
             android:screenOrientation="portrait" />
-
         <activity
             android:name=".ui.sections.SectionC2Activity"
             android:label="@string/tc2heading"
             android:screenOrientation="portrait" />
-
         <activity
             android:name=".ui.sections.SectionC3Activity"
             android:label="@string/tc3heading"
             android:screenOrientation="portrait" />
-
         <activity
             android:name=".ui.sections.SectionC4Activity"
             android:label="@string/tc4heading"
             android:screenOrientation="portrait" />
-
         <activity
             android:name=".ui.sections.SectionC5Activity"
             android:label="@string/tc5heading"
             android:screenOrientation="portrait" />
-
         <activity
             android:name=".ui.sections.SectionC6Activity"
             android:label="@string/tc6heading"
             android:screenOrientation="portrait" />
-
         <activity
             android:name=".ui.sections.SectionD1Activity"
             android:label="@string/td1heading"
@@ -122,92 +105,74 @@
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="edu.aku.hassannaqvi.uen_scans_bl.ui.list_activity.FamilyMembersListActivity" />
         </activity>
-
         <activity
             android:name=".ui.sections.SectionD2Activity"
             android:label="@string/td2heading"
             android:screenOrientation="portrait" />
-
         <activity
             android:name=".ui.sections.SectionD3Activity"
             android:label="@string/td3heading"
             android:screenOrientation="portrait" />
-
         <activity
             android:name=".ui.sections.SectionD4Activity"
             android:label="@string/td4heading"
             android:screenOrientation="portrait" />
-
         <activity
             android:name=".ui.sections.SectionD6Activity"
             android:label="@string/td6heading"
             android:screenOrientation="portrait" />
-
         <activity
             android:name=".ui.sections.SectionD7Activity"
             android:label="@string/td7heading"
             android:screenOrientation="portrait" />
-
         <activity
             android:name=".ui.sections.SectionD8Activity"
             android:label="@string/td8heading"
             android:screenOrientation="portrait" />
-
         <activity
             android:name=".ui.sections.SectionD9Activity"
             android:label="@string/td9heading"
             android:screenOrientation="portrait" />
-
         <activity
             android:name=".ui.list_activity.FamilyMembersListActivity"
             android:screenOrientation="portrait"
             android:theme="@style/AppTheme" />
-
         <activity
             android:name=".ui.sections.SectionK1Activity"
             android:label="@string/tk1heading"
             android:screenOrientation="portrait" />
-
         <activity
             android:name=".ui.sections.SectionK2Activity"
             android:label="@string/tk2heading"
             android:screenOrientation="portrait" />
-
         <activity
             android:name=".ui.sections.SectionK3Activity"
             android:label="@string/tk3heading"
             android:screenOrientation="portrait" />
-
         <activity
             android:name=".ui.sections.SectionLActivity"
             android:label="@string/tlheading"
             android:screenOrientation="portrait" />
-
         <activity
             android:name=".ui.sections.SectionMActivity"
             android:label="@string/tmheading"
             android:screenOrientation="portrait" />
-
         <activity
             android:name=".ui.other.EndingActivity"
             android:screenOrientation="portrait" />
-
         <activity
             android:name=".ui.other.MainActivity"
             android:screenOrientation="portrait" />
-
         <activity
             android:name=".core.AndroidDatabaseManager"
             android:parentActivityName=".ui.other.MainActivity"
             android:screenOrientation="portrait" />
-
         <activity
             android:name=".ui.sync.SyncActivity"
             android:parentActivityName=".ui.other.MainActivity"
             android:screenOrientation="portrait" />
 
         <service android:name=".DownloadFileService" />
-
     </application>
 
 </manifest>

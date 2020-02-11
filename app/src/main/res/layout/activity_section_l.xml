@@ -53,33 +53,6 @@
 
                 </androidx.cardview.widget.CardView>
 
-                <!-- L101  Spinner   -->
-                <androidx.cardview.widget.CardView
-                    android:id="@+id/fldGrpCVl201"
-                    style="@style/cardView">
-
-                    <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:orientation="horizontal">
-
-                        <TextView
-                            style="@style/i_textview"
-                            android:layout_width="0dp"
-                            android:layout_weight="1"
-                            android:text="@string/l101" />
-
-                        <Spinner
-                            android:id="@+id/l101"
-                            style="@style/spinner"
-                            android:layout_width="0dp"
-                            android:layout_margin="10dp"
-                            android:layout_weight="1" />
-
-                    </LinearLayout>
-
-                </androidx.cardview.widget.CardView>
-
                 <!-- l102  Radio   -->
                 <androidx.cardview.widget.CardView
                     android:id="@+id/fldGrpCVl102"
@@ -116,6 +89,37 @@
                         </RadioGroup>
 
                     </LinearLayout>
+                </androidx.cardview.widget.CardView>
+
+                <!-- l104  Input-Numeric   -->
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/fldGrpCVl104"
+                    style="@style/cardView">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            style="@style/i_textview"
+                            android:layout_width="0dp"
+                            android:layout_weight="1"
+                            android:text="@string/l104" />
+
+                        <com.edittextpicker.aliazaz.EditTextPicker
+                            android:id="@+id/l104"
+                            style="@style/EditTextNum"
+                            android:layout_width="0dp"
+                            android:layout_weight="1"
+                            android:hint="dg/Ml"
+                            app:mask="##.#"
+                            app:maxValue="20"
+                            app:minValue="6"
+                            app:type="range" />
+
+                    </LinearLayout>
+
                 </androidx.cardview.widget.CardView>
 
                 <!-- l103  Radio   -->
@@ -162,73 +166,44 @@
 
                     </LinearLayout>
                 </androidx.cardview.widget.CardView>
+                <!--
 
-                <!-- tlheading3   -->
-                <androidx.cardview.widget.CardView
-                    android:id="@+id/fldGrpCVtlheading3"
-                    style="@style/cardView">
+                                &lt;!&ndash; tlheading3   &ndash;&gt;
+                                <androidx.cardview.widget.CardView
+                                    android:id="@+id/fldGrpCVtlheading3"
+                                    style="@style/cardView">
 
-                    <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:orientation="vertical">
+                                    <LinearLayout
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:orientation="vertical">
 
-                        <TextView
-                            style="@style/i_textviewhint"
-                            android:text="@string/tlheading3" />
+                                        <TextView
+                                            style="@style/i_textviewhint"
+                                            android:text="@string/tlheading3" />
 
-                    </LinearLayout>
+                                    </LinearLayout>
 
-                </androidx.cardview.widget.CardView>
+                                </androidx.cardview.widget.CardView>
 
-                <!-- tlheading4   -->
-                <androidx.cardview.widget.CardView
-                    android:id="@+id/fldGrpCVtlheading4"
-                    style="@style/cardView">
+                                &lt;!&ndash; tlheading4   &ndash;&gt;
+                                <androidx.cardview.widget.CardView
+                                    android:id="@+id/fldGrpCVtlheading4"
+                                    style="@style/cardView">
 
-                    <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:orientation="vertical">
+                                    <LinearLayout
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:orientation="vertical">
 
-                        <TextView
-                            style="@style/i_textviewhint"
-                            android:text="@string/tlheading4" />
+                                        <TextView
+                                            style="@style/i_textviewhint"
+                                            android:text="@string/tlheading4" />
 
-                    </LinearLayout>
+                                    </LinearLayout>
 
-                </androidx.cardview.widget.CardView>
-
-                <!-- l104  Input-Numeric   -->
-                <androidx.cardview.widget.CardView
-                    android:id="@+id/fldGrpCVl104"
-                    style="@style/cardView">
-
-                    <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:orientation="horizontal">
-
-                        <TextView
-                            style="@style/i_textview"
-                            android:layout_width="0dp"
-                            android:layout_weight="1"
-                            android:text="@string/l104" />
-
-                        <com.edittextpicker.aliazaz.EditTextPicker
-                            android:id="@+id/l104"
-                            style="@style/EditTextNum"
-                            android:layout_width="0dp"
-                            android:layout_weight="1"
-                            android:hint="dg/Ml"
-                            app:mask="##.#"
-                            app:maxValue="20"
-                            app:minValue="6"
-                            app:type="range" />
-
-                    </LinearLayout>
-
-                </androidx.cardview.widget.CardView>
+                                </androidx.cardview.widget.CardView>
+                -->
 
 
                 <LinearLayout

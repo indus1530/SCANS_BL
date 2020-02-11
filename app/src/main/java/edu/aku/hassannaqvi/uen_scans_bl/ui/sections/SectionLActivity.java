@@ -2,6 +2,9 @@ package edu.aku.hassannaqvi.uen_scans_bl.ui.sections;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.text.Editable;
+import android.text.TextWatcher;
+import android.view.View;
 import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
@@ -20,6 +23,7 @@ import edu.aku.hassannaqvi.uen_scans_bl.contracts.FormsContract;
 import edu.aku.hassannaqvi.uen_scans_bl.core.MainApp;
 import edu.aku.hassannaqvi.uen_scans_bl.databinding.ActivitySectionLBinding;
 import edu.aku.hassannaqvi.uen_scans_bl.utils.Util;
+import edu.aku.hassannaqvi.uen_scans_bl.validator.ClearClass;
 
 public class SectionLActivity extends AppCompatActivity {
 
@@ -31,9 +35,56 @@ public class SectionLActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         bi = DataBindingUtil.setContentView(this, R.layout.activity_section_l);
         bi.setCallback(this);
+        setupSkips();
 
-        bi.txtHeadLbl.setText(new StringBuilder(MainApp.indexKishMWRAChild.getName().toUpperCase()).append("\n")
-                .append(MainApp.indexKishMWRA.getMother_name().toUpperCase()));
+
+    }
+
+
+    private void setupSkips() {
+
+        bi.l102.setOnCheckedChangeListener((group, checkedId) -> {
+            if (bi.l102a.isChecked()) {
+                bi.fldGrpCVl104.setVisibility(View.VISIBLE);
+                bi.fldGrpCVl103.setVisibility(View.VISIBLE);
+            } else {
+                ClearClass.ClearAllFields(bi.fldGrpCVl104, null);
+                ClearClass.ClearAllFields(bi.fldGrpCVl103, null);
+                bi.fldGrpCVl104.setVisibility(View.GONE);
+                bi.fldGrpCVl103.setVisibility(View.GONE);
+            }
+        });
+
+
+        bi.l104.addTextChangedListener(new TextWatcher() {
+            @Override
+            public void beforeTextChanged(CharSequence s, int start, int count, int after) {
+            }
+
+            @Override
+            public void onTextChanged(CharSequence s, int start, int before, int count) {
+                if (bi.l104.getText().toString().trim().length() > 0) {
+                    ClearClass.ClearAllFields(bi.fldGrpCVl103, null);
+                    bi.l103a.setEnabled(true);
+                    bi.l103b.setEnabled(false);
+                    bi.l103c.setEnabled(false);
+                }
+            }
+
+            @Override
+            public void afterTextChanged(Editable s) {
+                if (bi.l104.getText().toString().trim().length() <= 0) {
+                    ClearClass.ClearAllFields(bi.fldGrpCVl103, null);
+                    bi.l103a.setEnabled(false);
+                    bi.l103b.setEnabled(true);
+                    bi.l103c.setEnabled(true);
+
+                }
+            }
+        });
+
+        /*bi.txtHeadLbl.setText(new StringBuilder(MainApp.indexKishMWRAChild.getName().toUpperCase()).append("\n")
+                .append(MainApp.indexKishMWRA.getMother_name().toUpperCase()));*/
 
     }
 
@@ -87,8 +138,6 @@ public class SectionLActivity extends AppCompatActivity {
         MainApp.setGPS(this); // Set GPS
 
         JSONObject json = new JSONObject();
-
-        json.put("l101", bi.l101.getSelectedItem().toString());
 
         json.put("l102",
                 bi.l102a.isChecked() ? "1" :

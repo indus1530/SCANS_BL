@@ -38,6 +38,7 @@ public class SectionA201Activity extends AppCompatActivity {
 
 
     private void setlistener() {
+
         bi.a205yy.addTextChangedListener(new TextWatcher() {
             @Override
             public void beforeTextChanged(CharSequence s, int start, int count, int after) {

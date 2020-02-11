@@ -23,7 +23,7 @@ import edu.aku.hassannaqvi.uen_scans_bl.R;
 import edu.aku.hassannaqvi.uen_scans_bl.core.DatabaseHelper;
 import edu.aku.hassannaqvi.uen_scans_bl.core.MainApp;
 import edu.aku.hassannaqvi.uen_scans_bl.databinding.ActivitySectionK2Binding;
-import edu.aku.hassannaqvi.uen_scans_bl.utils.Util;
+import edu.aku.hassannaqvi.uen_scans_bl.ui.other.AnthroEndingActivity;
 import edu.aku.hassannaqvi.uen_scans_bl.validator.ClearClass;
 
 import static edu.aku.hassannaqvi.uen_scans_bl.ui.list_activity.FamilyMembersListActivity.mainVModel;
@@ -118,7 +118,8 @@ public class SectionK2Activity extends AppCompatActivity {
 
 
     public void BtnEnd() {
-        Util.openEndActivity(this);
+        finish();
+        startActivity(new Intent(this, AnthroEndingActivity.class).putExtra("complete", false));
     }
 
 
@@ -152,11 +153,11 @@ public class SectionK2Activity extends AppCompatActivity {
                         bi.k203b.isChecked() ? "2" :
                                 "0");
 
-        json.put("k208",
+        /*json.put("k208",
                 bi.k208a.isChecked() ? "1" :
                         bi.k208b.isChecked() ? "2" :
                                 bi.k208c.isChecked() ? "3" :
-                                        "0");
+                                        "0");*/
 
         json.put("k209a", bi.k209a.getText().toString());
         json.put("k209b", bi.k209b.getSelectedItem().toString());
