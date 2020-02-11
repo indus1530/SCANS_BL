@@ -1384,20 +1384,31 @@ public class DatabaseHelper extends SQLiteOpenHelper {
     public int updateEnding() {
         SQLiteDatabase db = this.getReadableDatabase();
 
-// New value for one column
         ContentValues values = new ContentValues();
         values.put(FormsTable.COLUMN_ISTATUS, MainApp.fc.getIstatus());
         values.put(FormsTable.COLUMN_ISTATUS88x, MainApp.fc.getIstatus88x());
-//        values.put(FormsTable.COLUMN_SE, MainApp.fc.getsE());
-//        values.put(FormsTable.COLUMN_STATUS, MainApp.fc.getStatus());
         values.put(FormsTable.COLUMN_ENDINGDATETIME, MainApp.fc.getEndingdatetime());
 
-
-// Which row to update, based on the ID
         String selection = FormsTable.COLUMN_ID + " =? ";
         String[] selectionArgs = {String.valueOf(MainApp.fc.get_ID())};
 
         int count = db.update(FormsTable.TABLE_NAME,
+                values,
+                selection,
+                selectionArgs);
+        return count;
+    }
+
+    public int updateAnthroEnding() {
+        SQLiteDatabase db = this.getReadableDatabase();
+
+        ContentValues values = new ContentValues();
+        values.put(SingleAnthro.COLUMN_ISTATUS, MainApp.fc.getIstatus());
+
+        String selection = SingleAnthro.COLUMN__ID + " =? ";
+        String[] selectionArgs = {String.valueOf(MainApp.anthro.get_ID())};
+
+        int count = db.update(SingleAnthro.TABLE_NAME,
                 values,
                 selection,
                 selectionArgs);
@@ -1547,14 +1558,14 @@ public class DatabaseHelper extends SQLiteOpenHelper {
     }
 
     //Generic update MortalityColumn
-    public int updatesMortalityColumn(String column, String value, AnthroContract mortality) {
+    public int updatesAnthroColumn(String column, String value) {
         SQLiteDatabase db = this.getReadableDatabase();
 
         ContentValues values = new ContentValues();
         values.put(column, value);
 
         String selection = SingleAnthro._ID + " =? ";
-        String[] selectionArgs = {String.valueOf(mortality.get_ID())};
+        String[] selectionArgs = {String.valueOf(MainApp.anthro.get_ID())};
 
         return db.update(SingleAnthro.TABLE_NAME,
                 values,

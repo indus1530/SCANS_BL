@@ -9,12 +9,12 @@ import androidx.databinding.DataBindingUtil;
 
 import com.validatorcrawler.aliazaz.Validator;
 
-import java.text.SimpleDateFormat;
-import java.util.Date;
-
 import edu.aku.hassannaqvi.uen_scans_bl.R;
+import edu.aku.hassannaqvi.uen_scans_bl.core.DatabaseHelper;
 import edu.aku.hassannaqvi.uen_scans_bl.core.MainApp;
 import edu.aku.hassannaqvi.uen_scans_bl.databinding.ActivityAnthroEndingBinding;
+import edu.aku.hassannaqvi.uen_scans_bl.ui.sections.SectionK2Activity;
+import edu.aku.hassannaqvi.uen_scans_bl.ui.sections.SectionLActivity;
 
 public class AnthroEndingActivity extends AppCompatActivity {
 
@@ -49,7 +49,7 @@ public class AnthroEndingActivity extends AppCompatActivity {
             SaveDraft();
             if (UpdateDB()) {
                 finish();
-                startActivity(new Intent(getApplicationContext(), MainActivity.class));
+                startActivity(new Intent(this, MainApp.mwraChildren.getFirst().size() > 0 ? SectionK2Activity.class : SectionLActivity.class));
             } else {
                 Toast.makeText(this, "Error in updating db!!", Toast.LENGTH_SHORT).show();
             }
@@ -57,26 +57,22 @@ public class AnthroEndingActivity extends AppCompatActivity {
     }
 
     private void SaveDraft() {
-
-        MainApp.fc.setIstatus(bi.k208a.isChecked() ? "1"
+        MainApp.anthro.setIstatus(bi.k208a.isChecked() ? "1"
                 : bi.k208b.isChecked() ? "2"
                 : bi.k208c.isChecked() ? "3"
                 : "0");
-
-        MainApp.fc.setEndingdatetime(new SimpleDateFormat("dd-MM-yy HH:mm").format(new Date().getTime()));
     }
 
     public boolean UpdateDB() {
 
-        /*DatabaseHelper db = MainApp.appInfo.getDbHelper();
-        int updcount = db.updateEnding();
+        DatabaseHelper db = MainApp.appInfo.getDbHelper();
+        int updcount = db.updateAnthroEnding();
         if (updcount == 1) {
             return true;
         } else {
             Toast.makeText(this, "Updating Database... ERROR!", Toast.LENGTH_SHORT).show();
             return false;
-        }*/
-        return true;
+        }
 
     }
 

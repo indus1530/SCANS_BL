@@ -15,9 +15,12 @@ import org.json.JSONException;
 import org.json.JSONObject;
 
 import edu.aku.hassannaqvi.uen_scans_bl.R;
+import edu.aku.hassannaqvi.uen_scans_bl.contracts.AnthroContract;
 import edu.aku.hassannaqvi.uen_scans_bl.core.DatabaseHelper;
 import edu.aku.hassannaqvi.uen_scans_bl.core.MainApp;
 import edu.aku.hassannaqvi.uen_scans_bl.databinding.ActivitySectionK3Binding;
+import edu.aku.hassannaqvi.uen_scans_bl.ui.other.AnthroEndingActivity;
+import edu.aku.hassannaqvi.uen_scans_bl.utils.JSONUtils;
 import edu.aku.hassannaqvi.uen_scans_bl.utils.Util;
 import edu.aku.hassannaqvi.uen_scans_bl.validator.ClearClass;
 
@@ -74,7 +77,7 @@ public class SectionK3Activity extends AppCompatActivity {
             }
             if (UpdateDB()) {
                 finish();
-                startActivity(new Intent(this, MainApp.mwraChildren.getFirst().size() > 0 ? SectionK3Activity.class : SectionLActivity.class));
+                startActivity(new Intent(this, AnthroEndingActivity.class).putExtra("complete", true));
             } else {
                 Toast.makeText(this, "Failed to Update Database!", Toast.LENGTH_SHORT).show();
             }
@@ -90,15 +93,14 @@ public class SectionK3Activity extends AppCompatActivity {
 
     private boolean UpdateDB() {
 
-        /*DatabaseHelper db = MainApp.appInfo.getDbHelper();
-        int updcount = db.updatesKishMWRAColumn(KishMWRAContract.SingleKishMWRA.COLUMN_SK, MainApp.kish.getsK());
+        DatabaseHelper db = MainApp.appInfo.getDbHelper();
+        int updcount = db.updatesAnthroColumn(AnthroContract.SingleAnthro.COLUMN_SK1, MainApp.anthro.getsK1());
         if (updcount == 1) {
             return true;
         } else {
             Toast.makeText(this, "Updating Database... ERROR!", Toast.LENGTH_SHORT).show();
             return false;
-        }*/
-        return true;
+        }
     }
 
 
@@ -133,6 +135,15 @@ public class SectionK3Activity extends AppCompatActivity {
 
         k2.put("k228a", bi.k228a.getText().toString());
         k2.put("k228b", bi.k228b.getSelectedItem().toString());
+
+        try {
+            JSONObject s4_merge = JSONUtils.mergeJSONObjects(new JSONObject(MainApp.anthro.getsK1()), k2);
+
+            MainApp.anthro.setsK1(String.valueOf(s4_merge));
+
+        } catch (JSONException e) {
+            e.printStackTrace();
+        }
 
     }
 
