@@ -52,6 +52,9 @@ public class SectionK1Activity extends AppCompatActivity {
             }
         }));*/
 
+        bi.txtHeadLbl.setText(new StringBuilder(MainApp.indexKishMWRAChild.getName().toUpperCase()).append("\n")
+                .append(MainApp.indexKishMWRA.getMother_name().toUpperCase()));
+
     }
 
 
