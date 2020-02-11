@@ -2,6 +2,8 @@ package edu.aku.hassannaqvi.uen_scans_bl.ui.sections;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.widget.ArrayAdapter;
+import android.widget.Spinner;
 import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
@@ -13,7 +15,7 @@ import org.json.JSONException;
 import org.json.JSONObject;
 
 import edu.aku.hassannaqvi.uen_scans_bl.R;
-import edu.aku.hassannaqvi.uen_scans_bl.core.MainApp;
+import edu.aku.hassannaqvi.uen_scans_bl.core.DatabaseHelper;
 import edu.aku.hassannaqvi.uen_scans_bl.databinding.ActivitySectionK3Binding;
 import edu.aku.hassannaqvi.uen_scans_bl.utils.Util;
 import edu.aku.hassannaqvi.uen_scans_bl.validator.ClearClass;
@@ -21,6 +23,8 @@ import edu.aku.hassannaqvi.uen_scans_bl.validator.ClearClass;
 public class SectionK3Activity extends AppCompatActivity {
 
     ActivitySectionK3Binding bi;
+    Spinner[] userSpinners;
+    DatabaseHelper db;
 
 
     @Override
@@ -29,22 +33,31 @@ public class SectionK3Activity extends AppCompatActivity {
         bi = DataBindingUtil.setContentView(this, R.layout.activity_section_k3);
         bi.setCallback(this);
 
-        setlistener();
+        setupContent();
+        setupSkips();
 
     }
 
+    private void setupContent() {
+        db = new DatabaseHelper(this);
+        userSpinners = new Spinner[]{bi.k221b, bi.k222b, bi.k224b, bi.k225b, bi.k226b, bi.k228b};
+        for (Spinner singleSpinner : userSpinners) {
+            singleSpinner.setAdapter(new ArrayAdapter<>(this, android.R.layout.simple_dropdown_item_1line, db.getUsers()));
+        }
+    }
 
-    private void setlistener() {
+
+    private void setupSkips() {
 
         bi.k223.setOnCheckedChangeListener(((radioGroup, i) -> {
             if (i != bi.k223b.getId()) {
-                ClearClass.ClearAllFields(bi.fldGrpCVk04, null);
+                ClearClass.ClearAllFields(bi.fldGrpCVk224, null);
             }
         }));
 
         bi.k227.setOnCheckedChangeListener(((radioGroup, i) -> {
             if (i != bi.k227b.getId()) {
-                ClearClass.ClearAllFields(bi.fldGrpCVk05, null);
+                ClearClass.ClearAllFields(bi.fldGrpCVk228, null);
             }
         }));
 
