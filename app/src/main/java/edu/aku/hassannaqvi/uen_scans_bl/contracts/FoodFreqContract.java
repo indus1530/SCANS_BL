@@ -6,7 +6,7 @@ import android.provider.BaseColumns;
 import org.json.JSONException;
 import org.json.JSONObject;
 
-public class KishMWRAContract {
+public class FoodFreqContract {
 
 
     private String _ID = "";
@@ -25,14 +25,9 @@ public class KishMWRAContract {
     private String synced = "";
     private String synced_date = "";
 
-    /*
-    saved in JSON
-    =============
-    * hhno
-    * cluster
-    * fm_uid
-    * fm_serial
-    * */
+    /**
+     * whole Section D1...D9
+     */
 
     public String get_ID() {
         return _ID;
@@ -155,7 +150,7 @@ public class KishMWRAContract {
     }
 
 
-    public KishMWRAContract hydrate(Cursor cursor) {
+    public FoodFreqContract hydrate(Cursor cursor) {
         this._ID = cursor.getString(cursor.getColumnIndex(SingleKishMWRA.COLUMN__ID));
         this.UID = cursor.getString(cursor.getColumnIndex(SingleKishMWRA.COLUMN_UID));
         this._UUID = cursor.getString(cursor.getColumnIndex(SingleKishMWRA.COLUMN__UUID));

@@ -9,6 +9,7 @@ import org.json.JSONObject;
 public class ChildContract {
 
 
+
     private String _ID = "";
     private String UID = "";
     private String _UUID = "";
@@ -22,24 +23,17 @@ public class ChildContract {
     private String synced = "";
     private String synced_date = "";
 
-     /*
-    saved in JSON
-    =============
-    * hhno
-    * cluster
-    * i1_fm_uid
-    * i1_fm_serial
-    * i1_res_fm_uid
-    * i1_res_fm_serial
-    * i2_fm_uid
-    * i2_fm_serial
-    * i2_res_fm_uid
-    * i2_res_fm_serial
-    * j_fm_uid
-    * j_fm_serial
-    * j_res_fm_uid
-    * j_res_fm_serial
-    * */
+    /**
+     * C1,
+     * C2,
+     * C3,
+     * C4,
+     * C5,
+     * C6
+     *
+     */
+
+
 
 
     public ChildContract hydrate(Cursor cursor) {

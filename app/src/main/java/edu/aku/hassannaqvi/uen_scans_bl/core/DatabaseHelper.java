@@ -29,14 +29,14 @@ import edu.aku.hassannaqvi.uen_scans_bl.contracts.FamilyMembersContract;
 import edu.aku.hassannaqvi.uen_scans_bl.contracts.FamilyMembersContract.SingleMember;
 import edu.aku.hassannaqvi.uen_scans_bl.contracts.FormsContract;
 import edu.aku.hassannaqvi.uen_scans_bl.contracts.FormsContract.FormsTable;
-import edu.aku.hassannaqvi.uen_scans_bl.contracts.KishMWRAContract;
-import edu.aku.hassannaqvi.uen_scans_bl.contracts.KishMWRAContract.SingleKishMWRA;
+import edu.aku.hassannaqvi.uen_scans_bl.contracts.FoodFreqContract;
+import edu.aku.hassannaqvi.uen_scans_bl.contracts.FoodFreqContract.SingleKishMWRA;
 import edu.aku.hassannaqvi.uen_scans_bl.contracts.MWRAContract;
 import edu.aku.hassannaqvi.uen_scans_bl.contracts.MWRAContract.MWRATable;
 import edu.aku.hassannaqvi.uen_scans_bl.contracts.MWRA_PREContract;
 import edu.aku.hassannaqvi.uen_scans_bl.contracts.MWRA_PREContract.SingleMWRAPRE;
-import edu.aku.hassannaqvi.uen_scans_bl.contracts.MortalityContract;
-import edu.aku.hassannaqvi.uen_scans_bl.contracts.MortalityContract.SingleMortality;
+import edu.aku.hassannaqvi.uen_scans_bl.contracts.AnthroContract;
+import edu.aku.hassannaqvi.uen_scans_bl.contracts.AnthroContract.SingleMortality;
 import edu.aku.hassannaqvi.uen_scans_bl.contracts.TalukasContract;
 import edu.aku.hassannaqvi.uen_scans_bl.contracts.UCsContract;
 import edu.aku.hassannaqvi.uen_scans_bl.contracts.UsersContract;
@@ -628,7 +628,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         return newRowId;
     }
 
-    public Long addMortality(MortalityContract morc) {
+    public Long addMortality(AnthroContract morc) {
 
         // Gets the data repository in write mode
         SQLiteDatabase db = this.getWritableDatabase();
@@ -650,7 +650,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         return newRowId;
     }
 
-    public Long addKishMWRA(KishMWRAContract kishmwra) {
+    public Long addKishMWRA(FoodFreqContract kishmwra) {
 
         // Gets the data repository in write mode
         SQLiteDatabase db = this.getWritableDatabase();
@@ -1113,7 +1113,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         return allMC;
     }
 
-    public Collection<MortalityContract> getUnsyncedMortality() {
+    public Collection<AnthroContract> getUnsyncedMortality() {
         SQLiteDatabase db = this.getReadableDatabase();
         Cursor c = null;
         String[] columns = {
@@ -1136,7 +1136,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         String orderBy =
                 SingleMWRAPRE._ID + " ASC";
 
-        Collection<MortalityContract> allMC = new ArrayList<MortalityContract>();
+        Collection<AnthroContract> allMC = new ArrayList<AnthroContract>();
         try {
             c = db.query(
                     SingleMortality.TABLE_NAME,  // The table to query
@@ -1148,7 +1148,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
                     orderBy                    // The sort order
             );
             while (c.moveToNext()) {
-                MortalityContract mc = new MortalityContract();
+                AnthroContract mc = new AnthroContract();
                 allMC.add(mc.hydrate(c));
             }
         } finally {
@@ -1162,7 +1162,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         return allMC;
     }
 
-    public Collection<KishMWRAContract> getUnsyncedKishMWRA() {
+    public Collection<FoodFreqContract> getUnsyncedKishMWRA() {
         SQLiteDatabase db = this.getReadableDatabase();
         Cursor c = null;
         String[] columns = {
@@ -1188,7 +1188,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         String orderBy =
                 SingleKishMWRA._ID + " ASC";
 
-        Collection<KishMWRAContract> allMC = new ArrayList<KishMWRAContract>();
+        Collection<FoodFreqContract> allMC = new ArrayList<FoodFreqContract>();
         try {
             c = db.query(
                     SingleKishMWRA.TABLE_NAME,  // The table to query
@@ -1200,7 +1200,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
                     orderBy                    // The sort order
             );
             while (c.moveToNext()) {
-                KishMWRAContract mc = new KishMWRAContract();
+                FoodFreqContract mc = new FoodFreqContract();
                 allMC.add(mc.hydrate(c));
             }
         } finally {
@@ -1551,7 +1551,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
     }
 
     //Generic update MortalityColumn
-    public int updatesMortalityColumn(String column, String value, MortalityContract mortality) {
+    public int updatesMortalityColumn(String column, String value, AnthroContract mortality) {
         SQLiteDatabase db = this.getReadableDatabase();
 
         ContentValues values = new ContentValues();

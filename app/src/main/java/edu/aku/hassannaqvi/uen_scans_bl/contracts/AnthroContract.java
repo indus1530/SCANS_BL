@@ -6,7 +6,7 @@ import android.provider.BaseColumns;
 import org.json.JSONException;
 import org.json.JSONObject;
 
-public class MortalityContract {
+public class AnthroContract {
 
 
     private String _ID = "";
@@ -20,16 +20,15 @@ public class MortalityContract {
     private String synced = "";
     private String synced_date = "";
 
-    /*
-    saved in JSON
-    =============
-    * hhno
-    * cluster
-    * counter
-    *
-    * */
+    /**
+     * Info,
+     * K1,
+     * K2,
+     * L,
+     * M,
+     */
 
-    public MortalityContract hydrate(Cursor cursor) {
+    public AnthroContract hydrate(Cursor cursor) {
         this._ID = cursor.getString(cursor.getColumnIndex(SingleMortality.COLUMN__ID));
         this.UID = cursor.getString(cursor.getColumnIndex(SingleMortality.COLUMN_UID));
         this._UUID = cursor.getString(cursor.getColumnIndex(SingleMortality.COLUMN__UUID));
@@ -38,10 +37,7 @@ public class MortalityContract {
         this.user = cursor.getString(cursor.getColumnIndex(SingleMortality.COLUMN_USER));
         this.sE3 = cursor.getString(cursor.getColumnIndex(SingleMortality.COLUMN_SE3));
         this.devicetagID = cursor.getString(cursor.getColumnIndex(SingleMortality.COLUMN_DEVICETAGID));
-
-
         return this;
-
     }
 
     public String get_ID() {
@@ -134,7 +130,6 @@ public class MortalityContract {
         json.put(SingleMortality.COLUMN_DEVICEID, this.deviceId == null ? JSONObject.NULL : this.deviceId);
         json.put(SingleMortality.COLUMN_FORMDATE, this.formDate == null ? JSONObject.NULL : this.formDate);
         json.put(SingleMortality.COLUMN_USER, this.user == null ? JSONObject.NULL : this.user);
-
 
         if (!this.sE3.equals("")) {
             json.put(SingleMortality.COLUMN_SE3, this.sE3.equals("") ? JSONObject.NULL : new JSONObject(this.sE3));

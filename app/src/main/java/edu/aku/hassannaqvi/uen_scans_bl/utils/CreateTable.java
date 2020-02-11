@@ -5,10 +5,10 @@ import edu.aku.hassannaqvi.uen_scans_bl.contracts.ChildContract.SingleChild;
 import edu.aku.hassannaqvi.uen_scans_bl.contracts.EnumBlockContract;
 import edu.aku.hassannaqvi.uen_scans_bl.contracts.FamilyMembersContract;
 import edu.aku.hassannaqvi.uen_scans_bl.contracts.FormsContract;
-import edu.aku.hassannaqvi.uen_scans_bl.contracts.KishMWRAContract.SingleKishMWRA;
+import edu.aku.hassannaqvi.uen_scans_bl.contracts.FoodFreqContract.SingleKishMWRA;
 import edu.aku.hassannaqvi.uen_scans_bl.contracts.MWRAContract.MWRATable;
 import edu.aku.hassannaqvi.uen_scans_bl.contracts.MWRA_PREContract.SingleMWRAPRE;
-import edu.aku.hassannaqvi.uen_scans_bl.contracts.MortalityContract.SingleMortality;
+import edu.aku.hassannaqvi.uen_scans_bl.contracts.AnthroContract.SingleMortality;
 import edu.aku.hassannaqvi.uen_scans_bl.contracts.UsersContract;
 import edu.aku.hassannaqvi.uen_scans_bl.contracts.VersionAppContract;
 
