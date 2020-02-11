@@ -16,16 +16,22 @@ import com.validatorcrawler.aliazaz.Validator;
 import org.json.JSONException;
 import org.json.JSONObject;
 
+import java.text.SimpleDateFormat;
 import java.util.ArrayList;
+import java.util.Date;
 import java.util.List;
 
 import edu.aku.hassannaqvi.uen_scans_bl.R;
+import edu.aku.hassannaqvi.uen_scans_bl.contracts.AnthroContract;
+import edu.aku.hassannaqvi.uen_scans_bl.contracts.FamilyMembersContract;
 import edu.aku.hassannaqvi.uen_scans_bl.core.DatabaseHelper;
 import edu.aku.hassannaqvi.uen_scans_bl.core.MainApp;
 import edu.aku.hassannaqvi.uen_scans_bl.databinding.ActivitySectionK2Binding;
 import edu.aku.hassannaqvi.uen_scans_bl.ui.other.AnthroEndingActivity;
 import edu.aku.hassannaqvi.uen_scans_bl.validator.ClearClass;
 
+import static edu.aku.hassannaqvi.uen_scans_bl.core.MainApp.anthro;
+import static edu.aku.hassannaqvi.uen_scans_bl.core.MainApp.mwraChildren;
 import static edu.aku.hassannaqvi.uen_scans_bl.ui.list_activity.FamilyMembersListActivity.mainVModel;
 
 public class SectionK2Activity extends AppCompatActivity {
@@ -33,6 +39,7 @@ public class SectionK2Activity extends AppCompatActivity {
     ActivitySectionK2Binding bi;
     Spinner[] userSpinners;
     DatabaseHelper db;
+    FamilyMembersContract fmc_child;
     int position;
 
     @Override
@@ -54,7 +61,7 @@ public class SectionK2Activity extends AppCompatActivity {
         List<String> childLst = new ArrayList<String>() {
             {
                 add("....");
-                addAll(MainApp.mwraChildren.getSecond());
+                addAll(mwraChildren.getSecond());
             }
         };
 
@@ -64,6 +71,7 @@ public class SectionK2Activity extends AppCompatActivity {
             @Override
             public void onItemSelected(AdapterView<?> adapterView, View view, int i, long l) {
                 position = i;
+                fmc_child = mainVModel.getMemberInfo(mwraChildren.getFirst().get(bi.k201.getSelectedItemPosition() - 1));
             }
 
             @Override
@@ -105,9 +113,6 @@ public class SectionK2Activity extends AppCompatActivity {
                 e.printStackTrace();
             }
             if (UpdateDB()) {
-
-                MainApp.mwraChildren = mainVModel.getAllChildrenPairOfSelMWRA(Integer.valueOf(MainApp.indexKishMWRA.getSerialno()));
-
                 finish();
                 startActivity(new Intent(this, SectionK3Activity.class));
             } else {
@@ -118,28 +123,51 @@ public class SectionK2Activity extends AppCompatActivity {
 
 
     public void BtnEnd() {
-        finish();
-        startActivity(new Intent(this, AnthroEndingActivity.class).putExtra("complete", false));
+
+        if (!Validator.emptySpinner(this, bi.k201)) return;
+
+        try {
+            SaveDraft();
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+        if (UpdateDB()) {
+            finish();
+            startActivity(new Intent(this, AnthroEndingActivity.class).putExtra("complete", false));
+        }
     }
 
 
     private boolean UpdateDB() {
-
-        /*DatabaseHelper db = MainApp.appInfo.getDbHelper();
-        int updcount = db.updatesKishMWRAColumn(KishMWRAContract.SingleKishMWRA.COLUMN_SK, MainApp.kish.getsK());
-        if (updcount == 1) {
+        DatabaseHelper db = MainApp.appInfo.getDbHelper();
+        long updcount = db.addAnthro(anthro);
+        anthro.set_ID(String.valueOf(updcount));
+        if (updcount > 0) {
+            anthro.setUID(anthro.getDeviceId() + anthro.get_ID());
+            db.updatesAnthroColumn(AnthroContract.SingleAnthro.COLUMN_UID, anthro.getUID());
             return true;
         } else {
             Toast.makeText(this, "Updating Database... ERROR!", Toast.LENGTH_SHORT).show();
-            return false;
-        }*/
+        }
         return true;
     }
 
 
     private void SaveDraft() throws JSONException {
 
+        anthro = new AnthroContract();
+        anthro.set_UUID(MainApp.fc.get_UID());
+        anthro.setDeviceId(MainApp.appInfo.getDeviceID());
+        anthro.setFormDate(new SimpleDateFormat("dd-MM-yy HH:mm").format(new Date().getTime()));
+        anthro.setUser(MainApp.userName);
+        anthro.setDevicetagID(MainApp.appInfo.getTagName());
+
         JSONObject json = new JSONObject();
+        json.put("fm_uid", fmc_child.getUid());
+        json.put("fm_serial", fmc_child.getSerialno());
+        json.put("mm_serial", fmc_child.getMother_serial());
+        json.put("hhno", MainApp.fc.getHhno());
+        json.put("cluster", MainApp.fc.getClusterCode());
 
         json.put("k201", bi.k201.getSelectedItem().toString());
 
@@ -202,8 +230,8 @@ public class SectionK2Activity extends AppCompatActivity {
         json.put("k220b", bi.k220b.getSelectedItem().toString());
 
         // Deleting item in list
-        MainApp.mwraChildren.getFirst().remove(position - 1);
-        MainApp.mwraChildren.getSecond().remove(position - 1);
+        mwraChildren.getFirst().remove(position - 1);
+        mwraChildren.getSecond().remove(position - 1);
 
     }
 
