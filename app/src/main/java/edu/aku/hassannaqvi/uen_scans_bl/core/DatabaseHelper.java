@@ -16,6 +16,7 @@ import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Collection;
 import java.util.Date;
+import java.util.List;
 
 import edu.aku.hassannaqvi.uen_scans_bl.contracts.AreasContract;
 import edu.aku.hassannaqvi.uen_scans_bl.contracts.AreasContract.singleAreas;
@@ -40,6 +41,7 @@ import edu.aku.hassannaqvi.uen_scans_bl.contracts.MortalityContract.SingleMortal
 import edu.aku.hassannaqvi.uen_scans_bl.contracts.TalukasContract;
 import edu.aku.hassannaqvi.uen_scans_bl.contracts.UCsContract;
 import edu.aku.hassannaqvi.uen_scans_bl.contracts.UsersContract;
+import edu.aku.hassannaqvi.uen_scans_bl.contracts.UsersContract.SingleUser;
 import edu.aku.hassannaqvi.uen_scans_bl.contracts.VersionAppContract;
 import edu.aku.hassannaqvi.uen_scans_bl.contracts.VillagesContract;
 import edu.aku.hassannaqvi.uen_scans_bl.contracts.VillagesContract.SingleVillage;
@@ -445,6 +447,42 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         return allAC;
     }
 
+    public List<String> getUsers() {
+        SQLiteDatabase db = this.getReadableDatabase();
+        Cursor c = null;
+        String[] columns = {SingleUser.ROW_USERNAME};
+
+        String whereClause = null;
+        String[] whereArgs = null;
+        String groupBy = null;
+        String having = null;
+        String orderBy = null;
+
+        List<String> allAC = new ArrayList<>();
+        try {
+            c = db.query(
+                    SingleVillage.TABLE_NAME,  // The table to query
+                    columns,                   // The columns to return
+                    whereClause,               // The columns for the WHERE clause
+                    whereArgs,                 // The values for the WHERE clause
+                    groupBy,                   // don't group the rows
+                    having,                    // don't filter by row groups
+                    orderBy                    // The sort order
+            );
+            while (c.moveToNext()) {
+                allAC.add(c.getString(c.getColumnIndex(SingleUser.ROW_USERNAME)));
+            }
+        } finally {
+            if (c != null) {
+                c.close();
+            }
+            if (db != null) {
+                db.close();
+            }
+        }
+        return allAC;
+    }
+
     public void syncVersionApp(JSONArray Versionlist) {
         SQLiteDatabase db = this.getWritableDatabase();
         db.delete(VersionAppContract.VersionAppTable.TABLE_NAME, null, null);
@@ -468,52 +506,9 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         }
     }
 
-    public VersionAppContract getVersionApp() {
-
-        SQLiteDatabase db = this.getReadableDatabase();
-        Cursor c = null;
-        String[] columns = {
-                VersionAppContract.VersionAppTable._ID,
-                VersionAppContract.VersionAppTable.COLUMN_VERSION_CODE,
-                VersionAppContract.VersionAppTable.COLUMN_VERSION_NAME,
-                VersionAppContract.VersionAppTable.COLUMN_PATH_NAME
-        };
-
-        String whereClause = null;
-        String[] whereArgs = null;
-        String groupBy = null;
-        String having = null;
-
-        String orderBy = null;
-
-        VersionAppContract allVC = new VersionAppContract();
-        try {
-            c = db.query(
-                    VersionAppContract.VersionAppTable.TABLE_NAME,  // The table to query
-                    columns,                   // The columns to return
-                    whereClause,               // The columns for the WHERE clause
-                    whereArgs,                 // The values for the WHERE clause
-                    groupBy,                   // don't group the rows
-                    having,                    // don't filter by row groups
-                    orderBy                    // The sort order
-            );
-            while (c.moveToNext()) {
-                allVC.hydrate(c);
-            }
-        } finally {
-            if (c != null) {
-                c.close();
-            }
-            if (db != null) {
-                db.close();
-            }
-        }
-        return allVC;
-    }
-
     public void syncUser(JSONArray userlist) {
         SQLiteDatabase db = this.getWritableDatabase();
-        db.delete(UsersContract.singleUser.TABLE_NAME, null, null);
+        db.delete(UsersContract.SingleUser.TABLE_NAME, null, null);
         try {
             JSONArray jsonArray = userlist;
             for (int i = 0; i < jsonArray.length(); i++) {
@@ -524,11 +519,11 @@ public class DatabaseHelper extends SQLiteOpenHelper {
                 user.Sync(jsonObjectUser);
                 ContentValues values = new ContentValues();
 
-                values.put(UsersContract.singleUser.ROW_USERNAME, user.getUserName());
-                values.put(UsersContract.singleUser.ROW_PASSWORD, user.getPassword());
-                values.put(UsersContract.singleUser.DIST_ID, user.getDIST_ID());
-//                values.put(singleUser.REGION_DSS, user.getREGION_DSS());
-                db.insert(UsersContract.singleUser.TABLE_NAME, null, values);
+                values.put(UsersContract.SingleUser.ROW_USERNAME, user.getUserName());
+                values.put(UsersContract.SingleUser.ROW_PASSWORD, user.getPassword());
+                values.put(UsersContract.SingleUser.DIST_ID, user.getDIST_ID());
+//                values.put(SingleUser.REGION_DSS, user.getREGION_DSS());
+                db.insert(UsersContract.SingleUser.TABLE_NAME, null, values);
             }
 
 
@@ -542,13 +537,13 @@ public class DatabaseHelper extends SQLiteOpenHelper {
     public boolean Login(String username, String password) throws SQLException {
         SQLiteDatabase db = this.getReadableDatabase();
 
-        Cursor mCursor = db.rawQuery("SELECT * FROM " + UsersContract.singleUser.TABLE_NAME + " WHERE " + UsersContract.singleUser.ROW_USERNAME + "=? AND " + UsersContract.singleUser.ROW_PASSWORD + "=?", new String[]{username, password});
+        Cursor mCursor = db.rawQuery("SELECT * FROM " + UsersContract.SingleUser.TABLE_NAME + " WHERE " + UsersContract.SingleUser.ROW_USERNAME + "=? AND " + UsersContract.SingleUser.ROW_PASSWORD + "=?", new String[]{username, password});
         if (mCursor != null) {
 
             if (mCursor.getCount() > 0) {
 
                 if (mCursor.moveToFirst()) {
-                    MainApp.DIST_ID = mCursor.getString(mCursor.getColumnIndex(UsersContract.singleUser.DIST_ID));
+                    MainApp.DIST_ID = mCursor.getString(mCursor.getColumnIndex(UsersContract.SingleUser.DIST_ID));
                 }
                 return true;
             }

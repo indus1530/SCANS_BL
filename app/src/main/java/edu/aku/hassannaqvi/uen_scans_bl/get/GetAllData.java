@@ -119,7 +119,7 @@ public class GetAllData extends AsyncTask<String, String, String> {
         try {
             switch (syncClass) {
                 case "User":
-                    url = new URL(MainApp._HOST_URL + UsersContract.singleUser._URI);
+                    url = new URL(MainApp._HOST_URL + UsersContract.SingleUser._URI);
                     position = 0;
                     break;
                 case "VersionApp":

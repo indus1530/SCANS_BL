@@ -49,11 +49,11 @@ public final class CreateTable {
             + FormsContract.FormsTable.COLUMN_SYNCED_DATE + " TEXT"
             + " );";
 
-    public static final String SQL_CREATE_USERS = "CREATE TABLE " + UsersContract.singleUser.TABLE_NAME + "("
-            + UsersContract.singleUser._ID + " INTEGER PRIMARY KEY AUTOINCREMENT,"
-            + UsersContract.singleUser.ROW_USERNAME + " TEXT,"
-            + UsersContract.singleUser.ROW_PASSWORD + " TEXT,"
-            + UsersContract.singleUser.DIST_ID + " TEXT"
+    public static final String SQL_CREATE_USERS = "CREATE TABLE " + UsersContract.SingleUser.TABLE_NAME + "("
+            + UsersContract.SingleUser._ID + " INTEGER PRIMARY KEY AUTOINCREMENT,"
+            + UsersContract.SingleUser.ROW_USERNAME + " TEXT,"
+            + UsersContract.SingleUser.ROW_PASSWORD + " TEXT,"
+            + UsersContract.SingleUser.DIST_ID + " TEXT"
             + " );";
 
     public static final String SQL_CREATE_VERSIONAPP = "CREATE TABLE " + VersionAppContract.VersionAppTable.TABLE_NAME + " (" +

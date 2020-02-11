@@ -2,6 +2,8 @@ package edu.aku.hassannaqvi.uen_scans_bl.ui.sections;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.widget.ArrayAdapter;
+import android.widget.Spinner;
 import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
@@ -13,28 +15,36 @@ import org.json.JSONException;
 import org.json.JSONObject;
 
 import edu.aku.hassannaqvi.uen_scans_bl.R;
+import edu.aku.hassannaqvi.uen_scans_bl.core.DatabaseHelper;
 import edu.aku.hassannaqvi.uen_scans_bl.databinding.ActivitySectionK2Binding;
 import edu.aku.hassannaqvi.uen_scans_bl.utils.Util;
-import edu.aku.hassannaqvi.uen_scans_bl.validator.ClearClass;
 
 public class SectionK2Activity extends AppCompatActivity {
 
     ActivitySectionK2Binding bi;
-
+    Spinner[] userSpinners;
+    DatabaseHelper db;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         bi = DataBindingUtil.setContentView(this, R.layout.activity_section_k2);
         bi.setCallback(this);
+        setupContent();
         setupSkips();
-
     }
 
+    private void setupContent() {
+        db = new DatabaseHelper(this);
+        userSpinners = new Spinner[]{bi.k209b, bi.k210b, bi.k212b, bi.k213b, bi.k214b, bi.k216b, bi.k217b, bi.k218b, bi.k220b};
+        for (Spinner singleSpinner : userSpinners) {
+            singleSpinner.setAdapter(new ArrayAdapter<>(this, android.R.layout.simple_dropdown_item_1line, db.getUsers()));
+        }
+    }
 
     private void setupSkips() {
 
-        bi.k211.setOnCheckedChangeListener(((radioGroup, i) -> {
+        /*bi.k211.setOnCheckedChangeListener(((radioGroup, i) -> {
 
             if (i != bi.k211b.getId()) {
                 ClearClass.ClearAllFields(bi.fldGrpCVk01, null);
@@ -52,7 +62,7 @@ public class SectionK2Activity extends AppCompatActivity {
             if (i != bi.k219b.getId()) {
                 ClearClass.ClearAllFields(bi.fldGrpCVk03, null);
             }
-        }));
+        }));*/
 
     }
 
@@ -109,19 +119,6 @@ public class SectionK2Activity extends AppCompatActivity {
                 bi.k203a.isChecked() ? "1" :
                         bi.k203b.isChecked() ? "2" :
                                 "0");
-
-        json.put("k204a", bi.k204a.getSelectedItem().toString());
-        json.put("k204b", bi.k204b.getText().toString());
-
-        json.put("k205a", bi.k205a.getSelectedItem().toString());
-        json.put("k205b", bi.k205b.getText().toString());
-
-        json.put("k206dd", bi.k206dd.getText().toString());
-        json.put("k206mm", bi.k206mm.getText().toString());
-        json.put("k206yy", bi.k206yy.getText().toString());
-
-        json.put("k207hh", bi.k207hh.getText().toString());
-        json.put("k207mm", bi.k207mm.getText().toString());
 
         json.put("k208",
                 bi.k208a.isChecked() ? "1" :

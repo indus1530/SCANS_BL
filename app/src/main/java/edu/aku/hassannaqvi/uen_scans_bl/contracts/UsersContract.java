@@ -69,20 +69,20 @@ public class UsersContract {
     }*/
 
     public UsersContract Sync(JSONObject jsonObject) throws JSONException {
-        this.ROW_USERNAME = jsonObject.getString(singleUser.ROW_USERNAME);
-        this.ROW_PASSWORD = jsonObject.getString(singleUser.ROW_PASSWORD);
-        this.DIST_ID = jsonObject.getString(singleUser.DIST_ID);
-//        this.REGION_DSS = jsonObject.getString(singleUser.REGION_DSS);
+        this.ROW_USERNAME = jsonObject.getString(SingleUser.ROW_USERNAME);
+        this.ROW_PASSWORD = jsonObject.getString(SingleUser.ROW_PASSWORD);
+        this.DIST_ID = jsonObject.getString(SingleUser.DIST_ID);
+//        this.REGION_DSS = jsonObject.getString(SingleUser.REGION_DSS);
         return this;
 
     }
 
     public UsersContract Hydrate(Cursor cursor) {
-        this._ID = cursor.getLong(cursor.getColumnIndex(singleUser._ID));
-        this.ROW_USERNAME = cursor.getString(cursor.getColumnIndex(singleUser.ROW_USERNAME));
-        this.ROW_PASSWORD = cursor.getString(cursor.getColumnIndex(singleUser.ROW_PASSWORD));
-        this.DIST_ID = cursor.getString(cursor.getColumnIndex(singleUser.DIST_ID));
-//        this.REGION_DSS = cursor.getString(cursor.getColumnIndex(singleUser.REGION_DSS));
+        this._ID = cursor.getLong(cursor.getColumnIndex(SingleUser._ID));
+        this.ROW_USERNAME = cursor.getString(cursor.getColumnIndex(SingleUser.ROW_USERNAME));
+        this.ROW_PASSWORD = cursor.getString(cursor.getColumnIndex(SingleUser.ROW_PASSWORD));
+        this.DIST_ID = cursor.getString(cursor.getColumnIndex(SingleUser.DIST_ID));
+//        this.REGION_DSS = cursor.getString(cursor.getColumnIndex(SingleUser.REGION_DSS));
         return this;
 
     }
@@ -91,15 +91,15 @@ public class UsersContract {
     public JSONObject toJSONObject() throws JSONException {
 
         JSONObject json = new JSONObject();
-        json.put(singleUser._ID, this._ID == null ? JSONObject.NULL : this._ID);
-        json.put(singleUser.ROW_USERNAME, this.ROW_USERNAME == null ? JSONObject.NULL : this.ROW_USERNAME);
-        json.put(singleUser.ROW_PASSWORD, this.ROW_PASSWORD == null ? JSONObject.NULL : this.ROW_PASSWORD);
-        json.put(singleUser.DIST_ID, this.DIST_ID == null ? JSONObject.NULL : this.DIST_ID);
-//        json.put(singleUser.REGION_DSS, this.REGION_DSS == null ? JSONObject.NULL : this.REGION_DSS);
+        json.put(SingleUser._ID, this._ID == null ? JSONObject.NULL : this._ID);
+        json.put(SingleUser.ROW_USERNAME, this.ROW_USERNAME == null ? JSONObject.NULL : this.ROW_USERNAME);
+        json.put(SingleUser.ROW_PASSWORD, this.ROW_PASSWORD == null ? JSONObject.NULL : this.ROW_PASSWORD);
+        json.put(SingleUser.DIST_ID, this.DIST_ID == null ? JSONObject.NULL : this.DIST_ID);
+//        json.put(SingleUser.REGION_DSS, this.REGION_DSS == null ? JSONObject.NULL : this.REGION_DSS);
         return json;
     }
 
-    public static abstract class singleUser implements BaseColumns {
+    public static abstract class SingleUser implements BaseColumns {
 
         public static final String TABLE_NAME = "users";
         public static final String _ID = "id";
