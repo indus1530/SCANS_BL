@@ -47,25 +47,21 @@
 
                     <RadioGroup
                         android:id="@+id/k208"
-                        style="@style/radiogroup"
-                        android:orientation="horizontal">
+                        style="@style/radiogroup">
 
                         <RadioButton
                             android:id="@+id/k208a"
                             style="@style/radiobutton"
-                            android:layout_weight="1"
                             android:text="@string/k208a" />
 
                         <RadioButton
                             android:id="@+id/k208b"
                             style="@style/radiobutton"
-                            android:layout_weight="1"
                             android:text="@string/k208b" />
 
                         <RadioButton
                             android:id="@+id/k208c"
                             style="@style/radiobutton"
-                            android:layout_weight="1"
                             android:text="@string/k208c" />
 
                     </RadioGroup>

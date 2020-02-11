@@ -165,7 +165,6 @@
 
         <activity
             android:name=".ui.other.AnthroEndingActivity"
-            android:label="Anthro Ending"
             android:screenOrientation="portrait" />
 
         <activity
