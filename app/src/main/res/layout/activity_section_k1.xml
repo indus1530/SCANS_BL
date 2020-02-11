@@ -1,4 +1,5 @@
-<layout xmlns:android="http://schemas.android.com/apk/res/android">
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
 
     <data>
 
@@ -164,12 +165,16 @@
                         android:layout_height="wrap_content"
                         android:orientation="horizontal">
 
-                        <EditText
+                        <com.edittextpicker.aliazaz.EditTextPicker
                             android:id="@+id/k104"
-                            style="@style/EditTextdeci"
+                            style="@style/EditTextNum"
                             android:layout_width="0dp"
-                            android:layout_weight="1"
-                            android:hint="@string/k104a"
+                            android:layout_weight="1.5"
+                            android:hint="@string/in"
+                            app:mask="##.#"
+                            app:maxValue="84"
+                            app:minValue="2"
+                            app:type="range"
                             android:enabled='@{k10498.checked ? false : true}'
                             android:text='@{k10498.checked ? "" : k104.getText().toString()}' />
 

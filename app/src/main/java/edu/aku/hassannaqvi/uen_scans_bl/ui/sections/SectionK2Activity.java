@@ -18,6 +18,7 @@ import edu.aku.hassannaqvi.uen_scans_bl.R;
 import edu.aku.hassannaqvi.uen_scans_bl.core.DatabaseHelper;
 import edu.aku.hassannaqvi.uen_scans_bl.databinding.ActivitySectionK2Binding;
 import edu.aku.hassannaqvi.uen_scans_bl.utils.Util;
+import edu.aku.hassannaqvi.uen_scans_bl.validator.ClearClass;
 
 public class SectionK2Activity extends AppCompatActivity {
 
@@ -44,25 +45,25 @@ public class SectionK2Activity extends AppCompatActivity {
 
     private void setupSkips() {
 
-        /*bi.k211.setOnCheckedChangeListener(((radioGroup, i) -> {
+        bi.k211.setOnCheckedChangeListener(((radioGroup, i) -> {
 
             if (i != bi.k211b.getId()) {
-                ClearClass.ClearAllFields(bi.fldGrpCVk01, null);
+                ClearClass.ClearAllFields(bi.fldGrpCVk212, null);
             }
 
         }));
 
         bi.k215.setOnCheckedChangeListener(((radioGroup, i) -> {
             if (i != bi.k215b.getId()) {
-                ClearClass.ClearAllFields(bi.fldGrpCVk02, null);
+                ClearClass.ClearAllFields(bi.fldGrpCVk216, null);
             }
         }));
 
         bi.k219.setOnCheckedChangeListener(((radioGroup, i) -> {
             if (i != bi.k219b.getId()) {
-                ClearClass.ClearAllFields(bi.fldGrpCVk03, null);
+                ClearClass.ClearAllFields(bi.fldGrpCVk220, null);
             }
-        }));*/
+        }));
 
     }
 

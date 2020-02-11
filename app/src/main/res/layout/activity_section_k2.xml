@@ -326,8 +326,7 @@
                     <!-- k212  Spinner and Input   -->
                     <androidx.cardview.widget.CardView
                         android:id="@+id/fldGrpCVk212"
-                        style="@style/cardView"
-                        android:visibility='@{k211b.checked? View.VISIBLE : View.GONE}'>
+                        style="@style/cardView">
 
                         <LinearLayout
                             android:layout_width="match_parent"
