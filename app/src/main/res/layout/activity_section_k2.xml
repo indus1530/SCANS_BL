@@ -157,49 +157,6 @@
 
                     </androidx.cardview.widget.CardView>
 
-                    <!-- k208  Radio   -->
-                    <androidx.cardview.widget.CardView
-                        android:id="@+id/fldGrpCVk208"
-                        style="@style/cardView">
-
-                        <LinearLayout
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:orientation="vertical">
-
-                            <TextView
-                                style="@style/i_textview"
-                                android:text="@string/k208" />
-
-                            <RadioGroup
-                                android:id="@+id/k208"
-                                style="@style/radiogroup"
-                                android:orientation="horizontal">
-
-                                <RadioButton
-                                    android:id="@+id/k208a"
-                                    style="@style/radiobutton"
-                                    android:layout_weight="1"
-                                    android:text="@string/k208a" />
-
-                                <RadioButton
-                                    android:id="@+id/k208b"
-                                    style="@style/radiobutton"
-                                    android:layout_weight="1"
-                                    android:text="@string/k208b" />
-
-                                <RadioButton
-                                    android:id="@+id/k208c"
-                                    style="@style/radiobutton"
-                                    android:layout_weight="1"
-                                    android:text="@string/k208c" />
-
-                            </RadioGroup>
-
-                        </LinearLayout>
-
-                    </androidx.cardview.widget.CardView>
-
                     <!-- k209  Spinner and Input   -->
                     <androidx.cardview.widget.CardView
                         android:id="@+id/fldGrpCVk209"
