@@ -16,6 +16,7 @@ import org.json.JSONObject;
 
 import edu.aku.hassannaqvi.uen_scans_bl.R;
 import edu.aku.hassannaqvi.uen_scans_bl.core.DatabaseHelper;
+import edu.aku.hassannaqvi.uen_scans_bl.core.MainApp;
 import edu.aku.hassannaqvi.uen_scans_bl.databinding.ActivitySectionK3Binding;
 import edu.aku.hassannaqvi.uen_scans_bl.utils.Util;
 import edu.aku.hassannaqvi.uen_scans_bl.validator.ClearClass;
