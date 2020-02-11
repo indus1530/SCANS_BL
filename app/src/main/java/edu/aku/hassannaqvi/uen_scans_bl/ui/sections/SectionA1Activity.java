@@ -201,7 +201,7 @@ public class SectionA1Activity extends AppCompatActivity {
         MainApp.fc.setDevicetagID(MainApp.appInfo.getTagName());
         MainApp.fc.setAppversion(MainApp.appInfo.getAppVersion());
         MainApp.fc.setClusterCode(bi.a101.getText().toString());
-//        MainApp.fc.setHhno(bi.a112.getText().toString());
+        MainApp.fc.setHhno(bi.a112.getText().toString());
         MainApp.setGPS(this); // Set GPS
 
         JSONObject json = new JSONObject();

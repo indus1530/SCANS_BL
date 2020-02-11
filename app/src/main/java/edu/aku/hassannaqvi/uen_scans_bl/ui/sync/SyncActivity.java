@@ -32,13 +32,13 @@ import edu.aku.hassannaqvi.uen_scans_bl.CONSTANTS;
 import edu.aku.hassannaqvi.uen_scans_bl.R;
 import edu.aku.hassannaqvi.uen_scans_bl.adapter.SyncListAdapter;
 import edu.aku.hassannaqvi.uen_scans_bl.adapter.UploadListAdapter;
+import edu.aku.hassannaqvi.uen_scans_bl.contracts.AnthroContract;
 import edu.aku.hassannaqvi.uen_scans_bl.contracts.ChildContract;
 import edu.aku.hassannaqvi.uen_scans_bl.contracts.FamilyMembersContract;
 import edu.aku.hassannaqvi.uen_scans_bl.contracts.FormsContract;
 import edu.aku.hassannaqvi.uen_scans_bl.contracts.KishMWRAContract;
 import edu.aku.hassannaqvi.uen_scans_bl.contracts.MWRAContract;
 import edu.aku.hassannaqvi.uen_scans_bl.contracts.MWRA_PREContract;
-import edu.aku.hassannaqvi.uen_scans_bl.contracts.MortalityContract;
 import edu.aku.hassannaqvi.uen_scans_bl.core.DatabaseHelper;
 import edu.aku.hassannaqvi.uen_scans_bl.core.MainApp;
 import edu.aku.hassannaqvi.uen_scans_bl.databinding.ActivitySyncBinding;
@@ -213,12 +213,12 @@ public class SyncActivity extends AppCompatActivity implements SyncDevice.SyncDe
             }
             new SyncAllData(
                     this,
-                    "Mortality",
-                    "updateSyncedMortalityForms",
-                    MWRA_PREContract.class,
+                    "Anthro",
+                    "updateSyncedAnthroForms",
+                    AnthroContract.class,
                     MainApp._HOST_URL + MainApp._SERVER_URL,
-                    MortalityContract.SingleMortality.TABLE_NAME,
-                    db.getUnsyncedMortality(), 4, uploadListAdapter, uploadlist
+                    AnthroContract.SingleAnthro.TABLE_NAME,
+                    db.getUnsyncedAnthros(), 4, uploadListAdapter, uploadlist
             ).execute();
 
 

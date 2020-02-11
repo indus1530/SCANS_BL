@@ -18,6 +18,8 @@ import java.util.Collection;
 import java.util.Date;
 import java.util.List;
 
+import edu.aku.hassannaqvi.uen_scans_bl.contracts.AnthroContract;
+import edu.aku.hassannaqvi.uen_scans_bl.contracts.AnthroContract.SingleAnthro;
 import edu.aku.hassannaqvi.uen_scans_bl.contracts.AreasContract;
 import edu.aku.hassannaqvi.uen_scans_bl.contracts.AreasContract.singleAreas;
 import edu.aku.hassannaqvi.uen_scans_bl.contracts.BLRandomContract;
@@ -36,8 +38,6 @@ import edu.aku.hassannaqvi.uen_scans_bl.contracts.MWRAContract;
 import edu.aku.hassannaqvi.uen_scans_bl.contracts.MWRAContract.MWRATable;
 import edu.aku.hassannaqvi.uen_scans_bl.contracts.MWRA_PREContract;
 import edu.aku.hassannaqvi.uen_scans_bl.contracts.MWRA_PREContract.SingleMWRAPRE;
-import edu.aku.hassannaqvi.uen_scans_bl.contracts.MortalityContract;
-import edu.aku.hassannaqvi.uen_scans_bl.contracts.MortalityContract.SingleMortality;
 import edu.aku.hassannaqvi.uen_scans_bl.contracts.TalukasContract;
 import edu.aku.hassannaqvi.uen_scans_bl.contracts.UCsContract;
 import edu.aku.hassannaqvi.uen_scans_bl.contracts.UsersContract;
@@ -623,24 +623,26 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         return newRowId;
     }
 
-    public Long addMortality(MortalityContract morc) {
+    public Long addAnthro(AnthroContract morc) {
 
         // Gets the data repository in write mode
         SQLiteDatabase db = this.getWritableDatabase();
 
         // Create a new map of values, where column names are the keys
         ContentValues values = new ContentValues();
-        values.put(SingleMortality.COLUMN__UUID, morc.get_UUID());
-        values.put(SingleMortality.COLUMN_DEVICEID, morc.getDeviceId());
-        values.put(SingleMortality.COLUMN_DEVICETAGID, morc.getDevicetagID());
-        values.put(SingleMortality.COLUMN_FORMDATE, morc.getFormDate());
-        values.put(SingleMortality.COLUMN_USER, morc.getUser());
-        values.put(SingleMortality.COLUMN_SE3, morc.getsE3());
+        values.put(SingleAnthro.COLUMN__UUID, morc.get_UUID());
+        values.put(SingleAnthro.COLUMN_DEVICEID, morc.getDeviceId());
+        values.put(SingleAnthro.COLUMN_DEVICETAGID, morc.getDevicetagID());
+        values.put(SingleAnthro.COLUMN_ISTATUS, morc.getIstatus());
+        values.put(SingleAnthro.COLUMN_FORMDATE, morc.getFormDate());
+        values.put(SingleAnthro.COLUMN_USER, morc.getUser());
+        values.put(SingleAnthro.COLUMN_SK1, morc.getsK1());
+        values.put(SingleAnthro.COLUMN_ISTATUS, morc.getsK1());
         // Insert the new row, returning the primary key value of the new row
         long newRowId;
         newRowId = db.insert(
-                SingleMortality.TABLE_NAME,
-                SingleMortality.COLUMN_NAME_NULLABLE,
+                SingleAnthro.TABLE_NAME,
+                SingleAnthro.COLUMN_NAME_NULLABLE,
                 values);
         return newRowId;
     }
@@ -1108,20 +1110,19 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         return allMC;
     }
 
-    public Collection<MortalityContract> getUnsyncedMortality() {
+    public Collection<AnthroContract> getUnsyncedAnthros() {
         SQLiteDatabase db = this.getReadableDatabase();
         Cursor c = null;
         String[] columns = {
-                SingleMortality._ID,
-                SingleMortality.COLUMN_UID,
-                SingleMortality.COLUMN__UUID,
-                SingleMortality.COLUMN_DEVICEID,
-                SingleMortality.COLUMN_DEVICETAGID,
-                SingleMortality.COLUMN_FORMDATE,
-                SingleMortality.COLUMN_USER,
-                SingleMortality.COLUMN_SE3,
-
-
+                SingleAnthro._ID,
+                SingleAnthro.COLUMN_UID,
+                SingleAnthro.COLUMN__UUID,
+                SingleAnthro.COLUMN_DEVICEID,
+                SingleAnthro.COLUMN_DEVICETAGID,
+                SingleAnthro.COLUMN_ISTATUS,
+                SingleAnthro.COLUMN_FORMDATE,
+                SingleAnthro.COLUMN_USER,
+                SingleAnthro.COLUMN_SK1,
         };
         String whereClause = SingleMWRAPRE.COLUMN_SYNCED + " is null";
         String[] whereArgs = null;
@@ -1131,10 +1132,10 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         String orderBy =
                 SingleMWRAPRE._ID + " ASC";
 
-        Collection<MortalityContract> allMC = new ArrayList<MortalityContract>();
+        Collection<AnthroContract> allMC = new ArrayList<>();
         try {
             c = db.query(
-                    SingleMortality.TABLE_NAME,  // The table to query
+                    SingleAnthro.TABLE_NAME,  // The table to query
                     columns,                   // The columns to return
                     whereClause,               // The columns for the WHERE clause
                     whereArgs,                 // The values for the WHERE clause
@@ -1143,7 +1144,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
                     orderBy                    // The sort order
             );
             while (c.moveToNext()) {
-                MortalityContract mc = new MortalityContract();
+                AnthroContract mc = new AnthroContract();
                 allMC.add(mc.hydrate(c));
             }
         } finally {
@@ -1546,16 +1547,16 @@ public class DatabaseHelper extends SQLiteOpenHelper {
     }
 
     //Generic update MortalityColumn
-    public int updatesMortalityColumn(String column, String value, MortalityContract mortality) {
+    public int updatesMortalityColumn(String column, String value, AnthroContract mortality) {
         SQLiteDatabase db = this.getReadableDatabase();
 
         ContentValues values = new ContentValues();
         values.put(column, value);
 
-        String selection = SingleMortality._ID + " =? ";
+        String selection = SingleAnthro._ID + " =? ";
         String[] selectionArgs = {String.valueOf(mortality.get_ID())};
 
-        return db.update(SingleMortality.TABLE_NAME,
+        return db.update(SingleAnthro.TABLE_NAME,
                 values,
                 selection,
                 selectionArgs);
@@ -1689,6 +1690,25 @@ public class DatabaseHelper extends SQLiteOpenHelper {
 
         int count = db.update(
                 SingleKishMWRA.TABLE_NAME,
+                values,
+                where,
+                whereArgs);
+    }
+
+    public void updateSyncedAnthroForms(String id) {
+        SQLiteDatabase db = this.getReadableDatabase();
+
+// New value for one column
+        ContentValues values = new ContentValues();
+        values.put(SingleAnthro.COLUMN_SYNCED, true);
+        values.put(SingleAnthro.COLUMN_SYNCED_DATE, new Date().toString());
+
+// Which row to update, based on the title
+        String where = SingleAnthro._ID + " = ?";
+        String[] whereArgs = {id};
+
+        int count = db.update(
+                SingleAnthro.TABLE_NAME,
                 values,
                 where,
                 whereArgs);
