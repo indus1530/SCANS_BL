@@ -13,6 +13,9 @@ import org.json.JSONException;
 import org.json.JSONObject;
 
 import edu.aku.hassannaqvi.uen_scans_bl.R;
+import edu.aku.hassannaqvi.uen_scans_bl.contracts.MWRAContract;
+import edu.aku.hassannaqvi.uen_scans_bl.core.DatabaseHelper;
+import edu.aku.hassannaqvi.uen_scans_bl.core.MainApp;
 import edu.aku.hassannaqvi.uen_scans_bl.databinding.ActivitySectionB3Binding;
 import edu.aku.hassannaqvi.uen_scans_bl.utils.Util;
 
@@ -54,16 +57,14 @@ public class SectionB3Activity extends AppCompatActivity {
 
 
     private boolean UpdateDB() {
-
-        /*DatabaseHelper db = MainApp.appInfo.getDbHelper();
-        int updcount = db.updatesKishMWRAColumn(FoodFreqContract.SingleFoodFreq.COLUMN_SD5, MainApp.foodFreq.getsD5());
+        DatabaseHelper db = MainApp.appInfo.getDbHelper();
+        int updcount = db.updatesMWRAColumn(MWRAContract.MWRATable.COLUMN_SB3, MainApp.mwra.getsB3());
         if (updcount == 1) {
             return true;
         } else {
             Toast.makeText(this, "Updating Database... ERROR!", Toast.LENGTH_SHORT).show();
             return false;
-        }*/
-        return true;
+        }
     }
 
 
@@ -225,6 +226,7 @@ public class SectionB3Activity extends AppCompatActivity {
         f1.put("b314x", bi.b31496.isChecked() ? "96" : "0");
         f1.put("b314xt", bi.b31496x.getText().toString());
 
+        MainApp.mwra.setsB3(String.valueOf(f1));
     }
 
 

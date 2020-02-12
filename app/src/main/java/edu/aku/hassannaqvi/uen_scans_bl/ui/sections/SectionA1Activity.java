@@ -172,11 +172,7 @@ public class SectionA1Activity extends AppCompatActivity implements Util.EndSecA
             }
             if (UpdateDB()) {
                 finish();
-                if (bi.a113b.isChecked() || (bi.a115.getText().toString().trim().length() > 0 && Integer.parseInt(bi.a115.getText().toString().trim()) < 18)) {
-                    startActivity(new Intent(this, EndingActivity.class).putExtra("complete", true));
-                } else {
-                    startActivity(new Intent(this, FamilyMembersListActivity.class).putExtra("sno", Integer.valueOf(bl.getSno())));
-                }
+                startActivity(new Intent(this, FamilyMembersListActivity.class).putExtra("sno", Integer.valueOf(bl.getSno())));
             } else {
                 Toast.makeText(this, "Failed to Update Database!", Toast.LENGTH_SHORT).show();
             }
@@ -185,7 +181,7 @@ public class SectionA1Activity extends AppCompatActivity implements Util.EndSecA
 
 
     private boolean UpdateDB() {
-        /*long updcount = db.addForm(MainApp.fc);
+        long updcount = db.addForm(MainApp.fc);
         MainApp.fc.set_ID(String.valueOf(updcount));
         if (updcount > 0) {
             MainApp.fc.set_UID(MainApp.fc.getDeviceID() + MainApp.fc.get_ID());
@@ -194,9 +190,7 @@ public class SectionA1Activity extends AppCompatActivity implements Util.EndSecA
         } else {
             Toast.makeText(this, "Updating Database... ERROR!", Toast.LENGTH_SHORT).show();
             return false;
-        }*/
-        return true;
-
+        }
     }
 
 

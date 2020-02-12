@@ -567,8 +567,8 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         values.put(FormsTable.COLUMN_ISTATUS88x, fc.getIstatus88x());
         values.put(FormsTable.COLUMN_ENDINGDATETIME, fc.getEndingdatetime());
         values.put(FormsTable.COLUMN_SINFO, fc.getsInfo());
-        values.put(FormsTable.COLUMN_SE, fc.getsE());
-        values.put(FormsTable.COLUMN_SM, fc.getsM());
+        values.put(FormsTable.COLUMN_SA3, fc.getsA3());
+        values.put(FormsTable.COLUMN_SA4, fc.getsA4());
         values.put(FormsTable.COLUMN_SN, fc.getsN());
         values.put(FormsTable.COLUMN_SO, fc.getsO());
         values.put(FormsTable.COLUMN_GPSLAT, fc.getGpsLat());
@@ -687,7 +687,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
 
         // Create a new map of values, where column names are the keys
         ContentValues values = new ContentValues();
-//        values.put(MWRATable._ID, mwra.get_ID());
+        //values.put(MWRATable._ID, mwra.get_ID());
         values.put(MWRATable.COLUMN_UUID, mwra.get_UUID());
         values.put(MWRATable.COLUMN_DEVICEID, mwra.getDeviceId());
         values.put(MWRATable.COLUMN_FORMDATE, mwra.getFormDate());
@@ -1233,8 +1233,8 @@ public class DatabaseHelper extends SQLiteOpenHelper {
                 FormsTable.COLUMN_LUID,
                 FormsTable.COLUMN_ENDINGDATETIME,
                 FormsTable.COLUMN_SINFO,
-                FormsTable.COLUMN_SE,
-                FormsTable.COLUMN_SM,
+                FormsTable.COLUMN_SA3,
+                FormsTable.COLUMN_SA4,
                 FormsTable.COLUMN_SN,
                 FormsTable.COLUMN_SO,
                 FormsTable.COLUMN_GPSLAT,
@@ -1606,14 +1606,14 @@ public class DatabaseHelper extends SQLiteOpenHelper {
     }
 
     //Generic update MWRAColumn
-    public int updateMWRAUID(MWRAContract mwra) {
+    public int updatesMWRAColumn(String column, String value) {
         SQLiteDatabase db = this.getReadableDatabase();
 
         ContentValues values = new ContentValues();
-        values.put(MWRATable.COLUMN_UID, mwra.getUID());
+        values.put(column, value);
 
         String selection = MWRATable._ID + " =? ";
-        String[] selectionArgs = {String.valueOf(mwra.get_ID())};
+        String[] selectionArgs = {String.valueOf(MainApp.mwra.get_ID())};
 
         return db.update(MWRATable.TABLE_NAME,
                 values,

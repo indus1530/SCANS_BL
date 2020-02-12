@@ -13,6 +13,8 @@ import org.json.JSONException;
 import org.json.JSONObject;
 
 import edu.aku.hassannaqvi.uen_scans_bl.R;
+import edu.aku.hassannaqvi.uen_scans_bl.contracts.ChildContract;
+import edu.aku.hassannaqvi.uen_scans_bl.core.DatabaseHelper;
 import edu.aku.hassannaqvi.uen_scans_bl.core.MainApp;
 import edu.aku.hassannaqvi.uen_scans_bl.databinding.ActivitySectionK1Binding;
 import edu.aku.hassannaqvi.uen_scans_bl.utils.Util;
@@ -85,16 +87,14 @@ public class SectionK1Activity extends AppCompatActivity {
 
 
     private boolean UpdateDB() {
-
-        /*DatabaseHelper db = MainApp.appInfo.getDbHelper();
-        int updcount = db.updatesKishMWRAColumn(FoodFreqContract.SingleFoodFreq.COLUMN_SD5, MainApp.foodFreq.getsD5());
+        DatabaseHelper db = MainApp.appInfo.getDbHelper();
+        int updcount = db.updatesChildColumn(ChildContract.SingleChild.COLUMN_SK1, MainApp.child.getsK1());
         if (updcount == 1) {
             return true;
         } else {
             Toast.makeText(this, "Updating Database... ERROR!", Toast.LENGTH_SHORT).show();
             return false;
-        }*/
-        return true;
+        }
     }
 
 
@@ -122,6 +122,9 @@ public class SectionK1Activity extends AppCompatActivity {
 
         json.put("k104", bi.k10498.isChecked() ? "98" :
                 bi.k104.getText().toString());
+
+
+        MainApp.child.setsK1(String.valueOf(json));
 
     }
 
