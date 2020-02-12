@@ -101,7 +101,7 @@
                                 android:background="@color/colorPrimary"
                                 android:gravity="center"
                                 android:padding="15dp"
-                                android:text="@string/a107"
+                                android:text="@string/a108"
                                 android:textAppearance="?android:attr/textAppearanceLarge"
                                 android:textColor="@android:color/white" />
 
@@ -116,7 +116,7 @@
                                 android:background="@color/pink_100"
                                 android:gravity="center"
                                 android:padding="15dp"
-                                android:text="Balochistan"
+                                android:text="district"
                                 android:textColor="@color/colorPrimaryDark"
                                 android:textSize="16sp" />
 
@@ -130,7 +130,7 @@
                                 android:background="@color/colorPrimary"
                                 android:gravity="center"
                                 android:padding="15dp"
-                                android:text="@string/a108"
+                                android:text="@string/a109"
                                 android:textAppearance="?android:attr/textAppearanceLarge"
                                 android:textColor="@android:color/white" />
 
@@ -145,7 +145,7 @@
                                 android:background="@color/pink_100"
                                 android:gravity="center"
                                 android:padding="15dp"
-                                android:text="Jafferabad"
+                                android:text="tehsil"
                                 android:textColor="@color/colorPrimaryDark"
                                 android:textSize="16sp" />
                         </LinearLayout>
@@ -170,7 +170,7 @@
                                 android:background="@color/colorPrimary"
                                 android:gravity="center_horizontal|center_vertical"
                                 android:padding="15dp"
-                                android:text="@string/a109"
+                                android:text="@string/a110"
                                 android:textAppearance="?android:attr/textAppearanceLarge"
                                 android:textColor="@android:color/white" />
 
@@ -199,7 +199,7 @@
                                 android:background="@color/colorPrimary"
                                 android:gravity="center_horizontal|center_vertical"
                                 android:padding="15dp"
-                                android:text="@string/a110"
+                                android:text="@string/a111"
                                 android:textAppearance="?android:attr/textAppearanceLarge"
                                 android:textColor="@android:color/white" />
 
