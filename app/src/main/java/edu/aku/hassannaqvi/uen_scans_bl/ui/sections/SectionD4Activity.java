@@ -13,6 +13,8 @@ import org.json.JSONException;
 import org.json.JSONObject;
 
 import edu.aku.hassannaqvi.uen_scans_bl.R;
+import edu.aku.hassannaqvi.uen_scans_bl.contracts.FoodFreqContract;
+import edu.aku.hassannaqvi.uen_scans_bl.core.DatabaseHelper;
 import edu.aku.hassannaqvi.uen_scans_bl.core.MainApp;
 import edu.aku.hassannaqvi.uen_scans_bl.databinding.ActivitySectionD4Binding;
 import edu.aku.hassannaqvi.uen_scans_bl.utils.Util;
@@ -54,18 +56,14 @@ public class SectionD4Activity extends AppCompatActivity {
 
 
     private boolean UpdateDB() {
-        /*long updcount = db.addForm(MainApp.fc);
-        MainApp.fc.set_ID(String.valueOf(updcount));
-        if (updcount > 0) {
-            MainApp.fc.set_UID(MainApp.fc.getDeviceID() + MainApp.fc.get_ID());
-            db.updatesFormColumn(FormsContract.FormsTable.COLUMN_UID, MainApp.fc.get_UID());
+        DatabaseHelper db = MainApp.appInfo.getDbHelper();
+        int updcount = db.updatesFoodFreqColumn(FoodFreqContract.SingleFoodFreq.COLUMN_SD4, MainApp.foodFreq.getsD4());
+        if (updcount == 1) {
             return true;
         } else {
             Toast.makeText(this, "Updating Database... ERROR!", Toast.LENGTH_SHORT).show();
             return false;
-        }*/
-
-        return true;
+        }
 
     }
 
@@ -110,8 +108,7 @@ public class SectionD4Activity extends AppCompatActivity {
                                                 bi.d405e.isChecked() ? "5" :
                                                         "0");
 
-
-        MainApp.fc.setsInfo(String.valueOf(json));
+        MainApp.foodFreq.setsD4(String.valueOf(json));
 
     }
 

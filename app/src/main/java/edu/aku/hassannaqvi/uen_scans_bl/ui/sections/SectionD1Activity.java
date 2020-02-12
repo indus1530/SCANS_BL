@@ -85,23 +85,23 @@ public class SectionD1Activity extends AppCompatActivity {
         MainApp.foodFreq.setFormDate(new SimpleDateFormat("dd-MM-yy HH:mm").format(new Date().getTime()));
         MainApp.foodFreq.setUser(MainApp.userName);
 
-        JSONObject f1 = new JSONObject();
+        JSONObject json = new JSONObject();
 
-        f1.put("hhno", MainApp.fc.getHhno());
-        f1.put("cluster", MainApp.fc.getClusterCode());
-        f1.put("fm_uid", MainApp.indexKishMWRAChild.getUid());
-        f1.put("fm_serial", MainApp.indexKishMWRAChild.getSerialno());
-        f1.put("mm_fm_uid", MainApp.indexKishMWRA.getUid());
-        f1.put("mm_fm_serial", MainApp.indexKishMWRA.getSerialno());
+        json.put("hhno", MainApp.fc.getHhno());
+        json.put("cluster", MainApp.fc.getClusterCode());
+        json.put("fm_uid", MainApp.indexKishMWRAChild.getUid());
+        json.put("fm_serial", MainApp.indexKishMWRAChild.getSerialno());
+        json.put("mm_fm_uid", MainApp.indexKishMWRA.getUid());
+        json.put("mm_fm_serial", MainApp.indexKishMWRA.getSerialno());
 
 
-        f1.put("d101",
+        json.put("d101",
                 bi.d101a.isChecked() ? "1" :
                         bi.d101b.isChecked() ? "2" :
                                 bi.d101c.isChecked() ? "3" :
                                         "0");
 
-        f1.put("d101sub",
+        json.put("d101sub",
                 bi.d101suba.isChecked() ? "1" :
                         bi.d101subb.isChecked() ? "2" :
                                 bi.d101subc.isChecked() ? "3" :
@@ -112,13 +112,13 @@ public class SectionD1Activity extends AppCompatActivity {
                                                                         bi.d101subh.isChecked() ? "8" :
                                                                                 "0");
 
-        f1.put("d102",
+        json.put("d102",
                 bi.d102a.isChecked() ? "1" :
                         bi.d102b.isChecked() ? "2" :
                                 bi.d102c.isChecked() ? "3" :
                                         "0");
 
-        f1.put("d102sub",
+        json.put("d102sub",
                 bi.d102suba.isChecked() ? "1" :
                         bi.d102subb.isChecked() ? "2" :
                                 bi.d102subc.isChecked() ? "3" :
@@ -129,12 +129,12 @@ public class SectionD1Activity extends AppCompatActivity {
                                                                         bi.d102subh.isChecked() ? "8" :
                                                                                 "0");
 
-        f1.put("d103",
+        json.put("d103",
                 bi.d103a.isChecked() ? "1" :
                         bi.d103b.isChecked() ? "2" :
                                 "0");
 
-        f1.put("d103sub",
+        json.put("d103sub",
                 bi.d103suba.isChecked() ? "1" :
                         bi.d103subb.isChecked() ? "2" :
                                 bi.d103subc.isChecked() ? "3" :
@@ -144,12 +144,12 @@ public class SectionD1Activity extends AppCompatActivity {
                                                                 bi.d103subg.isChecked() ? "7" :
                                                                         "0");
 
-        f1.put("d104",
+        json.put("d104",
                 bi.d104a.isChecked() ? "1" :
                         bi.d104b.isChecked() ? "2" :
                                 "0");
 
-        f1.put("d104sub",
+        json.put("d104sub",
                 bi.d104suba.isChecked() ? "1" :
                         bi.d104subb.isChecked() ? "2" :
                                 bi.d104subc.isChecked() ? "3" :
@@ -159,26 +159,26 @@ public class SectionD1Activity extends AppCompatActivity {
                                                                 bi.d104subg.isChecked() ? "7" :
                                                                         "0");
 
-        f1.put("d105",
+        json.put("d105",
                 bi.d105a.isChecked() ? "1" :
                         bi.d105b.isChecked() ? "2" :
                                 bi.d105c.isChecked() ? "3" :
                                         bi.d150d.isChecked() ? "4" :
                                                 "0");
 
-        f1.put("d106",
+        json.put("d106",
                 bi.d106a.isChecked() ? "1" :
                         bi.d106b.isChecked() ? "2" :
                                 "0");
 
-        f1.put("d106sub",
+        json.put("d106sub",
                 bi.d106suba.isChecked() ? "1" :
                         bi.d106subb.isChecked() ? "2" :
                                 bi.d106subc.isChecked() ? "3" :
                                         bi.d106subd.isChecked() ? "4" :
                                                 bi.d106sube.isChecked() ? "5" :
                                                         "0");
-        MainApp.foodFreq.setsD1(String.valueOf(f1));
+        MainApp.foodFreq.setsD1(String.valueOf(json));
 
     }
 
