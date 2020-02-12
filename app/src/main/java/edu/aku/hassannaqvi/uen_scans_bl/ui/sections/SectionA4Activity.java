@@ -121,7 +121,7 @@ public class SectionA4Activity extends AppCompatActivity {
     private boolean UpdateDB() {
 
         /*DatabaseHelper db = MainApp.appInfo.getDbHelper();
-        int updcount = db.updatesKishMWRAColumn(FoodFreqContract.SingleKishMWRA.COLUMN_SK, MainApp.kish.getsK());
+        int updcount = db.updatesKishMWRAColumn(FoodFreqContract.SingleFoodFreq.COLUMN_SD5, MainApp.foodFreq.getsD5());
         if (updcount == 1) {
             return true;
         } else {

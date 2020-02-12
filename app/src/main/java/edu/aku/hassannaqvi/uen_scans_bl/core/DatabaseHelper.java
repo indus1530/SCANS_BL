@@ -30,10 +30,10 @@ import edu.aku.hassannaqvi.uen_scans_bl.contracts.EnumBlockContract;
 import edu.aku.hassannaqvi.uen_scans_bl.contracts.EnumBlockContract.EnumBlockTable;
 import edu.aku.hassannaqvi.uen_scans_bl.contracts.FamilyMembersContract;
 import edu.aku.hassannaqvi.uen_scans_bl.contracts.FamilyMembersContract.SingleMember;
+import edu.aku.hassannaqvi.uen_scans_bl.contracts.FoodFreqContract;
+import edu.aku.hassannaqvi.uen_scans_bl.contracts.FoodFreqContract.SingleFoodFreq;
 import edu.aku.hassannaqvi.uen_scans_bl.contracts.FormsContract;
 import edu.aku.hassannaqvi.uen_scans_bl.contracts.FormsContract.FormsTable;
-import edu.aku.hassannaqvi.uen_scans_bl.contracts.KishMWRAContract;
-import edu.aku.hassannaqvi.uen_scans_bl.contracts.KishMWRAContract.SingleKishMWRA;
 import edu.aku.hassannaqvi.uen_scans_bl.contracts.MWRAContract;
 import edu.aku.hassannaqvi.uen_scans_bl.contracts.MWRAContract.MWRATable;
 import edu.aku.hassannaqvi.uen_scans_bl.contracts.MWRA_PREContract;
@@ -647,7 +647,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         return newRowId;
     }
 
-    public Long addKishMWRA(KishMWRAContract kishmwra) {
+    public Long addFoodFreq(FoodFreqContract foodFreq) {
 
         // Gets the data repository in write mode
         SQLiteDatabase db = this.getWritableDatabase();
@@ -655,24 +655,27 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         // Create a new map of values, where column names are the keys
         ContentValues values = new ContentValues();
 
-        values.put(SingleKishMWRA.COLUMN_UID, kishmwra.getUID());
-        values.put(SingleKishMWRA.COLUMN__UUID, kishmwra.get_UUID());
-        values.put(SingleKishMWRA.COLUMN_DEVICEID, kishmwra.getDeviceId());
-        values.put(SingleKishMWRA.COLUMN_FORMDATE, kishmwra.getFormDate());
-        values.put(SingleKishMWRA.COLUMN_USER, kishmwra.getUser());
-        values.put(SingleKishMWRA.COLUMN_SF, kishmwra.getsF());
-        values.put(SingleKishMWRA.COLUMN_SG, kishmwra.getsG());
-        values.put(SingleKishMWRA.COLUMN_SH1, kishmwra.getsH1());
-        values.put(SingleKishMWRA.COLUMN_SH2, kishmwra.getsH2());
-        values.put(SingleKishMWRA.COLUMN_SK, kishmwra.getsK());
-        values.put(SingleKishMWRA.COLUMN_SL, kishmwra.getsL());
-        values.put(SingleKishMWRA.COLUMN_DEVICETAGID, kishmwra.getDevicetagID());
+        values.put(SingleFoodFreq.COLUMN_UID, foodFreq.getUID());
+        values.put(SingleFoodFreq.COLUMN__UUID, foodFreq.get_UUID());
+        values.put(SingleFoodFreq.COLUMN_DEVICEID, foodFreq.getDeviceId());
+        values.put(SingleFoodFreq.COLUMN_FORMDATE, foodFreq.getFormDate());
+        values.put(SingleFoodFreq.COLUMN_USER, foodFreq.getUser());
+        values.put(SingleFoodFreq.COLUMN_SD1, foodFreq.getsD1());
+        values.put(SingleFoodFreq.COLUMN_SD2, foodFreq.getsD2());
+        values.put(SingleFoodFreq.COLUMN_SD3, foodFreq.getsD3());
+        values.put(SingleFoodFreq.COLUMN_SD4, foodFreq.getsD4());
+        values.put(SingleFoodFreq.COLUMN_SD5, foodFreq.getsD5());
+        values.put(SingleFoodFreq.COLUMN_SD6, foodFreq.getsD6());
+        values.put(SingleFoodFreq.COLUMN_SD7, foodFreq.getsD7());
+        values.put(SingleFoodFreq.COLUMN_SD8, foodFreq.getsD8());
+        values.put(SingleFoodFreq.COLUMN_SD9, foodFreq.getsD9());
+        values.put(SingleFoodFreq.COLUMN_DEVICETAGID, foodFreq.getDevicetagID());
 
         // Insert the new row, returning the primary key value of the new row
         long newRowId;
         newRowId = db.insert(
-                SingleKishMWRA.TABLE_NAME,
-                SingleKishMWRA.COLUMN_NAME_NULLABLE,
+                SingleFoodFreq.TABLE_NAME,
+                SingleFoodFreq.COLUMN_NAME_NULLABLE,
                 values);
         return newRowId;
     }
@@ -1158,36 +1161,39 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         return allMC;
     }
 
-    public Collection<KishMWRAContract> getUnsyncedKishMWRA() {
+    public Collection<FoodFreqContract> getUnsyncedKishMWRA() {
         SQLiteDatabase db = this.getReadableDatabase();
         Cursor c = null;
         String[] columns = {
-                SingleKishMWRA._ID,
-                SingleKishMWRA.COLUMN_UID,
-                SingleKishMWRA.COLUMN__UUID,
-                SingleKishMWRA.COLUMN_DEVICEID,
-                SingleKishMWRA.COLUMN_FORMDATE,
-                SingleKishMWRA.COLUMN_USER,
-                SingleKishMWRA.COLUMN_SF,
-                SingleKishMWRA.COLUMN_SG,
-                SingleKishMWRA.COLUMN_SH1,
-                SingleKishMWRA.COLUMN_SH2,
-                SingleKishMWRA.COLUMN_SK,
-                SingleKishMWRA.COLUMN_SL,
-                SingleKishMWRA.COLUMN_DEVICETAGID,
+                SingleFoodFreq._ID,
+                SingleFoodFreq.COLUMN_UID,
+                SingleFoodFreq.COLUMN__UUID,
+                SingleFoodFreq.COLUMN_DEVICEID,
+                SingleFoodFreq.COLUMN_FORMDATE,
+                SingleFoodFreq.COLUMN_USER,
+                SingleFoodFreq.COLUMN_SD1,
+                SingleFoodFreq.COLUMN_SD2,
+                SingleFoodFreq.COLUMN_SD3,
+                SingleFoodFreq.COLUMN_SD4,
+                SingleFoodFreq.COLUMN_SD5,
+                SingleFoodFreq.COLUMN_SD6,
+                SingleFoodFreq.COLUMN_SD7,
+                SingleFoodFreq.COLUMN_SD8,
+                SingleFoodFreq.COLUMN_SD9,
+                SingleFoodFreq.COLUMN_DEVICETAGID,
         };
-        String whereClause = SingleKishMWRA.COLUMN_SYNCED + " is null";
+        String whereClause = SingleFoodFreq.COLUMN_SYNCED + " is null";
         String[] whereArgs = null;
         String groupBy = null;
         String having = null;
 
         String orderBy =
-                SingleKishMWRA._ID + " ASC";
+                SingleFoodFreq._ID + " ASC";
 
-        Collection<KishMWRAContract> allMC = new ArrayList<KishMWRAContract>();
+        Collection<FoodFreqContract> allMC = new ArrayList<FoodFreqContract>();
         try {
             c = db.query(
-                    SingleKishMWRA.TABLE_NAME,  // The table to query
+                    SingleFoodFreq.TABLE_NAME,  // The table to query
                     columns,                   // The columns to return
                     whereClause,               // The columns for the WHERE clause
                     whereArgs,                 // The values for the WHERE clause
@@ -1196,7 +1202,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
                     orderBy                    // The sort order
             );
             while (c.moveToNext()) {
-                KishMWRAContract mc = new KishMWRAContract();
+                FoodFreqContract mc = new FoodFreqContract();
                 allMC.add(mc.hydrate(c));
             }
         } finally {
@@ -1578,17 +1584,17 @@ public class DatabaseHelper extends SQLiteOpenHelper {
                 selectionArgs);
     }
 
-    //Generic update KishMWRAColumn
-    public int updatesKishMWRAColumn(String column, String value) {
+    //Generic update FoodFreqColumn
+    public int updatesFoodFreqColumn(String column, String value) {
         SQLiteDatabase db = this.getReadableDatabase();
 
         ContentValues values = new ContentValues();
         values.put(column, value);
 
-        String selection = SingleKishMWRA._ID + " =? ";
-        String[] selectionArgs = {String.valueOf(MainApp.kish.get_ID())};
+        String selection = SingleFoodFreq._ID + " =? ";
+        String[] selectionArgs = {String.valueOf(MainApp.foodFreq.get_ID())};
 
-        return db.update(SingleKishMWRA.TABLE_NAME,
+        return db.update(SingleFoodFreq.TABLE_NAME,
                 values,
                 selection,
                 selectionArgs);
@@ -1672,7 +1678,6 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         }
     }
 
-
     public void updateSyncedChildForms(String id) {
         SQLiteDatabase db = this.getReadableDatabase();
 
@@ -1692,20 +1697,20 @@ public class DatabaseHelper extends SQLiteOpenHelper {
                 whereArgs);
     }
 
-    public void updateSyncedKishMWRAForms(String id) {
+    public void updateSyncedFoodFreqForms(String id) {
         SQLiteDatabase db = this.getReadableDatabase();
 
 // New value for one column
         ContentValues values = new ContentValues();
-        values.put(SingleKishMWRA.COLUMN_SYNCED, true);
-        values.put(SingleKishMWRA.COLUMN_SYNCED_DATE, new Date().toString());
+        values.put(SingleFoodFreq.COLUMN_SYNCED, true);
+        values.put(SingleFoodFreq.COLUMN_SYNCED_DATE, new Date().toString());
 
 // Which row to update, based on the title
-        String where = SingleKishMWRA._ID + " = ?";
+        String where = SingleFoodFreq._ID + " = ?";
         String[] whereArgs = {id};
 
         int count = db.update(
-                SingleKishMWRA.TABLE_NAME,
+                SingleFoodFreq.TABLE_NAME,
                 values,
                 where,
                 whereArgs);
