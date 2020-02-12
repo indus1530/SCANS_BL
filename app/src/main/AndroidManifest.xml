@@ -45,7 +45,12 @@
         <activity
             android:name=".ui.sections.SectionA2Activity"
             android:label="@string/ta2heading"
-            android:screenOrientation="portrait" />
+            android:parentActivityName=".ui.list_activity.FamilyMembersListActivity"
+            android:screenOrientation="portrait">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="edu.aku.hassannaqvi.uen_scans_bl.ui.list_activity.FamilyMembersListActivity" />
+        </activity>
 
         <activity
             android:name=".ui.sections.SectionA201Activity"
