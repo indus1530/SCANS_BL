@@ -2,6 +2,10 @@ package edu.aku.hassannaqvi.uen_scans_bl.ui.sections;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.view.View;
+import android.widget.AdapterView;
+import android.widget.ArrayAdapter;
+import android.widget.Spinner;
 import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
@@ -12,45 +16,89 @@ import com.validatorcrawler.aliazaz.Validator;
 import org.json.JSONException;
 import org.json.JSONObject;
 
+import java.text.SimpleDateFormat;
+import java.util.ArrayList;
+import java.util.Date;
+import java.util.List;
+
 import edu.aku.hassannaqvi.uen_scans_bl.R;
+import edu.aku.hassannaqvi.uen_scans_bl.contracts.AnthroContract;
+import edu.aku.hassannaqvi.uen_scans_bl.contracts.FamilyMembersContract;
+import edu.aku.hassannaqvi.uen_scans_bl.core.DatabaseHelper;
+import edu.aku.hassannaqvi.uen_scans_bl.core.MainApp;
 import edu.aku.hassannaqvi.uen_scans_bl.databinding.ActivitySectionK2Binding;
-import edu.aku.hassannaqvi.uen_scans_bl.utils.Util;
+import edu.aku.hassannaqvi.uen_scans_bl.ui.other.AnthroEndingActivity;
 import edu.aku.hassannaqvi.uen_scans_bl.validator.ClearClass;
+
+import static edu.aku.hassannaqvi.uen_scans_bl.core.MainApp.anthro;
+import static edu.aku.hassannaqvi.uen_scans_bl.core.MainApp.mwraChildren;
+import static edu.aku.hassannaqvi.uen_scans_bl.ui.list_activity.FamilyMembersListActivity.mainVModel;
 
 public class SectionK2Activity extends AppCompatActivity {
 
     ActivitySectionK2Binding bi;
-
+    Spinner[] userSpinners;
+    DatabaseHelper db;
+    FamilyMembersContract fmc_child;
+    int position;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         bi = DataBindingUtil.setContentView(this, R.layout.activity_section_k2);
         bi.setCallback(this);
+        setupContent();
         setupSkips();
-
     }
 
+    private void setupContent() {
+        db = new DatabaseHelper(this);
+        userSpinners = new Spinner[]{bi.k209b, bi.k210b, bi.k212b, bi.k213b, bi.k214b, bi.k216b, bi.k217b, bi.k218b, bi.k220b};
+        for (Spinner singleSpinner : userSpinners) {
+            singleSpinner.setAdapter(new ArrayAdapter<>(this, android.R.layout.simple_dropdown_item_1line, db.getUsers()));
+        }
+
+        List<String> childLst = new ArrayList<String>() {
+            {
+                add("....");
+                addAll(mwraChildren.getSecond());
+            }
+        };
+
+        bi.k201.setAdapter(new ArrayAdapter<>(this, android.R.layout.simple_list_item_1, childLst));
+
+        bi.k201.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+            @Override
+            public void onItemSelected(AdapterView<?> adapterView, View view, int i, long l) {
+                position = i;
+                fmc_child = mainVModel.getMemberInfo(mwraChildren.getFirst().get(bi.k201.getSelectedItemPosition() - 1));
+            }
+
+            @Override
+            public void onNothingSelected(AdapterView<?> adapterView) {
+            }
+        });
+    }
 
     private void setupSkips() {
 
         bi.k211.setOnCheckedChangeListener(((radioGroup, i) -> {
 
             if (i != bi.k211b.getId()) {
-                ClearClass.ClearAllFields(bi.fldGrpCVk01, null);
+                ClearClass.ClearAllFields(bi.fldGrpCVk212, null);
             }
 
         }));
 
         bi.k215.setOnCheckedChangeListener(((radioGroup, i) -> {
             if (i != bi.k215b.getId()) {
-                ClearClass.ClearAllFields(bi.fldGrpCVk02, null);
+                ClearClass.ClearAllFields(bi.fldGrpCVk216, null);
             }
         }));
 
         bi.k219.setOnCheckedChangeListener(((radioGroup, i) -> {
             if (i != bi.k219b.getId()) {
-                ClearClass.ClearAllFields(bi.fldGrpCVk03, null);
+                ClearClass.ClearAllFields(bi.fldGrpCVk220, null);
             }
         }));
 
@@ -76,27 +124,50 @@ public class SectionK2Activity extends AppCompatActivity {
 
     public void BtnEnd() {
 
-        Util.openEndActivity(this);
+        if (!Validator.emptySpinner(this, bi.k201)) return;
+
+        try {
+            SaveDraft();
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+        if (UpdateDB()) {
+            finish();
+            startActivity(new Intent(this, AnthroEndingActivity.class).putExtra("complete", false));
+        }
     }
 
 
     private boolean UpdateDB() {
-
-        /*DatabaseHelper db = MainApp.appInfo.getDbHelper();
-        int updcount = db.updatesKishMWRAColumn(FoodFreqContract.SingleKishMWRA.COLUMN_SK, MainApp.kish.getsK());
-        if (updcount == 1) {
+        DatabaseHelper db = MainApp.appInfo.getDbHelper();
+        long updcount = db.addAnthro(anthro);
+        anthro.set_ID(String.valueOf(updcount));
+        if (updcount > 0) {
+            anthro.setUID(anthro.getDeviceId() + anthro.get_ID());
+            db.updatesAnthroColumn(AnthroContract.SingleAnthro.COLUMN_UID, anthro.getUID());
             return true;
         } else {
             Toast.makeText(this, "Updating Database... ERROR!", Toast.LENGTH_SHORT).show();
-            return false;
-        }*/
+        }
         return true;
     }
 
 
     private void SaveDraft() throws JSONException {
 
+        anthro = new AnthroContract();
+        anthro.set_UUID(MainApp.fc.get_UID());
+        anthro.setDeviceId(MainApp.appInfo.getDeviceID());
+        anthro.setFormDate(new SimpleDateFormat("dd-MM-yy HH:mm").format(new Date().getTime()));
+        anthro.setUser(MainApp.userName);
+        anthro.setDevicetagID(MainApp.appInfo.getTagName());
+
         JSONObject json = new JSONObject();
+        json.put("fm_uid", fmc_child.getUid());
+        json.put("fm_serial", fmc_child.getSerialno());
+        json.put("mm_serial", fmc_child.getMother_serial());
+        json.put("hhno", MainApp.fc.getHhno());
+        json.put("cluster", MainApp.fc.getClusterCode());
 
         json.put("k201", bi.k201.getSelectedItem().toString());
 
@@ -110,24 +181,11 @@ public class SectionK2Activity extends AppCompatActivity {
                         bi.k203b.isChecked() ? "2" :
                                 "0");
 
-        json.put("k204a", bi.k204a.getSelectedItem().toString());
-        json.put("k204b", bi.k204b.getText().toString());
-
-        json.put("k205a", bi.k205a.getSelectedItem().toString());
-        json.put("k205b", bi.k205b.getText().toString());
-
-        json.put("k206dd", bi.k206dd.getText().toString());
-        json.put("k206mm", bi.k206mm.getText().toString());
-        json.put("k206yy", bi.k206yy.getText().toString());
-
-        json.put("k207hh", bi.k207hh.getText().toString());
-        json.put("k207mm", bi.k207mm.getText().toString());
-
-        json.put("k208",
+        /*json.put("k208",
                 bi.k208a.isChecked() ? "1" :
                         bi.k208b.isChecked() ? "2" :
                                 bi.k208c.isChecked() ? "3" :
-                                        "0");
+                                        "0");*/
 
         json.put("k209a", bi.k209a.getText().toString());
         json.put("k209b", bi.k209b.getSelectedItem().toString());
@@ -171,6 +229,10 @@ public class SectionK2Activity extends AppCompatActivity {
         json.put("k220a", bi.k220a.getText().toString());
         json.put("k220b", bi.k220b.getSelectedItem().toString());
 
+        // Deleting item in list
+        mwraChildren.getFirst().remove(position - 1);
+        mwraChildren.getSecond().remove(position - 1);
+
     }
 
 
@@ -180,10 +242,10 @@ public class SectionK2Activity extends AppCompatActivity {
     }
 
 
-    /*@Override
+    @Override
     public void onBackPressed() {
         Toast.makeText(this, "You can't go back", Toast.LENGTH_SHORT).show();
-    }*/
+    }
 
 
 }

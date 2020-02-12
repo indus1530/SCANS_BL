@@ -17,7 +17,6 @@ import org.json.JSONObject;
 
 import edu.aku.hassannaqvi.uen_scans_bl.R;
 import edu.aku.hassannaqvi.uen_scans_bl.databinding.ActivitySectionA4Binding;
-import edu.aku.hassannaqvi.uen_scans_bl.ui.other.EndingActivity;
 import edu.aku.hassannaqvi.uen_scans_bl.utils.Util;
 import edu.aku.hassannaqvi.uen_scans_bl.validator.ClearClass;
 
@@ -187,8 +186,8 @@ public class SectionA4Activity extends AppCompatActivity {
     }
 
 
-    /*@Override
+    @Override
     public void onBackPressed() {
         Toast.makeText(this, "You can't go back", Toast.LENGTH_SHORT).show();
-    }*/
+    }
 }

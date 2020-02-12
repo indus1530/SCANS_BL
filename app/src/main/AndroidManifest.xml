@@ -37,7 +37,6 @@
             android:name=".ui.other.LoginActivity"
             android:screenOrientation="portrait"
             android:theme="@style/AppTheme" />
-
         <activity
             android:name=".ui.sections.SectionA1Activity"
             android:label="@string/ta1heading"
@@ -163,6 +162,11 @@
             android:screenOrientation="portrait"
             android:theme="@style/AppTheme" />
 
+
+        <activity
+            android:name=".ui.other.AnthroEndingActivity"
+            android:screenOrientation="portrait" />
+
         <activity
             android:name=".ui.sections.SectionK1Activity"
             android:label="@string/tk1heading"
@@ -207,7 +211,6 @@
             android:screenOrientation="portrait" />
 
         <service android:name=".DownloadFileService" />
-
     </application>
 
 </manifest>

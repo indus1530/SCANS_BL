@@ -1,14 +1,14 @@
 package edu.aku.hassannaqvi.uen_scans_bl.utils;
 
+import edu.aku.hassannaqvi.uen_scans_bl.contracts.AnthroContract.SingleAnthro;
 import edu.aku.hassannaqvi.uen_scans_bl.contracts.BLRandomContract.SingleRandomHH;
 import edu.aku.hassannaqvi.uen_scans_bl.contracts.ChildContract.SingleChild;
 import edu.aku.hassannaqvi.uen_scans_bl.contracts.EnumBlockContract;
 import edu.aku.hassannaqvi.uen_scans_bl.contracts.FamilyMembersContract;
 import edu.aku.hassannaqvi.uen_scans_bl.contracts.FormsContract;
-import edu.aku.hassannaqvi.uen_scans_bl.contracts.FoodFreqContract.SingleKishMWRA;
+import edu.aku.hassannaqvi.uen_scans_bl.contracts.KishMWRAContract.SingleKishMWRA;
 import edu.aku.hassannaqvi.uen_scans_bl.contracts.MWRAContract.MWRATable;
 import edu.aku.hassannaqvi.uen_scans_bl.contracts.MWRA_PREContract.SingleMWRAPRE;
-import edu.aku.hassannaqvi.uen_scans_bl.contracts.AnthroContract.SingleMortality;
 import edu.aku.hassannaqvi.uen_scans_bl.contracts.UsersContract;
 import edu.aku.hassannaqvi.uen_scans_bl.contracts.VersionAppContract;
 
@@ -49,11 +49,11 @@ public final class CreateTable {
             + FormsContract.FormsTable.COLUMN_SYNCED_DATE + " TEXT"
             + " );";
 
-    public static final String SQL_CREATE_USERS = "CREATE TABLE " + UsersContract.singleUser.TABLE_NAME + "("
-            + UsersContract.singleUser._ID + " INTEGER PRIMARY KEY AUTOINCREMENT,"
-            + UsersContract.singleUser.ROW_USERNAME + " TEXT,"
-            + UsersContract.singleUser.ROW_PASSWORD + " TEXT,"
-            + UsersContract.singleUser.DIST_ID + " TEXT"
+    public static final String SQL_CREATE_USERS = "CREATE TABLE " + UsersContract.SingleUser.TABLE_NAME + "("
+            + UsersContract.SingleUser._ID + " INTEGER PRIMARY KEY AUTOINCREMENT,"
+            + UsersContract.SingleUser.ROW_USERNAME + " TEXT,"
+            + UsersContract.SingleUser.ROW_PASSWORD + " TEXT,"
+            + UsersContract.SingleUser.DIST_ID + " TEXT"
             + " );";
 
     public static final String SQL_CREATE_VERSIONAPP = "CREATE TABLE " + VersionAppContract.VersionAppTable.TABLE_NAME + " (" +
@@ -158,17 +158,18 @@ public final class CreateTable {
             + SingleChild.COLUMN_SYNCED_DATE + " TEXT );";
 
 
-    public static final String SQL_CREATE_MORTALITY = "CREATE TABLE " + SingleMortality.TABLE_NAME + "("
-            + SingleMortality._ID + " INTEGER PRIMARY KEY AUTOINCREMENT,"
-            + SingleMortality.COLUMN_UID + " TEXT,"
-            + SingleMortality.COLUMN__UUID + " TEXT,"
-            + SingleMortality.COLUMN_DEVICEID + " TEXT,"
-            + SingleMortality.COLUMN_FORMDATE + " TEXT,"
-            + SingleMortality.COLUMN_USER + " TEXT,"
-            + SingleMortality.COLUMN_SE3 + " TEXT,"
-            + SingleMortality.COLUMN_DEVICETAGID + " TEXT,"
-            + SingleMortality.COLUMN_SYNCED + " TEXT,"
-            + SingleMortality.COLUMN_SYNCED_DATE + " TEXT );";
+    public static final String SQL_CREATE_MORTALITY = "CREATE TABLE " + SingleAnthro.TABLE_NAME + "("
+            + SingleAnthro._ID + " INTEGER PRIMARY KEY AUTOINCREMENT,"
+            + SingleAnthro.COLUMN_UID + " TEXT,"
+            + SingleAnthro.COLUMN__UUID + " TEXT,"
+            + SingleAnthro.COLUMN_DEVICEID + " TEXT,"
+            + SingleAnthro.COLUMN_FORMDATE + " TEXT,"
+            + SingleAnthro.COLUMN_USER + " TEXT,"
+            + SingleAnthro.COLUMN_SK1 + " TEXT,"
+            + SingleAnthro.COLUMN_DEVICETAGID + " TEXT,"
+            + SingleAnthro.COLUMN_ISTATUS + " TEXT,"
+            + SingleAnthro.COLUMN_SYNCED + " TEXT,"
+            + SingleAnthro.COLUMN_SYNCED_DATE + " TEXT );";
 
 
     public static final String SQL_CREATE_FAMILY_MEMBERS = "CREATE TABLE " + FamilyMembersContract.SingleMember.TABLE_NAME + "("

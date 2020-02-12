@@ -14,14 +14,11 @@ public class FormsContract {
 
 
     /**
-     *  Info,
-     *  Section A31,A32,
-     *  B1,
-     *  B2,
-     *  B3,
-     *
-     *
-     *
+     * Info,
+     * Section A31,A32,
+     * B1,
+     * B2,
+     * B3,
      */
 
     private final String projectName = "uen_scans_bl_2020";

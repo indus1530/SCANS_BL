@@ -14,7 +14,6 @@ import org.json.JSONObject;
 
 import edu.aku.hassannaqvi.uen_scans_bl.R;
 import edu.aku.hassannaqvi.uen_scans_bl.databinding.ActivitySectionB3Binding;
-import edu.aku.hassannaqvi.uen_scans_bl.ui.other.EndingActivity;
 import edu.aku.hassannaqvi.uen_scans_bl.utils.Util;
 
 public class SectionB3Activity extends AppCompatActivity {
@@ -40,7 +39,7 @@ public class SectionB3Activity extends AppCompatActivity {
             }
             if (UpdateDB()) {
                 finish();
-                startActivity(new Intent(this, SectionC1Activity.class));
+                startActivity(new Intent(this, SectionD1Activity.class));
             } else {
                 Toast.makeText(this, "Failed to Update Database!", Toast.LENGTH_SHORT).show();
             }
@@ -235,10 +234,10 @@ public class SectionB3Activity extends AppCompatActivity {
     }
 
 
-    /*@Override
+    @Override
     public void onBackPressed() {
         Toast.makeText(this, "You can't go back", Toast.LENGTH_SHORT).show();
-    }*/
+    }
 
 
 }

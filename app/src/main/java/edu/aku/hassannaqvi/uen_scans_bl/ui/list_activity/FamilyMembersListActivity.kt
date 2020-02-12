@@ -21,7 +21,6 @@ import edu.aku.hassannaqvi.uen_scans_bl.otherClasses.KishGrid
 import edu.aku.hassannaqvi.uen_scans_bl.ui.other.EndingActivity
 import edu.aku.hassannaqvi.uen_scans_bl.ui.sections.SectionA2Activity
 import edu.aku.hassannaqvi.uen_scans_bl.ui.sections.SectionA31Activity
-import edu.aku.hassannaqvi.uen_scans_bl.ui.sections.SectionC1Activity
 import edu.aku.hassannaqvi.uen_scans_bl.ui.sections.SectionD1Activity
 import edu.aku.hassannaqvi.uen_scans_bl.utils.Util
 import edu.aku.hassannaqvi.uen_scans_bl.viewmodel.MainVModel
@@ -88,21 +87,20 @@ class FamilyMembersListActivity : AppCompatActivity() {
 
                                     if (memSelectedCounter != serial - 1) return@run
 
-                                    selectedKishMWRA = mainVModel.mwraChildU5to10Lst.value?.get(
+                                    indexKishMWRA = mainVModel.mwraChildU5to10Lst.value?.get(
                                             kishSelectedMWRA(intent.getIntExtra("sno", 0),
                                                     mainVModel.mwraChildU5to10Lst.value!!.size) - 1)
 
-                                    if (selectedKishMWRA != null) {
-                                        val childLst = mainVModel.getAllChildrenOfSelMWRA(selectedKishMWRA.serialno.toInt())
-                                        selectedKishMWRAChild = childLst?.let {
+                                    if (indexKishMWRA != null) {
+                                        val childLst = mainVModel.getAllChildrenOfSelMWRA(indexKishMWRA.serialno.toInt())
+                                        indexKishMWRAChild = childLst?.let {
                                             mainVModel.childLstU5to10.value?.get(kishSelectedMWRA(intent.getIntExtra("sno", 0),
                                                     childLst.size) - 1)
                                         }
                                     }
 
                                     startActivity(Intent(this, when {
-                                        selectedKishMWRA != null -> SectionA31Activity::class.java
-                                        selectedKishMWRAChild != null -> SectionC1Activity::class.java
+                                        indexKishMWRA != null -> SectionA31Activity::class.java
                                         else -> EndingActivity::class.java
                                     }).putExtra("complete", true))
                                 }
