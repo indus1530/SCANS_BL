@@ -241,7 +241,8 @@
                             android:layout_weight="1"
                             android:clickable="true"
                             android:foreground="?android:attr/selectableItemBackground"
-                            android:onClick="@{() -> callback.syncServer()}">
+                            android:onClick="@{() -> callback.syncServer()}"
+                            app:cardCornerRadius="20dp">
 
                             <RelativeLayout
                                 android:layout_width="match_parent"
@@ -279,7 +280,8 @@
                             android:layout_weight="1"
                             android:clickable="true"
                             android:foreground="?android:attr/selectableItemBackground"
-                            android:onClick="@{() -> callback.openDB()}">
+                            android:onClick="@{() -> callback.openDB()}"
+                            app:cardCornerRadius="20dp">
 
                             <RelativeLayout
                                 android:layout_width="match_parent"
