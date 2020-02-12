@@ -34,8 +34,8 @@ import edu.aku.hassannaqvi.uen_scans_bl.contracts.FoodFreqContract;
 import edu.aku.hassannaqvi.uen_scans_bl.contracts.FoodFreqContract.SingleFoodFreq;
 import edu.aku.hassannaqvi.uen_scans_bl.contracts.FormsContract;
 import edu.aku.hassannaqvi.uen_scans_bl.contracts.FormsContract.FormsTable;
-import edu.aku.hassannaqvi.uen_scans_bl.contracts.MWRAContract;
-import edu.aku.hassannaqvi.uen_scans_bl.contracts.MWRAContract.MWRATable;
+import edu.aku.hassannaqvi.uen_scans_bl.contracts.IndexMWRAContract;
+import edu.aku.hassannaqvi.uen_scans_bl.contracts.IndexMWRAContract.MWRATable;
 import edu.aku.hassannaqvi.uen_scans_bl.contracts.MWRA_PREContract;
 import edu.aku.hassannaqvi.uen_scans_bl.contracts.MWRA_PREContract.SingleMWRAPRE;
 import edu.aku.hassannaqvi.uen_scans_bl.contracts.TalukasContract;
@@ -569,8 +569,6 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         values.put(FormsTable.COLUMN_SINFO, fc.getsInfo());
         values.put(FormsTable.COLUMN_SA3, fc.getsA3());
         values.put(FormsTable.COLUMN_SA4, fc.getsA4());
-        values.put(FormsTable.COLUMN_SN, fc.getsN());
-        values.put(FormsTable.COLUMN_SO, fc.getsO());
         values.put(FormsTable.COLUMN_GPSLAT, fc.getGpsLat());
         values.put(FormsTable.COLUMN_GPSLNG, fc.getGpsLng());
         values.put(FormsTable.COLUMN_GPSDATE, fc.getGpsDT());
@@ -680,14 +678,14 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         return newRowId;
     }
 
-    public Long addMWRA(MWRAContract mwra) {
+    public Long addMWRA(IndexMWRAContract mwra) {
 
         // Gets the data repository in write mode
         SQLiteDatabase db = this.getWritableDatabase();
 
         // Create a new map of values, where column names are the keys
         ContentValues values = new ContentValues();
-        //values.put(MWRATable._ID, mwra.get_ID());
+        //values.put(MWRATable._ID, indexMwra.get_ID());
         values.put(MWRATable.COLUMN_UUID, mwra.get_UUID());
         values.put(MWRATable.COLUMN_DEVICEID, mwra.getDeviceId());
         values.put(MWRATable.COLUMN_FORMDATE, mwra.getFormDate());
@@ -713,7 +711,6 @@ public class DatabaseHelper extends SQLiteOpenHelper {
 
         // Create a new map of values, where column names are the keys
         ContentValues values = new ContentValues();
-//        values.put(MWRATable._ID, mwra.get_ID());
         values.put(SingleChild.COLUMN__UUID, childContract.get_UUID());
         values.put(SingleChild.COLUMN_DEVICEID, childContract.get_UUID());
         values.put(SingleChild.COLUMN_FORMDATE, childContract.get_UUID());
@@ -738,7 +735,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
 
         // Create a new map of values, where column names are the keys
         ContentValues values = new ContentValues();
-//        values.put(MWRATable._ID, mwra.get_ID());
+//        values.put(MWRATable._ID, indexMwra.get_ID());
         values.put(SingleMWRAPRE.COLUMN__UUID, mwra.get_UUID());
         values.put(SingleMWRAPRE.COLUMN_DEVICEID, mwra.getDeviceId());
         values.put(SingleMWRAPRE.COLUMN_FORMDATE, mwra.getFormDate());
@@ -822,15 +819,15 @@ public class DatabaseHelper extends SQLiteOpenHelper {
 
 // New value for one column
         ContentValues values = new ContentValues();
-        values.put(MWRAContract.MWRATable.COLUMN_SYNCED, true);
-        values.put(MWRAContract.MWRATable.COLUMN_SYNCED_DATE, new Date().toString());
+        values.put(IndexMWRAContract.MWRATable.COLUMN_SYNCED, true);
+        values.put(IndexMWRAContract.MWRATable.COLUMN_SYNCED_DATE, new Date().toString());
 
 // Which row to update, based on the title
-        String where = MWRAContract.MWRATable.COLUMN_ID + " = ?";
+        String where = IndexMWRAContract.MWRATable.COLUMN_ID + " = ?";
         String[] whereArgs = {id};
 
         int count = db.update(
-                MWRAContract.MWRATable.TABLE_NAME,
+                IndexMWRAContract.MWRATable.TABLE_NAME,
                 values,
                 where,
                 whereArgs);
@@ -1020,33 +1017,33 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         return allFC;
     }
 
-    public Collection<MWRAContract> getUnsyncedMWRA() {
+    public Collection<IndexMWRAContract> getUnsyncedMWRA() {
         SQLiteDatabase db = this.getReadableDatabase();
         Cursor c = null;
         String[] columns = {
-                MWRAContract.MWRATable.COLUMN_ID,
-                MWRAContract.MWRATable.COLUMN_UID,
-                MWRAContract.MWRATable.COLUMN_UUID,
-                MWRAContract.MWRATable.COLUMN_FORMDATE,
-                MWRAContract.MWRATable.COLUMN_USER,
-                MWRAContract.MWRATable.COLUMN_SB1,
-                MWRAContract.MWRATable.COLUMN_SB2,
-                MWRAContract.MWRATable.COLUMN_SB3,
-                MWRAContract.MWRATable.COLUMN_DEVICEID,
-                MWRAContract.MWRATable.COLUMN_DEVICETAGID
+                IndexMWRAContract.MWRATable.COLUMN_ID,
+                IndexMWRAContract.MWRATable.COLUMN_UID,
+                IndexMWRAContract.MWRATable.COLUMN_UUID,
+                IndexMWRAContract.MWRATable.COLUMN_FORMDATE,
+                IndexMWRAContract.MWRATable.COLUMN_USER,
+                IndexMWRAContract.MWRATable.COLUMN_SB1,
+                IndexMWRAContract.MWRATable.COLUMN_SB2,
+                IndexMWRAContract.MWRATable.COLUMN_SB3,
+                IndexMWRAContract.MWRATable.COLUMN_DEVICEID,
+                IndexMWRAContract.MWRATable.COLUMN_DEVICETAGID
         };
-        String whereClause = MWRAContract.MWRATable.COLUMN_SYNCED + " is null";
+        String whereClause = IndexMWRAContract.MWRATable.COLUMN_SYNCED + " is null";
         String[] whereArgs = null;
         String groupBy = null;
         String having = null;
 
         String orderBy =
-                MWRAContract.MWRATable.COLUMN_ID + " ASC";
+                IndexMWRAContract.MWRATable.COLUMN_ID + " ASC";
 
-        Collection<MWRAContract> allMC = new ArrayList<MWRAContract>();
+        Collection<IndexMWRAContract> allMC = new ArrayList<IndexMWRAContract>();
         try {
             c = db.query(
-                    MWRAContract.MWRATable.TABLE_NAME,  // The table to query
+                    IndexMWRAContract.MWRATable.TABLE_NAME,  // The table to query
                     columns,                   // The columns to return
                     whereClause,               // The columns for the WHERE clause
                     whereArgs,                 // The values for the WHERE clause
@@ -1055,7 +1052,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
                     orderBy                    // The sort order
             );
             while (c.moveToNext()) {
-                MWRAContract mc = new MWRAContract();
+                IndexMWRAContract mc = new IndexMWRAContract();
                 allMC.add(mc.Hydrate(c));
             }
         } finally {
@@ -1235,8 +1232,6 @@ public class DatabaseHelper extends SQLiteOpenHelper {
                 FormsTable.COLUMN_SINFO,
                 FormsTable.COLUMN_SA3,
                 FormsTable.COLUMN_SA4,
-                FormsTable.COLUMN_SN,
-                FormsTable.COLUMN_SO,
                 FormsTable.COLUMN_GPSLAT,
                 FormsTable.COLUMN_GPSLNG,
                 FormsTable.COLUMN_GPSDATE,
@@ -1613,7 +1608,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         values.put(column, value);
 
         String selection = MWRATable._ID + " =? ";
-        String[] selectionArgs = {String.valueOf(MainApp.mwra.get_ID())};
+        String[] selectionArgs = {String.valueOf(MainApp.indexMwra.get_ID())};
 
         return db.update(MWRATable.TABLE_NAME,
                 values,

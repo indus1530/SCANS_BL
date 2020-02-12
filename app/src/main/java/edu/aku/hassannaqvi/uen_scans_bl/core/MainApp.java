@@ -31,7 +31,7 @@ import edu.aku.hassannaqvi.uen_scans_bl.contracts.ChildContract;
 import edu.aku.hassannaqvi.uen_scans_bl.contracts.FamilyMembersContract;
 import edu.aku.hassannaqvi.uen_scans_bl.contracts.FoodFreqContract;
 import edu.aku.hassannaqvi.uen_scans_bl.contracts.FormsContract;
-import edu.aku.hassannaqvi.uen_scans_bl.contracts.MWRAContract;
+import edu.aku.hassannaqvi.uen_scans_bl.contracts.IndexMWRAContract;
 import edu.aku.hassannaqvi.uen_scans_bl.databinding.CountAlertDialogLayoutBinding;
 import edu.aku.hassannaqvi.uen_scans_bl.ui.other.EndingActivity;
 import kotlin.Pair;
@@ -74,7 +74,7 @@ public class MainApp extends Application {
     public static Boolean admin = false;
     public static FormsContract fc;
     public static FoodFreqContract foodFreq;
-    public static MWRAContract mwra;
+    public static IndexMWRAContract indexMwra;
     public static ChildContract child;
     public static AnthroContract anthro;
     public static FamilyMembersContract indexKishMWRA;

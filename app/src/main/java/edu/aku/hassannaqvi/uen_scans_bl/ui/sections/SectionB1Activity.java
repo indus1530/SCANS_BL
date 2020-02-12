@@ -16,7 +16,7 @@ import java.text.SimpleDateFormat;
 import java.util.Date;
 
 import edu.aku.hassannaqvi.uen_scans_bl.R;
-import edu.aku.hassannaqvi.uen_scans_bl.contracts.MWRAContract;
+import edu.aku.hassannaqvi.uen_scans_bl.contracts.IndexMWRAContract;
 import edu.aku.hassannaqvi.uen_scans_bl.core.DatabaseHelper;
 import edu.aku.hassannaqvi.uen_scans_bl.core.MainApp;
 import edu.aku.hassannaqvi.uen_scans_bl.databinding.ActivitySectionB1Binding;
@@ -136,11 +136,11 @@ public class SectionB1Activity extends AppCompatActivity {
     private boolean UpdateDB() {
 
         DatabaseHelper db = MainApp.appInfo.getDbHelper();
-        long rowID = db.addMWRA(MainApp.mwra);
+        long rowID = db.addMWRA(MainApp.indexMwra);
         if (rowID > 0) {
-            MainApp.mwra.set_ID(String.valueOf(rowID));
-            MainApp.mwra.setUID(MainApp.mwra.getDeviceId() + MainApp.mwra.get_ID());
-            db.updatesMWRAColumn(MWRAContract.MWRATable.COLUMN_UID, MainApp.mwra.getUID());
+            MainApp.indexMwra.set_ID(String.valueOf(rowID));
+            MainApp.indexMwra.setUID(MainApp.indexMwra.getDeviceId() + MainApp.indexMwra.get_ID());
+            db.updatesMWRAColumn(IndexMWRAContract.MWRATable.COLUMN_UID, MainApp.indexMwra.getUID());
             return true;
         } else {
             Toast.makeText(this, "Updating Database... ERROR!", Toast.LENGTH_SHORT).show();
@@ -151,12 +151,12 @@ public class SectionB1Activity extends AppCompatActivity {
 
     private void SaveDraft() throws JSONException {
 
-        MainApp.mwra = new MWRAContract();
-        MainApp.mwra.set_UUID(MainApp.fc.get_UID());
-        MainApp.mwra.setDeviceId(MainApp.appInfo.getDeviceID());
-        MainApp.mwra.setDevicetagID(MainApp.appInfo.getTagName());
-        MainApp.mwra.setFormDate(new SimpleDateFormat("dd-MM-yy HH:mm").format(new Date().getTime()));
-        MainApp.mwra.setUser(MainApp.userName);
+        MainApp.indexMwra = new IndexMWRAContract();
+        MainApp.indexMwra.set_UUID(MainApp.fc.get_UID());
+        MainApp.indexMwra.setDeviceId(MainApp.appInfo.getDeviceID());
+        MainApp.indexMwra.setDevicetagID(MainApp.appInfo.getTagName());
+        MainApp.indexMwra.setFormDate(new SimpleDateFormat("dd-MM-yy HH:mm").format(new Date().getTime()));
+        MainApp.indexMwra.setUser(MainApp.userName);
 
         JSONObject f1 = new JSONObject();
 
@@ -282,7 +282,7 @@ public class SectionB1Activity extends AppCompatActivity {
                                 bi.b118c.isChecked() ? "3" :
                                         "0");
 
-        MainApp.mwra.setsB1(String.valueOf(f1));
+        MainApp.indexMwra.setsB1(String.valueOf(f1));
 
     }
 

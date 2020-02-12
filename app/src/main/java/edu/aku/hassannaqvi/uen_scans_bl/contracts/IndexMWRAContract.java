@@ -12,7 +12,7 @@ import org.json.JSONObject;
  * Created by gul.sanober on 5/9/2017.
  */
 
-public class MWRAContract implements Parcelable {
+public class IndexMWRAContract implements Parcelable {
 
     private String projectName = "uen_mdLine20";
 
@@ -46,10 +46,10 @@ public class MWRAContract implements Parcelable {
     * */
 
 
-    public MWRAContract() {
+    public IndexMWRAContract() {
     }
 
-    protected MWRAContract(Parcel in) {
+    protected IndexMWRAContract(Parcel in) {
         projectName = in.readString();
         _ID = in.readString();
         UID = in.readString();
@@ -67,15 +67,15 @@ public class MWRAContract implements Parcelable {
         fm_serial = in.readString();
     }
 
-    public static final Creator<MWRAContract> CREATOR = new Creator<MWRAContract>() {
+    public static final Creator<IndexMWRAContract> CREATOR = new Creator<IndexMWRAContract>() {
         @Override
-        public MWRAContract createFromParcel(Parcel in) {
-            return new MWRAContract(in);
+        public IndexMWRAContract createFromParcel(Parcel in) {
+            return new IndexMWRAContract(in);
         }
 
         @Override
-        public MWRAContract[] newArray(int size) {
-            return new MWRAContract[size];
+        public IndexMWRAContract[] newArray(int size) {
+            return new IndexMWRAContract[size];
         }
     };
 
@@ -197,7 +197,7 @@ public class MWRAContract implements Parcelable {
         this.fm_serial = fm_serial;
     }
 
-    public MWRAContract Sync(JSONObject jsonObject) throws JSONException {
+    public IndexMWRAContract Sync(JSONObject jsonObject) throws JSONException {
 
         this._ID = jsonObject.getString(MWRATable.COLUMN_ID);
         this.UID = jsonObject.getString(MWRATable.COLUMN_UID);
@@ -216,7 +216,7 @@ public class MWRAContract implements Parcelable {
 
     }
 
-    public MWRAContract Hydrate(Cursor cursor) {
+    public IndexMWRAContract Hydrate(Cursor cursor) {
 
         this._ID = cursor.getString(cursor.getColumnIndex(MWRATable.COLUMN_ID));
         this.UID = cursor.getString(cursor.getColumnIndex(MWRATable.COLUMN_UID));
@@ -287,7 +287,7 @@ public class MWRAContract implements Parcelable {
 
     public static abstract class MWRATable implements BaseColumns {
 
-        public static final String TABLE_NAME = "mwra";
+        public static final String TABLE_NAME = "indexMwra";
         public static final String COLUMN_NAME_NULLABLE = "NULLHACK";
         public static final String COLUMN_PROJECT_NAME = "project_name";
         public static final String COLUMN_ID = "_id";

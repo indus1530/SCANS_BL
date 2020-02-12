@@ -13,7 +13,7 @@ import org.json.JSONException;
 import org.json.JSONObject;
 
 import edu.aku.hassannaqvi.uen_scans_bl.R;
-import edu.aku.hassannaqvi.uen_scans_bl.contracts.MWRAContract;
+import edu.aku.hassannaqvi.uen_scans_bl.contracts.IndexMWRAContract;
 import edu.aku.hassannaqvi.uen_scans_bl.core.DatabaseHelper;
 import edu.aku.hassannaqvi.uen_scans_bl.core.MainApp;
 import edu.aku.hassannaqvi.uen_scans_bl.databinding.ActivitySectionB3Binding;
@@ -58,7 +58,7 @@ public class SectionB3Activity extends AppCompatActivity {
 
     private boolean UpdateDB() {
         DatabaseHelper db = MainApp.appInfo.getDbHelper();
-        int updcount = db.updatesMWRAColumn(MWRAContract.MWRATable.COLUMN_SB3, MainApp.mwra.getsB3());
+        int updcount = db.updatesMWRAColumn(IndexMWRAContract.MWRATable.COLUMN_SB3, MainApp.indexMwra.getsB3());
         if (updcount == 1) {
             return true;
         } else {
@@ -226,7 +226,7 @@ public class SectionB3Activity extends AppCompatActivity {
         f1.put("b314x", bi.b31496.isChecked() ? "96" : "0");
         f1.put("b314xt", bi.b31496x.getText().toString());
 
-        MainApp.mwra.setsB3(String.valueOf(f1));
+        MainApp.indexMwra.setsB3(String.valueOf(f1));
     }
 
 

@@ -7,7 +7,7 @@ import edu.aku.hassannaqvi.uen_scans_bl.contracts.EnumBlockContract;
 import edu.aku.hassannaqvi.uen_scans_bl.contracts.FamilyMembersContract;
 import edu.aku.hassannaqvi.uen_scans_bl.contracts.FoodFreqContract.SingleFoodFreq;
 import edu.aku.hassannaqvi.uen_scans_bl.contracts.FormsContract;
-import edu.aku.hassannaqvi.uen_scans_bl.contracts.MWRAContract.MWRATable;
+import edu.aku.hassannaqvi.uen_scans_bl.contracts.IndexMWRAContract.MWRATable;
 import edu.aku.hassannaqvi.uen_scans_bl.contracts.MWRA_PREContract.SingleMWRAPRE;
 import edu.aku.hassannaqvi.uen_scans_bl.contracts.UsersContract;
 import edu.aku.hassannaqvi.uen_scans_bl.contracts.VersionAppContract;
@@ -34,8 +34,6 @@ public final class CreateTable {
             + FormsContract.FormsTable.COLUMN_SINFO + " TEXT,"
             + FormsContract.FormsTable.COLUMN_SA3 + " TEXT,"
             + FormsContract.FormsTable.COLUMN_SA4 + " TEXT,"
-            + FormsContract.FormsTable.COLUMN_SN + " TEXT,"
-            + FormsContract.FormsTable.COLUMN_SO + " TEXT,"
             + FormsContract.FormsTable.COLUMN_ISTATUS + " TEXT,"
             + FormsContract.FormsTable.COLUMN_ISTATUS88x + " TEXT,"
             + FormsContract.FormsTable.COLUMN_ENDINGDATETIME + " TEXT,"
