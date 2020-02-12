@@ -38,6 +38,7 @@
                         style="@style/textView3Head"
                         android:text="@string/a101a" />
 
+                    <!-- Cluster Number -->
                     <androidx.cardview.widget.CardView
                         android:id="@+id/fldGrpCVa101"
                         style="@style/cardView">
@@ -46,7 +47,6 @@
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:orientation="horizontal">
-
 
                             <EditText
                                 android:id="@+id/a101"
@@ -83,172 +83,187 @@
                     android:visibility="visible"
                     tools:visibility="visible">
 
-                    <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:orientation="horizontal">
-
-                        <!--a104-->
-                        <TextView
-                            android:layout_width="0dp"
-                            android:layout_height="60sp"
-                            android:layout_marginTop="16dp"
-                            android:layout_marginBottom="4dp"
-                            android:layout_weight="2"
-                            android:background="@color/colorPrimary"
-                            android:gravity="center"
-                            android:padding="15dp"
-                            android:text="@string/a107"
-                            android:textAppearance="?android:attr/textAppearanceLarge"
-                            android:textColor="@android:color/white" />
-
-
-                        <TextView
-                            android:id="@+id/a104"
-                            android:layout_width="0dp"
-                            android:layout_height="60sp"
-                            android:layout_marginTop="13dp"
-                            android:layout_marginBottom="4dp"
-                            android:layout_weight="3"
-                            android:background="@color/pink_100"
-                            android:gravity="center"
-                            android:padding="15dp"
-                            android:text="Balochistan"
-                            android:textColor="@color/colorPrimaryDark"
-                            android:textSize="16sp" />
-
-                        <!--a105-->
-                        <TextView
-                            android:layout_width="0dp"
-                            android:layout_height="60sp"
-                            android:layout_marginTop="16dp"
-                            android:layout_marginBottom="8dp"
-                            android:layout_weight="2"
-                            android:background="@color/colorPrimary"
-                            android:gravity="center"
-                            android:padding="15dp"
-                            android:text="@string/a108"
-                            android:textAppearance="?android:attr/textAppearanceLarge"
-                            android:textColor="@android:color/white" />
-
-
-                        <TextView
-                            android:id="@+id/a105"
-                            android:layout_width="0dp"
-                            android:layout_height="60sp"
-                            android:layout_marginTop="13dp"
-                            android:layout_marginBottom="4dp"
-                            android:layout_weight="3"
-                            android:background="@color/pink_100"
-                            android:gravity="center"
-                            android:padding="15dp"
-                            android:text="Jafferabad"
-                            android:textColor="@color/colorPrimaryDark"
-                            android:textSize="16sp" />
-                    </LinearLayout>
-
-                    <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:orientation="horizontal">
-
-                        <!--a106-->
-                        <TextView
-                            android:layout_width="0dp"
-                            android:layout_height="wrap_content"
-                            android:layout_marginTop="16dp"
-                            android:layout_marginBottom="8dp"
-                            android:layout_weight="2"
-                            android:background="@color/colorPrimary"
-                            android:gravity="center_horizontal|center_vertical"
-                            android:padding="15dp"
-                            android:text="@string/a109"
-                            android:textAppearance="?android:attr/textAppearanceLarge"
-                            android:textColor="@android:color/white" />
-
-
-                        <TextView
-                            android:id="@+id/a106"
-                            android:layout_width="0dp"
-                            android:layout_height="wrap_content"
-                            android:layout_marginTop="16dp"
-                            android:layout_marginBottom="4dp"
-                            android:layout_weight="3"
-                            android:background="@color/pink_100"
-                            android:gravity="center_horizontal|center_vertical"
-                            android:padding="15dp"
-                            android:text="Test"
-                            android:textColor="@color/colorPrimaryDark"
-                            android:textSize="16sp" />
-
-                        <!--a107-->
-                        <TextView
-                            android:layout_width="0dp"
-                            android:layout_height="wrap_content"
-                            android:layout_marginTop="16dp"
-                            android:layout_marginBottom="8dp"
-                            android:layout_weight="2"
-                            android:background="@color/colorPrimary"
-                            android:gravity="center_horizontal|center_vertical"
-                            android:padding="15dp"
-                            android:text="@string/a110"
-                            android:textAppearance="?android:attr/textAppearanceLarge"
-                            android:textColor="@android:color/white" />
-
-
-                        <TextView
-                            android:id="@+id/a107"
-                            android:layout_width="0dp"
-                            android:layout_height="wrap_content"
-                            android:layout_marginTop="13dp"
-                            android:layout_marginBottom="8dp"
-                            android:layout_weight="3"
-                            android:background="@color/pink_100"
-                            android:gravity="center_horizontal|center_vertical"
-                            android:padding="15dp"
-                            android:text="Test"
-                            android:textColor="@color/colorPrimaryDark"
-                            android:textSize="16sp" />
-
-
-                    </LinearLayout>
-
-                    <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:orientation="vertical">
-
-                        <!--a112-->
-                        <TextView
-                            style="@style/i_textview"
-                            android:text="@string/a112" />
+                    <!-- Province - District -->
+                    <androidx.cardview.widget.CardView style="@style/cardView">
 
                         <LinearLayout
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:orientation="horizontal">
 
-                            <com.edittextpicker.aliazaz.EditTextPicker
-                                android:id="@+id/a112"
-                                style="@style/EditTextNum"
-                                android:layout_weight="1"
-                                app:defaultValue=""
-                                app:mask="####-###"
-                                app:pattern="^(\\d{4,4}\\-\\d{3,3})$"
-                                app:type="equal" />
+                            <!--a104-->
+                            <TextView
+                                android:layout_width="0dp"
+                                android:layout_height="60sp"
+                                android:layout_marginTop="16dp"
+                                android:layout_marginBottom="4dp"
+                                android:layout_weight="2"
+                                android:background="@color/colorPrimary"
+                                android:gravity="center"
+                                android:padding="15dp"
+                                android:text="@string/a107"
+                                android:textAppearance="?android:attr/textAppearanceLarge"
+                                android:textColor="@android:color/white" />
 
-                            <Button
-                                android:id="@+id/checkHHBtn2"
-                                style="@style/button"
-                                android:layout_weight="1"
-                                android:background="@drawable/button_bg"
-                                android:onClick="@{() -> callback.BtnCheckHH()}"
-                                android:text="CHECK"
-                                android:textColor="@color/colorPrimaryDark" />
+
+                            <TextView
+                                android:id="@+id/a104"
+                                android:layout_width="0dp"
+                                android:layout_height="60sp"
+                                android:layout_marginTop="13dp"
+                                android:layout_marginBottom="4dp"
+                                android:layout_weight="3"
+                                android:background="@color/pink_100"
+                                android:gravity="center"
+                                android:padding="15dp"
+                                android:text="Balochistan"
+                                android:textColor="@color/colorPrimaryDark"
+                                android:textSize="16sp" />
+
+                            <!--a105-->
+                            <TextView
+                                android:layout_width="0dp"
+                                android:layout_height="60sp"
+                                android:layout_marginTop="16dp"
+                                android:layout_marginBottom="8dp"
+                                android:layout_weight="2"
+                                android:background="@color/colorPrimary"
+                                android:gravity="center"
+                                android:padding="15dp"
+                                android:text="@string/a108"
+                                android:textAppearance="?android:attr/textAppearanceLarge"
+                                android:textColor="@android:color/white" />
+
+
+                            <TextView
+                                android:id="@+id/a105"
+                                android:layout_width="0dp"
+                                android:layout_height="60sp"
+                                android:layout_marginTop="13dp"
+                                android:layout_marginBottom="4dp"
+                                android:layout_weight="3"
+                                android:background="@color/pink_100"
+                                android:gravity="center"
+                                android:padding="15dp"
+                                android:text="Jafferabad"
+                                android:textColor="@color/colorPrimaryDark"
+                                android:textSize="16sp" />
+                        </LinearLayout>
+
+                    </androidx.cardview.widget.CardView>
+
+                    <!-- Tehsil - City -->
+                    <androidx.cardview.widget.CardView style="@style/cardView">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal">
+
+                            <!--a106-->
+                            <TextView
+                                android:layout_width="0dp"
+                                android:layout_height="60sp"
+                                android:layout_marginTop="16dp"
+                                android:layout_marginBottom="8dp"
+                                android:layout_weight="2"
+                                android:background="@color/colorPrimary"
+                                android:gravity="center_horizontal|center_vertical"
+                                android:padding="15dp"
+                                android:text="@string/a109"
+                                android:textAppearance="?android:attr/textAppearanceLarge"
+                                android:textColor="@android:color/white" />
+
+
+                            <TextView
+                                android:id="@+id/a106"
+                                android:layout_width="0dp"
+                                android:layout_height="60sp"
+                                android:layout_marginTop="13dp"
+                                android:layout_marginBottom="8dp"
+                                android:layout_weight="3"
+                                android:background="@color/pink_100"
+                                android:gravity="center_horizontal|center_vertical"
+                                android:padding="15dp"
+                                android:text="Test"
+                                android:textColor="@color/colorPrimaryDark"
+                                android:textSize="16sp" />
+
+                            <!--a107-->
+                            <TextView
+                                android:layout_width="0dp"
+                                android:layout_height="60sp"
+                                android:layout_marginTop="16dp"
+                                android:layout_marginBottom="8dp"
+                                android:layout_weight="2"
+                                android:background="@color/colorPrimary"
+                                android:gravity="center_horizontal|center_vertical"
+                                android:padding="15dp"
+                                android:text="@string/a110"
+                                android:textAppearance="?android:attr/textAppearanceLarge"
+                                android:textColor="@android:color/white" />
+
+
+                            <TextView
+                                android:id="@+id/a107"
+                                android:layout_width="0dp"
+                                android:layout_height="60sp"
+                                android:layout_marginTop="13dp"
+                                android:layout_marginBottom="8dp"
+                                android:layout_weight="3"
+                                android:background="@color/pink_100"
+                                android:gravity="center_horizontal|center_vertical"
+                                android:padding="15dp"
+                                android:text="Test"
+                                android:textColor="@color/colorPrimaryDark"
+                                android:textSize="16sp" />
+
 
                         </LinearLayout>
 
-                    </LinearLayout>
+                    </androidx.cardview.widget.CardView>
+
+                    <!-- A12-EditText-CheckButton -->
+                    <androidx.cardview.widget.CardView style="@style/cardView">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical">
+
+                            <!--a112-->
+                            <TextView
+                                style="@style/i_textview"
+                                android:text="@string/a112" />
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="horizontal">
+
+                                <com.edittextpicker.aliazaz.EditTextPicker
+                                    android:id="@+id/a112"
+                                    style="@style/EditTextNum"
+                                    android:layout_weight="1"
+                                    app:defaultValue=""
+                                    app:mask="####-###"
+                                    app:pattern="^(\\d{4,4}\\-\\d{3,3})$"
+                                    app:type="equal" />
+
+                                <Button
+                                    android:id="@+id/checkHHBtn2"
+                                    style="@style/button"
+                                    android:layout_weight="1"
+                                    android:background="@drawable/button_bg"
+                                    android:onClick="@{() -> callback.BtnCheckHH()}"
+                                    android:text="CHECK"
+                                    android:textColor="@color/colorPrimaryDark" />
+
+                            </LinearLayout>
+
+                        </LinearLayout>
+
+                    </androidx.cardview.widget.CardView>
 
                 </LinearLayout>
 
@@ -259,7 +274,7 @@
                     android:visibility="visible"
                     tools:visibility="visible">
 
-                    <!-- checkHHHeadpresen -->
+                    <!-- checkHead -->
                     <androidx.cardview.widget.CardView
                         android:id="@+id/fldGrpcih110"
                         style="@style/cardView">
@@ -287,7 +302,7 @@
 
                     </androidx.cardview.widget.CardView>
 
-                    <!-- checkHHHeadpresen -->
+                    <!-- HeadName- EditText -->
                     <androidx.cardview.widget.CardView
                         android:id="@+id/fldGrpcih110a"
                         style="@style/cardView"
@@ -314,77 +329,80 @@
 
                     </androidx.cardview.widget.CardView>
 
-                    <!-- a109  Input   -->
-                    <androidx.cardview.widget.CardView
-                        android:id="@+id/fldGrpCVa109"
-                        style="@style/cardView">
+                    <!--
 
-                        <LinearLayout
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:orientation="vertical">
+                                        &lt;!&ndash; a109  Input   &ndash;&gt;
+                                        <androidx.cardview.widget.CardView
+                                            android:id="@+id/fldGrpCVa109"
+                                            style="@style/cardView">
 
-                            <TextView
-                                style="@style/i_textview"
-                                android:text="@string/a109" />
+                                            <LinearLayout
+                                                android:layout_width="match_parent"
+                                                android:layout_height="wrap_content"
+                                                android:orientation="vertical">
 
-                            <EditText
-                                android:id="@+id/a109"
-                                style="@style/EditTextAlpha"
-                                android:hint="@string/name"
-                                android:textColor="@android:color/black" />
+                                                <TextView
+                                                    style="@style/i_textview"
+                                                    android:text="@string/a109" />
 
-                        </LinearLayout>
+                                                <EditText
+                                                    android:id="@+id/a109"
+                                                    style="@style/EditTextAlpha"
+                                                    android:hint="@string/name"
+                                                    android:textColor="@android:color/black" />
 
-                    </androidx.cardview.widget.CardView>
+                                            </LinearLayout>
 
-                    <!-- a110  Input   -->
-                    <androidx.cardview.widget.CardView
-                        android:id="@+id/fldGrpCVa110"
-                        style="@style/cardView">
+                                        </androidx.cardview.widget.CardView>
 
-                        <LinearLayout
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:orientation="vertical">
+                                        &lt;!&ndash; a110  Input   &ndash;&gt;
+                                        <androidx.cardview.widget.CardView
+                                            android:id="@+id/fldGrpCVa110"
+                                            style="@style/cardView">
 
-                            <TextView
-                                style="@style/i_textview"
-                                android:text="@string/a110" />
+                                            <LinearLayout
+                                                android:layout_width="match_parent"
+                                                android:layout_height="wrap_content"
+                                                android:orientation="vertical">
 
-                            <EditText
-                                android:id="@+id/a110"
-                                style="@style/EditTextAlphaNumeric"
-                                android:hint="@string/name"
-                                android:textColor="@android:color/black" />
+                                                <TextView
+                                                    style="@style/i_textview"
+                                                    android:text="@string/a110" />
 
-                        </LinearLayout>
+                                                <EditText
+                                                    android:id="@+id/a110"
+                                                    style="@style/EditTextAlphaNumeric"
+                                                    android:hint="@string/name"
+                                                    android:textColor="@android:color/black" />
 
-                    </androidx.cardview.widget.CardView>
+                                            </LinearLayout>
 
-                    <!-- a111  Input   -->
-                    <androidx.cardview.widget.CardView
-                        android:id="@+id/fldGrpCVa111"
-                        style="@style/cardView">
+                                        </androidx.cardview.widget.CardView>
 
-                        <LinearLayout
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:orientation="vertical">
+                                        &lt;!&ndash; a111  Input   &ndash;&gt;
+                                        <androidx.cardview.widget.CardView
+                                            android:id="@+id/fldGrpCVa111"
+                                            style="@style/cardView">
 
-                            <TextView
-                                style="@style/i_textview"
-                                android:text="@string/a111" />
+                                            <LinearLayout
+                                                android:layout_width="match_parent"
+                                                android:layout_height="wrap_content"
+                                                android:orientation="vertical">
 
-                            <EditText
-                                android:id="@+id/a111"
-                                style="@style/EditTextAlphaNumeric"
-                                android:hint="@string/name"
-                                android:textColor="@android:color/black" />
+                                                <TextView
+                                                    style="@style/i_textview"
+                                                    android:text="@string/a111" />
 
-                        </LinearLayout>
+                                                <EditText
+                                                    android:id="@+id/a111"
+                                                    style="@style/EditTextAlphaNumeric"
+                                                    android:hint="@string/name"
+                                                    android:textColor="@android:color/black" />
 
-                    </androidx.cardview.widget.CardView>
+                                            </LinearLayout>
+
+                                        </androidx.cardview.widget.CardView>
+                    -->
 
                     <!-- a113  Radio   -->
                     <androidx.cardview.widget.CardView

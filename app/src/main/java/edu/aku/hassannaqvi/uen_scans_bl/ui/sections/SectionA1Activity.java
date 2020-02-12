@@ -222,9 +222,30 @@ public class SectionA1Activity extends AppCompatActivity {
         json.put("a105", bi.a105.getText().toString());
         json.put("a106", bi.a106.getText().toString());
         json.put("a107", bi.a107.getText().toString());
-        json.put("a109", bi.a109.getText().toString());
+
+        /*json.put("a109", bi.a109.getText().toString());
         json.put("a110", bi.a110.getText().toString());
-        json.put("a111", bi.a111.getText().toString());
+        json.put("a111", bi.a111.getText().toString());*/
+
+        json.put("a113", bi.a113a.isChecked() ? "1"
+                : bi.a113b.isChecked() ? "2"
+                : "0");
+
+        json.put("a114", bi.a114.getText().toString());
+
+        json.put("a115", bi.a115.getText().toString());
+
+        json.put("a116", bi.a116a.isChecked() ? "1"
+                : bi.a116b.isChecked() ? "2"
+                : "0");
+
+        json.put("a117", bi.a117a.isChecked() ? "1"
+                : bi.a117b.isChecked() ? "2"
+                : "0");
+
+        json.put("a118", bi.a118a.isChecked() ? "1"
+                : bi.a118b.isChecked() ? "2"
+                : "0");
 
         MainApp.fc.setsInfo(String.valueOf(json));
 
