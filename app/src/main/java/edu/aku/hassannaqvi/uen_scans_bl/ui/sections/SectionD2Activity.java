@@ -57,7 +57,7 @@ public class SectionD2Activity extends AppCompatActivity {
 
     private boolean UpdateDB() {
         DatabaseHelper db = MainApp.appInfo.getDbHelper();
-        int updcount = db.updatesFoodFreqColumn(FoodFreqContract.SingleFoodFreq.COLUMN_SD2, MainApp.foodFreq.getsD1());
+        int updcount = db.updatesFoodFreqColumn(FoodFreqContract.SingleFoodFreq.COLUMN_SD2, MainApp.foodFreq.getsD2());
         if (updcount == 1) {
             return true;
         } else {
@@ -180,7 +180,6 @@ public class SectionD2Activity extends AppCompatActivity {
                                                         bi.d210f.isChecked() ? "6" :
                                                                 bi.d210g.isChecked() ? "98" :
                                                                         "0");
-
 
         MainApp.foodFreq.setsD2(String.valueOf(json));
 
