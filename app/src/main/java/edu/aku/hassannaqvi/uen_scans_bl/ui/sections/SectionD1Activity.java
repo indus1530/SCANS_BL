@@ -16,7 +16,8 @@ import java.text.SimpleDateFormat;
 import java.util.Date;
 
 import edu.aku.hassannaqvi.uen_scans_bl.R;
-import edu.aku.hassannaqvi.uen_scans_bl.contracts.FormsContract;
+import edu.aku.hassannaqvi.uen_scans_bl.contracts.FoodFreqContract;
+import edu.aku.hassannaqvi.uen_scans_bl.core.DatabaseHelper;
 import edu.aku.hassannaqvi.uen_scans_bl.core.MainApp;
 import edu.aku.hassannaqvi.uen_scans_bl.databinding.ActivitySectionD1Binding;
 import edu.aku.hassannaqvi.uen_scans_bl.utils.Util;
@@ -32,6 +33,8 @@ public class SectionD1Activity extends AppCompatActivity {
         bi = DataBindingUtil.setContentView(this, R.layout.activity_section_d1);
         bi.setCallback(this);
 
+        bi.txtHeadLbl.setText(new StringBuilder(MainApp.indexKishMWRAChild.getName().toUpperCase()).append("\n")
+                .append(MainApp.indexKishMWRA.getMother_name().toUpperCase()));
     }
 
 
@@ -59,31 +62,38 @@ public class SectionD1Activity extends AppCompatActivity {
 
 
     private boolean UpdateDB() {
-
-        /*DatabaseHelper db = MainApp.appInfo.getDbHelper();
-        int updcount = db.updatesKishMWRAColumn(KishMWRAContract.SingleKishMWRA.COLUMN_SK, MainApp.kish.getsK());
-        if (updcount == 1) {
+        DatabaseHelper db = MainApp.appInfo.getDbHelper();
+        long rowID = db.addFoodFreq(MainApp.foodFreq);
+        if (rowID > 0) {
+            MainApp.foodFreq.set_ID(String.valueOf(rowID));
+            MainApp.foodFreq.setUID(MainApp.foodFreq.getDeviceId() + MainApp.foodFreq.get_ID());
+            db.updatesFoodFreqColumn(FoodFreqContract.SingleFoodFreq.COLUMN_UID, MainApp.foodFreq.getUID());
             return true;
         } else {
             Toast.makeText(this, "Updating Database... ERROR!", Toast.LENGTH_SHORT).show();
             return false;
-        }*/
-        return true;
+        }
     }
 
 
     private void SaveDraft() throws JSONException {
 
-        MainApp.fc = new FormsContract();
-        MainApp.fc.setFormDate(new SimpleDateFormat("dd-MM-yy HH:mm").format(new Date().getTime()));
-        MainApp.fc.setUser(MainApp.userName);
-        MainApp.fc.setDeviceID(MainApp.appInfo.getDeviceID());
-        MainApp.fc.setDevicetagID(MainApp.appInfo.getTagName());
-        MainApp.fc.setAppversion(MainApp.appInfo.getAppVersion());
-//        MainApp.fc.setHhno(bi.a112.getText().toString());
-        MainApp.setGPS(this); // Set GPS
+        MainApp.foodFreq = new FoodFreqContract();
+        MainApp.foodFreq.set_UUID(MainApp.fc.get_UID());
+        MainApp.foodFreq.setDeviceId(MainApp.appInfo.getDeviceID());
+        MainApp.foodFreq.setDevicetagID(MainApp.appInfo.getTagName());
+        MainApp.foodFreq.setFormDate(new SimpleDateFormat("dd-MM-yy HH:mm").format(new Date().getTime()));
+        MainApp.foodFreq.setUser(MainApp.userName);
 
         JSONObject f1 = new JSONObject();
+
+        f1.put("hhno", MainApp.fc.getHhno());
+        f1.put("cluster", MainApp.fc.getClusterCode());
+        f1.put("fm_uid", MainApp.indexKishMWRAChild.getUid());
+        f1.put("fm_serial", MainApp.indexKishMWRAChild.getSerialno());
+        f1.put("mm_fm_uid", MainApp.indexKishMWRA.getUid());
+        f1.put("mm_fm_serial", MainApp.indexKishMWRA.getSerialno());
+
 
         f1.put("d101",
                 bi.d101a.isChecked() ? "1" :
@@ -168,6 +178,7 @@ public class SectionD1Activity extends AppCompatActivity {
                                         bi.d106subd.isChecked() ? "4" :
                                                 bi.d106sube.isChecked() ? "5" :
                                                         "0");
+        MainApp.foodFreq.setsD1(String.valueOf(f1));
 
     }
 

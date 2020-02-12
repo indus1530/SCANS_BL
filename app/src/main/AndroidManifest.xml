@@ -53,11 +53,6 @@
         </activity>
 
         <activity
-            android:name=".ui.sections.SectionA201Activity"
-            android:label="@string/ta2heading"
-            android:screenOrientation="portrait" />
-
-        <activity
             android:name=".ui.sections.SectionA31Activity"
             android:label="@string/ta3heading"
             android:screenOrientation="portrait" />

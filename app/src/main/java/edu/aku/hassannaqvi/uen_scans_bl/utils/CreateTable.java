@@ -5,8 +5,8 @@ import edu.aku.hassannaqvi.uen_scans_bl.contracts.BLRandomContract.SingleRandomH
 import edu.aku.hassannaqvi.uen_scans_bl.contracts.ChildContract.SingleChild;
 import edu.aku.hassannaqvi.uen_scans_bl.contracts.EnumBlockContract;
 import edu.aku.hassannaqvi.uen_scans_bl.contracts.FamilyMembersContract;
+import edu.aku.hassannaqvi.uen_scans_bl.contracts.FoodFreqContract.SingleFoodFreq;
 import edu.aku.hassannaqvi.uen_scans_bl.contracts.FormsContract;
-import edu.aku.hassannaqvi.uen_scans_bl.contracts.KishMWRAContract.SingleKishMWRA;
 import edu.aku.hassannaqvi.uen_scans_bl.contracts.MWRAContract.MWRATable;
 import edu.aku.hassannaqvi.uen_scans_bl.contracts.MWRA_PREContract.SingleMWRAPRE;
 import edu.aku.hassannaqvi.uen_scans_bl.contracts.UsersContract;
@@ -102,22 +102,25 @@ public final class CreateTable {
             EnumBlockContract.EnumBlockTable.COLUMN_CLUSTER_AREA + " TEXT " +
             ");";
 
-    public static final String SQL_CREATE_KISH_TABLE = "CREATE TABLE " + SingleKishMWRA.TABLE_NAME + "("
-            + SingleKishMWRA._ID + " INTEGER PRIMARY KEY AUTOINCREMENT,"
-            + SingleKishMWRA.COLUMN_UID + " TEXT,"
-            + SingleKishMWRA.COLUMN__UUID + " TEXT,"
-            + SingleKishMWRA.COLUMN_DEVICEID + " TEXT,"
-            + SingleKishMWRA.COLUMN_FORMDATE + " TEXT,"
-            + SingleKishMWRA.COLUMN_USER + " TEXT,"
-            + SingleKishMWRA.COLUMN_SF + " TEXT,"
-            + SingleKishMWRA.COLUMN_SG + " TEXT,"
-            + SingleKishMWRA.COLUMN_SH1 + " TEXT,"
-            + SingleKishMWRA.COLUMN_SH2 + " TEXT,"
-            + SingleKishMWRA.COLUMN_SK + " TEXT,"
-            + SingleKishMWRA.COLUMN_SL + " TEXT,"
-            + SingleKishMWRA.COLUMN_DEVICETAGID + " TEXT,"
-            + SingleKishMWRA.COLUMN_SYNCED + " TEXT,"
-            + SingleKishMWRA.COLUMN_SYNCED_DATE + " TEXT );";
+    public static final String SQL_CREATE_KISH_TABLE = "CREATE TABLE " + SingleFoodFreq.TABLE_NAME + "("
+            + SingleFoodFreq._ID + " INTEGER PRIMARY KEY AUTOINCREMENT,"
+            + SingleFoodFreq.COLUMN_UID + " TEXT,"
+            + SingleFoodFreq.COLUMN__UUID + " TEXT,"
+            + SingleFoodFreq.COLUMN_DEVICEID + " TEXT,"
+            + SingleFoodFreq.COLUMN_FORMDATE + " TEXT,"
+            + SingleFoodFreq.COLUMN_USER + " TEXT,"
+            + SingleFoodFreq.COLUMN_SD1 + " TEXT,"
+            + SingleFoodFreq.COLUMN_SD2 + " TEXT,"
+            + SingleFoodFreq.COLUMN_SD3 + " TEXT,"
+            + SingleFoodFreq.COLUMN_SD4 + " TEXT,"
+            + SingleFoodFreq.COLUMN_SD5 + " TEXT,"
+            + SingleFoodFreq.COLUMN_SD6 + " TEXT,"
+            + SingleFoodFreq.COLUMN_SD7 + " TEXT,"
+            + SingleFoodFreq.COLUMN_SD8 + " TEXT,"
+            + SingleFoodFreq.COLUMN_SD9 + " TEXT,"
+            + SingleFoodFreq.COLUMN_DEVICETAGID + " TEXT,"
+            + SingleFoodFreq.COLUMN_SYNCED + " TEXT,"
+            + SingleFoodFreq.COLUMN_SYNCED_DATE + " TEXT );";
 
     public static final String SQL_CREATE_MWRA_TABLE = "CREATE TABLE " + MWRATable.TABLE_NAME + "("
             + MWRATable._ID + " INTEGER PRIMARY KEY AUTOINCREMENT,"
