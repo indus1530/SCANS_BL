@@ -486,7 +486,7 @@
                                 android:hint="@string/num"
                                 android:maxLength="2"
                                 app:maxValue="99"
-                                app:minValue="5"
+                                app:minValue="18"
                                 app:type="range" />
 
                         </LinearLayout>
@@ -638,7 +638,9 @@
                         style="@style/buttons_bottom"
                         android:background="@android:color/holo_blue_dark"
                         android:onClick="@{() -> callback.BtnContinue()}"
-                        android:text="@string/nextSection" />
+                        android:text="@string/nextSection"
+                        android:visibility="gone"
+                        tools:visibility="visible" />
 
                 </LinearLayout>
 
