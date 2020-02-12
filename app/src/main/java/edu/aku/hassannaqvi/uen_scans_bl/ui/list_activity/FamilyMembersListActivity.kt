@@ -21,7 +21,6 @@ import edu.aku.hassannaqvi.uen_scans_bl.otherClasses.KishGrid
 import edu.aku.hassannaqvi.uen_scans_bl.ui.other.EndingActivity
 import edu.aku.hassannaqvi.uen_scans_bl.ui.sections.SectionA2Activity
 import edu.aku.hassannaqvi.uen_scans_bl.ui.sections.SectionA31Activity
-import edu.aku.hassannaqvi.uen_scans_bl.ui.sections.SectionD1Activity
 import edu.aku.hassannaqvi.uen_scans_bl.utils.Util
 import edu.aku.hassannaqvi.uen_scans_bl.viewmodel.MainVModel
 import kotlinx.android.synthetic.main.activity_family_members_list.*
@@ -139,7 +138,7 @@ class FamilyMembersListActivity : AppCompatActivity() {
 
                 currentFM = item
 
-                startActivityForResult(Intent(this, SectionD1Activity::class.java)
+                startActivityForResult(Intent(this, SectionA2Activity::class.java)
                         .putExtra(SERIAL_EXTRA, item.serialno.toInt()), CONSTANTS.MEMBER_ITEM)
 
             }
