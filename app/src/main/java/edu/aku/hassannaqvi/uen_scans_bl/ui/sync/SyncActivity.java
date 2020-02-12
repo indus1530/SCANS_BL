@@ -35,8 +35,8 @@ import edu.aku.hassannaqvi.uen_scans_bl.adapter.UploadListAdapter;
 import edu.aku.hassannaqvi.uen_scans_bl.contracts.AnthroContract;
 import edu.aku.hassannaqvi.uen_scans_bl.contracts.ChildContract;
 import edu.aku.hassannaqvi.uen_scans_bl.contracts.FamilyMembersContract;
+import edu.aku.hassannaqvi.uen_scans_bl.contracts.FoodFreqContract;
 import edu.aku.hassannaqvi.uen_scans_bl.contracts.FormsContract;
-import edu.aku.hassannaqvi.uen_scans_bl.contracts.KishMWRAContract;
 import edu.aku.hassannaqvi.uen_scans_bl.contracts.MWRAContract;
 import edu.aku.hassannaqvi.uen_scans_bl.contracts.MWRA_PREContract;
 import edu.aku.hassannaqvi.uen_scans_bl.core.DatabaseHelper;
@@ -188,7 +188,7 @@ public class SyncActivity extends AppCompatActivity implements SyncDevice.SyncDe
                     "updateSyncedKishMWRAForms",
                     MWRAContract.class,
                     MainApp._HOST_URL + MainApp._SERVER_URL,
-                    KishMWRAContract.SingleKishMWRA.TABLE_NAME,
+                    FoodFreqContract.SingleFoodFreq.TABLE_NAME,
                     db.getUnsyncedKishMWRA(), 2, uploadListAdapter, uploadlist
             ).execute();
             if (uploadlistActivityCreated) {
