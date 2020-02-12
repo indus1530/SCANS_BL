@@ -57,8 +57,7 @@ public class SectionA1Activity extends AppCompatActivity implements Util.EndSecA
 
             @Override
             public void onTextChanged(CharSequence s, int start, int before, int count) {
-
-                if (s.toString().equals("")) {
+                if (bi.a101.getText().hashCode() == s.hashCode()) {
                     bi.fldGrpSectionA01.setVisibility(View.GONE);
                     bi.fldGrpSectionA02.setVisibility(View.GONE);
 //                    Clear.clearAllFields(bi.fldGrpSectionA01);

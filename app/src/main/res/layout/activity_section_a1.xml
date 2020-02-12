@@ -80,7 +80,7 @@
                 <LinearLayout
                     android:id="@+id/fldGrpSectionA01"
                     style="@style/linearlayout_view_wt_bound"
-                    android:visibility="visible"
+                    android:visibility="gone"
                     tools:visibility="visible">
 
                     <!-- Province - District -->
