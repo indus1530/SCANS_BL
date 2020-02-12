@@ -161,6 +161,7 @@ public final class CreateTable {
             + SingleChild.COLUMN_SC6 + " TEXT,"
             + SingleChild.COLUMN_SL + " TEXT,"
             + SingleChild.COLUMN_SM + " TEXT,"
+            + SingleChild.COLUMN_SK1 + " TEXT,"
             + SingleChild.COLUMN_DEVICETAGID + " TEXT,"
             + SingleChild.COLUMN_SYNCED + " TEXT,"
             + SingleChild.COLUMN_SYNCED_DATE + " TEXT );";

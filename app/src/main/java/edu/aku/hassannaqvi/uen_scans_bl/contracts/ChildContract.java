@@ -22,22 +22,8 @@ public class ChildContract {
     private String sC5 = "";
     private String sC6 = "";
     private String sL = "";
+    private String sK1 = "";
 
-    public String getsL() {
-        return sL;
-    }
-
-    public void setsL(String sL) {
-        this.sL = sL;
-    }
-
-    public String getsM() {
-        return sM;
-    }
-
-    public void setsM(String sM) {
-        this.sM = sM;
-    }
 
     private String sM = "";
     private String devicetagID = "";
@@ -70,6 +56,7 @@ public class ChildContract {
         this.devicetagID = cursor.getString(cursor.getColumnIndex(SingleChild.COLUMN_DEVICETAGID));
         this.sL = cursor.getString(cursor.getColumnIndex(SingleChild.COLUMN_SL));
         this.sM = cursor.getString(cursor.getColumnIndex(SingleChild.COLUMN_SM));
+        this.sK1 = cursor.getString(cursor.getColumnIndex(SingleChild.COLUMN_SK1));
 
         return this;
 
@@ -109,10 +96,37 @@ public class ChildContract {
         if (!this.sM.equals("")) {
             json.put(SingleChild.COLUMN_SM, new JSONObject(this.sM));
         }
+        if (!this.sK1.equals("")) {
+            json.put(SingleChild.COLUMN_SK1, new JSONObject(this.sK1));
+        }
         json.put(SingleChild.COLUMN_DEVICETAGID, this.devicetagID == null ? JSONObject.NULL : this.devicetagID);
 
         return json;
 
+    }
+
+    public String getsK1() {
+        return sK1;
+    }
+
+    public void setsK1(String sK1) {
+        this.sK1 = sK1;
+    }
+
+    public String getsL() {
+        return sL;
+    }
+
+    public void setsL(String sL) {
+        this.sL = sL;
+    }
+
+    public String getsM() {
+        return sM;
+    }
+
+    public void setsM(String sM) {
+        this.sM = sM;
     }
 
     public String get_ID() {
@@ -252,6 +266,7 @@ public class ChildContract {
         String COLUMN_SC6 = "sc6";
         String COLUMN_SL = "sL";
         String COLUMN_SM = "sM";
+        String COLUMN_SK1 = "sK1";
         String COLUMN_DEVICETAGID = "devicetagid";
         String COLUMN_SYNCED = "synced";
         String COLUMN_SYNCED_DATE = "synced_date";

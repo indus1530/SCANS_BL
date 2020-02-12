@@ -1300,6 +1300,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
                 SingleChild.COLUMN_SC6,
                 SingleChild.COLUMN_SL,
                 SingleChild.COLUMN_SM,
+                SingleChild.COLUMN_SK1,
                 SingleChild.COLUMN_DEVICETAGID,
 
         };
