@@ -16,7 +16,8 @@ import java.text.SimpleDateFormat;
 import java.util.Date;
 
 import edu.aku.hassannaqvi.uen_scans_bl.R;
-import edu.aku.hassannaqvi.uen_scans_bl.contracts.FormsContract;
+import edu.aku.hassannaqvi.uen_scans_bl.contracts.ChildContract;
+import edu.aku.hassannaqvi.uen_scans_bl.core.DatabaseHelper;
 import edu.aku.hassannaqvi.uen_scans_bl.core.MainApp;
 import edu.aku.hassannaqvi.uen_scans_bl.databinding.ActivitySectionC1Binding;
 import edu.aku.hassannaqvi.uen_scans_bl.utils.Util;
@@ -63,30 +64,37 @@ public class SectionC1Activity extends AppCompatActivity {
 
     private boolean UpdateDB() {
 
-        /*DatabaseHelper db = MainApp.appInfo.getDbHelper();
-        int updcount = db.updatesKishMWRAColumn(FoodFreqContract.SingleKishMWRA.COLUMN_SK, MainApp.kish.getsK());
-        if (updcount == 1) {
+        DatabaseHelper db = MainApp.appInfo.getDbHelper();
+        long rowID = db.addChild(MainApp.child);
+        if (rowID > 0) {
+            MainApp.child.set_ID(String.valueOf(rowID));
+            MainApp.child.setUID(MainApp.child.getDeviceId() + MainApp.child.get_ID());
+            db.updatesChildColumn(ChildContract.SingleChild.COLUMN_UID, MainApp.child.getUID());
             return true;
         } else {
             Toast.makeText(this, "Updating Database... ERROR!", Toast.LENGTH_SHORT).show();
             return false;
-        }*/
-        return true;
+        }
     }
 
 
     private void SaveDraft() throws JSONException {
 
-        MainApp.fc = new FormsContract();
-        MainApp.fc.setFormDate(new SimpleDateFormat("dd-MM-yy HH:mm").format(new Date().getTime()));
-        MainApp.fc.setUser(MainApp.userName);
-        MainApp.fc.setDeviceID(MainApp.appInfo.getDeviceID());
-        MainApp.fc.setDevicetagID(MainApp.appInfo.getTagName());
-        MainApp.fc.setAppversion(MainApp.appInfo.getAppVersion());
-//        MainApp.fc.setHhno(bi.a112.getText().toString());
-        MainApp.setGPS(this); // Set GPS
+        MainApp.child = new ChildContract();
+        MainApp.child.set_UUID(MainApp.fc.get_UID());
+        MainApp.child.setDeviceId(MainApp.appInfo.getDeviceID());
+        MainApp.child.setDevicetagID(MainApp.appInfo.getTagName());
+        MainApp.child.setFormDate(new SimpleDateFormat("dd-MM-yy HH:mm").format(new Date().getTime()));
+        MainApp.child.setUser(MainApp.userName);
 
         JSONObject f1 = new JSONObject();
+
+        f1.put("hhno", MainApp.fc.getHhno());
+        f1.put("cluster", MainApp.fc.getClusterCode());
+        f1.put("fm_uid", MainApp.indexKishMWRAChild.getUid());
+        f1.put("fm_serial", MainApp.indexKishMWRAChild.getSerialno());
+        f1.put("mm_fm_uid", MainApp.indexKishMWRA.getUid());
+        f1.put("mm_fm_serial", MainApp.indexKishMWRA.getSerialno());
 
         f1.put("c101aa", bi.c101aa.getText().toString());
         f1.put("c101ab", bi.c101ab.getText().toString());
@@ -187,6 +195,8 @@ public class SectionC1Activity extends AppCompatActivity {
                                 bi.c113c.isChecked() ? "3" :
                                         bi.c114d.isChecked() ? "4" :
                                                 "0");
+
+        MainApp.child.setsC1(String.valueOf(f1));
 
     }
 

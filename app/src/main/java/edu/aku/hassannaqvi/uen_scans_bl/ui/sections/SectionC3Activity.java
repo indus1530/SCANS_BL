@@ -13,6 +13,9 @@ import org.json.JSONException;
 import org.json.JSONObject;
 
 import edu.aku.hassannaqvi.uen_scans_bl.R;
+import edu.aku.hassannaqvi.uen_scans_bl.contracts.ChildContract;
+import edu.aku.hassannaqvi.uen_scans_bl.core.DatabaseHelper;
+import edu.aku.hassannaqvi.uen_scans_bl.core.MainApp;
 import edu.aku.hassannaqvi.uen_scans_bl.databinding.ActivitySectionC3Binding;
 import edu.aku.hassannaqvi.uen_scans_bl.utils.Util;
 import edu.aku.hassannaqvi.uen_scans_bl.validator.ClearClass;
@@ -71,15 +74,14 @@ public class SectionC3Activity extends AppCompatActivity {
 
     private boolean UpdateDB() {
 
-        /*DatabaseHelper db = MainApp.appInfo.getDbHelper();
-        int updcount = db.updatesKishMWRAColumn(FoodFreqContract.SingleKishMWRA.COLUMN_SK, MainApp.kish.getsK());
+        DatabaseHelper db = MainApp.appInfo.getDbHelper();
+        int updcount = db.updatesChildColumn(ChildContract.SingleChild.COLUMN_SC3, MainApp.child.getsC3());
         if (updcount == 1) {
             return true;
         } else {
             Toast.makeText(this, "Updating Database... ERROR!", Toast.LENGTH_SHORT).show();
             return false;
-        }*/
-        return true;
+        }
     }
 
 
@@ -207,6 +209,8 @@ public class SectionC3Activity extends AppCompatActivity {
                                         bi.c314d.isChecked() ? "4" :
                                                 "0");
 
+
+        MainApp.child.setsC3(String.valueOf(f1));
     }
 
 

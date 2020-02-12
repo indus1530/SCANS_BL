@@ -17,6 +17,7 @@ import org.json.JSONObject;
 
 import java.text.SimpleDateFormat;
 import java.util.Date;
+import java.util.Objects;
 
 import edu.aku.hassannaqvi.uen_scans_bl.R;
 import edu.aku.hassannaqvi.uen_scans_bl.contracts.BLRandomContract;
@@ -30,7 +31,7 @@ import edu.aku.hassannaqvi.uen_scans_bl.ui.other.EndingActivity;
 import edu.aku.hassannaqvi.uen_scans_bl.utils.Util;
 import edu.aku.hassannaqvi.uen_scans_bl.validator.ClearClass;
 
-public class SectionA1Activity extends AppCompatActivity {
+public class SectionA1Activity extends AppCompatActivity implements Util.EndSecAActivity {
 
     ActivitySectionA1Binding bi;
     private DatabaseHelper db;
@@ -57,14 +58,14 @@ public class SectionA1Activity extends AppCompatActivity {
 
             @Override
             public void onTextChanged(CharSequence s, int start, int before, int count) {
-
-                if (s.toString().equals("")) {
+                if (bi.a101.getText().hashCode() == s.hashCode()) {
+                    ClearClass.ClearAllFields(bi.fldGrpSectionA01, null);
+                    ClearClass.ClearAllFields(bi.fldGrpSectionA02, null);
                     bi.fldGrpSectionA01.setVisibility(View.GONE);
                     bi.fldGrpSectionA02.setVisibility(View.GONE);
-//                    Clear.clearAllFields(bi.fldGrpSectionA01);
+                    bi.btnNext.setVisibility(View.GONE);
+                    bi.btnEnd.setVisibility(View.GONE);
                 }
-
-//
             }
 
             @Override
@@ -82,20 +83,19 @@ public class SectionA1Activity extends AppCompatActivity {
 
             @Override
             public void onTextChanged(CharSequence s, int start, int before, int count) {
-
-                if (s.toString().equals("")) {
+                if (Objects.requireNonNull(bi.a112.getText()).hashCode() == s.hashCode()) {
+                    ClearClass.ClearAllFields(bi.fldGrpSectionA02, null);
                     bi.fldGrpSectionA02.setVisibility(View.GONE);
-//                    Clear.clearAllFields(bi.fldGrpSectionA02);
+                    bi.btnNext.setVisibility(View.GONE);
+                    bi.btnEnd.setVisibility(View.GONE);
                 }
-
-
             }
 
             @Override
             public void afterTextChanged(Editable s) {
-
             }
         });
+
 
         bi.a113.setOnCheckedChangeListener(((radioGroup, i) -> {
 
@@ -105,7 +105,9 @@ public class SectionA1Activity extends AppCompatActivity {
                 bi.fldGrpCVa116.setVisibility(View.VISIBLE);
                 bi.fldGrpCVa117.setVisibility(View.VISIBLE);
                 bi.fldGrpCVa118.setVisibility(View.VISIBLE);
-            } else {
+                bi.btnNext.setVisibility(View.VISIBLE);
+                bi.btnEnd.setVisibility(View.GONE);
+            } else if (i == bi.a113b.getId()) {
                 ClearClass.ClearAllFields(bi.fldGrpCVa114, null);
                 ClearClass.ClearAllFields(bi.fldGrpCVa115, null);
                 ClearClass.ClearAllFields(bi.fldGrpCVa116, null);
@@ -116,6 +118,8 @@ public class SectionA1Activity extends AppCompatActivity {
                 bi.fldGrpCVa116.setVisibility(View.GONE);
                 bi.fldGrpCVa117.setVisibility(View.GONE);
                 bi.fldGrpCVa118.setVisibility(View.GONE);
+                bi.btnNext.setVisibility(View.GONE);
+                bi.btnEnd.setVisibility(View.VISIBLE);
             }
 
         }));
@@ -136,17 +140,21 @@ public class SectionA1Activity extends AppCompatActivity {
             @Override
             public void afterTextChanged(Editable s) {
                 if (bi.a115.getText().hashCode() == s.hashCode()) {
-                    if (bi.a115.getText().toString().trim().length() > 0 && Integer.parseInt(bi.a115.getText().toString().trim()) < 18) {
+                    if (bi.a115.getText().toString().trim().length() > 0 && Integer.parseInt(bi.a115.getText().toString().trim()) > 17) {
+                        bi.fldGrpCVa116.setVisibility(View.VISIBLE);
+                        bi.fldGrpCVa117.setVisibility(View.VISIBLE);
+                        bi.fldGrpCVa118.setVisibility(View.VISIBLE);
+                        bi.btnNext.setVisibility(View.VISIBLE);
+                        bi.btnEnd.setVisibility(View.GONE);
+                    } else {
                         ClearClass.ClearAllFields(bi.fldGrpCVa116, null);
                         ClearClass.ClearAllFields(bi.fldGrpCVa117, null);
                         ClearClass.ClearAllFields(bi.fldGrpCVa118, null);
                         bi.fldGrpCVa116.setVisibility(View.GONE);
                         bi.fldGrpCVa117.setVisibility(View.GONE);
                         bi.fldGrpCVa118.setVisibility(View.GONE);
-                    } else {
-                        bi.fldGrpCVa116.setVisibility(View.VISIBLE);
-                        bi.fldGrpCVa117.setVisibility(View.VISIBLE);
-                        bi.fldGrpCVa118.setVisibility(View.VISIBLE);
+                        bi.btnNext.setVisibility(View.GONE);
+                        bi.btnEnd.setVisibility(View.VISIBLE);
                     }
                 }
             }
@@ -222,9 +230,30 @@ public class SectionA1Activity extends AppCompatActivity {
         json.put("a105", bi.a105.getText().toString());
         json.put("a106", bi.a106.getText().toString());
         json.put("a107", bi.a107.getText().toString());
-        json.put("a109", bi.a109.getText().toString());
+
+        /*json.put("a109", bi.a109.getText().toString());
         json.put("a110", bi.a110.getText().toString());
-        json.put("a111", bi.a111.getText().toString());
+        json.put("a111", bi.a111.getText().toString());*/
+
+        json.put("a113", bi.a113a.isChecked() ? "1"
+                : bi.a113b.isChecked() ? "2"
+                : "0");
+
+        json.put("a114", bi.a114.getText().toString());
+
+        json.put("a115", bi.a115.getText().toString());
+
+        json.put("a116", bi.a116a.isChecked() ? "1"
+                : bi.a116b.isChecked() ? "2"
+                : "0");
+
+        json.put("a117", bi.a117a.isChecked() ? "1"
+                : bi.a117b.isChecked() ? "2"
+                : "0");
+
+        json.put("a118", bi.a118a.isChecked() ? "1"
+                : bi.a118b.isChecked() ? "2"
+                : "0");
 
         MainApp.fc.setsInfo(String.valueOf(json));
 
@@ -237,7 +266,9 @@ public class SectionA1Activity extends AppCompatActivity {
 
 
     public void BtnEnd() {
-        Util.openEndActivity(this);
+        if (formValidation()) {
+            Util.contextEndActivity(this);
+        }
     }
 
     public void BtnCheckCluster() {
@@ -277,6 +308,23 @@ public class SectionA1Activity extends AppCompatActivity {
         } else {
             bi.fldGrpSectionA02.setVisibility(View.GONE);
             Toast.makeText(this, "No Household found!", Toast.LENGTH_SHORT).show();
+        }
+
+    }
+
+    @Override
+    public void endSecAActivity(boolean flag) {
+        if (!flag) return;
+
+        try {
+            SaveDraft();
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+        if (UpdateDB()) {
+            finish();
+            startActivity(new Intent(this, EndingActivity.class).putExtra("complete", true)
+                    .setFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK).setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP).setFlags(Intent.FLAG_ACTIVITY_NEW_TASK));
         }
 
     }
