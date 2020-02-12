@@ -81,19 +81,17 @@ public class SectionA1Activity extends AppCompatActivity implements Util.EndSecA
 
             @Override
             public void onTextChanged(CharSequence s, int start, int before, int count) {
-
-                if (s.toString().equals("")) {
-                    bi.fldGrpSectionA02.setVisibility(View.GONE);
-//                    Clear.clearAllFields(bi.fldGrpSectionA02);
-                }
-
             }
 
             @Override
             public void afterTextChanged(Editable s) {
-
+                if (bi.a112.getText().hashCode() == s.hashCode()) {
+                    ClearClass.ClearAllFields(bi.fldGrpSectionA02, null);
+                    bi.fldGrpSectionA02.setVisibility(View.GONE);
+                }
             }
         });
+
 
         bi.a113.setOnCheckedChangeListener(((radioGroup, i) -> {
 
