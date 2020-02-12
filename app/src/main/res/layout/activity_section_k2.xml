@@ -674,6 +674,13 @@
                         android:text="@string/end_interview" />
 
                     <Button
+                        android:id="@+id/btnAnthroEnd"
+                        style="@style/buttons_bottom"
+                        android:background="@color/orange600"
+                        android:onClick="@{() -> callback.BtnAnthroEnd()}"
+                        android:text="@string/anthro_interview" />
+
+                    <Button
                         android:id="@+id/btnNext"
                         style="@style/buttons_bottom"
                         android:background="@android:color/holo_blue_dark"

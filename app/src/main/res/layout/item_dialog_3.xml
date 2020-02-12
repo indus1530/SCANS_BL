@@ -6,12 +6,11 @@
     android:orientation="vertical">
 
     <LinearLayout
-        android:id="@+id/icon_id"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="@color/orange600"
+        android:background="@color/greenInfo"
         android:gravity="center"
-        android:minHeight="160dp"
+        android:minHeight="120dp"
         android:orientation="vertical"
         android:padding="20dp">
 
@@ -19,10 +18,18 @@
             android:id="@+id/icon"
             android:layout_width="80dp"
             android:layout_height="80dp"
-            android:layout_gravity="center"
             android:tint="@android:color/white"
-            app:srcCompat="@drawable/ic_stop" />
+            app:srcCompat="@drawable/ic_info" />
 
+        <TextView
+            android:id="@+id/title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:text="Warning!"
+            android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+            android:textColor="@android:color/white"
+            android:textStyle="bold" />
 
     </LinearLayout>
 
@@ -69,11 +76,11 @@
             android:layout_height="10dp" />
 
         <androidx.appcompat.widget.AppCompatButton
-            android:layout_marginBottom="20dp"
             android:id="@+id/btnNo"
             style="@style/Widget.AppCompat.Button.Borderless"
             android:layout_width="150dp"
             android:layout_height="wrap_content"
+            android:layout_marginBottom="20dp"
             android:background="@drawable/outline_btn"
             android:paddingLeft="20dp"
             android:paddingRight="20dp"

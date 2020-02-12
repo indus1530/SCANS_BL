@@ -28,13 +28,14 @@ import edu.aku.hassannaqvi.uen_scans_bl.core.DatabaseHelper;
 import edu.aku.hassannaqvi.uen_scans_bl.core.MainApp;
 import edu.aku.hassannaqvi.uen_scans_bl.databinding.ActivitySectionK2Binding;
 import edu.aku.hassannaqvi.uen_scans_bl.ui.other.AnthroEndingActivity;
+import edu.aku.hassannaqvi.uen_scans_bl.utils.Util;
 import edu.aku.hassannaqvi.uen_scans_bl.validator.ClearClass;
 
 import static edu.aku.hassannaqvi.uen_scans_bl.core.MainApp.anthro;
 import static edu.aku.hassannaqvi.uen_scans_bl.core.MainApp.mwraChildren;
 import static edu.aku.hassannaqvi.uen_scans_bl.ui.list_activity.FamilyMembersListActivity.mainVModel;
 
-public class SectionK2Activity extends AppCompatActivity {
+public class SectionK2Activity extends AppCompatActivity implements Util.EndSecAActivity {
 
     ActivitySectionK2Binding bi;
     Spinner[] userSpinners;
@@ -123,18 +124,12 @@ public class SectionK2Activity extends AppCompatActivity {
 
 
     public void BtnEnd() {
+        Util.openEndActivity(this);
+    }
 
+    public void BtnAnthroEnd() {
         if (!Validator.emptySpinner(this, bi.k201)) return;
-
-        try {
-            SaveDraft();
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
-        if (UpdateDB()) {
-            finish();
-            startActivity(new Intent(this, AnthroEndingActivity.class).putExtra("complete", false));
-        }
+        Util.contextEndActivity(this);
     }
 
 
@@ -248,4 +243,16 @@ public class SectionK2Activity extends AppCompatActivity {
     }
 
 
+    @Override
+    public void endSecAActivity(boolean flag) {
+        try {
+            SaveDraft();
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+        if (UpdateDB()) {
+            finish();
+            startActivity(new Intent(this, AnthroEndingActivity.class).putExtra("complete", false));
+        }
+    }
 }

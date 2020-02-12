@@ -84,7 +84,7 @@ public class Util {
     public static void contextEndActivity(Activity activity) {
         Dialog dialog = new Dialog(activity);
         dialog.requestWindowFeature(Window.FEATURE_NO_TITLE);
-        dialog.setContentView(R.layout.item_dialog_2);
+        dialog.setContentView(R.layout.item_dialog_3);
         dialog.setCancelable(false);
         WindowManager.LayoutParams params = new WindowManager.LayoutParams();
         params.copyFrom(dialog.getWindow().getAttributes());
