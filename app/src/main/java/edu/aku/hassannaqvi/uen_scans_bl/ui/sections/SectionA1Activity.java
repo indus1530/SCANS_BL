@@ -144,6 +144,8 @@ public class SectionA1Activity extends AppCompatActivity implements Util.EndSecA
                         bi.fldGrpCVa116.setVisibility(View.VISIBLE);
                         bi.fldGrpCVa117.setVisibility(View.VISIBLE);
                         bi.fldGrpCVa118.setVisibility(View.VISIBLE);
+                        bi.btnNext.setVisibility(View.VISIBLE);
+                        bi.btnEnd.setVisibility(View.GONE);
                     } else {
                         ClearClass.ClearAllFields(bi.fldGrpCVa116, null);
                         ClearClass.ClearAllFields(bi.fldGrpCVa117, null);
@@ -151,6 +153,8 @@ public class SectionA1Activity extends AppCompatActivity implements Util.EndSecA
                         bi.fldGrpCVa116.setVisibility(View.GONE);
                         bi.fldGrpCVa117.setVisibility(View.GONE);
                         bi.fldGrpCVa118.setVisibility(View.GONE);
+                        bi.btnNext.setVisibility(View.GONE);
+                        bi.btnEnd.setVisibility(View.VISIBLE);
                     }
                 }
             }
