@@ -63,6 +63,8 @@ public class SectionA1Activity extends AppCompatActivity implements Util.EndSecA
                     ClearClass.ClearAllFields(bi.fldGrpSectionA02, null);
                     bi.fldGrpSectionA01.setVisibility(View.GONE);
                     bi.fldGrpSectionA02.setVisibility(View.GONE);
+                    bi.btnNext.setVisibility(View.GONE);
+                    bi.btnEnd.setVisibility(View.GONE);
                 }
             }
 
@@ -84,6 +86,8 @@ public class SectionA1Activity extends AppCompatActivity implements Util.EndSecA
                 if (Objects.requireNonNull(bi.a112.getText()).hashCode() == s.hashCode()) {
                     ClearClass.ClearAllFields(bi.fldGrpSectionA02, null);
                     bi.fldGrpSectionA02.setVisibility(View.GONE);
+                    bi.btnNext.setVisibility(View.GONE);
+                    bi.btnEnd.setVisibility(View.GONE);
                 }
             }
 
