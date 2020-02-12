@@ -81,4 +81,27 @@ public class Util {
     }
 
 
+    public static void contextEndActivity(Activity activity) {
+        Dialog dialog = new Dialog(activity);
+        dialog.requestWindowFeature(Window.FEATURE_NO_TITLE);
+        dialog.setContentView(R.layout.item_dialog_2);
+        dialog.setCancelable(false);
+        WindowManager.LayoutParams params = new WindowManager.LayoutParams();
+        params.copyFrom(dialog.getWindow().getAttributes());
+        params.width = WindowManager.LayoutParams.WRAP_CONTENT;
+        params.height = WindowManager.LayoutParams.WRAP_CONTENT;
+        dialog.show();
+        dialog.getWindow().setAttributes(params);
+
+        EndSecAActivity endSecAActivity = (EndSecAActivity) activity;
+
+        dialog.findViewById(R.id.btnOk).setOnClickListener(view -> endSecAActivity.endSecAActivity(true));
+        dialog.findViewById(R.id.btnNo).setOnClickListener(view -> dialog.dismiss());
+    }
+
+    public interface EndSecAActivity {
+        void endSecAActivity(boolean flag);
+    }
+
+
 }

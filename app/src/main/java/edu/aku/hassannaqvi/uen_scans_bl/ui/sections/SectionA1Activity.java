@@ -30,7 +30,7 @@ import edu.aku.hassannaqvi.uen_scans_bl.ui.other.EndingActivity;
 import edu.aku.hassannaqvi.uen_scans_bl.utils.Util;
 import edu.aku.hassannaqvi.uen_scans_bl.validator.ClearClass;
 
-public class SectionA1Activity extends AppCompatActivity {
+public class SectionA1Activity extends AppCompatActivity implements Util.EndSecAActivity {
 
     ActivitySectionA1Binding bi;
     private DatabaseHelper db;
@@ -258,7 +258,9 @@ public class SectionA1Activity extends AppCompatActivity {
 
 
     public void BtnEnd() {
-        Util.openEndActivity(this);
+        if (formValidation()) {
+            Util.contextEndActivity(this);
+        }
     }
 
     public void BtnCheckCluster() {
@@ -298,6 +300,23 @@ public class SectionA1Activity extends AppCompatActivity {
         } else {
             bi.fldGrpSectionA02.setVisibility(View.GONE);
             Toast.makeText(this, "No Household found!", Toast.LENGTH_SHORT).show();
+        }
+
+    }
+
+    @Override
+    public void endSecAActivity(boolean flag) {
+        if (!flag) return;
+
+        try {
+            SaveDraft();
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+        if (UpdateDB()) {
+            finish();
+            startActivity(new Intent(this, EndingActivity.class).putExtra("complete", true)
+                    .setFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK).setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP).setFlags(Intent.FLAG_ACTIVITY_NEW_TASK));
         }
 
     }
