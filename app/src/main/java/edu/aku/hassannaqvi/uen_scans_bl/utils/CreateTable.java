@@ -5,8 +5,8 @@ import edu.aku.hassannaqvi.uen_scans_bl.contracts.BLRandomContract.SingleRandomH
 import edu.aku.hassannaqvi.uen_scans_bl.contracts.ChildContract.SingleChild;
 import edu.aku.hassannaqvi.uen_scans_bl.contracts.EnumBlockContract;
 import edu.aku.hassannaqvi.uen_scans_bl.contracts.FamilyMembersContract;
+import edu.aku.hassannaqvi.uen_scans_bl.contracts.FoodFreqContract.SingleKishMWRA;
 import edu.aku.hassannaqvi.uen_scans_bl.contracts.FormsContract;
-import edu.aku.hassannaqvi.uen_scans_bl.contracts.KishMWRAContract.SingleKishMWRA;
 import edu.aku.hassannaqvi.uen_scans_bl.contracts.MWRAContract.MWRATable;
 import edu.aku.hassannaqvi.uen_scans_bl.contracts.MWRA_PREContract.SingleMWRAPRE;
 import edu.aku.hassannaqvi.uen_scans_bl.contracts.UsersContract;
@@ -156,6 +156,8 @@ public final class CreateTable {
             + SingleChild.COLUMN_SC4 + " TEXT,"
             + SingleChild.COLUMN_SC5 + " TEXT,"
             + SingleChild.COLUMN_SC6 + " TEXT,"
+            + SingleChild.COLUMN_SL + " TEXT,"
+            + SingleChild.COLUMN_SM + " TEXT,"
             + SingleChild.COLUMN_DEVICETAGID + " TEXT,"
             + SingleChild.COLUMN_SYNCED + " TEXT,"
             + SingleChild.COLUMN_SYNCED_DATE + " TEXT );";
