@@ -17,6 +17,7 @@ import org.json.JSONObject;
 
 import java.text.SimpleDateFormat;
 import java.util.Date;
+import java.util.Objects;
 
 import edu.aku.hassannaqvi.uen_scans_bl.R;
 import edu.aku.hassannaqvi.uen_scans_bl.contracts.BLRandomContract;
@@ -60,9 +61,8 @@ public class SectionA1Activity extends AppCompatActivity implements Util.EndSecA
                 if (bi.a101.getText().hashCode() == s.hashCode()) {
                     bi.fldGrpSectionA01.setVisibility(View.GONE);
                     bi.fldGrpSectionA02.setVisibility(View.GONE);
-//                    Clear.clearAllFields(bi.fldGrpSectionA01);
+                    ClearClass.ClearAllFields(bi.fldGrpSectionA02, null);
                 }
-//
             }
 
             @Override
@@ -80,14 +80,14 @@ public class SectionA1Activity extends AppCompatActivity implements Util.EndSecA
 
             @Override
             public void onTextChanged(CharSequence s, int start, int before, int count) {
+                if (Objects.requireNonNull(bi.a112.getText()).hashCode() == s.hashCode()) {
+                    ClearClass.ClearAllFields(bi.fldGrpSectionA02, null);
+                    bi.fldGrpSectionA02.setVisibility(View.GONE);
+                }
             }
 
             @Override
             public void afterTextChanged(Editable s) {
-                if (bi.a112.getText().hashCode() == s.hashCode()) {
-                    ClearClass.ClearAllFields(bi.fldGrpSectionA02, null);
-                    bi.fldGrpSectionA02.setVisibility(View.GONE);
-                }
             }
         });
 
