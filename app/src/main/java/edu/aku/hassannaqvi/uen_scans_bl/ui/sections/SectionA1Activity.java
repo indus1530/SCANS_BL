@@ -87,7 +87,6 @@ public class SectionA1Activity extends AppCompatActivity implements Util.EndSecA
 //                    Clear.clearAllFields(bi.fldGrpSectionA02);
                 }
 
-
             }
 
             @Override

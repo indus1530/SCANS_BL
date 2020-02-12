@@ -271,7 +271,7 @@
                 <LinearLayout
                     android:id="@+id/fldGrpSectionA02"
                     style="@style/linearlayout_view_wt_bound"
-                    android:visibility="visible"
+                    android:visibility="gone"
                     tools:visibility="visible">
 
                     <!-- checkHead -->
