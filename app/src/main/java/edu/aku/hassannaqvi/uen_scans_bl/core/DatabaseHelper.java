@@ -693,7 +693,9 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         values.put(MWRATable.COLUMN_FORMDATE, mwra.getFormDate());
         values.put(MWRATable.COLUMN_USER, mwra.getUser());
         values.put(MWRATable.COLUMN_DEVICETAGID, mwra.getDevicetagID());
-        values.put(MWRATable.COLUMN_SE1, mwra.getsE1());
+        values.put(MWRATable.COLUMN_SB1, mwra.getsB1());
+        values.put(MWRATable.COLUMN_SB2, mwra.getsB2());
+        values.put(MWRATable.COLUMN_SB3, mwra.getsB3());
 
         // Insert the new row, returning the primary key value of the new row
         long newRowId;
@@ -1027,7 +1029,9 @@ public class DatabaseHelper extends SQLiteOpenHelper {
                 MWRAContract.MWRATable.COLUMN_UUID,
                 MWRAContract.MWRATable.COLUMN_FORMDATE,
                 MWRAContract.MWRATable.COLUMN_USER,
-                MWRAContract.MWRATable.COLUMN_SE1,
+                MWRAContract.MWRATable.COLUMN_SB1,
+                MWRAContract.MWRATable.COLUMN_SB2,
+                MWRAContract.MWRATable.COLUMN_SB3,
                 MWRAContract.MWRATable.COLUMN_DEVICEID,
                 MWRAContract.MWRATable.COLUMN_DEVICETAGID
         };
@@ -1298,6 +1302,9 @@ public class DatabaseHelper extends SQLiteOpenHelper {
                 SingleChild.COLUMN_SC4,
                 SingleChild.COLUMN_SC5,
                 SingleChild.COLUMN_SC6,
+                SingleChild.COLUMN_SL,
+                SingleChild.COLUMN_SM,
+                SingleChild.COLUMN_SK1,
                 SingleChild.COLUMN_DEVICETAGID,
 
         };

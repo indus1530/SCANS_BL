@@ -129,7 +129,9 @@ public final class CreateTable {
             + MWRATable.COLUMN_FORMDATE + " TEXT,"
             + MWRATable.COLUMN_DEVICEID + " TEXT,"
             + MWRATable.COLUMN_USER + " TEXT,"
-            + MWRATable.COLUMN_SE1 + " TEXT,"
+            + MWRATable.COLUMN_SB1 + " TEXT,"
+            + MWRATable.COLUMN_SB2 + " TEXT,"
+            + MWRATable.COLUMN_SB3 + " TEXT,"
             + MWRATable.COLUMN_DEVICETAGID + " TEXT,"
             + MWRATable.COLUMN_SYNCED + " TEXT,"
             + MWRATable.COLUMN_SYNCED_DATE + " TEXT );";
@@ -159,6 +161,9 @@ public final class CreateTable {
             + SingleChild.COLUMN_SC4 + " TEXT,"
             + SingleChild.COLUMN_SC5 + " TEXT,"
             + SingleChild.COLUMN_SC6 + " TEXT,"
+            + SingleChild.COLUMN_SL + " TEXT,"
+            + SingleChild.COLUMN_SM + " TEXT,"
+            + SingleChild.COLUMN_SK1 + " TEXT,"
             + SingleChild.COLUMN_DEVICETAGID + " TEXT,"
             + SingleChild.COLUMN_SYNCED + " TEXT,"
             + SingleChild.COLUMN_SYNCED_DATE + " TEXT );";

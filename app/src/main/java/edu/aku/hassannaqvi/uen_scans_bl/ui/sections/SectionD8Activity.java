@@ -32,7 +32,6 @@ public class SectionD8Activity extends AppCompatActivity {
 
     }
 
-
     public void BtnContinue() {
         if (formValidation()) {
             try {
@@ -48,7 +47,6 @@ public class SectionD8Activity extends AppCompatActivity {
             }
         }
     }
-
 
     public void BtnEnd() {
         Util.openEndActivity(this);
