@@ -2094,6 +2094,7 @@
     <string name="tk1heading"> MODULE K1:\t RESPONDENT AND CHILD’\S PHYSICAL </string>
     <string name="tk1headinghint"> Read aloud to the selected women of household: Now I would like to ask some questions about you, male head of household and your child.</string>
 
+    <string name="k100"> K200:\t Child’\s Name </string>
     <string name="k101"> K101:\t Do you think that your (Child Name) height is appropriate for his/her age ? </string>
     <string name="k101a"> Height is Appropriate for his/her age </string>
     <string name="k101b"> Taller than for his/her age </string>

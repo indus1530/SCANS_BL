@@ -89,7 +89,7 @@ public class ChildContract {
         }
         if (!this.sC6.equals("")) {
             json.put(SingleChild.COLUMN_SC6, new JSONObject(this.sC6));
-        }
+        }/*
         if (!this.sL.equals("")) {
             json.put(SingleChild.COLUMN_SL, new JSONObject(this.sL));
         }
@@ -98,7 +98,7 @@ public class ChildContract {
         }
         if (!this.sK1.equals("")) {
             json.put(SingleChild.COLUMN_SK1, new JSONObject(this.sK1));
-        }
+        }*/
         json.put(SingleChild.COLUMN_DEVICETAGID, this.devicetagID == null ? JSONObject.NULL : this.devicetagID);
 
         return json;

@@ -19,6 +19,8 @@ import edu.aku.hassannaqvi.uen_scans_bl.core.MainApp;
 import edu.aku.hassannaqvi.uen_scans_bl.databinding.ActivitySectionC6Binding;
 import edu.aku.hassannaqvi.uen_scans_bl.utils.Util;
 
+import static edu.aku.hassannaqvi.uen_scans_bl.ui.list_activity.FamilyMembersListActivity.mainVModel;
+
 public class SectionC6Activity extends AppCompatActivity {
 
     ActivitySectionC6Binding bi;
@@ -41,8 +43,11 @@ public class SectionC6Activity extends AppCompatActivity {
                 e.printStackTrace();
             }
             if (UpdateDB()) {
+
+                MainApp.mwraChildren = mainVModel.getAllChildrenPairOfSelMWRA(Integer.valueOf(MainApp.indexKishMWRA.getSerialno()));
+
                 finish();
-                startActivity(new Intent(this, SectionK2Activity.class));
+                startActivity(new Intent(this, SectionK1Activity.class));
             } else {
                 Toast.makeText(this, "Failed to Update Database!", Toast.LENGTH_SHORT).show();
             }

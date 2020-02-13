@@ -13,8 +13,7 @@ import edu.aku.hassannaqvi.uen_scans_bl.R;
 import edu.aku.hassannaqvi.uen_scans_bl.core.DatabaseHelper;
 import edu.aku.hassannaqvi.uen_scans_bl.core.MainApp;
 import edu.aku.hassannaqvi.uen_scans_bl.databinding.ActivityAnthroEndingBinding;
-import edu.aku.hassannaqvi.uen_scans_bl.ui.sections.SectionK2Activity;
-import edu.aku.hassannaqvi.uen_scans_bl.ui.sections.SectionLActivity;
+import edu.aku.hassannaqvi.uen_scans_bl.ui.sections.SectionK1Activity;
 
 public class AnthroEndingActivity extends AppCompatActivity {
 
@@ -29,7 +28,7 @@ public class AnthroEndingActivity extends AppCompatActivity {
         bi.setCallback(this);
 
 
-        Boolean check = getIntent().getExtras().getBoolean("complete");
+        boolean check = getIntent().getExtras().getBoolean("complete");
 
         if (check) {
             bi.k208a.setEnabled(true);
@@ -49,7 +48,7 @@ public class AnthroEndingActivity extends AppCompatActivity {
             SaveDraft();
             if (UpdateDB()) {
                 finish();
-                startActivity(new Intent(this, MainApp.mwraChildren.getFirst().size() > 0 ? SectionK2Activity.class : SectionLActivity.class));
+                startActivity(new Intent(this, MainApp.mwraChildren.getFirst().size() > 0 ? SectionK1Activity.class : EndingActivity.class).putExtra("complete", true));
             } else {
                 Toast.makeText(this, "Error in updating db!!", Toast.LENGTH_SHORT).show();
             }

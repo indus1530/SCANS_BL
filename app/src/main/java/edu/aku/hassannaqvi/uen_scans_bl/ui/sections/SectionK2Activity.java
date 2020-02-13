@@ -144,7 +144,7 @@ public class SectionK2Activity extends AppCompatActivity implements Util.EndSecA
         } else {
             Toast.makeText(this, "Updating Database... ERROR!", Toast.LENGTH_SHORT).show();
         }
-        return true;
+        return false;
     }
 
 
@@ -223,6 +223,8 @@ public class SectionK2Activity extends AppCompatActivity implements Util.EndSecA
 
         json.put("k220a", bi.k220a.getText().toString());
         json.put("k220b", bi.k220b.getSelectedItem().toString());
+
+        anthro.setsK1(String.valueOf(json));
 
         // Deleting item in list
         mwraChildren.getFirst().remove(position - 1);
