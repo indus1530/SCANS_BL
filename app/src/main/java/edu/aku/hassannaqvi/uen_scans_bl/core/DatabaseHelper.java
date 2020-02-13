@@ -748,14 +748,12 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         return newRowId;
     }
 
-    public Long addDENTAL(DentalContract dc) {
+    public Long addDental(DentalContract dc) {
 
         // Gets the data repository in write mode
         SQLiteDatabase db = this.getWritableDatabase();
 
-        // Create a new map of values, where column names are the keys
         ContentValues values = new ContentValues();
-//        values.put(MWRATable._ID, indexMwra.get_ID());
         values.put(hbTable.COLUMN__UUID, dc.get_UUID());
         values.put(hbTable.COLUMN_DEVICEID, dc.getDeviceId());
         values.put(hbTable.COLUMN_FORMDATE, dc.getFormDate());
@@ -779,7 +777,6 @@ public class DatabaseHelper extends SQLiteOpenHelper {
 
         // Create a new map of values, where column names are the keys
         ContentValues values = new ContentValues();
-//        values.put(MWRATable._ID, indexMwra.get_ID());
         values.put(hbTable.COLUMN__UUID, hb.get_UUID());
         values.put(hbTable.COLUMN_DEVICEID, hb.getDeviceId());
         values.put(hbTable.COLUMN_FORMDATE, hb.getFormDate());
@@ -796,7 +793,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         return newRowId;
     }
 
-    public Long addVISION(VisionContract vc) {
+    public Long addVision(VisionContract vc) {
 
         // Gets the data repository in write mode
         SQLiteDatabase db = this.getWritableDatabase();
@@ -1085,17 +1082,49 @@ public class DatabaseHelper extends SQLiteOpenHelper {
                 selectionArgs);
     }
 
-    //Generic update MWRAPREColumn
-    public int updatesHBColumn(HbContract mwra_pre) {
+    //Generic update DentalColumn
+    public int updatesDentalColumn(DentalContract dc) {
         SQLiteDatabase db = this.getReadableDatabase();
 
         ContentValues values = new ContentValues();
-        values.put(hbTable.COLUMN_UID, mwra_pre.getUID());
+        values.put(DentalContract.dentalTable.COLUMN_UID, dc.getUID());
+
+        String selection = DentalContract.dentalTable._ID + " =? ";
+        String[] selectionArgs = {String.valueOf(dc.get_ID())};
+
+        return db.update(DentalContract.dentalTable.TABLE_NAME,
+                values,
+                selection,
+                selectionArgs);
+    }
+
+    //Generic update HBColumn
+    public int updatesHBColumn(HbContract hb) {
+        SQLiteDatabase db = this.getReadableDatabase();
+
+        ContentValues values = new ContentValues();
+        values.put(hbTable.COLUMN_UID, hb.getUID());
 
         String selection = hbTable._ID + " =? ";
-        String[] selectionArgs = {String.valueOf(mwra_pre.get_ID())};
+        String[] selectionArgs = {String.valueOf(hb.get_ID())};
 
         return db.update(hbTable.TABLE_NAME,
+                values,
+                selection,
+                selectionArgs);
+    }
+
+    //Generic update VisionColumn
+    public int updatesVisionColumn(VisionContract vc) {
+        SQLiteDatabase db = this.getReadableDatabase();
+
+        ContentValues values = new ContentValues();
+        values.put(VisionContract.visionTable.COLUMN_UID, vc.getUID());
+
+        String selection = VisionContract.visionTable._ID + " =? ";
+        String[] selectionArgs = {String.valueOf(vc.get_ID())};
+
+        return db.update(VisionContract.visionTable.TABLE_NAME,
                 values,
                 selection,
                 selectionArgs);
