@@ -1353,6 +1353,11 @@
     <string name="c314c"> 6 &#8211; 9 </string>
     <string name="c314d"> 10 or more </string>
 
+    <string name="c315"> C315:\t What does (child name) usually use to clean his / her teeth ? </string>
+    <string name="c315a"> Tooth brush </string>
+    <string name="c315b"> Miswak </string>
+    <string name="c315c"> Finger </string>
+
     <string name="tc4heading">SECTION C4: SCHOOLING </string>
     <string name="c401"> C401:\t Have (child name) ever attended school? If no, probe. </string>
     <string name="c401a"> Yes </string>
