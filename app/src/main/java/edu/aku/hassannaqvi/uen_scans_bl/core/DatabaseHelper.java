@@ -1085,6 +1085,25 @@ public class DatabaseHelper extends SQLiteOpenHelper {
                 selectionArgs);
     }
 
+    public int updatesFamilyMemberColumn(String column, String value, FamilyMembersContract fmc) {
+        SQLiteDatabase db = this.getReadableDatabase();
+
+        ContentValues values = new ContentValues();
+        values.put(column, value);
+
+        String selection = SingleMember.COLUMN_CLUSTERNO + " =? AND "
+                + SingleMember.COLUMN_HHNO + " =? AND "
+                + SingleMember.COLUMN_SERIAL_NO + " =? AND "
+                + SingleMember.COLUMN_UID + " =? AND "
+                + SingleMember.COLUMN_UUID + " =?";
+        String[] selectionArgs = {fmc.getClusterno(), fmc.getHhno(), fmc.getSerialno(), fmc.getUid(), fmc.getUuid()};
+
+        return db.update(FamilyMembersContract.SingleMember.TABLE_NAME,
+                values,
+                selection,
+                selectionArgs);
+    }
+
     //Generic update MWRAPREColumn
     public int updatesHBColumn(HbContract mwra_pre) {
         SQLiteDatabase db = this.getReadableDatabase();
