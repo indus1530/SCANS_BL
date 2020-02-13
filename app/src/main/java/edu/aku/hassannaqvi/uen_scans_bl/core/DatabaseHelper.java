@@ -35,9 +35,9 @@ import edu.aku.hassannaqvi.uen_scans_bl.contracts.FoodFreqContract.SingleFoodFre
 import edu.aku.hassannaqvi.uen_scans_bl.contracts.FormsContract;
 import edu.aku.hassannaqvi.uen_scans_bl.contracts.FormsContract.FormsTable;
 import edu.aku.hassannaqvi.uen_scans_bl.contracts.HbContract;
+import edu.aku.hassannaqvi.uen_scans_bl.contracts.HbContract.hbTable;
 import edu.aku.hassannaqvi.uen_scans_bl.contracts.IndexMWRAContract;
 import edu.aku.hassannaqvi.uen_scans_bl.contracts.IndexMWRAContract.MWRATable;
-import edu.aku.hassannaqvi.uen_scans_bl.contracts.HbContract.hbTable;
 import edu.aku.hassannaqvi.uen_scans_bl.contracts.TalukasContract;
 import edu.aku.hassannaqvi.uen_scans_bl.contracts.UCsContract;
 import edu.aku.hassannaqvi.uen_scans_bl.contracts.UsersContract;
@@ -599,7 +599,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         values.put(SingleMember.COLUMN_ID, fmc.get_id());
         values.put(SingleMember.COLUMN_UID, fmc.getUid());
         values.put(SingleMember.COLUMN_UUID, fmc.getUuid());
-        values.put(FamilyMembersContract.SingleMember.COLUMN_FORMDATE, fmc.getFormdate());
+        values.put(FamilyMembersContract.SingleMember.COLUMN_KISH_SELECTED, fmc.getKishSelected());
         values.put(FamilyMembersContract.SingleMember.COLUMN_CLUSTERNO, fmc.getClusterno());
         values.put(FamilyMembersContract.SingleMember.COLUMN_HHNO, fmc.getHhno());
         values.put(FamilyMembersContract.SingleMember.COLUMN_SERIAL_NO, fmc.getSerialno());
@@ -915,7 +915,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
                 FamilyMembersContract.SingleMember.COLUMN_ID,
                 SingleMember.COLUMN_UID,
                 SingleMember.COLUMN_UUID,
-                FamilyMembersContract.SingleMember.COLUMN_FORMDATE,
+                FamilyMembersContract.SingleMember.COLUMN_KISH_SELECTED,
                 FamilyMembersContract.SingleMember.COLUMN_CLUSTERNO,
                 SingleMember.COLUMN_HHNO,
                 SingleMember.COLUMN_SERIAL_NO,
