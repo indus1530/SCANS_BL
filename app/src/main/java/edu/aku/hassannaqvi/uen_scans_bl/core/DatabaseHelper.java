@@ -1429,35 +1429,41 @@ public class DatabaseHelper extends SQLiteOpenHelper {
     }
 
     //Get BLRandom data
-    public BLRandomContract getHHFromBLRandom(String subAreaCode, String hh) {
+    public FamilyMembersContract getFamilyMember(String cluster, String hhno, String kishType) {
         SQLiteDatabase db = this.getReadableDatabase();
         Cursor c = null;
         String[] columns = {
-                SingleRandomHH.COLUMN_ID,
-                SingleRandomHH.COLUMN_LUID,
-                SingleRandomHH.COLUMN_STRUCTURE_NO,
-                SingleRandomHH.COLUMN_FAMILY_EXT_CODE,
-                SingleRandomHH.COLUMN_HH,
-                SingleRandomHH.COLUMN_ENUM_BLOCK_CODE,
-                SingleRandomHH.COLUMN_RANDOMDT,
-                SingleRandomHH.COLUMN_HH_SELECTED_STRUCT,
-                SingleRandomHH.COLUMN_CONTACT,
-                SingleRandomHH.COLUMN_HH_HEAD,
-                SingleRandomHH.COLUMN_SNO_HH
+                SingleMember.COLUMN_ID,
+                SingleMember.COLUMN_UID,
+                SingleMember.COLUMN_UUID,
+                SingleMember.COLUMN_KISH_SELECTED,
+                SingleMember.COLUMN_CLUSTERNO,
+                SingleMember.COLUMN_HHNO,
+                SingleMember.COLUMN_SERIAL_NO,
+                SingleMember.COLUMN_NAME,
+                SingleMember.COLUMN_RELATION_HH,
+                SingleMember.COLUMN_AGE,
+                SingleMember.COLUMN_MOTHER_NAME,
+                SingleMember.COLUMN_MOTHER_SERIAL,
+                SingleMember.COLUMN_GENDER,
+                SingleMember.COLUMN_MARITAL,
+                SingleMember.COLUMN_SD,
+
         };
 
-        String whereClause = SingleRandomHH.COLUMN_ENUM_BLOCK_CODE + "=? AND " + SingleRandomHH.COLUMN_HH + "=?";
-        String[] whereArgs = new String[]{subAreaCode, hh};
+        String whereClause = SingleMember.COLUMN_CLUSTERNO + "=? AND " + SingleMember.COLUMN_HHNO + "=? AND "
+                + SingleMember.COLUMN_KISH_SELECTED + "=?";
+        String[] whereArgs = new String[]{cluster, hhno, kishType};
         String groupBy = null;
         String having = null;
 
         String orderBy =
-                SingleRandomHH.COLUMN_ID + " ASC";
+                SingleMember.COLUMN_ID + " ASC";
 
-        BLRandomContract allBL = null;
+        FamilyMembersContract allBL = null;
         try {
             c = db.query(
-                    SingleRandomHH.TABLE_NAME,  // The table to query
+                    SingleMember.TABLE_NAME,  // The table to query
                     columns,                   // The columns to return
                     whereClause,               // The columns for the WHERE clause
                     whereArgs,                 // The values for the WHERE clause
@@ -1466,7 +1472,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
                     orderBy                    // The sort order
             );
             while (c.moveToNext()) {
-                allBL = new BLRandomContract().hydrate(c);
+                allBL = new FamilyMembersContract().hydrate(c);
             }
         } finally {
             if (c != null) {
@@ -1478,6 +1484,63 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         }
         return allBL;
     }
+
+    public ArrayList<FamilyMembersContract> getFamilyMemberList(String cluster, String hhno, String motherSerial) {
+        SQLiteDatabase db = this.getReadableDatabase();
+        Cursor c = null;
+        String[] columns = {
+                SingleMember.COLUMN_ID,
+                SingleMember.COLUMN_UID,
+                SingleMember.COLUMN_UUID,
+                SingleMember.COLUMN_KISH_SELECTED,
+                SingleMember.COLUMN_CLUSTERNO,
+                SingleMember.COLUMN_HHNO,
+                SingleMember.COLUMN_SERIAL_NO,
+                SingleMember.COLUMN_NAME,
+                SingleMember.COLUMN_RELATION_HH,
+                SingleMember.COLUMN_AGE,
+                SingleMember.COLUMN_MOTHER_NAME,
+                SingleMember.COLUMN_MOTHER_SERIAL,
+                SingleMember.COLUMN_GENDER,
+                SingleMember.COLUMN_MARITAL,
+                SingleMember.COLUMN_SD,
+
+        };
+
+        String whereClause = SingleMember.COLUMN_CLUSTERNO + "=? AND " + SingleMember.COLUMN_HHNO + "=? AND "
+                + SingleMember.COLUMN_MOTHER_SERIAL + "=?";
+        String[] whereArgs = new String[]{cluster, hhno, motherSerial};
+        String groupBy = null;
+        String having = null;
+
+        String orderBy =
+                SingleMember.COLUMN_ID + " ASC";
+
+        ArrayList<FamilyMembersContract> allBL = new ArrayList<>();
+        try {
+            c = db.query(
+                    SingleMember.TABLE_NAME,  // The table to query
+                    columns,                   // The columns to return
+                    whereClause,               // The columns for the WHERE clause
+                    whereArgs,                 // The values for the WHERE clause
+                    groupBy,                   // don't group the rows
+                    having,                    // don't filter by row groups
+                    orderBy                    // The sort order
+            );
+            while (c.moveToNext()) {
+                allBL.add(new FamilyMembersContract().hydrate(c));
+            }
+        } finally {
+            if (c != null) {
+                c.close();
+            }
+            if (db != null) {
+                db.close();
+            }
+        }
+        return allBL;
+    }
+
 
     //Get EnumBlock
     public EnumBlockContract getEnumBlock(String cluster) {
