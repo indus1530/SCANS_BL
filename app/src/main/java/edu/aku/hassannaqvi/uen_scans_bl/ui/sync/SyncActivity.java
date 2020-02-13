@@ -34,11 +34,9 @@ import edu.aku.hassannaqvi.uen_scans_bl.adapter.SyncListAdapter;
 import edu.aku.hassannaqvi.uen_scans_bl.adapter.UploadListAdapter;
 import edu.aku.hassannaqvi.uen_scans_bl.contracts.AnthroContract;
 import edu.aku.hassannaqvi.uen_scans_bl.contracts.ChildContract;
-import edu.aku.hassannaqvi.uen_scans_bl.contracts.FamilyMembersContract;
 import edu.aku.hassannaqvi.uen_scans_bl.contracts.FoodFreqContract;
 import edu.aku.hassannaqvi.uen_scans_bl.contracts.FormsContract;
 import edu.aku.hassannaqvi.uen_scans_bl.contracts.IndexMWRAContract;
-import edu.aku.hassannaqvi.uen_scans_bl.contracts.MWRA_PREContract;
 import edu.aku.hassannaqvi.uen_scans_bl.core.DatabaseHelper;
 import edu.aku.hassannaqvi.uen_scans_bl.core.MainApp;
 import edu.aku.hassannaqvi.uen_scans_bl.databinding.ActivitySyncBinding;
@@ -232,7 +230,7 @@ public class SyncActivity extends AppCompatActivity implements SyncDevice.SyncDe
                     this,
                     "Family Members",
                     "updateSyncedFamilyMemForms",
-                    MWRA_PREContract.class,
+                    HbContract.class,
                     MainApp._HOST_URL + MainApp._SERVER_URL,
                     FamilyMembersContract.SingleMember.TABLE_NAME,
                     db.getAllFamilyMembersForms(), 5, uploadListAdapter, uploadlist
@@ -247,7 +245,7 @@ public class SyncActivity extends AppCompatActivity implements SyncDevice.SyncDe
                     this,
                     "MWRA",
                     "updateSyncedMWRAForms",
-                    MWRA_PREContract.class,
+                    HbContract.class,
                     MainApp._HOST_URL + MainApp._SERVER_URL,
                     IndexMWRAContract.MWRATable.TABLE_NAME,
                     db.getUnsyncedMWRA(), 6, uploadListAdapter, uploadlist
