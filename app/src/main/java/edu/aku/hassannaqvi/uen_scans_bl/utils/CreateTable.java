@@ -7,8 +7,8 @@ import edu.aku.hassannaqvi.uen_scans_bl.contracts.EnumBlockContract;
 import edu.aku.hassannaqvi.uen_scans_bl.contracts.FamilyMembersContract;
 import edu.aku.hassannaqvi.uen_scans_bl.contracts.FoodFreqContract.SingleFoodFreq;
 import edu.aku.hassannaqvi.uen_scans_bl.contracts.FormsContract;
-import edu.aku.hassannaqvi.uen_scans_bl.contracts.IndexMWRAContract.MWRATable;
 import edu.aku.hassannaqvi.uen_scans_bl.contracts.HbContract.hbTable;
+import edu.aku.hassannaqvi.uen_scans_bl.contracts.IndexMWRAContract.MWRATable;
 import edu.aku.hassannaqvi.uen_scans_bl.contracts.UsersContract;
 import edu.aku.hassannaqvi.uen_scans_bl.contracts.VersionAppContract;
 
@@ -186,7 +186,7 @@ public final class CreateTable {
             + FamilyMembersContract.SingleMember.COLUMN_ID + " INTEGER PRIMARY KEY AUTOINCREMENT," +
             FamilyMembersContract.SingleMember.COLUMN_UID + " TEXT," +
             FamilyMembersContract.SingleMember.COLUMN_UUID + " TEXT," +
-            FamilyMembersContract.SingleMember.COLUMN_FORMDATE + " TEXT," +
+            FamilyMembersContract.SingleMember.COLUMN_KISH_SELECTED + " TEXT," +
             FamilyMembersContract.SingleMember.COLUMN_CLUSTERNO + " TEXT," +
             FamilyMembersContract.SingleMember.COLUMN_HHNO + " TEXT," +
             FamilyMembersContract.SingleMember.COLUMN_SERIAL_NO + " TEXT," +
