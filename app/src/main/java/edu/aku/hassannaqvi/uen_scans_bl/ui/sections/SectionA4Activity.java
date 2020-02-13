@@ -33,7 +33,6 @@ public class SectionA4Activity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         bi = DataBindingUtil.setContentView(this, R.layout.activity_section_a4);
         bi.setCallback(this);
-
         setlistener();
 
     }

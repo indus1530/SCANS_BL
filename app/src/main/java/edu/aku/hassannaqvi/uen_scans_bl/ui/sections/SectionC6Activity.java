@@ -2,6 +2,7 @@ package edu.aku.hassannaqvi.uen_scans_bl.ui.sections;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.view.View;
 import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
@@ -18,6 +19,7 @@ import edu.aku.hassannaqvi.uen_scans_bl.core.DatabaseHelper;
 import edu.aku.hassannaqvi.uen_scans_bl.core.MainApp;
 import edu.aku.hassannaqvi.uen_scans_bl.databinding.ActivitySectionC6Binding;
 import edu.aku.hassannaqvi.uen_scans_bl.utils.Util;
+import edu.aku.hassannaqvi.uen_scans_bl.validator.ClearClass;
 
 import static edu.aku.hassannaqvi.uen_scans_bl.ui.list_activity.FamilyMembersListActivity.mainVModel;
 
@@ -31,6 +33,16 @@ public class SectionC6Activity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         bi = DataBindingUtil.setContentView(this, R.layout.activity_section_c6);
         bi.setCallback(this);
+
+        if (MainApp.C401.equals("1")) {
+            bi.fldGrpSectionC6A.setVisibility(View.VISIBLE);
+            bi.fldGrpSectionC6B.setVisibility(View.GONE);
+            ClearClass.ClearAllFields(bi.fldGrpSectionC6B, null);
+        } else {
+            bi.fldGrpSectionC6B.setVisibility(View.VISIBLE);
+            bi.fldGrpSectionC6A.setVisibility(View.GONE);
+            ClearClass.ClearAllFields(bi.fldGrpSectionC6A, null);
+        }
 
     }
 
@@ -75,50 +87,50 @@ public class SectionC6Activity extends AppCompatActivity {
 
     private void SaveDraft() throws JSONException {
 
-        JSONObject f1 = new JSONObject();
+        JSONObject json = new JSONObject();
 
-        f1.put("ca601", bi.ca601.getText().toString());
+        json.put("ca601", bi.ca601.getText().toString());
 
-        f1.put("ca602", bi.ca602.getText().toString());
+        json.put("ca602", bi.ca602.getText().toString());
 
-        f1.put("ca603",
+        json.put("ca603",
                 bi.ca603a.isChecked() ? "1" :
                         bi.ca603b.isChecked() ? "2" :
                                 "0");
 
-        f1.put("ca604", bi.ca604.getText().toString());
+        json.put("ca604", bi.ca604.getText().toString());
 
-        f1.put("ca605", bi.ca605.getText().toString());
+        json.put("ca605", bi.ca605.getText().toString());
 
-        f1.put("ca606",
+        json.put("ca606",
                 bi.ca606a.isChecked() ? "1" :
                         bi.ca606b.isChecked() ? "2" :
                                 "0");
 
-        f1.put("ca607",
+        json.put("ca607",
                 bi.ca607a.isChecked() ? "1" :
                         bi.ca607b.isChecked() ? "2" :
                                 bi.ca607c.isChecked() ? "3" :
                                         bi.ca607d.isChecked() ? "4" :
                                                 "0");
 
-        f1.put("cb601", bi.cb601.getText().toString());
+        json.put("cb601", bi.cb601.getText().toString());
 
-        f1.put("cb602", bi.cb602.getText().toString());
+        json.put("cb602", bi.cb602.getText().toString());
 
-        f1.put("cb603",
+        json.put("cb603",
                 bi.cb603a.isChecked() ? "1" :
                         bi.cb603b.isChecked() ? "2" :
                                 "0");
 
-        f1.put("cb604",
+        json.put("cb604",
                 bi.cb604a.isChecked() ? "1" :
                         bi.cb604b.isChecked() ? "2" :
                                 bi.cb604c.isChecked() ? "3" :
                                         bi.cb604d.isChecked() ? "4" :
                                                 "0");
 
-        MainApp.child.setsC6(String.valueOf(f1));
+        MainApp.child.setsC6(String.valueOf(json));
 
     }
 
