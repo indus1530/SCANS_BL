@@ -140,7 +140,7 @@ public class SectionB1Activity extends AppCompatActivity {
         if (rowID > 0) {
             MainApp.indexMwra.set_ID(String.valueOf(rowID));
             MainApp.indexMwra.setUID(MainApp.indexMwra.getDeviceId() + MainApp.indexMwra.get_ID());
-            db.updatesMWRAColumn(IndexMWRAContract.MWRATable.COLUMN_UID, MainApp.indexMwra.getUID());
+            db.updatesIndexMWRAColumn(IndexMWRAContract.MWRATable.COLUMN_UID, MainApp.indexMwra.getUID());
             return true;
         } else {
             Toast.makeText(this, "Updating Database... ERROR!", Toast.LENGTH_SHORT).show();

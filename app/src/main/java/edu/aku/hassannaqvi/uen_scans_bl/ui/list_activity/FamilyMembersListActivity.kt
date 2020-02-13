@@ -14,6 +14,7 @@ import edu.aku.hassannaqvi.uen_scans_bl.CONSTANTS.Companion.SERIAL_EXTRA
 import edu.aku.hassannaqvi.uen_scans_bl.R
 import edu.aku.hassannaqvi.uen_scans_bl.adapter.FamilyMemberListAdapter
 import edu.aku.hassannaqvi.uen_scans_bl.contracts.FamilyMembersContract
+import edu.aku.hassannaqvi.uen_scans_bl.core.DatabaseHelper
 import edu.aku.hassannaqvi.uen_scans_bl.core.MainApp
 import edu.aku.hassannaqvi.uen_scans_bl.core.MainApp.*
 import edu.aku.hassannaqvi.uen_scans_bl.databinding.ActivityFamilyMembersListBinding
@@ -24,6 +25,7 @@ import edu.aku.hassannaqvi.uen_scans_bl.ui.sections.SectionA31Activity
 import edu.aku.hassannaqvi.uen_scans_bl.utils.Util
 import edu.aku.hassannaqvi.uen_scans_bl.viewmodel.MainVModel
 import kotlinx.android.synthetic.main.activity_family_members_list.*
+import kotlinx.coroutines.*
 import ru.whalemare.sheetmenu.ActionItem
 import ru.whalemare.sheetmenu.SheetMenu
 import ru.whalemare.sheetmenu.layout.GridLayoutProvider
@@ -36,6 +38,7 @@ class FamilyMembersListActivity : AppCompatActivity() {
     private lateinit var bi: ActivityFamilyMembersListBinding
     private var currentFM: FamilyMembersContract? = null
     private lateinit var clickLst: MutableList<FamilyMembersContract>
+    private lateinit var db: DatabaseHelper
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -44,6 +47,7 @@ class FamilyMembersListActivity : AppCompatActivity() {
 
         bi = DataBindingUtil.setContentView(this, R.layout.activity_family_members_list)
         bi.callback = this
+        db = appInfo.dbHelper
 
         settingValue()
         settingMenu()
@@ -102,6 +106,12 @@ class FamilyMembersListActivity : AppCompatActivity() {
                                         indexKishMWRA != null -> SectionA31Activity::class.java
                                         else -> EndingActivity::class.java
                                     }).putExtra("complete", true))
+
+
+                                    GlobalScope.launch {
+                                        val indexMwraUpdate = async { }
+                                    }
+
                                 }
                                 else -> Util.openEndActivity(this)
                             }
@@ -180,4 +190,11 @@ class FamilyMembersListActivity : AppCompatActivity() {
     override fun onBackPressed() {
         Toast.makeText(this, "Press top back button.", Toast.LENGTH_SHORT).show()
     }
+
+    suspend fun updateKishMember() {
+        withContext(Dispatchers.IO) {
+            db
+        }
+    }
+
 }

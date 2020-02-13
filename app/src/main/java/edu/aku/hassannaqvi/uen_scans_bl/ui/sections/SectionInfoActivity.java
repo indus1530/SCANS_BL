@@ -18,12 +18,10 @@ import org.json.JSONObject;
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Date;
-import java.util.List;
 import java.util.Objects;
 
 import edu.aku.hassannaqvi.uen_scans_bl.CONSTANTS;
 import edu.aku.hassannaqvi.uen_scans_bl.R;
-import edu.aku.hassannaqvi.uen_scans_bl.contracts.BLRandomContract;
 import edu.aku.hassannaqvi.uen_scans_bl.contracts.EnumBlockContract;
 import edu.aku.hassannaqvi.uen_scans_bl.contracts.FamilyMembersContract;
 import edu.aku.hassannaqvi.uen_scans_bl.contracts.FormsContract;
@@ -203,8 +201,7 @@ public class SectionInfoActivity extends AppCompatActivity implements Util.EndSe
     public void BtnCheckHH() {
         if (!Validator.emptyTextBox(this, bi.a112)) return;
 
-        bl = MainApp.appInfo.getDbHelper().getFamilyMember(bi.a101.getText().toString(),
-                bi.a112.getText().toString().toUpperCase(), "1");
+        bl = db.getFamilyMember(bi.a101.getText().toString(), bi.a112.getText().toString().toUpperCase(), "1");
 
         if (bl != null) {
             famList = MainApp.appInfo.getDbHelper().getFamilyMemberList(bi.a101.getText().toString(), bi.a112.getText().toString().toUpperCase(), bl.getMother_serial());
