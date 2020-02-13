@@ -16,12 +16,16 @@ import org.json.JSONException;
 import org.json.JSONObject;
 
 import java.text.SimpleDateFormat;
+import java.util.ArrayList;
 import java.util.Date;
+import java.util.List;
 import java.util.Objects;
 
+import edu.aku.hassannaqvi.uen_scans_bl.CONSTANTS;
 import edu.aku.hassannaqvi.uen_scans_bl.R;
 import edu.aku.hassannaqvi.uen_scans_bl.contracts.BLRandomContract;
 import edu.aku.hassannaqvi.uen_scans_bl.contracts.EnumBlockContract;
+import edu.aku.hassannaqvi.uen_scans_bl.contracts.FamilyMembersContract;
 import edu.aku.hassannaqvi.uen_scans_bl.contracts.FormsContract;
 import edu.aku.hassannaqvi.uen_scans_bl.core.DatabaseHelper;
 import edu.aku.hassannaqvi.uen_scans_bl.core.MainApp;
@@ -35,7 +39,8 @@ public class SectionInfoActivity extends AppCompatActivity implements Util.EndSe
 
     ActivitySectionInfoBinding bi;
     private DatabaseHelper db;
-    private BLRandomContract bl;
+    private FamilyMembersContract bl;
+    ArrayList<FamilyMembersContract> famList;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -62,7 +67,7 @@ public class SectionInfoActivity extends AppCompatActivity implements Util.EndSe
                     ClearClass.ClearAllFields(bi.fldGrpSectionA01, null);
                     bi.fldGrpSectionA01.setVisibility(View.GONE);
                     bi.btnNext.setVisibility(View.GONE);
-                    bi.btnEnd.setVisibility(View.GONE);
+                    /*bi.btnEnd.setVisibility(View.GONE);*/
                 }
             }
 
@@ -83,7 +88,7 @@ public class SectionInfoActivity extends AppCompatActivity implements Util.EndSe
             public void onTextChanged(CharSequence s, int start, int before, int count) {
                 if (Objects.requireNonNull(bi.a112.getText()).hashCode() == s.hashCode()) {
                     bi.btnNext.setVisibility(View.GONE);
-                    bi.btnEnd.setVisibility(View.GONE);
+                    /*bi.btnEnd.setVisibility(View.GONE);*/
                 }
             }
 
@@ -104,7 +109,7 @@ public class SectionInfoActivity extends AppCompatActivity implements Util.EndSe
             }
             if (UpdateDB()) {
                 finish();
-                startActivity(new Intent(this, FamilyMembersListActivity.class).putExtra("sno", Integer.valueOf(bl.getSno())));
+                startActivity(new Intent(this, FamilyMembersListActivity.class).putParcelableArrayListExtra(CONSTANTS.FEMLIST, famList));
             } else {
                 Toast.makeText(this, "Failed to Update Database!", Toast.LENGTH_SHORT).show();
             }
@@ -140,7 +145,7 @@ public class SectionInfoActivity extends AppCompatActivity implements Util.EndSe
 
         JSONObject json = new JSONObject();
 
-        json.put("imei", MainApp.IMEI);
+        /*json.put("imei", MainApp.IMEI);
         json.put("rndid", bl.get_ID());
         json.put("luid", bl.getLUID());
         json.put("randDT", bl.getRandomDT());
@@ -148,7 +153,7 @@ public class SectionInfoActivity extends AppCompatActivity implements Util.EndSe
         json.put("hh07", bl.getExtension());
         json.put("hhhead", bl.getHhhead());
         json.put("hh09", bl.getContact());
-        json.put("hhss", bl.getSelStructure());
+        json.put("hhss", bl.getSelStructure());*/
 
         json.put("a104", bi.a104.getText().toString());
         json.put("a105", bi.a105.getText().toString());
@@ -198,20 +203,22 @@ public class SectionInfoActivity extends AppCompatActivity implements Util.EndSe
     public void BtnCheckHH() {
         if (!Validator.emptyTextBox(this, bi.a112)) return;
 
-        bl = MainApp.appInfo.getDbHelper().getHHFromBLRandom(bi.a101.getText().toString(), bi.a112.getText().toString().toUpperCase());
+        bl = MainApp.appInfo.getDbHelper().getFamilyMember(bi.a101.getText().toString(),
+                bi.a112.getText().toString().toUpperCase(), "1");
 
         if (bl != null) {
+            famList = MainApp.appInfo.getDbHelper().getFamilyMemberList(bi.a101.getText().toString(), bi.a112.getText().toString().toUpperCase(), bl.getMother_serial());
             Toast.makeText(this, "Household found!", Toast.LENGTH_SHORT).show();
             //bi.hhName.setText(bl.getHhhead().toUpperCase());
             //bi.fldGrpSectionA02.setVisibility(View.VISIBLE);
             bi.btnNext.setVisibility(View.VISIBLE);
-            bi.btnEnd.setVisibility(View.GONE);
+
 
         } else {
             //bi.fldGrpSectionA02.setVisibility(View.GONE);
             Toast.makeText(this, "No Household found!", Toast.LENGTH_SHORT).show();
             bi.btnNext.setVisibility(View.GONE);
-            bi.btnEnd.setVisibility(View.VISIBLE);
+
         }
 
     }

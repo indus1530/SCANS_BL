@@ -276,8 +276,6 @@ public class MainActivity extends AppCompatActivity {
                 oF = new Intent(MainActivity.this, SectionA1Activity.class);
                 break;
             case R.id.formB:
-                oF = new Intent(MainActivity.this, SectionInfoActivity.class);
-                break;
             case R.id.formC:
                 oF = new Intent(MainActivity.this, SectionC4Activity.class);
                 break;
