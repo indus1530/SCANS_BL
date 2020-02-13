@@ -1194,7 +1194,8 @@ public class DatabaseHelper extends SQLiteOpenHelper {
                 selectionArgs);
     }
 
-    /*Syncing functions*/
+
+    //SYNCING FUNCTIONS
     public Collection<FamilyMembersContract> getAllFamilyMembersForms() {
         SQLiteDatabase db = this.getReadableDatabase();
         Cursor c = null;
