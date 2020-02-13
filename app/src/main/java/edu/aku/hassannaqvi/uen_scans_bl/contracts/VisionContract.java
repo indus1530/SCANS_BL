@@ -161,7 +161,6 @@ public class VisionContract {
         public static final String COLUMN_SYNCED = "synced";
         public static final String COLUMN_SYNCED_DATE = "synced_date";
 
-
     }
 
 }

@@ -3,14 +3,17 @@ package edu.aku.hassannaqvi.uen_scans_bl.utils;
 import edu.aku.hassannaqvi.uen_scans_bl.contracts.AnthroContract.SingleAnthro;
 import edu.aku.hassannaqvi.uen_scans_bl.contracts.BLRandomContract.SingleRandomHH;
 import edu.aku.hassannaqvi.uen_scans_bl.contracts.ChildContract.SingleChild;
+import edu.aku.hassannaqvi.uen_scans_bl.contracts.DentalContract;
 import edu.aku.hassannaqvi.uen_scans_bl.contracts.EnumBlockContract;
 import edu.aku.hassannaqvi.uen_scans_bl.contracts.FamilyMembersContract;
 import edu.aku.hassannaqvi.uen_scans_bl.contracts.FoodFreqContract.SingleFoodFreq;
 import edu.aku.hassannaqvi.uen_scans_bl.contracts.FormsContract;
+import edu.aku.hassannaqvi.uen_scans_bl.contracts.HbContract;
 import edu.aku.hassannaqvi.uen_scans_bl.contracts.HbContract.hbTable;
 import edu.aku.hassannaqvi.uen_scans_bl.contracts.IndexMWRAContract.MWRATable;
 import edu.aku.hassannaqvi.uen_scans_bl.contracts.UsersContract;
 import edu.aku.hassannaqvi.uen_scans_bl.contracts.VersionAppContract;
+import edu.aku.hassannaqvi.uen_scans_bl.contracts.VisionContract;
 
 public final class CreateTable {
 
@@ -201,5 +204,44 @@ public final class CreateTable {
             FamilyMembersContract.SingleMember.COLUMN_SYNCED + " TEXT," +
             FamilyMembersContract.SingleMember.COLUMN_SYNCED_DATE + " TEXT"
             + ");";
+
+
+    public static final String SQL_CREATE_VISION = "CREATE TABLE " + VisionContract.visionTable.TABLE_NAME + "("
+            + VisionContract.visionTable.COLUMN__ID + " INTEGER PRIMARY KEY AUTOINCREMENT,"
+            + VisionContract.visionTable.COLUMN_UID + " TEXT,"
+            + VisionContract.visionTable.COLUMN__UUID + " TEXT,"
+            + VisionContract.visionTable.COLUMN_DEVICEID + " TEXT,"
+            + VisionContract.visionTable.COLUMN_FORMDATE + " TEXT,"
+            + VisionContract.visionTable.COLUMN_USER + " TEXT,"
+            + VisionContract.visionTable.COLUMN_SE2 + " TEXT,"
+            + VisionContract.visionTable.COLUMN_DEVICETAGID + " TEXT,"
+            + VisionContract.visionTable.COLUMN_SYNCED + " TEXT,"
+            + VisionContract.visionTable.COLUMN_SYNCED_DATE + " TEXT );";
+
+
+    public static final String SQL_CREATE_DENTAL = "CREATE TABLE " + DentalContract.dentalTable.TABLE_NAME + "("
+            + DentalContract.dentalTable.COLUMN__ID + " INTEGER PRIMARY KEY AUTOINCREMENT,"
+            + DentalContract.dentalTable.COLUMN_UID + " TEXT,"
+            + DentalContract.dentalTable.COLUMN__UUID + " TEXT,"
+            + DentalContract.dentalTable.COLUMN_DEVICEID + " TEXT,"
+            + DentalContract.dentalTable.COLUMN_FORMDATE + " TEXT,"
+            + DentalContract.dentalTable.COLUMN_USER + " TEXT,"
+            + DentalContract.dentalTable.COLUMN_SE2 + " TEXT,"
+            + DentalContract.dentalTable.COLUMN_DEVICETAGID + " TEXT,"
+            + DentalContract.dentalTable.COLUMN_SYNCED + " TEXT,"
+            + DentalContract.dentalTable.COLUMN_SYNCED_DATE + " TEXT );";
+
+
+    public static final String SQL_CREATE_HB = "CREATE TABLE " + HbContract.hbTable.TABLE_NAME + "("
+            + HbContract.hbTable.COLUMN__ID + " INTEGER PRIMARY KEY AUTOINCREMENT,"
+            + HbContract.hbTable.COLUMN_UID + " TEXT,"
+            + HbContract.hbTable.COLUMN__UUID + " TEXT,"
+            + HbContract.hbTable.COLUMN_DEVICEID + " TEXT,"
+            + HbContract.hbTable.COLUMN_FORMDATE + " TEXT,"
+            + HbContract.hbTable.COLUMN_USER + " TEXT,"
+            + HbContract.hbTable.COLUMN_SE2 + " TEXT,"
+            + HbContract.hbTable.COLUMN_DEVICETAGID + " TEXT,"
+            + HbContract.hbTable.COLUMN_SYNCED + " TEXT,"
+            + HbContract.hbTable.COLUMN_SYNCED_DATE + " TEXT );";
 
 }
