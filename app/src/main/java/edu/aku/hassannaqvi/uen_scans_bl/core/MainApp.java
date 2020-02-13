@@ -84,6 +84,7 @@ public class MainApp extends Application {
     public static String userName = "0000";
     public static String DeviceURL = "devices.php";
     public static String IMEI;
+    public static String C401 = "";
     public static SharedPreferences sharedPref;
     public static String TAG = "AppMain";
 

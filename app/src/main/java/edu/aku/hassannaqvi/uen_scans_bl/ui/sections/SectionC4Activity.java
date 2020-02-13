@@ -30,7 +30,6 @@ public class SectionC4Activity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         bi = DataBindingUtil.setContentView(this, R.layout.activity_section_c4);
         bi.setCallback(this);
-
         setlistener();
 
     }
@@ -108,7 +107,6 @@ public class SectionC4Activity extends AppCompatActivity {
 
 
     public void BtnEnd() {
-
         Util.openEndActivity(this);
     }
 
@@ -232,6 +230,7 @@ public class SectionC4Activity extends AppCompatActivity {
         json.put("c41596x", bi.c41596x.getText().toString());
 
         MainApp.child.setsC4(String.valueOf(json));
+        MainApp.C401 = bi.c401a.isChecked() ? "1" : bi.c401b.isChecked() ? "2" : "0";
 
     }
 

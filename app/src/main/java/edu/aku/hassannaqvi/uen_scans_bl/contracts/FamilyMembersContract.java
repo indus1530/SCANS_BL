@@ -1,12 +1,14 @@
 package edu.aku.hassannaqvi.uen_scans_bl.contracts;
 
 import android.database.Cursor;
+import android.os.Parcel;
+import android.os.Parcelable;
 import android.provider.BaseColumns;
 
 import org.json.JSONException;
 import org.json.JSONObject;
 
-public class FamilyMembersContract {
+public class FamilyMembersContract implements Parcelable {
     private String _id;
     private String uid;
     private String uuid;
@@ -30,6 +32,38 @@ public class FamilyMembersContract {
 
     public FamilyMembersContract() {
     }
+
+    protected FamilyMembersContract(Parcel in) {
+        _id = in.readString();
+        uid = in.readString();
+        uuid = in.readString();
+        clusterno = in.readString();
+        hhno = in.readString();
+        serialno = in.readString();
+        name = in.readString();
+        relHH = in.readString();
+        age = in.readString();
+        mother_name = in.readString();
+        mother_serial = in.readString();
+        gender = in.readString();
+        marital = in.readString();
+        sD = in.readString();
+        kishSelected = in.readString();
+        fName = in.readString();
+        available = in.readString();
+    }
+
+    public static final Creator<FamilyMembersContract> CREATOR = new Creator<FamilyMembersContract>() {
+        @Override
+        public FamilyMembersContract createFromParcel(Parcel in) {
+            return new FamilyMembersContract(in);
+        }
+
+        @Override
+        public FamilyMembersContract[] newArray(int size) {
+            return new FamilyMembersContract[size];
+        }
+    };
 
     public FamilyMembersContract hydrate(Cursor cursor) {
         this._id = cursor.getString(cursor.getColumnIndex(SingleMember.COLUMN_ID));
@@ -210,6 +244,32 @@ public class FamilyMembersContract {
 
     public void setAvailable(String available) {
         this.available = available;
+    }
+
+    @Override
+    public int describeContents() {
+        return 0;
+    }
+
+    @Override
+    public void writeToParcel(Parcel parcel, int i) {
+        parcel.writeString(_id);
+        parcel.writeString(uid);
+        parcel.writeString(uuid);
+        parcel.writeString(clusterno);
+        parcel.writeString(hhno);
+        parcel.writeString(serialno);
+        parcel.writeString(name);
+        parcel.writeString(relHH);
+        parcel.writeString(age);
+        parcel.writeString(mother_name);
+        parcel.writeString(mother_serial);
+        parcel.writeString(gender);
+        parcel.writeString(marital);
+        parcel.writeString(sD);
+        parcel.writeString(kishSelected);
+        parcel.writeString(fName);
+        parcel.writeString(available);
     }
 
     public static abstract class SingleMember implements BaseColumns {
