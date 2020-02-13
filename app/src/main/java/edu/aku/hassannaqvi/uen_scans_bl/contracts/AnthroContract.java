@@ -20,6 +20,9 @@ public class AnthroContract {
     private String synced = "";
     private String synced_date = "";
     private String istatus = "";
+    private String formType = "";
+
+
 
     /**
      * Info,
@@ -37,7 +40,16 @@ public class AnthroContract {
         this.sK1 = cursor.getString(cursor.getColumnIndex(SingleAnthro.COLUMN_SK1));
         this.devicetagID = cursor.getString(cursor.getColumnIndex(SingleAnthro.COLUMN_DEVICETAGID));
         this.istatus = cursor.getString(cursor.getColumnIndex(SingleAnthro.COLUMN_ISTATUS));
+        this.formType = cursor.getString(cursor.getColumnIndex(SingleAnthro.COLUMN_FORMTYPE));
         return this;
+    }
+
+    public String getFormType() {
+        return formType;
+    }
+
+    public void setFormType(String formType) {
+        this.formType = formType;
     }
 
     public String getIstatus() {
@@ -145,6 +157,7 @@ public class AnthroContract {
 
         json.put(SingleAnthro.COLUMN_DEVICETAGID, this.devicetagID == null ? JSONObject.NULL : this.devicetagID);
         json.put(SingleAnthro.COLUMN_ISTATUS, this.istatus == null ? JSONObject.NULL : this.istatus);
+        json.put(SingleAnthro.COLUMN_FORMTYPE, this.formType == null ? JSONObject.NULL : this.formType);
 
         return json;
 
@@ -161,10 +174,12 @@ public class AnthroContract {
         String COLUMN_FORMDATE = "formdate";
         String COLUMN_USER = "user";
         String COLUMN_SK1 = "sk1";
+        String COLUMN_FORMTYPE = "f_type";
         String COLUMN_DEVICETAGID = "devicetagid";
         String COLUMN_ISTATUS = "istatus";
         String COLUMN_SYNCED = "synced";
         String COLUMN_SYNCED_DATE = "synced_date";
+
 
     }
 
