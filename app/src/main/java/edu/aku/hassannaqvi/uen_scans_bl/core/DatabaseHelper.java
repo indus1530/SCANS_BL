@@ -26,6 +26,7 @@ import edu.aku.hassannaqvi.uen_scans_bl.contracts.BLRandomContract;
 import edu.aku.hassannaqvi.uen_scans_bl.contracts.BLRandomContract.SingleRandomHH;
 import edu.aku.hassannaqvi.uen_scans_bl.contracts.ChildContract;
 import edu.aku.hassannaqvi.uen_scans_bl.contracts.ChildContract.SingleChild;
+import edu.aku.hassannaqvi.uen_scans_bl.contracts.DentalContract;
 import edu.aku.hassannaqvi.uen_scans_bl.contracts.EnumBlockContract;
 import edu.aku.hassannaqvi.uen_scans_bl.contracts.EnumBlockContract.EnumBlockTable;
 import edu.aku.hassannaqvi.uen_scans_bl.contracts.FamilyMembersContract;
@@ -45,6 +46,7 @@ import edu.aku.hassannaqvi.uen_scans_bl.contracts.UsersContract.SingleUser;
 import edu.aku.hassannaqvi.uen_scans_bl.contracts.VersionAppContract;
 import edu.aku.hassannaqvi.uen_scans_bl.contracts.VillagesContract;
 import edu.aku.hassannaqvi.uen_scans_bl.contracts.VillagesContract.SingleVillage;
+import edu.aku.hassannaqvi.uen_scans_bl.contracts.VisionContract;
 
 import static edu.aku.hassannaqvi.uen_scans_bl.utils.CreateTable.DATABASE_NAME;
 import static edu.aku.hassannaqvi.uen_scans_bl.utils.CreateTable.DATABASE_VERSION;
@@ -729,7 +731,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         return newRowId;
     }
 
-    public Long addPregnantMWRA(HbContract mwra) {
+    public Long addDENTAL(DentalContract dc) {
 
         // Gets the data repository in write mode
         SQLiteDatabase db = this.getWritableDatabase();
@@ -737,12 +739,60 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         // Create a new map of values, where column names are the keys
         ContentValues values = new ContentValues();
 //        values.put(MWRATable._ID, indexMwra.get_ID());
-        values.put(hbTable.COLUMN__UUID, mwra.get_UUID());
-        values.put(hbTable.COLUMN_DEVICEID, mwra.getDeviceId());
-        values.put(hbTable.COLUMN_FORMDATE, mwra.getFormDate());
-        values.put(hbTable.COLUMN_USER, mwra.getUser());
-        values.put(hbTable.COLUMN_DEVICETAGID, mwra.getDevicetagID());
-        values.put(hbTable.COLUMN_SE2, mwra.getsE2());
+        values.put(hbTable.COLUMN__UUID, dc.get_UUID());
+        values.put(hbTable.COLUMN_DEVICEID, dc.getDeviceId());
+        values.put(hbTable.COLUMN_FORMDATE, dc.getFormDate());
+        values.put(hbTable.COLUMN_USER, dc.getUser());
+        values.put(hbTable.COLUMN_DEVICETAGID, dc.getDevicetagID());
+        values.put(hbTable.COLUMN_SE2, dc.getsE2());
+
+        // Insert the new row, returning the primary key value of the new row
+        long newRowId;
+        newRowId = db.insert(
+                hbTable.TABLE_NAME,
+                null,
+                values);
+        return newRowId;
+    }
+
+    public Long addHB(HbContract hb) {
+
+        // Gets the data repository in write mode
+        SQLiteDatabase db = this.getWritableDatabase();
+
+        // Create a new map of values, where column names are the keys
+        ContentValues values = new ContentValues();
+//        values.put(MWRATable._ID, indexMwra.get_ID());
+        values.put(hbTable.COLUMN__UUID, hb.get_UUID());
+        values.put(hbTable.COLUMN_DEVICEID, hb.getDeviceId());
+        values.put(hbTable.COLUMN_FORMDATE, hb.getFormDate());
+        values.put(hbTable.COLUMN_USER, hb.getUser());
+        values.put(hbTable.COLUMN_DEVICETAGID, hb.getDevicetagID());
+        values.put(hbTable.COLUMN_SE2, hb.getsE2());
+
+        // Insert the new row, returning the primary key value of the new row
+        long newRowId;
+        newRowId = db.insert(
+                hbTable.TABLE_NAME,
+                null,
+                values);
+        return newRowId;
+    }
+
+    public Long addVISION(VisionContract vc) {
+
+        // Gets the data repository in write mode
+        SQLiteDatabase db = this.getWritableDatabase();
+
+        // Create a new map of values, where column names are the keys
+        ContentValues values = new ContentValues();
+//        values.put(MWRATable._ID, indexMwra.get_ID());
+        values.put(hbTable.COLUMN__UUID, vc.get_UUID());
+        values.put(hbTable.COLUMN_DEVICEID, vc.getDeviceId());
+        values.put(hbTable.COLUMN_FORMDATE, vc.getFormDate());
+        values.put(hbTable.COLUMN_USER, vc.getUser());
+        values.put(hbTable.COLUMN_DEVICETAGID, vc.getDevicetagID());
+        values.put(hbTable.COLUMN_SE2, vc.getsE2());
 
         // Insert the new row, returning the primary key value of the new row
         long newRowId;
