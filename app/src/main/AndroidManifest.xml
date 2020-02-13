@@ -37,8 +37,14 @@
             android:name=".ui.other.LoginActivity"
             android:screenOrientation="portrait"
             android:theme="@style/AppTheme" />
+
         <activity
             android:name=".ui.sections.SectionA1Activity"
+            android:label="@string/ta1heading"
+            android:screenOrientation="portrait" />
+
+        <activity
+            android:name=".ui.sections.SectionInfoActivity"
             android:label="@string/ta1heading"
             android:screenOrientation="portrait" />
 
