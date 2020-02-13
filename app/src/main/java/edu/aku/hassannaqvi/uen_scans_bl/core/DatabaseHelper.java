@@ -1050,6 +1050,8 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         return allEB;
     }
 
+
+    //UPDATE FUNCTIONS
     //Generic update FormColumn
     public int updatesFormColumn(String column, String value) {
         SQLiteDatabase db = this.getReadableDatabase();
