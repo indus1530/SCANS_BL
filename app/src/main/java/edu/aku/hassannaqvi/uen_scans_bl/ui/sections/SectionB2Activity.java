@@ -58,7 +58,7 @@ public class SectionB2Activity extends AppCompatActivity {
 
     private boolean UpdateDB() {
         DatabaseHelper db = MainApp.appInfo.getDbHelper();
-        int updcount = db.updatesMWRAColumn(IndexMWRAContract.MWRATable.COLUMN_SB2, MainApp.indexMwra.getsB2());
+        int updcount = db.updatesIndexMWRAColumn(IndexMWRAContract.MWRATable.COLUMN_SB2, MainApp.indexMwra.getsB2());
         if (updcount == 1) {
             return true;
         } else {
