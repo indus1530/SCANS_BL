@@ -8,7 +8,7 @@ import edu.aku.hassannaqvi.uen_scans_bl.contracts.FamilyMembersContract;
 import edu.aku.hassannaqvi.uen_scans_bl.contracts.FoodFreqContract.SingleFoodFreq;
 import edu.aku.hassannaqvi.uen_scans_bl.contracts.FormsContract;
 import edu.aku.hassannaqvi.uen_scans_bl.contracts.IndexMWRAContract.MWRATable;
-import edu.aku.hassannaqvi.uen_scans_bl.contracts.MWRA_PREContract.SingleMWRAPRE;
+import edu.aku.hassannaqvi.uen_scans_bl.contracts.HbContract.hbTable;
 import edu.aku.hassannaqvi.uen_scans_bl.contracts.UsersContract;
 import edu.aku.hassannaqvi.uen_scans_bl.contracts.VersionAppContract;
 
@@ -134,17 +134,17 @@ public final class CreateTable {
             + MWRATable.COLUMN_SYNCED + " TEXT,"
             + MWRATable.COLUMN_SYNCED_DATE + " TEXT );";
 
-    public static final String SQL_CREATE_MWRAPRE_TABLE = "CREATE TABLE " + SingleMWRAPRE.TABLE_NAME + "("
-            + SingleMWRAPRE._ID + " INTEGER PRIMARY KEY AUTOINCREMENT,"
-            + SingleMWRAPRE.COLUMN_UID + " TEXT,"
-            + SingleMWRAPRE.COLUMN__UUID + " TEXT,"
-            + SingleMWRAPRE.COLUMN_FORMDATE + " TEXT,"
-            + SingleMWRAPRE.COLUMN_DEVICEID + " TEXT,"
-            + SingleMWRAPRE.COLUMN_USER + " TEXT,"
-            + SingleMWRAPRE.COLUMN_SE2 + " TEXT,"
-            + SingleMWRAPRE.COLUMN_DEVICETAGID + " TEXT,"
-            + SingleMWRAPRE.COLUMN_SYNCED + " TEXT,"
-            + SingleMWRAPRE.COLUMN_SYNCED_DATE + " TEXT );";
+    public static final String SQL_CREATE_MWRAPRE_TABLE = "CREATE TABLE " + hbTable.TABLE_NAME + "("
+            + hbTable._ID + " INTEGER PRIMARY KEY AUTOINCREMENT,"
+            + hbTable.COLUMN_UID + " TEXT,"
+            + hbTable.COLUMN__UUID + " TEXT,"
+            + hbTable.COLUMN_FORMDATE + " TEXT,"
+            + hbTable.COLUMN_DEVICEID + " TEXT,"
+            + hbTable.COLUMN_USER + " TEXT,"
+            + hbTable.COLUMN_SE2 + " TEXT,"
+            + hbTable.COLUMN_DEVICETAGID + " TEXT,"
+            + hbTable.COLUMN_SYNCED + " TEXT,"
+            + hbTable.COLUMN_SYNCED_DATE + " TEXT );";
 
     public static final String SQL_CREATE_CHILD_TABLE = "CREATE TABLE " + SingleChild.TABLE_NAME + "("
             + SingleChild._ID + " INTEGER PRIMARY KEY AUTOINCREMENT,"
@@ -175,6 +175,7 @@ public final class CreateTable {
             + SingleAnthro.COLUMN_FORMDATE + " TEXT,"
             + SingleAnthro.COLUMN_USER + " TEXT,"
             + SingleAnthro.COLUMN_SK1 + " TEXT,"
+            + SingleAnthro.COLUMN_FORMTYPE + " TEXT,"
             + SingleAnthro.COLUMN_DEVICETAGID + " TEXT,"
             + SingleAnthro.COLUMN_ISTATUS + " TEXT,"
             + SingleAnthro.COLUMN_SYNCED + " TEXT,"
