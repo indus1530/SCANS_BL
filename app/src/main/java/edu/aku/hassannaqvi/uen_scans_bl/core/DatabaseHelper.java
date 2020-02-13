@@ -1162,7 +1162,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         return allMC;
     }
 
-    public Collection<FoodFreqContract> getUnsyncedKishMWRA() {
+    public Collection<FoodFreqContract> getUnsyncedFoodFrequency() {
         SQLiteDatabase db = this.getReadableDatabase();
         Cursor c = null;
         String[] columns = {

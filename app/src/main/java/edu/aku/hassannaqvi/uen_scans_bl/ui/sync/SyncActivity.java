@@ -184,13 +184,14 @@ public class SyncActivity extends AppCompatActivity implements SyncDevice.SyncDe
             }
             new SyncAllData(
                     this,
-                    "KISH MWRA",
-                    "updateSyncedKishMWRAForms",
-                    IndexMWRAContract.class,
+                    "Food Frequency",
+                    "updateSyncedFoodFreqForms",
+                    FoodFreqContract.class,
                     MainApp._HOST_URL + MainApp._SERVER_URL,
                     FoodFreqContract.SingleFoodFreq.TABLE_NAME,
-                    db.getUnsyncedKishMWRA(), 2, uploadListAdapter, uploadlist
+                    db.getUnsyncedFoodFrequency(), 2, uploadListAdapter, uploadlist
             ).execute();
+
             if (uploadlistActivityCreated) {
                 uploadmodel = new SyncModel();
                 uploadmodel.setstatusID(0);
@@ -198,12 +199,12 @@ public class SyncActivity extends AppCompatActivity implements SyncDevice.SyncDe
             }
             new SyncAllData(
                     this,
-                    "Pregnant MWRA",
-                    "updateSyncedPregMWRAForms",
-                    MWRA_PREContract.class,
+                    "Index MWRA",
+                    "updateSyncedMWRAForms",
+                    IndexMWRAContract.class,
                     MainApp._HOST_URL + MainApp._SERVER_URL,
-                    MWRA_PREContract.SingleMWRAPRE.TABLE_NAME,
-                    db.getUnsyncedPregMWRA(), 3, uploadListAdapter, uploadlist
+                    IndexMWRAContract.MWRATable.TABLE_NAME,
+                    db.getUnsyncedMWRA(), 3, uploadListAdapter, uploadlist
             ).execute();
 
             if (uploadlistActivityCreated) {
@@ -222,7 +223,7 @@ public class SyncActivity extends AppCompatActivity implements SyncDevice.SyncDe
             ).execute();
 
 
-            if (uploadlistActivityCreated) {
+          /*  if (uploadlistActivityCreated) {
                 uploadmodel = new SyncModel();
                 uploadmodel.setstatusID(0);
                 uploadlist.add(uploadmodel);
@@ -252,7 +253,7 @@ public class SyncActivity extends AppCompatActivity implements SyncDevice.SyncDe
                     db.getUnsyncedMWRA(), 6, uploadListAdapter, uploadlist
             ).execute();
 
-
+*/
             bi.noDataItem.setVisibility(View.GONE);
 
             uploadlistActivityCreated = false;
