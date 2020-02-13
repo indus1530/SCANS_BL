@@ -8,7 +8,6 @@ import android.app.Fragment;
 import android.app.FragmentTransaction;
 import android.app.ProgressDialog;
 import android.content.Context;
-import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.net.ConnectivityManager;
@@ -44,8 +43,8 @@ import edu.aku.hassannaqvi.uen_scans_bl.core.DatabaseHelper;
 import edu.aku.hassannaqvi.uen_scans_bl.core.MainApp;
 import edu.aku.hassannaqvi.uen_scans_bl.databinding.ActivityMainBinding;
 import edu.aku.hassannaqvi.uen_scans_bl.ui.sections.SectionA1Activity;
-import edu.aku.hassannaqvi.uen_scans_bl.ui.sections.SectionC4Activity;
 import edu.aku.hassannaqvi.uen_scans_bl.ui.sections.SectionK1Activity;
+import edu.aku.hassannaqvi.uen_scans_bl.ui.sections.SectionLActivity;
 import edu.aku.hassannaqvi.uen_scans_bl.ui.sync.SyncActivity;
 
 public class MainActivity extends AppCompatActivity {
@@ -89,24 +88,16 @@ public class MainActivity extends AppCompatActivity {
             input.setInputType(InputType.TYPE_CLASS_TEXT);
             builder.setView(input);
 
-            builder.setPositiveButton("OK", new DialogInterface.OnClickListener() {
-                @Override
-                public void onClick(DialogInterface dialog, int which) {
-                    m_Text = input.getText().toString();
-                    if (!m_Text.equals("")) {
-                        editor.putString("tagName", m_Text);
-                        editor.apply();
-                        MainApp.appInfo.setTagName(m_Text);
-                        dialog.dismiss();
-                    }
+            builder.setPositiveButton("OK", (dialog, which) -> {
+                m_Text = input.getText().toString();
+                if (!m_Text.equals("")) {
+                    editor.putString("tagName", m_Text);
+                    editor.apply();
+                    MainApp.appInfo.setTagName(m_Text);
+                    dialog.dismiss();
                 }
             });
-            builder.setNegativeButton("Cancel", new DialogInterface.OnClickListener() {
-                @Override
-                public void onClick(DialogInterface dialog, int which) {
-                    dialog.cancel();
-                }
-            });
+            builder.setNegativeButton("Cancel", (dialog, which) -> dialog.cancel());
 
             builder.show();
         }
@@ -279,7 +270,7 @@ public class MainActivity extends AppCompatActivity {
                 oF = new Intent(MainActivity.this, SectionK1Activity.class);
                 break;
             case R.id.formC:
-                oF = new Intent(MainActivity.this, SectionC4Activity.class);
+                oF = new Intent(MainActivity.this, SectionLActivity.class);
                 break;
         }
         startActivity(oF);
