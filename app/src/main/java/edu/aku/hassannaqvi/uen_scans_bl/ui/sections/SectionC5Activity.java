@@ -23,9 +23,7 @@ import edu.aku.hassannaqvi.uen_scans_bl.validator.ClearClass;
 
 public class SectionC5Activity extends AppCompatActivity {
 
-
     ActivitySectionC5Binding bi;
-
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -214,7 +212,6 @@ public class SectionC5Activity extends AppCompatActivity {
 
     private boolean formValidation() {
         return Validator.emptyCheckingContainer(this, bi.fldGrpSectionC5);
-
     }
 
 

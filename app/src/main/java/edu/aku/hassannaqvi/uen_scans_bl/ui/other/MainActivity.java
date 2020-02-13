@@ -44,6 +44,7 @@ import edu.aku.hassannaqvi.uen_scans_bl.core.DatabaseHelper;
 import edu.aku.hassannaqvi.uen_scans_bl.core.MainApp;
 import edu.aku.hassannaqvi.uen_scans_bl.databinding.ActivityMainBinding;
 import edu.aku.hassannaqvi.uen_scans_bl.ui.sections.SectionA1Activity;
+import edu.aku.hassannaqvi.uen_scans_bl.ui.sections.SectionC4Activity;
 import edu.aku.hassannaqvi.uen_scans_bl.ui.sections.SectionInfoActivity;
 import edu.aku.hassannaqvi.uen_scans_bl.ui.sync.SyncActivity;
 
@@ -278,7 +279,7 @@ public class MainActivity extends AppCompatActivity {
                 oF = new Intent(MainActivity.this, SectionInfoActivity.class);
                 break;
             case R.id.formC:
-                oF = new Intent(MainActivity.this, SectionInfoActivity.class);
+                oF = new Intent(MainActivity.this, SectionC4Activity.class);
                 break;
         }
         startActivity(oF);
