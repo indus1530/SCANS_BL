@@ -1,15 +1,25 @@
 package edu.aku.hassannaqvi.uen_scans_bl.viewmodel
 
-import android.os.AsyncTask
+import android.content.Context
+import android.content.Intent
 import edu.aku.hassannaqvi.uen_scans_bl.contracts.FamilyMembersContract
+import edu.aku.hassannaqvi.uen_scans_bl.core.MainApp
+import edu.aku.hassannaqvi.uen_scans_bl.ui.sections.SectionK2Activity
+import kotlinx.coroutines.*
 
-class MainRepository(var indexMWRA: FamilyMembersContract, var indexCHILD: FamilyMembersContract)
-    : AsyncTask<Void, Void, Void>() {
+class MainRepository(val context: Context, val item: MutableList<FamilyMembersContract>) {
 
-    override fun doInBackground(vararg params: Void?): Void {
-        TODO("not implemented") //To change body of created functions use File | Settings | File Templates.
+    init {
 
-        var a = 0
+        val result = GlobalScope.async { populateList() }
+
+        runBlocking {
+            context.startActivity(Intent(context, SectionK2Activity::class.java))
+        }
+
     }
 
+    private suspend fun populateList() = withContext(Dispatchers.IO) {
+        MainApp.mwraChildren = Pair(item.map { it.serialno.toInt() }, item.map { it.name })
+    }
 }

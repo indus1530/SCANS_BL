@@ -103,7 +103,7 @@ class FamilyMembersListActivity : AppCompatActivity() {
 
                                         GlobalScope.launch {
                                             val indexMwraUpdate = async { updateKishMember(indexKishMWRA, 1) }
-                                            val indexChildUpdate = async { updateKishMember(indexKishMWRAChild, 3) }
+                                            val indexChildUpdate = async { updateKishMember(indexKishMWRAChild, 2) }
                                             if (indexMwraUpdate.await().let { true } and indexChildUpdate.await().let { true }) {
                                                 startActivity(Intent(this@FamilyMembersListActivity, SectionA31Activity::class.java))
                                             }

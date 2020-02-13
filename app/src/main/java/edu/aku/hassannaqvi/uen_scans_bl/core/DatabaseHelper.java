@@ -294,6 +294,57 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         }
     }
 
+    //Get BLRandom data
+    public BLRandomContract getHHFromBLRandom(String subAreaCode, String hh) {
+        SQLiteDatabase db = this.getReadableDatabase();
+        Cursor c = null;
+        String[] columns = {
+                SingleRandomHH.COLUMN_ID,
+                SingleRandomHH.COLUMN_LUID,
+                SingleRandomHH.COLUMN_STRUCTURE_NO,
+                SingleRandomHH.COLUMN_FAMILY_EXT_CODE,
+                SingleRandomHH.COLUMN_HH,
+                SingleRandomHH.COLUMN_ENUM_BLOCK_CODE,
+                SingleRandomHH.COLUMN_RANDOMDT,
+                SingleRandomHH.COLUMN_HH_SELECTED_STRUCT,
+                SingleRandomHH.COLUMN_CONTACT,
+                SingleRandomHH.COLUMN_HH_HEAD,
+                SingleRandomHH.COLUMN_SNO_HH
+        };
+
+        String whereClause = SingleRandomHH.COLUMN_ENUM_BLOCK_CODE + "=? AND " + SingleRandomHH.COLUMN_HH + "=?";
+        String[] whereArgs = new String[]{subAreaCode, hh};
+        String groupBy = null;
+        String having = null;
+
+        String orderBy =
+                SingleRandomHH.COLUMN_ID + " ASC";
+
+        BLRandomContract allBL = null;
+        try {
+            c = db.query(
+                    SingleRandomHH.TABLE_NAME,  // The table to query
+                    columns,                   // The columns to return
+                    whereClause,               // The columns for the WHERE clause
+                    whereArgs,                 // The values for the WHERE clause
+                    groupBy,                   // don't group the rows
+                    having,                    // don't filter by row groups
+                    orderBy                    // The sort order
+            );
+            while (c.moveToNext()) {
+                allBL = new BLRandomContract().hydrate(c);
+            }
+        } finally {
+            if (c != null) {
+                c.close();
+            }
+            if (db != null) {
+                db.close();
+            }
+        }
+        return allBL;
+    }
+
     public Collection<TalukasContract> getAllTalukas() {
         SQLiteDatabase db = this.getReadableDatabase();
         Cursor c = null;
@@ -923,8 +974,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         String groupBy = null;
         String having = null;
 
-        String orderBy =
-                SingleMember.COLUMN_ID + " ASC";
+        String orderBy = SingleMember.COLUMN_ID + " ASC";
 
         FamilyMembersContract allBL = null;
         try {
@@ -1077,6 +1127,25 @@ public class DatabaseHelper extends SQLiteOpenHelper {
 
         String selection = SingleMember._ID + " =? ";
         String[] selectionArgs = {String.valueOf(valueID)};
+
+        return db.update(FamilyMembersContract.SingleMember.TABLE_NAME,
+                values,
+                selection,
+                selectionArgs);
+    }
+
+    public int updatesFamilyMemberColumn(String column, String value, FamilyMembersContract fmc) {
+        SQLiteDatabase db = this.getReadableDatabase();
+
+        ContentValues values = new ContentValues();
+        values.put(column, value);
+
+        String selection = SingleMember.COLUMN_CLUSTERNO + " =? AND "
+                + SingleMember.COLUMN_HHNO + " =? AND "
+                + SingleMember.COLUMN_SERIAL_NO + " =? AND "
+                + SingleMember.COLUMN_UID + " =? AND "
+                + SingleMember.COLUMN_UUID + " =?";
+        String[] selectionArgs = {fmc.getClusterno(), fmc.getHhno(), fmc.getSerialno(), fmc.getUid(), fmc.getUuid()};
 
         return db.update(FamilyMembersContract.SingleMember.TABLE_NAME,
                 values,

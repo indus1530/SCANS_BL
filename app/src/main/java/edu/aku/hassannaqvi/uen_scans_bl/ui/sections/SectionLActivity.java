@@ -105,7 +105,6 @@ public class SectionLActivity extends AppCompatActivity {
 
 
     public void BtnEnd() {
-
         Util.openEndActivity(this);
     }
 
