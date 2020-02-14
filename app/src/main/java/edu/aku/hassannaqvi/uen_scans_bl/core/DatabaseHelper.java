@@ -1378,6 +1378,54 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         return allMC;
     }
 
+    public Collection<DentalContract> getUnsyncedDC() {
+        SQLiteDatabase db = this.getReadableDatabase();
+        Cursor c = null;
+        String[] columns = {
+                DentalContract.dentalTable._ID,
+                DentalContract.dentalTable.COLUMN_UID,
+                DentalContract.dentalTable.COLUMN__UUID,
+                DentalContract.dentalTable.COLUMN_DEVICEID,
+                DentalContract.dentalTable.COLUMN_FORMDATE,
+                DentalContract.dentalTable.COLUMN_USER,
+                DentalContract.dentalTable.COLUMN_SE2,
+                DentalContract.dentalTable.COLUMN_DEVICETAGID,
+
+        };
+        String whereClause = DentalContract.dentalTable.COLUMN_SYNCED + " is null";
+        String[] whereArgs = null;
+        String groupBy = null;
+        String having = null;
+
+        String orderBy =
+                DentalContract.dentalTable._ID + " ASC";
+
+        Collection<DentalContract> allDC = new ArrayList<DentalContract>();
+        try {
+            c = db.query(
+                    DentalContract.dentalTable.TABLE_NAME,  // The table to query
+                    columns,                   // The columns to return
+                    whereClause,               // The columns for the WHERE clause
+                    whereArgs,                 // The values for the WHERE clause
+                    groupBy,                   // don't group the rows
+                    having,                    // don't filter by row groups
+                    orderBy                    // The sort order
+            );
+            while (c.moveToNext()) {
+                DentalContract dc = new DentalContract();
+                allDC.add(dc.hydrate(c));
+            }
+        } finally {
+            if (c != null) {
+                c.close();
+            }
+            if (db != null) {
+                db.close();
+            }
+        }
+        return allDC;
+    }
+
     public Collection<HbContract> getUnsyncedHB() {
         SQLiteDatabase db = this.getReadableDatabase();
         Cursor c = null;
@@ -1424,6 +1472,54 @@ public class DatabaseHelper extends SQLiteOpenHelper {
             }
         }
         return allMC;
+    }
+
+    public Collection<VisionContract> getUnsyncedVC() {
+        SQLiteDatabase db = this.getReadableDatabase();
+        Cursor c = null;
+        String[] columns = {
+                VisionContract.visionTable._ID,
+                VisionContract.visionTable.COLUMN_UID,
+                VisionContract.visionTable.COLUMN__UUID,
+                VisionContract.visionTable.COLUMN_DEVICEID,
+                VisionContract.visionTable.COLUMN_FORMDATE,
+                VisionContract.visionTable.COLUMN_USER,
+                VisionContract.visionTable.COLUMN_SE2,
+                VisionContract.visionTable.COLUMN_DEVICETAGID,
+
+        };
+        String whereClause = VisionContract.visionTable.COLUMN_SYNCED + " is null";
+        String[] whereArgs = null;
+        String groupBy = null;
+        String having = null;
+
+        String orderBy =
+                VisionContract.visionTable._ID + " ASC";
+
+        Collection<VisionContract> allVC = new ArrayList<VisionContract>();
+        try {
+            c = db.query(
+                    VisionContract.visionTable.TABLE_NAME,  // The table to query
+                    columns,                   // The columns to return
+                    whereClause,               // The columns for the WHERE clause
+                    whereArgs,                 // The values for the WHERE clause
+                    groupBy,                   // don't group the rows
+                    having,                    // don't filter by row groups
+                    orderBy                    // The sort order
+            );
+            while (c.moveToNext()) {
+                VisionContract vc = new VisionContract();
+                allVC.add(vc.hydrate(c));
+            }
+        } finally {
+            if (c != null) {
+                c.close();
+            }
+            if (db != null) {
+                db.close();
+            }
+        }
+        return allVC;
     }
 
     public Collection<AnthroContract> getUnsyncedAnthros() {
@@ -1780,6 +1876,25 @@ public class DatabaseHelper extends SQLiteOpenHelper {
                 whereArgs);
     }
 
+    public void updateSyncedDCForms(String id) {
+        SQLiteDatabase db = this.getReadableDatabase();
+
+// New value for one column
+        ContentValues values = new ContentValues();
+        values.put(DentalContract.dentalTable.COLUMN_SYNCED, true);
+        values.put(DentalContract.dentalTable.COLUMN_SYNCED_DATE, new Date().toString());
+
+// Which row to update, based on the title
+        String where = DentalContract.dentalTable._ID + " = ?";
+        String[] whereArgs = {id};
+
+        int count = db.update(
+                DentalContract.dentalTable.TABLE_NAME,
+                values,
+                where,
+                whereArgs);
+    }
+
     public void updateSyncedHBForms(String id) {
         SQLiteDatabase db = this.getReadableDatabase();
 
@@ -1794,6 +1909,25 @@ public class DatabaseHelper extends SQLiteOpenHelper {
 
         int count = db.update(
                 hbTable.TABLE_NAME,
+                values,
+                where,
+                whereArgs);
+    }
+
+    public void updateSyncedVCForms(String id) {
+        SQLiteDatabase db = this.getReadableDatabase();
+
+// New value for one column
+        ContentValues values = new ContentValues();
+        values.put(VisionContract.visionTable.COLUMN_SYNCED, true);
+        values.put(VisionContract.visionTable.COLUMN_SYNCED_DATE, new Date().toString());
+
+// Which row to update, based on the title
+        String where = VisionContract.visionTable._ID + " = ?";
+        String[] whereArgs = {id};
+
+        int count = db.update(
+                VisionContract.visionTable.TABLE_NAME,
                 values,
                 where,
                 whereArgs);
