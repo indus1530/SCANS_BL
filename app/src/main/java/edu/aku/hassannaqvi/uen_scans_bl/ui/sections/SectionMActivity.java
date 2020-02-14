@@ -109,6 +109,13 @@ public class SectionMActivity extends AppCompatActivity {
 
         JSONObject json = new JSONObject();
 
+        json.put("hhno", MainApp.fc.getHhno());
+        json.put("cluster", MainApp.fc.getClusterCode());
+        json.put("fm_uid", MainApp.indexKishMWRAChild.getUid());
+        json.put("fm_serial", MainApp.indexKishMWRAChild.getSerialno());
+        json.put("mm_fm_uid", MainApp.indexKishMWRA.getUid());
+        json.put("mm_fm_serial", MainApp.indexKishMWRA.getSerialno());
+
         json.put("m101",
                 bi.m101a.isChecked() ? "1" :
                         bi.m101b.isChecked() ? "2" :
