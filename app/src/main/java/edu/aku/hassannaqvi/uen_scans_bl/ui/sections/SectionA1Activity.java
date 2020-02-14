@@ -133,13 +133,7 @@ public class SectionA1Activity extends AppCompatActivity implements Util.EndSecA
 
             @Override
             public void onTextChanged(CharSequence s, int start, int before, int count) {
-
-
-            }
-
-            @Override
-            public void afterTextChanged(Editable s) {
-                if (bi.a115.getText().hashCode() == s.hashCode()) {
+                if (Objects.requireNonNull(bi.a115.getText()).hashCode() == s.hashCode()) {
                     if (bi.a115.getText().toString().trim().length() > 0 && Integer.parseInt(bi.a115.getText().toString().trim()) > 17) {
                         bi.fldGrpCVa116.setVisibility(View.VISIBLE);
                         bi.fldGrpCVa117.setVisibility(View.VISIBLE);
@@ -158,7 +152,38 @@ public class SectionA1Activity extends AppCompatActivity implements Util.EndSecA
                     }
                 }
             }
+
+            @Override
+            public void afterTextChanged(Editable s) {
+            }
         });
+
+
+        bi.a116.setOnCheckedChangeListener(((radioGroup, i) -> {
+
+            if (i == bi.a116a.getId()) {
+                bi.fldGrpCVa117.setVisibility(View.VISIBLE);
+                bi.fldGrpCVa118.setVisibility(View.VISIBLE);
+            } else {
+                ClearClass.ClearAllFields(bi.fldGrpCVa117, null);
+                ClearClass.ClearAllFields(bi.fldGrpCVa118, null);
+                bi.fldGrpCVa117.setVisibility(View.GONE);
+                bi.fldGrpCVa118.setVisibility(View.GONE);
+            }
+
+        }));
+
+
+        bi.a117.setOnCheckedChangeListener(((radioGroup, i) -> {
+
+            if (i == bi.a117b.getId()) {
+                bi.fldGrpCVa118.setVisibility(View.VISIBLE);
+            } else {
+                ClearClass.ClearAllFields(bi.fldGrpCVa118, null);
+                bi.fldGrpCVa118.setVisibility(View.GONE);
+            }
+
+        }));
 
     }
 
@@ -172,7 +197,15 @@ public class SectionA1Activity extends AppCompatActivity implements Util.EndSecA
             }
             if (UpdateDB()) {
                 finish();
-                startActivity(new Intent(this, FamilyMembersListActivity.class).putExtra("sno", Integer.valueOf(bl.getSno())));
+                if (bi.a113b.isChecked()
+                        || (bi.a115.getText().toString().trim().length() > 0 && Integer.parseInt(bi.a115.getText().toString().trim()) < 18)
+                        || bi.a116b.isChecked()
+                        || bi.a117a.isChecked()
+                        || bi.a118a.isChecked()) {
+                    startActivity(new Intent(this, EndingActivity.class).putExtra("complete", true));
+                } else {
+                    startActivity(new Intent(this, FamilyMembersListActivity.class).putExtra("sno", Integer.valueOf(bl.getSno())));
+                }
             } else {
                 Toast.makeText(this, "Failed to Update Database!", Toast.LENGTH_SHORT).show();
             }

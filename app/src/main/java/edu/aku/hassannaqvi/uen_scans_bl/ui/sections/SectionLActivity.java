@@ -130,15 +130,14 @@ public class SectionLActivity extends AppCompatActivity {
         hb.setFormDate(new SimpleDateFormat("dd-MM-yy HH:mm").format(new Date().getTime()));
         hb.setUser(MainApp.userName);
 
-        JSONObject f1 = new JSONObject();
-
-        f1.put("hhno", MainApp.fc.getHhno());
-        f1.put("cluster", MainApp.fc.getClusterCode());
-        f1.put("fm_uid", MainApp.indexKishMWRAChild.getUid());
-        f1.put("fm_serial", MainApp.indexKishMWRAChild.getSerialno());
-        f1.put("mm_fm_uid", MainApp.indexKishMWRA.getUid());
-        f1.put("mm_fm_serial", MainApp.indexKishMWRA.getSerialno());
         JSONObject json = new JSONObject();
+
+        json.put("hhno", MainApp.fc.getHhno());
+        json.put("cluster", MainApp.fc.getClusterCode());
+        json.put("fm_uid", MainApp.indexKishMWRAChild.getUid());
+        json.put("fm_serial", MainApp.indexKishMWRAChild.getSerialno());
+        json.put("mm_fm_uid", MainApp.indexKishMWRA.getUid());
+        json.put("mm_fm_serial", MainApp.indexKishMWRA.getSerialno());
 
         json.put("l102",
                 bi.l102a.isChecked() ? "1" :
@@ -159,14 +158,6 @@ public class SectionLActivity extends AppCompatActivity {
 
     private boolean formValidation() {
         return Validator.emptyCheckingContainer(this, bi.fldGrpSectionL);
-
     }
-
-
-    @Override
-    public void onBackPressed() {
-        Toast.makeText(this, "You can't go back", Toast.LENGTH_SHORT).show();
-    }
-
 
 }

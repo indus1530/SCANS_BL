@@ -805,17 +805,17 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         SQLiteDatabase db = this.getWritableDatabase();
 
         ContentValues values = new ContentValues();
-        values.put(hbTable.COLUMN__UUID, dc.get_UUID());
-        values.put(hbTable.COLUMN_DEVICEID, dc.getDeviceId());
-        values.put(hbTable.COLUMN_FORMDATE, dc.getFormDate());
-        values.put(hbTable.COLUMN_USER, dc.getUser());
-        values.put(hbTable.COLUMN_DEVICETAGID, dc.getDevicetagID());
-        values.put(hbTable.COLUMN_SE2, dc.getsE2());
+        values.put(DentalContract.dentalTable.COLUMN__UUID, dc.get_UUID());
+        values.put(DentalContract.dentalTable.COLUMN_DEVICEID, dc.getDeviceId());
+        values.put(DentalContract.dentalTable.COLUMN_FORMDATE, dc.getFormDate());
+        values.put(DentalContract.dentalTable.COLUMN_USER, dc.getUser());
+        values.put(DentalContract.dentalTable.COLUMN_DEVICETAGID, dc.getDevicetagID());
+        values.put(DentalContract.dentalTable.COLUMN_SE2, dc.getsE2());
 
         // Insert the new row, returning the primary key value of the new row
         long newRowId;
         newRowId = db.insert(
-                hbTable.TABLE_NAME,
+                DentalContract.dentalTable.TABLE_NAME,
                 null,
                 values);
         return newRowId;
@@ -852,17 +852,17 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         // Create a new map of values, where column names are the keys
         ContentValues values = new ContentValues();
 //        values.put(MWRATable._ID, indexMwra.get_ID());
-        values.put(hbTable.COLUMN__UUID, vc.get_UUID());
-        values.put(hbTable.COLUMN_DEVICEID, vc.getDeviceId());
-        values.put(hbTable.COLUMN_FORMDATE, vc.getFormDate());
-        values.put(hbTable.COLUMN_USER, vc.getUser());
-        values.put(hbTable.COLUMN_DEVICETAGID, vc.getDevicetagID());
-        values.put(hbTable.COLUMN_SE2, vc.getsE2());
+        values.put(VisionContract.visionTable.COLUMN__UUID, vc.get_UUID());
+        values.put(VisionContract.visionTable.COLUMN_DEVICEID, vc.getDeviceId());
+        values.put(VisionContract.visionTable.COLUMN_FORMDATE, vc.getFormDate());
+        values.put(VisionContract.visionTable.COLUMN_USER, vc.getUser());
+        values.put(VisionContract.visionTable.COLUMN_DEVICETAGID, vc.getDevicetagID());
+        values.put(VisionContract.visionTable.COLUMN_SE2, vc.getsE2());
 
         // Insert the new row, returning the primary key value of the new row
         long newRowId;
         newRowId = db.insert(
-                hbTable.TABLE_NAME,
+                VisionContract.visionTable.TABLE_NAME,
                 null,
                 values);
         return newRowId;
@@ -1154,11 +1154,11 @@ public class DatabaseHelper extends SQLiteOpenHelper {
     }
 
     //Generic update DentalColumn
-    public int updatesDentalColumn(DentalContract dc) {
+    public int updatesDentalColumn(String column, String value, DentalContract dc) {
         SQLiteDatabase db = this.getReadableDatabase();
 
         ContentValues values = new ContentValues();
-        values.put(DentalContract.dentalTable.COLUMN_UID, dc.getUID());
+        values.put(column, value);
 
         String selection = DentalContract.dentalTable._ID + " =? ";
         String[] selectionArgs = {String.valueOf(dc.get_ID())};
@@ -1186,11 +1186,11 @@ public class DatabaseHelper extends SQLiteOpenHelper {
     }
 
     //Generic update VisionColumn
-    public int updatesVisionColumn(VisionContract vc) {
+    public int updatesVisionColumn(String column, String value, VisionContract vc) {
         SQLiteDatabase db = this.getReadableDatabase();
 
         ContentValues values = new ContentValues();
-        values.put(VisionContract.visionTable.COLUMN_UID, vc.getUID());
+        values.put(column, value);
 
         String selection = VisionContract.visionTable._ID + " =? ";
         String[] selectionArgs = {String.valueOf(vc.get_ID())};
