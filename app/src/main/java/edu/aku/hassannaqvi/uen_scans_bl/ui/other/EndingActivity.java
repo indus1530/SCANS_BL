@@ -25,7 +25,6 @@ public class EndingActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-
         bi = DataBindingUtil.setContentView(this, R.layout.activity_ending);
         bi.setCallback(this);
 
@@ -33,11 +32,27 @@ public class EndingActivity extends AppCompatActivity {
         boolean check = getIntent().getBooleanExtra("complete", false);
 
         if (check) {
-            bi.istatusa.setEnabled(true);
-            bi.istatusb.setEnabled(false);
-        } else {
             bi.istatusa.setEnabled(false);
             bi.istatusb.setEnabled(true);
+            bi.istatusb.setEnabled(true);
+            bi.istatusb.setEnabled(true);
+            bi.istatusb.setEnabled(true);
+            bi.istatusb.setEnabled(true);
+            bi.istatusb.setEnabled(true);
+            bi.istatusb.setEnabled(true);
+            bi.istatusb.setEnabled(true);
+            bi.istatusb.setEnabled(true);
+        } else {
+            bi.istatusa.setEnabled(true);
+            bi.istatusb.setEnabled(false);
+            bi.istatusb.setEnabled(false);
+            bi.istatusb.setEnabled(false);
+            bi.istatusb.setEnabled(false);
+            bi.istatusb.setEnabled(false);
+            bi.istatusb.setEnabled(false);
+            bi.istatusb.setEnabled(false);
+            bi.istatusb.setEnabled(false);
+            bi.istatusb.setEnabled(false);
         }
 
 //
@@ -69,7 +84,6 @@ public class EndingActivity extends AppCompatActivity {
                 : bi.istatusi.isChecked() ? "9"
                 : bi.istatus96.isChecked() ? "96"
                 : "0");
-
         MainApp.fc.setIstatus88x(bi.istatus96x.getText().toString());
         MainApp.fc.setEndingdatetime(new SimpleDateFormat("dd-MM-yy HH:mm").format(new Date().getTime()));
     }
