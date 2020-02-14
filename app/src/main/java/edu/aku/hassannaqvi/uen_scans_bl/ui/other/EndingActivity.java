@@ -89,7 +89,6 @@ public class EndingActivity extends AppCompatActivity {
     }
 
     public boolean UpdateDB() {
-
         DatabaseHelper db = MainApp.appInfo.getDbHelper();
         int updcount = db.updateEnding();
         if (updcount == 1) {
