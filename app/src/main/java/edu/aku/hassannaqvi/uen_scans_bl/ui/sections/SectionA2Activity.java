@@ -99,7 +99,7 @@ public class SectionA2Activity extends AppCompatActivity {
         if (serial == 1) {
             Clear.clearAllFields(bi.a203, false);
             bi.a203a.setChecked(true);
-            bi.a206.setMinvalue(15);
+            bi.a206.setMinvalue(18);
         }
 
     }
