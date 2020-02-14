@@ -63,7 +63,7 @@
 
     <string name="total">Total</string>
     <string name="mwra">MWRA</string>
-    <string name="under5">Child Under 5</string>
+    <string name="under5">Child Age 5 \- 10</string>
 
 
     <string name="ta1heading">SECTION A: HH Identification </string>
