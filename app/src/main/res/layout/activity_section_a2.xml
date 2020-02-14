@@ -49,10 +49,10 @@
                             android:layout_width="0dp"
                             android:layout_weight="1"
                             android:background="@color/dullWhile"
+                            android:text="@string/num"
                             android:textAlignment="center"
                             android:textColor="@color/black"
-                            android:textStyle="bold"
-                            android:text="@string/num" />
+                            android:textStyle="bold" />
 
                     </LinearLayout>
 
@@ -334,7 +334,6 @@
                                 <com.edittextpicker.aliazaz.EditTextPicker
                                     android:id="@+id/a205c"
                                     style="@style/textInput"
-                                    android:digits="0123456789"
                                     android:hint="@string/a205c"
                                     android:inputType="number"
                                     android:maxLength="4"
@@ -369,15 +368,36 @@
                             style="@style/i_textviewhint"
                             android:text="@string/a206hint" />
 
-                        <com.edittextpicker.aliazaz.EditTextPicker
-                            android:id="@+id/a206"
-                            style="@style/EditTextNum"
-                            android:enabled="false"
-                            android:hint="@string/num"
-                            android:maxLength="2"
-                            app:maxValue="99"
-                            app:minValue="0"
-                            app:type="range" />
+                        <LinearLayout
+                            style="@style/linearlayout_view_wt_bound"
+                            android:orientation="horizontal">
+
+                            <com.edittextpicker.aliazaz.EditTextPicker
+                                android:id="@+id/a206a"
+                                style="@style/EditTextNum"
+                                android:layout_width="0dp"
+                                android:layout_weight="1"
+                                android:enabled="false"
+                                android:hint="@string/month"
+                                android:maxLength="2"
+                                app:defaultValue="00"
+                                app:maxValue="11"
+                                app:minValue="1"
+                                app:type="range" />
+
+                            <com.edittextpicker.aliazaz.EditTextPicker
+                                android:id="@+id/a206"
+                                style="@style/EditTextNum"
+                                android:layout_width="0dp"
+                                android:layout_weight="1"
+                                android:enabled="false"
+                                android:hint="@string/year"
+                                android:maxLength="2"
+                                app:maxValue="99"
+                                app:minValue="0"
+                                app:type="range" />
+
+                        </LinearLayout>
 
                     </LinearLayout>
 
@@ -475,7 +495,8 @@
                     <!-- a209  Radio   -->
                     <androidx.cardview.widget.CardView
                         android:id="@+id/fldGrpCVa209"
-                        style="@style/cardView">
+                        style="@style/cardView"
+                        android:visibility="@{a208a.checked ? View.VISIBLE : View.GONE}">
 
                         <LinearLayout
                             android:layout_width="match_parent"
@@ -555,6 +576,56 @@
                                     style="@style/radiobutton"
                                     android:text="@string/a209m" />
 
+                                <RadioButton
+                                    android:id="@+id/a209n"
+                                    style="@style/radiobutton"
+                                    android:text="@string/a209n" />
+
+                                <RadioButton
+                                    android:id="@+id/a209o"
+                                    style="@style/radiobutton"
+                                    android:text="@string/a209o" />
+
+                                <RadioButton
+                                    android:id="@+id/a209p"
+                                    style="@style/radiobutton"
+                                    android:text="@string/a209p" />
+
+                                <RadioButton
+                                    android:id="@+id/a209q"
+                                    style="@style/radiobutton"
+                                    android:text="@string/a209q" />
+
+                                <RadioButton
+                                    android:id="@+id/a209r"
+                                    style="@style/radiobutton"
+                                    android:text="@string/a209r" />
+
+                                <RadioButton
+                                    android:id="@+id/a209s"
+                                    style="@style/radiobutton"
+                                    android:text="@string/a209s" />
+
+                                <RadioButton
+                                    android:id="@+id/a209t"
+                                    style="@style/radiobutton"
+                                    android:text="@string/a209t" />
+
+                                <RadioButton
+                                    android:id="@+id/a209u"
+                                    style="@style/radiobutton"
+                                    android:text="@string/a209u" />
+
+                                <RadioButton
+                                    android:id="@+id/a209v"
+                                    style="@style/radiobutton"
+                                    android:text="@string/a209v" />
+
+                                <RadioButton
+                                    android:id="@+id/a209w"
+                                    style="@style/radiobutton"
+                                    android:text="@string/a209w" />
+
                             </RadioGroup>
 
                         </LinearLayout>
@@ -628,6 +699,21 @@
                                     android:id="@+id/a210j"
                                     style="@style/radiobutton"
                                     android:text="@string/a210j" />
+
+                                <RadioButton
+                                    android:id="@+id/a210k"
+                                    style="@style/radiobutton"
+                                    android:text="@string/a210k" />
+
+                                <RadioButton
+                                    android:id="@+id/a210l"
+                                    style="@style/radiobutton"
+                                    android:text="@string/a210l" />
+
+                                <RadioButton
+                                    android:id="@+id/a210m"
+                                    style="@style/radiobutton"
+                                    android:text="@string/a210m" />
 
                             </RadioGroup>
 
