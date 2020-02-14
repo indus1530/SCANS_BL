@@ -946,7 +946,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
     }
 
     //Get FamilyMembers data for info activity
-    public FamilyMembersContract getFamilyMember(String cluster, String hhno, String kishType) {
+    public FamilyMembersContract getFamilyMember(String cluster, String hhno, String kishType, String mother_serial) {
         SQLiteDatabase db = this.getReadableDatabase();
         Cursor c = null;
         String[] columns = {
@@ -968,9 +968,17 @@ public class DatabaseHelper extends SQLiteOpenHelper {
 
         };
 
-        String whereClause = SingleMember.COLUMN_CLUSTERNO + "=? AND " + SingleMember.COLUMN_HHNO + "=? AND "
-                + SingleMember.COLUMN_KISH_SELECTED + "=?";
-        String[] whereArgs = new String[]{cluster, hhno, kishType};
+        String whereClause;
+        String[] whereArgs;
+        if (mother_serial != null) {
+            whereClause = SingleMember.COLUMN_CLUSTERNO + "=? AND " + SingleMember.COLUMN_HHNO + "=? AND "
+                    + SingleMember.COLUMN_KISH_SELECTED + "=? AND " + SingleMember.COLUMN_MOTHER_SERIAL + "=?";
+            whereArgs = new String[]{cluster, hhno, kishType, mother_serial};
+        } else {
+            whereClause = SingleMember.COLUMN_CLUSTERNO + "=? AND " + SingleMember.COLUMN_HHNO + "=? AND "
+                    + SingleMember.COLUMN_KISH_SELECTED + "=? ";
+            whereArgs = new String[]{cluster, hhno, kishType};
+        }
         String groupBy = null;
         String having = null;
 
@@ -1025,12 +1033,11 @@ public class DatabaseHelper extends SQLiteOpenHelper {
 
         String whereClause = SingleMember.COLUMN_CLUSTERNO + "=? AND " + SingleMember.COLUMN_HHNO + "=? AND "
                 + SingleMember.COLUMN_MOTHER_SERIAL + "=?";
-        String[] whereArgs = new String[]{cluster, hhno, motherSerial};
+        String[] whereArgs = {cluster, hhno, motherSerial};
         String groupBy = null;
         String having = null;
 
-        String orderBy =
-                SingleMember.COLUMN_ID + " ASC";
+        String orderBy = SingleMember.COLUMN_ID + " ASC";
 
         ArrayList<FamilyMembersContract> allBL = new ArrayList<>();
         try {
@@ -1271,21 +1278,21 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         SQLiteDatabase db = this.getReadableDatabase();
         Cursor c = null;
         String[] columns = {
-                FamilyMembersContract.SingleMember.COLUMN_ID,
+                SingleMember.COLUMN_ID,
                 SingleMember.COLUMN_UID,
                 SingleMember.COLUMN_UUID,
-                FamilyMembersContract.SingleMember.COLUMN_KISH_SELECTED,
-                FamilyMembersContract.SingleMember.COLUMN_CLUSTERNO,
+                SingleMember.COLUMN_KISH_SELECTED,
+                SingleMember.COLUMN_CLUSTERNO,
                 SingleMember.COLUMN_HHNO,
                 SingleMember.COLUMN_SERIAL_NO,
                 SingleMember.COLUMN_NAME,
                 SingleMember.COLUMN_RELATION_HH,
                 SingleMember.COLUMN_AGE,
-                FamilyMembersContract.SingleMember.COLUMN_MOTHER_NAME,
+                SingleMember.COLUMN_MOTHER_NAME,
                 SingleMember.COLUMN_MOTHER_SERIAL,
                 SingleMember.COLUMN_GENDER,
-                FamilyMembersContract.SingleMember.COLUMN_MARITAL,
-                FamilyMembersContract.SingleMember.COLUMN_SD,
+                SingleMember.COLUMN_MARITAL,
+                SingleMember.COLUMN_SD,
         };
         String whereClause = null;
         String[] whereArgs = null;

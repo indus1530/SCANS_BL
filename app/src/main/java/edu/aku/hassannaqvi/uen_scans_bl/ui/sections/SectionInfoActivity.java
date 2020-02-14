@@ -122,7 +122,7 @@ public class SectionInfoActivity extends AppCompatActivity {
 
     public void BtnCheckHH() {
         if (!Validator.emptyTextBox(this, bi.a112)) return;
-        MainApp.indexKishMWRA = db.getFamilyMember(bi.a101.getText().toString(), bi.a112.getText().toString().toUpperCase(), "1");
+        MainApp.indexKishMWRA = db.getFamilyMember(bi.a101.getText().toString(), bi.a112.getText().toString().toUpperCase(), "1", null);
         if (MainApp.indexKishMWRA == null) {
             Toast.makeText(this, "No Household found!", Toast.LENGTH_SHORT).show();
             bi.btnNext.setVisibility(View.GONE);
@@ -130,13 +130,13 @@ public class SectionInfoActivity extends AppCompatActivity {
         }
 
         if (selectedBTN == 1) {
-            famList = MainApp.appInfo.getDbHelper().getFamilyMemberList(bi.a101.getText().toString(), bi.a112.getText().toString().toUpperCase(), MainApp.indexKishMWRA.getMother_serial());
-            if (famList == null) {
+            famList = MainApp.appInfo.getDbHelper().getFamilyMemberList(bi.a101.getText().toString(), bi.a112.getText().toString().toUpperCase(), MainApp.indexKishMWRA.getSerialno());
+            if (famList.size() == 0) {
                 Toast.makeText(this, "No Members found!", Toast.LENGTH_SHORT).show();
                 return;
             }
         } else {
-            MainApp.indexKishMWRAChild = db.getFamilyMember(bi.a101.getText().toString(), bi.a112.getText().toString().toUpperCase(), "2");
+            MainApp.indexKishMWRAChild = db.getFamilyMember(bi.a101.getText().toString(), bi.a112.getText().toString().toUpperCase(), "2", MainApp.indexKishMWRA.getSerialno());
         }
 
         bi.btnNext.setVisibility(View.VISIBLE);
