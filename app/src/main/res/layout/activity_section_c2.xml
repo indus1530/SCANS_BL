@@ -83,6 +83,66 @@
 
             </androidx.cardview.widget.CardView>
 
+            <!-- c214  Radio   -->
+            <androidx.cardview.widget.CardView
+                android:id="@+id/fldGrpCVc214"
+                style="@style/cardView">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <TextView
+                        style="@style/i_textview"
+                        android:text="@string/c214" />
+
+                    <RadioGroup
+                        android:id="@+id/c214"
+                        style="@style/radiogroup"
+                        android:orientation="horizontal">
+
+                        <RadioButton
+                            android:id="@+id/c214a"
+                            style="@style/radiobutton"
+                            android:layout_width="0dp"
+                            android:layout_weight="1.2"
+                            android:text="@string/c214a" />
+
+                        <RadioButton
+                            android:id="@+id/c214b"
+                            style="@style/radiobutton"
+                            android:layout_width="0dp"
+                            android:layout_weight="1"
+                            android:text="@string/c214b" />
+
+                        <RadioButton
+                            android:id="@+id/c214c"
+                            style="@style/radiobutton"
+                            android:layout_width="0dp"
+                            android:layout_weight="1"
+                            android:text="@string/c214c" />
+
+                        <RadioButton
+                            android:id="@+id/c21496"
+                            style="@style/radiobutton"
+                            android:layout_width="0dp"
+                            android:layout_weight="1"
+                            android:text="@string/other" />
+
+                    </RadioGroup>
+
+                    <EditText
+                        android:id="@+id/c21496x"
+                        style="@style/EditTextAlpha"
+                        android:hint="@string/specify"
+                        android:text='@{c21496.checked ? c21496x.getText().toString() : "" }'
+                        android:visibility='@{c21496.checked ? View.VISIBLE : View.GONE }' />
+
+                </LinearLayout>
+
+            </androidx.cardview.widget.CardView>
+
             <!-- c202  Radio   -->
             <androidx.cardview.widget.CardView
                 android:id="@+id/fldGrpCVc202"

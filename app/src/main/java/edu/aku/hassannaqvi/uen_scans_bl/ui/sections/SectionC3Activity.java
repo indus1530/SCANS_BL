@@ -216,14 +216,6 @@ public class SectionC3Activity extends AppCompatActivity {
                                         bi.c314d.isChecked() ? "4" :
                                                 "0");
 
-        json.put("c315",
-                bi.c315a.isChecked() ? "1" :
-                        bi.c315b.isChecked() ? "2" :
-                                bi.c315c.isChecked() ? "3" :
-                                        bi.c31596.isChecked() ? "96" :
-                                                "0");
-        json.put("c31596x", bi.c31596x.getText().toString());
-
         MainApp.child.setsC3(String.valueOf(json));
     }
 
