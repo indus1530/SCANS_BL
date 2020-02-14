@@ -32,17 +32,6 @@ public class EndingActivity extends AppCompatActivity {
         boolean check = getIntent().getBooleanExtra("complete", false);
 
         if (check) {
-            bi.istatusa.setEnabled(false);
-            bi.istatusb.setEnabled(true);
-            bi.istatusb.setEnabled(true);
-            bi.istatusb.setEnabled(true);
-            bi.istatusb.setEnabled(true);
-            bi.istatusb.setEnabled(true);
-            bi.istatusb.setEnabled(true);
-            bi.istatusb.setEnabled(true);
-            bi.istatusb.setEnabled(true);
-            bi.istatusb.setEnabled(true);
-        } else {
             bi.istatusa.setEnabled(true);
             bi.istatusb.setEnabled(false);
             bi.istatusb.setEnabled(false);
@@ -53,6 +42,17 @@ public class EndingActivity extends AppCompatActivity {
             bi.istatusb.setEnabled(false);
             bi.istatusb.setEnabled(false);
             bi.istatusb.setEnabled(false);
+        } else {
+            bi.istatusa.setEnabled(false);
+            bi.istatusb.setEnabled(true);
+            bi.istatusb.setEnabled(true);
+            bi.istatusb.setEnabled(true);
+            bi.istatusb.setEnabled(true);
+            bi.istatusb.setEnabled(true);
+            bi.istatusb.setEnabled(true);
+            bi.istatusb.setEnabled(true);
+            bi.istatusb.setEnabled(true);
+            bi.istatusb.setEnabled(true);
         }
 
 //
