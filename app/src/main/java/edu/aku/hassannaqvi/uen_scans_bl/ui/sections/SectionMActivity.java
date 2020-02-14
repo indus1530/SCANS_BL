@@ -13,8 +13,11 @@ import com.validatorcrawler.aliazaz.Validator;
 import org.json.JSONException;
 import org.json.JSONObject;
 
+import java.text.SimpleDateFormat;
+import java.util.Date;
+
 import edu.aku.hassannaqvi.uen_scans_bl.R;
-import edu.aku.hassannaqvi.uen_scans_bl.contracts.ChildContract;
+import edu.aku.hassannaqvi.uen_scans_bl.contracts.VisionContract;
 import edu.aku.hassannaqvi.uen_scans_bl.core.DatabaseHelper;
 import edu.aku.hassannaqvi.uen_scans_bl.core.MainApp;
 import edu.aku.hassannaqvi.uen_scans_bl.databinding.ActivitySectionMBinding;
@@ -25,6 +28,7 @@ import edu.aku.hassannaqvi.uen_scans_bl.validator.ClearClass;
 public class SectionMActivity extends AppCompatActivity {
 
     ActivitySectionMBinding bi;
+    VisionContract vc;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -81,8 +85,11 @@ public class SectionMActivity extends AppCompatActivity {
 
     private boolean UpdateDB() {
         DatabaseHelper db = MainApp.appInfo.getDbHelper();
-        int updcount = db.updatesChildColumn(ChildContract.SingleChild.COLUMN_SM, MainApp.child.getsM());
-        if (updcount == 1) {
+        long rowID = db.addVision(vc);
+        if (rowID > 0) {
+            vc.set_ID(String.valueOf(rowID));
+            vc.setUID(vc.getDeviceId() + vc.get_ID());
+            db.updatesVisionColumn(VisionContract.visionTable.COLUMN_UID, vc.getUID(), vc);
             return true;
         } else {
             Toast.makeText(this, "Updating Database... ERROR!", Toast.LENGTH_SHORT).show();
@@ -93,17 +100,24 @@ public class SectionMActivity extends AppCompatActivity {
 
     private void SaveDraft() throws JSONException {
 
-        JSONObject f1 = new JSONObject();
+        vc = new VisionContract();
+        vc.set_UUID(MainApp.fc.get_UID());
+        vc.setDeviceId(MainApp.appInfo.getDeviceID());
+        vc.setDevicetagID(MainApp.appInfo.getTagName());
+        vc.setFormDate(new SimpleDateFormat("dd-MM-yy HH:mm").format(new Date().getTime()));
+        vc.setUser(MainApp.userName);
 
-        f1.put("m101",
+        JSONObject json = new JSONObject();
+
+        json.put("m101",
                 bi.m101a.isChecked() ? "1" :
                         bi.m101b.isChecked() ? "2" :
                                 "0");
 
-        f1.put("m102a", bi.m102a.getText().toString());
-        f1.put("m102b", bi.m102b.getText().toString());
+        json.put("m102a", bi.m102a.getText().toString());
+        json.put("m102b", bi.m102b.getText().toString());
 
-        MainApp.child.setsM(String.valueOf(f1));
+        vc.setsE2(String.valueOf(json));
 
     }
 
@@ -111,12 +125,6 @@ public class SectionMActivity extends AppCompatActivity {
     private boolean formValidation() {
         return Validator.emptyCheckingContainer(this, bi.fldGrpSectionM);
 
-    }
-
-
-    @Override
-    public void onBackPressed() {
-        Toast.makeText(this, "You can't go back", Toast.LENGTH_SHORT).show();
     }
 
 
