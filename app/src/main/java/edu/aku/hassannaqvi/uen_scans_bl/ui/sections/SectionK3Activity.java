@@ -2,13 +2,17 @@ package edu.aku.hassannaqvi.uen_scans_bl.ui.sections;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.text.Editable;
+import android.text.TextWatcher;
 import android.widget.ArrayAdapter;
+import android.widget.RadioGroup;
 import android.widget.Spinner;
 import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.databinding.DataBindingUtil;
 
+import com.edittextpicker.aliazaz.EditTextPicker;
 import com.validatorcrawler.aliazaz.Validator;
 
 import org.json.JSONException;
@@ -64,6 +68,62 @@ public class SectionK3Activity extends AppCompatActivity {
                 ClearClass.ClearAllFields(bi.fldGrpCVk228, null);
             }
         }));
+
+        RadioGroup[] otherRadioGroup = new RadioGroup[]{bi.k223, bi.k227};
+        for (RadioGroup rdp : otherRadioGroup) {
+            for (int i = 0; i < rdp.getChildCount(); i++) {
+                rdp.getChildAt(i).setEnabled(false);
+            }
+        }
+
+        EditTextPicker[] txt209_2012 = new EditTextPicker[]{bi.k221a, bi.k222a};
+        EditTextPicker[] txt213_2016 = new EditTextPicker[]{bi.k224a, bi.k225a};
+
+        for (EditTextPicker txt : txt209_2012) {
+            txt.addTextChangedListener(new TextWatcher() {
+                @Override
+                public void beforeTextChanged(CharSequence s, int start, int count, int after) {
+
+                }
+
+                @Override
+                public void onTextChanged(CharSequence s, int start, int before, int count) {
+                    bi.k223.clearCheck();
+                    if (bi.k221a.getText().toString().isEmpty() || bi.k222a.getText().toString().isEmpty())
+                        return;
+                    double value = Math.abs(Double.valueOf(bi.k221a.getText().toString()) - Double.valueOf(bi.k222a.getText().toString()));
+                    bi.k223.check(value < 0.6 ? bi.k223a.getId() : bi.k223b.getId());
+                }
+
+                @Override
+                public void afterTextChanged(Editable s) {
+
+                }
+            });
+        }
+
+        for (EditTextPicker txt : txt213_2016) {
+            txt.addTextChangedListener(new TextWatcher() {
+                @Override
+                public void beforeTextChanged(CharSequence s, int start, int count, int after) {
+
+                }
+
+                @Override
+                public void onTextChanged(CharSequence s, int start, int before, int count) {
+                    bi.k227.clearCheck();
+                    if (bi.k224a.getText().toString().isEmpty() || bi.k225a.getText().toString().isEmpty())
+                        return;
+                    double value = Math.abs(Double.valueOf(bi.k224a.getText().toString()) - Double.valueOf(bi.k225a.getText().toString()));
+                    bi.k227.check(value < 0.1 ? bi.k227a.getId() : bi.k227b.getId());
+                }
+
+                @Override
+                public void afterTextChanged(Editable s) {
+
+                }
+            });
+        }
 
     }
 

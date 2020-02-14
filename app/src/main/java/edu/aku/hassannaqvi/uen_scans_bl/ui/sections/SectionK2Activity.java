@@ -2,15 +2,19 @@ package edu.aku.hassannaqvi.uen_scans_bl.ui.sections;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.text.Editable;
+import android.text.TextWatcher;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
+import android.widget.RadioGroup;
 import android.widget.Spinner;
 import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.databinding.DataBindingUtil;
 
+import com.edittextpicker.aliazaz.EditTextPicker;
 import com.validatorcrawler.aliazaz.Validator;
 
 import org.json.JSONException;
@@ -80,6 +84,87 @@ public class SectionK2Activity extends AppCompatActivity implements Util.EndSecA
             public void onNothingSelected(AdapterView<?> adapterView) {
             }
         });
+
+        RadioGroup[] otherRadioGroup = new RadioGroup[]{bi.k211, bi.k215, bi.k219};
+        for (RadioGroup rdp : otherRadioGroup) {
+            for (int i = 0; i < rdp.getChildCount(); i++) {
+                rdp.getChildAt(i).setEnabled(false);
+            }
+        }
+
+        EditTextPicker[] txt209_2012 = new EditTextPicker[]{bi.k209a, bi.k210a};
+        EditTextPicker[] txt213_2016 = new EditTextPicker[]{bi.k213a, bi.k214a};
+        EditTextPicker[] txt217_2020 = new EditTextPicker[]{bi.k217a, bi.k218a};
+
+        for (EditTextPicker txt : txt209_2012) {
+            txt.addTextChangedListener(new TextWatcher() {
+                @Override
+                public void beforeTextChanged(CharSequence s, int start, int count, int after) {
+
+                }
+
+                @Override
+                public void onTextChanged(CharSequence s, int start, int before, int count) {
+                    bi.k211.clearCheck();
+                    if (bi.k209a.getText().toString().isEmpty() || bi.k210a.getText().toString().isEmpty())
+                        return;
+                    double value = Math.abs(Double.valueOf(bi.k209a.getText().toString()) - Double.valueOf(bi.k210a.getText().toString()));
+                    bi.k211.check(value < 0.6 ? bi.k211a.getId() : bi.k211b.getId());
+                }
+
+                @Override
+                public void afterTextChanged(Editable s) {
+
+                }
+            });
+        }
+
+        for (EditTextPicker txt : txt213_2016) {
+            txt.addTextChangedListener(new TextWatcher() {
+                @Override
+                public void beforeTextChanged(CharSequence s, int start, int count, int after) {
+
+                }
+
+                @Override
+                public void onTextChanged(CharSequence s, int start, int before, int count) {
+                    bi.k215.clearCheck();
+                    if (bi.k213a.getText().toString().isEmpty() || bi.k214a.getText().toString().isEmpty())
+                        return;
+                    double value = Math.abs(Double.valueOf(bi.k213a.getText().toString()) - Double.valueOf(bi.k214a.getText().toString()));
+                    bi.k215.check(value < 0.1 ? bi.k215a.getId() : bi.k215b.getId());
+                }
+
+                @Override
+                public void afterTextChanged(Editable s) {
+
+                }
+            });
+        }
+
+        for (EditTextPicker txt : txt217_2020) {
+            txt.addTextChangedListener(new TextWatcher() {
+                @Override
+                public void beforeTextChanged(CharSequence s, int start, int count, int after) {
+
+                }
+
+                @Override
+                public void onTextChanged(CharSequence s, int start, int before, int count) {
+                    bi.k219.clearCheck();
+                    if (bi.k217a.getText().toString().isEmpty() || bi.k218a.getText().toString().isEmpty())
+                        return;
+                    double value = Math.abs(Double.valueOf(bi.k217a.getText().toString()) - Double.valueOf(bi.k218a.getText().toString()));
+                    bi.k219.check(value < 0.3 ? bi.k219a.getId() : bi.k219b.getId());
+                }
+
+                @Override
+                public void afterTextChanged(Editable s) {
+
+                }
+            });
+        }
+
     }
 
     private void setupSkips() {
