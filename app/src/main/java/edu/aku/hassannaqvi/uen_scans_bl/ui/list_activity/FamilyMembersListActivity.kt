@@ -100,17 +100,16 @@ class FamilyMembersListActivity : AppCompatActivity() {
                                             mainVModel.childLstU5to10.value?.get(kishSelectedMWRA(intent.getIntExtra("sno", 0),
                                                     childLst.size) - 1)
                                         }
-                                    }
 
-                                    startActivity(Intent(this, when {
-                                        indexKishMWRA != null -> SectionA31Activity::class.java
-                                        else -> EndingActivity::class.java
-                                    }).putExtra("complete", true))
-
-
-                                    GlobalScope.launch {
-                                        val indexMwraUpdate = async { }
-                                    }
+                                        GlobalScope.launch {
+                                            val indexMwraUpdate = async { updateKishMember(indexKishMWRA, 1) }
+                                            val indexChildUpdate = async { updateKishMember(indexKishMWRAChild, 2) }
+                                            if (indexMwraUpdate.await().let { true } and indexChildUpdate.await().let { true }) {
+                                                startActivity(Intent(this@FamilyMembersListActivity, SectionA31Activity::class.java))
+                                            }
+                                        }
+                                    } else
+                                        startActivity(Intent(this@FamilyMembersListActivity, EndingActivity::class.java).putExtra("complete", true))
 
                                 }
                                 else -> Util.openEndActivity(this)
@@ -191,10 +190,10 @@ class FamilyMembersListActivity : AppCompatActivity() {
         Toast.makeText(this, "Press top back button.", Toast.LENGTH_SHORT).show()
     }
 
-    suspend fun updateKishMember() {
-        withContext(Dispatchers.IO) {
-            db
-        }
-    }
+    suspend fun updateKishMember(fmc: FamilyMembersContract, int: Int) =
+            withContext(Dispatchers.IO) {
+                db.updatesFamilyMemberColumn(FamilyMembersContract.SingleMember.COLUMN_KISH_SELECTED, int.toString(), fmc)
+            }
+
 
 }

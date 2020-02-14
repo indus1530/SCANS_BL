@@ -21,6 +21,7 @@ import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
 
+import edu.aku.hassannaqvi.uen_scans_bl.CONSTANTS;
 import edu.aku.hassannaqvi.uen_scans_bl.R;
 import edu.aku.hassannaqvi.uen_scans_bl.contracts.AnthroContract;
 import edu.aku.hassannaqvi.uen_scans_bl.contracts.FamilyMembersContract;
@@ -151,18 +152,19 @@ public class SectionK2Activity extends AppCompatActivity implements Util.EndSecA
     private void SaveDraft() throws JSONException {
 
         anthro = new AnthroContract();
-        anthro.set_UUID(MainApp.fc.get_UID());
+        anthro.set_UUID(fmc_child.getUuid());
         anthro.setDeviceId(MainApp.appInfo.getDeviceID());
         anthro.setFormDate(new SimpleDateFormat("dd-MM-yy HH:mm").format(new Date().getTime()));
         anthro.setUser(MainApp.userName);
         anthro.setDevicetagID(MainApp.appInfo.getTagName());
+        anthro.setFormType(CONSTANTS.ANTHRO_K2);
 
         JSONObject json = new JSONObject();
         json.put("fm_uid", fmc_child.getUid());
         json.put("fm_serial", fmc_child.getSerialno());
         json.put("mm_serial", fmc_child.getMother_serial());
-        json.put("hhno", MainApp.fc.getHhno());
-        json.put("cluster", MainApp.fc.getClusterCode());
+        json.put("hhno", fmc_child.getHhno());
+        json.put("cluster", fmc_child.getClusterno());
 
         json.put("k201", bi.k201.getSelectedItem().toString());
 

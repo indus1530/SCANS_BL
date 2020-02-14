@@ -34,6 +34,7 @@ import java.util.Collection;
 import java.util.Date;
 import java.util.Map;
 
+import edu.aku.hassannaqvi.uen_scans_bl.CONSTANTS;
 import edu.aku.hassannaqvi.uen_scans_bl.R;
 import edu.aku.hassannaqvi.uen_scans_bl.contracts.AreasContract;
 import edu.aku.hassannaqvi.uen_scans_bl.contracts.FormsContract;
@@ -43,8 +44,7 @@ import edu.aku.hassannaqvi.uen_scans_bl.core.DatabaseHelper;
 import edu.aku.hassannaqvi.uen_scans_bl.core.MainApp;
 import edu.aku.hassannaqvi.uen_scans_bl.databinding.ActivityMainBinding;
 import edu.aku.hassannaqvi.uen_scans_bl.ui.sections.SectionA1Activity;
-import edu.aku.hassannaqvi.uen_scans_bl.ui.sections.SectionK1Activity;
-import edu.aku.hassannaqvi.uen_scans_bl.ui.sections.SectionLActivity;
+import edu.aku.hassannaqvi.uen_scans_bl.ui.sections.SectionInfoActivity;
 import edu.aku.hassannaqvi.uen_scans_bl.ui.sync.SyncActivity;
 
 public class MainActivity extends AppCompatActivity {
@@ -267,10 +267,10 @@ public class MainActivity extends AppCompatActivity {
                 oF = new Intent(MainActivity.this, SectionA1Activity.class);
                 break;
             case R.id.formB:
-                oF = new Intent(MainActivity.this, SectionK1Activity.class);
+                oF = new Intent(MainActivity.this, SectionInfoActivity.class).putExtra(CONSTANTS.MAIN_INTENT, CONSTANTS.ANTHRO);
                 break;
             case R.id.formC:
-                oF = new Intent(MainActivity.this, SectionLActivity.class);
+                oF = new Intent(MainActivity.this, SectionInfoActivity.class).putExtra(CONSTANTS.MAIN_INTENT, CONSTANTS.HB);
                 break;
         }
         startActivity(oF);

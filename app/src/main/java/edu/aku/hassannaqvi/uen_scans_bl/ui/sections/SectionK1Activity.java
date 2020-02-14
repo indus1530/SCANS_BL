@@ -20,6 +20,7 @@ import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
 
+import edu.aku.hassannaqvi.uen_scans_bl.CONSTANTS;
 import edu.aku.hassannaqvi.uen_scans_bl.R;
 import edu.aku.hassannaqvi.uen_scans_bl.contracts.AnthroContract;
 import edu.aku.hassannaqvi.uen_scans_bl.contracts.FamilyMembersContract;
@@ -132,6 +133,7 @@ public class SectionK1Activity extends AppCompatActivity implements Util.EndSecA
         anthro.setFormDate(new SimpleDateFormat("dd-MM-yy HH:mm").format(new Date().getTime()));
         anthro.setUser(MainApp.userName);
         anthro.setDevicetagID(MainApp.appInfo.getTagName());
+        anthro.setFormType(CONSTANTS.ANTHRO_K1);
 
         JSONObject json = new JSONObject();
         json.put("fm_uid", fmc_child.getUid());
