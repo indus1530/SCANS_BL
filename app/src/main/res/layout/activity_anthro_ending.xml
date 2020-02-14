@@ -26,11 +26,6 @@
             android:layoutDirection="ltr"
             android:orientation="vertical">
 
-
-            <TextView
-                style="@style/HeadingTitle"
-                android:text="Anthro Ending" />
-
             <!-- k208  Radio   -->
             <androidx.cardview.widget.CardView
                 android:id="@+id/fldGrpCVk208"

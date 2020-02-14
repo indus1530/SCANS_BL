@@ -23,6 +23,7 @@ import edu.aku.hassannaqvi.uen_scans_bl.contracts.HbContract;
 import edu.aku.hassannaqvi.uen_scans_bl.core.DatabaseHelper;
 import edu.aku.hassannaqvi.uen_scans_bl.core.MainApp;
 import edu.aku.hassannaqvi.uen_scans_bl.databinding.ActivitySectionLBinding;
+import edu.aku.hassannaqvi.uen_scans_bl.ui.other.MainActivity;
 import edu.aku.hassannaqvi.uen_scans_bl.validator.ClearClass;
 
 public class SectionLActivity extends AppCompatActivity {
@@ -99,7 +100,8 @@ public class SectionLActivity extends AppCompatActivity {
             }
             if (UpdateDB()) {
                 finish();
-                startActivity(new Intent(this, SectionMActivity.class));
+                startActivity(new Intent(this, MainActivity.class)
+                        .setFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK).setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP).setFlags(Intent.FLAG_ACTIVITY_NEW_TASK));
             } else {
                 Toast.makeText(this, "Failed to Update Database!", Toast.LENGTH_SHORT).show();
             }

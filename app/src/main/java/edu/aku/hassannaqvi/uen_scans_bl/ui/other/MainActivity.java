@@ -272,6 +272,9 @@ public class MainActivity extends AppCompatActivity {
             case R.id.formC:
                 oF = new Intent(MainActivity.this, SectionInfoActivity.class).putExtra(CONSTANTS.MAIN_INTENT, CONSTANTS.HB);
                 break;
+            case R.id.formD:
+                oF = new Intent(MainActivity.this, SectionInfoActivity.class).putExtra(CONSTANTS.MAIN_INTENT, CONSTANTS.VISION);
+                break;
         }
         startActivity(oF);
     }

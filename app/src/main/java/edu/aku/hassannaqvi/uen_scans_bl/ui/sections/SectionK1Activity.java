@@ -75,7 +75,8 @@ public class SectionK1Activity extends AppCompatActivity implements Util.EndSecA
             @Override
             public void onItemSelected(AdapterView<?> adapterView, View view, int i, long l) {
                 position = i;
-                fmc_child = mainVModel.getMemberInfo(mwraChildren.getFirst().get(bi.k100.getSelectedItemPosition() - 1));
+                if (i == 0) return;
+                fmc_child = mainVModel.getMemberInfo(mwraChildren.getFirst().get(i - 1));
             }
 
             @Override

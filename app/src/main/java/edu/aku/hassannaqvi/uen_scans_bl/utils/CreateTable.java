@@ -8,7 +8,6 @@ import edu.aku.hassannaqvi.uen_scans_bl.contracts.EnumBlockContract;
 import edu.aku.hassannaqvi.uen_scans_bl.contracts.FamilyMembersContract;
 import edu.aku.hassannaqvi.uen_scans_bl.contracts.FoodFreqContract.SingleFoodFreq;
 import edu.aku.hassannaqvi.uen_scans_bl.contracts.FormsContract;
-import edu.aku.hassannaqvi.uen_scans_bl.contracts.HbContract;
 import edu.aku.hassannaqvi.uen_scans_bl.contracts.HbContract.hbTable;
 import edu.aku.hassannaqvi.uen_scans_bl.contracts.IndexMWRAContract.MWRATable;
 import edu.aku.hassannaqvi.uen_scans_bl.contracts.UsersContract;
@@ -137,7 +136,7 @@ public final class CreateTable {
             + MWRATable.COLUMN_SYNCED + " TEXT,"
             + MWRATable.COLUMN_SYNCED_DATE + " TEXT );";
 
-    public static final String SQL_CREATE_MWRAPRE_TABLE = "CREATE TABLE " + hbTable.TABLE_NAME + "("
+    public static final String SQL_CREATE_HB = "CREATE TABLE " + hbTable.TABLE_NAME + "("
             + hbTable._ID + " INTEGER PRIMARY KEY AUTOINCREMENT,"
             + hbTable.COLUMN_UID + " TEXT,"
             + hbTable.COLUMN__UUID + " TEXT,"
@@ -170,7 +169,7 @@ public final class CreateTable {
             + SingleChild.COLUMN_SYNCED_DATE + " TEXT );";
 
 
-    public static final String SQL_CREATE_MORTALITY = "CREATE TABLE " + SingleAnthro.TABLE_NAME + "("
+    public static final String SQL_CREATE_ANTHRO = "CREATE TABLE " + SingleAnthro.TABLE_NAME + "("
             + SingleAnthro._ID + " INTEGER PRIMARY KEY AUTOINCREMENT,"
             + SingleAnthro.COLUMN_UID + " TEXT,"
             + SingleAnthro.COLUMN__UUID + " TEXT,"
@@ -230,18 +229,5 @@ public final class CreateTable {
             + DentalContract.dentalTable.COLUMN_DEVICETAGID + " TEXT,"
             + DentalContract.dentalTable.COLUMN_SYNCED + " TEXT,"
             + DentalContract.dentalTable.COLUMN_SYNCED_DATE + " TEXT );";
-
-
-    public static final String SQL_CREATE_HB = "CREATE TABLE " + HbContract.hbTable.TABLE_NAME + "("
-            + HbContract.hbTable.COLUMN__ID + " INTEGER PRIMARY KEY AUTOINCREMENT,"
-            + HbContract.hbTable.COLUMN_UID + " TEXT,"
-            + HbContract.hbTable.COLUMN__UUID + " TEXT,"
-            + HbContract.hbTable.COLUMN_DEVICEID + " TEXT,"
-            + HbContract.hbTable.COLUMN_FORMDATE + " TEXT,"
-            + HbContract.hbTable.COLUMN_USER + " TEXT,"
-            + HbContract.hbTable.COLUMN_SE2 + " TEXT,"
-            + HbContract.hbTable.COLUMN_DEVICETAGID + " TEXT,"
-            + HbContract.hbTable.COLUMN_SYNCED + " TEXT,"
-            + HbContract.hbTable.COLUMN_SYNCED_DATE + " TEXT );";
 
 }
