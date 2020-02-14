@@ -130,13 +130,13 @@ public class SectionInfoActivity extends AppCompatActivity {
         }
 
         if (selectedBTN == 1) {
-            famList = MainApp.appInfo.getDbHelper().getFamilyMemberList(bi.a101.getText().toString(), bi.a112.getText().toString().toUpperCase(), MainApp.indexKishMWRA.getSerialno());
+            famList = MainApp.appInfo.getDbHelper().getFamilyMemberList(bi.a101.getText().toString(), bi.a112.getText().toString().toUpperCase(), MainApp.indexKishMWRA);
             if (famList.size() == 0) {
                 Toast.makeText(this, "No Members found!", Toast.LENGTH_SHORT).show();
                 return;
             }
         } else {
-            MainApp.indexKishMWRAChild = db.getFamilyMember(bi.a101.getText().toString(), bi.a112.getText().toString().toUpperCase(), "2", MainApp.indexKishMWRA.getSerialno());
+            MainApp.indexKishMWRAChild = db.getFamilyMember(bi.a101.getText().toString(), bi.a112.getText().toString().toUpperCase(), "2", MainApp.indexKishMWRA);
         }
         Toast.makeText(this, "Members Found!", Toast.LENGTH_SHORT).show();
         bi.btnNext.setVisibility(View.VISIBLE);

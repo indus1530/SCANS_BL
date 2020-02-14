@@ -1522,7 +1522,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         return allVC;
     }
 
-    public Collection<AnthroContract> getUnsyncedAnthros() {
+    public Collection<AnthroContract> getUnsyncedAnthros(String formType) {
         SQLiteDatabase db = this.getReadableDatabase();
         Cursor c = null;
         String[] columns = {
@@ -1537,8 +1537,8 @@ public class DatabaseHelper extends SQLiteOpenHelper {
                 SingleAnthro.COLUMN_SK1,
                 SingleAnthro.COLUMN_FORMTYPE,
         };
-        String whereClause = hbTable.COLUMN_SYNCED + " is null";
-        String[] whereArgs = null;
+        String whereClause = hbTable.COLUMN_SYNCED + " is null AND " + SingleAnthro.COLUMN_FORMTYPE + "=?";
+        String[] whereArgs = {formType};
         String groupBy = null;
         String having = null;
 

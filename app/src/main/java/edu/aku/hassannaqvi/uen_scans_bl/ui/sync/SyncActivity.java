@@ -34,7 +34,6 @@ import edu.aku.hassannaqvi.uen_scans_bl.adapter.SyncListAdapter;
 import edu.aku.hassannaqvi.uen_scans_bl.adapter.UploadListAdapter;
 import edu.aku.hassannaqvi.uen_scans_bl.contracts.AnthroContract;
 import edu.aku.hassannaqvi.uen_scans_bl.contracts.ChildContract;
-import edu.aku.hassannaqvi.uen_scans_bl.contracts.DentalContract;
 import edu.aku.hassannaqvi.uen_scans_bl.contracts.FamilyMembersContract;
 import edu.aku.hassannaqvi.uen_scans_bl.contracts.FoodFreqContract;
 import edu.aku.hassannaqvi.uen_scans_bl.contracts.FormsContract;
@@ -216,12 +215,28 @@ public class SyncActivity extends AppCompatActivity implements SyncDevice.SyncDe
             }
             new SyncAllData(
                     this,
+                    "Section K1",
+                    "updateSyncedAnthroForms",
+                    AnthroContract.class,
+                    MainApp._HOST_URL + MainApp._SERVER_URL,
+                    AnthroContract.SingleAnthro.TABLE_NAME,
+                    db.getUnsyncedAnthros(CONSTANTS.ANTHRO_K1), 4, uploadListAdapter, uploadlist
+            ).execute();
+
+
+            if (uploadlistActivityCreated) {
+                uploadmodel = new SyncModel();
+                uploadmodel.setstatusID(0);
+                uploadlist.add(uploadmodel);
+            }
+            new SyncAllData(
+                    this,
                     "Anthro",
                     "updateSyncedAnthroForms",
                     AnthroContract.class,
                     MainApp._HOST_URL + MainApp._SERVER_URL,
                     AnthroContract.SingleAnthro.TABLE_NAME,
-                    db.getUnsyncedAnthros(), 4, uploadListAdapter, uploadlist
+                    db.getUnsyncedAnthros(CONSTANTS.ANTHRO_K2), 5, uploadListAdapter, uploadlist
             ).execute();
 
 
@@ -237,22 +252,7 @@ public class SyncActivity extends AppCompatActivity implements SyncDevice.SyncDe
                     FamilyMembersContract.class,
                     MainApp._HOST_URL + MainApp._SERVER_URL,
                     FamilyMembersContract.SingleMember.TABLE_NAME,
-                    db.getAllFamilyMembersForms(), 5, uploadListAdapter, uploadlist
-            ).execute();
-
-            if (uploadlistActivityCreated) {
-                uploadmodel = new SyncModel();
-                uploadmodel.setstatusID(0);
-                uploadlist.add(uploadmodel);
-            }
-            new SyncAllData(
-                    this,
-                    "Dental",
-                    "updateSyncedDCForms",
-                    DentalContract.class,
-                    MainApp._HOST_URL + MainApp._SERVER_URL,
-                    DentalContract.dentalTable.TABLE_NAME,
-                    db.getUnsyncedDC(), 6, uploadListAdapter, uploadlist
+                    db.getAllFamilyMembersForms(), 6, uploadListAdapter, uploadlist
             ).execute();
 
             if (uploadlistActivityCreated) {
@@ -267,7 +267,7 @@ public class SyncActivity extends AppCompatActivity implements SyncDevice.SyncDe
                     HbContract.class,
                     MainApp._HOST_URL + MainApp._SERVER_URL,
                     HbContract.hbTable.TABLE_NAME,
-                    db.getUnsyncedHB(), 6, uploadListAdapter, uploadlist
+                    db.getUnsyncedHB(), 7, uploadListAdapter, uploadlist
             ).execute();
 
             if (uploadlistActivityCreated) {
@@ -282,7 +282,7 @@ public class SyncActivity extends AppCompatActivity implements SyncDevice.SyncDe
                     VisionContract.class,
                     MainApp._HOST_URL + MainApp._SERVER_URL,
                     VisionContract.visionTable.TABLE_NAME,
-                    db.getUnsyncedVC(), 6, uploadListAdapter, uploadlist
+                    db.getUnsyncedVC(), 8, uploadListAdapter, uploadlist
             ).execute();
 
             bi.noDataItem.setVisibility(View.GONE);
