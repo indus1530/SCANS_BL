@@ -1170,11 +1170,11 @@ public class DatabaseHelper extends SQLiteOpenHelper {
     }
 
     //Generic update HBColumn
-    public int updatesHBColumn(HbContract hb) {
+    public int updatesHBColumn(String column, String value, HbContract hb) {
         SQLiteDatabase db = this.getReadableDatabase();
 
         ContentValues values = new ContentValues();
-        values.put(hbTable.COLUMN_UID, hb.getUID());
+        values.put(column, value);
 
         String selection = hbTable._ID + " =? ";
         String[] selectionArgs = {String.valueOf(hb.get_ID())};

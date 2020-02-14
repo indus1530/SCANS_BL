@@ -15,17 +15,20 @@ import com.validatorcrawler.aliazaz.Validator;
 import org.json.JSONException;
 import org.json.JSONObject;
 
+import java.text.SimpleDateFormat;
+import java.util.Date;
+
 import edu.aku.hassannaqvi.uen_scans_bl.R;
-import edu.aku.hassannaqvi.uen_scans_bl.contracts.ChildContract;
+import edu.aku.hassannaqvi.uen_scans_bl.contracts.HbContract;
 import edu.aku.hassannaqvi.uen_scans_bl.core.DatabaseHelper;
 import edu.aku.hassannaqvi.uen_scans_bl.core.MainApp;
 import edu.aku.hassannaqvi.uen_scans_bl.databinding.ActivitySectionLBinding;
-import edu.aku.hassannaqvi.uen_scans_bl.utils.Util;
 import edu.aku.hassannaqvi.uen_scans_bl.validator.ClearClass;
 
 public class SectionLActivity extends AppCompatActivity {
 
     ActivitySectionLBinding bi;
+    HbContract hb;
 
 
     @Override
@@ -103,16 +106,13 @@ public class SectionLActivity extends AppCompatActivity {
         }
     }
 
-
-    public void BtnEnd() {
-        Util.openEndActivity(this);
-    }
-
-
     private boolean UpdateDB() {
         DatabaseHelper db = MainApp.appInfo.getDbHelper();
-        int updcount = db.updatesChildColumn(ChildContract.SingleChild.COLUMN_SL, MainApp.child.getsL());
-        if (updcount == 1) {
+        long rowID = db.addHB(hb);
+        if (rowID > 0) {
+            hb.set_ID(String.valueOf(rowID));
+            hb.setUID(hb.getDeviceId() + hb.get_ID());
+            db.updatesHBColumn(HbContract.hbTable.COLUMN_UID, hb.getUID(), hb);
             return true;
         } else {
             Toast.makeText(this, "Updating Database... ERROR!", Toast.LENGTH_SHORT).show();
@@ -122,6 +122,22 @@ public class SectionLActivity extends AppCompatActivity {
 
 
     private void SaveDraft() throws JSONException {
+
+        hb = new HbContract();
+        hb.set_UUID(MainApp.fc.get_UID());
+        hb.setDeviceId(MainApp.appInfo.getDeviceID());
+        hb.setDevicetagID(MainApp.appInfo.getTagName());
+        hb.setFormDate(new SimpleDateFormat("dd-MM-yy HH:mm").format(new Date().getTime()));
+        hb.setUser(MainApp.userName);
+
+        JSONObject f1 = new JSONObject();
+
+        f1.put("hhno", MainApp.fc.getHhno());
+        f1.put("cluster", MainApp.fc.getClusterCode());
+        f1.put("fm_uid", MainApp.indexKishMWRAChild.getUid());
+        f1.put("fm_serial", MainApp.indexKishMWRAChild.getSerialno());
+        f1.put("mm_fm_uid", MainApp.indexKishMWRA.getUid());
+        f1.put("mm_fm_serial", MainApp.indexKishMWRA.getSerialno());
         JSONObject json = new JSONObject();
 
         json.put("l102",
@@ -137,7 +153,7 @@ public class SectionLActivity extends AppCompatActivity {
 
         json.put("l104", bi.l104.getText().toString());
 
-        MainApp.child.setsL(String.valueOf(json));
+        hb.setsE2(String.valueOf(json));
     }
 
 
