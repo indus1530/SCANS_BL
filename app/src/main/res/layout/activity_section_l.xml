@@ -112,10 +112,11 @@
                             style="@style/EditTextNum"
                             android:layout_width="0dp"
                             android:layout_weight="1"
-                            android:hint="dg/Ml"
+                            android:hint="##.#"
                             app:mask="##.#"
-                            app:maxValue="20"
-                            app:minValue="6"
+                            app:maxValue="20.0"
+                            app:minValue="6.0"
+                            app:pattern="^(\\d{2,2}\\.\\d{1,1})$"
                             app:type="range" />
 
                     </LinearLayout>
