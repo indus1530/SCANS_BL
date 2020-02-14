@@ -34,7 +34,7 @@ public class SectionD1Activity extends AppCompatActivity {
         bi.setCallback(this);
 
         bi.txtHeadLbl.setText(new StringBuilder(MainApp.indexKishMWRAChild.getName().toUpperCase()).append("\n")
-                .append(MainApp.indexKishMWRA.getMother_name().toUpperCase()));
+                .append(MainApp.indexKishMWRA.getName().toUpperCase()));
     }
 
 
