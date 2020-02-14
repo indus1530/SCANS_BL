@@ -72,11 +72,11 @@
                                 style="@style/EditTextNum"
                                 android:layout_width="0dp"
                                 android:layout_weight="1"
-                                android:hint="###.##"
-                                app:mask="###.##"
-                                app:maxValue="100"
-                                app:minValue="1"
-                                app:pattern="^(\\d{3,3}\\.\\d{2,2})$"
+                                android:hint="###.#"
+                                app:mask="###.#"
+                                app:maxValue="140.0"
+                                app:minValue="10.00"
+                                app:pattern="^(\\d{3,3}\\.\\d{1,1})$"
                                 app:type="range" />
 
                             <Spinner
@@ -116,11 +116,11 @@
                                 style="@style/EditTextNum"
                                 android:layout_width="0dp"
                                 android:layout_weight="1"
-                                android:hint="###.##"
-                                app:mask="###.##"
-                                app:maxValue="100"
-                                app:minValue="1"
-                                app:pattern="^(\\d{3,3}\\.\\d{2,2})$"
+                                android:hint="###.#"
+                                app:mask="###.#"
+                                app:maxValue="140.00"
+                                app:minValue="10.00"
+                                app:pattern="^(\\d{3,3}\\.\\d{1,1})$"
                                 app:type="range" />
 
                             <Spinner
@@ -200,11 +200,11 @@
                                 style="@style/EditTextNum"
                                 android:layout_width="0dp"
                                 android:layout_weight="1"
-                                android:hint="###.##"
-                                app:mask="###.##"
-                                app:maxValue="100"
-                                app:minValue="1"
-                                app:pattern="^(\\d{3,3}\\.\\d{2,2})$"
+                                android:hint="###.#"
+                                app:mask="###.#"
+                                app:maxValue="140.00"
+                                app:minValue="10.00"
+                                app:pattern="^(\\d{3,3}\\.\\d{1,1})$"
                                 app:type="range" />
 
                             <Spinner
@@ -244,11 +244,11 @@
                                 style="@style/EditTextNum"
                                 android:layout_width="0dp"
                                 android:layout_weight="1"
-                                android:hint="###.##"
-                                app:mask="###.##"
-                                app:maxValue="100"
-                                app:minValue="1"
-                                app:pattern="^(\\d{3,3}\\.\\d{2,2})$"
+                                android:hint="###.#"
+                                app:mask="###.#"
+                                app:maxValue="40.00"
+                                app:minValue="0.5"
+                                app:pattern="^(\\d{3,3}\\.\\d{1,1})$"
                                 app:type="range" />
 
                             <Spinner
@@ -288,11 +288,11 @@
                                 style="@style/EditTextNum"
                                 android:layout_width="0dp"
                                 android:layout_weight="1"
-                                android:hint="###.##"
-                                app:mask="###.##"
-                                app:maxValue="100"
-                                app:minValue="1"
-                                app:pattern="^(\\d{3,3}\\.\\d{2,2})$"
+                                android:hint="###.#"
+                                app:mask="###.#"
+                                app:maxValue="40.00"
+                                app:minValue="0.5"
+                                app:pattern="^(\\d{3,3}\\.\\d{1,1})$"
                                 app:type="range" />
 
                             <Spinner
@@ -374,8 +374,8 @@
                                 android:layout_weight="1"
                                 android:hint="@string/kg"
                                 app:mask="###"
-                                app:maxValue="100"
-                                app:minValue="1"
+                                app:maxValue="40.00"
+                                app:minValue="0.5"
                                 app:type="range" />
 
                             <Spinner
