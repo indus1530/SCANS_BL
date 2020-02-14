@@ -171,6 +171,7 @@
 
         <activity
             android:name=".ui.other.AnthroEndingActivity"
+            android:label="@string/teaheading"
             android:screenOrientation="portrait" />
 
         <activity

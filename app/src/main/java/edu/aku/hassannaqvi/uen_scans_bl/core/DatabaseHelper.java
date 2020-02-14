@@ -50,17 +50,18 @@ import edu.aku.hassannaqvi.uen_scans_bl.contracts.VisionContract;
 
 import static edu.aku.hassannaqvi.uen_scans_bl.utils.CreateTable.DATABASE_NAME;
 import static edu.aku.hassannaqvi.uen_scans_bl.utils.CreateTable.DATABASE_VERSION;
+import static edu.aku.hassannaqvi.uen_scans_bl.utils.CreateTable.SQL_CREATE_ANTHRO;
 import static edu.aku.hassannaqvi.uen_scans_bl.utils.CreateTable.SQL_CREATE_BL_RANDOM;
 import static edu.aku.hassannaqvi.uen_scans_bl.utils.CreateTable.SQL_CREATE_CHILD_TABLE;
 import static edu.aku.hassannaqvi.uen_scans_bl.utils.CreateTable.SQL_CREATE_FAMILY_MEMBERS;
 import static edu.aku.hassannaqvi.uen_scans_bl.utils.CreateTable.SQL_CREATE_FORMS;
+import static edu.aku.hassannaqvi.uen_scans_bl.utils.CreateTable.SQL_CREATE_HB;
 import static edu.aku.hassannaqvi.uen_scans_bl.utils.CreateTable.SQL_CREATE_KISH_TABLE;
-import static edu.aku.hassannaqvi.uen_scans_bl.utils.CreateTable.SQL_CREATE_MORTALITY;
-import static edu.aku.hassannaqvi.uen_scans_bl.utils.CreateTable.SQL_CREATE_MWRAPRE_TABLE;
 import static edu.aku.hassannaqvi.uen_scans_bl.utils.CreateTable.SQL_CREATE_MWRA_TABLE;
 import static edu.aku.hassannaqvi.uen_scans_bl.utils.CreateTable.SQL_CREATE_PSU_TABLE;
 import static edu.aku.hassannaqvi.uen_scans_bl.utils.CreateTable.SQL_CREATE_USERS;
 import static edu.aku.hassannaqvi.uen_scans_bl.utils.CreateTable.SQL_CREATE_VERSIONAPP;
+import static edu.aku.hassannaqvi.uen_scans_bl.utils.CreateTable.SQL_CREATE_VISION;
 
 
 /**
@@ -87,18 +88,16 @@ public class DatabaseHelper extends SQLiteOpenHelper {
 
         db.execSQL(SQL_CREATE_USERS);
         db.execSQL(SQL_CREATE_FORMS);
-//        db.execSQL(SQL_CREATE_TALUKAS);
-//        db.execSQL(SQL_CREATE_UCS);
         db.execSQL(SQL_CREATE_PSU_TABLE);
         db.execSQL(SQL_CREATE_BL_RANDOM);
-//        db.execSQL(SQL_CREATE_AREAS);
         db.execSQL(SQL_CREATE_VERSIONAPP);
         db.execSQL(SQL_CREATE_FAMILY_MEMBERS);
         db.execSQL(SQL_CREATE_KISH_TABLE);
         db.execSQL(SQL_CREATE_MWRA_TABLE);
-        db.execSQL(SQL_CREATE_MWRAPRE_TABLE);
         db.execSQL(SQL_CREATE_CHILD_TABLE);
-        db.execSQL(SQL_CREATE_MORTALITY);
+        db.execSQL(SQL_CREATE_ANTHRO);
+        db.execSQL(SQL_CREATE_VISION);
+        db.execSQL(SQL_CREATE_HB);
     }
 
     @Override

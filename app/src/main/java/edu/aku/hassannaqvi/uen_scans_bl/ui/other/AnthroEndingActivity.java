@@ -38,7 +38,7 @@ public class AnthroEndingActivity extends AppCompatActivity {
             bi.k208c.setEnabled(false);
         } else {
             bi.k208a.setEnabled(false);
-            bi.k208a.setEnabled(true);
+            bi.k208b.setEnabled(true);
             bi.k208c.setEnabled(true);
         }
 

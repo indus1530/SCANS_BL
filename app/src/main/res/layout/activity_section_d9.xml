@@ -30,34 +30,6 @@
             android:layout_height="wrap_content"
             android:orientation="vertical">
 
-            <!-- d901  Spinner   -->
-            <androidx.cardview.widget.CardView
-                android:id="@+id/fldGrpCVd901"
-                style="@style/cardView">
-
-                <LinearLayout
-                    style="@style/linearlayout_view"
-                    android:orientation="horizontal">
-
-                    <TextView
-                        style="@style/i_textview"
-                        android:layout_height="match_parent"
-                        android:layout_width="0dp"
-                        android:layout_weight="1"
-                        android:text="@string/d901" />
-
-                    <Spinner
-                        android:id="@+id/d901"
-                        style="@style/spinner"
-                        android:layout_height="match_parent"
-                        android:layout_width="0dp"
-                        android:layout_weight="1" />
-
-                </LinearLayout>
-
-            </androidx.cardview.widget.CardView>
-
-
             <!-- d9021  Heading   -->
             <androidx.cardview.widget.CardView
                 android:id="@+id/fldGrpCVd9021h"

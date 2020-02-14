@@ -71,9 +71,6 @@ public class SectionD9Activity extends AppCompatActivity {
 
         JSONObject json = new JSONObject();
 
-        json.put("d901", bi.d901.getSelectedItem().toString());
-
-
         json.put("d9021", bi.d9021.getText().toString());
 
         json.put("d9031", bi.d9031.getText().toString());

@@ -21,8 +21,7 @@ import edu.aku.hassannaqvi.uen_scans_bl.contracts.VisionContract;
 import edu.aku.hassannaqvi.uen_scans_bl.core.DatabaseHelper;
 import edu.aku.hassannaqvi.uen_scans_bl.core.MainApp;
 import edu.aku.hassannaqvi.uen_scans_bl.databinding.ActivitySectionMBinding;
-import edu.aku.hassannaqvi.uen_scans_bl.ui.other.EndingActivity;
-import edu.aku.hassannaqvi.uen_scans_bl.utils.Util;
+import edu.aku.hassannaqvi.uen_scans_bl.ui.other.MainActivity;
 import edu.aku.hassannaqvi.uen_scans_bl.validator.ClearClass;
 
 public class SectionMActivity extends AppCompatActivity {
@@ -69,19 +68,13 @@ public class SectionMActivity extends AppCompatActivity {
             }
             if (UpdateDB()) {
                 finish();
-                startActivity(new Intent(this, EndingActivity.class).putExtra("complete", true));
+                startActivity(new Intent(this, MainActivity.class)
+                        .setFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK).setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP).setFlags(Intent.FLAG_ACTIVITY_NEW_TASK));
             } else {
                 Toast.makeText(this, "Failed to Update Database!", Toast.LENGTH_SHORT).show();
             }
         }
     }
-
-
-    public void BtnEnd() {
-
-        Util.openEndActivity(this);
-    }
-
 
     private boolean UpdateDB() {
         DatabaseHelper db = MainApp.appInfo.getDbHelper();
