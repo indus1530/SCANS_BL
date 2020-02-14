@@ -34,11 +34,13 @@ import edu.aku.hassannaqvi.uen_scans_bl.adapter.SyncListAdapter;
 import edu.aku.hassannaqvi.uen_scans_bl.adapter.UploadListAdapter;
 import edu.aku.hassannaqvi.uen_scans_bl.contracts.AnthroContract;
 import edu.aku.hassannaqvi.uen_scans_bl.contracts.ChildContract;
+import edu.aku.hassannaqvi.uen_scans_bl.contracts.DentalContract;
 import edu.aku.hassannaqvi.uen_scans_bl.contracts.FamilyMembersContract;
 import edu.aku.hassannaqvi.uen_scans_bl.contracts.FoodFreqContract;
 import edu.aku.hassannaqvi.uen_scans_bl.contracts.FormsContract;
 import edu.aku.hassannaqvi.uen_scans_bl.contracts.HbContract;
 import edu.aku.hassannaqvi.uen_scans_bl.contracts.IndexMWRAContract;
+import edu.aku.hassannaqvi.uen_scans_bl.contracts.VisionContract;
 import edu.aku.hassannaqvi.uen_scans_bl.core.DatabaseHelper;
 import edu.aku.hassannaqvi.uen_scans_bl.core.MainApp;
 import edu.aku.hassannaqvi.uen_scans_bl.databinding.ActivitySyncBinding;
@@ -245,12 +247,42 @@ public class SyncActivity extends AppCompatActivity implements SyncDevice.SyncDe
             }
             new SyncAllData(
                     this,
+                    "Dental",
+                    "updateSyncedDCForms",
+                    DentalContract.class,
+                    MainApp._HOST_URL + MainApp._SERVER_URL,
+                    DentalContract.dentalTable.TABLE_NAME,
+                    db.getUnsyncedDC(), 6, uploadListAdapter, uploadlist
+            ).execute();
+
+            if (uploadlistActivityCreated) {
+                uploadmodel = new SyncModel();
+                uploadmodel.setstatusID(0);
+                uploadlist.add(uploadmodel);
+            }
+            new SyncAllData(
+                    this,
                     "HB",
                     "updateSyncedHBForms",
                     HbContract.class,
                     MainApp._HOST_URL + MainApp._SERVER_URL,
                     HbContract.hbTable.TABLE_NAME,
                     db.getUnsyncedHB(), 6, uploadListAdapter, uploadlist
+            ).execute();
+
+            if (uploadlistActivityCreated) {
+                uploadmodel = new SyncModel();
+                uploadmodel.setstatusID(0);
+                uploadlist.add(uploadmodel);
+            }
+            new SyncAllData(
+                    this,
+                    "Vision",
+                    "updateSyncedVCForms",
+                    VisionContract.class,
+                    MainApp._HOST_URL + MainApp._SERVER_URL,
+                    VisionContract.visionTable.TABLE_NAME,
+                    db.getUnsyncedVC(), 6, uploadListAdapter, uploadlist
             ).execute();
 
             bi.noDataItem.setVisibility(View.GONE);
