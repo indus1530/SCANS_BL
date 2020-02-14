@@ -164,11 +164,15 @@ public class SectionA1Activity extends AppCompatActivity implements Util.EndSecA
             if (i == bi.a116a.getId()) {
                 bi.fldGrpCVa117.setVisibility(View.VISIBLE);
                 bi.fldGrpCVa118.setVisibility(View.VISIBLE);
+                bi.btnNext.setVisibility(View.VISIBLE);
+                bi.btnEnd.setVisibility(View.GONE);
             } else {
                 ClearClass.ClearAllFields(bi.fldGrpCVa117, null);
                 ClearClass.ClearAllFields(bi.fldGrpCVa118, null);
                 bi.fldGrpCVa117.setVisibility(View.GONE);
                 bi.fldGrpCVa118.setVisibility(View.GONE);
+                bi.btnNext.setVisibility(View.GONE);
+                bi.btnEnd.setVisibility(View.VISIBLE);
             }
 
         }));
@@ -178,9 +182,26 @@ public class SectionA1Activity extends AppCompatActivity implements Util.EndSecA
 
             if (i == bi.a117b.getId()) {
                 bi.fldGrpCVa118.setVisibility(View.VISIBLE);
+                bi.btnNext.setVisibility(View.VISIBLE);
+                bi.btnEnd.setVisibility(View.GONE);
             } else {
                 ClearClass.ClearAllFields(bi.fldGrpCVa118, null);
                 bi.fldGrpCVa118.setVisibility(View.GONE);
+                bi.btnNext.setVisibility(View.GONE);
+                bi.btnEnd.setVisibility(View.VISIBLE);
+            }
+
+        }));
+
+
+        bi.a118.setOnCheckedChangeListener(((radioGroup, i) -> {
+
+            if (i == bi.a118b.getId()) {
+                bi.btnNext.setVisibility(View.VISIBLE);
+                bi.btnEnd.setVisibility(View.GONE);
+            } else {
+                bi.btnNext.setVisibility(View.GONE);
+                bi.btnEnd.setVisibility(View.VISIBLE);
             }
 
         }));
@@ -197,15 +218,7 @@ public class SectionA1Activity extends AppCompatActivity implements Util.EndSecA
             }
             if (UpdateDB()) {
                 finish();
-                if (bi.a113b.isChecked()
-                        || (bi.a115.getText().toString().trim().length() > 0 && Integer.parseInt(bi.a115.getText().toString().trim()) < 18)
-                        || bi.a116b.isChecked()
-                        || bi.a117a.isChecked()
-                        || bi.a118a.isChecked()) {
-                    startActivity(new Intent(this, EndingActivity.class).putExtra("complete", true));
-                } else {
                     startActivity(new Intent(this, FamilyMembersListActivity.class).putExtra("sno", Integer.valueOf(bl.getSno())));
-                }
             } else {
                 Toast.makeText(this, "Failed to Update Database!", Toast.LENGTH_SHORT).show();
             }
