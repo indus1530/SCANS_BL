@@ -14,6 +14,7 @@ import edu.aku.hassannaqvi.uen_scans_bl.CONSTANTS.Companion.SERIAL_EXTRA
 import edu.aku.hassannaqvi.uen_scans_bl.R
 import edu.aku.hassannaqvi.uen_scans_bl.adapter.FamilyMemberListAdapter
 import edu.aku.hassannaqvi.uen_scans_bl.contracts.FamilyMembersContract
+import edu.aku.hassannaqvi.uen_scans_bl.core.DatabaseHelper
 import edu.aku.hassannaqvi.uen_scans_bl.core.MainApp
 import edu.aku.hassannaqvi.uen_scans_bl.core.MainApp.*
 import edu.aku.hassannaqvi.uen_scans_bl.databinding.ActivityFamilyMembersListBinding
@@ -21,10 +22,10 @@ import edu.aku.hassannaqvi.uen_scans_bl.otherClasses.KishGrid
 import edu.aku.hassannaqvi.uen_scans_bl.ui.other.EndingActivity
 import edu.aku.hassannaqvi.uen_scans_bl.ui.sections.SectionA2Activity
 import edu.aku.hassannaqvi.uen_scans_bl.ui.sections.SectionA31Activity
-import edu.aku.hassannaqvi.uen_scans_bl.ui.sections.SectionD1Activity
 import edu.aku.hassannaqvi.uen_scans_bl.utils.Util
 import edu.aku.hassannaqvi.uen_scans_bl.viewmodel.MainVModel
 import kotlinx.android.synthetic.main.activity_family_members_list.*
+import kotlinx.coroutines.*
 import ru.whalemare.sheetmenu.ActionItem
 import ru.whalemare.sheetmenu.SheetMenu
 import ru.whalemare.sheetmenu.layout.GridLayoutProvider
@@ -37,6 +38,7 @@ class FamilyMembersListActivity : AppCompatActivity() {
     private lateinit var bi: ActivityFamilyMembersListBinding
     private var currentFM: FamilyMembersContract? = null
     private lateinit var clickLst: MutableList<FamilyMembersContract>
+    private lateinit var db: DatabaseHelper
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -45,6 +47,7 @@ class FamilyMembersListActivity : AppCompatActivity() {
 
         bi = DataBindingUtil.setContentView(this, R.layout.activity_family_members_list)
         bi.callback = this
+        db = appInfo.dbHelper
 
         settingValue()
         settingMenu()
@@ -97,12 +100,17 @@ class FamilyMembersListActivity : AppCompatActivity() {
                                             mainVModel.childLstU5to10.value?.get(kishSelectedMWRA(intent.getIntExtra("sno", 0),
                                                     childLst.size) - 1)
                                         }
-                                    }
 
-                                    startActivity(Intent(this, when {
-                                        indexKishMWRA != null -> SectionA31Activity::class.java
-                                        else -> EndingActivity::class.java
-                                    }).putExtra("complete", true))
+                                        GlobalScope.launch {
+                                            val indexMwraUpdate = async { updateKishMember(indexKishMWRA, 1) }
+                                            val indexChildUpdate = async { updateKishMember(indexKishMWRAChild, 2) }
+                                            if (indexMwraUpdate.await().let { true } and indexChildUpdate.await().let { true }) {
+                                                startActivity(Intent(this@FamilyMembersListActivity, SectionA31Activity::class.java))
+                                            }
+                                        }
+                                    } else
+                                        startActivity(Intent(this@FamilyMembersListActivity, EndingActivity::class.java).putExtra("complete", true))
+
                                 }
                                 else -> Util.openEndActivity(this)
                             }
@@ -139,7 +147,7 @@ class FamilyMembersListActivity : AppCompatActivity() {
 
                 currentFM = item
 
-                startActivityForResult(Intent(this, SectionD1Activity::class.java)
+                startActivityForResult(Intent(this, SectionA2Activity::class.java)
                         .putExtra(SERIAL_EXTRA, item.serialno.toInt()), CONSTANTS.MEMBER_ITEM)
 
             }
@@ -181,4 +189,11 @@ class FamilyMembersListActivity : AppCompatActivity() {
     override fun onBackPressed() {
         Toast.makeText(this, "Press top back button.", Toast.LENGTH_SHORT).show()
     }
+
+    suspend fun updateKishMember(fmc: FamilyMembersContract, int: Int) =
+            withContext(Dispatchers.IO) {
+                db.updatesFamilyMemberColumn(FamilyMembersContract.SingleMember.COLUMN_KISH_SELECTED, int.toString(), fmc)
+            }
+
+
 }

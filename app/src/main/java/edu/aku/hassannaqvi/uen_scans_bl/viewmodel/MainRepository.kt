@@ -1,18 +1,25 @@
 package edu.aku.hassannaqvi.uen_scans_bl.viewmodel
 
-import android.os.AsyncTask
+import android.content.Context
+import android.content.Intent
 import edu.aku.hassannaqvi.uen_scans_bl.contracts.FamilyMembersContract
+import edu.aku.hassannaqvi.uen_scans_bl.core.MainApp
+import edu.aku.hassannaqvi.uen_scans_bl.ui.sections.SectionK2Activity
+import kotlinx.coroutines.*
 
-class MainRepository(var item: FamilyMembersContract, var checks: Triple<Int, Int, Int>)
-    : AsyncTask<Void, Void, Triple<Int, Int, Int>>() {
+class MainRepository(val context: Context, val item: MutableList<FamilyMembersContract>) {
 
-    override fun doInBackground(vararg params: Void?): Triple<Int, Int, Int> {
+    init {
 
-        when {
-            item.age.toInt() in 16..48 && item.marital.toInt() != 2 -> checks.first + 1
-            item.age.toInt() in 0..5 -> checks.second + 1
+        val result = GlobalScope.async { populateList() }
+
+        runBlocking {
+            context.startActivity(Intent(context, SectionK2Activity::class.java))
         }
 
-        return Triple(0, 0, 0)
+    }
+
+    private suspend fun populateList() = withContext(Dispatchers.IO) {
+        MainApp.mwraChildren = Pair(item.map { it.serialno.toInt() }, item.map { it.name })
     }
 }

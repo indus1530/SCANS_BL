@@ -2,6 +2,7 @@ package edu.aku.hassannaqvi.uen_scans_bl.ui.sections;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.view.View;
 import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
@@ -13,20 +14,32 @@ import org.json.JSONException;
 import org.json.JSONObject;
 
 import edu.aku.hassannaqvi.uen_scans_bl.R;
+import edu.aku.hassannaqvi.uen_scans_bl.contracts.ChildContract;
+import edu.aku.hassannaqvi.uen_scans_bl.core.DatabaseHelper;
+import edu.aku.hassannaqvi.uen_scans_bl.core.MainApp;
 import edu.aku.hassannaqvi.uen_scans_bl.databinding.ActivitySectionC5Binding;
 import edu.aku.hassannaqvi.uen_scans_bl.utils.Util;
+import edu.aku.hassannaqvi.uen_scans_bl.validator.ClearClass;
 
 public class SectionC5Activity extends AppCompatActivity {
 
-
     ActivitySectionC5Binding bi;
-
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         bi = DataBindingUtil.setContentView(this, R.layout.activity_section_c5);
         bi.setCallback(this);
+
+        if (MainApp.C401.equals("1")) {
+            bi.fldGrpSectionC51.setVisibility(View.VISIBLE);
+            bi.fldGrpSectionC52.setVisibility(View.GONE);
+            ClearClass.ClearAllFields(bi.fldGrpSectionC52, null);
+        } else {
+            bi.fldGrpSectionC52.setVisibility(View.VISIBLE);
+            bi.fldGrpSectionC51.setVisibility(View.GONE);
+            ClearClass.ClearAllFields(bi.fldGrpSectionC51, null);
+        }
 
     }
 
@@ -55,24 +68,22 @@ public class SectionC5Activity extends AppCompatActivity {
 
 
     private boolean UpdateDB() {
-
-        /*DatabaseHelper db = MainApp.appInfo.getDbHelper();
-        int updcount = db.updatesKishMWRAColumn(KishMWRAContract.SingleKishMWRA.COLUMN_SK, MainApp.kish.getsK());
+        DatabaseHelper db = MainApp.appInfo.getDbHelper();
+        int updcount = db.updatesChildColumn(ChildContract.SingleChild.COLUMN_SC5, MainApp.child.getsC5());
         if (updcount == 1) {
             return true;
         } else {
             Toast.makeText(this, "Updating Database... ERROR!", Toast.LENGTH_SHORT).show();
             return false;
-        }*/
-        return true;
+        }
     }
 
 
     private void SaveDraft() throws JSONException {
 
-        JSONObject f1 = new JSONObject();
+        JSONObject json = new JSONObject();
 
-        f1.put("c501",
+        json.put("c501",
                 bi.c501a.isChecked() ? "1" :
                         bi.c501b.isChecked() ? "2" :
                                 bi.c501c.isChecked() ? "3" :
@@ -82,7 +93,7 @@ public class SectionC5Activity extends AppCompatActivity {
                                                                 bi.c501g.isChecked() ? "7" :
                                                                         "0");
 
-        f1.put("c502",
+        json.put("c502",
                 bi.c502a.isChecked() ? "1" :
                         bi.c502b.isChecked() ? "2" :
                                 bi.c502c.isChecked() ? "3" :
@@ -92,7 +103,7 @@ public class SectionC5Activity extends AppCompatActivity {
                                                                 bi.c502g.isChecked() ? "7" :
                                                                         "0");
 
-        f1.put("c503",
+        json.put("c503",
                 bi.c503a.isChecked() ? "1" :
                         bi.c503b.isChecked() ? "2" :
                                 bi.c503c.isChecked() ? "3" :
@@ -102,7 +113,7 @@ public class SectionC5Activity extends AppCompatActivity {
                                                                 bi.c503g.isChecked() ? "7" :
                                                                         "0");
 
-        f1.put("c504",
+        json.put("c504",
                 bi.c504a.isChecked() ? "1" :
                         bi.c504b.isChecked() ? "2" :
                                 bi.c504c.isChecked() ? "3" :
@@ -112,7 +123,7 @@ public class SectionC5Activity extends AppCompatActivity {
                                                                 bi.c504g.isChecked() ? "7" :
                                                                         "0");
 
-        f1.put("c505",
+        json.put("c505",
                 bi.c505a.isChecked() ? "1" :
                         bi.c505b.isChecked() ? "2" :
                                 bi.c505c.isChecked() ? "3" :
@@ -122,7 +133,7 @@ public class SectionC5Activity extends AppCompatActivity {
                                                                 bi.c505g.isChecked() ? "7" :
                                                                         "0");
 
-        f1.put("c506",
+        json.put("c506",
                 bi.c506a.isChecked() ? "1" :
                         bi.c506b.isChecked() ? "2" :
                                 bi.c506c.isChecked() ? "3" :
@@ -132,7 +143,7 @@ public class SectionC5Activity extends AppCompatActivity {
                                                                 bi.c506g.isChecked() ? "7" :
                                                                         "0");
 
-        f1.put("c507",
+        json.put("c507",
                 bi.c507a.isChecked() ? "1" :
                         bi.c507b.isChecked() ? "2" :
                                 bi.c507c.isChecked() ? "3" :
@@ -142,7 +153,7 @@ public class SectionC5Activity extends AppCompatActivity {
                                                                 bi.c507g.isChecked() ? "7" :
                                                                         "0");
 
-        f1.put("c508",
+        json.put("c508",
                 bi.c508a.isChecked() ? "1" :
                         bi.c508b.isChecked() ? "2" :
                                 bi.c508c.isChecked() ? "3" :
@@ -153,7 +164,7 @@ public class SectionC5Activity extends AppCompatActivity {
                                                                         bi.c508h.isChecked() ? "8" :
                                                                                 "0");
 
-        f1.put("c509",
+        json.put("c509",
                 bi.c509a.isChecked() ? "1" :
                         bi.c509b.isChecked() ? "2" :
                                 bi.c509c.isChecked() ? "3" :
@@ -163,7 +174,7 @@ public class SectionC5Activity extends AppCompatActivity {
                                                                 bi.c509g.isChecked() ? "7" :
                                                                         "0");
 
-        f1.put("c510",
+        json.put("c510",
                 bi.c510a.isChecked() ? "1" :
                         bi.c510b.isChecked() ? "2" :
                                 bi.c510c.isChecked() ? "3" :
@@ -173,7 +184,7 @@ public class SectionC5Activity extends AppCompatActivity {
                                                                 bi.c510g.isChecked() ? "7" :
                                                                         "0");
 
-        f1.put("c511",
+        json.put("c511",
                 bi.c511a.isChecked() ? "1" :
                         bi.c511b.isChecked() ? "2" :
                                 bi.c511c.isChecked() ? "3" :
@@ -183,7 +194,7 @@ public class SectionC5Activity extends AppCompatActivity {
                                                                 bi.c511g.isChecked() ? "7" :
                                                                         "0");
 
-        f1.put("c512",
+        json.put("c512",
                 bi.c512a.isChecked() ? "1" :
                         bi.c512b.isChecked() ? "2" :
                                 bi.c512c.isChecked() ? "3" :
@@ -194,12 +205,13 @@ public class SectionC5Activity extends AppCompatActivity {
                                                                         bi.c512h.isChecked() ? "8" :
                                                                                 "0");
 
+        MainApp.child.setsC5(String.valueOf(json));
+
     }
 
 
     private boolean formValidation() {
         return Validator.emptyCheckingContainer(this, bi.fldGrpSectionC5);
-
     }
 
 

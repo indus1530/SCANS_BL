@@ -33,7 +33,7 @@
 
     <string name="title_activity_family_members_list">Family Members List</string>
 
-    <string name="sM">UC</string>
+    <string name="sA4">UC</string>
     <string name="yes"> Yes </string>
     <string name="no"> No </string>
     <string name="dkn"> Don\'t Know </string>
@@ -63,7 +63,7 @@
 
     <string name="total">Total</string>
     <string name="mwra">MWRA</string>
-    <string name="under5">Child Under 5</string>
+    <string name="under5">Child Age 5 \- 10</string>
 
 
     <string name="ta1heading">SECTION A: HH Identification </string>
@@ -238,7 +238,7 @@
     <string name="a108"> District </string>
     <string name="a109"> Tehsil </string>
     <string name="a110"> City </string>
-    <string name="a111"> A111:\t Village</string>
+    <string name="a111"> Village</string>
     <string name="a112"> A112:\t Household number </string>
     <string name="a113_title1"> a113_title1:\t The enumerator will read out the consent for understanding of respondent and will mention the purpose of the study and time required to complete the interviews (a separate consent sheet will be provided to the enumerators</string>
 
@@ -1353,6 +1353,11 @@
     <string name="c314c"> 6 &#8211; 9 </string>
     <string name="c314d"> 10 or more </string>
 
+    <string name="c315"> C315:\t What does (child name) usually use to clean his / her teeth ? </string>
+    <string name="c315a"> Tooth brush </string>
+    <string name="c315b"> Miswak </string>
+    <string name="c315c"> Finger </string>
+
     <string name="tc4heading">SECTION C4: SCHOOLING </string>
     <string name="c401"> C401:\t Have (child name) ever attended school? If no, probe. </string>
     <string name="c401a"> Yes </string>
@@ -2094,6 +2099,7 @@
     <string name="tk1heading"> MODULE K1:\t RESPONDENT AND CHILD’\S PHYSICAL </string>
     <string name="tk1headinghint"> Read aloud to the selected women of household: Now I would like to ask some questions about you, male head of household and your child.</string>
 
+    <string name="k100"> K200:\t Child’\s Name </string>
     <string name="k101"> K101:\t Do you think that your (Child Name) height is appropriate for his/her age ? </string>
     <string name="k101a"> Height is Appropriate for his/her age </string>
     <string name="k101b"> Taller than for his/her age </string>
@@ -2231,6 +2237,7 @@
 
 
     <string name="end_interview"> Form End </string>
+    <string name="anthro_interview"> Anthro End </string>
     <string name="start_interview"> انٹرویو شروع کریں </string>
     <string name="nextSection"> Next Section </string>
 

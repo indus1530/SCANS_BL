@@ -12,16 +12,6 @@ import org.json.JSONObject;
 
 public class FormsContract {
 
-
-    /**
-     * Info,
-     * Section A31,A32,
-     * B1,
-     * B2,
-     * B3,
-     */
-
-    private final String projectName = "uen_scans_bl_2020";
     private String _ID = "";
     private String _UID = "";
     private String formType = "";
@@ -42,56 +32,8 @@ public class FormsContract {
     private String appversion = "";
     private String clusterCode = "";
     private String hhno = "";
-
     private String sInfo = "";
-    private String sE = "";
-    private String sM = "";
-    private String sN = "";
-    private String sO = "";
-
-
-    public String getsInfo() {
-        return sInfo;
-    }
-
-    public void setsInfo(String sInfo) {
-        this.sInfo = sInfo;
-    }
-
-    public String getsE() {
-        return sE;
-    }
-
-    public void setsE(String sE) {
-        this.sE = sE;
-    }
-
-    public String getsM() {
-        return sM;
-    }
-
-    public void setsM(String sM) {
-        this.sM = sM;
-    }
-
-    public String getsN() {
-        return sN;
-    }
-
-    public void setsN(String sN) {
-        this.sN = sN;
-    }
-
-    public String getsO() {
-        return sO;
-    }
-
-    public void setsO(String sO) {
-        this.sO = sO;
-    }
-
     public static final String CONTENT_AUTHORITY = "edu.aku.hassannaqvi.uen_midline";
-
     public static final String PATH_FORMS = "forms";
 
     public FormsContract() {
@@ -104,6 +46,9 @@ public class FormsContract {
     public void setAppversion(String appversion) {
         this.appversion = appversion;
     }
+
+    private String sA3 = "";
+    private String sA4 = "";
 
     public FormsContract Sync(JSONObject jsonObject) throws JSONException {
         this._ID = jsonObject.getString(FormsTable.COLUMN_ID);
@@ -127,10 +72,8 @@ public class FormsContract {
         this.clusterCode = jsonObject.getString(FormsTable.COLUMN_CLUSTERCODE);
         this.hhno = jsonObject.getString(FormsTable.COLUMN_HHNO);
         this.sInfo = jsonObject.getString(FormsTable.COLUMN_SINFO);
-        this.sE = jsonObject.getString(FormsTable.COLUMN_SE);
-        this.sM = jsonObject.getString(FormsTable.COLUMN_SM);
-        this.sN = jsonObject.getString(FormsTable.COLUMN_SN);
-        this.sO = jsonObject.getString(FormsTable.COLUMN_SO);
+        this.sA3 = jsonObject.getString(FormsTable.COLUMN_SA3);
+        this.sA4 = jsonObject.getString(FormsTable.COLUMN_SA4);
 
         return this;
 
@@ -156,14 +99,11 @@ public class FormsContract {
         this.clusterCode = cursor.getString(cursor.getColumnIndex(FormsTable.COLUMN_CLUSTERCODE));
         this.hhno = cursor.getString(cursor.getColumnIndex(FormsTable.COLUMN_HHNO));
         this.sInfo = cursor.getString(cursor.getColumnIndex(FormsTable.COLUMN_SINFO));
-        this.sE = cursor.getString(cursor.getColumnIndex(FormsTable.COLUMN_SE));
-        this.sM = cursor.getString(cursor.getColumnIndex(FormsTable.COLUMN_SM));
-        this.sN = cursor.getString(cursor.getColumnIndex(FormsTable.COLUMN_SN));
-        this.sO = cursor.getString(cursor.getColumnIndex(FormsTable.COLUMN_SO));
+        this.sA3 = cursor.getString(cursor.getColumnIndex(FormsTable.COLUMN_SA3));
+        this.sA4 = cursor.getString(cursor.getColumnIndex(FormsTable.COLUMN_SA4));
 
         return this;
     }
-
 
     public JSONObject toJSONObject() throws JSONException {
 
@@ -179,23 +119,15 @@ public class FormsContract {
         json.put(FormsTable.COLUMN_ENDINGDATETIME, this.endingdatetime == null ? JSONObject.NULL : this.endingdatetime);
 
         if (!this.sInfo.equals("")) {
-            json.put(FormsTable.COLUMN_SINFO, this.sInfo.equals("") ? JSONObject.NULL : new JSONObject(this.sInfo));
+            json.put(FormsTable.COLUMN_SINFO, new JSONObject(this.sInfo));
         }
 
-        if (!this.sE.equals("")) {
-            json.put(FormsTable.COLUMN_SE, this.sE.equals("") ? JSONObject.NULL : new JSONObject(this.sE));
+        if (!this.sA3.equals("")) {
+            json.put(FormsTable.COLUMN_SA3, new JSONObject(this.sA3));
         }
 
-        if (!this.sM.equals("")) {
-            json.put(FormsTable.COLUMN_SM, this.sM.equals("") ? JSONObject.NULL : new JSONObject(this.sM));
-        }
-
-        if (!this.sN.equals("")) {
-            json.put(FormsTable.COLUMN_SN, this.sN.equals("") ? JSONObject.NULL : new JSONObject(this.sN));
-        }
-
-        if (!this.sO.equals("")) {
-            json.put(FormsTable.COLUMN_SO, this.sO.equals("") ? JSONObject.NULL : new JSONObject(this.sO));
+        if (!this.sA4.equals("")) {
+            json.put(FormsTable.COLUMN_SA4, this.sA4.equals("") ? JSONObject.NULL : new JSONObject(this.sA4));
         }
 
         json.put(FormsTable.COLUMN_GPSLAT, this.gpsLat == null ? JSONObject.NULL : this.gpsLat);
@@ -212,7 +144,32 @@ public class FormsContract {
         return json;
     }
 
+    public String getsInfo() {
+        return sInfo;
+    }
+
+    public void setsInfo(String sInfo) {
+        this.sInfo = sInfo;
+    }
+
+    public String getsA3() {
+        return sA3;
+    }
+
+    public void setsA3(String sA3) {
+        this.sA3 = sA3;
+    }
+
+    public String getsA4() {
+        return sA4;
+    }
+
+    public void setsA4(String sA4) {
+        this.sA4 = sA4;
+    }
+
     public String getProjectName() {
+        String projectName = "uen_scans_bl_2020";
         return projectName;
     }
 
@@ -279,7 +236,6 @@ public class FormsContract {
     public void setLuid(String Study_Id) {
         this.luid = Study_Id;
     }
-
 
     public String getEndingdatetime() {
         return endingdatetime;
@@ -354,9 +310,6 @@ public class FormsContract {
 
     }
 
-    public void setsC(String valueOf) {
-    }
-
     public String getClusterCode() {
         return clusterCode;
     }
@@ -373,37 +326,33 @@ public class FormsContract {
         this.hhno = hhno;
     }
 
-    public static abstract class FormsTable implements BaseColumns {
+    public interface FormsTable extends BaseColumns {
 
-        public static final String TABLE_NAME = "forms";
-        public static final String COLUMN_NAME_NULLABLE = "NULLHACK";
-        public static final String COLUMN_PROJECT_NAME = "projectName";
-        public static final String COLUMN_ID = "_id";
-        public static final String COLUMN_UID = "_uid";
-        public static final String COLUMN_FORMDATE = "formdate";
-        public static final String COLUMN_FORMTYPE = "formtype";
-        public static final String COLUMN_USER = "username";
-        public static final String COLUMN_ISTATUS = "istatus";
-        public static final String COLUMN_ISTATUS88x = "istatus88x";
-        public static final String COLUMN_LUID = "luid";
-        public static final String COLUMN_ENDINGDATETIME = "endingdatetime";
-        public static final String COLUMN_GPSLAT = "gpslat";
-        public static final String COLUMN_GPSLNG = "gpslng";
-        public static final String COLUMN_GPSDATE = "gpsdate";
-        public static final String COLUMN_GPSACC = "gpsacc";
-        public static final String COLUMN_DEVICEID = "deviceid";
-        public static final String COLUMN_DEVICETAGID = "tagid";
-        public static final String COLUMN_SYNCED = "synced";
-        public static final String COLUMN_SYNCED_DATE = "synced_date";
-        public static final String COLUMN_APPVERSION = "appversion";
-        public static final String COLUMN_CLUSTERCODE = "cluster_code";
-        public static final String COLUMN_HHNO = "hhno";
-        public static final String COLUMN_SINFO = "sInfo";
-        public static final String COLUMN_SE = "sE";
-        public static final String COLUMN_SM = "sM";
-        public static final String COLUMN_SN = "sN";
-        public static final String COLUMN_SO = "sO";
-
-        public static String _URL = "sync.php";
+        String TABLE_NAME = "forms";
+        String COLUMN_NAME_NULLABLE = "NULLHACK";
+        String COLUMN_PROJECT_NAME = "projectName";
+        String COLUMN_ID = "_id";
+        String COLUMN_UID = "_uid";
+        String COLUMN_FORMDATE = "formdate";
+        String COLUMN_FORMTYPE = "formtype";
+        String COLUMN_USER = "username";
+        String COLUMN_ISTATUS = "istatus";
+        String COLUMN_ISTATUS88x = "istatus88x";
+        String COLUMN_LUID = "luid";
+        String COLUMN_ENDINGDATETIME = "endingdatetime";
+        String COLUMN_GPSLAT = "gpslat";
+        String COLUMN_GPSLNG = "gpslng";
+        String COLUMN_GPSDATE = "gpsdate";
+        String COLUMN_GPSACC = "gpsacc";
+        String COLUMN_DEVICEID = "deviceid";
+        String COLUMN_DEVICETAGID = "tagid";
+        String COLUMN_SYNCED = "synced";
+        String COLUMN_SYNCED_DATE = "synced_date";
+        String COLUMN_APPVERSION = "appversion";
+        String COLUMN_CLUSTERCODE = "cluster_code";
+        String COLUMN_HHNO = "hhno";
+        String COLUMN_SINFO = "sInfo";
+        String COLUMN_SA3 = "sA3";
+        String COLUMN_SA4 = "sA4";
     }
 }

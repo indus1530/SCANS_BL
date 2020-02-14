@@ -15,8 +15,8 @@
         style="@style/i_scrollview"
         android:fadeScrollbars="false"
         android:fillViewport="true"
-        android:scrollbarSize="10dip"
         android:layoutDirection="ltr"
+        android:scrollbarSize="10dip"
         tools:context=".ui.sections.SectionC6Activity">
 
         <LinearLayout
@@ -25,396 +25,413 @@
             android:layout_height="wrap_content"
             android:orientation="vertical">
 
-            <!-- ca601_title  Title   -->
-            <androidx.cardview.widget.CardView
-                android:id="@+id/fldGrpCVca601_title"
-                style="@style/cardView">
-
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:orientation="vertical">
-
-                    <TextView
-                        style="@style/HeadingTitle"
-                        android:text="@string/ca601_title" />
-
-                </LinearLayout>
-
-            </androidx.cardview.widget.CardView>
-
-            <!-- ca601  Input-Numeric   -->
-            <androidx.cardview.widget.CardView
-                android:id="@+id/fldGrpCVca601"
-                style="@style/cardView">
-
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:orientation="vertical">
-
-                    <TextView
-                        style="@style/i_textview"
-                        android:text="@string/ca601" />
-
-                    <io.blackbox_vision.datetimepickeredittext.view.TimePickerInputEditText
-                        android:id="@+id/ca601"
-                        style="@style/EditTextNum"
-                        android:hint="@string/time"
-                        app:is24HourView="true"
-                        app:timeFormat="HH:mm" />
-
-                </LinearLayout>
-
-            </androidx.cardview.widget.CardView>
-
-            <!-- ca602  Input-Numeric   -->
-            <androidx.cardview.widget.CardView
-                android:id="@+id/fldGrpCVca602"
-                style="@style/cardView">
-
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:orientation="vertical">
-
-                    <TextView
-                        style="@style/i_textview"
-                        android:text="@string/ca602" />
-
-                    <io.blackbox_vision.datetimepickeredittext.view.TimePickerInputEditText
-                        android:id="@+id/ca602"
-                        style="@style/EditTextNum"
-                        android:hint="@string/time"
-                        app:is24HourView="true"
-                        app:timeFormat="HH:mm" />
-
-                </LinearLayout>
-
-            </androidx.cardview.widget.CardView>
-
-            <!-- ca603  Radio   -->
-            <androidx.cardview.widget.CardView
-                android:id="@+id/fldGrpCVca603"
-                style="@style/cardView">
-
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:orientation="vertical">
-
-                    <TextView
-                        style="@style/i_textview"
-                        android:text="@string/ca603" />
-
-                    <RadioGroup
-                        android:id="@+id/ca603"
-                        style="@style/radiogroup"
-                        android:orientation="horizontal">
-
-                        <RadioButton
-                            android:id="@+id/ca603a"
-                            style="@style/radiobutton"
-                            android:layout_width="0dp"
-                            android:layout_weight="1"
-                            android:text="@string/yes" />
-
-                        <RadioButton
-                            android:id="@+id/ca603b"
-                            style="@style/radiobutton"
-                            android:layout_width="0dp"
-                            android:layout_weight="1"
-                            android:text="@string/no" />
-
-                    </RadioGroup>
+            <LinearLayout
+                android:id="@+id/fldGrpSectionC6A"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <!-- ca601_title  Title   -->
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/fldGrpCVca601_title"
+                    style="@style/cardView">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <TextView
+                            style="@style/HeadingTitle"
+                            android:text="@string/ca601_title" />
+
+                    </LinearLayout>
+
+                </androidx.cardview.widget.CardView>
+
+                <!-- ca601  Input-Numeric   -->
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/fldGrpCVca601"
+                    style="@style/cardView">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <TextView
+                            style="@style/i_textview"
+                            android:text="@string/ca601" />
+
+                        <io.blackbox_vision.datetimepickeredittext.view.TimePickerInputEditText
+                            android:id="@+id/ca601"
+                            style="@style/EditTextNum"
+                            android:hint="@string/time"
+                            app:is24HourView="true"
+                            app:timeFormat="HH:mm" />
+
+                    </LinearLayout>
+
+                </androidx.cardview.widget.CardView>
+
+                <!-- ca602  Input-Numeric   -->
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/fldGrpCVca602"
+                    style="@style/cardView">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <TextView
+                            style="@style/i_textview"
+                            android:text="@string/ca602" />
+
+                        <io.blackbox_vision.datetimepickeredittext.view.TimePickerInputEditText
+                            android:id="@+id/ca602"
+                            style="@style/EditTextNum"
+                            android:hint="@string/time"
+                            app:is24HourView="true"
+                            app:timeFormat="HH:mm" />
+
+                    </LinearLayout>
+
+                </androidx.cardview.widget.CardView>
+
+                <!-- ca603  Radio   -->
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/fldGrpCVca603"
+                    style="@style/cardView">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <TextView
+                            style="@style/i_textview"
+                            android:text="@string/ca603" />
+
+                        <RadioGroup
+                            android:id="@+id/ca603"
+                            style="@style/radiogroup"
+                            android:orientation="horizontal">
+
+                            <RadioButton
+                                android:id="@+id/ca603a"
+                                style="@style/radiobutton"
+                                android:layout_width="0dp"
+                                android:layout_weight="1"
+                                android:text="@string/yes" />
+
+                            <RadioButton
+                                android:id="@+id/ca603b"
+                                style="@style/radiobutton"
+                                android:layout_width="0dp"
+                                android:layout_weight="1"
+                                android:text="@string/no" />
+
+                        </RadioGroup>
+
+                    </LinearLayout>
+
+                </androidx.cardview.widget.CardView>
+
+                <!-- ca604  Input-Numeric   -->
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/fldGrpCVca604"
+                    style="@style/cardView">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <TextView
+                            style="@style/i_textview"
+                            android:text="@string/ca604" />
+
+                        <io.blackbox_vision.datetimepickeredittext.view.TimePickerInputEditText
+                            android:id="@+id/ca604"
+                            style="@style/EditTextNum"
+                            android:hint="@string/time"
+                            app:is24HourView="true"
+                            app:timeFormat="HH:mm" />
+
+                    </LinearLayout>
+
+                </androidx.cardview.widget.CardView>
+
+                <!-- ca605  Input-Numeric   -->
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/fldGrpCVca605"
+                    style="@style/cardView">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <TextView
+                            style="@style/i_textview"
+                            android:text="@string/ca605" />
 
-                </LinearLayout>
+                        <io.blackbox_vision.datetimepickeredittext.view.TimePickerInputEditText
+                            android:id="@+id/ca605"
+                            style="@style/EditTextNum"
+                            android:hint="@string/time"
+                            app:is24HourView="true"
+                            app:timeFormat="HH:mm" />
+
+                    </LinearLayout>
 
-            </androidx.cardview.widget.CardView>
+                </androidx.cardview.widget.CardView>
+
+                <!-- ca606  Radio   -->
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/fldGrpCVca606"
+                    style="@style/cardView">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
 
-            <!-- ca604  Input-Numeric   -->
-            <androidx.cardview.widget.CardView
-                android:id="@+id/fldGrpCVca604"
-                style="@style/cardView">
+                        <TextView
+                            style="@style/i_textview"
+                            android:text="@string/ca606" />
 
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:orientation="vertical">
+                        <RadioGroup
+                            android:id="@+id/ca606"
+                            style="@style/radiogroup"
+                            android:orientation="horizontal">
+
+                            <RadioButton
+                                android:id="@+id/ca606a"
+                                style="@style/radiobutton"
+                                android:layout_width="0dp"
+                                android:layout_weight="1"
+                                android:text="@string/yes" />
 
-                    <TextView
-                        style="@style/i_textview"
-                        android:text="@string/ca604" />
+                            <RadioButton
+                                android:id="@+id/ca606b"
+                                style="@style/radiobutton"
+                                android:layout_width="0dp"
+                                android:layout_weight="1"
+                                android:text="@string/no" />
+
+                        </RadioGroup>
+
+                    </LinearLayout>
 
-                    <io.blackbox_vision.datetimepickeredittext.view.TimePickerInputEditText
-                        android:id="@+id/ca604"
-                        style="@style/EditTextNum"
-                        android:hint="@string/time"
-                        app:is24HourView="true"
-                        app:timeFormat="HH:mm" />
-
-                </LinearLayout>
-
-            </androidx.cardview.widget.CardView>
-
-            <!-- ca605  Input-Numeric   -->
-            <androidx.cardview.widget.CardView
-                android:id="@+id/fldGrpCVca605"
-                style="@style/cardView">
+                </androidx.cardview.widget.CardView>
+
+                <!-- ca607  Radio   -->
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/fldGrpCVca607"
+                    style="@style/cardView">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <TextView
+                            style="@style/i_textview"
+                            android:text="@string/ca607" />
+
+                        <RadioGroup
+                            android:id="@+id/ca607"
+                            style="@style/radiogroup">
+
+                            <RadioButton
+                                android:id="@+id/ca607a"
+                                style="@style/radiobutton"
+                                android:text="@string/ca607a" />
 
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:orientation="vertical">
-
-                    <TextView
-                        style="@style/i_textview"
-                        android:text="@string/ca605" />
-
-                    <io.blackbox_vision.datetimepickeredittext.view.TimePickerInputEditText
-                        android:id="@+id/ca605"
-                        style="@style/EditTextNum"
-                        android:hint="@string/time"
-                        app:is24HourView="true"
-                        app:timeFormat="HH:mm" />
-
-                </LinearLayout>
-
-            </androidx.cardview.widget.CardView>
-
-            <!-- ca606  Radio   -->
-            <androidx.cardview.widget.CardView
-                android:id="@+id/fldGrpCVca606"
-                style="@style/cardView">
-
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:orientation="vertical">
-
-                    <TextView
-                        style="@style/i_textview"
-                        android:text="@string/ca606" />
-
-                    <RadioGroup
-                        android:id="@+id/ca606"
-                        style="@style/radiogroup"
-                        android:orientation="horizontal">
-
-                        <RadioButton
-                            android:id="@+id/ca606a"
-                            style="@style/radiobutton"
-                            android:layout_width="0dp"
-                            android:layout_weight="1"
-                            android:text="@string/yes" />
-
-                        <RadioButton
-                            android:id="@+id/ca606b"
-                            style="@style/radiobutton"
-                            android:layout_width="0dp"
-                            android:layout_weight="1"
-                            android:text="@string/no" />
-
-                    </RadioGroup>
-
-                </LinearLayout>
-
-            </androidx.cardview.widget.CardView>
-
-            <!-- ca607  Radio   -->
-            <androidx.cardview.widget.CardView
-                android:id="@+id/fldGrpCVca607"
-                style="@style/cardView">
-
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:orientation="vertical">
-
-                    <TextView
-                        style="@style/i_textview"
-                        android:text="@string/ca607" />
-
-                    <RadioGroup
-                        android:id="@+id/ca607"
-                        style="@style/radiogroup">
-
-                        <RadioButton
-                            android:id="@+id/ca607a"
-                            style="@style/radiobutton"
-                            android:text="@string/ca607a" />
-
-                        <RadioButton
-                            android:id="@+id/ca607b"
-                            style="@style/radiobutton"
-                            android:text="@string/ca607b" />
-
-                        <RadioButton
-                            android:id="@+id/ca607c"
-                            style="@style/radiobutton"
-                            android:text="@string/ca607c" />
-
-                        <RadioButton
-                            android:id="@+id/ca607d"
-                            style="@style/radiobutton"
-                            android:text="@string/ca607d" />
-
-                    </RadioGroup>
-
-                </LinearLayout>
-
-            </androidx.cardview.widget.CardView>
-
-            <!-- cb601_title  Title   -->
-            <androidx.cardview.widget.CardView
-                android:id="@+id/fldGrpCVcb601_title"
-                style="@style/cardView">
-
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:orientation="vertical">
-
-                    <TextView
-                        style="@style/HeadingTitle"
-                        android:text="@string/cb601_title" />
-
-                </LinearLayout>
-
-            </androidx.cardview.widget.CardView>
-
-            <!-- cb601  Input-Numeric   -->
-            <androidx.cardview.widget.CardView
-                android:id="@+id/fldGrpCVcb601"
-                style="@style/cardView">
-
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:orientation="vertical">
-
-                    <TextView
-                        style="@style/i_textview"
-                        android:text="@string/cb601" />
-
-                    <io.blackbox_vision.datetimepickeredittext.view.TimePickerInputEditText
-                        android:id="@+id/cb601"
-                        style="@style/EditTextNum"
-                        android:hint="@string/time"
-                        app:is24HourView="true"
-                        app:timeFormat="HH:mm" />
-
-                </LinearLayout>
-
-            </androidx.cardview.widget.CardView>
-
-            <!-- cb602  Input-Numeric   -->
-            <androidx.cardview.widget.CardView
-                android:id="@+id/fldGrpCVcb602"
-                style="@style/cardView">
-
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:orientation="vertical">
-
-                    <TextView
-                        style="@style/i_textview"
-                        android:text="@string/cb602" />
-
-                    <io.blackbox_vision.datetimepickeredittext.view.TimePickerInputEditText
-                        android:id="@+id/cb602"
-                        style="@style/EditTextNum"
-                        android:hint="@string/time"
-                        app:is24HourView="true"
-                        app:timeFormat="HH:mm" />
-
-                </LinearLayout>
-
-            </androidx.cardview.widget.CardView>
-
-            <!-- cb603  Radio   -->
-            <androidx.cardview.widget.CardView
-                android:id="@+id/fldGrpCVcb603"
-                style="@style/cardView">
-
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:orientation="vertical">
-
-                    <TextView
-                        style="@style/i_textview"
-                        android:text="@string/cb603" />
-
-                    <RadioGroup
-                        android:id="@+id/cb603"
-                        style="@style/radiogroup"
-                        android:orientation="horizontal">
-
-                        <RadioButton
-                            android:id="@+id/cb603a"
-                            style="@style/radiobutton"
-                            android:layout_width="0dp"
-                            android:layout_weight="1"
-                            android:text="@string/yes" />
-
-                        <RadioButton
-                            android:id="@+id/cb603b"
-                            style="@style/radiobutton"
-                            android:layout_width="0dp"
-                            android:layout_weight="1"
-                            android:text="@string/no" />
-
-                    </RadioGroup>
-
-                </LinearLayout>
-
-            </androidx.cardview.widget.CardView>
-
-            <!-- cb604  Radio   -->
-            <androidx.cardview.widget.CardView
-                android:id="@+id/fldGrpCVcb604"
-                style="@style/cardView">
-
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:orientation="vertical">
-
-                    <TextView
-                        style="@style/i_textview"
-                        android:text="@string/cb604" />
-
-                    <RadioGroup
-                        android:id="@+id/cb604"
-                        style="@style/radiogroup">
-
-                        <RadioButton
-                            android:id="@+id/cb604a"
-                            style="@style/radiobutton"
-                            android:text="@string/cb604a" />
-
-                        <RadioButton
-                            android:id="@+id/cb604b"
-                            style="@style/radiobutton"
-                            android:text="@string/cb604b" />
-
-                        <RadioButton
-                            android:id="@+id/cb604c"
-                            style="@style/radiobutton"
-                            android:text="@string/cb604c" />
-
-                        <RadioButton
-                            android:id="@+id/cb604d"
-                            style="@style/radiobutton"
-                            android:text="@string/cb604d" />
-
-                    </RadioGroup>
-
-                </LinearLayout>
-
-            </androidx.cardview.widget.CardView>
+                            <RadioButton
+                                android:id="@+id/ca607b"
+                                style="@style/radiobutton"
+                                android:text="@string/ca607b" />
+
+                            <RadioButton
+                                android:id="@+id/ca607c"
+                                style="@style/radiobutton"
+                                android:text="@string/ca607c" />
+
+                            <RadioButton
+                                android:id="@+id/ca607d"
+                                style="@style/radiobutton"
+                                android:text="@string/ca607d" />
+
+                        </RadioGroup>
+
+                    </LinearLayout>
+
+                </androidx.cardview.widget.CardView>
+
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:id="@+id/fldGrpSectionC6B"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <!-- cb601_title  Title   -->
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/fldGrpCVcb601_title"
+                    style="@style/cardView">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <TextView
+                            style="@style/HeadingTitle"
+                            android:text="@string/cb601_title" />
+
+                    </LinearLayout>
+
+                </androidx.cardview.widget.CardView>
+
+                <!-- cb601  Input-Numeric   -->
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/fldGrpCVcb601"
+                    style="@style/cardView">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <TextView
+                            style="@style/i_textview"
+                            android:text="@string/cb601" />
+
+                        <io.blackbox_vision.datetimepickeredittext.view.TimePickerInputEditText
+                            android:id="@+id/cb601"
+                            style="@style/EditTextNum"
+                            android:hint="@string/time"
+                            app:is24HourView="true"
+                            app:timeFormat="HH:mm" />
+
+                    </LinearLayout>
+
+                </androidx.cardview.widget.CardView>
+
+                <!-- cb602  Input-Numeric   -->
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/fldGrpCVcb602"
+                    style="@style/cardView">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <TextView
+                            style="@style/i_textview"
+                            android:text="@string/cb602" />
+
+                        <io.blackbox_vision.datetimepickeredittext.view.TimePickerInputEditText
+                            android:id="@+id/cb602"
+                            style="@style/EditTextNum"
+                            android:hint="@string/time"
+                            app:is24HourView="true"
+                            app:timeFormat="HH:mm" />
+
+                    </LinearLayout>
+
+                </androidx.cardview.widget.CardView>
+
+                <!-- cb603  Radio   -->
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/fldGrpCVcb603"
+                    style="@style/cardView">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <TextView
+                            style="@style/i_textview"
+                            android:text="@string/cb603" />
+
+                        <RadioGroup
+                            android:id="@+id/cb603"
+                            style="@style/radiogroup"
+                            android:orientation="horizontal">
+
+                            <RadioButton
+                                android:id="@+id/cb603a"
+                                style="@style/radiobutton"
+                                android:layout_width="0dp"
+                                android:layout_weight="1"
+                                android:text="@string/yes" />
+
+                            <RadioButton
+                                android:id="@+id/cb603b"
+                                style="@style/radiobutton"
+                                android:layout_width="0dp"
+                                android:layout_weight="1"
+                                android:text="@string/no" />
+
+                        </RadioGroup>
+
+                    </LinearLayout>
+
+                </androidx.cardview.widget.CardView>
+
+                <!-- cb604  Radio   -->
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/fldGrpCVcb604"
+                    style="@style/cardView">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <TextView
+                            style="@style/i_textview"
+                            android:text="@string/cb604" />
+
+                        <RadioGroup
+                            android:id="@+id/cb604"
+                            style="@style/radiogroup">
+
+                            <RadioButton
+                                android:id="@+id/cb604a"
+                                style="@style/radiobutton"
+                                android:text="@string/cb604a" />
+
+                            <RadioButton
+                                android:id="@+id/cb604b"
+                                style="@style/radiobutton"
+                                android:text="@string/cb604b" />
+
+                            <RadioButton
+                                android:id="@+id/cb604c"
+                                style="@style/radiobutton"
+                                android:text="@string/cb604c" />
+
+                            <RadioButton
+                                android:id="@+id/cb604d"
+                                style="@style/radiobutton"
+                                android:text="@string/cb604d" />
+
+                        </RadioGroup>
+
+                    </LinearLayout>
+
+                </androidx.cardview.widget.CardView>
+
+            </LinearLayout>
 
 
             <LinearLayout

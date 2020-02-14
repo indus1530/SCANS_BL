@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <layout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto">
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
 
 
     <data>
@@ -161,7 +162,9 @@
                         android:clickable="true"
                         android:foreground="?android:attr/selectableItemBackground"
                         android:onClick="openForm"
-                        app:cardCornerRadius="20dp">
+                        android:visibility="visible"
+                        app:cardCornerRadius="20dp"
+                        tools:visibility="visible">
 
                         <RelativeLayout
                             android:layout_width="match_parent"
@@ -190,7 +193,9 @@
                         android:clickable="true"
                         android:foreground="?android:attr/selectableItemBackground"
                         android:onClick="openForm"
-                        app:cardCornerRadius="20dp">
+                        android:visibility="visible"
+                        app:cardCornerRadius="20dp"
+                        tools:visibility="visible">
 
                         <RelativeLayout
                             android:layout_width="match_parent"
@@ -236,7 +241,8 @@
                             android:layout_weight="1"
                             android:clickable="true"
                             android:foreground="?android:attr/selectableItemBackground"
-                            android:onClick="@{() -> callback.syncServer()}">
+                            android:onClick="@{() -> callback.syncServer()}"
+                            app:cardCornerRadius="20dp">
 
                             <RelativeLayout
                                 android:layout_width="match_parent"
@@ -274,7 +280,8 @@
                             android:layout_weight="1"
                             android:clickable="true"
                             android:foreground="?android:attr/selectableItemBackground"
-                            android:onClick="@{() -> callback.openDB()}">
+                            android:onClick="@{() -> callback.openDB()}"
+                            app:cardCornerRadius="20dp">
 
                             <RelativeLayout
                                 android:layout_width="match_parent"
@@ -354,6 +361,7 @@
                         </androidx.cardview.widget.CardView>
 
                     </LinearLayout>
+
                 </LinearLayout>
 
                 <LinearLayout

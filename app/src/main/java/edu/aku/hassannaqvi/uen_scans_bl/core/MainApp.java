@@ -29,8 +29,9 @@ import edu.aku.hassannaqvi.uen_scans_bl.R;
 import edu.aku.hassannaqvi.uen_scans_bl.contracts.AnthroContract;
 import edu.aku.hassannaqvi.uen_scans_bl.contracts.ChildContract;
 import edu.aku.hassannaqvi.uen_scans_bl.contracts.FamilyMembersContract;
+import edu.aku.hassannaqvi.uen_scans_bl.contracts.FoodFreqContract;
 import edu.aku.hassannaqvi.uen_scans_bl.contracts.FormsContract;
-import edu.aku.hassannaqvi.uen_scans_bl.contracts.KishMWRAContract;
+import edu.aku.hassannaqvi.uen_scans_bl.contracts.IndexMWRAContract;
 import edu.aku.hassannaqvi.uen_scans_bl.databinding.CountAlertDialogLayoutBinding;
 import edu.aku.hassannaqvi.uen_scans_bl.ui.other.EndingActivity;
 import kotlin.Pair;
@@ -72,18 +73,20 @@ public class MainApp extends Application {
     public static AppInfo appInfo;
     public static Boolean admin = false;
     public static FormsContract fc;
-    public static KishMWRAContract kish;
+    public static FoodFreqContract foodFreq;
+    public static IndexMWRAContract indexMwra;
     public static ChildContract child;
     public static AnthroContract anthro;
     public static FamilyMembersContract indexKishMWRA;
     public static FamilyMembersContract indexKishMWRAChild;
+    public static Pair<List<Integer>, List<String>> mwraChildren;
+    protected static LocationManager locationManager;
     public static String userName = "0000";
     public static String DeviceURL = "devices.php";
     public static String IMEI;
+    public static String C401 = "";
     public static SharedPreferences sharedPref;
     public static String TAG = "AppMain";
-    public static Pair<List<Integer>, List<String>> mwraChildren;
-    protected static LocationManager locationManager;
 
     public static String DIST_ID;
 

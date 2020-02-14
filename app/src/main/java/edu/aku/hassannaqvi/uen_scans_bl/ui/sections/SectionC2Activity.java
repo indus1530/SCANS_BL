@@ -13,6 +13,9 @@ import org.json.JSONException;
 import org.json.JSONObject;
 
 import edu.aku.hassannaqvi.uen_scans_bl.R;
+import edu.aku.hassannaqvi.uen_scans_bl.contracts.ChildContract;
+import edu.aku.hassannaqvi.uen_scans_bl.core.DatabaseHelper;
+import edu.aku.hassannaqvi.uen_scans_bl.core.MainApp;
 import edu.aku.hassannaqvi.uen_scans_bl.databinding.ActivitySectionC2Binding;
 import edu.aku.hassannaqvi.uen_scans_bl.utils.Util;
 import edu.aku.hassannaqvi.uen_scans_bl.validator.ClearClass;
@@ -76,22 +79,19 @@ public class SectionC2Activity extends AppCompatActivity {
 
 
     public void BtnEnd() {
-
         Util.openEndActivity(this);
     }
 
 
     private boolean UpdateDB() {
-
-        /*DatabaseHelper db = MainApp.appInfo.getDbHelper();
-        int updcount = db.updatesKishMWRAColumn(KishMWRAContract.SingleKishMWRA.COLUMN_SK, MainApp.kish.getsK());
+        DatabaseHelper db = MainApp.appInfo.getDbHelper();
+        int updcount = db.updatesChildColumn(ChildContract.SingleChild.COLUMN_SC2, MainApp.child.getsC2());
         if (updcount == 1) {
             return true;
         } else {
             Toast.makeText(this, "Updating Database... ERROR!", Toast.LENGTH_SHORT).show();
             return false;
-        }*/
-        return true;
+        }
     }
 
 
@@ -217,6 +217,8 @@ public class SectionC2Activity extends AppCompatActivity {
         f1.put("c213g", bi.c213g.isChecked() ? "7" : "0");
         f1.put("c213h", bi.c213h.isChecked() ? "8" : "0");
         f1.put("c21397", bi.c21397.isChecked() ? "97" : "0");
+
+        MainApp.child.setsC2(String.valueOf(f1));
 
     }
 

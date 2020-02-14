@@ -9,12 +9,13 @@ import androidx.databinding.DataBindingUtil;
 
 import com.validatorcrawler.aliazaz.Validator;
 
+import edu.aku.hassannaqvi.uen_scans_bl.CONSTANTS;
 import edu.aku.hassannaqvi.uen_scans_bl.R;
 import edu.aku.hassannaqvi.uen_scans_bl.core.DatabaseHelper;
 import edu.aku.hassannaqvi.uen_scans_bl.core.MainApp;
 import edu.aku.hassannaqvi.uen_scans_bl.databinding.ActivityAnthroEndingBinding;
+import edu.aku.hassannaqvi.uen_scans_bl.ui.sections.SectionK1Activity;
 import edu.aku.hassannaqvi.uen_scans_bl.ui.sections.SectionK2Activity;
-import edu.aku.hassannaqvi.uen_scans_bl.ui.sections.SectionLActivity;
 
 public class AnthroEndingActivity extends AppCompatActivity {
 
@@ -29,7 +30,7 @@ public class AnthroEndingActivity extends AppCompatActivity {
         bi.setCallback(this);
 
 
-        Boolean check = getIntent().getExtras().getBoolean("complete");
+        boolean check = getIntent().getExtras().getBoolean("complete");
 
         if (check) {
             bi.k208a.setEnabled(true);
@@ -49,7 +50,22 @@ public class AnthroEndingActivity extends AppCompatActivity {
             SaveDraft();
             if (UpdateDB()) {
                 finish();
-                startActivity(new Intent(this, MainApp.mwraChildren.getFirst().size() > 0 ? SectionK2Activity.class : SectionLActivity.class));
+                Intent intent;
+                if (MainApp.anthro.getFormType().equals(CONSTANTS.ANTHRO_K1)) {
+                    if (MainApp.mwraChildren.getFirst().size() > 0)
+                        intent = new Intent(this, SectionK1Activity.class);
+                    else
+                        intent = new Intent(this, EndingActivity.class).putExtra("complete", true);
+                } else {
+                    if (MainApp.mwraChildren.getFirst().size() > 0)
+                        intent = new Intent(this, SectionK2Activity.class);
+                    else
+                        intent = new Intent(this, MainActivity.class)
+                                .setFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK).setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP).setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+                }
+
+
+                startActivity(intent);
             } else {
                 Toast.makeText(this, "Error in updating db!!", Toast.LENGTH_SHORT).show();
             }

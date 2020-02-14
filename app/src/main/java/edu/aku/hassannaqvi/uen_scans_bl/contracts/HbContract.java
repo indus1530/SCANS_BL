@@ -6,7 +6,7 @@ import android.provider.BaseColumns;
 import org.json.JSONException;
 import org.json.JSONObject;
 
-public class MWRA_PREContract {
+public class HbContract {
 
 
     private String _ID = "";
@@ -112,15 +112,15 @@ public class MWRA_PREContract {
         this.synced_date = synced_date;
     }
 
-    public MWRA_PREContract hydrate(Cursor cursor) {
-        this._ID = cursor.getString(cursor.getColumnIndex(SingleMWRAPRE.COLUMN__ID));
-        this.UID = cursor.getString(cursor.getColumnIndex(SingleMWRAPRE.COLUMN_UID));
-        this._UUID = cursor.getString(cursor.getColumnIndex(SingleMWRAPRE.COLUMN__UUID));
-        this.deviceId = cursor.getString(cursor.getColumnIndex(SingleMWRAPRE.COLUMN_DEVICEID));
-        this.formDate = cursor.getString(cursor.getColumnIndex(SingleMWRAPRE.COLUMN_FORMDATE));
-        this.user = cursor.getString(cursor.getColumnIndex(SingleMWRAPRE.COLUMN_USER));
-        this.sE2 = cursor.getString(cursor.getColumnIndex(SingleMWRAPRE.COLUMN_SE2));
-        this.devicetagID = cursor.getString(cursor.getColumnIndex(SingleMWRAPRE.COLUMN_DEVICETAGID));
+    public HbContract hydrate(Cursor cursor) {
+        this._ID = cursor.getString(cursor.getColumnIndex(hbTable.COLUMN__ID));
+        this.UID = cursor.getString(cursor.getColumnIndex(hbTable.COLUMN_UID));
+        this._UUID = cursor.getString(cursor.getColumnIndex(hbTable.COLUMN__UUID));
+        this.deviceId = cursor.getString(cursor.getColumnIndex(hbTable.COLUMN_DEVICEID));
+        this.formDate = cursor.getString(cursor.getColumnIndex(hbTable.COLUMN_FORMDATE));
+        this.user = cursor.getString(cursor.getColumnIndex(hbTable.COLUMN_USER));
+        this.sE2 = cursor.getString(cursor.getColumnIndex(hbTable.COLUMN_SE2));
+        this.devicetagID = cursor.getString(cursor.getColumnIndex(hbTable.COLUMN_DEVICETAGID));
 
         return this;
 
@@ -129,27 +129,27 @@ public class MWRA_PREContract {
     public JSONObject toJSONObject() throws JSONException {
 
         JSONObject json = new JSONObject();
-        json.put(SingleMWRAPRE.COLUMN__ID, this._ID == null ? JSONObject.NULL : this._ID);
-        json.put(SingleMWRAPRE.COLUMN_UID, this.UID == null ? JSONObject.NULL : this.UID);
-        json.put(SingleMWRAPRE.COLUMN__UUID, this._UUID == null ? JSONObject.NULL : this._UUID);
-        json.put(SingleMWRAPRE.COLUMN_DEVICEID, this.deviceId == null ? JSONObject.NULL : this.deviceId);
-        json.put(SingleMWRAPRE.COLUMN_FORMDATE, this.formDate == null ? JSONObject.NULL : this.formDate);
-        json.put(SingleMWRAPRE.COLUMN_USER, this.user == null ? JSONObject.NULL : this.user);
+        json.put(hbTable.COLUMN__ID, this._ID == null ? JSONObject.NULL : this._ID);
+        json.put(hbTable.COLUMN_UID, this.UID == null ? JSONObject.NULL : this.UID);
+        json.put(hbTable.COLUMN__UUID, this._UUID == null ? JSONObject.NULL : this._UUID);
+        json.put(hbTable.COLUMN_DEVICEID, this.deviceId == null ? JSONObject.NULL : this.deviceId);
+        json.put(hbTable.COLUMN_FORMDATE, this.formDate == null ? JSONObject.NULL : this.formDate);
+        json.put(hbTable.COLUMN_USER, this.user == null ? JSONObject.NULL : this.user);
 
         if (!this.sE2.equals("")) {
-            json.put(SingleMWRAPRE.COLUMN_SE2, new JSONObject(this.sE2));
+            json.put(hbTable.COLUMN_SE2, new JSONObject(this.sE2));
         }
 
-        json.put(SingleMWRAPRE.COLUMN_DEVICETAGID, this.devicetagID == null ? JSONObject.NULL : this.devicetagID);
+        json.put(hbTable.COLUMN_DEVICETAGID, this.devicetagID == null ? JSONObject.NULL : this.devicetagID);
 
         return json;
 
     }
 
 
-    public static abstract class SingleMWRAPRE implements BaseColumns {
+    public static abstract class hbTable implements BaseColumns {
 
-        public static final String TABLE_NAME = "mwra_preg";
+        public static final String TABLE_NAME = "hb";
         public static final String COLUMN__ID = "_id";
         public static final String COLUMN_UID = "uid";
         public static final String COLUMN__UUID = "_uuid";
@@ -160,7 +160,6 @@ public class MWRA_PREContract {
         public static final String COLUMN_DEVICETAGID = "devicetagid";
         public static final String COLUMN_SYNCED = "synced";
         public static final String COLUMN_SYNCED_DATE = "synced_date";
-
 
     }
 

@@ -48,6 +48,10 @@
                             style="@style/i_textview"
                             android:layout_width="0dp"
                             android:layout_weight="1"
+                            android:background="@color/dullWhile"
+                            android:textAlignment="center"
+                            android:textColor="@color/black"
+                            android:textStyle="bold"
                             android:text="@string/num" />
 
                     </LinearLayout>

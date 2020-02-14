@@ -2,6 +2,7 @@ package edu.aku.hassannaqvi.uen_scans_bl.ui.sections;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.view.View;
 import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
@@ -13,6 +14,9 @@ import org.json.JSONException;
 import org.json.JSONObject;
 
 import edu.aku.hassannaqvi.uen_scans_bl.R;
+import edu.aku.hassannaqvi.uen_scans_bl.contracts.ChildContract;
+import edu.aku.hassannaqvi.uen_scans_bl.core.DatabaseHelper;
+import edu.aku.hassannaqvi.uen_scans_bl.core.MainApp;
 import edu.aku.hassannaqvi.uen_scans_bl.databinding.ActivitySectionC3Binding;
 import edu.aku.hassannaqvi.uen_scans_bl.utils.Util;
 import edu.aku.hassannaqvi.uen_scans_bl.validator.ClearClass;
@@ -28,17 +32,23 @@ public class SectionC3Activity extends AppCompatActivity {
         bi = DataBindingUtil.setContentView(this, R.layout.activity_section_c3);
         bi.setCallback(this);
 
-        setlistener();
+        setupSkips();
 
     }
 
 
-    private void setlistener() {
+    private void setupSkips() {
 
         bi.c312.setOnCheckedChangeListener(((radioGroup, i) -> {
 
-            if (i != bi.c312a.getId()) {
-                ClearClass.ClearAllFields(bi.fldGrpCVC301, null);
+            if (i == bi.c312a.getId()) {
+                bi.fldGrpCVc313.setVisibility(View.VISIBLE);
+                bi.fldGrpCVc314.setVisibility(View.VISIBLE);
+            } else {
+                ClearClass.ClearAllFields(bi.fldGrpCVc313, null);
+                ClearClass.ClearAllFields(bi.fldGrpCVc314, null);
+                bi.fldGrpCVc313.setVisibility(View.GONE);
+                bi.fldGrpCVc314.setVisibility(View.GONE);
             }
 
         }));
@@ -71,23 +81,22 @@ public class SectionC3Activity extends AppCompatActivity {
 
     private boolean UpdateDB() {
 
-        /*DatabaseHelper db = MainApp.appInfo.getDbHelper();
-        int updcount = db.updatesKishMWRAColumn(KishMWRAContract.SingleKishMWRA.COLUMN_SK, MainApp.kish.getsK());
+        DatabaseHelper db = MainApp.appInfo.getDbHelper();
+        int updcount = db.updatesChildColumn(ChildContract.SingleChild.COLUMN_SC3, MainApp.child.getsC3());
         if (updcount == 1) {
             return true;
         } else {
             Toast.makeText(this, "Updating Database... ERROR!", Toast.LENGTH_SHORT).show();
             return false;
-        }*/
-        return true;
+        }
     }
 
 
     private void SaveDraft() throws JSONException {
 
-        JSONObject f1 = new JSONObject();
+        JSONObject json = new JSONObject();
 
-        f1.put("c301",
+        json.put("c301",
                 bi.c301a.isChecked() ? "1" :
                         bi.c301b.isChecked() ? "2" :
                                 bi.c301c.isChecked() ? "3" :
@@ -98,7 +107,7 @@ public class SectionC3Activity extends AppCompatActivity {
                                                                         bi.c301h.isChecked() ? "8" :
                                                                                 "0");
 
-        f1.put("c302",
+        json.put("c302",
                 bi.c302a.isChecked() ? "1" :
                         bi.c302b.isChecked() ? "2" :
                                 bi.c302c.isChecked() ? "3" :
@@ -109,7 +118,7 @@ public class SectionC3Activity extends AppCompatActivity {
                                                                         bi.c302h.isChecked() ? "8" :
                                                                                 "0");
 
-        f1.put("c303",
+        json.put("c303",
                 bi.c303a.isChecked() ? "1" :
                         bi.c303b.isChecked() ? "2" :
                                 bi.c303c.isChecked() ? "3" :
@@ -120,7 +129,7 @@ public class SectionC3Activity extends AppCompatActivity {
                                                                         bi.c303h.isChecked() ? "8" :
                                                                                 "0");
 
-        f1.put("c304a",
+        json.put("c304a",
                 bi.c304aa.isChecked() ? "1" :
                         bi.c304ab.isChecked() ? "2" :
                                 bi.c304ac.isChecked() ? "3" :
@@ -129,7 +138,7 @@ public class SectionC3Activity extends AppCompatActivity {
                                                         bi.c304af.isChecked() ? "6" :
                                                                 "0");
 
-        f1.put("c304b",
+        json.put("c304b",
                 bi.c304ba.isChecked() ? "1" :
                         bi.c304bb.isChecked() ? "2" :
                                 bi.c304bc.isChecked() ? "3" :
@@ -138,7 +147,7 @@ public class SectionC3Activity extends AppCompatActivity {
                                                         bi.c304bf.isChecked() ? "6" :
                                                                 "0");
 
-        f1.put("c304c",
+        json.put("c304c",
                 bi.c304ca.isChecked() ? "1" :
                         bi.c304cb.isChecked() ? "2" :
                                 bi.c304cc.isChecked() ? "3" :
@@ -147,66 +156,75 @@ public class SectionC3Activity extends AppCompatActivity {
                                                         bi.c304cf.isChecked() ? "6" :
                                                                 "0");
 
-        f1.put("c305",
+        json.put("c305",
                 bi.c305a.isChecked() ? "1" :
                         bi.c305b.isChecked() ? "2" :
                                 bi.c305c.isChecked() ? "3" :
                                         "0");
 
-        f1.put("c306",
+        json.put("c306",
                 bi.c306a.isChecked() ? "1" :
                         bi.c306b.isChecked() ? "2" :
                                 bi.c306c.isChecked() ? "3" :
                                         "0");
 
-        f1.put("c307",
+        json.put("c307",
                 bi.c307a.isChecked() ? "1" :
                         bi.c307b.isChecked() ? "2" :
                                 bi.c307c.isChecked() ? "3" :
                                         "0");
 
-        f1.put("c308",
+        json.put("c308",
                 bi.c308a.isChecked() ? "1" :
                         bi.c308b.isChecked() ? "2" :
                                 bi.c308c.isChecked() ? "3" :
                                         "0");
 
-        f1.put("c309",
+        json.put("c309",
                 bi.c309a.isChecked() ? "1" :
                         bi.c309b.isChecked() ? "2" :
                                 bi.c309c.isChecked() ? "3" :
                                         "0");
 
-        f1.put("c310",
+        json.put("c310",
                 bi.c310a.isChecked() ? "1" :
                         bi.c310b.isChecked() ? "2" :
                                 bi.c310c.isChecked() ? "3" :
                                         "0");
 
-        f1.put("c311",
+        json.put("c311",
                 bi.c311a.isChecked() ? "1" :
                         bi.c311b.isChecked() ? "2" :
                                 bi.c311c.isChecked() ? "3" :
                                         "0");
 
-        f1.put("c312",
+        json.put("c312",
                 bi.c312a.isChecked() ? "1" :
                         bi.c312b.isChecked() ? "2" :
                                 bi.c312c.isChecked() ? "98" :
                                         "0");
 
-        f1.put("c313",
+        json.put("c313",
                 bi.c313a.isChecked() ? "1" :
                         bi.c313b.isChecked() ? "2" :
                                 "0");
 
-        f1.put("c314",
+        json.put("c314",
                 bi.c314a.isChecked() ? "1" :
                         bi.c314b.isChecked() ? "2" :
                                 bi.c314c.isChecked() ? "3" :
                                         bi.c314d.isChecked() ? "4" :
                                                 "0");
 
+        json.put("c315",
+                bi.c315a.isChecked() ? "1" :
+                        bi.c315b.isChecked() ? "2" :
+                                bi.c315c.isChecked() ? "3" :
+                                        bi.c31596.isChecked() ? "96" :
+                                                "0");
+        json.put("c31596x", bi.c31596x.getText().toString());
+
+        MainApp.child.setsC3(String.valueOf(json));
     }
 
 

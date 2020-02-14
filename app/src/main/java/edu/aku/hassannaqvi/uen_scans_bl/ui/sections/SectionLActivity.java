@@ -19,15 +19,16 @@ import java.text.SimpleDateFormat;
 import java.util.Date;
 
 import edu.aku.hassannaqvi.uen_scans_bl.R;
-import edu.aku.hassannaqvi.uen_scans_bl.contracts.FormsContract;
+import edu.aku.hassannaqvi.uen_scans_bl.contracts.HbContract;
+import edu.aku.hassannaqvi.uen_scans_bl.core.DatabaseHelper;
 import edu.aku.hassannaqvi.uen_scans_bl.core.MainApp;
 import edu.aku.hassannaqvi.uen_scans_bl.databinding.ActivitySectionLBinding;
-import edu.aku.hassannaqvi.uen_scans_bl.utils.Util;
 import edu.aku.hassannaqvi.uen_scans_bl.validator.ClearClass;
 
 public class SectionLActivity extends AppCompatActivity {
 
     ActivitySectionLBinding bi;
+    HbContract hb;
 
 
     @Override
@@ -105,39 +106,38 @@ public class SectionLActivity extends AppCompatActivity {
         }
     }
 
-
-    public void BtnEnd() {
-
-        Util.openEndActivity(this);
-    }
-
-
     private boolean UpdateDB() {
-
-        /*DatabaseHelper db = MainApp.appInfo.getDbHelper();
-        int updcount = db.updatesKishMWRAColumn(KishMWRAContract.SingleKishMWRA.COLUMN_SK, MainApp.kish.getsK());
-        if (updcount == 1) {
+        DatabaseHelper db = MainApp.appInfo.getDbHelper();
+        long rowID = db.addHB(hb);
+        if (rowID > 0) {
+            hb.set_ID(String.valueOf(rowID));
+            hb.setUID(hb.getDeviceId() + hb.get_ID());
+            db.updatesHBColumn(HbContract.hbTable.COLUMN_UID, hb.getUID(), hb);
             return true;
         } else {
             Toast.makeText(this, "Updating Database... ERROR!", Toast.LENGTH_SHORT).show();
             return false;
-        }*/
-        return true;
+        }
     }
 
 
     private void SaveDraft() throws JSONException {
 
-        MainApp.fc = new FormsContract();
-        MainApp.fc.setFormDate(new SimpleDateFormat("dd-MM-yy HH:mm").format(new Date().getTime()));
-        MainApp.fc.setUser(MainApp.userName);
-        MainApp.fc.setDeviceID(MainApp.appInfo.getDeviceID());
-        MainApp.fc.setDevicetagID(MainApp.appInfo.getTagName());
-        MainApp.fc.setAppversion(MainApp.appInfo.getAppVersion());
-//        MainApp.fc.setHhno(bi.a112.getText().toString());
-        MainApp.setGPS(this); // Set GPS
+        hb = new HbContract();
+        hb.set_UUID(MainApp.fc.get_UID());
+        hb.setDeviceId(MainApp.appInfo.getDeviceID());
+        hb.setDevicetagID(MainApp.appInfo.getTagName());
+        hb.setFormDate(new SimpleDateFormat("dd-MM-yy HH:mm").format(new Date().getTime()));
+        hb.setUser(MainApp.userName);
 
         JSONObject json = new JSONObject();
+
+        json.put("hhno", MainApp.fc.getHhno());
+        json.put("cluster", MainApp.fc.getClusterCode());
+        json.put("fm_uid", MainApp.indexKishMWRAChild.getUid());
+        json.put("fm_serial", MainApp.indexKishMWRAChild.getSerialno());
+        json.put("mm_fm_uid", MainApp.indexKishMWRA.getUid());
+        json.put("mm_fm_serial", MainApp.indexKishMWRA.getSerialno());
 
         json.put("l102",
                 bi.l102a.isChecked() ? "1" :
@@ -152,19 +152,12 @@ public class SectionLActivity extends AppCompatActivity {
 
         json.put("l104", bi.l104.getText().toString());
 
+        hb.setsE2(String.valueOf(json));
     }
 
 
     private boolean formValidation() {
         return Validator.emptyCheckingContainer(this, bi.fldGrpSectionL);
-
     }
-
-
-    @Override
-    public void onBackPressed() {
-        Toast.makeText(this, "You can't go back", Toast.LENGTH_SHORT).show();
-    }
-
 
 }

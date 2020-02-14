@@ -12,7 +12,7 @@ import org.json.JSONObject;
  * Created by gul.sanober on 5/9/2017.
  */
 
-public class MWRAContract implements Parcelable {
+public class IndexMWRAContract implements Parcelable {
 
     private String projectName = "uen_mdLine20";
 
@@ -22,7 +22,11 @@ public class MWRAContract implements Parcelable {
     private String deviceId = "";
     private String formDate = ""; // Date
     private String user = ""; // Interviewer
-    private String sE1 = "";
+    private String sB1 = "";
+    private String sB2 = "";
+
+
+    private String sB3 = "";
     private String devicetagID = "";
     private String synced = "";
     private String synced_date = "";
@@ -42,10 +46,10 @@ public class MWRAContract implements Parcelable {
     * */
 
 
-    public MWRAContract() {
+    public IndexMWRAContract() {
     }
 
-    protected MWRAContract(Parcel in) {
+    protected IndexMWRAContract(Parcel in) {
         projectName = in.readString();
         _ID = in.readString();
         UID = in.readString();
@@ -53,7 +57,9 @@ public class MWRAContract implements Parcelable {
         deviceId = in.readString();
         formDate = in.readString();
         user = in.readString();
-        sE1 = in.readString();
+        sB1 = in.readString();
+        sB2 = in.readString();
+        sB3 = in.readString();
         devicetagID = in.readString();
         synced = in.readString();
         synced_date = in.readString();
@@ -61,17 +67,33 @@ public class MWRAContract implements Parcelable {
         fm_serial = in.readString();
     }
 
-    public static final Creator<MWRAContract> CREATOR = new Creator<MWRAContract>() {
+    public static final Creator<IndexMWRAContract> CREATOR = new Creator<IndexMWRAContract>() {
         @Override
-        public MWRAContract createFromParcel(Parcel in) {
-            return new MWRAContract(in);
+        public IndexMWRAContract createFromParcel(Parcel in) {
+            return new IndexMWRAContract(in);
         }
 
         @Override
-        public MWRAContract[] newArray(int size) {
-            return new MWRAContract[size];
+        public IndexMWRAContract[] newArray(int size) {
+            return new IndexMWRAContract[size];
         }
     };
+
+    public String getsB2() {
+        return sB2;
+    }
+
+    public void setsB2(String sB2) {
+        this.sB2 = sB2;
+    }
+
+    public String getsB3() {
+        return sB3;
+    }
+
+    public void setsB3(String sB3) {
+        this.sB3 = sB3;
+    }
 
     public String getProjectName() {
         return projectName;
@@ -110,12 +132,12 @@ public class MWRAContract implements Parcelable {
         this.deviceId = deviceId;
     }
 
-    public String getsE1() {
-        return sE1;
+    public String getsB1() {
+        return sB1;
     }
 
-    public void setsE1(String sE1) {
-        this.sE1 = sE1;
+    public void setsB1(String sB1) {
+        this.sB1 = sB1;
     }
 
     public String getDevicetagID() {
@@ -175,7 +197,7 @@ public class MWRAContract implements Parcelable {
         this.fm_serial = fm_serial;
     }
 
-    public MWRAContract Sync(JSONObject jsonObject) throws JSONException {
+    public IndexMWRAContract Sync(JSONObject jsonObject) throws JSONException {
 
         this._ID = jsonObject.getString(MWRATable.COLUMN_ID);
         this.UID = jsonObject.getString(MWRATable.COLUMN_UID);
@@ -183,7 +205,9 @@ public class MWRAContract implements Parcelable {
         this.formDate = jsonObject.getString(MWRATable.COLUMN_FORMDATE);
         this.deviceId = jsonObject.getString(MWRATable.COLUMN_DEVICEID);
         this.user = jsonObject.getString(MWRATable.COLUMN_USER);
-        this.sE1 = jsonObject.getString(MWRATable.COLUMN_SE1);
+        this.sB1 = jsonObject.getString(MWRATable.COLUMN_SB1);
+        this.sB2 = jsonObject.getString(MWRATable.COLUMN_SB2);
+        this.sB3 = jsonObject.getString(MWRATable.COLUMN_SB3);
         this.synced = jsonObject.getString(MWRATable.COLUMN_SYNCED);
         this.synced_date = jsonObject.getString(MWRATable.COLUMN_SYNCED_DATE);
         this.devicetagID = jsonObject.getString(MWRATable.COLUMN_DEVICETAGID);
@@ -192,7 +216,7 @@ public class MWRAContract implements Parcelable {
 
     }
 
-    public MWRAContract Hydrate(Cursor cursor) {
+    public IndexMWRAContract Hydrate(Cursor cursor) {
 
         this._ID = cursor.getString(cursor.getColumnIndex(MWRATable.COLUMN_ID));
         this.UID = cursor.getString(cursor.getColumnIndex(MWRATable.COLUMN_UID));
@@ -200,7 +224,9 @@ public class MWRAContract implements Parcelable {
         this.formDate = cursor.getString(cursor.getColumnIndex(MWRATable.COLUMN_FORMDATE));
         this.deviceId = cursor.getString(cursor.getColumnIndex(MWRATable.COLUMN_DEVICEID));
         this.user = cursor.getString(cursor.getColumnIndex(MWRATable.COLUMN_USER));
-        this.sE1 = cursor.getString(cursor.getColumnIndex(MWRATable.COLUMN_SE1));
+        this.sB1 = cursor.getString(cursor.getColumnIndex(MWRATable.COLUMN_SB1));
+        this.sB2 = cursor.getString(cursor.getColumnIndex(MWRATable.COLUMN_SB2));
+        this.sB3 = cursor.getString(cursor.getColumnIndex(MWRATable.COLUMN_SB3));
         this.devicetagID = cursor.getString(cursor.getColumnIndex(MWRATable.COLUMN_DEVICETAGID));
 
         return this;
@@ -218,9 +244,17 @@ public class MWRAContract implements Parcelable {
         json.put(MWRATable.COLUMN_FORMDATE, this.formDate == null ? JSONObject.NULL : this.formDate);
         json.put(MWRATable.COLUMN_DEVICEID, this.deviceId == null ? JSONObject.NULL : this.deviceId);
         json.put(MWRATable.COLUMN_USER, this.user == null ? JSONObject.NULL : this.user);
-        if (!this.sE1.equals("")) {
+        if (!this.sB1.equals("")) {
 
-            json.put(MWRATable.COLUMN_SE1, this.sE1.equals("") ? JSONObject.NULL : new JSONObject(this.sE1));
+            json.put(MWRATable.COLUMN_SB1, this.sB1.equals("") ? JSONObject.NULL : new JSONObject(this.sB1));
+        }
+        if (!this.sB2.equals("")) {
+
+            json.put(MWRATable.COLUMN_SB2, this.sB2.equals("") ? JSONObject.NULL : new JSONObject(this.sB2));
+        }
+        if (!this.sB3.equals("")) {
+
+            json.put(MWRATable.COLUMN_SB3, this.sB3.equals("") ? JSONObject.NULL : new JSONObject(this.sB3));
         }
         json.put(MWRATable.COLUMN_DEVICETAGID, this.devicetagID == null ? JSONObject.NULL : this.devicetagID);
 
@@ -241,7 +275,9 @@ public class MWRAContract implements Parcelable {
         dest.writeString(deviceId);
         dest.writeString(formDate);
         dest.writeString(user);
-        dest.writeString(sE1);
+        dest.writeString(sB1);
+        dest.writeString(sB2);
+        dest.writeString(sB3);
         dest.writeString(devicetagID);
         dest.writeString(synced);
         dest.writeString(synced_date);
@@ -251,7 +287,7 @@ public class MWRAContract implements Parcelable {
 
     public static abstract class MWRATable implements BaseColumns {
 
-        public static final String TABLE_NAME = "mwra";
+        public static final String TABLE_NAME = "indexMwra";
         public static final String COLUMN_NAME_NULLABLE = "NULLHACK";
         public static final String COLUMN_PROJECT_NAME = "project_name";
         public static final String COLUMN_ID = "_id";
@@ -260,7 +296,9 @@ public class MWRAContract implements Parcelable {
         public static final String COLUMN_FORMDATE = "formdate";
         public static final String COLUMN_DEVICEID = "deviceid";
         public static final String COLUMN_USER = "user";
-        public static final String COLUMN_SE1 = "sE1";
+        public static final String COLUMN_SB1 = "sB1";
+        public static final String COLUMN_SB2 = "sB2";
+        public static final String COLUMN_SB3 = "sB3";
         public static final String COLUMN_SYNCED = "synced";
         public static final String COLUMN_SYNCED_DATE = "sync_date";
         public static final String COLUMN_DEVICETAGID = "tagid";

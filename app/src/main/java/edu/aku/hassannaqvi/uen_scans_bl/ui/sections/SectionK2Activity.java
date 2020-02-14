@@ -21,6 +21,7 @@ import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
 
+import edu.aku.hassannaqvi.uen_scans_bl.CONSTANTS;
 import edu.aku.hassannaqvi.uen_scans_bl.R;
 import edu.aku.hassannaqvi.uen_scans_bl.contracts.AnthroContract;
 import edu.aku.hassannaqvi.uen_scans_bl.contracts.FamilyMembersContract;
@@ -28,13 +29,14 @@ import edu.aku.hassannaqvi.uen_scans_bl.core.DatabaseHelper;
 import edu.aku.hassannaqvi.uen_scans_bl.core.MainApp;
 import edu.aku.hassannaqvi.uen_scans_bl.databinding.ActivitySectionK2Binding;
 import edu.aku.hassannaqvi.uen_scans_bl.ui.other.AnthroEndingActivity;
+import edu.aku.hassannaqvi.uen_scans_bl.utils.Util;
 import edu.aku.hassannaqvi.uen_scans_bl.validator.ClearClass;
 
 import static edu.aku.hassannaqvi.uen_scans_bl.core.MainApp.anthro;
 import static edu.aku.hassannaqvi.uen_scans_bl.core.MainApp.mwraChildren;
 import static edu.aku.hassannaqvi.uen_scans_bl.ui.list_activity.FamilyMembersListActivity.mainVModel;
 
-public class SectionK2Activity extends AppCompatActivity {
+public class SectionK2Activity extends AppCompatActivity implements Util.EndSecAActivity {
 
     ActivitySectionK2Binding bi;
     Spinner[] userSpinners;
@@ -123,18 +125,12 @@ public class SectionK2Activity extends AppCompatActivity {
 
 
     public void BtnEnd() {
+        Util.openEndActivity(this);
+    }
 
+    public void BtnAnthroEnd() {
         if (!Validator.emptySpinner(this, bi.k201)) return;
-
-        try {
-            SaveDraft();
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
-        if (UpdateDB()) {
-            finish();
-            startActivity(new Intent(this, AnthroEndingActivity.class).putExtra("complete", false));
-        }
+        Util.contextEndActivity(this);
     }
 
 
@@ -149,25 +145,26 @@ public class SectionK2Activity extends AppCompatActivity {
         } else {
             Toast.makeText(this, "Updating Database... ERROR!", Toast.LENGTH_SHORT).show();
         }
-        return true;
+        return false;
     }
 
 
     private void SaveDraft() throws JSONException {
 
         anthro = new AnthroContract();
-        anthro.set_UUID(MainApp.fc.get_UID());
+        anthro.set_UUID(fmc_child.getUuid());
         anthro.setDeviceId(MainApp.appInfo.getDeviceID());
         anthro.setFormDate(new SimpleDateFormat("dd-MM-yy HH:mm").format(new Date().getTime()));
         anthro.setUser(MainApp.userName);
         anthro.setDevicetagID(MainApp.appInfo.getTagName());
+        anthro.setFormType(CONSTANTS.ANTHRO_K2);
 
         JSONObject json = new JSONObject();
         json.put("fm_uid", fmc_child.getUid());
         json.put("fm_serial", fmc_child.getSerialno());
         json.put("mm_serial", fmc_child.getMother_serial());
-        json.put("hhno", MainApp.fc.getHhno());
-        json.put("cluster", MainApp.fc.getClusterCode());
+        json.put("hhno", fmc_child.getHhno());
+        json.put("cluster", fmc_child.getClusterno());
 
         json.put("k201", bi.k201.getSelectedItem().toString());
 
@@ -229,6 +226,8 @@ public class SectionK2Activity extends AppCompatActivity {
         json.put("k220a", bi.k220a.getText().toString());
         json.put("k220b", bi.k220b.getSelectedItem().toString());
 
+        anthro.setsK1(String.valueOf(json));
+
         // Deleting item in list
         mwraChildren.getFirst().remove(position - 1);
         mwraChildren.getSecond().remove(position - 1);
@@ -248,4 +247,16 @@ public class SectionK2Activity extends AppCompatActivity {
     }
 
 
+    @Override
+    public void endSecAActivity(boolean flag) {
+        try {
+            SaveDraft();
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+        if (UpdateDB()) {
+            finish();
+            startActivity(new Intent(this, AnthroEndingActivity.class).putExtra("complete", false));
+        }
+    }
 }

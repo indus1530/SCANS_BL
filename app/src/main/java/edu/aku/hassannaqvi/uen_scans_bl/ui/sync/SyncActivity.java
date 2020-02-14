@@ -35,10 +35,10 @@ import edu.aku.hassannaqvi.uen_scans_bl.adapter.UploadListAdapter;
 import edu.aku.hassannaqvi.uen_scans_bl.contracts.AnthroContract;
 import edu.aku.hassannaqvi.uen_scans_bl.contracts.ChildContract;
 import edu.aku.hassannaqvi.uen_scans_bl.contracts.FamilyMembersContract;
+import edu.aku.hassannaqvi.uen_scans_bl.contracts.FoodFreqContract;
 import edu.aku.hassannaqvi.uen_scans_bl.contracts.FormsContract;
-import edu.aku.hassannaqvi.uen_scans_bl.contracts.KishMWRAContract;
-import edu.aku.hassannaqvi.uen_scans_bl.contracts.MWRAContract;
-import edu.aku.hassannaqvi.uen_scans_bl.contracts.MWRA_PREContract;
+import edu.aku.hassannaqvi.uen_scans_bl.contracts.HbContract;
+import edu.aku.hassannaqvi.uen_scans_bl.contracts.IndexMWRAContract;
 import edu.aku.hassannaqvi.uen_scans_bl.core.DatabaseHelper;
 import edu.aku.hassannaqvi.uen_scans_bl.core.MainApp;
 import edu.aku.hassannaqvi.uen_scans_bl.databinding.ActivitySyncBinding;
@@ -184,13 +184,14 @@ public class SyncActivity extends AppCompatActivity implements SyncDevice.SyncDe
             }
             new SyncAllData(
                     this,
-                    "KISH MWRA",
-                    "updateSyncedKishMWRAForms",
-                    MWRAContract.class,
+                    "Food Frequency",
+                    "updateSyncedFoodFreqForms",
+                    FoodFreqContract.class,
                     MainApp._HOST_URL + MainApp._SERVER_URL,
-                    KishMWRAContract.SingleKishMWRA.TABLE_NAME,
-                    db.getUnsyncedKishMWRA(), 2, uploadListAdapter, uploadlist
+                    FoodFreqContract.SingleFoodFreq.TABLE_NAME,
+                    db.getUnsyncedFoodFrequency(), 2, uploadListAdapter, uploadlist
             ).execute();
+
             if (uploadlistActivityCreated) {
                 uploadmodel = new SyncModel();
                 uploadmodel.setstatusID(0);
@@ -198,12 +199,12 @@ public class SyncActivity extends AppCompatActivity implements SyncDevice.SyncDe
             }
             new SyncAllData(
                     this,
-                    "Pregnant MWRA",
-                    "updateSyncedPregMWRAForms",
-                    MWRA_PREContract.class,
+                    "Index MWRA",
+                    "updateSyncedMWRAForms",
+                    IndexMWRAContract.class,
                     MainApp._HOST_URL + MainApp._SERVER_URL,
-                    MWRA_PREContract.SingleMWRAPRE.TABLE_NAME,
-                    db.getUnsyncedPregMWRA(), 3, uploadListAdapter, uploadlist
+                    IndexMWRAContract.MWRATable.TABLE_NAME,
+                    db.getUnsyncedMWRA(), 3, uploadListAdapter, uploadlist
             ).execute();
 
             if (uploadlistActivityCreated) {
@@ -231,7 +232,7 @@ public class SyncActivity extends AppCompatActivity implements SyncDevice.SyncDe
                     this,
                     "Family Members",
                     "updateSyncedFamilyMemForms",
-                    MWRA_PREContract.class,
+                    FamilyMembersContract.class,
                     MainApp._HOST_URL + MainApp._SERVER_URL,
                     FamilyMembersContract.SingleMember.TABLE_NAME,
                     db.getAllFamilyMembersForms(), 5, uploadListAdapter, uploadlist
@@ -244,14 +245,13 @@ public class SyncActivity extends AppCompatActivity implements SyncDevice.SyncDe
             }
             new SyncAllData(
                     this,
-                    "MWRA",
-                    "updateSyncedMWRAForms",
-                    MWRA_PREContract.class,
+                    "HB",
+                    "updateSyncedHBForms",
+                    HbContract.class,
                     MainApp._HOST_URL + MainApp._SERVER_URL,
-                    MWRAContract.MWRATable.TABLE_NAME,
-                    db.getUnsyncedMWRA(), 6, uploadListAdapter, uploadlist
+                    HbContract.hbTable.TABLE_NAME,
+                    db.getUnsyncedHB(), 6, uploadListAdapter, uploadlist
             ).execute();
-
 
             bi.noDataItem.setVisibility(View.GONE);
 
