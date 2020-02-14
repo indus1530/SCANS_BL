@@ -946,7 +946,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
     }
 
     //Get FamilyMembers data for info activity
-    public FamilyMembersContract getFamilyMember(String cluster, String hhno, String kishType, String mother_serial) {
+    public FamilyMembersContract getFamilyMember(String cluster, String hhno, String kishType, FamilyMembersContract mother) {
         SQLiteDatabase db = this.getReadableDatabase();
         Cursor c = null;
         String[] columns = {
@@ -970,10 +970,11 @@ public class DatabaseHelper extends SQLiteOpenHelper {
 
         String whereClause;
         String[] whereArgs;
-        if (mother_serial != null) {
+        if (mother != null) {
             whereClause = SingleMember.COLUMN_CLUSTERNO + "=? AND " + SingleMember.COLUMN_HHNO + "=? AND "
-                    + SingleMember.COLUMN_KISH_SELECTED + "=? AND " + SingleMember.COLUMN_MOTHER_SERIAL + "=?";
-            whereArgs = new String[]{cluster, hhno, kishType, mother_serial};
+                    + SingleMember.COLUMN_KISH_SELECTED + "=? AND "
+                    + SingleMember.COLUMN_MOTHER_SERIAL + "=? AND " + SingleMember.COLUMN_UUID + "=? AND " + SingleMember.COLUMN_UID + "=?";
+            whereArgs = new String[]{cluster, hhno, kishType, mother.getSerialno(), mother.getUuid(), mother.getUid()};
         } else {
             whereClause = SingleMember.COLUMN_CLUSTERNO + "=? AND " + SingleMember.COLUMN_HHNO + "=? AND "
                     + SingleMember.COLUMN_KISH_SELECTED + "=? ";
@@ -1009,7 +1010,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         return allBL;
     }
 
-    public ArrayList<FamilyMembersContract> getFamilyMemberList(String cluster, String hhno, String motherSerial) {
+    public ArrayList<FamilyMembersContract> getFamilyMemberList(String cluster, String hhno, FamilyMembersContract mother) {
         SQLiteDatabase db = this.getReadableDatabase();
         Cursor c = null;
         String[] columns = {
@@ -1032,8 +1033,8 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         };
 
         String whereClause = SingleMember.COLUMN_CLUSTERNO + "=? AND " + SingleMember.COLUMN_HHNO + "=? AND "
-                + SingleMember.COLUMN_MOTHER_SERIAL + "=?";
-        String[] whereArgs = {cluster, hhno, motherSerial};
+                + SingleMember.COLUMN_MOTHER_SERIAL + "=? AND " + SingleMember.COLUMN_UUID + "=? AND " + SingleMember.COLUMN_UID + "=?";
+        String[] whereArgs = {cluster, hhno, mother.getSerialno(), mother.getUuid(), mother.getUid()};
         String groupBy = null;
         String having = null;
 
