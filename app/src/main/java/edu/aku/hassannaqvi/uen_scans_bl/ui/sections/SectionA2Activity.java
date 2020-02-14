@@ -142,6 +142,7 @@ public class SectionA2Activity extends AppCompatActivity {
     private void SaveDraft() throws JSONException {
 
         if (fmcFLAG) {
+            fmc.setUuid(MainApp.fc.get_UID());
             fmc.setClusterno(MainApp.fc.getClusterCode());
             fmc.setHhno(MainApp.fc.getHhno());
             fmc.setSerialno(bi.a201.getText().toString());
