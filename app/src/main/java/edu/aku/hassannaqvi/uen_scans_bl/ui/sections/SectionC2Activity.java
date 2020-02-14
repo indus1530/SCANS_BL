@@ -42,6 +42,7 @@ public class SectionC2Activity extends AppCompatActivity {
 
             if (i == bi.c20197.getId()) {
                 ClearClass.ClearAllFields(bi.fldGrpCVc202, null);
+                ClearClass.ClearAllFields(bi.fldGrpCVc214, null);
             }
 
         }));
@@ -120,7 +121,7 @@ public class SectionC2Activity extends AppCompatActivity {
         json.put("c202",
                 bi.c202a.isChecked() ? "1" :
                         bi.c202b.isChecked() ? "2" :
-                                bi.c202c.isChecked() ? "3" :
+                                bi.c20297.isChecked() ? "97" :
                                         bi.c20296.isChecked() ? "96" :
                                                 "0");
         json.put("c20296x", bi.c20296x.getText().toString());

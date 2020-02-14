@@ -1163,11 +1163,11 @@
     <string name="c214b"> Miswak </string>
     <string name="c214c"> Finger </string>
 
-    <string name="c202"> C202:\t What does (child name) usually use to clean his/her teeth ? </string>
+    <string name="c202"> C202:\t What type of thing (child name) usually use to clean his / her teeth ?  </string>
     <string name="c202a"> Tooth Paste </string>
-    <string name="c202b"> Miswak </string>
-    <string name="c202c"> Tooth Powder </string>
-    <string name="c202x"> Other Specify </string>
+    <string name="c202b"> Tooth Powder </string>
+    <string name="c20296"> Other </string>
+    <string name="c20297"> Nothing </string>
 
     <string name="c203"> C203:\t Does (child name) frequently use any of the following ? </string>
     <string name="c203a"> Chaalia </string>
