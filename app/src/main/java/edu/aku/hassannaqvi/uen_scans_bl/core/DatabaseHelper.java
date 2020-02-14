@@ -529,9 +529,10 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         String orderBy = null;
 
         List<String> allAC = new ArrayList<>();
+        allAC.add("....");
         try {
             c = db.query(
-                    SingleVillage.TABLE_NAME,  // The table to query
+                    SingleUser.TABLE_NAME,  // The table to query
                     columns,                   // The columns to return
                     whereClause,               // The columns for the WHERE clause
                     whereArgs,                 // The values for the WHERE clause
@@ -933,7 +934,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         SQLiteDatabase db = this.getReadableDatabase();
 
         ContentValues values = new ContentValues();
-        values.put(SingleAnthro.COLUMN_ISTATUS, MainApp.fc.getIstatus());
+        values.put(SingleAnthro.COLUMN_ISTATUS, MainApp.anthro.getIstatus());
 
         String selection = SingleAnthro.COLUMN__ID + " =? ";
         String[] selectionArgs = {String.valueOf(MainApp.anthro.get_ID())};

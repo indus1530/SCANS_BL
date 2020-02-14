@@ -248,7 +248,7 @@
                         style="@style/buttons_bottom"
                         android:background="@color/orange600"
                         android:onClick="@{() -> callback.BtnAnthroEnd()}"
-                        android:text="@string/anthro_interview" />
+                        android:text="@string/anthro_end" />
 
                     <Button
                         android:id="@+id/btnNext"

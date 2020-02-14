@@ -401,7 +401,7 @@
                     style="@style/buttons_bottom"
                     android:background="@android:color/holo_orange_light"
                     android:onClick="@{() -> callback.BtnEnd()}"
-                    android:text="@string/end_interview" />
+                    android:text="@string/anthro_end" />
                 <!--'onClick' for btn_End will NOT change and always call 'endInterview'-->
 
                 <Button

@@ -35,6 +35,7 @@ import edu.aku.hassannaqvi.uen_scans_bl.contracts.IndexMWRAContract;
 import edu.aku.hassannaqvi.uen_scans_bl.databinding.CountAlertDialogLayoutBinding;
 import edu.aku.hassannaqvi.uen_scans_bl.ui.other.EndingActivity;
 import kotlin.Pair;
+import kotlin.Triple;
 
 
 /**
@@ -80,6 +81,7 @@ public class MainApp extends Application {
     public static FamilyMembersContract indexKishMWRA;
     public static FamilyMembersContract indexKishMWRAChild;
     public static Pair<List<Integer>, List<String>> mwraChildren;
+    public static Triple<List<Integer>, List<String>, List<FamilyMembersContract>> mwraChildrenAnthro;
     protected static LocationManager locationManager;
     public static String userName = "0000";
     public static String DeviceURL = "devices.php";

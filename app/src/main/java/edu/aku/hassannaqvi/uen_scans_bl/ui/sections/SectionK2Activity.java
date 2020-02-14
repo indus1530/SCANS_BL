@@ -33,8 +33,7 @@ import edu.aku.hassannaqvi.uen_scans_bl.utils.Util;
 import edu.aku.hassannaqvi.uen_scans_bl.validator.ClearClass;
 
 import static edu.aku.hassannaqvi.uen_scans_bl.core.MainApp.anthro;
-import static edu.aku.hassannaqvi.uen_scans_bl.core.MainApp.mwraChildren;
-import static edu.aku.hassannaqvi.uen_scans_bl.ui.list_activity.FamilyMembersListActivity.mainVModel;
+import static edu.aku.hassannaqvi.uen_scans_bl.core.MainApp.mwraChildrenAnthro;
 
 public class SectionK2Activity extends AppCompatActivity implements Util.EndSecAActivity {
 
@@ -63,7 +62,7 @@ public class SectionK2Activity extends AppCompatActivity implements Util.EndSecA
         List<String> childLst = new ArrayList<String>() {
             {
                 add("....");
-                addAll(mwraChildren.getSecond());
+                addAll(mwraChildrenAnthro.getSecond());
             }
         };
 
@@ -73,7 +72,8 @@ public class SectionK2Activity extends AppCompatActivity implements Util.EndSecA
             @Override
             public void onItemSelected(AdapterView<?> adapterView, View view, int i, long l) {
                 position = i;
-                fmc_child = mainVModel.getMemberInfo(mwraChildren.getFirst().get(bi.k201.getSelectedItemPosition() - 1));
+                if (i == 0) return;
+                fmc_child = mwraChildrenAnthro.getThird().get(i - 1);
             }
 
             @Override
@@ -121,11 +121,6 @@ public class SectionK2Activity extends AppCompatActivity implements Util.EndSecA
                 Toast.makeText(this, "Failed to Update Database!", Toast.LENGTH_SHORT).show();
             }
         }
-    }
-
-
-    public void BtnEnd() {
-        Util.openEndActivity(this);
     }
 
     public void BtnAnthroEnd() {
@@ -229,8 +224,8 @@ public class SectionK2Activity extends AppCompatActivity implements Util.EndSecA
         anthro.setsK1(String.valueOf(json));
 
         // Deleting item in list
-        mwraChildren.getFirst().remove(position - 1);
-        mwraChildren.getSecond().remove(position - 1);
+        mwraChildrenAnthro.getFirst().remove(position - 1);
+        mwraChildrenAnthro.getSecond().remove(position - 1);
 
     }
 

@@ -15,6 +15,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 import edu.aku.hassannaqvi.uen_scans_bl.R;
+import edu.aku.hassannaqvi.uen_scans_bl.ui.other.AnthroEndingActivity;
 import edu.aku.hassannaqvi.uen_scans_bl.ui.other.EndingActivity;
 
 public class Util {
@@ -67,6 +68,27 @@ public class Util {
             activity.finish();
             activity.startActivity(new Intent(activity, EndingActivity.class).putExtra("complete", false)
                     .setFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK).setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP).setFlags(Intent.FLAG_ACTIVITY_NEW_TASK));
+        });
+        dialog.findViewById(R.id.btnNo).setOnClickListener(view -> dialog.dismiss());
+
+    }
+
+
+    public static void openAnthroEndActivity(Activity activity) {
+        Dialog dialog = new Dialog(activity);
+        dialog.requestWindowFeature(Window.FEATURE_NO_TITLE);
+        dialog.setContentView(R.layout.item_dialog_2);
+        dialog.setCancelable(false);
+        WindowManager.LayoutParams params = new WindowManager.LayoutParams();
+        params.copyFrom(dialog.getWindow().getAttributes());
+        params.width = WindowManager.LayoutParams.WRAP_CONTENT;
+        params.height = WindowManager.LayoutParams.WRAP_CONTENT;
+        dialog.show();
+        dialog.getWindow().setAttributes(params);
+
+        dialog.findViewById(R.id.btnOk).setOnClickListener(view -> {
+            activity.finish();
+            activity.startActivity(new Intent(activity, AnthroEndingActivity.class).putExtra("complete", false));
         });
         dialog.findViewById(R.id.btnNo).setOnClickListener(view -> dialog.dismiss());
 

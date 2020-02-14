@@ -87,7 +87,7 @@ public class SectionK3Activity extends AppCompatActivity {
 
     public void BtnEnd() {
 
-        Util.openEndActivity(this);
+        Util.openAnthroEndActivity(this);
     }
 
 

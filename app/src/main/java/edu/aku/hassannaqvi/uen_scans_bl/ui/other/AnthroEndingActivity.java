@@ -30,7 +30,7 @@ public class AnthroEndingActivity extends AppCompatActivity {
         bi.setCallback(this);
 
 
-        boolean check = getIntent().getExtras().getBoolean("complete");
+        boolean check = getIntent().getBooleanExtra("complete", false);
 
         if (check) {
             bi.k208a.setEnabled(true);
@@ -57,7 +57,7 @@ public class AnthroEndingActivity extends AppCompatActivity {
                     else
                         intent = new Intent(this, EndingActivity.class).putExtra("complete", true);
                 } else {
-                    if (MainApp.mwraChildren.getFirst().size() > 0)
+                    if (MainApp.mwraChildrenAnthro.getFirst().size() > 0)
                         intent = new Intent(this, SectionK2Activity.class);
                     else
                         intent = new Intent(this, MainActivity.class)

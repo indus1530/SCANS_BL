@@ -20,6 +20,6 @@ class MainRepository(val context: Context, val item: MutableList<FamilyMembersCo
     }
 
     private suspend fun populateList() = withContext(Dispatchers.IO) {
-        MainApp.mwraChildren = Pair(item.map { it.serialno.toInt() }, item.map { it.name })
+        MainApp.mwraChildrenAnthro = Triple(item.map { it.serialno.toInt() }, item.map { it.name }, item.map { it })
     }
 }
