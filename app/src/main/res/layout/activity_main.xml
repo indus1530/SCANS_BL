@@ -281,7 +281,9 @@
                             android:clickable="true"
                             android:foreground="?android:attr/selectableItemBackground"
                             android:onClick="@{() -> callback.syncServer()}"
-                            app:cardCornerRadius="20dp">
+                            android:visibility="gone"
+                            app:cardCornerRadius="20dp"
+                            tools:visibility="visible">
 
                             <RelativeLayout
                                 android:layout_width="match_parent"

@@ -96,10 +96,10 @@ public class SectionC1Activity extends AppCompatActivity {
         f1.put("mm_fm_uid", MainApp.indexKishMWRA.getUid());
         f1.put("mm_fm_serial", MainApp.indexKishMWRA.getSerialno());
 
-        f1.put("c101aa", bi.c101aa.getText().toString());
-        f1.put("c101ab", bi.c101ab.getText().toString());
-        f1.put("c101ba", bi.c101ba.getText().toString());
-        f1.put("c101bb", bi.c101bb.getText().toString());
+        f1.put("c101aa", MainApp.indexKishMWRAChild.getName());
+//        f1.put("c101ab", bi.c101ab.getText().toString());
+        f1.put("c101ba", MainApp.indexKishMWRA.getName());
+        //f1.put("c101bb", bi.c101bb.getText().toString());
 
         f1.put("c102",
                 bi.c102a.isChecked() ? "1" :

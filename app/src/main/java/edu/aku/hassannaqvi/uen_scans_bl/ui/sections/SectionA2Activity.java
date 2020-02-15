@@ -203,6 +203,9 @@ public class SectionA2Activity extends AppCompatActivity {
             fmc.setMother_name(bi.a213.getSelectedItem().toString());
             sd.put("a213", motherSerial);
             fmc.setMother_serial(motherSerial);
+        } else {
+            sd.put("a212", "0");
+            sd.put("a213", "0");
         }
 
         sd.put("a205a", bi.a205a.getText().toString());
