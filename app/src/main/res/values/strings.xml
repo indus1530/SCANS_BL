@@ -2201,7 +2201,7 @@
 
     <string name="k226"> K226:\t Weight measurement of mother #2 </string>
 
-    <string name="k227"> K227:\t Does the weight measurements differ by &gt;.1 kg ? </string>
+    <string name="k227"> K227:\t Does the weight measurements differ by &gt; 0.5kg ? </string>
     <string name="k227a"> Yes </string>
     <string name="k227b"> No </string>
 
