@@ -251,7 +251,7 @@ public class ChildContract {
 
     public interface SingleChild extends BaseColumns {
 
-        String TABLE_NAME = "child_table";
+        String TABLE_NAME = "child";
         String COLUMN__ID = "_id";
         String COLUMN_UID = "uid";
         String COLUMN__UUID = "_uuid";

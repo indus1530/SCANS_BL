@@ -34,6 +34,7 @@ import edu.aku.hassannaqvi.uen_scans_bl.core.DatabaseHelper;
 import edu.aku.hassannaqvi.uen_scans_bl.core.MainApp;
 import edu.aku.hassannaqvi.uen_scans_bl.databinding.ActivitySectionK2Binding;
 import edu.aku.hassannaqvi.uen_scans_bl.ui.other.AnthroEndingActivity;
+import edu.aku.hassannaqvi.uen_scans_bl.ui.other.EndingActivity;
 import edu.aku.hassannaqvi.uen_scans_bl.utils.Util;
 import edu.aku.hassannaqvi.uen_scans_bl.validator.ClearClass;
 
@@ -86,6 +87,36 @@ public class SectionK2Activity extends AppCompatActivity implements Util.EndSecA
             }
         });
 
+
+        bi.k202.setOnCheckedChangeListener((group, checkedId) -> {
+            if (checkedId == bi.k202a.getId()) {
+                bi.fldGrpCVk203.setVisibility(View.VISIBLE);
+                bi.fldGrpSectionK21.setVisibility(View.VISIBLE);
+                bi.btnAnthroEnd.setVisibility(View.VISIBLE);
+            } else {
+                bi.fldGrpCVk203.setVisibility(View.GONE);
+                bi.fldGrpSectionK21.setVisibility(View.GONE);
+                bi.btnAnthroEnd.setVisibility(View.GONE);
+                ClearClass.ClearAllFields(bi.fldGrpCVk203, null);
+                ClearClass.ClearAllFields(bi.fldGrpSectionK21, null);
+            }
+        });
+
+
+        bi.k203.setOnCheckedChangeListener((group, checkedId) -> {
+            if (checkedId == bi.k203a.getId()) {
+                bi.fldGrpSectionK21.setVisibility(View.VISIBLE);
+                bi.btnAnthroEnd.setVisibility(View.VISIBLE);
+            } else {
+                bi.fldGrpSectionK21.setVisibility(View.GONE);
+                bi.btnAnthroEnd.setVisibility(View.GONE);
+                ClearClass.ClearAllFields(bi.fldGrpSectionK21, null);
+            }
+        });
+
+
+
+
         RadioGroup[] otherRadioGroup = new RadioGroup[]{bi.k211, bi.k215, bi.k219};
         for (RadioGroup rdp : otherRadioGroup) {
             for (int i = 0; i < rdp.getChildCount(); i++) {
@@ -110,7 +141,7 @@ public class SectionK2Activity extends AppCompatActivity implements Util.EndSecA
                     if (bi.k209a.getText().toString().isEmpty() || bi.k210a.getText().toString().isEmpty())
                         return;
                     double value = Math.abs(Double.valueOf(bi.k209a.getText().toString()) - Double.valueOf(bi.k210a.getText().toString()));
-                    bi.k211.check(value < 0.6 ? bi.k211a.getId() : bi.k211b.getId());
+                    bi.k211.check(value < 1 ? bi.k211a.getId() : bi.k211b.getId());
                 }
 
                 @Override
@@ -157,7 +188,7 @@ public class SectionK2Activity extends AppCompatActivity implements Util.EndSecA
                     if (bi.k213a.getText().toString().isEmpty() || bi.k214a.getText().toString().isEmpty())
                         return;
                     double value = Math.abs(Double.valueOf(bi.k213a.getText().toString()) - Double.valueOf(bi.k214a.getText().toString()));
-                    bi.k215.check(value < 0.1 ? bi.k215a.getId() : bi.k215b.getId());
+                    bi.k215.check(value < 0.5 ? bi.k215a.getId() : bi.k215b.getId());
                 }
 
                 @Override
@@ -180,7 +211,7 @@ public class SectionK2Activity extends AppCompatActivity implements Util.EndSecA
                     if (bi.k217a.getText().toString().isEmpty() || bi.k218a.getText().toString().isEmpty())
                         return;
                     double value = Math.abs(Double.valueOf(bi.k217a.getText().toString()) - Double.valueOf(bi.k218a.getText().toString()));
-                    bi.k219.check(value < 0.3 ? bi.k219a.getId() : bi.k219b.getId());
+                    bi.k219.check(value < 1 ? bi.k219a.getId() : bi.k219b.getId());
                 }
 
                 @Override
@@ -226,7 +257,11 @@ public class SectionK2Activity extends AppCompatActivity implements Util.EndSecA
             }
             if (UpdateDB()) {
                 finish();
-                startActivity(new Intent(this, SectionK3Activity.class));
+                if (bi.k202b.isChecked() || bi.k203b.isChecked()) {
+                    startActivity(new Intent(this, EndingActivity.class).putExtra("complete", true));
+                } else {
+                    startActivity(new Intent(this, SectionK3Activity.class));
+                }
             } else {
                 Toast.makeText(this, "Failed to Update Database!", Toast.LENGTH_SHORT).show();
             }

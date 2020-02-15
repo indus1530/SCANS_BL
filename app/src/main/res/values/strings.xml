@@ -2159,7 +2159,7 @@
 
     <string name="k210"> K210:\t Height Measurement #2 </string>
 
-    <string name="k211"> K211:\t Does the height measurements differ by &gt;0.6 cm ? </string>
+    <string name="k211"> K211:\t Does the height measurements differ by &gt;1cm ? </string>
     <string name="k211a"> Yes </string>
     <string name="k211b"> No </string>
 
@@ -2169,7 +2169,7 @@
 
     <string name="k214"> K214:\t Weight Measurement #2 </string>
 
-    <string name="k215"> K215:\t Does the weight measurements differ by &gt;.1 kg ? </string>
+    <string name="k215"> K215:\t Does the weight measurements differ by &gt;0.5kg ? </string>
     <string name="k215a"> Yes </string>
     <string name="k215b"> No </string>
 
@@ -2179,7 +2179,7 @@
 
     <string name="k218"> k218:\t Left middle upper arm circumference measurement #2 </string>
 
-    <string name="k219"> K219:\t Does the middle upper arm circumference measurements differ by &gt;.3 cm </string>
+    <string name="k219"> K219:\t Does the middle upper arm circumference measurements differ by &gt; 1cm </string>
     <string name="k219a"> Yes </string>
     <string name="k219b"> No </string>
 
@@ -2191,7 +2191,7 @@
 
     <string name="k222"> K222:\t Height measurement of mother #2 </string>
 
-    <string name="k223"> K223:\t Does the height measurements differ by &gt;0.6 cm ? </string>
+    <string name="k223"> K223:\t Does the height measurements differ by &gt; 1cm ? </string>
     <string name="k223a"> Yes </string>
     <string name="k223b"> No </string>
 
@@ -2201,7 +2201,7 @@
 
     <string name="k226"> K226:\t Weight measurement of mother #2 </string>
 
-    <string name="k227"> K227:\t Does the weight measurements differ by &gt;.1 kg ? </string>
+    <string name="k227"> K227:\t Does the weight measurements differ by &gt; 0.5kg ? </string>
     <string name="k227a"> Yes </string>
     <string name="k227b"> No </string>
 
