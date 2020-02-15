@@ -15,6 +15,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.databinding.DataBindingUtil;
 
 import com.edittextpicker.aliazaz.EditTextPicker;
+import com.validatorcrawler.aliazaz.Clear;
 import com.validatorcrawler.aliazaz.Validator;
 
 import org.json.JSONException;
@@ -118,6 +119,14 @@ public class SectionK2Activity extends AppCompatActivity implements Util.EndSecA
                 }
             });
         }
+
+        bi.k211.setOnCheckedChangeListener((group, checkedId) -> {
+            if (checkedId == bi.k211b.getId()) {
+                bi.fldGrpCVk212.setVisibility(View.GONE);
+                Clear.clearAllFields(bi.fldGrpCVk212);
+            } else
+                bi.fldGrpCVk212.setVisibility(View.VISIBLE);
+        });
 
         for (EditTextPicker txt : txt213_2016) {
             txt.addTextChangedListener(new TextWatcher() {
