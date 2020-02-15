@@ -34,6 +34,7 @@ import edu.aku.hassannaqvi.uen_scans_bl.core.DatabaseHelper;
 import edu.aku.hassannaqvi.uen_scans_bl.core.MainApp;
 import edu.aku.hassannaqvi.uen_scans_bl.databinding.ActivitySectionK2Binding;
 import edu.aku.hassannaqvi.uen_scans_bl.ui.other.AnthroEndingActivity;
+import edu.aku.hassannaqvi.uen_scans_bl.ui.other.EndingActivity;
 import edu.aku.hassannaqvi.uen_scans_bl.utils.Util;
 import edu.aku.hassannaqvi.uen_scans_bl.validator.ClearClass;
 
@@ -252,7 +253,11 @@ public class SectionK2Activity extends AppCompatActivity implements Util.EndSecA
             }
             if (UpdateDB()) {
                 finish();
-                startActivity(new Intent(this, SectionK3Activity.class));
+                if (bi.k202b.isChecked() || bi.k203b.isChecked()) {
+                    startActivity(new Intent(this, EndingActivity.class).putExtra("complete", true));
+                } else {
+                    startActivity(new Intent(this, SectionK3Activity.class));
+                }
             } else {
                 Toast.makeText(this, "Failed to Update Database!", Toast.LENGTH_SHORT).show();
             }
