@@ -34,25 +34,25 @@ public class EndingActivity extends AppCompatActivity {
         if (check) {
             bi.istatusa.setEnabled(true);
             bi.istatusb.setEnabled(false);
-            bi.istatusb.setEnabled(false);
-            bi.istatusb.setEnabled(false);
-            bi.istatusb.setEnabled(false);
-            bi.istatusb.setEnabled(false);
-            bi.istatusb.setEnabled(false);
-            bi.istatusb.setEnabled(false);
-            bi.istatusb.setEnabled(false);
-            bi.istatusb.setEnabled(false);
+            bi.istatusc.setEnabled(false);
+            bi.istatusd.setEnabled(false);
+            bi.istatuse.setEnabled(false);
+            bi.istatusf.setEnabled(false);
+            bi.istatusg.setEnabled(false);
+            bi.istatush.setEnabled(false);
+            bi.istatusi.setEnabled(false);
+            bi.istatus96.setEnabled(false);
         } else {
             bi.istatusa.setEnabled(false);
             bi.istatusb.setEnabled(true);
-            bi.istatusb.setEnabled(true);
-            bi.istatusb.setEnabled(true);
-            bi.istatusb.setEnabled(true);
-            bi.istatusb.setEnabled(true);
-            bi.istatusb.setEnabled(true);
-            bi.istatusb.setEnabled(true);
-            bi.istatusb.setEnabled(true);
-            bi.istatusb.setEnabled(true);
+            bi.istatusc.setEnabled(true);
+            bi.istatusd.setEnabled(true);
+            bi.istatuse.setEnabled(true);
+            bi.istatusf.setEnabled(true);
+            bi.istatusg.setEnabled(true);
+            bi.istatush.setEnabled(true);
+            bi.istatusi.setEnabled(true);
+            bi.istatus96.setEnabled(true);
         }
 
 //
