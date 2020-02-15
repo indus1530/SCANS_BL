@@ -18,7 +18,7 @@ public final class CreateTable {
 
     public static final String DATABASE_NAME = "scans20.db";
     public static final String DB_NAME = "scans20_copy.db";
-    public static final String PROJECT_NAME = "DMU-UENML2020";
+    public static final String PROJECT_NAME = "DMU-UENSCANS2020";
     public static final int DATABASE_VERSION = 1;
 
     public static final String SQL_CREATE_FORMS = "CREATE TABLE "

@@ -198,7 +198,7 @@ public class BLRandomContract {
         public static final String COLUMN_HH_SELECTED_STRUCT = "hhss";
         public static final String COLUMN_SNO_HH = "sno";
 
-        public static String _URI = "ml_random.php";
+        public static String _URI = "bl_random.php";
     }
 
 }

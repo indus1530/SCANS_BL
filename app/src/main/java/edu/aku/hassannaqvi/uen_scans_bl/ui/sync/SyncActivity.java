@@ -144,7 +144,7 @@ public class SyncActivity extends AppCompatActivity implements SyncDevice.SyncDe
             DatabaseHelper db = new DatabaseHelper(this);
             //syncStatus.setText(null);
 //            new SyncDevice(this).execute();
-            new SyncDevice(this, false).execute();
+//            new SyncDevice(this, false).execute();
 //  *******************************************************Forms*********************************
             Toast.makeText(getApplicationContext(), "Syncing Forms", Toast.LENGTH_SHORT).show();
             if (uploadlistActivityCreated) {
