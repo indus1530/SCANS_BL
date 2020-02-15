@@ -128,6 +128,22 @@ public class SectionK2Activity extends AppCompatActivity implements Util.EndSecA
                 bi.fldGrpCVk212.setVisibility(View.VISIBLE);
         });
 
+        bi.k215.setOnCheckedChangeListener((group, checkedId) -> {
+            if (checkedId == bi.k215b.getId()) {
+                bi.fldGrpCVk216.setVisibility(View.GONE);
+                Clear.clearAllFields(bi.fldGrpCVk216);
+            } else
+                bi.fldGrpCVk216.setVisibility(View.VISIBLE);
+        });
+
+        bi.k219.setOnCheckedChangeListener((group, checkedId) -> {
+            if (checkedId == bi.k219b.getId()) {
+                bi.fldGrpCVk220.setVisibility(View.GONE);
+                Clear.clearAllFields(bi.fldGrpCVk220);
+            } else
+                bi.fldGrpCVk220.setVisibility(View.VISIBLE);
+        });
+
         for (EditTextPicker txt : txt213_2016) {
             txt.addTextChangedListener(new TextWatcher() {
                 @Override
