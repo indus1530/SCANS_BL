@@ -86,6 +86,32 @@ public class SectionK2Activity extends AppCompatActivity implements Util.EndSecA
             }
         });
 
+
+        bi.k202.setOnCheckedChangeListener((group, checkedId) -> {
+            if (checkedId == bi.k202a.getId()) {
+                bi.fldGrpCVk203.setVisibility(View.VISIBLE);
+                bi.fldGrpSectionK21.setVisibility(View.VISIBLE);
+            } else {
+                bi.fldGrpCVk203.setVisibility(View.GONE);
+                bi.fldGrpSectionK21.setVisibility(View.GONE);
+                ClearClass.ClearAllFields(bi.fldGrpCVk203, null);
+                ClearClass.ClearAllFields(bi.fldGrpSectionK21, null);
+            }
+        });
+
+
+        bi.k203.setOnCheckedChangeListener((group, checkedId) -> {
+            if (checkedId == bi.k203a.getId()) {
+                bi.fldGrpSectionK21.setVisibility(View.VISIBLE);
+            } else {
+                bi.fldGrpSectionK21.setVisibility(View.GONE);
+                ClearClass.ClearAllFields(bi.fldGrpSectionK21, null);
+            }
+        });
+
+
+
+
         RadioGroup[] otherRadioGroup = new RadioGroup[]{bi.k211, bi.k215, bi.k219};
         for (RadioGroup rdp : otherRadioGroup) {
             for (int i = 0; i < rdp.getChildCount(); i++) {
