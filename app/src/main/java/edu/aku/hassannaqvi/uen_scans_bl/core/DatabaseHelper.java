@@ -973,8 +973,8 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         if (mother != null) {
             whereClause = SingleMember.COLUMN_CLUSTERNO + "=? AND " + SingleMember.COLUMN_HHNO + "=? AND "
                     + SingleMember.COLUMN_KISH_SELECTED + "=? AND "
-                    + SingleMember.COLUMN_MOTHER_SERIAL + "=? AND " + SingleMember.COLUMN_UUID + "=? AND " + SingleMember.COLUMN_UID + "=?";
-            whereArgs = new String[]{cluster, hhno, kishType, mother.getSerialno(), mother.getUuid(), mother.getUid()};
+                    + SingleMember.COLUMN_MOTHER_SERIAL + "=? AND " + SingleMember.COLUMN_UUID + "=? AND " + SingleMember.COLUMN_MOTHER_NAME + "=?";
+            whereArgs = new String[]{cluster, hhno, kishType, mother.getSerialno(), mother.getUuid(), mother.getName()};
         } else {
             whereClause = SingleMember.COLUMN_CLUSTERNO + "=? AND " + SingleMember.COLUMN_HHNO + "=? AND "
                     + SingleMember.COLUMN_KISH_SELECTED + "=? ";
@@ -1033,8 +1033,8 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         };
 
         String whereClause = SingleMember.COLUMN_CLUSTERNO + "=? AND " + SingleMember.COLUMN_HHNO + "=? AND "
-                + SingleMember.COLUMN_MOTHER_SERIAL + "=? AND " + SingleMember.COLUMN_UUID + "=? AND " + SingleMember.COLUMN_UID + "=?";
-        String[] whereArgs = {cluster, hhno, mother.getSerialno(), mother.getUuid(), mother.getUid()};
+                + SingleMember.COLUMN_MOTHER_SERIAL + "=? AND " + SingleMember.COLUMN_UUID + "=? AND " + SingleMember.COLUMN_MOTHER_NAME + "=?";
+        String[] whereArgs = {cluster, hhno, mother.getSerialno(), mother.getUuid(), mother.getName()};
         String groupBy = null;
         String having = null;
 
