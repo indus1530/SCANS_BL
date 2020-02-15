@@ -92,11 +92,11 @@ public class SectionK2Activity extends AppCompatActivity implements Util.EndSecA
             if (checkedId == bi.k202a.getId()) {
                 bi.fldGrpCVk203.setVisibility(View.VISIBLE);
                 bi.fldGrpSectionK21.setVisibility(View.VISIBLE);
-                bi.btnAnthroEnd.setVisibility(View.VISIBLE);
+                //bi.btnAnthroEnd.setVisibility(View.VISIBLE);
             } else {
                 bi.fldGrpCVk203.setVisibility(View.GONE);
                 bi.fldGrpSectionK21.setVisibility(View.GONE);
-                bi.btnAnthroEnd.setVisibility(View.GONE);
+                //bi.btnAnthroEnd.setVisibility(View.GONE);
                 ClearClass.ClearAllFields(bi.fldGrpCVk203, null);
                 ClearClass.ClearAllFields(bi.fldGrpSectionK21, null);
             }
@@ -106,10 +106,10 @@ public class SectionK2Activity extends AppCompatActivity implements Util.EndSecA
         bi.k203.setOnCheckedChangeListener((group, checkedId) -> {
             if (checkedId == bi.k203a.getId()) {
                 bi.fldGrpSectionK21.setVisibility(View.VISIBLE);
-                bi.btnAnthroEnd.setVisibility(View.VISIBLE);
+                //bi.btnAnthroEnd.setVisibility(View.VISIBLE);
             } else {
                 bi.fldGrpSectionK21.setVisibility(View.GONE);
-                bi.btnAnthroEnd.setVisibility(View.GONE);
+                //bi.btnAnthroEnd.setVisibility(View.GONE);
                 ClearClass.ClearAllFields(bi.fldGrpSectionK21, null);
             }
         });
