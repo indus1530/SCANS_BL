@@ -110,7 +110,7 @@ public class SectionK2Activity extends AppCompatActivity implements Util.EndSecA
                     if (bi.k209a.getText().toString().isEmpty() || bi.k210a.getText().toString().isEmpty())
                         return;
                     double value = Math.abs(Double.valueOf(bi.k209a.getText().toString()) - Double.valueOf(bi.k210a.getText().toString()));
-                    bi.k211.check(value < 0.6 ? bi.k211a.getId() : bi.k211b.getId());
+                    bi.k211.check(value < 1 ? bi.k211a.getId() : bi.k211b.getId());
                 }
 
                 @Override
@@ -157,7 +157,7 @@ public class SectionK2Activity extends AppCompatActivity implements Util.EndSecA
                     if (bi.k213a.getText().toString().isEmpty() || bi.k214a.getText().toString().isEmpty())
                         return;
                     double value = Math.abs(Double.valueOf(bi.k213a.getText().toString()) - Double.valueOf(bi.k214a.getText().toString()));
-                    bi.k215.check(value < 0.1 ? bi.k215a.getId() : bi.k215b.getId());
+                    bi.k215.check(value < 0.5 ? bi.k215a.getId() : bi.k215b.getId());
                 }
 
                 @Override
@@ -180,7 +180,7 @@ public class SectionK2Activity extends AppCompatActivity implements Util.EndSecA
                     if (bi.k217a.getText().toString().isEmpty() || bi.k218a.getText().toString().isEmpty())
                         return;
                     double value = Math.abs(Double.valueOf(bi.k217a.getText().toString()) - Double.valueOf(bi.k218a.getText().toString()));
-                    bi.k219.check(value < 0.3 ? bi.k219a.getId() : bi.k219b.getId());
+                    bi.k219.check(value < 1 ? bi.k219a.getId() : bi.k219b.getId());
                 }
 
                 @Override
