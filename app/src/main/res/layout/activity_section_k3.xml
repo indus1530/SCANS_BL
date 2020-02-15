@@ -74,8 +74,8 @@
                                 android:layout_weight="1"
                                 android:hint="###.#"
                                 app:mask="###.#"
-                                app:maxValue="140.0"
-                                app:minValue="10.00"
+                                app:maxValue="200.0"
+                                app:minValue="100.0"
                                 app:pattern="^(\\d{3,3}\\.\\d{1,1})$"
                                 app:type="range" />
 
@@ -118,8 +118,8 @@
                                 android:layout_weight="1"
                                 android:hint="###.#"
                                 app:mask="###.#"
-                                app:maxValue="140.00"
-                                app:minValue="10.00"
+                                app:maxValue="200.0"
+                                app:minValue="100.0"
                                 app:pattern="^(\\d{3,3}\\.\\d{1,1})$"
                                 app:type="range" />
 
@@ -179,7 +179,7 @@
                 <androidx.cardview.widget.CardView
                     android:id="@+id/fldGrpCVk224"
                     style="@style/cardView"
-                    android:visibility='@{k223b.checked? View.VISIBLE : View.GONE}'>
+                    android:visibility='@{k223b.checked? View.GONE : View.VISIBLE}'>
 
                     <LinearLayout
                         android:layout_width="match_parent"
@@ -202,8 +202,8 @@
                                 android:layout_weight="1"
                                 android:hint="###.#"
                                 app:mask="###.#"
-                                app:maxValue="140.00"
-                                app:minValue="10.00"
+                                app:maxValue="200.0"
+                                app:minValue="100.0"
                                 app:pattern="^(\\d{3,3}\\.\\d{1,1})$"
                                 app:type="range" />
 
@@ -246,8 +246,8 @@
                                 android:layout_weight="1"
                                 android:hint="###.#"
                                 app:mask="###.#"
-                                app:maxValue="40.00"
-                                app:minValue="0.5"
+                                app:maxValue="250.0"
+                                app:minValue="015.0"
                                 app:pattern="^(\\d{3,3}\\.\\d{1,1})$"
                                 app:type="range" />
 
@@ -290,8 +290,8 @@
                                 android:layout_weight="1"
                                 android:hint="###.#"
                                 app:mask="###.#"
-                                app:maxValue="40.00"
-                                app:minValue="0.5"
+                                app:maxValue="250.0"
+                                app:minValue="015.0"
                                 app:pattern="^(\\d{3,3}\\.\\d{1,1})$"
                                 app:type="range" />
 
@@ -351,7 +351,7 @@
                 <androidx.cardview.widget.CardView
                     android:id="@+id/fldGrpCVk228"
                     style="@style/cardView"
-                    android:visibility='@{k227b.checked? View.VISIBLE : View.GONE}'>
+                    android:visibility='@{k227b.checked? View.GONE : View.VISIBLE}'>
 
                     <LinearLayout
                         android:layout_width="match_parent"
@@ -374,8 +374,8 @@
                                 android:layout_weight="1"
                                 android:hint="@string/kg"
                                 app:mask="###"
-                                app:maxValue="40.00"
-                                app:minValue="0.5"
+                                app:maxValue="250.0"
+                                app:minValue="015.0"
                                 app:type="range" />
 
                             <Spinner

@@ -4,6 +4,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.text.Editable;
 import android.text.TextWatcher;
+import android.view.View;
 import android.widget.ArrayAdapter;
 import android.widget.RadioGroup;
 import android.widget.Spinner;
@@ -13,6 +14,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.databinding.DataBindingUtil;
 
 import com.edittextpicker.aliazaz.EditTextPicker;
+import com.validatorcrawler.aliazaz.Clear;
 import com.validatorcrawler.aliazaz.Validator;
 
 import org.json.JSONException;
@@ -26,7 +28,6 @@ import edu.aku.hassannaqvi.uen_scans_bl.databinding.ActivitySectionK3Binding;
 import edu.aku.hassannaqvi.uen_scans_bl.ui.other.AnthroEndingActivity;
 import edu.aku.hassannaqvi.uen_scans_bl.utils.JSONUtils;
 import edu.aku.hassannaqvi.uen_scans_bl.utils.Util;
-import edu.aku.hassannaqvi.uen_scans_bl.validator.ClearClass;
 
 public class SectionK3Activity extends AppCompatActivity {
 
@@ -57,17 +58,21 @@ public class SectionK3Activity extends AppCompatActivity {
 
     private void setupSkips() {
 
-        bi.k223.setOnCheckedChangeListener(((radioGroup, i) -> {
-            if (i != bi.k223b.getId()) {
-                ClearClass.ClearAllFields(bi.fldGrpCVk224, null);
-            }
-        }));
+        bi.k223.setOnCheckedChangeListener((group, checkedId) -> {
+            if (checkedId == bi.k223b.getId()) {
+                bi.fldGrpCVk224.setVisibility(View.GONE);
+                Clear.clearAllFields(bi.fldGrpCVk224);
+            } else
+                bi.fldGrpCVk224.setVisibility(View.VISIBLE);
+        });
 
-        bi.k227.setOnCheckedChangeListener(((radioGroup, i) -> {
-            if (i != bi.k227b.getId()) {
-                ClearClass.ClearAllFields(bi.fldGrpCVk228, null);
-            }
-        }));
+        bi.k227.setOnCheckedChangeListener((group, checkedId) -> {
+            if (checkedId == bi.k227b.getId()) {
+                bi.fldGrpCVk228.setVisibility(View.GONE);
+                Clear.clearAllFields(bi.fldGrpCVk228);
+            } else
+                bi.fldGrpCVk228.setVisibility(View.VISIBLE);
+        });
 
         RadioGroup[] otherRadioGroup = new RadioGroup[]{bi.k223, bi.k227};
         for (RadioGroup rdp : otherRadioGroup) {
