@@ -1,5 +1,4 @@
 <layout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools">
 
     <data>
@@ -32,93 +31,97 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="vertical">
+                <!--
+                                &lt;!&ndash; c101A  Title   &ndash;&gt;
+                                <androidx.cardview.widget.CardView
+                                    android:id="@+id/fldGrpCVc101"
+                                    style="@style/cardView">
 
-                <!-- c101A  Title   -->
-                <androidx.cardview.widget.CardView
-                    android:id="@+id/fldGrpCVc101"
-                    style="@style/cardView">
+                                    <LinearLayout
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:orientation="vertical">
 
-                    <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:orientation="vertical">
+                                        <TextView
+                                            style="@style/i_textview"
+                                            android:text="@string/c101a" />
 
-                        <TextView
-                            style="@style/i_textview"
-                            android:text="@string/c101a" />
+                                        <LinearLayout
+                                            android:layout_width="match_parent"
+                                            android:layout_height="wrap_content"
+                                            android:orientation="horizontal">
 
-                        <LinearLayout
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:orientation="horizontal">
+                                            <EditText
+                                                android:id="@+id/c101aa"
+                                                style="@style/EditTextAlpha"
+                                                android:layout_width="0dp"
+                                                android:layout_weight="1"
+                                                android:enabled="false"
+                                                android:hint="@string/name"
+                                                android:maxLength="20" />
 
-                            <EditText
-                                android:id="@+id/c101aa"
-                                style="@style/EditTextAlpha"
-                                android:layout_width="0dp"
-                                android:layout_weight="1"
-                                android:hint="@string/name"
-                                android:maxLength="20" />
+                                            <com.edittextpicker.aliazaz.EditTextPicker
+                                                android:id="@+id/c101ab"
+                                                style="@style/EditTextNum"
+                                                android:layout_width="0dp"
+                                                android:layout_weight="1"
+                                                android:enabled="false"
+                                                android:hint="@string/c101ab"
+                                                android:maxLength="2"
+                                                app:maxValue="0"
+                                                app:minValue="0"
+                                                app:type="range" />
 
-                            <com.edittextpicker.aliazaz.EditTextPicker
-                                android:id="@+id/c101ab"
-                                style="@style/EditTextNum"
-                                android:layout_width="0dp"
-                                android:layout_weight="1"
-                                android:hint="@string/c101ab"
-                                android:maxLength="2"
-                                app:maxValue="0"
-                                app:minValue="0"
-                                app:type="range" />
+                                        </LinearLayout>
 
-                        </LinearLayout>
+                                    </LinearLayout>
 
-                    </LinearLayout>
+                                </androidx.cardview.widget.CardView>
 
-                </androidx.cardview.widget.CardView>
+                                &lt;!&ndash; c101B  Title   &ndash;&gt;
+                                <androidx.cardview.widget.CardView
+                                    android:id="@+id/fldGrpCVc101b"
+                                    style="@style/cardView">
 
-                <!-- c101B  Title   -->
-                <androidx.cardview.widget.CardView
-                    android:id="@+id/fldGrpCVc101b"
-                    style="@style/cardView">
+                                    <LinearLayout
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:orientation="vertical">
 
-                    <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:orientation="vertical">
+                                        <TextView
+                                            style="@style/i_textview"
+                                            android:text="@string/c101b" />
 
-                        <TextView
-                            style="@style/i_textview"
-                            android:text="@string/c101b" />
+                                        <LinearLayout
+                                            android:layout_width="match_parent"
+                                            android:layout_height="wrap_content"
+                                            android:orientation="horizontal">
 
-                        <LinearLayout
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:orientation="horizontal">
+                                            <EditText
+                                                android:id="@+id/c101ba"
+                                                style="@style/EditTextAlpha"
+                                                android:layout_width="0dp"
+                                                android:layout_weight="1"
+                                                android:enabled="false"
+                                                android:hint="@string/c101aa" />
 
-                            <EditText
-                                android:id="@+id/c101ba"
-                                style="@style/EditTextAlpha"
-                                android:layout_width="0dp"
-                                android:layout_weight="1"
-                                android:hint="@string/c101aa" />
+                                            <com.edittextpicker.aliazaz.EditTextPicker
+                                                android:id="@+id/c101bb"
+                                                style="@style/EditTextNum"
+                                                android:layout_width="0dp"
+                                                android:layout_weight="1"
+                                                android:enabled="false"
+                                                android:hint="@string/c101ab"
+                                                android:maxLength="2"
+                                                app:maxValue="15"
+                                                app:minValue="1"
+                                                app:type="range" />
 
-                            <com.edittextpicker.aliazaz.EditTextPicker
-                                android:id="@+id/c101bb"
-                                style="@style/EditTextNum"
-                                android:layout_width="0dp"
-                                android:layout_weight="1"
-                                android:hint="@string/c101ab"
-                                android:maxLength="2"
-                                app:maxValue="15"
-                                app:minValue="1"
-                                app:type="range" />
+                                        </LinearLayout>
 
-                        </LinearLayout>
+                                    </LinearLayout>
 
-                    </LinearLayout>
-
-                </androidx.cardview.widget.CardView>
+                                </androidx.cardview.widget.CardView>-->
 
                 <!-- c102_heading1   -->
                 <androidx.cardview.widget.CardView
