@@ -172,7 +172,7 @@ public class AnthroContract {
         String COLUMN__UUID = "_uuid";
         String COLUMN_DEVICEID = "deviceid";
         String COLUMN_FORMDATE = "formdate";
-        String COLUMN_USER = "user";
+        String COLUMN_USER = "username";
         String COLUMN_SK1 = "sk1";
         String COLUMN_FORMTYPE = "f_type";
         String COLUMN_DEVICETAGID = "devicetagid";

@@ -260,7 +260,7 @@ public class FoodFreqContract {
         String COLUMN__UUID = "_uuid";
         String COLUMN_DEVICEID = "deviceid";
         String COLUMN_FORMDATE = "formdate";
-        String COLUMN_USER = "user";
+        String COLUMN_USER = "username";
         String COLUMN_SD1 = "sd1";
         String COLUMN_SD2 = "sd2";
         String COLUMN_SD3 = "sd3";

@@ -257,7 +257,7 @@ public class ChildContract {
         String COLUMN__UUID = "_uuid";
         String COLUMN_DEVICEID = "deviceid";
         String COLUMN_FORMDATE = "formdate";
-        String COLUMN_USER = "user";
+        String COLUMN_USER = "username";
         String COLUMN_SC1 = "sc1";
         String COLUMN_SC2 = "sc2";
         String COLUMN_SC3 = "sc3";
