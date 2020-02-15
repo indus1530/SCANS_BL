@@ -1088,7 +1088,7 @@
 
                         <EditText
                             android:id="@+id/b31396x"
-                            style="@style/radiobutton"
+                            style="@style/EditTextAlpha"
                             android:hint="@string/specify"
                             android:tag="b31396"
                             android:text='@{b31396.checked? b31396x.getText().toString() : ""}'
