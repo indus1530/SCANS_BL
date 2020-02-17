@@ -36,23 +36,24 @@
     <string name="dkn"> معلوم نہیں </string>
     <string name="none"> کوئی نہیں </string>
     <string name="never"> کبھی نہیں </string>
-    <string name="na"> Not Applicable/Available  </string>
-    <string name="ref"> Refused </string>
-    <string name="other"> Other </string>
-    <string name="specify"> Specify </string>
+    <string name="nap"> قابل اطلاق نہیں </string>
+    <string name="nav"> دستیاب نہیں ہے </string>
+    <string name="ref"> انکار کر دیا </string>
+    <string name="other"> دیگر </string>
+    <string name="specify"> وضاحت کریں </string>
     <string name="year"> سال </string>
     <string name="month"> مہینے </string>
     <string name="weeks"> ہفتے </string>
     <string name="days"> دن </string>
     <string name="hours"> گھنٹے </string>
     <string name="minutes"> منٹ </string>
-    <string name="kg"> Kilograms </string>
-    <string name="km"> Kilometers </string>
-    <string name="cm"> Centimeters </string>
-    <string name="in"> Inches </string>
-    <string name="rupees"> Rupees </string>
-    <string name="num"> Number </string>
-    <string name="name"> Name </string>
+    <string name="kg"> کلو گرام </string>
+    <string name="km"> کلو میٹر </string>
+    <string name="cm"> سینٹی میٹر </string>
+    <string name="in"> انچ </string>
+    <string name="rupees"> روپے </string>
+    <string name="num"> اعداد </string>
+    <string name="name"> نام </string>
     <string name="id"> ID </string>
     <string name="time"> HH:mm </string>
     <string name="mid1"> Measurer 1: ID </string>
@@ -69,26 +70,40 @@
     <string name="a101mm"> مہینہ</string>
     <string name="a101yy"> سال</string>
 
-    <string name="a102"> a102:\t انٹرویو کا وقت </string>
+    <string name="a102"> انٹرویو کا وقت </string>
     <string name="a102hh"> گھنٹہ </string>
     <string name="a102mm"> منٹ </string>
-    <string name="a103a"> a103a:\t انٹرویو لینے والے کا نام</string>
-    <string name="a103b"> a103b:\t انٹرویو لینے والے کا کوڈ</string>
-    <string name="a104a"> a104a:\t ٹیم لیڈر کا نام</string>
-    <string name="a104b"> a104b:\t ٹیم لیڈر کا کوڈ</string>
-    <string name="a105"> a105:\t کلسٹر نمبر</string>
-    <string name="a106"> a106:\t اینومیریشن بلاک نمبر   </string>
-    <string name="a107"> a107:\t صوبہ</string>
-    <string name="a108"> a108:\t ضلع</string>
-    <string name="a109"> a109:\t تحصیل </string>
-    <string name="a110"> a110:\t شہر</string>
-    <string name="a111"> a111:\t  گاؤں</string>
-    <string name="a112"> a112:\t گھرانہ نمبر</string>
-    <string name="a113_title1"> a113_title1:\t سوال کنندہ  ،جوابدہندہ کو سمجھانے کے لیے اجازت نامہ پڑھ کر سنائے گا اور مطالعہ کا مقصد اور انٹرویو کے لیے درکار وقت کے متعلق  آگا ہ کرےگا ۔ (سوال کنندہ کو علیحدہ سے اجازت نامہ کی شیٹ مہیا کی جائےگی</string>
-    <string name="a113"> a113:\t کیااجازت مل گئی ؟</string>
-    <string name="a113_title2"> زبانی اجازت    </string>
+
+    <string name="a103a"> انٹرویو لینے والے کا نام </string>
+    <string name="a103b"> انٹرویو لینے والے کا کوڈ </string>
+
+    <string name="a104a"> ٹیم لیڈر کا نام </string>
+    <string name="a104b"> ٹیم لیڈر کا کوڈ </string>
+
+    <string name="a105"> کلسٹر نمبر </string>
+
+    <string name="a106"> اینومیریشن بلاک نمبر </string>
+
+    <string name="a107"> صوبہ </string>
+
+    <string name="a108"> ضلع </string>
+
+    <string name="a109"> تحصیل </string>
+
+    <string name="a110"> شہر </string>
+
+    <string name="a111"> گاؤں </string>
+
+    <string name="a112"> گھرانہ نمبر </string>
+
+    <string name="checkHHpresent"> Selected Head name present (A/C Line listing) </string>
+
+    <string name="a113_title1"> سوال کنندہ  ،جوابدہندہ کو سمجھانے کے لیے اجازت نامہ پڑھ کر سنائے گا اور مطالعہ کا مقصد اور انٹرویو کے لیے درکار وقت کے متعلق  آگا ہ کرےگا ۔ (سوال کنندہ کو علیحدہ سے اجازت نامہ کی شیٹ مہیا کی جائےگی </string>
+    <string name="a113"> a113:\t کیااجازت مل گئی ؟ </string>
+    <string name="a113_title2"> زبانی اجازت </string>
     <string name="a113a"> ہاں </string>
     <string name="a113b"> نہیں </string>
+
     <string name="a113hint"> A119اگر زبانی اجازت نہ ملے تو انٹرویو کو روک دیں اور اس سیکشن کے آخر میں سوال نمبر کے نتائج ریکارڈ کریں </string>
     <string name="a114"> a114:\t جواب دہندہ کانام</string>
     <string name="a115"> a115:\t جواب دہندہ کی عمر مکمل سالوں میں</string>
@@ -101,56 +116,64 @@
     <string name="a118"> a118:\t  کیا آپ کے گھرانے میں 5 سے 10 سال کی عمر کا کوئی بچہ کسی اور غذائی تحقیق/منصوبہ میں شامل ہے؟</string>
     <string name="a118a"> ہاں </string>
     <string name="a118b"> نہیں </string>
-    <string name="a119"> a119:\t گھرانے کے انٹرویوکا نتیجہ:انٹرویومکمل نہ ہونے کی صورت میں ٹیم لیڈر سے مشورہ کریں</string>
+
+    <string name="a119"> A119:\t گھرانے کے انٹرویوکا نتیجہ: </string>
+    <string name="a119hint"> انٹرویومکمل نہ ہونے کی صورت میں ٹیم لیڈر سے مشورہ کریں </string>
     <string name="a119a"> مکمل </string>
-    <string name="a119b">  گھرانے کا کوئی فرد یا باصلاحیت جواب دہندہ گھر پر موجود نہیں </string>
-    <string name="a119c"> گھرانے کے تمام افراد لمبے عرصے کے لیے گھر سے غیر حاضر تھے</string>
-    <string name="a119d"> انکار کردیا</string>
-    <string name="a119e"> خالی گھر/غیر رہائشی</string>
+    <string name="a119b"> گھرانے کا کوئی فرد یا باصلاحیت جواب دہندہ گھر پر موجود نہیں </string>
+    <string name="a119c"> گھرانے کے تمام افراد لمبے عرصے کے لیے گھر سے غیر حاضر تھے </string>
+    <string name="a119d"> انکار کردیا </string>
+    <string name="a119e"> خالی گھر / غیر رہائشی </string>
     <string name="a119f"> گھر نہیں ملا </string>
-    <string name="a119g"> سال کی عمر کا بچہ نہیں ہے</string>
-    <string name="a119h"> گھرانے میں 5 سے10 سال کے عمرکا بچہ کسی دائمی مرض میں مبتلا ہے</string>
-    <string name="a119i"> گھرانے میں 5 سے10 سال کے عمرکا بچہ کسی اور غذائی تحقیق/منصوبہ میں شامل ہے</string>
-    <string name="a119x"> دیگر وضاحت کریں</string>
-    <string name="a201"> a201:\t لائن نمبر</string>
-    <string name="a202"> a202:\t برا ئےمہربانی پہلے مجھے ان تمام افراد کانام بتائیں جو عام طور پر یہاں رہتے ہیں، خاندان کے سربراہ سے شروع کریںگھر کے دیگر  افراد کے بارے میں پوچھیں</string>
-    <string name="a203"> a203:\t گھر کے سربراہ سے رشتہ ؟</string>
-    <string name="a203a"> گھر کا سربراہ</string>
-    <string name="a203b"> بیوی/شوہر </string>
-    <string name="a203c"> بیٹا/بیٹی,</string>
-    <string name="a203d"> داماد/بہو</string>
-    <string name="a203e"> پوتا،پوتی/نواسا،نواسی</string>
-    <string name="a203f"> والدین</string>
-    <string name="a203g"> ساس/سُسر</string>
-    <string name="a203h"> بھائی/بہن</string>
-    <string name="a203i"> سالا،سالی/دیور،دیورانی </string>
-    <string name="a203j"> بھانجا،بھانجی/بھتیجا،بھتیجی</string>
-    <string name="a203k"> دادا،دادی/نانا،نانی</string>
-    <string name="a203l"> چچا،چچی/ماموں،ممانی/پھوپھا،پھوپھی</string>
-    <string name="a203m"> سوتیلے/رضاعی/لے پالک بچے</string>
-    <string name="a203n"> گھریلو ملازم</string>
-    <string name="a203x"> دیگر</string>
-    <string name="a204"> a204:\t جنس </string>
-    <string name="a204a"> مرد</string>
-    <string name="a204b"> عورت</string>
-    <string name="a204c"> مخنث</string>
-    <string name="a205"> a205:\t (نام) کی  تاریخ پیدائش کیاہے؟ (اگر مہینہ/تاریخ معلوم نہ ہوتو 98 لکھیں اور اگر سال معلوم نہ  ہوتو9998 لکھیں)</string>
-    <string name="a205dd"> دن</string>
-    <string name="a205mm"> مہینہ</string>
-    <string name="a205yy"> سال</string>
-    <string name="a206"> a206:\t (نام) عمر کتنی ہے؟  (اگر عمر95 سال سے زیادہ ہے تو 95 لکھیں)معلوم نہیں 98</string>
-    <string name="a206dd"> دن</string>
-    <string name="a206mm"> مہینہ</string>
-    <string name="a206yy"> سال</string>
-    <string name="a207"> a207:\t ازواجی حیثیت (دس سال سے زیادہ عمرکےافراد کیلئے</string>
-    <string name="a207a"> شادی شدہ</string>
-    <string name="a207b"> غیر شادی شدہ</string>
-    <string name="a207c"> بیوہ/رنڈواہ</string>
-    <string name="a207d"> طلاق یافتہ/الگ رہتا/رہتی ہے</string>
-    <string name="a208"> a208:\t کیا (بچہ) کبھی اسکول گیا؟</string>
+    <string name="a119g"> سال کی عمر کا بچہ نہیں ہے </string>
+    <string name="a119h"> گھرانے میں 5 سے 10 سال کے عمرکا بچہ کسی دائمی مرض میں مبتلا ہے </string>
+    <string name="a119i"> گھرانے میں 5 سے 10 سال کے عمر کا بچہ کسی اور غذائی تحقیق / منصوبہ میں شامل ہے </string>
+    <string name="a119x"> دیگر وضاحت کریں </string>
+
+    <string name="a201"> A201:\t لائن نمبر </string>
+    <string name="a202"> A202:\t برا ئے مہربانی پہلے مجھے ان تمام افراد کا نام بتائیں جو عام طور پر یہاں رہتے ہیں، خاندان کے سربراہ سے شروع کریں گھر کے دیگر افراد کے بارے میں پوچھیں </string>
+
+    <string name="a203"> A203:\t گھر کے سربراہ سے رشتہ ؟ </string>
+    <string name="a203a"> گھر کا سربراہ </string>
+    <string name="a203b"> بیوی / شوہر </string>
+    <string name="a203c"> بیٹا / بیٹی </string>
+    <string name="a203d"> داماد / بہو </string>
+    <string name="a203e"> پوتا،پوتی / نواسا،نواسی </string>
+    <string name="a203f"> والدین </string>
+    <string name="a203g"> ساس / سُسر </string>
+    <string name="a203h"> بھائی / بہن </string>
+    <string name="a203i"> سالا،سالی / دیور،دیورانی </string>
+    <string name="a203j"> بھانجا،بھانجی / بھتیجا،بھتیجی </string>
+    <string name="a203k"> دادا،دادی / نانا،نانی </string>
+    <string name="a203l"> چچا،چچی / ماموں،ممانی / پھوپھا،پھوپھی </string>
+    <string name="a203m"> سوتیلے / رضاعی / لے پالک بچے </string>
+    <string name="a203n"> گھریلو ملازم </string>
+    <string name="a203x"> دیگر </string>
+
+    <string name="a204"> A204:\t جنس </string>
+    <string name="a204a"> مرد </string>
+    <string name="a204b"> عورت </string>
+    <string name="a204c"> مخنث </string>
+
+    <string name="a205"> A205:\t (نام) کی  تاریخ پیدائش کیاہے؟ (اگر مہینہ/تاریخ معلوم نہ ہوتو 98 لکھیں اور اگر سال معلوم نہ  ہوتو9998 لکھیں)</string>
+    <string name="a205a"> دن </string>
+    <string name="a205b"> مہینہ</string>
+    <string name="a205c"> سال</string>
+
+    <string name="a206"> A206:\t نام عمر کتنی ہے ؟ </string>
+    <string name="a206hint"> مکمل سالوں میں محفوظ کریں </string>
+
+    <string name="a207"> A207:\t ازواجی حیثیت (دس یا دس سال سے زیادہ عمر کےافراد کیلئے) </string>
+    <string name="a207a"> شادی شدہ </string>
+    <string name="a207b"> غیر شادی شدہ </string>
+    <string name="a207c"> بیوہ / رنڈواہ </string>
+    <string name="a207d"> طلاق یافتہ / الگ رہتا / رہتی ہے </string>
+
+    <string name="a208"> A208:\t کیا (بچہ) کبھی اسکول گیا؟ </string>
     <string name="a208a"> ہاں </string>
-    <string name="a208b"> نہیں</string>
-    <string name="a209"> a209:\t (تین  یا تین سال سے  زائد عمر کےافرادکیلئے)*تعلیم</string>
+    <string name="a208b"> نہیں </string>
+
+    <string name="a209"> A209:\t (تین  یا تین سال سے زائد عمر کےافراد کیلئے)*تعلیم </string>
     <string name="a209a"> ایک سال سے کم مکمل</string>
     <string name="a209b"> پہلی کلاس</string>
     <string name="a209c"> دوسری کلاس</string>
@@ -174,7 +197,8 @@
     <string name="a209u"> بیسویں کلاس</string>
     <string name="a209v"> معلوم نہیں</string>
     <string name="a209w"> لاگو نہیں ہوتا </string>
-    <string name="a210"> a210:\t (دس   یا دس  سال سے  زائدعمرکے افراد کیلئے)  </string>
+
+    <string name="a210"> A210:\t (دس   یا دس  سال سے  زائدعمرکے افراد کیلئے)  </string>
     <string name="a210a"> گھریلو خاتون </string>
     <string name="a210b"> پروفیشنل/مینیجر</string>
     <string name="a210c"> مذہبی پیشہ/تیکنیکی پیشہ</string>
@@ -188,37 +212,44 @@
     <string name="a210k"> بے روزگار</string>
     <string name="a210l"> ٹیچر/استاد</string>
     <string name="a210m"> لاگو نہیں ہوتا</string>
-    <string name="a211"> a211:\t (نام) کیا اس وقت موجود ہے</string>
+
+    <string name="a211"> A211:\t (نام) کیا اس وقت موجود ہے</string>
     <string name="a211a"> ہاں </string>
     <string name="a211b"> نہیں</string>
-    <string name="a212"> a212:\t والدکا لائن نمبر(پانچ سے دس سال کی عمر کے بچوں کے لئے)</string>
-    <string name="a213"> a213:\t والدہ کا لائن نمبر(پانچ سال سے کم عمر کے افراد کے لئے)</string>
-    <string name="a301"> a301:\t آپ عام طور پر اپنےگھر میں کون سی زبان بولتے ہیں؟</string>
-    <string name="a301a"> پنجابی</string>
-    <string name="a301b"> ہند کو</string>
-    <string name="a301c"> سرائیکی</string>
-    <string name="a301d"> اردو</string>
-    <string name="a301e"> بلوچی</string>
-    <string name="a301f"> سند ھی</string>
-    <string name="a301g"> پشتو</string>
-    <string name="a301h"> کچھی</string>
-    <string name="a301i"> گجراتی</string>
-    <string name="a301j"> ڈھاٹکی</string>
+
+    <string name="a212"> A212:\t والد کا لائن نمبر (پانچ سے دس سال کی عمر کے بچوں کے لئے) </string>
+    <string name="a213"> A213:\t والدہ کا لائن نمبر (پانچ سال سے کم عمر کے افراد کے لئے) </string>
+
+
+    <string name="ta3heading"> SECTION A3: SOCIAL ECONOMIC STATUS OF HOUSEHOLD </string>
+    <string name="a301"> A301:\t آپ عام طور پر اپنےگھر میں کون سی زبان بولتے ہیں؟</string>
+    <string name="a301a"> پنجابی </string>
+    <string name="a301b"> ہند کو </string>
+    <string name="a301c"> سرائیکی </string>
+    <string name="a301d"> اردو </string>
+    <string name="a301e"> بلوچی </string>
+    <string name="a301f"> سند ھی </string>
+    <string name="a301g"> پشتو </string>
+    <string name="a301h"> کچھی </string>
+    <string name="a301i"> گجراتی </string>
+    <string name="a301j"> ڈھاٹکی </string>
     <string name="a301x"> دیگر وضاحت کریں </string>
-    <string name="a302"> a302:\t آپ کے خاندان کا مذہب کیا ہے؟</string>
-    <string name="a302a"> مسلم</string>
-    <string name="a302b"> مسیحی</string>
-    <string name="a302c">  ہندو</string>
-    <string name="a302d"> سکھ</string>
+
+    <string name="a302"> A302:\t آپ کے خاندان کا مذہب کیا ہے؟</string>
+    <string name="a302a"> مسلم </string>
+    <string name="a302b"> مسیحی </string>
+    <string name="a302c">  ہندو </string>
+    <string name="a302d"> سکھ </string>
     <string name="a302x"> دیگر وضاحت کریں</string>
-    <string name="a303"> a303:\t گھر کے فرش میں استعمال ہونے والا بنیادی مواد مشاہدہ کریں</string>
-    <string name="a303a_title"> قدرتی فرش</string>
-    <string name="a303a"> /مٹی/چکنی مٹی/زمین/ریت</string>
-    <string name="a303b"> جانوروں کا گوبر</string>
-    <string name="a303c_title"> بنیادی /ابتدائی فرش</string>
+
+    <string name="a303"> A303:\t گھر کے فرش میں استعمال ہونے والا بنیادی مواد مشاہدہ کریں </string>
+    <string name="a303hint1"> قدرتی فرش </string>
+    <string name="a303a"> مٹی / چکنی مٹی / زمین / ریت </string>
+    <string name="a303b"> جانوروں کا گوبر </string>
+    <string name="a303hint2"> بنیادی / ابتدائی فرش </string>
     <string name="a303c"> لکٹری کے تختے </string>
-    <string name="a303d"> کھجور  یاناریل کے پتے /بانس </string>
-    <string name="a303e_title"> تیار فرش </string>
+    <string name="a303d"> کھجور یا ناریل کے پتے / بانس </string>
+    <string name="a303hint3"> تیار فرش </string>
     <string name="a303e"> لکڑی کا فرش یا پالش والی لکڑی </string>
     <string name="a303f"> لکڑی کی پلائی  یا  لکڑی کے ٹائلز  </string>
     <string name="a303g"> سرامک ٹائلز </string>
@@ -227,17 +258,18 @@
     <string name="a303j"> اینٹیں</string>
     <string name="a303k"> چونے کا پتھر </string>
     <string name="a303x">  دیگر وضاحت کریں </string>
-    <string name="a304"> a304:\t گھر کی چھت میں استعمال ہونے والا بنیادی مواد مشاہدہ کریں</string>
-    <string name="a304a_title"> قدرتی چھت</string>
-    <string name="a304a"> کوئی چھت نہیں  </string>
-    <string name="a304b">  گھاس پھوس /کھجو ر کے پتے</string>
-    <string name="a304c"> گھاس کی چھت</string>
-    <string name="a304d_title"> بنیادی سادہ چھت</string>
+
+    <string name="a304"> A304:\t گھر کی چھت میں استعمال ہونے والا بنیادی مواد مشاہدہ کریں </string>
+    <string name="a304hint1"> قدرتی چھت </string>
+    <string name="a304a"> کوئی چھت نہیں </string>
+    <string name="a304b">  گھاس پھوس / کھجو ر کے پتے </string>
+    <string name="a304c"> گھاس کی چھت </string>
+    <string name="a304hint2"> بنیادی سادہ چھت</string>
     <string name="a304d"> تنکے کی  چٹائی</string>
     <string name="a304e"> کھجور  یاناریل کے درخت/بانس</string>
     <string name="a304f"> لکڑی کے تختے</string>
     <string name="a304g"> گتے سے بنی ہوئی چھت</string>
-    <string name="a304h_title"> تیار چھت </string>
+    <string name="a304hint3"> تیار چھت </string>
     <string name="a304h">  کپڑا / خیمہ</string>
     <string name="a304i"> دھات/ٹین/نالی دار جستی لوہا </string>
     <string name="a304j"> لکٹری سے بنی ہوئی چھت</string>
@@ -247,12 +279,13 @@
     <string name="a304n"> چھت میں استعمال ہونے والے ٹائلز </string>
     <string name="a304o"> اینٹیں</string>
     <string name="a304x"> دیگر وضاحت کریں  </string>
-    <string name="a305"> a305:\t گھر کی دیوار وں میں استعمال ہونے والا بنیادی مواد:مشاہدہ کریں</string>
-    <string name="a305a_title"> قدرتی دیواریں   </string>
+
+    <string name="a305"> A305:\t گھر کی دیوار وں میں استعمال ہونے والا بنیادی مواد:مشاہدہ کریں</string>
+    <string name="a305ah"> قدرتی دیواریں   </string>
     <string name="a305a"> کوئی دیوار نہیں </string>
     <string name="a305b"> کھجور کے درخت  /بانس  </string>
     <string name="a305c"> چکنی مٹی </string>
-    <string name="a305d_title"> بنیادی سادہ دیواریں</string>
+    <string name="a305dh"> بنیادی سادہ دیواریں</string>
     <string name="a305d">  بانس اور مٹی سے بنی ہوئی   </string>
     <string name="a305e"> پتھر اور مٹی </string>
     <string name="a305f"> کچی اینٹوں سے بنی(بغیر لیپ)</string>
@@ -260,7 +293,7 @@
     <string name="a305h"> گّتہ</string>
     <string name="a305i"> استعمال شدہ لکڑی</string>
     <string name="a305j"> کپڑا/پردے/شامیانہ</string>
-    <string name="a305k_title"> تیاردیواریں   </string>
+    <string name="a305kh"> تیار دیواریں </string>
     <string name="a305k"> سیمنٹ</string>
     <string name="a305l"> پتھرچونے/سیمنٹ کے ساتھ</string>
     <string name="a305m"> پکی اینٹیں</string>
@@ -268,17 +301,18 @@
     <string name="a305o"> کچی اینٹوں سے بنی(لیپ کی ہوئی) </string>
     <string name="a305p"> لکڑی کے تختے </string>
     <string name="a305x"> دیگر وضاحت کریں </string>
-    <string name="a306"> a306:\t آپ کے گھر میں پینے کے پانی کا سب سے اہم ذریعہ کیا ہے ؟</string>
-    <string name="a306a_title"> پائپڈ پانی</string>
+
+    <string name="a306"> A306:\t آپ کے گھر میں پینے کے پانی کا سب سے اہم ذریعہ کیا ہے ؟</string>
+    <string name="a306ah"> پائپڈ پانی</string>
     <string name="a306a">  گھر میں لگانلکا </string>
     <string name="a306b"> صحن میں لگا نلکا </string>
     <string name="a306c"> پڑوسی کے گھر کا نلکا</string>
     <string name="a306d"> گلی / علاقہ کا نلکا </string>
     <string name="a306e"> فلٹریشن پلانٹ </string>
-    <string name="a306f_title"> پانی زیر زمین</string>
+    <string name="a306fh"> پانی زیر زمین</string>
     <string name="a306f">  ٹیوب ویل/ بورنگ کا پانی  </string>
     <string name="a306g">  ہاتھ والا نلکا </string>
-    <string name="a306h_title">  کنواں</string>
+    <string name="a306hh">  کنواں</string>
     <string name="a306h"> محفوظ کنواں </string>
     <string name="a306i"> غیرمحفوظ کنواں </string>
     <string name="a306j">  بارش کا پانی</string>
@@ -290,17 +324,18 @@
     <string name="a306aa"> a306aa:\t آپ کے گھر میں پینے کے پانی کا سب سے اہم ذریعہ کیا ہے ؟ میونسپل کمیٹی کا پانی کاکنکشن </string>
     <string name="a306aaa"> ہاں</string>
     <string name="a306aab"> نہیں</string>
+
     <string name="a307"> a307:\t آپ کے گھر میں پینے کے پانی کا سب سے اہم ذریعہ کیا ہے ؟</string>
-    <string name="a307a_title"> پائپڈ پانی</string>
+    <string name="a307ah"> پائپڈ پانی</string>
     <string name="a307a">  گھر میں لگانلکا </string>
     <string name="a307b">  اپنى چارديوارى  / پلاٹ میں لگا نلکا</string>
     <string name="a307c"> پڑوسی کے گھر کا نلکا</string>
     <string name="a307d"> گلی / علاقہ کا نلکا </string>
-    <string name="a307e_title">  پانی زیر زمین</string>
+    <string name="a307eh">  پانی زیر زمین</string>
     <string name="a307e"> فلٹریشن پلانٹ </string>
     <string name="a307f">  ٹیوب ویل/ بورنگ کا پانی  </string>
     <string name="a307g">  ہاتھ والا نلکا </string>
-    <string name="a307h_title"> کنواں</string>
+    <string name="a307hh"> کنواں</string>
     <string name="a307h"> محفوظ کنواں </string>
     <string name="a307i"> غیرمحفوظ کنواں </string>
     <string name="a307j">  بارش کا پانی</string>
@@ -316,8 +351,11 @@
     <string name="a308a"> اپنے گھر میں</string>
     <string name="a308b"> اپنے چارديوارى/ پلاٹ میں  گھرسے باہر</string>
     <string name="a308c"> کہیں اور</string>
-    <string name="a309"> a309:\t آپکوپانی کے اہم ذریعے تک پہنچنے میں اور وہاں سے پانی لے کر گھر آنے میں کتنا وقت لگتا ہے ؟ وقت منٹوں میں لکھیں</string>
-    <string name="a309a"> معلوم نہیں</string>
+
+    <string name="a309"> A309:\t آپکوپانی کے اہم ذریعے تک پہنچنے میں اور وہاں سے پانی لے کر گھر آنے میں کتنا وقت لگتا ہے ؟ وقت منٹوں میں لکھیں</string>
+    <string name="a309a"> منٹ کی تعداد </string>
+    <string name="a30998"> معلوم نہیں </string>
+
     <string name="a310"> a310:\t عام طور پر گھر کے لئے پانی جمع کرنے کے لئے کون جاتا ہے؟ کیا اس کی عمر 15 سال سے کم ہے؟ جنس کیا ہے؟</string>
     <string name="a310a"> بالغ عورت (15 سال سے بڑی عمر)</string>
     <string name="a310b"> بالغ مرد (15 سال سے بڑی عمر) </string>
@@ -349,7 +387,7 @@
     <string name="a316b">  کرائے کا</string>
     <string name="a316x">  دیگر وضاحت کریں</string>
     <string name="a317"> a317:\t کیاعام طورپرکھانا گھرمیں،کسی الگ کمرہ /جگہ یاگھر سے باہر بنتا ہے؟</string>
-    <string name="a317a_title">  گھر کے اندر  </string>
+    <string name="a317ah">  گھر کے اندر  </string>
     <string name="a317a"> باورچی خانے کے طور پرالگ کمرا</string>
     <string name="a317b"> گھر میں کہیں اور</string>
     <string name="a317c">  علیحدہ عمارت میں </string>
@@ -454,45 +492,54 @@
     <string name="a321i"> a321i:\t موٹر کے بغیر کشتی</string>
     <string name="a321ia"> ہاں </string>
     <string name="a321ib"> نہیں</string>
-    <string name="a322"> a322:\t آپ کے گھرانے کے افراد عام طورپر کس قسم کا بیت الخلاء استعمال کرتے ہیں ؟</string>
-    <string name="a322a_title">  فلش یا انڈیل کر پانی ڈالنے والا</string>
+
+    <string name="a322"> a322:\t آپ کے گھرانے کے افراد عام طور پر کس قسم کا بیت الخلاء استعمال کرتے ہیں ؟</string>
+    <string name="a322hint"> Note for DC: (If not possible to determine, ask permission to observe the facility) </string>
+    <string name="a322hint1">  فلش یا انڈیل کر پانی ڈالنے والا</string>
     <string name="a322a">  فلش   سیوریج کے نظام سے منسلک  </string>
     <string name="a322b"> فلش سپٹک ٹینک سے منسلک  </string>
     <string name="a322c"> فلش   گڑھےواے لیٹرین سے منسلک  </string>
     <string name="a322d"> فلش کہیں اور   </string>
     <string name="a322e"> نامعلوم جگہ پر فلش / یقین نہیں / پتہ نہیں</string>
-    <string name="a322f_title"> گڑھے والا لیٹرین </string>
+    <string name="a322hint2"> گڑھے والا لیٹرین </string>
     <string name="a322f">  بہتر ہوا دار گڑھے والا لیٹرین </string>
     <string name="a322g">  گڑھے والا لیٹرین ڈھکا ہوا </string>
     <string name="a322h"> گڑھے والا کھلاہوا لیٹرین </string>
     <string name="a322i"> کھادکے گڑہے والا ٹوائلٹ </string>
     <string name="a322j"> بالٹی والا ٹوائلٹ </string>
-    <string name="a322l"> کوئی سہولت نہیں/جھاڑیوں/کھیتوں/کھلے میں</string>
+    <string name="a322k"> کوئی سہولت نہیں / جھاڑیوں / کھیتوں / کھلے میں </string>
     <string name="a322x"> دیگر وضاحت کریں  </string>
+
     <string name="a323"> a323:\t کیا اس بیت الخلاء کی سہولت کو   دوسرے   گھرانوں کے افراد بھی استعمال کر تےہیں [جو آپ کے گھرانے کے فرد نہیں ہیں]</string>
     <string name="a323a"> ہاں</string>
     <string name="a323b"> نہیں</string>
     <string name="a323c">  معلوم نہیں </string>
+
     <string name="a324"> a324:\t کیا آپ اس سہولت کو صرف دیگر گھرانوں کے ان افراد کے ساتھ بانٹتے ہیں جن کوآپ جانتے ہیں، یا یہ سہولت عام لوگوں کے استعمال کے لئے کھلی ہے؟</string>
     <string name="a324a"> صرف دیگر گھرانے </string>
     <string name="a324b"> عام لوگوں کی سہولت</string>
+
     <string name="a325"> a325:\t اگر ہاں،تو کتنے گھرانےاس بیت الخلاء کی  سہولت کواستعمال کرتے ہیں ؟</string>
     <string name="a325a_title"> گھرانوں کی تعداد</string>
     <string name="a325a"> اگر10 سے کم ہیں </string>
     <string name="a325b"> اگر10 یا اس سے زیادہ ہیں</string>
     <string name="a325x"> معلوم نہیں </string>
+
     <string name="a326"> a326:\t کیا اس گھر میں رہنے والا کوئی فرد  زرعی زمین کا مالک ہے؟</string>
     <string name="a326a">  ہاں</string>
     <string name="a326b"> نہیں</string>
     <string name="a326c"> معلوم نہیں </string>
-    <string name="a327"> a327:\t گر ہاں، تو اس گھر کے افراد کے پاس کتنے مربہ/ایکٹر زمین ہے ؟</string>
-    <string name="a327a"> اگر ہاں، تو اس گھر کے افراد کے پاس کتنے مربہ/ایکٹر زمین ہے ؟ ایکٹر</string>
-    <string name="a327b"> اگر ہاں، تو اس گھر کے افراد کے پاس کتنے مربہ/ایکٹر زمین ہے ؟ کنال</string>
-    <string name="a327c"> معلوم نہیں</string>
+
+    <string name="a327"> A327:\t اگر ہاں، تو اس گھر کے افراد کے پاس کتنے مربہ / ایکٹر زمین ہے ؟ </string>
+    <string name="a327a"> ایکٹر </string>
+    <string name="a327b"> کنال </string>
+    <string name="a32798"> معلوم نہیں </string>
+
     <string name="a328"> a328:\t کیاآپ اپنا مال مویشی،جانور یا مرغی خانہ رکھتے ہیں؟</string>
     <string name="a328a"> ہاں </string>
     <string name="a328b"> نہیں</string>
     <string name="a328c"> معلوم نہیں</string>
+
     <string name="a329"> a329:\t آپ کے گھر میں کتنے مویشی جانور یا مرغیاں موجود ہیں؟</string>
     <string name="a329a"> گائے بیل اور بھینسیں</string>
     <string name="a329b"> گھوڑے/گدھے/خچر</string>
@@ -500,14 +547,17 @@
     <string name="a329d">  بھیڑ</string>
     <string name="a329e"> مرغیاں</string>
     <string name="a329f"> اونٹ</string>
+
     <string name="a330"> a330:\t کیا اس گھر کے کسی بھی فرد کا بینک اکاؤنٹ ہے؟</string>
     <string name="a330a"> ہاں</string>
     <string name="a330b"> نہیں</string>
     <string name="a330c"> معلوم نہیں</string>
+
     <string name="a331"> a331:\t اس گھرانے کی مجموعی ماہانہ آمدنی کتنی ہے؟</string>
     <string name="a331a"> پاکستانی روپے</string>
     <string name="a331b"> بتانا نہیں چاہتا/چاہتی</string>
     <string name="a331c"> معلوم نہیں</string>
+
     <string name="a332"> a332:\t کیا آپ یا آپ کے خاندان کو نقد یا کسی قسم کی شکل میں کوئی مدد ملتی ہے؟ (ایک سے زیادہ منتخب کریں)</string>
     <string name="a332a"> بے نظیر انکم سپورٹ پروگرام</string>
     <string name="a332b"> ماہانہ فوڈ واؤچر</string>
@@ -515,11 +565,15 @@
     <string name="a332d"> طالب علم اسکالرشپ یا وظیفہ</string>
     <string name="a332e"> کچھ بھی نہی</string>
     <string name="a332x"> دیگر وضاحت کریں  </string>
+
     <string name="a333"> a333:\t یہ مدد کون کرتا ہے؟</string>
     <string name="a333a"> سرکار</string>
     <string name="a333b"> غیرسرکاری نجی ادارے</string>
     <string name="a333c"> مخیر حضرات </string>
-    <string name="a333x"> دیگر وضاحت کریں </string>
+    <string name="a33396"> دیگر وضاحت کریں </string>
+
+
+    <string name="ta4heading"> SECTION A4: HAND-WASHING </string>
     <string name="a401"> a401:\t کیا آپ ہمیں وہ جگہ دکھا سکتی/سکتے ہیں جو گھر والے اکثرہا تھ دھونے کے لیے استعمال کرتے ہیں؟</string>
     <string name="a401a"> مشاہدہ کیا </string>
     <string name="a401b">  مشاہدہ نہیں کیا </string>
@@ -544,7 +598,8 @@
     <string name="a405c"> ہاتھ دھونے والا سولیوشن/صابن</string>
     <string name="a405d"> راکھ /مٹی /ریت </string>
     <string name="a405e"> کوئی نہیں</string>
-    <string name="a406"> a406:\t آپ کس کس وقت اپنے ہاتھ  صابن یا  ڈیٹرجنٹ(پاوڈر سے دھوتے/دھوتی ہیں؟ [ایک سے زیادہ جوابات آسکتے ہیں]</string>
+
+    <string name="a406"> A406:\t آپ کس کس وقت اپنے ہاتھ  صابن یا  ڈیٹرجنٹ(پاوڈر سے دھوتے/دھوتی ہیں؟ [ایک سے زیادہ جوابات آسکتے ہیں]</string>
     <string name="a406a_title"> روزانہ</string>
     <string name="a406a"> پاخانہ کرنے کے بعد /یابیت الخلاء استعمال کرنے بعد </string>
     <string name="a406b"> کھانا کھانے سے پہلے </string>
@@ -554,12 +609,16 @@
     <string name="a406f"> بچے کو کھانا کھلانے سے پہلے </string>
     <string name="a406g"> کھانا بنانے سے پہلے </string>
     <string name="a406h"> کبھی کبھار</string>
-    <string name="a406i"> کبھی نہیں</string>
+    <string name="a40697"> کبھی نہیں</string>
+
+
+    <string name="tb1heading">SECTION B1: HOUSEHOLD FOOD INSECURITY EXPERIENCE SCALE </string>
     <string name="b101"> b101:\t پچھلے 12 مہینوں کے دوران کیا کبھی ایسا وقت آیا جب آپ یا آپ کے گھر کے دوسرے افراد فکرمند تھےکہ پیسوں یا دیگر وسائل کی کمی کی وجہ سے اتنا کھانا نہیں ہوگا کہ آپ کھا سکیں؟</string>
-    <string name="b101a"> ہاں</string>
-    <string name="b101b">  نہیں</string>
-    <string name="b101c"> معلوم نہیں</string>
-    <string name="b101d"> جواب سے انکار</string>
+    <string name="b101a"> ہاں </string>
+    <string name="b101b">  نہیں </string>
+    <string name="b10198"> معلوم نہیں </string>
+    <string name="b10199"> جواب سے انکار </string>
+
     <string name="b102"> b102:\t کتنی مرتبہ ایسا ہوا؟</string>
     <string name="b102a"> کبھی کبھار (پچھلے چار ہفتوں کے دوران ایک سے دو مرتبہ)</string>
     <string name="b102b"> کبھی کبھی (پچھلے چار ہفتوں کے دوران تین سے دس مرتبہ)</string>
@@ -636,19 +695,31 @@
     <string name="b118a"> کبھی کبھار (پچھلے چار ہفتوں کے دوران ایک سے دو مرتبہ)</string>
     <string name="b118b"> کبھی کبھی (پچھلے چار ہفتوں کے دوران تین سے دس مرتبہ)</string>
     <string name="b118c"> اکثر(پچھلے چار ہفتوں کے دوران دس سےزیادہ مرتبہ)</string>
-    <string name="b201"> b201:\t گھر کے بڑے افراد نےکل دن اوررات کے دوران کتنی دفعہ کھانا کھا یا ؟ </string>
-    <string name="b202"> b202:\t ہے؟  مطابق کے بڑے افراد کے معمول یہ کیا</string>
+
+
+    <string name="tb2heading">SECTION B2: FOOD CONSUMPTION </string>
+    <string name="b201"> B201:\t گھر کے بڑے افراد نےکل دن اوررات کے دوران کتنی دفعہ کھانا کھا یا ؟ </string>
+    <string name="b201a"> کھانے </string>
+
+    <string name="b202"> B202:\t ہے؟  مطابق کے بڑے افراد کے معمول یہ کیا</string>
     <string name="b202a"> کم</string>
     <string name="b202b"> ایک سا </string>
     <string name="b202c"> زیادہ </string>
+
     <string name="b203"> b203:\t بچوں نےکل دن اوررات کے دوران کتنی دفعہ کھانا کھا یا ؟</string>
+    <string name="b203a"> کھانے </string>
+
     <string name="b204"> b204:\t  ہے؟ مطابق کے بچوں کے معمول یہ کیا</string>
     <string name="b204a"> کم</string>
     <string name="b204b"> ایک سا </string>
     <string name="b204c"> زیادہ</string>
-    <string name="b301_title1"> b301_title1:\t فوڈ گروپ</string>
-    <string name="b301_title2"> b301_title2:\t کھانا کس طرح حاصل ہوا تھا؟</string>
-    <string name="b301"> b301:\t اناج کےکھانے (روٹی , چاول، جواروغیرہ)</string>
+
+
+    <string name="tb3heading">SECTION B3: HOUSEHOLD DIETRY DIVERSITY AND SOURCE ASSESMENT </string>
+    <string name="b301hint1"> فوڈ گروپ </string>
+    <string name="b301hint2"> کھانا کس طرح حاصل ہوا تھا ؟ </string>
+
+    <string name="b301"> B301:\t اناج کےکھانے (روٹی , چاول، جواروغیرہ)</string>
     <string name="b301a"> نہیں کھایا</string>
     <string name="b301b"> اپنی پیداوار</string>
     <string name="b301c"> خریداری</string>
@@ -657,7 +728,8 @@
     <string name="b301f"> کھانے کے لئے کام</string>
     <string name="b301g"> تحفے</string>
     <string name="b301h"> خوراک کی امداد</string>
-    <string name="b301x"> دیگر</string>
+    <string name="b30196"> دیگر</string>
+
     <string name="b302"> b302:\t (آلو،،شکرقندی وغیرہ)                                 </string>
     <string name="b302a"> نہیں کھایا</string>
     <string name="b302b"> اپنی پیداوار</string>
@@ -788,14 +860,16 @@
     <string name="b314g"> تحفے</string>
     <string name="b314h"> خوراک کی امداد</string>
     <string name="b314x"> دیگر</string>
-    <string name="c101"> c101:\t جواب دہندہ کانام اور لائن نمبر</string>
-    <string name="c101aa"> نام</string>
-    <string name="c101ab"> لائن نمبر</string>
-    <string name="c101b"> c101b:\t  بچے کا نام اور لائن نمبر </string>
-    <string name="c101ba"> بچے کا نام </string>
-    <string name="c101bb"> بچے کا لائن نمبر </string>
-    <string name="c102_title_section"> c102_title_section:\t میں آپ کے بچے کے عمومی صحت کے بارے میں کچھ سوال پوچھنا شروع کروں گا /گی۔</string>
-    <string name="c102_title"> c102_title:\t گزشتہ 6 مہینے میں،(بچے کا نام) کو کتنی کثرت سے مندرجہ ذیل ہو ا؟</string>
+
+
+    <string name="tc1heading">SECTION C1: CHILD HEALTH </string>
+    <string name="c101a"> C101A:\t جواب دہندہ کا نام اور لائن نمبر </string>
+    <string name="c101b"> C101B:\t  بچے کا نام اور لائن نمبر </string>
+    <string name="c101aa"> نام </string>
+    <string name="c101ab"> لائن نمبر </string>
+
+    <string name="c102heading1"> میں آپ کے بچے کے عمومی صحت کے بارے میں کچھ سوال پوچھنا شروع کروں گا / گی۔ </string>
+    <string name="c102heading2">  گزشتہ 6 مہینے میں،(بچے کا نام) کو کتنی کثرت سے مندرجہ ذیل ہوا ؟ </string>
     <string name="c102"> c102:\t سردرد</string>
     <string name="c102a"> ہر روز</string>
     <string name="c102b"> ہفتے میں ایک بارسے زائد</string>
@@ -867,6 +941,9 @@
     <string name="c113b"> اچھی</string>
     <string name="c113c"> ٹھیک ہے</string>
     <string name="c114d">  کمزور </string>
+
+
+    <string name="tc2heading">SECTION C2: DENTAL HYGIENE </string>
     <string name="c201"> c201:\t (بچے کا نام) اکثر اپنے دانت کب صاف کرتاہے؟ </string>
     <string name="c201a"> روزانہ</string>
     <string name="c201b"> دو بار روزانہ </string>
@@ -875,11 +952,18 @@
     <string name="c201e"> ہفتے میں تین سے چھ بار</string>
     <string name="c201f">  کبھی کبھی</string>
     <string name="c201g"> کبھی نہیں</string>
-    <string name="c202"> c202:\t  (بچے کا نام) عام طور پر اپنے دانتوں کو صاف کرنے کے لئے کیا استعمال کرتا ہے؟</string>
-    <string name="c202a"> ٹوتھ پیسٹ  </string>
-    <string name="c202b"> مسواک</string>
-    <string name="c202c"> ٹوتھ پاؤڈر </string>
-    <string name="c202x"> دیگر وضاحت کریں</string>
+
+    <string name="c214"> C214:\t What does (child name) usually use to clean his / her teeth ? </string>
+    <string name="c214a"> Tooth brush </string>
+    <string name="c214b"> Miswak </string>
+    <string name="c214c"> Finger </string>
+
+    <string name="c202"> C202:\t What type of thing (child name) usually use to clean his / her teeth ?  </string>
+    <string name="c202a"> Tooth Paste </string>
+    <string name="c202b"> Tooth Powder </string>
+    <string name="c20296"> Other </string>
+    <string name="c20297"> Nothing </string>
+
     <string name="c203"> c203:\t کیا (بچے کا نام) اکثر مندرجہ ذیل میں سے کسی کا استعمال کرتا ہے؟ [ایک سے زیادہ جوابات آسکتے ہیں</string>
     <string name="c203a"> چھالیا</string>
     <string name="c203b"> تمباکو/ گٹکا </string>
@@ -961,6 +1045,8 @@
     <string name="c213g"> کھانا بنانے سے پہلے</string>
     <string name="c213h"> کبھی کبھار</string>
     <string name="c213i"> کبھی نہیں</string>
+
+    <string name="tc3heading">SECTION C3: MEAL PATTERNS </string>
     <string name="c301"> c301:\t اسکول کے دنوں میں ناشتہ</string>
     <string name="c301a"> کبھی نہیں</string>
     <string name="c301b"> کبھی کبھار</string>
@@ -988,7 +1074,8 @@
     <string name="c303f"> ہر روز</string>
     <string name="c303g"> صرف چھٹی کےدنوں میں</string>
     <string name="c303h"> قابل اطلاق نہیں</string>
-    <string name="c304_title"> c304_title:\t (بچے کا نام) عام طور پر کھانا کہاں کھاتا ہے؟      </string>
+
+    <string name="c304"> C304:\t (بچے کا نام) عام طور پر کھانا کہاں کھاتا ہے؟      </string>
     <string name="c304a"> c304a:\t میز/چارپائی</string>
     <string name="c304aa"> کبھی نہیں</string>
     <string name="c304ab"> ہفتے میں ایکبار</string>
@@ -996,6 +1083,7 @@
     <string name="c304ad"> ہفتے میں 6-5 دن</string>
     <string name="c304ae">  ہر روز </string>
     <string name="c304af"> کبھی کبھار</string>
+
     <string name="c304b"> c304b:\t فرش</string>
     <string name="c304ba"> کبھی نہیں</string>
     <string name="c304bb"> ہفتے میں ایکبار</string>
@@ -1003,6 +1091,7 @@
     <string name="c304bd"> ہفتے میں 6-5 دن</string>
     <string name="c304be">  ہر روز </string>
     <string name="c304bf"> کبھی کبھار</string>
+
     <string name="c304c"> c304c:\t ٹی وی یا موبائل یا ٹیبلٹ یا آئی پیڈ کے سامنے   </string>
     <string name="c304ca"> کبھی نہیں</string>
     <string name="c304cb"> ہفتے میں ایکبار</string>
@@ -1010,6 +1099,7 @@
     <string name="c304cd"> ہفتے میں 6-5 دن</string>
     <string name="c304ce">  ہر روز </string>
     <string name="c304cf"> کبھی کبھار</string>
+
     <string name="c305"> c305:\t جب (بچے کا نام) پریشان ہے تو ہو وہ زیادہ کھاتا ہے</string>
     <string name="c305a"> کبھی نہیں یا تقریبا کبھی نہیں</string>
     <string name="c305b"> کبھی کبھی</string>
@@ -1050,6 +1140,9 @@
     <string name="c314b"> 3- 5</string>
     <string name="c314c"> 6-9</string>
     <string name="c314d"> 10 or more</string>
+
+
+    <string name="tc4heading">SECTION C4: SCHOOLING </string>
     <string name="c401"> c401:\t کیا (بچے کا نام) کبھی بھی اسکول میں گیا؟ اگر نہیں، اور پوچھیں.</string>
     <string name="c401a"> ہاں</string>
     <string name="c401b"> نہیں</string>
@@ -1078,8 +1171,11 @@
     <string name="c406"> c406:\t بچے کا نام) نےپڑہائی چھوڑدی تب اس کی عمر کتنی تھی</string>
     <string name="c406a"> سال</string>
     <string name="c406b">  معلوم نہیں </string>
-    <string name="c407"> c407:\t (بچے کا نام) سب سے اعلی تعلیم کی گریڈ کون سی مکمل کی؟</string>
-    <string name="c408"> c408:\t بچے کا نام) پچھلے سال میں کم سے کم 1 ماہ کے اسکول سے غیر حاضر تھا؟</string>
+
+    <string name="c407"> C407:\t (بچے کا نام) سب سے اعلی تعلیم کی گریڈ کون سی مکمل کی؟</string>
+    <string name="c407a"> Grade / Class </string>
+
+    <string name="c408"> C408:\t بچے کا نام) پچھلے سال میں کم سے کم 1 ماہ کے اسکول سے غیر حاضر تھا؟</string>
     <string name="c408a">  ہاں</string>
     <string name="c408b">  نہیں </string>
     <string name="c409"> c409:\t بنیادی وجہ (بچے کا نام) کیو ں باقاعدگی سے سکول نہیں گیا ؟</string>
@@ -1126,8 +1222,11 @@
     <string name="c415d"> بچے سنبھالنا</string>
     <string name="c415e"> کام نہیں کرتا </string>
     <string name="c415x">  دیگر وضاحت کریں</string>
-    <string name="c501_title"> c501_title:\t حصہ ای :اسکول کے دنوں میں            </string>
-    <string name="c501"> c501:\t (بچے کا نام) اسکول کے دنوں کے دوران، اوسطا کتنے گھنٹے ٹی وی  دیکھتا ہے؟             </string>
+
+
+    <string name="tc5heading">SECTION C5: LIFESTYLE AND PHYSICAL ACTIVITY </string>
+    <string name="c501_title"> حصہ ای :اسکول کے دنوں میں </string>
+    <string name="c501"> C501:\t (بچے کا نام) اسکول کے دنوں کے دوران، اوسطا کتنے گھنٹے ٹی وی  دیکھتا ہے؟             </string>
     <string name="c501a"> کوئی بھی نہیں</string>
     <string name="c501b"> 1 گھنٹہ سے کم</string>
     <string name="c501c"> 1 گھنٹہ</string>
@@ -1159,8 +1258,9 @@
     <string name="c504e"> 3 گھنٹہ</string>
     <string name="c504f">  4 گھنٹہ</string>
     <string name="c504g"> 5 یا اس سے زیادہ گھنٹے</string>
-    <string name="c505_title"> c505_title:\t      چھٹی کےدن</string>
-    <string name="c505"> c505:\t (بچے کا نام) اسکول کے دوران چھٹی کےدن کتنا وقت  ٹی وی دیکھتا ہے؟</string>
+
+    <string name="c505_title"> چھٹی کے دن </string>
+    <string name="c505"> C505:\t (بچے کا نام) اسکول کے دوران چھٹی کےدن کتنا وقت  ٹی وی دیکھتا ہے؟</string>
     <string name="c505a"> کوئی بھی نہیں</string>
     <string name="c505b"> 1 گھنٹہ سے کم</string>
     <string name="c505c"> 1 گھنٹہ</string>
@@ -1193,8 +1293,9 @@
     <string name="c508f"> پانچ دن</string>
     <string name="c508g"> چھ دن</string>
     <string name="c508h"> سات دن</string>
-    <string name="c509_title"> c509_title:\t   حصہ بی: اسکول میں نہ جانے والے بچے</string>
-    <string name="c509"> c509:\t (بچے کا نام) عام طور پر کتنے گھنٹے  ٹی وی دیکھتا ہے؟</string>
+
+    <string name="c509_title"> حصہ بی: اسکول میں نہ جانے والے بچے </string>
+    <string name="c509"> C509:\t (بچے کا نام) عام طور پر کتنے گھنٹے  ٹی وی دیکھتا ہے؟</string>
     <string name="c509a"> نہیں دیکھا</string>
     <string name="c509b"> 1 گھنٹہ سے کم</string>
     <string name="c509c"> 1 گھنٹہ</string>
@@ -1202,6 +1303,7 @@
     <string name="c509e"> 3 گھنٹہ</string>
     <string name="c509f">  4 گھنٹہ</string>
     <string name="c509g"> 5 یا اس سے زیادہ گھنٹے</string>
+
     <string name="c510"> c510:\t (بچے کا نام) کتنے گھنٹے کمپیوٹر / ٹیبلٹ / موبائل فون پرویڈیودیکھتا یا کھیلتا ہے؟</string>
     <string name="c510a"> نہیں دیکھا</string>
     <string name="c510b"> 1 گھنٹہ سے کم</string>
@@ -1210,6 +1312,7 @@
     <string name="c510e"> 3 گھنٹہ</string>
     <string name="c510f">  4 گھنٹہ</string>
     <string name="c510g"> 5 یا اس سے زیادہ گھنٹے</string>
+
     <string name="c511"> c511:\t (بچے کا نام)کتنا وقت گھرسے باہر گذارتا ہے ؟</string>
     <string name="c511a"> نہیں دیکھا</string>
     <string name="c511b"> 1 گھنٹہ سے کم</string>
@@ -1218,6 +1321,7 @@
     <string name="c511e"> 3 گھنٹہ</string>
     <string name="c511f">  4 گھنٹہ</string>
     <string name="c511g"> 5 یا اس سے زیادہ گھنٹے</string>
+
     <string name="c512"> c512:\t گزشتہ ہفتے (7 دن) کے دوران، (بچے کا نام) کتنے دن (فی دن کم از کم 60 منٹ کے لئے) جسمانی طور پر سرگرم رہا؟ سرگرمیوں میں گذاراہوا تمام وقت جس نے آپ کے دل کی دھڑکن کو بڑھایا اور آپ کوسانس لینےمیں مشکل /دشواری ہوئی</string>
     <string name="c512a"> 0دن</string>
     <string name="c512b"> ایک دن</string>
@@ -1227,7 +1331,10 @@
     <string name="c512f"> پانچ دن</string>
     <string name="c512g"> چھ دن</string>
     <string name="c512h"> سات دن</string>
-    <string name="ca601_title"> ca601_title:\t حصہ اے:  اسکول جانے والےبچے</string>
+
+
+    <string name="tc6heading">SECTION C6: SLEEP </string>
+    <string name="ca601_title"> ca601h:\t حصہ اے:  اسکول جانے والےبچے</string>
     <string name="ca601"> ca601:\t (بچہ کا نام) عام طور پر اسکول کے دنوں کے دوران، کس وقت  سوتا/سوتی ہے ؟                         </string>
     <string name="ca601a"> AM</string>
     <string name="ca601b"> PM</string>
@@ -1246,74 +1353,82 @@
     <string name="ca606"> ca606:\t (بچہ کا نام) عام طور پر چھٹی کے دنوں کے دوران، دوپہر کی نیند کرتا /کرتی ہے؟</string>
     <string name="ca606a"> ہاں   </string>
     <string name="ca606b"> نہیں</string>
+
     <string name="ca607"> ca607:\t اسکول کے سال کے دوران، (بچے کا نام) کی نیند کو آپ کس طرح درجہ بندی کریں گے مجموعی طور پر (بچے کا نام) نے کتنی اچھی نیند کی؟</string>
     <string name="ca607a"> بہت اچھی </string>
     <string name="ca607b"> کافی اچھی </string>
     <string name="ca607c"> کافی بری </string>
     <string name="ca607d"> بہت بری </string>
-    <string name="cb601_title"> cb601_title:\t حصہ بی: اسکول نہ جانے والے بچے</string>
+
+    <string name="cb601_title"> حصہ بی: اسکول نہ جانے والے بچے </string>
     <string name="cb601"> cb601:\t (بچہ کا نام) عام طور پر گزشتہ ہفتےکے دوران، کس وقت سوگیا تھا/تھی ؟                         </string>
     <string name="cb601a"> AM</string>
     <string name="cb601b"> PM</string>
+
     <string name="cb602"> cb602:\t (بچہ کا نام) گذشتہ ہفتےکے دوران عام طور پر صبح کس وقت  اٹھتا/ اٹھتی ہے ؟</string>
     <string name="cb602a"> AM</string>
     <string name="cb602b"> PM</string>
+
     <string name="cb603"> cb603:\t During the past week, does the child name afternoon nap?</string>
     <string name="cb603a"> ہاں</string>
     <string name="cb603b"> نہیں</string>
+
     <string name="cb604"> cb604:\t گذشتہ ہفتےکے دوران (بچے کا نام) کی نیند کو آپ کس طرح درجہ بندی کریں گے مجموعی طور پر (بچے کا نام) نے کتنی اچھی نیند کی؟</string>
     <string name="cb604a"> بہت اچھی </string>
     <string name="cb604b"> کافی اچھی </string>
     <string name="cb604c"> کافی بری </string>
     <string name="cb604d"> بہت بری </string>
+
+    <string name="td1heading"> SECTION D1: BEVERAGES </string>
     <string name="d101"> d101:\t  مکمل چینی کاربن مشروبات (یعنی پییسی / کوکا کولا)</string>
     <string name="d101a"> گھر میں </string>
     <string name="d101b"> گھرکے باہر</string>
     <string name="d101c"> دونوں</string>
-    <string name="d101_sub"> d101_sub:\t مکمل چینی کاربن مشروبات (یعنی پییسی / کوکا کولا)</string>
-    <string name="d101_suba"> فی دن 1 بوتل</string>
-    <string name="d101_subb">  فی دن 2 بوتل</string>
-    <string name="d101_subc"> فی دن 3 بوتل</string>
-    <string name="d101_subd"> ایک بوتل فی ہفتہ</string>
-    <string name="d101_sube"> فی ہفتہ 2-4 بوتلیں</string>
-    <string name="d101_subf"> ہر ہفتے 5-6 بوتلیں</string>
-    <string name="d101_subg"> فی مہینہ 3-1 بوتلیں</string>
-    <string name="d101_subh"> کبہی نہیں/مہینے میں ایک سے بھی کم </string>
+
+    <string name="d101sub"> d101_sub:\t مکمل چینی کاربن مشروبات (یعنی پییسی / کوکا کولا)</string>
+    <string name="d101suba"> فی دن 1 بوتل</string>
+    <string name="d101subb">  فی دن 2 بوتل</string>
+    <string name="d101subc"> فی دن 3 بوتل</string>
+    <string name="d101subd"> ایک بوتل فی ہفتہ</string>
+    <string name="d101sube"> فی ہفتہ 2-4 بوتلیں</string>
+    <string name="d101subf"> ہر ہفتے 5-6 بوتلیں</string>
+    <string name="d101subg"> فی مہینہ 3-1 بوتلیں</string>
+    <string name="d101subh"> کبہی نہیں/مہینے میں ایک سے بھی کم </string>
     <string name="d102"> d102:\t پھل کا رس (یعنی نیبوڈ - حقیقی رس نہیں)</string>
     <string name="d102a"> گھر میں</string>
     <string name="d102b"> گھرکے باہر</string>
     <string name="d102c"> دونوں</string>
-    <string name="d102_sub"> d102_sub:\t پھل کا رس (یعنی نیبوڈ - حقیقی رس نہیں)</string>
-    <string name="d102_suba"> فی دن 1 بوتل </string>
-    <string name="d102_subb"> فی دن 2 بوتل</string>
-    <string name="d102_subc"> فی دن 3 بوتل</string>
-    <string name="d102_subd"> ایک بوتل فی ہفتہ</string>
-    <string name="d102_sube"> فی ہفتہ 2-4 بوتلیں</string>
-    <string name="d102_subf"> ہر ہفتے 5-6 بوتلیں</string>
-    <string name="d102_subg"> فی مہینہ 3-1 بوتلیں</string>
-    <string name="d102_subh"> کبہی نہیں/مہینے میں ایک سے بھی کم </string>
+    <string name="d102sub"> d102_sub:\t پھل کا رس (یعنی نیبوڈ - حقیقی رس نہیں)</string>
+    <string name="d102suba"> فی دن 1 بوتل </string>
+    <string name="d102subb"> فی دن 2 بوتل</string>
+    <string name="d102subc"> فی دن 3 بوتل</string>
+    <string name="d102subd"> ایک بوتل فی ہفتہ</string>
+    <string name="d102sube"> فی ہفتہ 2-4 بوتلیں</string>
+    <string name="d102subf"> ہر ہفتے 5-6 بوتلیں</string>
+    <string name="d102subg"> فی مہینہ 3-1 بوتلیں</string>
+    <string name="d102subh"> کبہی نہیں/مہینے میں ایک سے بھی کم </string>
     <string name="d103"> d103:\t بلیک چائے (یا دیگر کافین مشروبات)</string>
     <string name="d103a"> چینی کے ساتھ</string>
     <string name="d103b"> چینی کے بغیر </string>
-    <string name="d103_sub"> d103_sub:\t بلیک چائے (یا دیگر کافین مشروبات)</string>
-    <string name="d103_suba"> ہر روز ایک کپ</string>
-    <string name="d103_subb"> دو کپ ہر روز </string>
-    <string name="d103_subc"> روزانہ تین یا زیادہ کپ</string>
-    <string name="d103_subd"> ہفتے میں ایک سے دو کپ</string>
-    <string name="d103_sube"> ایک ہفتے میں تین سے چھ کپ</string>
-    <string name="d103_subf"> ایک ماہ میں ایک سے تین کپ</string>
-    <string name="d103_subg"> فی مہینہ 1/ سے بھی کم نہیں</string>
+    <string name="d103sub"> d103_sub:\t بلیک چائے (یا دیگر کافین مشروبات)</string>
+    <string name="d103suba"> ہر روز ایک کپ</string>
+    <string name="d103subb"> دو کپ ہر روز </string>
+    <string name="d103subc"> روزانہ تین یا زیادہ کپ</string>
+    <string name="d103subd"> ہفتے میں ایک سے دو کپ</string>
+    <string name="d103sube"> ایک ہفتے میں تین سے چھ کپ</string>
+    <string name="d103subf"> ایک ماہ میں ایک سے تین کپ</string>
+    <string name="d103subg"> فی مہینہ 1/ سے بھی کم نہیں</string>
     <string name="d104"> d104:\t دودھ کے ساتھ چائے</string>
     <string name="d104a"> چینی کے ساتھ</string>
     <string name="d104b"> چینی کے بغیر </string>
-    <string name="d104_sub"> d104_sub:\t دودھ کے ساتھ چائے</string>
-    <string name="d104_suba"> ہر روز ایک کپ</string>
-    <string name="d104_subb"> دو کپ ہر روز </string>
-    <string name="d104_subc"> روزانہ تین یا زیادہ کپ</string>
-    <string name="d104_subd"> ہفتے میں ایک سے دو کپ</string>
-    <string name="d104_sube"> ایک ہفتے میں تین سے چھ کپ</string>
-    <string name="d104_subf"> ایک ماہ میں ایک سے تین کپ</string>
-    <string name="d104_subg"> فی مہینہ 1/ سے بھی کم نہیں</string>
+    <string name="d104sub"> d104_sub:\t دودھ کے ساتھ چائے</string>
+    <string name="d104suba"> ہر روز ایک کپ</string>
+    <string name="d104subb"> دو کپ ہر روز </string>
+    <string name="d104subc"> روزانہ تین یا زیادہ کپ</string>
+    <string name="d104subd"> ہفتے میں ایک سے دو کپ</string>
+    <string name="d104sube"> ایک ہفتے میں تین سے چھ کپ</string>
+    <string name="d104subf"> ایک ماہ میں ایک سے تین کپ</string>
+    <string name="d104subg"> فی مہینہ 1/ سے بھی کم نہیں</string>
     <string name="d105"> d105:\t آپ کتنی چینی استعمال کرتے ہیں؟</string>
     <string name="d105a"> ایک چائے کا چمچ فی دن سے کم</string>
     <string name="d105b"> فی دن 1-2 چائے کے چمچ</string>
@@ -1321,13 +1436,15 @@
     <string name="d106"> d106:\t پانی</string>
     <string name="d106a"> نل</string>
     <string name="d106b"> بوتل</string>
-    <string name="d106_sub"> d106_sub:\t پانی</string>
-    <string name="d106_suba"> فی دن 1 گلاس</string>
-    <string name="d106_subb"> فی دن 2-3 گلاس</string>
-    <string name="d106_subc"> فی دن 6-3 گلاس</string>
-    <string name="d106_subd"> فی دن 8-6 گلاس</string>
-    <string name="d106_sube"> day  ہر روز آٹھ گلاس سے زیادہ</string>
+    <string name="d106sub"> d106_sub:\t پانی</string>
+    <string name="d106suba"> فی دن 1 گلاس</string>
+    <string name="d106subb"> فی دن 2-3 گلاس</string>
+    <string name="d106subc"> فی دن 6-3 گلاس</string>
+    <string name="d106subd"> فی دن 8-6 گلاس</string>
+    <string name="d106sube"> day  ہر روز آٹھ گلاس سے زیادہ</string>
     <string name="d150d"> فی دن 5 یا زیادہ چائے کے چمچ</string>
+
+    <string name="td2heading">SECTION D2: DAIRY </string>
     <string name="d201"> d201:\t آپ کے (بچے کا نام) عام طور پر کون سا سفید دودھ پیتے ہیں؟</string>
     <string name="d201a"> گائے کا دودھ</string>
     <string name="d201b"> بکری کا دودھ</string>
@@ -1365,28 +1482,28 @@
     <string name="d205"> d205:\t دہی</string>
     <string name="d205a"> سادہ</string>
     <string name="d205b"> میٹھی </string>
-    <string name="d205_sub"> d205_sub:\t دہی</string>
-    <string name="d205_suba"> ہر روز ایک کپ</string>
-    <string name="d205_subb"> دو کپ ہر روز</string>
-    <string name="d205_subc"> روزانہ تین یا زیادہ کپ</string>
-    <string name="d205_subd"> ہفتے میں ایک سے دو کپ</string>
-    <string name="d205_sube"> ایک ہفتے میں تین سے چھ کپ</string>
-    <string name="d205_subf"> ایک ماہ میں ایک سے تین کپ</string>
-    <string name="d205_subg">   کبھی نہیں/فی مہینہ 1سے بھی کم</string>
+    <string name="d205sub"> d205_sub:\t دہی</string>
+    <string name="d205suba"> ہر روز ایک کپ</string>
+    <string name="d205subb"> دو کپ ہر روز</string>
+    <string name="d205subc"> روزانہ تین یا زیادہ کپ</string>
+    <string name="d205subd"> ہفتے میں ایک سے دو کپ</string>
+    <string name="d205sube"> ایک ہفتے میں تین سے چھ کپ</string>
+    <string name="d205subf"> ایک ماہ میں ایک سے تین کپ</string>
+    <string name="d205subg">   کبھی نہیں/فی مہینہ 1سے بھی کم</string>
     <string name="d206"> d206:\t کس قسم کا پنیر کھایا - اکیلا کھایا یا اہم ڈش میں شامل کیا؟</string>
     <string name="d206a"> پنیر</string>
     <string name="d206b"> کاٹیج پنیر</string>
     <string name="d206c"> کریم پنیر</string>
     <string name="d206d"> شیڈدر</string>
     <string name="d206x"> دیگر</string>
-    <string name="d206_sub"> d206_sub:\t کس قسم کا پنیر کھایا - اکیلا کھایا یا اہم ڈش میں شامل کیا؟</string>
-    <string name="d206_suba"> ہر دن کے لئے 1 ٹکڑا کپ</string>
-    <string name="d206_subb"> فی دن دو سے تین ٹکڑے کپ</string>
-    <string name="d206_subc"> تین سے زیادہ ٹکڑے / کپ فی دن</string>
-    <string name="d206_subd"> ہفتے میں ایک بار</string>
-    <string name="d206_sube"> دو سے چھ ٹکڑے / کپ ہر ہفتے</string>
-    <string name="d206_subf"> فی مہینہ ایک سے تین ٹکڑے / کپ</string>
-    <string name="d206_subg"> کبھی نہیں / فی مہینہ ایک کپ سے بھی کم</string>
+    <string name="d206sub"> d206_sub:\t کس قسم کا پنیر کھایا - اکیلا کھایا یا اہم ڈش میں شامل کیا؟</string>
+    <string name="d206suba"> ہر دن کے لئے 1 ٹکڑا کپ</string>
+    <string name="d206subb"> فی دن دو سے تین ٹکڑے کپ</string>
+    <string name="d206subc"> تین سے زیادہ ٹکڑے / کپ فی دن</string>
+    <string name="d206subd"> ہفتے میں ایک بار</string>
+    <string name="d206sube"> دو سے چھ ٹکڑے / کپ ہر ہفتے</string>
+    <string name="d206subf"> فی مہینہ ایک سے تین ٹکڑے / کپ</string>
+    <string name="d206subg"> کبھی نہیں / فی مہینہ ایک کپ سے بھی کم</string>
     <string name="d207"> d207:\t مکھن (ایک کھانےکا چمچ ایک مرتبہ)</string>
     <string name="d207a"> ہر دن ایک چمچ</string>
     <string name="d207b"> دو سے چار چمچ فی دن</string>
@@ -1406,14 +1523,14 @@
     <string name="d209"> d209:\t گھی</string>
     <string name="d209a"> بناسپتی ڈالڈ</string>
     <string name="d209b"> دیسی </string>
-    <string name="d209_sub"> d209_sub:\t گھی</string>
-    <string name="d209_suba">   ہر دن ایک چمچ</string>
-    <string name="d209_subb"> دو سے چار چمچ فی دن</string>
-    <string name="d209_subc">   روزانہ چار چمچ سے زیادہ</string>
-    <string name="d209_subd">   ایک ہفتے میں ایک بار</string>
-    <string name="d209_sube">   دو یا چھ چمچ ایک ہفتے میں</string>
-    <string name="d209_subf"> ایک ماہ میں ایک سے تین چمچ</string>
-    <string name="d209_subg"> کبھی نہیں / فی مہینہ ایک چمچ سے بھی کم</string>
+    <string name="d209sub"> d209_sub:\t گھی</string>
+    <string name="d209suba">   ہر دن ایک چمچ</string>
+    <string name="d209subb"> دو سے چار چمچ فی دن</string>
+    <string name="d209subc">   روزانہ چار چمچ سے زیادہ</string>
+    <string name="d209subd">   ایک ہفتے میں ایک بار</string>
+    <string name="d209sube">   دو یا چھ چمچ ایک ہفتے میں</string>
+    <string name="d209subf"> ایک ماہ میں ایک سے تین چمچ</string>
+    <string name="d209subg"> کبھی نہیں / فی مہینہ ایک چمچ سے بھی کم</string>
     <string name="d210"> d210:\t آپ کاخاندان گھرمیں کونسا تیل استعمال کرتا ہے (وہ سب سلیکٹ کریں جو مناسب ہیں)</string>
     <string name="d210a"> سرسوں کا تیل</string>
     <string name="d210b"> مکئی کا تیل</string>
@@ -1422,116 +1539,120 @@
     <string name="d210e"> زعفران کا تیل</string>
     <string name="d210f"> سورج مکھی کا تیل</string>
     <string name="d210g">  معلوم نہیں</string>
-    <string name="d301"> d301:\t مٹھائی (کیک، پیسٹری)</string>
+
+    <string name="td3heading">SECTION D3: FAST FOOD/JUNK FOOD/SNACKS </string>
+    <string name="d301"> D301:\t مٹھائی (کیک، پیسٹری)</string>
     <string name="d301a"> گھر میں</string>
     <string name="d301b"> گھرکے باہر</string>
     <string name="d301c">  دونوں</string>
-    <string name="d301_sub"> d301_sub:\t مٹھائی (کیک، پیسٹری)</string>
-    <string name="d301_suba"> ایک ہفتے میں ایک مرتبہ</string>
-    <string name="d301_subb">   ہفتے میں دو سے چار مرتبہ</string>
-    <string name="d301_subc"> ہفتے میں چار سے زیادہ مرتبہ</string>
-    <string name="d301_subd">  ایک مہینے میں ایک سے تین بار</string>
-    <string name="d301_sube"> مہینے میں ایک بار سے بھی کم / کبھی نہیں</string>
+    <string name="d301sub"> d301_sub:\t مٹھائی (کیک، پیسٹری)</string>
+    <string name="d301suba"> ایک ہفتے میں ایک مرتبہ</string>
+    <string name="d301subb">   ہفتے میں دو سے چار مرتبہ</string>
+    <string name="d301subc"> ہفتے میں چار سے زیادہ مرتبہ</string>
+    <string name="d301subd">  ایک مہینے میں ایک سے تین بار</string>
+    <string name="d301sube"> مہینے میں ایک بار سے بھی کم / کبھی نہیں</string>
     <string name="d302"> d302:\t بسکٹ</string>
     <string name="d302a"> گھر میں</string>
     <string name="d302b"> گھرکے باہر</string>
     <string name="d302c">  دونوں</string>
-    <string name="d302_sub"> d302_sub:\t بسکٹ</string>
-    <string name="d302_suba"> ایک ہفتے میں ایک مرتبہ</string>
-    <string name="d302_subb">   ہفتے میں دو سے چار مرتبہ</string>
-    <string name="d302_subc"> ہفتے میں چار سے زیادہ مرتبہ</string>
-    <string name="d302_subd">  ایک مہینے میں ایک سے تین بار</string>
-    <string name="d302_sube"> مہینے میں ایک بار سے بھی کم / کبھی نہیں</string>
+    <string name="d302sub"> d302_sub:\t بسکٹ</string>
+    <string name="d302suba"> ایک ہفتے میں ایک مرتبہ</string>
+    <string name="d302subb">   ہفتے میں دو سے چار مرتبہ</string>
+    <string name="d302subc"> ہفتے میں چار سے زیادہ مرتبہ</string>
+    <string name="d302subd">  ایک مہینے میں ایک سے تین بار</string>
+    <string name="d302sube"> مہینے میں ایک بار سے بھی کم / کبھی نہیں</string>
     <string name="d303"> d303:\t ٹافی</string>
     <string name="d303a"> گھر میں</string>
     <string name="d303b"> گھرکے باہر</string>
     <string name="d303c">  دونوں</string>
-    <string name="d303_sub"> d303_sub:\t ٹافی</string>
-    <string name="d303_suba"> ایک ہفتے میں ایک مرتبہ</string>
-    <string name="d303_subb">   ہفتے میں دو سے چار مرتبہ</string>
-    <string name="d303_subc"> ہفتے میں چار سے زیادہ مرتبہ</string>
-    <string name="d303_subd">  ایک مہینے میں ایک سے تین بار</string>
-    <string name="d303_sube"> مہینے میں ایک بار سے بھی کم / کبھی نہیں</string>
+    <string name="d303sub"> d303_sub:\t ٹافی</string>
+    <string name="d303suba"> ایک ہفتے میں ایک مرتبہ</string>
+    <string name="d303subb">   ہفتے میں دو سے چار مرتبہ</string>
+    <string name="d303subc"> ہفتے میں چار سے زیادہ مرتبہ</string>
+    <string name="d303subd">  ایک مہینے میں ایک سے تین بار</string>
+    <string name="d303sube"> مہینے میں ایک بار سے بھی کم / کبھی نہیں</string>
     <string name="d304"> d304:\t چاکلیٹ</string>
     <string name="d304a"> گھر میں</string>
     <string name="d304b"> گھرکے باہر</string>
     <string name="d304c">  دونوں</string>
-    <string name="d304_sub"> d304_sub:\t چاکلیٹ</string>
-    <string name="d304_suba"> ایک ہفتے میں ایک مرتبہ</string>
-    <string name="d304_subb">   ہفتے میں دو سے چار مرتبہ</string>
-    <string name="d304_subc"> ہفتے میں چار سے زیادہ مرتبہ</string>
-    <string name="d304_subd">  ایک مہینے میں ایک سے تین بار</string>
-    <string name="d304_sube"> مہینے میں ایک بار سے بھی کم / کبھی نہیں</string>
+    <string name="d304sub"> d304_sub:\t چاکلیٹ</string>
+    <string name="d304suba"> ایک ہفتے میں ایک مرتبہ</string>
+    <string name="d304subb">   ہفتے میں دو سے چار مرتبہ</string>
+    <string name="d304subc"> ہفتے میں چار سے زیادہ مرتبہ</string>
+    <string name="d304subd">  ایک مہینے میں ایک سے تین بار</string>
+    <string name="d304sube"> مہینے میں ایک بار سے بھی کم / کبھی نہیں</string>
     <string name="d305"> d305:\t پیکڈ آلو چپس، پاپڑ</string>
     <string name="d305a"> گھر میں</string>
     <string name="d305b"> گھرکے باہر</string>
     <string name="d305c">  دونوں</string>
-    <string name="d305_sub"> d305_sub:\t پیکڈ آلو چپس، پاپڑ</string>
-    <string name="d305_suba"> ایک ہفتے میں ایک مرتبہ</string>
-    <string name="d305_subb">   ہفتے میں دو سے چار مرتبہ</string>
-    <string name="d305_subc"> ہفتے میں چار سے زیادہ مرتبہ</string>
-    <string name="d305_subd">  ایک مہینے میں ایک سے تین بار</string>
-    <string name="d305_sube"> مہینے میں ایک بار سے بھی کم / کبھی نہیں</string>
+    <string name="d305sub"> d305_sub:\t پیکڈ آلو چپس، پاپڑ</string>
+    <string name="d305suba"> ایک ہفتے میں ایک مرتبہ</string>
+    <string name="d305subb">   ہفتے میں دو سے چار مرتبہ</string>
+    <string name="d305subc"> ہفتے میں چار سے زیادہ مرتبہ</string>
+    <string name="d305subd">  ایک مہینے میں ایک سے تین بار</string>
+    <string name="d305sube"> مہینے میں ایک بار سے بھی کم / کبھی نہیں</string>
     <string name="d306"> d306:\t آلو کے چپس</string>
     <string name="d306a"> گھر میں</string>
     <string name="d306b"> گھرکے باہر</string>
     <string name="d306c">  دونوں</string>
-    <string name="d306_sub"> d306_sub:\t آلو کے چپس</string>
-    <string name="d306_suba"> ایک ہفتے میں ایک مرتبہ</string>
-    <string name="d306_subb">   ہفتے میں دو سے چار مرتبہ</string>
-    <string name="d306_subc"> ہفتے میں چار سے زیادہ مرتبہ</string>
-    <string name="d306_subd">  ایک مہینے میں ایک سے تین بار</string>
-    <string name="d306_sube"> مہینے میں ایک بار سے بھی کم / کبھی نہیں</string>
+    <string name="d306sub"> d306_sub:\t آلو کے چپس</string>
+    <string name="d306suba"> ایک ہفتے میں ایک مرتبہ</string>
+    <string name="d306subb">   ہفتے میں دو سے چار مرتبہ</string>
+    <string name="d306subc"> ہفتے میں چار سے زیادہ مرتبہ</string>
+    <string name="d306subd">  ایک مہینے میں ایک سے تین بار</string>
+    <string name="d306sube"> مہینے میں ایک بار سے بھی کم / کبھی نہیں</string>
     <string name="d307"> d307:\t کلفی</string>
     <string name="d307a"> گھر میں</string>
     <string name="d307b"> گھرکے باہر</string>
     <string name="d307c">  دونوں</string>
-    <string name="d307_sub"> d307_sub:\t کلفی</string>
-    <string name="d307_suba"> ایک ہفتے میں ایک مرتبہ</string>
-    <string name="d307_subb">   ہفتے میں دو سے چار مرتبہ</string>
-    <string name="d307_subc"> ہفتے میں چار سے زیادہ مرتبہ</string>
-    <string name="d307_subd">  ایک مہینے میں ایک سے تین بار</string>
-    <string name="d307_sube"> مہینے میں ایک بار سے بھی کم / کبھی نہیں</string>
+    <string name="d307sub"> d307_sub:\t کلفی</string>
+    <string name="d307suba"> ایک ہفتے میں ایک مرتبہ</string>
+    <string name="d307subb">   ہفتے میں دو سے چار مرتبہ</string>
+    <string name="d307subc"> ہفتے میں چار سے زیادہ مرتبہ</string>
+    <string name="d307subd">  ایک مہینے میں ایک سے تین بار</string>
+    <string name="d307sube"> مہینے میں ایک بار سے بھی کم / کبھی نہیں</string>
     <string name="d308"> d308:\t تلی ہوئی خوراک (تلی چکن، سموسہ، پیٹیس، پکوڑا)</string>
     <string name="d308a"> گھر میں</string>
     <string name="d308b"> گھرکے باہر</string>
     <string name="d308c"> دونوں</string>
-    <string name="d308_sub"> d308_sub:\t تلی ہوئی خوراک (تلی چکن، سموسہ، پیٹیس، پکوڑا)</string>
-    <string name="d308_suba"> ایک ہفتے میں ایک مرتبہ</string>
-    <string name="d308_subb">   ہفتے میں دو سے چار مرتبہ</string>
-    <string name="d308_subc"> ہفتے میں چار سے زیادہ مرتبہ</string>
-    <string name="d308_subd">  ایک مہینے میں ایک سے تین بار</string>
-    <string name="d308_sube"> مہینے میں ایک بار سے بھی کم / کبھی نہیں</string>
+    <string name="d308sub"> d308_sub:\t تلی ہوئی خوراک (تلی چکن، سموسہ، پیٹیس، پکوڑا)</string>
+    <string name="d308suba"> ایک ہفتے میں ایک مرتبہ</string>
+    <string name="d308subb">   ہفتے میں دو سے چار مرتبہ</string>
+    <string name="d308subc"> ہفتے میں چار سے زیادہ مرتبہ</string>
+    <string name="d308subd">  ایک مہینے میں ایک سے تین بار</string>
+    <string name="d308sube"> مہینے میں ایک بار سے بھی کم / کبھی نہیں</string>
     <string name="d309"> d309:\t بن کباب / سینڈوچ/برگر</string>
     <string name="d309a"> گھر میں</string>
     <string name="d309b"> گھرکے باہر</string>
     <string name="d309c"> دونوں</string>
-    <string name="d309_sub"> d309_sub:\t بن کباب / سینڈوچ/برگر</string>
-    <string name="d309_suba"> ایک ہفتے میں ایک مرتبہ</string>
-    <string name="d309_subb">   ہفتے میں دو سے چار مرتبہ</string>
-    <string name="d309_subc"> ہفتے میں چار سے زیادہ مرتبہ</string>
-    <string name="d309_subd">  ایک مہینے میں ایک سے تین بار</string>
-    <string name="d309_sube"> مہینے میں ایک بار سے بھی کم / کبھی نہیں</string>
+    <string name="d309sub"> d309_sub:\t بن کباب / سینڈوچ/برگر</string>
+    <string name="d309suba"> ایک ہفتے میں ایک مرتبہ</string>
+    <string name="d309subb">   ہفتے میں دو سے چار مرتبہ</string>
+    <string name="d309subc"> ہفتے میں چار سے زیادہ مرتبہ</string>
+    <string name="d309subd">  ایک مہینے میں ایک سے تین بار</string>
+    <string name="d309sube"> مہینے میں ایک بار سے بھی کم / کبھی نہیں</string>
     <string name="d310"> d310:\t پیزا (2 سلائسز)</string>
     <string name="d310a"> گھر میں</string>
     <string name="d310b"> گھرکے باہر</string>
     <string name="d310c"> دونوں</string>
-    <string name="d310_sub"> d310_sub:\t پیزا (2 سلائسز)</string>
-    <string name="d310_suba"> ایک ہفتے میں ایک مرتبہ</string>
-    <string name="d310_subb">   ہفتے میں دو سے چار مرتبہ</string>
-    <string name="d310_subc"> ہفتے میں چار سے زیادہ مرتبہ</string>
-    <string name="d310_subd">  ایک مہینے میں ایک سے تین بار</string>
-    <string name="d310_sube"> مہینے میں ایک بار سے بھی کم / کبھی نہیں</string>
+    <string name="d310sub"> d310_sub:\t پیزا (2 سلائسز)</string>
+    <string name="d310suba"> ایک ہفتے میں ایک مرتبہ</string>
+    <string name="d310subb">   ہفتے میں دو سے چار مرتبہ</string>
+    <string name="d310subc"> ہفتے میں چار سے زیادہ مرتبہ</string>
+    <string name="d310subd">  ایک مہینے میں ایک سے تین بار</string>
+    <string name="d310sube"> مہینے میں ایک بار سے بھی کم / کبھی نہیں</string>
     <string name="d311"> d311:\t نوڈلس (چینی)</string>
     <string name="d311a"> گھر میں</string>
     <string name="d311b"> گھرکے باہر</string>
     <string name="d311c"> دونوں</string>
-    <string name="d311_sub"> d311_sub:\t نوڈلس (چینی)</string>
-    <string name="d311_suba"> ایک ہفتے میں ایک مرتبہ</string>
-    <string name="d311_subb">   ہفتے میں دو سے چار مرتبہ</string>
-    <string name="d311_subc"> ہفتے میں چار سے زیادہ مرتبہ</string>
-    <string name="d311_subd">  ایک مہینے میں ایک سے تین بار</string>
-    <string name="d311_sube"> مہینے میں ایک بار سے بھی کم / کبھی نہیں</string>
+    <string name="d311sub"> d311_sub:\t نوڈلس (چینی)</string>
+    <string name="d311suba"> ایک ہفتے میں ایک مرتبہ</string>
+    <string name="d311subb">   ہفتے میں دو سے چار مرتبہ</string>
+    <string name="d311subc"> ہفتے میں چار سے زیادہ مرتبہ</string>
+    <string name="d311subd">  ایک مہینے میں ایک سے تین بار</string>
+    <string name="d311sube"> مہینے میں ایک بار سے بھی کم / کبھی نہیں</string>
+
+    <string name="td4heading">SECTION D4: MEATS AND ALTERNATIVES </string>
     <string name="d401"> d401:\t بیف (کباب، سالن)</string>
     <string name="d401a"> ایک ہفتے میں ایک مرتبہ</string>
     <string name="d401b"> ہفتے میں دو سے چار مرتبہ</string>
@@ -1562,6 +1683,8 @@
     <string name="d405c"> ہفتے میں چار سے زیادہ مرتبہ</string>
     <string name="d405d"> ایک مہینے میں ایک سے تین بار</string>
     <string name="d405e"> کبھی مہینے میں ایک بار سے بھی کم /  نہیں</string>
+
+    <string name="td6heading">SECTION D6: GRAINS </string>
     <string name="d601"> d601:\t نرم اناج/غذا</string>
     <string name="d601a"> ایک دن میں ایک سے زیادہ کٹورے</string>
     <string name="d601b"> ہر ہفتہ ایک کٹورا</string>
@@ -1609,6 +1732,8 @@
     <string name="d607c"> ہفتے میں چار سے زیادہ مرتبہ</string>
     <string name="d607d"> ایک مہینے میں ایک سے تین بار</string>
     <string name="d607e"> مہینے میں ایک بار سے بھی کم / کبھی نہیں</string>
+
+    <string name="td7heading">SECTION D7: FRUITS AND VEGETABLES </string>
     <string name="d701"> d701:\t    کیلا</string>
     <string name="d701a"> ایک ہفتے میں ایک مرتبہ</string>
     <string name="d701b"> ہفتے میں دو سے چار مرتبہ</string>
@@ -1676,127 +1801,60 @@
     <string name="d711c"> ہفتے میں چار سے زیادہ مرتبہ</string>
     <string name="d711d"> ایک مہینے میں ایک سے تین بار</string>
     <string name="d711e"> کبھی مہینے میں ایک بار سے بھی کم /  نہیں</string>
+
+    <string name="td8heading">SECTION D8: OTHERS </string>
     <string name="d801"> d801:\t مربا/ شہد / شربت</string>
     <string name="d801a">  ایک ہفتے میں ایک مرتبہ</string>
     <string name="d801b"> ہفتے میں دو سے چار مرتبہ</string>
     <string name="d801c"> ہفتے میں چار سے زیادہ مرتبہ</string>
     <string name="d801d"> ایک مہینے میں ایک سے تین بار</string>
     <string name="d801e"> کبھی مہینے میں ایک بار سے بھی کم /  نہیں</string>
-    <string name="d902a"> d902a:\t وقت(24 گھنٹے گھڑی)</string>
-    <string name="d902b"> d902b:\t وقت(24 گھنٹے گھڑی)</string>
-    <string name="d902c"> d902c:\t وقت(24 گھنٹے گھڑی)</string>
-    <string name="d902d"> d902d:\t وقت(24 گھنٹے گھڑی)</string>
-    <string name="d902e"> d902e:\t وقت(24 گھنٹے گھڑی)</string>
-    <string name="d902f"> d902f:\t وقت(24 گھنٹے گھڑی)</string>
-    <string name="d902g"> d902g:\t وقت(24 گھنٹے گھڑی)</string>
-    <string name="d903a"> d903a:\t اشیاء کی تفصیل</string>
-    <string name="d903b"> d903b:\t اشیاء کی تفصیل</string>
-    <string name="d903c"> d903c:\t اشیاء کی تفصیل</string>
-    <string name="d903d"> d903d:\t اشیاء کی تفصیل</string>
-    <string name="d903e"> d903e:\t اشیاء کی تفصیل</string>
-    <string name="d903f"> d903f:\t اشیاء کی تفصیل</string>
-    <string name="d903g"> d903g:\t اشیاء کی تفصیل</string>
-    <string name="d904a"> d904a:\t اجزاء</string>
-    <string name="d904b"> d904b:\t اجزاء</string>
-    <string name="d904c"> d904c:\t اجزاء</string>
-    <string name="d904d"> d904d:\t اجزاء</string>
-    <string name="d904e"> d904e:\t اجزاء</string>
-    <string name="d904f"> d904f:\t اجزاء</string>
-    <string name="d904g"> d904g:\t اجزاء</string>
-    <string name="d905a"> d905a:\t مقدار</string>
-    <string name="d905aa"> پیمانہ</string>
-    <string name="d905ab"> مقدار</string>
-    <string name="d905b"> d905b:\t مقدار</string>
-    <string name="d905ba"> پیمانہ</string>
-    <string name="d905bb"> مقدار</string>
-    <string name="d905c"> d905c:\t مقدار</string>
-    <string name="d905ca"> پیمانہ</string>
-    <string name="d905cb"> مقدار</string>
-    <string name="d905d"> d905d:\t مقدار</string>
-    <string name="d905da"> پیمانہ</string>
-    <string name="d905db"> مقدار</string>
-    <string name="d905e"> d905e:\t مقدار</string>
-    <string name="d905ea"> پیمانہ</string>
-    <string name="d905eb"> مقدار </string>
-    <string name="d905f"> d905f:\t مقدار</string>
-    <string name="d905fa"> پیمانہ</string>
-    <string name="d905fb"> مقدار </string>
-    <string name="d905g"> d905g:\t مقدار</string>
-    <string name="d905ga"> پیمانہ</string>
-    <string name="d905gb"> مقدار </string>
-    <string name="d906a"> d906a:\t کہاں تیار کیا گیا</string>
-    <string name="d906aa"> گھر میں اگایا ہوا</string>
-    <string name="d906ab"> مارکیٹ</string>
-    <string name="d906ac">   اسکول</string>
-    <string name="d906b"> d906b:\t کہاں تیار کیا گیا</string>
-    <string name="d906ba"> .گھر میں اگایا ہوا</string>
-    <string name="d906bb"> مارکیٹ</string>
-    <string name="d906bc"> اسکول</string>
-    <string name="d906c"> d906c:\t کہاں تیار کیا گیا</string>
-    <string name="d906ca"> گھر میں اگایا ہوا</string>
-    <string name="d906cb"> مارکیٹ</string>
-    <string name="d906cc"> اسکول</string>
-    <string name="d906d"> d906d:\t کہاں تیار کیا گیا</string>
-    <string name="d906da"> گھر میں اگایا ہوا</string>
-    <string name="d906db"> .مارکیٹ</string>
-    <string name="d906dc">   اسکول</string>
-    <string name="d906e"> d906e:\t کہاں تیار کیا گیا</string>
-    <string name="d906ea"> گھر میں اگایا ہوا</string>
-    <string name="d906eb"> مارکیٹ</string>
-    <string name="d906ec"> اسکول</string>
-    <string name="d906f"> d906f:\t کہاں تیار کیا گیا</string>
-    <string name="d906fa"> گھر میں اگایا ہوا</string>
-    <string name="d906fb"> مارکیٹ</string>
-    <string name="d906fc"> اسکول</string>
-    <string name="d906g"> d906g:\t کہاں تیار کیا گیا</string>
-    <string name="d906ga"> گھر میں اگایا ہوا</string>
-    <string name="d906gb"> مارکیٹ</string>
-    <string name="d906gc"> اسکول</string>
-    <string name="d907"> d907:\t استعمال/کھپت کی جگہ</string>
-    <string name="d907a"> d907a:\t استعمال/کھپت کی جگہ</string>
-    <string name="d907aa"> گھر</string>
-    <string name="d907ab"> مارکیٹ</string>
-    <string name="d907ac">   اسکول</string>
-    <string name="d907b"> d907b:\t استعمال/کھپت کی جگہ</string>
-    <string name="d907ba"> گھر</string>
-    <string name="d907bb"> مارکیٹ</string>
-    <string name="d907bc">   اسکول</string>
-    <string name="d907c"> d907c:\t استعمال/کھپت کی جگہ</string>
-    <string name="d907ca"> گھر</string>
-    <string name="d907cb"> مارکیٹ</string>
-    <string name="d907cc"> ۔اسکول</string>
-    <string name="d907d"> d907d:\t استعمال/کھپت کی جگہ</string>
-    <string name="d907da">  گھر</string>
-    <string name="d907db"> مارکیٹ</string>
-    <string name="d907dc"> ۔اسکول</string>
-    <string name="d907e"> d907e:\t استعمال/کھپت کی جگہ</string>
-    <string name="d907ea"> گھر</string>
-    <string name="d907eb"> مارکیٹ</string>
-    <string name="d907ec"> ۔اسکول</string>
-    <string name="d907f"> d907f:\t استعمال/کھپت کی جگہ</string>
-    <string name="d907fa">  گھر</string>
-    <string name="d907fb"> مارکیٹ</string>
-    <string name="d907fc"> اسکول</string>
-    <string name="d907g"> d907g:\t استعمال/کھپت کی جگہ</string>
-    <string name="d907ga"> گھر</string>
-    <string name="d907gb"> مارکیٹ</string>
-    <string name="d907gc"> ۔اسکول</string>
-    <string name="title_b"> title_b:\t ناشتہ</string>
-    <string name="title_c"> title_c:\t ناشتہ اور دوپہر کے   کھانے کے درمیان</string>
-    <string name="title_d"> title_d:\t دوپہر کا کھانا</string>
-    <string name="title_e"> title_e:\t دوپہر اور رات کے کھانے کے درمیان</string>
-    <string name="title_f"> title_f:\t رات کا کھانا </string>
-    <string name="title_g"> title_g:\t رات کے کھانے کے</string>
-    <string name="d901"> d901:\t بچہ(5 سے10 سال) نام (گھرانے کے افرادکی فہرست سے</string>
-    <string name="d901_sub"> d901_sub:\t 24 گھنٹوں کی یاداشت</string>
-    <string name="d901_suba"> یاددہانی کی بنیادایک معیاری 24 گھنٹوں کے مختلف اوقات کی یاداشت ملٹیپل-پاس پر مبنی ہونی چاہیے. ملٹیپل-پاس تکنیک کا مقصد یہ ہے کہ وہ معلومات دینے والے کے ذہنی بوجھ کوکم کرتاہےاوردرست معلومات دینے کے لیے جواب دہندہ کی حوصلہ افزائی کرتا ہے تاکہ وہ مختلف مراحل میں اپنی غذا کی کھپت کے بارے بغیرکسی بھول اور غلطی کے تفصیل بتا سکے۔  1.	براہ کرم کل کھائےگئے تمام کھانوں کے بارےمیں بتائیں 2.	تحقیقات کریں ان تمام کھانوں کے بارےمیں جو بتانے سے رہ گئے . (مثلا کاربونیٹیڈ مشروبات، مٹھائیاں، ہلکی پھلکی نمکین اور چٹپٹی اشیاء، پھل، سبزیاں، روٹی)اس کے ساتھ ساتھ، غذا میں استعمال ہونےوالی اضافی اشیاء کے بارے میں بھی تحقیق کرنے کے لئے پوچھاجائے(یعنی نمک، چینی، مصالہ جات وغیرہ) 3.	ہر کھانا کھانے کے اوقات اور کھانے کے مواقع کا نام حاصل کریں 4.	پیمائش کے ٹول کٹ کا استعمال کرتے ہوئے، ہر غذا کی تفصیل اورکھپت کردہ مقدار معلوم کریں. 5.	غذا کی تواريخ وارتفصیل اورکھپت کردہ مقدار حتمی جائزہ لیں</string>
+
+
+    <string name="td9heading"> SECTION D9: 24-HOUR RECALL </string>
+    <string name="d901"> بچہ(5 سے10 سال) نام (گھرانے کے افرادکی فہرست سے </string>
+    <string name="d901sub"> d901_sub:\t 24 گھنٹوں کی یاداشت </string>
+    <string name="d901suba"> یاددہانی کی بنیادایک معیاری 24 گھنٹوں کے مختلف اوقات کی یاداشت ملٹیپل-پاس پر مبنی ہونی چاہیے. ملٹیپل-پاس تکنیک کا مقصد یہ ہے کہ وہ معلومات دینے والے کے ذہنی بوجھ کوکم کرتاہےاوردرست معلومات دینے کے لیے جواب دہندہ کی حوصلہ افزائی کرتا ہے تاکہ وہ مختلف مراحل میں اپنی غذا کی کھپت کے بارے بغیر کسی بھول اور غلطی کے تفصیل بتا سکے۔  1.	براہ کرم کل کھائےگئے تمام کھانوں کے بارےمیں بتائیں 2.	تحقیقات کریں ان تمام کھانوں کے بارےمیں جو بتانے سے رہ گئے . (مثلا کاربونیٹیڈ مشروبات، مٹھائیاں، ہلکی پھلکی نمکین اور چٹپٹی اشیاء، پھل، سبزیاں، روٹی)اس کے ساتھ ساتھ، غذا میں استعمال ہونےوالی اضافی اشیاء کے بارے میں بھی تحقیق کرنے کے لئے پوچھاجائے(یعنی نمک، چینی، مصالہ جات وغیرہ) 3.	ہر کھانا کھانے کے اوقات اور کھانے کے مواقع کا نام حاصل کریں 4.	پیمائش کے ٹول کٹ کا استعمال کرتے ہوئے، ہر غذا کی تفصیل اورکھپت کردہ مقدار معلوم کریں. 5.	غذا کی تواريخ وارتفصیل اورکھپت کردہ مقدار حتمی جائزہ لیں</string>
     <string name="title"> title:\t 24 گھنٹے کھانےکی یاد/ تفصیل</string>
-    <string name="title_a"> title_a:\t ناشتے سے پہلے</string>
+
+    <string name="d9021"> D9021:\t ناشتے سے پہلے</string>
+    <string name="d9022"> D9022:\t ناشتہ</string>
+    <string name="d9023"> D9023:\t ناشتہ اور دوپہر کے   کھانے کے درمیان</string>
+    <string name="d9024"> D9024:\t دوپہر کا کھانا</string>
+    <string name="d9025"> D9025:\t دوپہر اور رات کے کھانے کے درمیان</string>
+    <string name="d9026"> D9026:\t رات کا کھانا </string>
+    <string name="d9027"> D9027:\t رات کے کھانے کے</string>
+
+    <string name="d902">  وقت(24 گھنٹے گھڑی) </string>
+
+    <string name="d903"> اشیاء کی تفصیل </string>
+
+    <string name="d904"> اجزاء </string>
+
+    <string name="d905"> مقدار </string>
+    <string name="d905a"> پیمانہ </string>
+    <string name="d905b"> مقدار </string>
+
+    <string name="d906"> کہاں تیار کیا گیا </string>
+    <string name="d906a"> گھر میں اگایا ہوا </string>
+    <string name="d906b"> مارکیٹ </string>
+    <string name="d906c"> اسکول </string>
+
+    <string name="d907"> استعمال / کھپت کی جگہ </string>
+    <string name="d907a"> گھر </string>
+    <string name="d907b"> مارکیٹ </string>
+    <string name="d907c"> اسکول </string>
+
+
+    <string name="tk1heading"> MODULE K1:\t RESPONDENT AND CHILD’\S PHYSICAL </string>
+    <string name="tk1headinghint"> k101h:\t منتخب کردہ گھر کی خاتون کو بلند آواز میں پڑھ کر سنائیں: اب میں آپ اور آپ کے گھر کے سربراہ، اورآپ کے بچے کے بارے میں کچھ سوال پوچھنا چاہوں گا۔</string>
+
+    <string name="k100">  بچے کا نام K200:\t </string>
+
     <string name="k101"> k101:\t کیا آپ کو لگتا ہے کہ آپ کے بچے (بچے کا نام) کا قد  اس کے عمر کے حساب سے مناسب/صحیح ہے؟</string>
     <string name="k101a"> Height is Appropriate for his/her age</string>
     <string name="k101b"> قد عمر کے حساب سے لمبا ہے </string>
     <string name="k101c"> قد عمر کے حساب سے چھوٹا ہے </string>
-    <string name="k101_title"> k101_title:\t منتخب کردہ گھر کی خاتون کو بلند آواز میں پڑھ کر سنائیں: اب میں آپ اور آپ کے گھر کے سربراہ، اورآپ کے بچے کے بارے میں کچھ سوال پوچھنا چاہوں گا۔</string>
     <string name="k102"> k102:\t کیا آپ کو لگتا ہے کہ آپ کے بچے (بچے کا نام) کا وزن اس کے عمر کے حساب سے مناسب/صحیح ہے؟</string>
     <string name="k102a">  وزن  عمر کے حساب سے مناسب/صحیح ہے</string>
     <string name="k102b"> وزن عمر کے حساب سے زیادہ ہے </string>
@@ -1808,94 +1866,136 @@
     <string name="k104"> k104:\t اندازاً&quot; قد کتنا لمبا /چھوٹا ہے براہ کرم فرق انچ میں ریکارڈ کریں</string>
     <string name="k104a">  انچ</string>
     <string name="k104b"> معلوم نہیں</string>
-    <string name="k201_title"> k201_title:\t یہ حصہ انڈیکس ماں کے پانچ سے دس سال کی عمر کے تمام بچوں میں سے کش گرڈ کے طریقے سے چنے گئےبچے کے لیے بھرا جائیگا۔</string>
-    <string name="k201_title1"> k201_title1:\t شناخت</string>
-    <string name="k201"> k201:\t بچہ کا نام ڈراپ ڈائون لسٹ سے چنیں                               </string>
-    <string name="k202"> k202:\t کیا بچہ گھر پر موجود ہے؟</string>
+
+
+    <string name="tk2heading"> MODULE K2:\t CHILD ANTHROPOMETRIC ASSESSMENT </string>
+    <string name="tk2headinghint"> یہ حصہ انڈیکس ماں کے پانچ سے دس سال کی عمر کے تمام بچوں میں سے کش گرڈ کے طریقے سے چنے گئےبچے کے لیے بھرا جائیگا۔ </string>
+    <string name="tk2headinghint1"> شناخت </string>
+    <string name="k201"> K201:\t بچہ کا نام ڈراپ ڈائون لسٹ سے چنیں </string>
+
+    <string name="k202"> K202:\t کیا بچہ گھر پر موجود ہے؟</string>
     <string name="k202a"> ہاں</string>
     <string name="k202b"> نہیں</string>
-    <string name="k203"> k203:\t کیا زبانی اجازت نامہ اور رضامندی لے لی گئی؟</string>
+
+    <string name="k203"> K203:\t کیا زبانی اجازت نامہ اور رضامندی لے لی گئی؟</string>
     <string name="k203a"> ہاں</string>
     <string name="k203b"> نہیں</string>
-    <string name="k204"> k204:\t سوال کرنے والے کا نام #1</string>
-    <string name="k204a"> k204a:\t سوال کرنے والے کا آئی ڈی #1</string>
-    <string name="k205"> k205:\t سوال کرنے والے کا نام #2</string>
-    <string name="k205a"> k205a:\t سوال کرنے والے کا آئی ڈی #2</string>
-    <string name="k206"> k206:\t تاریخ</string>
+
+    <string name="k204"> K204:\t سوال کرنے والے کا نام #1</string>
+
+    <string name="k205"> K205:\t سوال کرنے والے کا نام #2</string>
+
+    <string name="k206"> K206:\t تاریخ</string>
     <string name="k206dd"> دن</string>
     <string name="k206mm"> مہینہ</string>
     <string name="k206yy"> سال</string>
-    <string name="k207"> k207:\t انٹرویو کا وقت </string>
+
+    <string name="k207"> K207:\t انٹرویو کا وقت </string>
     <string name="k207hh"> گھنٹہ</string>
     <string name="k207mm"> منٹ </string>
-    <string name="k208"> k208:\t انٹرویوکا نتیجہ</string>
+
+    <string name="k208"> K208:\t انٹرویوکا نتیجہ</string>
     <string name="k208a"> مکمل</string>
     <string name="k208b"> دستبردار ہونا</string>
     <string name="k208c">  انکار</string>
-    <string name="k209"> k209:\t قد کی پیمائش (سینٹی میٹر)پہلی بار</string>
-    <string name="k209a"> k209a:\t پیمائش کرنے والے کی آئی ڈی-1</string>
-    <string name="k210"> k210:\t قد کی پیمائش (سینٹی میٹر)دوسری بار</string>
-    <string name="k210a"> قد کی پیمائش (سینٹی میٹر)پہلی بار</string>
-    <string name="k211"> k211:\t اگرپہلی دوباریوں کی پیمائش میں 0.6 سینٹی میٹر سے زیادہ کا فرق ہے تو قد کی پیمائش تیسری بار کریں</string>
+
+    <string name="tk2headinghint2"> Read aloud: Now we are going to do some measurements of (CHILD NAME) height, weight, and arm. Each measurement will be done at least twice. </string>
+    <string name="k209"> K209:\t قد کی پیمائش (سینٹی میٹر)پہلی بار</string>
+
+    <string name="k210"> K210:\t قد کی پیمائش (سینٹی میٹر)دوسری بار</string>
+
+    <string name="k211"> K211:\t اگرپہلی دوباریوں کی پیمائش میں 0.6 سینٹی میٹر سے زیادہ کا فرق ہے تو قد کی پیمائش تیسری بار کریں</string>
     <string name="k211a"> ہاں </string>
     <string name="k211b"> نہیں</string>
-    <string name="k212"> k212:\t قد کی پیمائش (سینٹی میٹر)تیسری بار</string>
-    <string name="k212a"> k212a:\t پیمائش کرنے والے کی آئی ڈی-3</string>
-    <string name="k213"> k213:\t وزن کی پیمائش(کلوگرام)پہلی بار</string>
-    <string name="k213a"> k213a:\t پیمائش کرنے والے کی آئی ڈی-1</string>
-    <string name="k214"> k214:\t وزن کی پیمائش(کلوگرام)دوسری بار</string>
-    <string name="k214a"> k214a:\t پیمائش کرنے والے کی آئی ڈی-2</string>
-    <string name="k215"> k215:\t اگرپہلی دوباریوں کی پیمائش میں 0.1 کلوگرام سے زیادہ کا فرق ہے تو وزن کی پیمائش تیسری بار کریں</string>
+
+    <string name="k212"> K212:\t قد کی پیمائش (سینٹی میٹر)تیسری بار</string>
+
+    <string name="k213"> K213:\t وزن کی پیمائش(کلوگرام)پہلی بار </string>
+
+    <string name="k214"> K214:\t وزن کی پیمائش(کلوگرام)دوسری بار </string>
+
+    <string name="k215"> K215:\t اگرپہلی دوباریوں کی پیمائش میں 0.1 کلوگرام سے زیادہ کا فرق ہے تو وزن کی پیمائش تیسری بار کریں</string>
     <string name="k215a"> ہاں </string>
     <string name="k215b"> نہیں</string>
-    <string name="k216"> k216:\t وزن کی پیمائش(کلوگرام)تیسری بار</string>
-    <string name="k216a"> k216a:\t پیمائش کرنے والے کی آئی ڈی-3</string>
-    <string name="k217"> k217:\t بائیں بازو کےاوپری درمیانی گھیرکی پیمائش پہلی بار</string>
-    <string name="k217a"> k217a:\t پیمائش کرنے والے کی آئی ڈی-1</string>
-    <string name="k218"> k218:\t بائیں بازو کےاوپری درمیانی گھیرکی پیمائش دوسری بار</string>
-    <string name="k218a"> k218a:\t پیمائش کرنے والے کی آئی ڈی-2</string>
-    <string name="k219"> k219:\t اگرپہلی دوباریوں کی پیمائش میں.3 سینٹیی میٹر سے زیادہ کا فرق ہے تو بازو کےاوپری درمیانی گھیرکی پیمائش تیسری بار کریں</string>
+
+    <string name="k216"> K216:\t وزن کی پیمائش(کلوگرام)تیسری بار</string>
+
+    <string name="k217"> K217:\t بائیں بازو کےاوپری درمیانی گھیرکی پیمائش پہلی بار</string>
+
+    <string name="k218"> K218:\t بائیں بازو کےاوپری درمیانی گھیرکی پیمائش دوسری بار</string>
+
+    <string name="k219"> K219:\t اگرپہلی دوباریوں کی پیمائش میں.3 سینٹیی میٹر سے زیادہ کا فرق ہے تو بازو کےاوپری درمیانی گھیرکی پیمائش تیسری بار کریں</string>
     <string name="k219a"> ہاں </string>
     <string name="k219b"> نہیں</string>
-    <string name="k220"> k220:\t بائیں بازو کےاوپری درمیانی گھیرکی پیمائش تیسری بار</string>
-    <string name="k220a"> k220a:\t پیمائش کرنے والے کی آئی ڈی-3</string>
-    <string name="k221"> k221:\t قد کی پیمائش (سینٹی میٹر)پہلی بار</string>
-    <string name="k221a"> k221a:\t پیمائش کرنے والے کی آئی ڈی-1</string>
-    <string name="k221_title"> k221_title:\t ونچی آواز میں پڑھیں: اب ہم (ماتھے کا نام) اونچائی اور وزن کی کچھ پیمائش کرنے جارہے ہیں۔ ہر پیمائش کم از کم دو بار کی جائے گی۔</string>
-    <string name="k222"> k222:\t قد کی پیمائش (سینٹی میٹر)دوسری بار</string>
-    <string name="k222a"> k222a:\t پیمائش کرنے والے کی آئی ڈی-2</string>
-    <string name="k223"> k223:\t اگرپہلی دوباریوں کی پیمائش میں 0.6 سینٹی میٹر سے زیادہ کا فرق ہے تو قد کی پیمائش تیسری بار کریں</string>
+
+    <string name="k220"> K220:\t بائیں بازو کےاوپری درمیانی گھیرکی پیمائش تیسری بار</string>
+
+
+    <string name="tk3heading"> MODULE K2:\t MOTHER ANTHROPOMETRIC ASSESSMENT </string>
+    <string name="tk2headinghint3"> ونچی آواز میں پڑھیں: اب ہم (ماتھے کا نام) اونچائی اور وزن کی کچھ پیمائش کرنے جارہے ہیں۔ ہر پیمائش کم از کم دو بار کی جائے گی۔ </string>
+    <string name="k221"> K221:\t قد کی پیمائش (سینٹی میٹر)پہلی بار</string>
+
+    <string name="k222"> K222:\t قد کی پیمائش (سینٹی میٹر)دوسری بار</string>
+
+    <string name="k223"> K223:\t اگرپہلی دوباریوں کی پیمائش میں 0.6 سینٹی میٹر سے زیادہ کا فرق ہے تو قد کی پیمائش تیسری بار کریں</string>
     <string name="k223a"> ہاں </string>
     <string name="k223b"> نہیں</string>
-    <string name="k224"> k224:\t قد کی پیمائش (سینٹی میٹر)تیسری بار</string>
-    <string name="k224a"> k224a:\t پیمائش کرنے والے کی آئی ڈی-3</string>
-    <string name="k225"> k225:\t  وزن کی پیمائش(کلوگرام)پہلی بار</string>
-    <string name="k225a"> k225a:\t پیمائش کرنے والے کی آئی ڈی-1</string>
-    <string name="k226"> k226:\t وزن کی پیمائش(کلوگرام)دوسری بار</string>
-    <string name="k226a"> k226a:\t پیمائش کرنے والے کی آئی ڈی-2</string>
-    <string name="k227"> k227:\t اگرپہلی دوباریوں کی پیمائش میں 0.1 کلوگرام سے زیادہ کا فرق ہے تو وزن کی پیمائش تیسری بار کریں</string>
+
+    <string name="k224"> K224:\t قد کی پیمائش (سینٹی میٹر)تیسری بار</string>
+
+    <string name="k225"> K225:\t  وزن کی پیمائش(کلوگرام)پہلی بار</string>
+
+    <string name="k226"> K226:\t وزن کی پیمائش(کلوگرام)دوسری بار</string>
+
+    <string name="k227"> K227:\t اگرپہلی دوباریوں کی پیمائش میں 0.1 کلوگرام سے زیادہ کا فرق ہے تو وزن کی پیمائش تیسری بار کریں</string>
     <string name="k227a"> ہاں </string>
     <string name="k227b"> نہیں</string>
-    <string name="k228"> k228:\t وزن کی پیمائش(کلوگرام)تیسری بار</string>
-    <string name="k228a"> k228a:\t پیمائش کرنے والے کی آئی ڈی-3</string>
-    <string name="l101"> l101:\t بچہ کا نام ڈراپ ڈائون لسٹ سے چنیں</string>
-    <string name="l101_title"> l101_title:\t یہ سیکشن انڈیکس چائلڈ سے بھروایا جائے گا</string>
-    <string name="l101_title2"> l101_title2:\t شناخت</string>
-    <string name="l102"> l102:\t زبانی اجازت نامہ اور  رضامندی</string>
+
+    <string name="k228"> K228:\t وزن کی پیمائش(کلوگرام)تیسری بار</string>
+
+
+    <!-- SECTION L -->
+    <string name="tlheading"> MODULE L:\t NUTRITIONAL IRON STATUS ASSESSMENT OF PARTICIPANT </string>
+    <string name="tlheading1"> یہ سیکشن انڈیکس چائلڈ سے بھروایا جائے گا </string>
+    <string name="tlheading2"> شناخت </string>
+
+    <string name="l101"> L101:\t بچہ کا نام ڈراپ ڈائون لسٹ سے چنیں</string>
+
+    <string name="l102"> L102:\t زبانی اجازت نامہ اور  رضامندی</string>
     <string name="l102a"> ہاں </string>
     <string name="l102b"> نہیں</string>
-    <string name="l103"> l103:\t انٹرویوکا نتیجہ</string>
+
+    <string name="l103"> L103:\t انٹرویوکا نتیجہ</string>
     <string name="l103a"> مکمل</string>
     <string name="l103b"> دستبردار ہونا</string>
     <string name="l103c">  انکار</string>
-    <string name="l104"> l104:\t ہیموگلوبن</string>
-    <string name="l104_title"> l104_title:\t شرکاءکی غذائی فولاد کی صورتحال کا جائزہ بلند آواز میں پڑھیں اب ہم بچے کی غذائی فولاد کی صورتحال کا جائزہ لینے  جارہے</string>
-    <string name="m101"> m101:\t بینائی  کی جانچ کی گئی تھی؟</string>
+
+
+    <string name="tlheading3"> Nutritional Iron status assessment of participant </string>
+    <string name="tlheading4">  شرکاءکی غذائی فولاد کی صورتحال کا جائزہ بلند آواز میں پڑھیں اب ہم بچے کی غذائی فولاد کی صورتحال کا جائزہ لینے  جارہے</string>
+    <string name="l104"> L104:\t ہیموگلوبن </string>
+
+    <!-- SECTION M -->
+    <string name="tmheading">SECTION M: VISION TEST </string>
+    <string name="m101"> M101:\t بینائی  کی جانچ کی گئی تھی؟ </string>
     <string name="m101a"> ہاں </string>
-    <string name="m101b"> نہیں</string>
-    <string name="m102"> m102:\t اگر ہاں، تو اس کا نتیجہ کیا تھا؟</string>
+    <string name="m101b"> نہیں </string>
+
+    <string name="m102"> M102:\t اگر ہاں، تو اس کا نتیجہ کیا تھا؟ </string>
     <string name="m102a"> دائیں آنکھ  </string>
     <string name="m102b"> بائیں آنکھ</string>
+
+
+    <string name="end_interview"> Form End </string>
+    <string name="anthro_end"> Anthro End </string>
+    <string name="start_interview"> انٹرویو شروع کریں </string>
+    <string name="nextSection"> Next Section </string>
+
+
+    <string name="dialog_text">Please add Info for second child.</string>
+    <string name="countNo">No</string>
+    <string name="countYes">Yes</string>
+    <string name="countAlertMsg">Are you sure to continue</string>
 
 
 </resources>
