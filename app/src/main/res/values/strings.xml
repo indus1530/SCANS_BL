@@ -74,32 +74,9 @@
     <string name="a102hh"> Hours </string>
     <string name="a102mm"> Minutes </string>
 
-    <string name="a103a"> A103a:\t Interviewer’s Name </string>
-    <string name="a103b"> A103b:\t Interviewer’s Code </string>
-
-    <!--    <string name="a104"> A104:\t Province</string>-->
-    <!--    <string name="a104"> Province </string>-->
-    <string name="a104a">Balochistan </string>
-    <string name="a104b">Punjab </string>
-    <string name="a104c">Sindh </string>
-
-    <!--    <string name="a105"> A105:\t District</string>-->
     <string name="a105"> District </string>
-    <string name="a105a">Jafferabad </string>
-    <string name="a105a_title">Balochistan</string>
-    <string name="a105b">Nasirabad </string>
-    <string name="a105c">Lasbella </string>
-    <string name="a105d">Muzaffargarh</string>
-    <string name="a105d_title">Punjab </string>
-    <string name="a105e">Rahimyar Khan </string>
-    <string name="a105f">Badin </string>
-    <string name="a105f_title">Sindh</string>
-    <string name="a105g">Sanghar </string>
-    <string name="a105h">Qamber Shahdadkot </string>
 
-    <string name="a112a"> Not Available </string>
-
-    <string name="checkHHpresent"> Selected Head name present (A/C Line listing) </string>
+    <string name="checkHHpresent"> Head of Household name matches with Line Listing data </string>
 
     <string name="a106"> Enumeration Block</string>
     <string name="a107"> Province </string>
