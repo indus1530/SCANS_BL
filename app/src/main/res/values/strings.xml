@@ -115,7 +115,8 @@
     <string name="a118a"> ہاں </string>
     <string name="a118b"> نہیں </string>
 
-    <string name="a119"> A119: گھرانے کے انٹرویوکا نتیجہ: </string>
+
+    <string name="a119"> A119:\t گھرانے کے انٹرویوکا نتیجہ </string>
     <string name="a119hint"> انٹرویومکمل نہ ہونے کی صورت میں ٹیم لیڈر سے مشورہ کریں </string>
     <string name="a119a"> مکمل </string>
     <string name="a119b"> گھرانے کا کوئی فرد یا باصلاحیت جواب دہندہ گھر پر موجود نہیں </string>
