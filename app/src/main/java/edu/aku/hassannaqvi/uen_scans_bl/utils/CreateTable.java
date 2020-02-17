@@ -188,6 +188,7 @@ public final class CreateTable {
             + FamilyMembersContract.SingleMember.COLUMN_ID + " INTEGER PRIMARY KEY AUTOINCREMENT," +
             FamilyMembersContract.SingleMember.COLUMN_UID + " TEXT," +
             FamilyMembersContract.SingleMember.COLUMN_UUID + " TEXT," +
+            FamilyMembersContract.SingleMember.COLUMN_LUID + " TEXT," +
             FamilyMembersContract.SingleMember.COLUMN_KISH_SELECTED + " TEXT," +
             FamilyMembersContract.SingleMember.COLUMN_CLUSTERNO + " TEXT," +
             FamilyMembersContract.SingleMember.COLUMN_HHNO + " TEXT," +

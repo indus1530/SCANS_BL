@@ -168,14 +168,14 @@ public class AnthroContract {
         String TABLE_NAME = "anthro";
         String COLUMN_NAME_NULLABLE = "NULLHACK";
         String COLUMN__ID = "_id";
-        String COLUMN_UID = "uid";
+        String COLUMN_UID = "_uid";
         String COLUMN__UUID = "_uuid";
         String COLUMN_DEVICEID = "deviceid";
         String COLUMN_FORMDATE = "formdate";
         String COLUMN_USER = "username";
         String COLUMN_SK1 = "sk1";
         String COLUMN_FORMTYPE = "f_type";
-        String COLUMN_DEVICETAGID = "devicetagid";
+        String COLUMN_DEVICETAGID = "tagid";
         String COLUMN_ISTATUS = "istatus";
         String COLUMN_SYNCED = "synced";
         String COLUMN_SYNCED_DATE = "synced_date";

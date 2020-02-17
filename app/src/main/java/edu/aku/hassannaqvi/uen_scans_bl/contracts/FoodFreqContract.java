@@ -256,7 +256,7 @@ public class FoodFreqContract {
         String TABLE_NAME = "food_freq";
         String COLUMN_NAME_NULLABLE = "NULLHACK";
         String COLUMN__ID = "_id";
-        String COLUMN_UID = "uid";
+        String COLUMN_UID = "_uid";
         String COLUMN__UUID = "_uuid";
         String COLUMN_DEVICEID = "deviceid";
         String COLUMN_FORMDATE = "formdate";
@@ -270,7 +270,7 @@ public class FoodFreqContract {
         String COLUMN_SD7 = "sd7";
         String COLUMN_SD8 = "sd8";
         String COLUMN_SD9 = "sd9";
-        String COLUMN_DEVICETAGID = "devicetagid";
+        String COLUMN_DEVICETAGID = "tagid";
         String COLUMN_SYNCED = "synced";
         String COLUMN_SYNCED_DATE = "synced_date";
 

@@ -338,7 +338,7 @@ public class FormsContract {
         String COLUMN_USER = "username";
         String COLUMN_ISTATUS = "istatus";
         String COLUMN_ISTATUS88x = "istatus88x";
-        String COLUMN_LUID = "luid";
+        String COLUMN_LUID = "_luid";
         String COLUMN_ENDINGDATETIME = "endingdatetime";
         String COLUMN_GPSLAT = "gpslat";
         String COLUMN_GPSLNG = "gpslng";

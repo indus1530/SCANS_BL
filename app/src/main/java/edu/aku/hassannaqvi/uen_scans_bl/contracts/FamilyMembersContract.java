@@ -25,6 +25,7 @@ public class FamilyMembersContract implements Parcelable {
     private String marital;
     private String sD;
     private String kishSelected;
+    private String luid;
 
     //Not required in db
     private String fName;
@@ -37,6 +38,7 @@ public class FamilyMembersContract implements Parcelable {
         _id = in.readString();
         uid = in.readString();
         uuid = in.readString();
+        luid = in.readString();
         clusterno = in.readString();
         hhno = in.readString();
         serialno = in.readString();
@@ -69,6 +71,7 @@ public class FamilyMembersContract implements Parcelable {
         this._id = cursor.getString(cursor.getColumnIndex(SingleMember.COLUMN_ID));
         this.uid = cursor.getString(cursor.getColumnIndex(SingleMember.COLUMN_UID));
         this.uuid = cursor.getString(cursor.getColumnIndex(SingleMember.COLUMN_UUID));
+        this.luid = cursor.getString(cursor.getColumnIndex(SingleMember.COLUMN_LUID));
         this.kishSelected = cursor.getString(cursor.getColumnIndex(SingleMember.COLUMN_KISH_SELECTED));
         this.clusterno = cursor.getString(cursor.getColumnIndex(SingleMember.COLUMN_CLUSTERNO));
         this.hhno = cursor.getString(cursor.getColumnIndex(SingleMember.COLUMN_HHNO));
@@ -91,6 +94,7 @@ public class FamilyMembersContract implements Parcelable {
         json.put(SingleMember.COLUMN_ID, this._id == null ? JSONObject.NULL : this._id);
         json.put(SingleMember.COLUMN_UID, this.uid == null ? JSONObject.NULL : this.uid);
         json.put(SingleMember.COLUMN_UUID, this.uuid == null ? JSONObject.NULL : this.uuid);
+        json.put(SingleMember.COLUMN_LUID, this.luid == null ? JSONObject.NULL : this.luid);
         json.put(SingleMember.COLUMN_KISH_SELECTED, this.kishSelected == null ? JSONObject.NULL : this.kishSelected);
         json.put(SingleMember.COLUMN_CLUSTERNO, this.clusterno == null ? JSONObject.NULL : this.clusterno);
         json.put(SingleMember.COLUMN_HHNO, this.hhno == null ? JSONObject.NULL : this.hhno);
@@ -246,6 +250,14 @@ public class FamilyMembersContract implements Parcelable {
         this.available = available;
     }
 
+    public String getLuid() {
+        return luid;
+    }
+
+    public void setLuid(String luid) {
+        this.luid = luid;
+    }
+
     @Override
     public int describeContents() {
         return 0;
@@ -256,6 +268,7 @@ public class FamilyMembersContract implements Parcelable {
         parcel.writeString(_id);
         parcel.writeString(uid);
         parcel.writeString(uuid);
+        parcel.writeString(luid);
         parcel.writeString(clusterno);
         parcel.writeString(hhno);
         parcel.writeString(serialno);
@@ -278,6 +291,7 @@ public class FamilyMembersContract implements Parcelable {
         public static final String COLUMN_ID = "_id";
         public static final String COLUMN_UID = "_uid";
         public static final String COLUMN_UUID = "_uuid";
+        public static final String COLUMN_LUID = "_luid";
         public static final String COLUMN_AGE = "age";
         public static final String COLUMN_CLUSTERNO = "clusterno";
         public static final String COLUMN_HHNO = "hhno";

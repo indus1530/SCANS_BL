@@ -161,9 +161,11 @@ public class SectionB1Activity extends AppCompatActivity {
         JSONObject f1 = new JSONObject();
 
         f1.put("hhno", MainApp.fc.getHhno());
-        f1.put("cluster", MainApp.fc.getClusterCode());
+        f1.put("cluster_no", MainApp.fc.getClusterCode());
+        f1.put("_luid", MainApp.fc.getLuid());
         f1.put("fm_uid", MainApp.indexKishMWRA.getUid());
         f1.put("fm_serial", MainApp.indexKishMWRA.getSerialno());
+        f1.put("fm_name", MainApp.indexKishMWRA.getName());
 
         f1.put("b101",
                 bi.b101a.isChecked() ? "1" :
