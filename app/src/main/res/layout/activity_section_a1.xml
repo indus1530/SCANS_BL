@@ -15,6 +15,7 @@
     <ScrollView
         style="@style/i_scrollview"
         android:layoutDirection="rtl"
+        android:textDirection="rtl"
         tools:context=".ui.sections.SectionA1Activity">
 
         <LinearLayout

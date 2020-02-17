@@ -16,6 +16,7 @@
         android:fillViewport="true"
         android:scrollbarSize="10dip"
         android:layoutDirection="rtl"
+        android:textDirection="rtl"
         tools:context=".ui.sections.SectionD8Activity">
 
         <LinearLayout

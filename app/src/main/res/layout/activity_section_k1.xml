@@ -25,6 +25,7 @@
             android:fadeScrollbars="false"
             android:fillViewport="true"
             android:layoutDirection="rtl"
+            android:textDirection="rtl"
             android:scrollbarSize="10dip">
 
             <LinearLayout
