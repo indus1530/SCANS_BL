@@ -152,7 +152,7 @@
 
                     </androidx.cardview.widget.CardView>
 
-                    <!-- City - Village -->
+                    <!-- City -->
                     <androidx.cardview.widget.CardView style="@style/cardView">
 
                         <LinearLayout
@@ -188,6 +188,19 @@
                                 android:text="Test"
                                 android:textColor="@color/colorPrimaryDark"
                                 android:textSize="16sp" />
+
+
+                        </LinearLayout>
+
+                    </androidx.cardview.widget.CardView>
+
+                    <!-- Village -->
+                    <androidx.cardview.widget.CardView style="@style/cardView">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal">
 
                             <!--a107-->
                             <TextView
