@@ -189,6 +189,19 @@
                                 android:textColor="@color/colorPrimaryDark"
                                 android:textSize="16sp" />
 
+
+                        </LinearLayout>
+
+                    </androidx.cardview.widget.CardView>
+
+                    <!-- Tehsil - City -->
+                    <androidx.cardview.widget.CardView style="@style/cardView">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal">
+
                             <!--a107-->
                             <TextView
                                 android:layout_width="0dp"
