@@ -15,7 +15,7 @@
         style="@style/i_scrollview"
         android:fadeScrollbars="false"
         android:fillViewport="true"
-        android:layoutDirection="ltr"
+        android:layoutDirection="rtl"
         android:scrollbarSize="10dip"
         tools:context=".ui.Myactivity">
 

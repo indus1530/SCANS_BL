@@ -15,7 +15,7 @@
         android:fadeScrollbars="false"
         android:fillViewport="true"
         android:scrollbarSize="10dip"
-        android:layoutDirection="ltr"
+        android:layoutDirection="rtl"
         tools:context=".ui.sections.SectionC2Activity">
 
         <LinearLayout
