@@ -115,8 +115,6 @@ public class SectionK2Activity extends AppCompatActivity implements Util.EndSecA
         });
 
 
-
-
         RadioGroup[] otherRadioGroup = new RadioGroup[]{bi.k211, bi.k215, bi.k219};
         for (RadioGroup rdp : otherRadioGroup) {
             for (int i = 0; i < rdp.getChildCount(); i++) {
@@ -300,11 +298,12 @@ public class SectionK2Activity extends AppCompatActivity implements Util.EndSecA
         anthro.setFormType(CONSTANTS.ANTHRO_K2);
 
         JSONObject json = new JSONObject();
+        json.put("hhno", fmc_child.getHhno());
+        json.put("cluster_no", fmc_child.getClusterno());
+        json.put("_luid", fmc_child.getLuid());
         json.put("fm_uid", fmc_child.getUid());
         json.put("fm_serial", fmc_child.getSerialno());
         json.put("mm_serial", fmc_child.getMother_serial());
-        json.put("hhno", fmc_child.getHhno());
-        json.put("cluster", fmc_child.getClusterno());
 
         json.put("k201", bi.k201.getSelectedItem().toString());
 

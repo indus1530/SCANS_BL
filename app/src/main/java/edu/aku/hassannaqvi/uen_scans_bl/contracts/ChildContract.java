@@ -253,7 +253,7 @@ public class ChildContract {
 
         String TABLE_NAME = "child";
         String COLUMN__ID = "_id";
-        String COLUMN_UID = "uid";
+        String COLUMN_UID = "_uid";
         String COLUMN__UUID = "_uuid";
         String COLUMN_DEVICEID = "deviceid";
         String COLUMN_FORMDATE = "formdate";

@@ -90,7 +90,8 @@ public class SectionC1Activity extends AppCompatActivity {
         JSONObject f1 = new JSONObject();
 
         f1.put("hhno", MainApp.fc.getHhno());
-        f1.put("cluster", MainApp.fc.getClusterCode());
+        f1.put("cluster_no", MainApp.fc.getClusterCode());
+        f1.put("_luid", MainApp.fc.getLuid());
         f1.put("fm_uid", MainApp.indexKishMWRAChild.getUid());
         f1.put("fm_serial", MainApp.indexKishMWRAChild.getSerialno());
         f1.put("mm_fm_uid", MainApp.indexKishMWRA.getUid());

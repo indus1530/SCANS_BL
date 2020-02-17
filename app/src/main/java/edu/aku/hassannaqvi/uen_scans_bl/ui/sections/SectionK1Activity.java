@@ -141,7 +141,8 @@ public class SectionK1Activity extends AppCompatActivity implements Util.EndSecA
         json.put("fm_serial", fmc_child.getSerialno());
         json.put("mm_serial", fmc_child.getMother_serial());
         json.put("hhno", MainApp.fc.getHhno());
-        json.put("cluster", MainApp.fc.getClusterCode());
+        json.put("cluster_no", MainApp.fc.getClusterCode());
+        json.put("_luid", MainApp.fc.getLuid());
 
         json.put("k100", bi.k100.getSelectedItem().toString());
 

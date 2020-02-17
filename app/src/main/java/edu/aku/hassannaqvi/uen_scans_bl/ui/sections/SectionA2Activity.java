@@ -143,6 +143,7 @@ public class SectionA2Activity extends AppCompatActivity {
 
         if (fmcFLAG) {
             fmc.setUuid(MainApp.fc.get_UID());
+            fmc.setLuid(MainApp.fc.getLuid());
             fmc.setClusterno(MainApp.fc.getClusterCode());
             fmc.setHhno(MainApp.fc.getHhno());
             fmc.setSerialno(bi.a201.getText().toString());

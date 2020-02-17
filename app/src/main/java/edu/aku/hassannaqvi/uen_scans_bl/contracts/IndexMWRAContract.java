@@ -291,8 +291,8 @@ public class IndexMWRAContract implements Parcelable {
         public static final String COLUMN_NAME_NULLABLE = "NULLHACK";
         public static final String COLUMN_PROJECT_NAME = "project_name";
         public static final String COLUMN_ID = "_id";
-        public static final String COLUMN_UID = "uid";
-        public static final String COLUMN_UUID = "uuid";
+        public static final String COLUMN_UID = "_uid";
+        public static final String COLUMN_UUID = "_uuid";
         public static final String COLUMN_FORMDATE = "formdate";
         public static final String COLUMN_DEVICEID = "deviceid";
         public static final String COLUMN_USER = "username";

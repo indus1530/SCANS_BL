@@ -126,7 +126,7 @@ public class SectionLActivity extends AppCompatActivity {
     private void SaveDraft() throws JSONException {
 
         hb = new HbContract();
-        hb.set_UUID(MainApp.fc.get_UID());
+        hb.set_UUID(MainApp.indexKishMWRA.getUuid());
         hb.setDeviceId(MainApp.appInfo.getDeviceID());
         hb.setDevicetagID(MainApp.appInfo.getTagName());
         hb.setFormDate(new SimpleDateFormat("dd-MM-yy HH:mm").format(new Date().getTime()));
@@ -134,8 +134,9 @@ public class SectionLActivity extends AppCompatActivity {
 
         JSONObject json = new JSONObject();
 
-        json.put("hhno", MainApp.fc.getHhno());
-        json.put("cluster", MainApp.fc.getClusterCode());
+        json.put("hhno", MainApp.indexKishMWRA.getHhno());
+        json.put("cluster_no", MainApp.indexKishMWRA.getClusterno());
+        json.put("_luid", MainApp.indexKishMWRA.getLuid());
         json.put("fm_uid", MainApp.indexKishMWRAChild.getUid());
         json.put("fm_serial", MainApp.indexKishMWRAChild.getSerialno());
         json.put("mm_fm_uid", MainApp.indexKishMWRA.getUid());
