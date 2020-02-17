@@ -31,20 +31,21 @@
     Aga Khan University, Karachi, Pakistan</string>
     <string name="title_activity_family_members_list">Family Members List</string>
 
-    <string name="yes"> Yes </string>
-    <string name="no"> No </string>
-    <string name="dkn"> Don\'t Know </string>
-    <string name="none"> None or Never </string>
+    <string name="yes"> ہاں </string>
+    <string name="no"> نہیں </string>
+    <string name="dkn"> معلوم نہیں </string>
+    <string name="none"> کوئی نہیں </string>
+    <string name="never"> کبھی نہیں </string>
     <string name="na"> Not Applicable/Available  </string>
     <string name="ref"> Refused </string>
     <string name="other"> Other </string>
     <string name="specify"> Specify </string>
-    <string name="year"> Years </string>
-    <string name="month"> Months </string>
-    <string name="weeks"> Weeks </string>
-    <string name="days"> Days </string>
-    <string name="hours"> Hours </string>
-    <string name="minutes"> Minutes </string>
+    <string name="year"> سال </string>
+    <string name="month"> مہینے </string>
+    <string name="weeks"> ہفتے </string>
+    <string name="days"> دن </string>
+    <string name="hours"> گھنٹے </string>
+    <string name="minutes"> منٹ </string>
     <string name="kg"> Kilograms </string>
     <string name="km"> Kilometers </string>
     <string name="cm"> Centimeters </string>
@@ -62,13 +63,15 @@
     <string name="under5">Child Age 5 \- 10</string>
 
 
-    <string name="a101"> a101:\t انٹرویو کی تاریخ  </string>
-    <string name="a101dd"> دن</string>
+    <string name="a101"> کلسٹر نمبر </string>
+    <string name="a101a"> This information will be based on the list of villages generated from the district. Each enumerator will be given a list of clusters that he/she will be visiting, and before starting the interview, this information will be entered from the same list. </string>
+    <string name="a101dd"> دن </string>
     <string name="a101mm"> مہینہ</string>
     <string name="a101yy"> سال</string>
-    <string name="a102"> a102:\t انٹرویو کا وقت</string>
-    <string name="a102hh"> گھنٹہ</string>
-    <string name="a102mm"> منٹ</string>
+
+    <string name="a102"> a102:\t انٹرویو کا وقت </string>
+    <string name="a102hh"> گھنٹہ </string>
+    <string name="a102mm"> منٹ </string>
     <string name="a103a"> a103a:\t انٹرویو لینے والے کا نام</string>
     <string name="a103b"> a103b:\t انٹرویو لینے والے کا کوڈ</string>
     <string name="a104a"> a104a:\t ٹیم لیڈر کا نام</string>
@@ -86,7 +89,7 @@
     <string name="a113_title2"> زبانی اجازت    </string>
     <string name="a113a"> ہاں </string>
     <string name="a113b"> نہیں </string>
-    <string name="a113_title3"> a113_title3:\t  A119اگر زبانی اجازت نہ ملے تو انٹرویو کو روک دیں اور اس سیکشن کے آخر میں سوال نمبرکےنتائج ریکارڈ کریں </string>
+    <string name="a113hint"> A119اگر زبانی اجازت نہ ملے تو انٹرویو کو روک دیں اور اس سیکشن کے آخر میں سوال نمبر کے نتائج ریکارڈ کریں </string>
     <string name="a114"> a114:\t جواب دہندہ کانام</string>
     <string name="a115"> a115:\t جواب دہندہ کی عمر مکمل سالوں میں</string>
     <string name="a116"> a116:\t کیا آپ کے گھرانے میں 5 سے10 سال کی عمرکا کوئی بچہ ہے؟</string>

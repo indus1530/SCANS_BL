@@ -35,7 +35,8 @@
     <string name="yes"> Yes </string>
     <string name="no"> No </string>
     <string name="dkn"> Don\'t Know </string>
-    <string name="none"> None or Never </string>
+    <string name="none"> None </string>
+    <string name="never"> Never </string>
     <string name="na"> Not Applicable/Available  </string>
     <string name="ref"> Refused </string>
     <string name="other"> Other </string>
@@ -64,6 +65,9 @@
 
     <string name="a101"> Cluster number </string>
     <string name="a101a"> This information will be based on the list of villages generated from the district. Each enumerator will be given a list of clusters that he/she will be visiting, and before starting the interview, this information will be entered from the same list. </string>
+    <string name="a101dd"> Day </string>
+    <string name="a101mm"> Month </string>
+    <string name="a101yy"> Year </string>
 
     <string name="a102"> Cluster type </string>
     <string name="a102a"> LHW covered </string>
@@ -125,9 +129,6 @@
     <!--    <string name="c101bb"> No </string>-->
 
     <!--    <string name="a101"> a101:\t Date of interview: </string>-->
-    <string name="a101dd"> Day</string>
-    <string name="a101mm"> Month</string>
-    <string name="a101yy"> Year</string>
     <!--    <string name="a102"> a102:\t Time of interview: In 24 hours format</string>-->
     <string name="a102hh"> Hours</string>
     <string name="a102mm"> Minutes</string>
