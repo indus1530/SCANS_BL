@@ -328,7 +328,7 @@
 
                             <TextView
                                 style="@style/i_textview"
-                                android:text="New Head of Household Name"
+                                android:text="@string/name"
                                 android:textColor="@android:color/white" />
 
                             <EditText
