@@ -90,41 +90,57 @@
                         <CheckBox
                             android:id="@+id/b301b"
                             style="@style/checkbox"
+                            android:checked="@{b301a.checked ? false : false}"
+                            android:enabled="@{b301a.checked ? false : true}"
                             android:text="@string/b301b" />
 
                         <CheckBox
                             android:id="@+id/b301c"
                             style="@style/checkbox"
+                            android:checked="@{b301a.checked ? false : false}"
+                            android:enabled="@{b301a.checked ? false : true}"
                             android:text="@string/b301c" />
 
                         <CheckBox
                             android:id="@+id/b301d"
                             style="@style/checkbox"
+                            android:checked="@{b301a.checked ? false : false}"
+                            android:enabled="@{b301a.checked ? false : true}"
                             android:text="@string/b301d" />
 
                         <CheckBox
                             android:id="@+id/b301e"
                             style="@style/checkbox"
+                            android:checked="@{b301a.checked ? false : false}"
+                            android:enabled="@{b301a.checked ? false : true}"
                             android:text="@string/b301e" />
 
                         <CheckBox
                             android:id="@+id/b301f"
                             style="@style/checkbox"
+                            android:checked="@{b301a.checked ? false : false}"
+                            android:enabled="@{b301a.checked ? false : true}"
                             android:text="@string/b301f" />
 
                         <CheckBox
                             android:id="@+id/b301g"
                             style="@style/checkbox"
+                            android:checked="@{b301a.checked ? false : false}"
+                            android:enabled="@{b301a.checked ? false : true}"
                             android:text="@string/b301g" />
 
                         <CheckBox
                             android:id="@+id/b301h"
                             style="@style/checkbox"
+                            android:checked="@{b301a.checked ? false : false}"
+                            android:enabled="@{b301a.checked ? false : true}"
                             android:text="@string/b301h" />
 
                         <CheckBox
                             android:id="@+id/b30196"
                             style="@style/checkbox"
+                            android:checked="@{b301a.checked ? false : false}"
+                            android:enabled="@{b301a.checked ? false : true}"
                             android:text="@string/other" />
 
                         <EditText
@@ -170,41 +186,57 @@
                         <CheckBox
                             android:id="@+id/b302b"
                             style="@style/checkbox"
+                            android:checked="@{b302a.checked ? false : false}"
+                            android:enabled="@{b302a.checked ? false : true}"
                             android:text="@string/b302b" />
 
                         <CheckBox
                             android:id="@+id/b302c"
                             style="@style/checkbox"
+                            android:checked="@{b302a.checked ? false : false}"
+                            android:enabled="@{b302a.checked ? false : true}"
                             android:text="@string/b302c" />
 
                         <CheckBox
                             android:id="@+id/b302d"
                             style="@style/checkbox"
+                            android:checked="@{b302a.checked ? false : false}"
+                            android:enabled="@{b302a.checked ? false : true}"
                             android:text="@string/b302d" />
 
                         <CheckBox
                             android:id="@+id/b302e"
                             style="@style/checkbox"
+                            android:checked="@{b302a.checked ? false : false}"
+                            android:enabled="@{b302a.checked ? false : true}"
                             android:text="@string/b302e" />
 
                         <CheckBox
                             android:id="@+id/b302f"
                             style="@style/checkbox"
+                            android:checked="@{b302a.checked ? false : false}"
+                            android:enabled="@{b302a.checked ? false : true}"
                             android:text="@string/b302f" />
 
                         <CheckBox
                             android:id="@+id/b302g"
                             style="@style/checkbox"
+                            android:checked="@{b302a.checked ? false : false}"
+                            android:enabled="@{b302a.checked ? false : true}"
                             android:text="@string/b302g" />
 
                         <CheckBox
                             android:id="@+id/b302h"
                             style="@style/checkbox"
+                            android:checked="@{b302a.checked ? false : false}"
+                            android:enabled="@{b302a.checked ? false : true}"
                             android:text="@string/b302h" />
 
                         <CheckBox
                             android:id="@+id/b30296"
                             style="@style/checkbox"
+                            android:checked="@{b302a.checked ? false : false}"
+                            android:enabled="@{b302a.checked ? false : true}"
                             android:text="@string/other" />
 
                         <EditText
@@ -250,41 +282,57 @@
                         <CheckBox
                             android:id="@+id/b303b"
                             style="@style/checkbox"
+                            android:checked="@{b303a.checked ? false : false}"
+                            android:enabled="@{b303a.checked ? false : true}"
                             android:text="@string/b303b" />
 
                         <CheckBox
                             android:id="@+id/b303c"
                             style="@style/checkbox"
+                            android:checked="@{b303a.checked ? false : false}"
+                            android:enabled="@{b303a.checked ? false : true}"
                             android:text="@string/b303c" />
 
                         <CheckBox
                             android:id="@+id/b303d"
                             style="@style/checkbox"
+                            android:checked="@{b303a.checked ? false : false}"
+                            android:enabled="@{b303a.checked ? false : true}"
                             android:text="@string/b303d" />
 
                         <CheckBox
                             android:id="@+id/b303e"
                             style="@style/checkbox"
+                            android:checked="@{b303a.checked ? false : false}"
+                            android:enabled="@{b303a.checked ? false : true}"
                             android:text="@string/b303e" />
 
                         <CheckBox
                             android:id="@+id/b303f"
                             style="@style/checkbox"
+                            android:checked="@{b303a.checked ? false : false}"
+                            android:enabled="@{b303a.checked ? false : true}"
                             android:text="@string/b303f" />
 
                         <CheckBox
                             android:id="@+id/b303g"
                             style="@style/checkbox"
+                            android:checked="@{b303a.checked ? false : false}"
+                            android:enabled="@{b303a.checked ? false : true}"
                             android:text="@string/b303g" />
 
                         <CheckBox
                             android:id="@+id/b303h"
                             style="@style/checkbox"
+                            android:checked="@{b303a.checked ? false : false}"
+                            android:enabled="@{b303a.checked ? false : true}"
                             android:text="@string/b303h" />
 
                         <CheckBox
                             android:id="@+id/b30396"
                             style="@style/checkbox"
+                            android:checked="@{b303a.checked ? false : false}"
+                            android:enabled="@{b303a.checked ? false : true}"
                             android:text="@string/other" />
 
                         <EditText
@@ -330,41 +378,57 @@
                         <CheckBox
                             android:id="@+id/b304b"
                             style="@style/checkbox"
+                            android:checked="@{b304a.checked ? false : false}"
+                            android:enabled="@{b304a.checked ? false : true}"
                             android:text="@string/b304b" />
 
                         <CheckBox
                             android:id="@+id/b304c"
                             style="@style/checkbox"
+                            android:checked="@{b304a.checked ? false : false}"
+                            android:enabled="@{b304a.checked ? false : true}"
                             android:text="@string/b304c" />
 
                         <CheckBox
                             android:id="@+id/b304d"
                             style="@style/checkbox"
+                            android:checked="@{b304a.checked ? false : false}"
+                            android:enabled="@{b304a.checked ? false : true}"
                             android:text="@string/b304d" />
 
                         <CheckBox
                             android:id="@+id/b304e"
                             style="@style/checkbox"
+                            android:checked="@{b304a.checked ? false : false}"
+                            android:enabled="@{b304a.checked ? false : true}"
                             android:text="@string/b304e" />
 
                         <CheckBox
                             android:id="@+id/b304f"
                             style="@style/checkbox"
+                            android:checked="@{b304a.checked ? false : false}"
+                            android:enabled="@{b304a.checked ? false : true}"
                             android:text="@string/b304f" />
 
                         <CheckBox
                             android:id="@+id/b304g"
                             style="@style/checkbox"
+                            android:checked="@{b304a.checked ? false : false}"
+                            android:enabled="@{b304a.checked ? false : true}"
                             android:text="@string/b304g" />
 
                         <CheckBox
                             android:id="@+id/b304h"
                             style="@style/checkbox"
+                            android:checked="@{b304a.checked ? false : false}"
+                            android:enabled="@{b304a.checked ? false : true}"
                             android:text="@string/b304h" />
 
                         <CheckBox
                             android:id="@+id/b30496"
                             style="@style/checkbox"
+                            android:checked="@{b304a.checked ? false : false}"
+                            android:enabled="@{b304a.checked ? false : true}"
                             android:text="@string/other" />
 
                         <EditText
@@ -410,41 +474,57 @@
                         <CheckBox
                             android:id="@+id/b305b"
                             style="@style/checkbox"
+                            android:checked="@{b305a.checked ? false : false}"
+                            android:enabled="@{b305a.checked ? false : true}"
                             android:text="@string/b305b" />
 
                         <CheckBox
                             android:id="@+id/b305c"
                             style="@style/checkbox"
+                            android:checked="@{b305a.checked ? false : false}"
+                            android:enabled="@{b305a.checked ? false : true}"
                             android:text="@string/b305c" />
 
                         <CheckBox
                             android:id="@+id/b305d"
                             style="@style/checkbox"
+                            android:checked="@{b305a.checked ? false : false}"
+                            android:enabled="@{b305a.checked ? false : true}"
                             android:text="@string/b305d" />
 
                         <CheckBox
                             android:id="@+id/b305e"
                             style="@style/checkbox"
+                            android:checked="@{b305a.checked ? false : false}"
+                            android:enabled="@{b305a.checked ? false : true}"
                             android:text="@string/b305e" />
 
                         <CheckBox
                             android:id="@+id/b305f"
                             style="@style/checkbox"
+                            android:checked="@{b305a.checked ? false : false}"
+                            android:enabled="@{b305a.checked ? false : true}"
                             android:text="@string/b305f" />
 
                         <CheckBox
                             android:id="@+id/b305g"
                             style="@style/checkbox"
+                            android:checked="@{b305a.checked ? false : false}"
+                            android:enabled="@{b305a.checked ? false : true}"
                             android:text="@string/b305g" />
 
                         <CheckBox
                             android:id="@+id/b305h"
                             style="@style/checkbox"
+                            android:checked="@{b305a.checked ? false : false}"
+                            android:enabled="@{b305a.checked ? false : true}"
                             android:text="@string/b305h" />
 
                         <CheckBox
                             android:id="@+id/b30596"
                             style="@style/checkbox"
+                            android:checked="@{b305a.checked ? false : false}"
+                            android:enabled="@{b305a.checked ? false : true}"
                             android:text="@string/other" />
 
                         <EditText
@@ -490,41 +570,57 @@
                         <CheckBox
                             android:id="@+id/b306b"
                             style="@style/checkbox"
+                            android:checked="@{b306a.checked ? false : false}"
+                            android:enabled="@{b306a.checked ? false : true}"
                             android:text="@string/b306b" />
 
                         <CheckBox
                             android:id="@+id/b306c"
                             style="@style/checkbox"
+                            android:checked="@{b306a.checked ? false : false}"
+                            android:enabled="@{b306a.checked ? false : true}"
                             android:text="@string/b306c" />
 
                         <CheckBox
                             android:id="@+id/b306d"
                             style="@style/checkbox"
+                            android:checked="@{b306a.checked ? false : false}"
+                            android:enabled="@{b306a.checked ? false : true}"
                             android:text="@string/b306d" />
 
                         <CheckBox
                             android:id="@+id/b306e"
                             style="@style/checkbox"
+                            android:checked="@{b306a.checked ? false : false}"
+                            android:enabled="@{b306a.checked ? false : true}"
                             android:text="@string/b306e" />
 
                         <CheckBox
                             android:id="@+id/b306f"
                             style="@style/checkbox"
+                            android:checked="@{b306a.checked ? false : false}"
+                            android:enabled="@{b306a.checked ? false : true}"
                             android:text="@string/b306f" />
 
                         <CheckBox
                             android:id="@+id/b306g"
                             style="@style/checkbox"
+                            android:checked="@{b306a.checked ? false : false}"
+                            android:enabled="@{b306a.checked ? false : true}"
                             android:text="@string/b306g" />
 
                         <CheckBox
                             android:id="@+id/b306h"
                             style="@style/checkbox"
+                            android:checked="@{b306a.checked ? false : false}"
+                            android:enabled="@{b306a.checked ? false : true}"
                             android:text="@string/b306h" />
 
                         <CheckBox
                             android:id="@+id/b30696"
                             style="@style/checkbox"
+                            android:checked="@{b306a.checked ? false : false}"
+                            android:enabled="@{b306a.checked ? false : true}"
                             android:text="@string/other" />
 
                         <EditText
@@ -570,41 +666,57 @@
                         <CheckBox
                             android:id="@+id/b307b"
                             style="@style/checkbox"
+                            android:checked="@{b307a.checked ? false : false}"
+                            android:enabled="@{b307a.checked ? false : true}"
                             android:text="@string/b307b" />
 
                         <CheckBox
                             android:id="@+id/b307c"
                             style="@style/checkbox"
+                            android:checked="@{b307a.checked ? false : false}"
+                            android:enabled="@{b307a.checked ? false : true}"
                             android:text="@string/b307c" />
 
                         <CheckBox
                             android:id="@+id/b307d"
                             style="@style/checkbox"
+                            android:checked="@{b307a.checked ? false : false}"
+                            android:enabled="@{b307a.checked ? false : true}"
                             android:text="@string/b307d" />
 
                         <CheckBox
                             android:id="@+id/b307e"
                             style="@style/checkbox"
+                            android:checked="@{b307a.checked ? false : false}"
+                            android:enabled="@{b307a.checked ? false : true}"
                             android:text="@string/b307e" />
 
                         <CheckBox
                             android:id="@+id/b307f"
                             style="@style/checkbox"
+                            android:checked="@{b307a.checked ? false : false}"
+                            android:enabled="@{b307a.checked ? false : true}"
                             android:text="@string/b307f" />
 
                         <CheckBox
                             android:id="@+id/b307g"
                             style="@style/checkbox"
+                            android:checked="@{b307a.checked ? false : false}"
+                            android:enabled="@{b307a.checked ? false : true}"
                             android:text="@string/b307g" />
 
                         <CheckBox
                             android:id="@+id/b307h"
                             style="@style/checkbox"
+                            android:checked="@{b307a.checked ? false : false}"
+                            android:enabled="@{b307a.checked ? false : true}"
                             android:text="@string/b307h" />
 
                         <CheckBox
                             android:id="@+id/b30796"
                             style="@style/checkbox"
+                            android:checked="@{b307a.checked ? false : false}"
+                            android:enabled="@{b307a.checked ? false : true}"
                             android:text="@string/other" />
 
                         <EditText
@@ -650,41 +762,57 @@
                         <CheckBox
                             android:id="@+id/b308b"
                             style="@style/checkbox"
+                            android:checked="@{b308a.checked ? false : false}"
+                            android:enabled="@{b308a.checked ? false : true}"
                             android:text="@string/b308b" />
 
                         <CheckBox
                             android:id="@+id/b308c"
                             style="@style/checkbox"
+                            android:checked="@{b308a.checked ? false : false}"
+                            android:enabled="@{b308a.checked ? false : true}"
                             android:text="@string/b308c" />
 
                         <CheckBox
                             android:id="@+id/b308d"
                             style="@style/checkbox"
+                            android:checked="@{b308a.checked ? false : false}"
+                            android:enabled="@{b308a.checked ? false : true}"
                             android:text="@string/b308d" />
 
                         <CheckBox
                             android:id="@+id/b308e"
                             style="@style/checkbox"
+                            android:checked="@{b308a.checked ? false : false}"
+                            android:enabled="@{b308a.checked ? false : true}"
                             android:text="@string/b308e" />
 
                         <CheckBox
                             android:id="@+id/b308f"
                             style="@style/checkbox"
+                            android:checked="@{b308a.checked ? false : false}"
+                            android:enabled="@{b308a.checked ? false : true}"
                             android:text="@string/b308f" />
 
                         <CheckBox
                             android:id="@+id/b308g"
                             style="@style/checkbox"
+                            android:checked="@{b308a.checked ? false : false}"
+                            android:enabled="@{b308a.checked ? false : true}"
                             android:text="@string/b308g" />
 
                         <CheckBox
                             android:id="@+id/b308h"
                             style="@style/checkbox"
+                            android:checked="@{b308a.checked ? false : false}"
+                            android:enabled="@{b308a.checked ? false : true}"
                             android:text="@string/b308h" />
 
                         <CheckBox
                             android:id="@+id/b30896"
                             style="@style/checkbox"
+                            android:checked="@{b308a.checked ? false : false}"
+                            android:enabled="@{b308a.checked ? false : true}"
                             android:text="@string/other" />
 
                         <EditText
@@ -730,41 +858,57 @@
                         <CheckBox
                             android:id="@+id/b309b"
                             style="@style/checkbox"
+                            android:checked="@{b309a.checked ? false : false}"
+                            android:enabled="@{b309a.checked ? false : true}"
                             android:text="@string/b309b" />
 
                         <CheckBox
                             android:id="@+id/b309c"
                             style="@style/checkbox"
+                            android:checked="@{b309a.checked ? false : false}"
+                            android:enabled="@{b309a.checked ? false : true}"
                             android:text="@string/b309c" />
 
                         <CheckBox
                             android:id="@+id/b309d"
                             style="@style/checkbox"
+                            android:checked="@{b309a.checked ? false : false}"
+                            android:enabled="@{b309a.checked ? false : true}"
                             android:text="@string/b309d" />
 
                         <CheckBox
                             android:id="@+id/b309e"
                             style="@style/checkbox"
+                            android:checked="@{b309a.checked ? false : false}"
+                            android:enabled="@{b309a.checked ? false : true}"
                             android:text="@string/b309e" />
 
                         <CheckBox
                             android:id="@+id/b309f"
                             style="@style/checkbox"
+                            android:checked="@{b309a.checked ? false : false}"
+                            android:enabled="@{b309a.checked ? false : true}"
                             android:text="@string/b309f" />
 
                         <CheckBox
                             android:id="@+id/b309g"
                             style="@style/checkbox"
+                            android:checked="@{b309a.checked ? false : false}"
+                            android:enabled="@{b309a.checked ? false : true}"
                             android:text="@string/b309g" />
 
                         <CheckBox
                             android:id="@+id/b309h"
                             style="@style/checkbox"
+                            android:checked="@{b309a.checked ? false : false}"
+                            android:enabled="@{b309a.checked ? false : true}"
                             android:text="@string/b309h" />
 
                         <CheckBox
                             android:id="@+id/b30996"
                             style="@style/checkbox"
+                            android:checked="@{b309a.checked ? false : false}"
+                            android:enabled="@{b309a.checked ? false : true}"
                             android:text="@string/other" />
 
                         <EditText
@@ -810,41 +954,57 @@
                         <CheckBox
                             android:id="@+id/b310b"
                             style="@style/checkbox"
+                            android:checked="@{b310a.checked ? false : false}"
+                            android:enabled="@{b310a.checked ? false : true}"
                             android:text="@string/b310b" />
 
                         <CheckBox
                             android:id="@+id/b310c"
                             style="@style/checkbox"
+                            android:checked="@{b310a.checked ? false : false}"
+                            android:enabled="@{b310a.checked ? false : true}"
                             android:text="@string/b310c" />
 
                         <CheckBox
                             android:id="@+id/b310d"
                             style="@style/checkbox"
+                            android:checked="@{b310a.checked ? false : false}"
+                            android:enabled="@{b310a.checked ? false : true}"
                             android:text="@string/b310d" />
 
                         <CheckBox
                             android:id="@+id/b310e"
                             style="@style/checkbox"
+                            android:checked="@{b310a.checked ? false : false}"
+                            android:enabled="@{b310a.checked ? false : true}"
                             android:text="@string/b310e" />
 
                         <CheckBox
                             android:id="@+id/b310f"
                             style="@style/checkbox"
+                            android:checked="@{b310a.checked ? false : false}"
+                            android:enabled="@{b310a.checked ? false : true}"
                             android:text="@string/b310f" />
 
                         <CheckBox
                             android:id="@+id/b310g"
                             style="@style/checkbox"
+                            android:checked="@{b310a.checked ? false : false}"
+                            android:enabled="@{b310a.checked ? false : true}"
                             android:text="@string/b310g" />
 
                         <CheckBox
                             android:id="@+id/b310h"
                             style="@style/checkbox"
+                            android:checked="@{b310a.checked ? false : false}"
+                            android:enabled="@{b310a.checked ? false : true}"
                             android:text="@string/b310h" />
 
                         <CheckBox
                             android:id="@+id/b31096"
                             style="@style/checkbox"
+                            android:checked="@{b310a.checked ? false : false}"
+                            android:enabled="@{b310a.checked ? false : true}"
                             android:text="@string/other" />
 
                         <EditText
@@ -890,41 +1050,57 @@
                         <CheckBox
                             android:id="@+id/b311b"
                             style="@style/checkbox"
+                            android:checked="@{b311a.checked ? false : false}"
+                            android:enabled="@{b311a.checked ? false : true}"
                             android:text="@string/b311b" />
 
                         <CheckBox
                             android:id="@+id/b311c"
                             style="@style/checkbox"
+                            android:checked="@{b311a.checked ? false : false}"
+                            android:enabled="@{b311a.checked ? false : true}"
                             android:text="@string/b311c" />
 
                         <CheckBox
                             android:id="@+id/b311d"
                             style="@style/checkbox"
+                            android:checked="@{b311a.checked ? false : false}"
+                            android:enabled="@{b311a.checked ? false : true}"
                             android:text="@string/b311d" />
 
                         <CheckBox
                             android:id="@+id/b311e"
                             style="@style/checkbox"
+                            android:checked="@{b311a.checked ? false : false}"
+                            android:enabled="@{b311a.checked ? false : true}"
                             android:text="@string/b311e" />
 
                         <CheckBox
                             android:id="@+id/b311f"
                             style="@style/checkbox"
+                            android:checked="@{b311a.checked ? false : false}"
+                            android:enabled="@{b311a.checked ? false : true}"
                             android:text="@string/b311f" />
 
                         <CheckBox
                             android:id="@+id/b311g"
                             style="@style/checkbox"
+                            android:checked="@{b311a.checked ? false : false}"
+                            android:enabled="@{b311a.checked ? false : true}"
                             android:text="@string/b311g" />
 
                         <CheckBox
                             android:id="@+id/b311h"
                             style="@style/checkbox"
+                            android:checked="@{b311a.checked ? false : false}"
+                            android:enabled="@{b311a.checked ? false : true}"
                             android:text="@string/b311h" />
 
                         <CheckBox
                             android:id="@+id/b31196"
                             style="@style/checkbox"
+                            android:checked="@{b311a.checked ? false : false}"
+                            android:enabled="@{b311a.checked ? false : true}"
                             android:text="@string/other" />
 
                         <EditText
@@ -970,41 +1146,57 @@
                         <CheckBox
                             android:id="@+id/b312b"
                             style="@style/checkbox"
+                            android:checked="@{b312a.checked ? false : false}"
+                            android:enabled="@{b312a.checked ? false : true}"
                             android:text="@string/b312b" />
 
                         <CheckBox
                             android:id="@+id/b312c"
                             style="@style/checkbox"
+                            android:checked="@{b312a.checked ? false : false}"
+                            android:enabled="@{b312a.checked ? false : true}"
                             android:text="@string/b312c" />
 
                         <CheckBox
                             android:id="@+id/b312d"
                             style="@style/checkbox"
+                            android:checked="@{b312a.checked ? false : false}"
+                            android:enabled="@{b312a.checked ? false : true}"
                             android:text="@string/b312d" />
 
                         <CheckBox
                             android:id="@+id/b312e"
                             style="@style/checkbox"
+                            android:checked="@{b312a.checked ? false : false}"
+                            android:enabled="@{b312a.checked ? false : true}"
                             android:text="@string/b312e" />
 
                         <CheckBox
                             android:id="@+id/b312f"
                             style="@style/checkbox"
+                            android:checked="@{b312a.checked ? false : false}"
+                            android:enabled="@{b312a.checked ? false : true}"
                             android:text="@string/b312f" />
 
                         <CheckBox
                             android:id="@+id/b312g"
                             style="@style/checkbox"
+                            android:checked="@{b312a.checked ? false : false}"
+                            android:enabled="@{b312a.checked ? false : true}"
                             android:text="@string/b312g" />
 
                         <CheckBox
                             android:id="@+id/b312h"
                             style="@style/checkbox"
+                            android:checked="@{b312a.checked ? false : false}"
+                            android:enabled="@{b312a.checked ? false : true}"
                             android:text="@string/b312h" />
 
                         <CheckBox
                             android:id="@+id/b31296"
                             style="@style/checkbox"
+                            android:checked="@{b312a.checked ? false : false}"
+                            android:enabled="@{b312a.checked ? false : true}"
                             android:text="@string/other" />
 
                         <EditText
@@ -1050,41 +1242,57 @@
                         <CheckBox
                             android:id="@+id/b313b"
                             style="@style/checkbox"
+                            android:checked="@{b313a.checked ? false : false}"
+                            android:enabled="@{b313a.checked ? false : true}"
                             android:text="@string/b313b" />
 
                         <CheckBox
                             android:id="@+id/b313c"
                             style="@style/checkbox"
+                            android:checked="@{b313a.checked ? false : false}"
+                            android:enabled="@{b313a.checked ? false : true}"
                             android:text="@string/b313c" />
 
                         <CheckBox
                             android:id="@+id/b313d"
                             style="@style/checkbox"
+                            android:checked="@{b313a.checked ? false : false}"
+                            android:enabled="@{b313a.checked ? false : true}"
                             android:text="@string/b313d" />
 
                         <CheckBox
                             android:id="@+id/b313e"
                             style="@style/checkbox"
+                            android:checked="@{b313a.checked ? false : false}"
+                            android:enabled="@{b313a.checked ? false : true}"
                             android:text="@string/b313e" />
 
                         <CheckBox
                             android:id="@+id/b313f"
                             style="@style/checkbox"
+                            android:checked="@{b313a.checked ? false : false}"
+                            android:enabled="@{b313a.checked ? false : true}"
                             android:text="@string/b313f" />
 
                         <CheckBox
                             android:id="@+id/b313g"
                             style="@style/checkbox"
+                            android:checked="@{b313a.checked ? false : false}"
+                            android:enabled="@{b313a.checked ? false : true}"
                             android:text="@string/b313g" />
 
                         <CheckBox
                             android:id="@+id/b313h"
                             style="@style/checkbox"
+                            android:checked="@{b313a.checked ? false : false}"
+                            android:enabled="@{b313a.checked ? false : true}"
                             android:text="@string/b313h" />
 
                         <CheckBox
                             android:id="@+id/b31396"
                             style="@style/checkbox"
+                            android:checked="@{b313a.checked ? false : false}"
+                            android:enabled="@{b313a.checked ? false : true}"
                             android:text="@string/other" />
 
                         <EditText
@@ -1130,41 +1338,57 @@
                         <CheckBox
                             android:id="@+id/b314b"
                             style="@style/checkbox"
+                            android:checked="@{b314a.checked ? false : false}"
+                            android:enabled="@{b314a.checked ? false : true}"
                             android:text="@string/b314b" />
 
                         <CheckBox
                             android:id="@+id/b314c"
                             style="@style/checkbox"
+                            android:checked="@{b314a.checked ? false : false}"
+                            android:enabled="@{b314a.checked ? false : true}"
                             android:text="@string/b314c" />
 
                         <CheckBox
                             android:id="@+id/b314d"
                             style="@style/checkbox"
+                            android:checked="@{b314a.checked ? false : false}"
+                            android:enabled="@{b314a.checked ? false : true}"
                             android:text="@string/b314d" />
 
                         <CheckBox
                             android:id="@+id/b314e"
                             style="@style/checkbox"
+                            android:checked="@{b314a.checked ? false : false}"
+                            android:enabled="@{b314a.checked ? false : true}"
                             android:text="@string/b314e" />
 
                         <CheckBox
                             android:id="@+id/b314f"
                             style="@style/checkbox"
+                            android:checked="@{b314a.checked ? false : false}"
+                            android:enabled="@{b314a.checked ? false : true}"
                             android:text="@string/b314f" />
 
                         <CheckBox
                             android:id="@+id/b314g"
                             style="@style/checkbox"
+                            android:checked="@{b314a.checked ? false : false}"
+                            android:enabled="@{b314a.checked ? false : true}"
                             android:text="@string/b314g" />
 
                         <CheckBox
                             android:id="@+id/b314h"
                             style="@style/checkbox"
+                            android:checked="@{b314a.checked ? false : false}"
+                            android:enabled="@{b314a.checked ? false : true}"
                             android:text="@string/b314h" />
 
                         <CheckBox
                             android:id="@+id/b31496"
                             style="@style/checkbox"
+                            android:checked="@{b314a.checked ? false : false}"
+                            android:enabled="@{b314a.checked ? false : true}"
                             android:text="@string/other" />
 
                         <EditText
