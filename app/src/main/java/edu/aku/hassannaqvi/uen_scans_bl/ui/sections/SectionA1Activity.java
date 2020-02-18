@@ -10,6 +10,7 @@ import android.widget.Toast;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.databinding.DataBindingUtil;
 
+import com.validatorcrawler.aliazaz.Clear;
 import com.validatorcrawler.aliazaz.Validator;
 
 import org.json.JSONException;
@@ -29,7 +30,6 @@ import edu.aku.hassannaqvi.uen_scans_bl.databinding.ActivitySectionA1Binding;
 import edu.aku.hassannaqvi.uen_scans_bl.ui.list_activity.FamilyMembersListActivity;
 import edu.aku.hassannaqvi.uen_scans_bl.ui.other.EndingActivity;
 import edu.aku.hassannaqvi.uen_scans_bl.utils.Util;
-import edu.aku.hassannaqvi.uen_scans_bl.validator.ClearClass;
 
 public class SectionA1Activity extends AppCompatActivity implements Util.EndSecAActivity {
 
@@ -59,8 +59,8 @@ public class SectionA1Activity extends AppCompatActivity implements Util.EndSecA
             @Override
             public void onTextChanged(CharSequence s, int start, int before, int count) {
                 if (bi.a101.getText().hashCode() == s.hashCode()) {
-                    ClearClass.ClearAllFields(bi.fldGrpSectionA01, null);
-                    ClearClass.ClearAllFields(bi.fldGrpSectionA02, null);
+                    Clear.clearAllFields(bi.fldGrpSectionA01);
+                    Clear.clearAllFields(bi.fldGrpSectionA02);
                     bi.fldGrpSectionA01.setVisibility(View.GONE);
                     bi.fldGrpSectionA02.setVisibility(View.GONE);
                     bi.btnNext.setVisibility(View.GONE);
@@ -84,7 +84,7 @@ public class SectionA1Activity extends AppCompatActivity implements Util.EndSecA
             @Override
             public void onTextChanged(CharSequence s, int start, int before, int count) {
                 if (Objects.requireNonNull(bi.a112.getText()).hashCode() == s.hashCode()) {
-                    ClearClass.ClearAllFields(bi.fldGrpSectionA02, null);
+                    Clear.clearAllFields(bi.fldGrpSectionA02);
                     bi.fldGrpSectionA02.setVisibility(View.GONE);
                     bi.btnNext.setVisibility(View.GONE);
                     bi.btnEnd.setVisibility(View.GONE);
@@ -108,11 +108,11 @@ public class SectionA1Activity extends AppCompatActivity implements Util.EndSecA
                 bi.btnNext.setVisibility(View.VISIBLE);
                 bi.btnEnd.setVisibility(View.GONE);
             } else if (i == bi.a113b.getId()) {
-                ClearClass.ClearAllFields(bi.fldGrpCVa114, null);
-                ClearClass.ClearAllFields(bi.fldGrpCVa115, null);
-                ClearClass.ClearAllFields(bi.fldGrpCVa116, null);
-                ClearClass.ClearAllFields(bi.fldGrpCVa117, null);
-                ClearClass.ClearAllFields(bi.fldGrpCVa118, null);
+                Clear.clearAllFields(bi.fldGrpCVa114);
+                Clear.clearAllFields(bi.fldGrpCVa115);
+                Clear.clearAllFields(bi.fldGrpCVa116);
+                Clear.clearAllFields(bi.fldGrpCVa117);
+                Clear.clearAllFields(bi.fldGrpCVa118);
                 bi.fldGrpCVa114.setVisibility(View.GONE);
                 bi.fldGrpCVa115.setVisibility(View.GONE);
                 bi.fldGrpCVa116.setVisibility(View.GONE);
@@ -141,9 +141,9 @@ public class SectionA1Activity extends AppCompatActivity implements Util.EndSecA
                         bi.btnNext.setVisibility(View.VISIBLE);
                         bi.btnEnd.setVisibility(View.GONE);
                     } else {
-                        ClearClass.ClearAllFields(bi.fldGrpCVa116, null);
-                        ClearClass.ClearAllFields(bi.fldGrpCVa117, null);
-                        ClearClass.ClearAllFields(bi.fldGrpCVa118, null);
+                        Clear.clearAllFields(bi.fldGrpCVa116);
+                        Clear.clearAllFields(bi.fldGrpCVa117);
+                        Clear.clearAllFields(bi.fldGrpCVa118);
                         bi.fldGrpCVa116.setVisibility(View.GONE);
                         bi.fldGrpCVa117.setVisibility(View.GONE);
                         bi.fldGrpCVa118.setVisibility(View.GONE);
@@ -167,8 +167,8 @@ public class SectionA1Activity extends AppCompatActivity implements Util.EndSecA
                 bi.btnNext.setVisibility(View.VISIBLE);
                 bi.btnEnd.setVisibility(View.GONE);
             } else {
-                ClearClass.ClearAllFields(bi.fldGrpCVa117, null);
-                ClearClass.ClearAllFields(bi.fldGrpCVa118, null);
+                Clear.clearAllFields(bi.fldGrpCVa117);
+                Clear.clearAllFields(bi.fldGrpCVa118);
                 bi.fldGrpCVa117.setVisibility(View.GONE);
                 bi.fldGrpCVa118.setVisibility(View.GONE);
                 bi.btnNext.setVisibility(View.GONE);
@@ -185,7 +185,7 @@ public class SectionA1Activity extends AppCompatActivity implements Util.EndSecA
                 bi.btnNext.setVisibility(View.VISIBLE);
                 bi.btnEnd.setVisibility(View.GONE);
             } else {
-                ClearClass.ClearAllFields(bi.fldGrpCVa118, null);
+                Clear.clearAllFields(bi.fldGrpCVa118);
                 bi.fldGrpCVa118.setVisibility(View.GONE);
                 bi.btnNext.setVisibility(View.GONE);
                 bi.btnEnd.setVisibility(View.VISIBLE);

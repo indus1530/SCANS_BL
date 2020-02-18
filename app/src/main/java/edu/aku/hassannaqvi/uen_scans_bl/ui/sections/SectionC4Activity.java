@@ -7,6 +7,7 @@ import android.widget.Toast;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.databinding.DataBindingUtil;
 
+import com.validatorcrawler.aliazaz.Clear;
 import com.validatorcrawler.aliazaz.Validator;
 
 import org.json.JSONException;
@@ -18,7 +19,6 @@ import edu.aku.hassannaqvi.uen_scans_bl.core.DatabaseHelper;
 import edu.aku.hassannaqvi.uen_scans_bl.core.MainApp;
 import edu.aku.hassannaqvi.uen_scans_bl.databinding.ActivitySectionC4Binding;
 import edu.aku.hassannaqvi.uen_scans_bl.utils.Util;
-import edu.aku.hassannaqvi.uen_scans_bl.validator.ClearClass;
 
 public class SectionC4Activity extends AppCompatActivity {
 
@@ -40,20 +40,20 @@ public class SectionC4Activity extends AppCompatActivity {
         bi.c401.setOnCheckedChangeListener(((radioGroup, i) -> {
 
             if (i == bi.c401a.getId()) {
-                ClearClass.ClearAllFields(bi.fldGrpCVc402, null);
+                Clear.clearAllFields(bi.fldGrpCVc402);
             } else if (i == bi.c401b.getId()) {
-                ClearClass.ClearAllFields(bi.fldGrpCVc403, null);
-                ClearClass.ClearAllFields(bi.fldGrpCVc404, null);
-                ClearClass.ClearAllFields(bi.fldGrpCVC401, null);
-                ClearClass.ClearAllFields(bi.fldGrpCVc407, null);
-                ClearClass.ClearAllFields(bi.fldGrpCVc408, null);
-                ClearClass.ClearAllFields(bi.fldGrpCVc409, null);
-                ClearClass.ClearAllFields(bi.fldGrpCVc410, null);
-                ClearClass.ClearAllFields(bi.fldGrpCVc411, null);
-                ClearClass.ClearAllFields(bi.fldGrpCVc412, null);
-                ClearClass.ClearAllFields(bi.fldGrpCVc413, null);
-                ClearClass.ClearAllFields(bi.fldGrpCVc414, null);
-                ClearClass.ClearAllFields(bi.fldGrpCVc415, null);
+                Clear.clearAllFields(bi.fldGrpCVc403);
+                Clear.clearAllFields(bi.fldGrpCVc404);
+                Clear.clearAllFields(bi.fldGrpCVC401);
+                Clear.clearAllFields(bi.fldGrpCVc407);
+                Clear.clearAllFields(bi.fldGrpCVc408);
+                Clear.clearAllFields(bi.fldGrpCVc409);
+                Clear.clearAllFields(bi.fldGrpCVc410);
+                Clear.clearAllFields(bi.fldGrpCVc411);
+                Clear.clearAllFields(bi.fldGrpCVc412);
+                Clear.clearAllFields(bi.fldGrpCVc413);
+                Clear.clearAllFields(bi.fldGrpCVc414);
+                Clear.clearAllFields(bi.fldGrpCVc415);
 
             }
 
@@ -62,10 +62,10 @@ public class SectionC4Activity extends AppCompatActivity {
         //c402h
         bi.c402h.setOnCheckedChangeListener((compoundButton, b) -> {
             if (b) {
-                ClearClass.ClearAllFields(bi.c402check, false);
+                Clear.clearAllFields(bi.c402check, false);
                 bi.c402check.setTag("-1");
             } else {
-                ClearClass.ClearAllFields(bi.c402check, true);
+                Clear.clearAllFields(bi.c402check, true);
                 bi.c402check.setTag("0");
             }
         });
@@ -73,7 +73,7 @@ public class SectionC4Activity extends AppCompatActivity {
         bi.c404.setOnCheckedChangeListener(((radioGroup, i) -> {
 
             if (i == bi.c404a.getId()) {
-                ClearClass.ClearAllFields(bi.fldGrpCVC401, null);
+                Clear.clearAllFields(bi.fldGrpCVC401);
             }
 
         }));
@@ -81,7 +81,7 @@ public class SectionC4Activity extends AppCompatActivity {
         bi.c408.setOnCheckedChangeListener(((radioGroup, i) -> {
 
             if (i == bi.c408b.getId()) {
-                ClearClass.ClearAllFields(bi.fldGrpCVc409, null);
+                Clear.clearAllFields(bi.fldGrpCVc409);
             }
 
         }));

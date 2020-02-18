@@ -10,6 +10,7 @@ import android.widget.Toast;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.databinding.DataBindingUtil;
 
+import com.validatorcrawler.aliazaz.Clear;
 import com.validatorcrawler.aliazaz.Validator;
 
 import org.json.JSONException;
@@ -29,7 +30,6 @@ import edu.aku.hassannaqvi.uen_scans_bl.core.MainApp;
 import edu.aku.hassannaqvi.uen_scans_bl.databinding.ActivitySectionK1Binding;
 import edu.aku.hassannaqvi.uen_scans_bl.ui.other.AnthroEndingActivity;
 import edu.aku.hassannaqvi.uen_scans_bl.utils.Util;
-import edu.aku.hassannaqvi.uen_scans_bl.validator.ClearClass;
 
 import static edu.aku.hassannaqvi.uen_scans_bl.core.MainApp.anthro;
 import static edu.aku.hassannaqvi.uen_scans_bl.core.MainApp.mwraChildren;
@@ -57,7 +57,7 @@ public class SectionK1Activity extends AppCompatActivity implements Util.EndSecA
         bi.k103.setOnCheckedChangeListener(((radioGroup, i) -> {
 
             if (i == bi.k103b.getId()) {
-                ClearClass.ClearAllFields(bi.fldGrpCVk104, null);
+                Clear.clearAllFields(bi.fldGrpCVk104);
             }
 
         }));

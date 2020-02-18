@@ -7,6 +7,7 @@ import android.widget.Toast;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.databinding.DataBindingUtil;
 
+import com.validatorcrawler.aliazaz.Clear;
 import com.validatorcrawler.aliazaz.Validator;
 
 import org.json.JSONException;
@@ -21,7 +22,6 @@ import edu.aku.hassannaqvi.uen_scans_bl.core.DatabaseHelper;
 import edu.aku.hassannaqvi.uen_scans_bl.core.MainApp;
 import edu.aku.hassannaqvi.uen_scans_bl.databinding.ActivitySectionB1Binding;
 import edu.aku.hassannaqvi.uen_scans_bl.utils.Util;
-import edu.aku.hassannaqvi.uen_scans_bl.validator.ClearClass;
 
 public class SectionB1Activity extends AppCompatActivity {
 
@@ -46,7 +46,7 @@ public class SectionB1Activity extends AppCompatActivity {
         bi.b101.setOnCheckedChangeListener(((radioGroup, i) -> {
 
             if (i != bi.b101a.getId()) {
-                ClearClass.ClearAllFields(bi.fldGrpCVb102, null);
+                Clear.clearAllFields(bi.fldGrpCVb102);
             }
 
         }));
@@ -54,56 +54,56 @@ public class SectionB1Activity extends AppCompatActivity {
         bi.b103.setOnCheckedChangeListener(((radioGroup, i) -> {
 
             if (i != bi.b103a.getId()) {
-                ClearClass.ClearAllFields(bi.fldGrpCVb104, null);
+                Clear.clearAllFields(bi.fldGrpCVb104);
             }
         }));
 
         bi.b105.setOnCheckedChangeListener(((radioGroup, i) -> {
 
             if (i != bi.b105a.getId()) {
-                ClearClass.ClearAllFields(bi.fldGrpCVb106, null);
+                Clear.clearAllFields(bi.fldGrpCVb106);
             }
         }));
 
         bi.b107.setOnCheckedChangeListener(((radioGroup, i) -> {
 
             if (i != bi.b107a.getId()) {
-                ClearClass.ClearAllFields(bi.fldGrpCVb108, null);
+                Clear.clearAllFields(bi.fldGrpCVb108);
             }
         }));
 
         bi.b109.setOnCheckedChangeListener(((radioGroup, i) -> {
 
             if (i != bi.b109a.getId()) {
-                ClearClass.ClearAllFields(bi.fldGrpCVb110, null);
+                Clear.clearAllFields(bi.fldGrpCVb110);
             }
         }));
 
         bi.b111.setOnCheckedChangeListener(((radioGroup, i) -> {
 
             if (i != bi.b111a.getId()) {
-                ClearClass.ClearAllFields(bi.fldGrpCVb112, null);
+                Clear.clearAllFields(bi.fldGrpCVb112);
             }
         }));
 
         bi.b113.setOnCheckedChangeListener(((radioGroup, i) -> {
 
             if (i != bi.b113a.getId()) {
-                ClearClass.ClearAllFields(bi.fldGrpCVb114, null);
+                Clear.clearAllFields(bi.fldGrpCVb114);
             }
         }));
 
         bi.b115.setOnCheckedChangeListener(((radioGroup, i) -> {
 
             if (i != bi.b115a.getId()) {
-                ClearClass.ClearAllFields(bi.fldGrpCVb116, null);
+                Clear.clearAllFields(bi.fldGrpCVb116);
             }
         }));
 
         bi.b117.setOnCheckedChangeListener(((radioGroup, i) -> {
 
             if (i != bi.b117a.getId()) {
-                ClearClass.ClearAllFields(bi.fldGrpCVb118, null);
+                Clear.clearAllFields(bi.fldGrpCVb118);
             }
         }));
 

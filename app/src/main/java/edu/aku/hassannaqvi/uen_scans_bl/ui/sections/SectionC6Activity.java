@@ -8,6 +8,7 @@ import android.widget.Toast;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.databinding.DataBindingUtil;
 
+import com.validatorcrawler.aliazaz.Clear;
 import com.validatorcrawler.aliazaz.Validator;
 
 import org.json.JSONException;
@@ -19,7 +20,6 @@ import edu.aku.hassannaqvi.uen_scans_bl.core.DatabaseHelper;
 import edu.aku.hassannaqvi.uen_scans_bl.core.MainApp;
 import edu.aku.hassannaqvi.uen_scans_bl.databinding.ActivitySectionC6Binding;
 import edu.aku.hassannaqvi.uen_scans_bl.utils.Util;
-import edu.aku.hassannaqvi.uen_scans_bl.validator.ClearClass;
 
 import static edu.aku.hassannaqvi.uen_scans_bl.ui.list_activity.FamilyMembersListActivity.mainVModel;
 
@@ -37,11 +37,11 @@ public class SectionC6Activity extends AppCompatActivity {
         if (MainApp.C401.equals("1")) {
             bi.fldGrpSectionC6A.setVisibility(View.VISIBLE);
             bi.fldGrpSectionC6B.setVisibility(View.GONE);
-            ClearClass.ClearAllFields(bi.fldGrpSectionC6B, null);
+            Clear.clearAllFields(bi.fldGrpSectionC6B);
         } else {
             bi.fldGrpSectionC6B.setVisibility(View.VISIBLE);
             bi.fldGrpSectionC6A.setVisibility(View.GONE);
-            ClearClass.ClearAllFields(bi.fldGrpSectionC6A, null);
+            Clear.clearAllFields(bi.fldGrpSectionC6A);
         }
 
     }
