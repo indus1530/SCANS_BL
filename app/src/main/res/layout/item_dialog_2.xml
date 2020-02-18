@@ -38,7 +38,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="10dp"
-            android:text="Are You sure ? \n You Want To Exit ?"
+            android:text="Are You sure! \n Want To Exit ?"
             android:textAlignment="center"
             android:textAppearance="@style/TextAppearance.AppCompat.Subhead"
             android:textColor="@color/dullBlack"
