@@ -179,8 +179,7 @@
                 <!-- k224  Spinner and Input   -->
                 <androidx.cardview.widget.CardView
                     android:id="@+id/fldGrpCVk224"
-                    style="@style/cardView"
-                    android:visibility='@{k223b.checked? View.GONE : View.VISIBLE}'>
+                    style="@style/cardView">
 
                     <LinearLayout
                         android:layout_width="match_parent"
@@ -351,8 +350,7 @@
                 <!-- k228  Spinner and Input   -->
                 <androidx.cardview.widget.CardView
                     android:id="@+id/fldGrpCVk228"
-                    style="@style/cardView"
-                    android:visibility='@{k227b.checked? View.GONE : View.VISIBLE}'>
+                    style="@style/cardView">
 
                     <LinearLayout
                         android:layout_width="match_parent"

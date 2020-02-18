@@ -952,16 +952,16 @@
     <string name="c201f"> کبھی کبھی</string>
     <string name="c201g"> کبھی نہیں</string>
 
-    <string name="c214"> C214: What does (child name) usually use to clean his / her teeth ? </string>
-    <string name="c214a"> Tooth brush </string>
-    <string name="c214b"> Miswak </string>
-    <string name="c214c"> Finger </string>
+   <string name="c214"> C214: عام طور پر(بچے کانام) اپنے دانت صاف کرنے کے لئے کیا استعمال کرتا ہے؟ </string>
+   <string name="c214a">  ٹوتھ برش </string>
+   <string name="c214b"> مسواک </string>
+   <string name="c214c"> انگلی </string>
 
-    <string name="c202"> C202: What type of thing (child name) usually use to clean his / her teeth ? </string>
-    <string name="c202a"> Tooth Paste </string>
-    <string name="c202b"> Tooth Powder </string>
-    <string name="c20296"> Other </string>
-    <string name="c20297"> Nothing </string>
+   <string name="c202"> C202: عام طور پر (بچے کا نام) دانتوں کی صفائی کے لئے کس قسم کی چیز استعمال کرتا/کرتی ہے؟ </string>
+   <string name="c202a"> ٹوتھ پیسٹ </string>
+   <string name="c202b"> ٹوتھ پائوڈر </string>
+   <string name="c20296"> دیگر کچھ اور </string>
+   <string name="c20297">  کچھ نہیں </string>
 
     <string name="c203"> c203: کیا (بچے کا نام) اکثر مندرجہ ذیل میں سے کسی کا استعمال کرتا ہے؟ [ایک سے زیادہ جوابات آسکتے ہیں</string>
     <string name="c203a"> چھالیا</string>
@@ -1368,7 +1368,7 @@
     <string name="cb602a"> AM</string>
     <string name="cb602b"> PM</string>
 
-    <string name="cb603"> cb603: During the past week, does the child name afternoon nap?</string>
+   <string name="cb603"> cb603: کیا پچھلے ہفتے کے دوران، (بچے کا نام) دوپہر کے اوقات میں سویا ہے؟</string>
     <string name="cb603a"> ہاں</string>
     <string name="cb603b"> نہیں</string>
 
@@ -1851,7 +1851,7 @@
     <string name="k100"> بچے کا نام K200: </string>
 
     <string name="k101"> k101: کیا آپ کو لگتا ہے کہ آپ کے بچے (بچے کا نام) کا قد اس کے عمر کے حساب سے مناسب/صحیح ہے؟</string>
-    <string name="k101a"> Height is Appropriate for his/her age</string>
+   <string name="k101a"> بچے /بچی کا قد اس کی عمر کے مطابق ہے</string>
     <string name="k101b"> قد عمر کے حساب سے لمبا ہے </string>
     <string name="k101c"> قد عمر کے حساب سے چھوٹا ہے </string>
     <string name="k102"> k102: کیا آپ کو لگتا ہے کہ آپ کے بچے (بچے کا نام) کا وزن اس کے عمر کے حساب سے مناسب/صحیح ہے؟</string>
@@ -1903,7 +1903,7 @@
 
     <string name="k210"> K210: قد کی پیمائش (سینٹی میٹر)دوسری بار</string>
 
-    <string name="k211"> K211: اگرپہلی دوباریوں کی پیمائش میں 0.6 سینٹی میٹر سے زیادہ کا فرق ہے تو قد کی پیمائش تیسری بار کریں</string>
+   <string name="k211"> K211: اگرپہلی دوباریوں کی پیمائش میں 1 سینٹی میٹر سے زیادہ کا فرق ہے تو قد کی پیمائش تیسری بار کریں</string>
     <string name="k211a"> ہاں </string>
     <string name="k211b"> نہیں</string>
 
@@ -1913,7 +1913,7 @@
 
     <string name="k214"> K214: وزن کی پیمائش(کلوگرام)دوسری بار </string>
 
-    <string name="k215"> K215: اگرپہلی دوباریوں کی پیمائش میں 0.1 کلوگرام سے زیادہ کا فرق ہے تو وزن کی پیمائش تیسری بار کریں</string>
+   <string name="k215"> K215: اگرپہلی دوباریوں کی پیمائش میں 0.5 کلوگرام سے زیادہ کا فرق ہے تو وزن کی پیمائش تیسری بار کریں</string>
     <string name="k215a"> ہاں </string>
     <string name="k215b"> نہیں</string>
 
@@ -1923,7 +1923,7 @@
 
     <string name="k218"> K218: بائیں بازو کےاوپری درمیانی گھیرکی پیمائش دوسری بار</string>
 
-    <string name="k219"> K219: اگرپہلی دوباریوں کی پیمائش میں.3 سینٹیی میٹر سے زیادہ کا فرق ہے تو بازو کےاوپری درمیانی گھیرکی پیمائش تیسری بار کریں</string>
+   <string name="k219"> K219: اگرپہلی دوباریوں کی پیمائش میں1سینٹی میٹر سے زیادہ کا فرق ہے تو بازو کےاوپری درمیانی گھیرکی پیمائش تیسری بار کریں</string>
     <string name="k219a"> ہاں </string>
     <string name="k219b"> نہیں</string>
 
@@ -1936,7 +1936,7 @@
 
     <string name="k222"> K222: قد کی پیمائش (سینٹی میٹر)دوسری بار</string>
 
-    <string name="k223"> K223: اگرپہلی دوباریوں کی پیمائش میں 0.6 سینٹی میٹر سے زیادہ کا فرق ہے تو قد کی پیمائش تیسری بار کریں</string>
+   <string name="k223"> K223: اگرپہلی دوباریوں کی پیمائش میں 1 سینٹی میٹر سے زیادہ کا فرق ہے تو قد کی پیمائش تیسری بار کریں</string>
     <string name="k223a"> ہاں </string>
     <string name="k223b"> نہیں</string>
 
@@ -1946,7 +1946,7 @@
 
     <string name="k226"> K226: وزن کی پیمائش(کلوگرام)دوسری بار</string>
 
-    <string name="k227"> K227: اگرپہلی دوباریوں کی پیمائش میں 0.1 کلوگرام سے زیادہ کا فرق ہے تو وزن کی پیمائش تیسری بار کریں</string>
+   <string name="k227"> K227: اگرپہلی دوباریوں کی پیمائش میں 0.5 کلوگرام سے زیادہ کا فرق ہے تو وزن کی پیمائش تیسری بار کریں</string>
     <string name="k227a"> ہاں </string>
     <string name="k227b"> نہیں</string>
 

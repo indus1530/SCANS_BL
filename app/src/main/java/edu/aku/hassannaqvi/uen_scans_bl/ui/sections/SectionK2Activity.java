@@ -138,7 +138,7 @@ public class SectionK2Activity extends AppCompatActivity implements Util.EndSecA
                     if (bi.k209a.getText().toString().isEmpty() || bi.k210a.getText().toString().isEmpty())
                         return;
                     double value = Math.abs(Double.valueOf(bi.k209a.getText().toString()) - Double.valueOf(bi.k210a.getText().toString()));
-                    bi.k211.check(value < 1 ? bi.k211a.getId() : bi.k211b.getId());
+                    bi.k211.check(value < 1 ? bi.k211b.getId() : bi.k211a.getId());
                 }
 
                 @Override
@@ -147,6 +147,76 @@ public class SectionK2Activity extends AppCompatActivity implements Util.EndSecA
                 }
             });
         }
+
+        for (EditTextPicker txt : txt213_2016) {
+            txt.addTextChangedListener(new TextWatcher() {
+                @Override
+                public void beforeTextChanged(CharSequence s, int start, int count, int after) {
+
+                }
+
+                @Override
+                public void onTextChanged(CharSequence s, int start, int before, int count) {
+                    bi.k215.clearCheck();
+                    if (bi.k213a.getText().toString().isEmpty() || bi.k214a.getText().toString().isEmpty())
+                        return;
+                    double value = Math.abs(Double.valueOf(bi.k213a.getText().toString()) - Double.valueOf(bi.k214a.getText().toString()));
+                    bi.k215.check(value < 0.5 ? bi.k215b.getId() : bi.k215a.getId());
+                }
+
+                @Override
+                public void afterTextChanged(Editable s) {
+
+                }
+            });
+        }
+
+        for (EditTextPicker txt : txt217_2020) {
+            txt.addTextChangedListener(new TextWatcher() {
+                @Override
+                public void beforeTextChanged(CharSequence s, int start, int count, int after) {
+
+                }
+
+                @Override
+                public void onTextChanged(CharSequence s, int start, int before, int count) {
+                    bi.k219.clearCheck();
+                    if (bi.k217a.getText().toString().isEmpty() || bi.k218a.getText().toString().isEmpty())
+                        return;
+                    double value = Math.abs(Double.valueOf(bi.k217a.getText().toString()) - Double.valueOf(bi.k218a.getText().toString()));
+                    bi.k219.check(value < 1 ? bi.k219b.getId() : bi.k219a.getId());
+                }
+
+                @Override
+                public void afterTextChanged(Editable s) {
+
+                }
+            });
+        }
+
+    }
+
+    private void setupSkips() {
+
+        /*bi.k211.setOnCheckedChangeListener(((radioGroup, i) -> {
+
+            if (i != bi.k211b.getId()) {
+                Clear.clearAllFields(bi.fldGrpCVk212);
+            }
+
+        }));
+
+        bi.k215.setOnCheckedChangeListener(((radioGroup, i) -> {
+            if (i != bi.k215b.getId()) {
+                Clear.clearAllFields(bi.fldGrpCVk216);
+            }
+        }));
+
+        bi.k219.setOnCheckedChangeListener(((radioGroup, i) -> {
+            if (i != bi.k219b.getId()) {
+                Clear.clearAllFields(bi.fldGrpCVk220);
+            }
+        }));*/
 
         bi.k211.setOnCheckedChangeListener((group, checkedId) -> {
             if (checkedId == bi.k211b.getId()) {
@@ -171,76 +241,6 @@ public class SectionK2Activity extends AppCompatActivity implements Util.EndSecA
             } else
                 bi.fldGrpCVk220.setVisibility(View.VISIBLE);
         });
-
-        for (EditTextPicker txt : txt213_2016) {
-            txt.addTextChangedListener(new TextWatcher() {
-                @Override
-                public void beforeTextChanged(CharSequence s, int start, int count, int after) {
-
-                }
-
-                @Override
-                public void onTextChanged(CharSequence s, int start, int before, int count) {
-                    bi.k215.clearCheck();
-                    if (bi.k213a.getText().toString().isEmpty() || bi.k214a.getText().toString().isEmpty())
-                        return;
-                    double value = Math.abs(Double.valueOf(bi.k213a.getText().toString()) - Double.valueOf(bi.k214a.getText().toString()));
-                    bi.k215.check(value < 0.5 ? bi.k215a.getId() : bi.k215b.getId());
-                }
-
-                @Override
-                public void afterTextChanged(Editable s) {
-
-                }
-            });
-        }
-
-        for (EditTextPicker txt : txt217_2020) {
-            txt.addTextChangedListener(new TextWatcher() {
-                @Override
-                public void beforeTextChanged(CharSequence s, int start, int count, int after) {
-
-                }
-
-                @Override
-                public void onTextChanged(CharSequence s, int start, int before, int count) {
-                    bi.k219.clearCheck();
-                    if (bi.k217a.getText().toString().isEmpty() || bi.k218a.getText().toString().isEmpty())
-                        return;
-                    double value = Math.abs(Double.valueOf(bi.k217a.getText().toString()) - Double.valueOf(bi.k218a.getText().toString()));
-                    bi.k219.check(value < 1 ? bi.k219a.getId() : bi.k219b.getId());
-                }
-
-                @Override
-                public void afterTextChanged(Editable s) {
-
-                }
-            });
-        }
-
-    }
-
-    private void setupSkips() {
-
-        bi.k211.setOnCheckedChangeListener(((radioGroup, i) -> {
-
-            if (i != bi.k211b.getId()) {
-                Clear.clearAllFields(bi.fldGrpCVk212);
-            }
-
-        }));
-
-        bi.k215.setOnCheckedChangeListener(((radioGroup, i) -> {
-            if (i != bi.k215b.getId()) {
-                Clear.clearAllFields(bi.fldGrpCVk216);
-            }
-        }));
-
-        bi.k219.setOnCheckedChangeListener(((radioGroup, i) -> {
-            if (i != bi.k219b.getId()) {
-                Clear.clearAllFields(bi.fldGrpCVk220);
-            }
-        }));
 
     }
 
