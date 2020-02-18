@@ -97,7 +97,7 @@ public class SectionK3Activity extends AppCompatActivity {
                     if (bi.k221a.getText().toString().isEmpty() || bi.k222a.getText().toString().isEmpty())
                         return;
                     double value = Math.abs(Double.valueOf(bi.k221a.getText().toString()) - Double.valueOf(bi.k222a.getText().toString()));
-                    bi.k223.check(value < 1 ? bi.k223b.getId() : bi.k223a.getId());
+                    bi.k223.check(value < 1 ? bi.k223a.getId() : bi.k223b.getId());
                 }
 
                 @Override
@@ -120,7 +120,7 @@ public class SectionK3Activity extends AppCompatActivity {
                     if (bi.k224a.getText().toString().isEmpty() || bi.k225a.getText().toString().isEmpty())
                         return;
                     double value = Math.abs(Double.valueOf(bi.k224a.getText().toString()) - Double.valueOf(bi.k225a.getText().toString()));
-                    bi.k227.check(value < 0.5 ? bi.k227b.getId() : bi.k227a.getId());
+                    bi.k227.check(value < 0.5 ? bi.k227a.getId() : bi.k227b.getId());
                 }
 
                 @Override
