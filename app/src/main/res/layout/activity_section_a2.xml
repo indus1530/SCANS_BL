@@ -496,8 +496,7 @@
                     <!-- a209  Radio   -->
                     <androidx.cardview.widget.CardView
                         android:id="@+id/fldGrpCVa209"
-                        style="@style/cardView"
-                        android:visibility="@{a208a.checked ? View.VISIBLE : View.GONE}">
+                        style="@style/cardView">
 
                         <LinearLayout
                             android:layout_width="match_parent"

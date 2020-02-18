@@ -356,8 +356,11 @@ public class SectionA2Activity extends AppCompatActivity {
         });
 
         bi.a208.setOnCheckedChangeListener((group, checkedId) -> {
-            if (checkedId == bi.a208b.getId())
+            if (checkedId == bi.a208b.getId()) {
                 bi.a209.clearCheck();
+                bi.fldGrpCVa209.setVisibility(View.GONE);
+            } else
+                bi.fldGrpCVa209.setVisibility(View.VISIBLE);
         });
 
     }
