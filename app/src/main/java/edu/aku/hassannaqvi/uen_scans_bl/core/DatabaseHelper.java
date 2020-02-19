@@ -1299,7 +1299,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
                 SingleMember.COLUMN_MARITAL,
                 SingleMember.COLUMN_SD,
         };
-        String whereClause = null;
+        String whereClause = SingleMember.COLUMN_SYNCED + " is null";
         String[] whereArgs = null;
         String groupBy = null;
         String having = null;
