@@ -2,11 +2,13 @@ package edu.aku.hassannaqvi.uen_scans_bl.ui.sections;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.view.View;
 import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.databinding.DataBindingUtil;
 
+import com.validatorcrawler.aliazaz.Clear;
 import com.validatorcrawler.aliazaz.Validator;
 
 import org.json.JSONException;
@@ -29,6 +31,151 @@ public class SectionB3Activity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         bi = DataBindingUtil.setContentView(this, R.layout.activity_section_b3);
         bi.setCallback(this);
+        setlistener();
+
+    }
+
+    private void setlistener() {
+
+        //b30196
+        bi.b30196.setOnCheckedChangeListener((compoundButton, b) -> {
+            if (b) {
+                bi.b30196x.setVisibility(View.VISIBLE);
+            } else {
+                bi.b30196x.setVisibility(View.GONE);
+                Clear.clearAllFields(bi.b30196x);
+            }
+        });
+
+        //b30296
+        bi.b30296.setOnCheckedChangeListener((compoundButton, b) -> {
+            if (b) {
+                bi.b30296x.setVisibility(View.VISIBLE);
+            } else {
+                bi.b30296x.setVisibility(View.GONE);
+                Clear.clearAllFields(bi.b30296x);
+            }
+        });
+
+        //b30396
+        bi.b30396.setOnCheckedChangeListener((compoundButton, b) -> {
+            if (b) {
+                bi.b30396x.setVisibility(View.VISIBLE);
+            } else {
+                bi.b30396x.setVisibility(View.GONE);
+                Clear.clearAllFields(bi.b30396x);
+            }
+        });
+
+        //b30496
+        bi.b30496.setOnCheckedChangeListener((compoundButton, b) -> {
+            if (b) {
+                bi.b30496x.setVisibility(View.VISIBLE);
+            } else {
+                bi.b30496x.setVisibility(View.GONE);
+                Clear.clearAllFields(bi.b30496x);
+            }
+        });
+
+        //b30596
+        bi.b30596.setOnCheckedChangeListener((compoundButton, b) -> {
+            if (b) {
+                bi.b30596x.setVisibility(View.VISIBLE);
+            } else {
+                bi.b30596x.setVisibility(View.GONE);
+                Clear.clearAllFields(bi.b30596x);
+            }
+        });
+
+        //b30696
+        bi.b30696.setOnCheckedChangeListener((compoundButton, b) -> {
+            if (b) {
+                bi.b30696x.setVisibility(View.VISIBLE);
+            } else {
+                bi.b30696x.setVisibility(View.GONE);
+                Clear.clearAllFields(bi.b30696x);
+            }
+        });
+
+        //b30796
+        bi.b30796.setOnCheckedChangeListener((compoundButton, b) -> {
+            if (b) {
+                bi.b30796x.setVisibility(View.VISIBLE);
+            } else {
+                bi.b30796x.setVisibility(View.GONE);
+                Clear.clearAllFields(bi.b30796x);
+            }
+        });
+
+        //b30896
+        bi.b30896.setOnCheckedChangeListener((compoundButton, b) -> {
+            if (b) {
+                bi.b30896x.setVisibility(View.VISIBLE);
+            } else {
+                bi.b30896x.setVisibility(View.GONE);
+                Clear.clearAllFields(bi.b30896x);
+            }
+        });
+
+        //b30996
+        bi.b30996.setOnCheckedChangeListener((compoundButton, b) -> {
+            if (b) {
+                bi.b30996x.setVisibility(View.VISIBLE);
+            } else {
+                bi.b30996x.setVisibility(View.GONE);
+                Clear.clearAllFields(bi.b30996x);
+            }
+        });
+
+        //b31096
+        bi.b31096.setOnCheckedChangeListener((compoundButton, b) -> {
+            if (b) {
+                bi.b31096x.setVisibility(View.VISIBLE);
+            } else {
+                bi.b31096x.setVisibility(View.GONE);
+                Clear.clearAllFields(bi.b31096x);
+            }
+        });
+
+        //b31196
+        bi.b31196.setOnCheckedChangeListener((compoundButton, b) -> {
+            if (b) {
+                bi.b31196x.setVisibility(View.VISIBLE);
+            } else {
+                bi.b31196x.setVisibility(View.GONE);
+                Clear.clearAllFields(bi.b31196x);
+            }
+        });
+
+        //b31296
+        bi.b31296.setOnCheckedChangeListener((compoundButton, b) -> {
+            if (b) {
+                bi.b31296x.setVisibility(View.VISIBLE);
+            } else {
+                bi.b31296x.setVisibility(View.GONE);
+                Clear.clearAllFields(bi.b31296x);
+            }
+        });
+
+        //b31396
+        bi.b31396.setOnCheckedChangeListener((compoundButton, b) -> {
+            if (b) {
+                bi.b31396x.setVisibility(View.VISIBLE);
+            } else {
+                bi.b31396x.setVisibility(View.GONE);
+                Clear.clearAllFields(bi.b31396x);
+            }
+        });
+
+        //b31496
+        bi.b31496.setOnCheckedChangeListener((compoundButton, b) -> {
+            if (b) {
+                bi.b31496x.setVisibility(View.VISIBLE);
+            } else {
+                bi.b31496x.setVisibility(View.GONE);
+                Clear.clearAllFields(bi.b31496x);
+            }
+        });
 
     }
 
