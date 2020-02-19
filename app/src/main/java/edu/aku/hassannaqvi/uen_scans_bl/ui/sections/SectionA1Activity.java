@@ -257,7 +257,6 @@ public class SectionA1Activity extends AppCompatActivity implements Util.EndSecA
 
         json.put("imei", MainApp.IMEI);
         json.put("rndid", bl.get_ID());
-        json.put("luid", bl.getLUID());
         json.put("randDT", bl.getRandomDT());
         json.put("hh03", bl.getStructure());
         json.put("hh07", bl.getExtension());
