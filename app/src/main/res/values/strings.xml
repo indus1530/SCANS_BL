@@ -93,19 +93,19 @@
     <string name="checkHHpresent"> گھر کے سربراہ کا نام لائن لسٹنگ ڈیٹا سے مطابقت رکھتا ہے۔ </string>
 
     <string name="a113_title1"> سوال کنندہ ،جوابدہندہ کو سمجھانے کے لیے اجازت نامہ پڑھ کر سنائے گا اور مطالعہ کا مقصد اور انٹرویو کے لیے درکار وقت کے متعلق آگا ہ کرےگا ۔ (سوال کنندہ کو علیحدہ سے اجازت نامہ کی شیٹ مہیا کی جائےگی </string>
-   <string name="a113"> A113:\t کیااجازت مل گئی ؟ </string>
+    <string name="a113"> A113:\t کیااجازت مل گئی ؟ </string>
     <string name="a113_title2"> زبانی اجازت </string>
     <string name="a113a"> ہاں </string>
     <string name="a113b"> نہیں </string>
 
- <string name="a113hint"> اگر زبانی اجازت نہ ملے تو انٹرویو کو روک دیں اور اس سیکشن کے آخر میں سوال نمبر کے نتائج ریکارڈ کریں </string>
+    <string name="a113hint"> اگر زبانی اجازت نہ ملے تو انٹرویو کو روک دیں اور اس سیکشن کے آخر میں سوال نمبر کے نتائج ریکارڈ کریں </string>
 
-   <string name="a114"> A114:\t جواب دہندہ کانام </string>
+    <string name="a114"> A114:\t جواب دہندہ کانام </string>
 
 
-   <string name="a115"> A115:\t جواب دہندہ کی عمر مکمل سالوں میں </string>
+    <string name="a115"> A115:\t جواب دہندہ کی عمر مکمل سالوں میں </string>
 
-   <string name="a116"> A116:\t کیا آپ کے گھرانے میں 5 سے10 سال کی عمرکا کوئی بچہ ہے ؟ </string>
+    <string name="a116"> A116:\t کیا آپ کے گھرانے میں 5 سے10 سال کی عمرکا کوئی بچہ ہے ؟ </string>
     <string name="a116a"> ہاں</string>
     <string name="a116b"> نہیں </string>
     <string name="a117"> A117: کیا آپ کے گھرانے میں 5 سے 10 سال کی عمر کا کوئی بچہ کسی دائمی مرض میں مبتلا ہے؟ </string>
@@ -137,14 +137,14 @@
     <string name="a203b"> بیوی / شوہر </string>
     <string name="a203c"> بیٹا / بیٹی </string>
     <string name="a203d"> داماد / بہو </string>
- <string name="a203e"> پوتا، پوتی / نواسا، نواسی </string>
+    <string name="a203e"> پوتا، پوتی / نواسا، نواسی </string>
     <string name="a203f"> والدین </string>
     <string name="a203g"> ساس / سُسر </string>
     <string name="a203h"> بھائی / بہن </string>
- <string name="a203i"> سالا، سالی / دیور، دیورانی </string>
- <string name="a203j"> بھانجا، بھانجی / بھتیجا، بھتیجی </string>
- <string name="a203k"> دادا، دادی / نانا، نانی </string>
- <string name="a203l"> چچا، چچی / ماموں، ممانی / پھوپھا، پھوپھی </string>
+    <string name="a203i"> سالا، سالی / دیور، دیورانی </string>
+    <string name="a203j"> بھانجا، بھانجی / بھتیجا، بھتیجی </string>
+    <string name="a203k"> دادا، دادی / نانا، نانی </string>
+    <string name="a203l"> چچا، چچی / ماموں، ممانی / پھوپھا، پھوپھی </string>
     <string name="a203m"> سوتیلے / رضاعی / لے پالک بچے </string>
     <string name="a203n"> گھریلو ملازم </string>
     <string name="a203x"> دیگر </string>

@@ -219,7 +219,7 @@ public class SyncActivity extends AppCompatActivity implements SyncDevice.SyncDe
                     "updateSyncedAnthroForms",
                     AnthroContract.class,
                     MainApp._HOST_URL + MainApp._SERVER_URL,
-                    AnthroContract.SingleAnthro.TABLE_NAME,
+                    AnthroContract.SingleAnthro.TABLE_NAMEK1,
                     db.getUnsyncedAnthros(CONSTANTS.ANTHRO_K1), 4, uploadListAdapter, uploadlist
             ).execute();
 
