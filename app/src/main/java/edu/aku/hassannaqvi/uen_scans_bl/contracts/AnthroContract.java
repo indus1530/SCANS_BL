@@ -166,6 +166,7 @@ public class AnthroContract {
     public interface SingleAnthro extends BaseColumns {
 
         String TABLE_NAME = "anthro";
+        String TABLE_NAMEK1 = "anthro_k1";
         String COLUMN_NAME_NULLABLE = "NULLHACK";
         String COLUMN__ID = "_id";
         String COLUMN_UID = "_uid";
