@@ -330,7 +330,7 @@ public abstract class ValidatorClass {
                 if (view instanceof EditText)
                     ((EditText) view).setError(null);
                 else if (view instanceof LinearLayout)
-                    ClearClass.ClearAllFields(view, null);
+                    ClearClassOld.ClearAllFields(view, null);
                 else if (view instanceof CheckBox)
                     ((CheckBox) view).setError(null);
 

@@ -14,7 +14,7 @@ import androidx.cardview.widget.CardView;
  * Created by ali.azaz on 03/19/18.
  */
 
-public class ClearClass {
+public class ClearClassOld {
 
     public static void ClearRadioButton(RadioGroup rdGrp, boolean flag) {
 

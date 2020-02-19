@@ -10,6 +10,7 @@ import android.widget.Toast;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.databinding.DataBindingUtil;
 
+import com.validatorcrawler.aliazaz.Clear;
 import com.validatorcrawler.aliazaz.Validator;
 
 import java.util.ArrayList;
@@ -22,7 +23,6 @@ import edu.aku.hassannaqvi.uen_scans_bl.contracts.FamilyMembersContract;
 import edu.aku.hassannaqvi.uen_scans_bl.core.DatabaseHelper;
 import edu.aku.hassannaqvi.uen_scans_bl.core.MainApp;
 import edu.aku.hassannaqvi.uen_scans_bl.databinding.ActivitySectionInfoBinding;
-import edu.aku.hassannaqvi.uen_scans_bl.validator.ClearClass;
 import edu.aku.hassannaqvi.uen_scans_bl.viewmodel.MainRepository;
 
 public class SectionInfoActivity extends AppCompatActivity {
@@ -54,7 +54,7 @@ public class SectionInfoActivity extends AppCompatActivity {
             @Override
             public void onTextChanged(CharSequence s, int start, int before, int count) {
                 if (bi.a101.getText().hashCode() == s.hashCode()) {
-                    ClearClass.ClearAllFields(bi.fldGrpSectionA01, null);
+                    Clear.clearAllFields(bi.fldGrpSectionA01);
                     bi.fldGrpSectionA01.setVisibility(View.GONE);
                     bi.btnNext.setVisibility(View.GONE);
                 }

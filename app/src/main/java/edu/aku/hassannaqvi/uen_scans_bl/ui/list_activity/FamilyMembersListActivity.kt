@@ -97,8 +97,8 @@ class FamilyMembersListActivity : AppCompatActivity() {
                                     if (indexKishMWRA != null) {
                                         val childLst = mainVModel.getAllChildrenOfSelMWRA(indexKishMWRA.serialno.toInt())
                                         indexKishMWRAChild = childLst?.let {
-                                            mainVModel.childLstU5to10.value?.get(kishSelectedMWRA(intent.getIntExtra("sno", 0),
-                                                    childLst.size) - 1)
+                                            childLst[kishSelectedMWRA(intent.getIntExtra("sno", 0),
+                                                    childLst.size) - 1]
                                         }
 
                                         GlobalScope.launch {

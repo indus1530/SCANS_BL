@@ -8,6 +8,7 @@ import android.widget.Toast;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.databinding.DataBindingUtil;
 
+import com.validatorcrawler.aliazaz.Clear;
 import com.validatorcrawler.aliazaz.Validator;
 
 import org.json.JSONException;
@@ -19,7 +20,6 @@ import edu.aku.hassannaqvi.uen_scans_bl.core.DatabaseHelper;
 import edu.aku.hassannaqvi.uen_scans_bl.core.MainApp;
 import edu.aku.hassannaqvi.uen_scans_bl.databinding.ActivitySectionC3Binding;
 import edu.aku.hassannaqvi.uen_scans_bl.utils.Util;
-import edu.aku.hassannaqvi.uen_scans_bl.validator.ClearClass;
 
 public class SectionC3Activity extends AppCompatActivity {
 
@@ -45,8 +45,8 @@ public class SectionC3Activity extends AppCompatActivity {
                 bi.fldGrpCVc313.setVisibility(View.VISIBLE);
                 bi.fldGrpCVc314.setVisibility(View.VISIBLE);
             } else {
-                ClearClass.ClearAllFields(bi.fldGrpCVc313, null);
-                ClearClass.ClearAllFields(bi.fldGrpCVc314, null);
+                Clear.clearAllFields(bi.fldGrpCVc313);
+                Clear.clearAllFields(bi.fldGrpCVc314);
                 bi.fldGrpCVc313.setVisibility(View.GONE);
                 bi.fldGrpCVc314.setVisibility(View.GONE);
             }

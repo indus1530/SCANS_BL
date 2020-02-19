@@ -8,6 +8,7 @@ import android.widget.Toast;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.databinding.DataBindingUtil;
 
+import com.validatorcrawler.aliazaz.Clear;
 import com.validatorcrawler.aliazaz.Validator;
 
 import org.json.JSONException;
@@ -19,7 +20,6 @@ import edu.aku.hassannaqvi.uen_scans_bl.core.DatabaseHelper;
 import edu.aku.hassannaqvi.uen_scans_bl.core.MainApp;
 import edu.aku.hassannaqvi.uen_scans_bl.databinding.ActivitySectionA31Binding;
 import edu.aku.hassannaqvi.uen_scans_bl.utils.Util;
-import edu.aku.hassannaqvi.uen_scans_bl.validator.ClearClass;
 
 public class SectionA31Activity extends AppCompatActivity {
 
@@ -46,7 +46,7 @@ public class SectionA31Activity extends AppCompatActivity {
             if (i == bi.a313a.getId()) {
                 bi.fldGrpCVa314.setVisibility(View.VISIBLE);
             } else {
-                ClearClass.ClearAllFields(bi.fldGrpCVa314, null);
+                Clear.clearAllFields(bi.fldGrpCVa314);
                 bi.fldGrpCVa314.setVisibility(View.GONE);
             }
 
@@ -57,8 +57,8 @@ public class SectionA31Activity extends AppCompatActivity {
                 bi.fldGrpCVa309.setVisibility(View.VISIBLE);
                 bi.fldGrpCVa310.setVisibility(View.VISIBLE);
             } else {
-                ClearClass.ClearAllFields(bi.fldGrpCVa309, null);
-                ClearClass.ClearAllFields(bi.fldGrpCVa310, null);
+                Clear.clearAllFields(bi.fldGrpCVa309);
+                Clear.clearAllFields(bi.fldGrpCVa310);
                 bi.fldGrpCVa309.setVisibility(View.GONE);
                 bi.fldGrpCVa310.setVisibility(View.GONE);
             }

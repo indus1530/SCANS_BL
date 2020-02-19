@@ -8,6 +8,7 @@ import android.widget.Toast;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.databinding.DataBindingUtil;
 
+import com.validatorcrawler.aliazaz.Clear;
 import com.validatorcrawler.aliazaz.Validator;
 
 import org.json.JSONException;
@@ -20,7 +21,6 @@ import edu.aku.hassannaqvi.uen_scans_bl.core.MainApp;
 import edu.aku.hassannaqvi.uen_scans_bl.databinding.ActivitySectionA32Binding;
 import edu.aku.hassannaqvi.uen_scans_bl.utils.JSONUtils;
 import edu.aku.hassannaqvi.uen_scans_bl.utils.Util;
-import edu.aku.hassannaqvi.uen_scans_bl.validator.ClearClass;
 
 public class SectionA32Activity extends AppCompatActivity {
 
@@ -46,8 +46,8 @@ public class SectionA32Activity extends AppCompatActivity {
                 bi.fldGrpCVa323.setVisibility(View.VISIBLE);
                 bi.fldGrpCVa324.setVisibility(View.VISIBLE);
             } else {
-                ClearClass.ClearAllFields(bi.fldGrpCVa323, null);
-                ClearClass.ClearAllFields(bi.fldGrpCVa324, null);
+                Clear.clearAllFields(bi.fldGrpCVa323);
+                Clear.clearAllFields(bi.fldGrpCVa324);
                 bi.fldGrpCVa323.setVisibility(View.GONE);
                 bi.fldGrpCVa324.setVisibility(View.GONE);
             }
@@ -58,7 +58,7 @@ public class SectionA32Activity extends AppCompatActivity {
             if (i != bi.a323b.getId()) {
                 bi.fldGrpCVa324.setVisibility(View.VISIBLE);
             } else {
-                ClearClass.ClearAllFields(bi.fldGrpCVa324, null);
+                Clear.clearAllFields(bi.fldGrpCVa324);
                 bi.fldGrpCVa324.setVisibility(View.GONE);
             }
         }));
@@ -67,7 +67,7 @@ public class SectionA32Activity extends AppCompatActivity {
             if (i == bi.a326a.getId()) {
                 bi.fldGrpCVa327.setVisibility(View.VISIBLE);
             } else {
-                ClearClass.ClearAllFields(bi.fldGrpCVa327, null);
+                Clear.clearAllFields(bi.fldGrpCVa327);
                 bi.fldGrpCVa327.setVisibility(View.GONE);
             }
         }));
@@ -76,7 +76,7 @@ public class SectionA32Activity extends AppCompatActivity {
             if (i == bi.a328a.getId()) {
                 bi.fldGrpCVa329.setVisibility(View.VISIBLE);
             } else {
-                ClearClass.ClearAllFields(bi.fldGrpCVa329, null);
+                Clear.clearAllFields(bi.fldGrpCVa329);
                 bi.fldGrpCVa329.setVisibility(View.GONE);
             }
         }));
@@ -84,13 +84,13 @@ public class SectionA32Activity extends AppCompatActivity {
         //a33297
         bi.a33297.setOnCheckedChangeListener((compoundButton, b) -> {
             if (b) {
-                ClearClass.ClearAllFields(bi.a332check, false);
+                Clear.clearAllFields(bi.a332check, false);
                 bi.a332check.setTag("-1");
-                ClearClass.ClearAllFields(bi.fldGrpCVa333, null);
+                Clear.clearAllFields(bi.fldGrpCVa333);
                 bi.fldGrpCVa333.setVisibility(View.GONE);
             } else {
                 bi.fldGrpCVa333.setVisibility(View.VISIBLE);
-                ClearClass.ClearAllFields(bi.a332check, true);
+                Clear.clearAllFields(bi.a332check, true);
                 bi.a332check.setTag("0");
             }
         });

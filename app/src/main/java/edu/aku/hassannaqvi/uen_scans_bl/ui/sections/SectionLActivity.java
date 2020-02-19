@@ -10,6 +10,7 @@ import android.widget.Toast;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.databinding.DataBindingUtil;
 
+import com.validatorcrawler.aliazaz.Clear;
 import com.validatorcrawler.aliazaz.Validator;
 
 import org.json.JSONException;
@@ -24,7 +25,6 @@ import edu.aku.hassannaqvi.uen_scans_bl.core.DatabaseHelper;
 import edu.aku.hassannaqvi.uen_scans_bl.core.MainApp;
 import edu.aku.hassannaqvi.uen_scans_bl.databinding.ActivitySectionLBinding;
 import edu.aku.hassannaqvi.uen_scans_bl.ui.other.MainActivity;
-import edu.aku.hassannaqvi.uen_scans_bl.validator.ClearClass;
 
 public class SectionLActivity extends AppCompatActivity {
 
@@ -50,8 +50,8 @@ public class SectionLActivity extends AppCompatActivity {
                 bi.fldGrpCVl104.setVisibility(View.VISIBLE);
                 bi.fldGrpCVl103.setVisibility(View.VISIBLE);
             } else {
-                ClearClass.ClearAllFields(bi.fldGrpCVl104, null);
-                ClearClass.ClearAllFields(bi.fldGrpCVl103, null);
+                Clear.clearAllFields(bi.fldGrpCVl104);
+                Clear.clearAllFields(bi.fldGrpCVl103);
                 bi.fldGrpCVl104.setVisibility(View.GONE);
                 bi.fldGrpCVl103.setVisibility(View.GONE);
             }
@@ -66,7 +66,7 @@ public class SectionLActivity extends AppCompatActivity {
             @Override
             public void onTextChanged(CharSequence s, int start, int before, int count) {
                 if (bi.l104.getText().toString().trim().length() > 0) {
-                    ClearClass.ClearAllFields(bi.fldGrpCVl103, null);
+                    Clear.clearAllFields(bi.fldGrpCVl103);
                     bi.l103a.setEnabled(true);
                     bi.l103b.setEnabled(false);
                     bi.l103c.setEnabled(false);
@@ -76,7 +76,7 @@ public class SectionLActivity extends AppCompatActivity {
             @Override
             public void afterTextChanged(Editable s) {
                 if (bi.l104.getText().toString().trim().length() <= 0) {
-                    ClearClass.ClearAllFields(bi.fldGrpCVl103, null);
+                    Clear.clearAllFields(bi.fldGrpCVl103);
                     bi.l103a.setEnabled(false);
                     bi.l103b.setEnabled(true);
                     bi.l103c.setEnabled(true);

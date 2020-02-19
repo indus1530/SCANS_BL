@@ -10,6 +10,7 @@ import android.widget.Toast;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.databinding.DataBindingUtil;
 
+import com.validatorcrawler.aliazaz.Clear;
 import com.validatorcrawler.aliazaz.Validator;
 
 import org.json.JSONException;
@@ -21,7 +22,6 @@ import edu.aku.hassannaqvi.uen_scans_bl.core.DatabaseHelper;
 import edu.aku.hassannaqvi.uen_scans_bl.core.MainApp;
 import edu.aku.hassannaqvi.uen_scans_bl.databinding.ActivitySectionA4Binding;
 import edu.aku.hassannaqvi.uen_scans_bl.utils.Util;
-import edu.aku.hassannaqvi.uen_scans_bl.validator.ClearClass;
 
 public class SectionA4Activity extends AppCompatActivity {
 
@@ -42,7 +42,7 @@ public class SectionA4Activity extends AppCompatActivity {
         @Override
         public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
             if (bi.a403a.isChecked() || bi.a403b.isChecked() || bi.a403c.isChecked() || bi.a403d.isChecked()) {
-                ClearClass.ClearAllFields(bi.fldGrpCVa02, null);
+                Clear.clearAllFields(bi.fldGrpCVa02);
                 bi.fldGrpCVa02.setVisibility(View.GONE);
             } else {
                 bi.fldGrpCVa02.setVisibility(View.VISIBLE);
@@ -59,7 +59,7 @@ public class SectionA4Activity extends AppCompatActivity {
                 bi.fldGrpCVa01.setVisibility(View.VISIBLE);
 
             } else {
-                ClearClass.ClearAllFields(bi.fldGrpCVa01, null);
+                Clear.clearAllFields(bi.fldGrpCVa01);
                 bi.fldGrpCVa01.setVisibility(View.GONE);
                 bi.fldGrpCVa02.setVisibility(View.VISIBLE);
 
@@ -75,13 +75,13 @@ public class SectionA4Activity extends AppCompatActivity {
         //a40397
         bi.a40397.setOnCheckedChangeListener((compoundButton, b) -> {
             if (b) {
-                ClearClass.ClearAllFields(bi.a403check, false);
+                Clear.clearAllFields(bi.a403check, false);
                 bi.a403check.setTag("-1");
                 bi.fldGrpCVa02.setVisibility(View.VISIBLE);
             } else {
-                ClearClass.ClearAllFields(bi.a403check, true);
+                Clear.clearAllFields(bi.a403check, true);
                 bi.a403check.setTag("0");
-                ClearClass.ClearAllFields(bi.fldGrpCVa02, null);
+                Clear.clearAllFields(bi.fldGrpCVa02);
                 bi.fldGrpCVa02.setVisibility(View.GONE);
             }
         });
@@ -89,7 +89,7 @@ public class SectionA4Activity extends AppCompatActivity {
         bi.a404.setOnCheckedChangeListener(((radioGroup, i) -> {
 
             if (i == bi.a404b.getId()) {
-                ClearClass.ClearAllFields(bi.fldGrpCVa405, null);
+                Clear.clearAllFields(bi.fldGrpCVa405);
             }
 
         }));
