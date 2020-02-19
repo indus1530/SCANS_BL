@@ -291,7 +291,7 @@
                                     android:inputType="number"
                                     android:maxLength="2"
                                     android:textColor="@android:color/black"
-                                    app:defaultValue="00"
+                                    app:defaultValue="98"
                                     app:maxValue="30"
                                     app:minValue="1"
                                     app:type="range" />
@@ -315,7 +315,7 @@
                                     android:inputType="number"
                                     android:maxLength="2"
                                     android:textColor="@android:color/black"
-                                    app:defaultValue="00"
+                                    app:defaultValue="98"
                                     app:maxValue="11"
                                     app:minValue="1"
                                     app:type="range" />
@@ -339,7 +339,7 @@
                                     android:inputType="number"
                                     android:maxLength="4"
                                     android:textColor="@android:color/black"
-                                    app:defaultValue="00"
+                                    app:defaultValue="9998"
                                     app:maxValue="2020"
                                     app:minValue="1950"
                                     app:type="range" />

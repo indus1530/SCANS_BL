@@ -307,7 +307,7 @@ public class SectionA2Activity extends AppCompatActivity {
                 bi.a206a.setText(null);
                 if (bi.a205a.getText().toString().isEmpty() || bi.a205b.getText().toString().isEmpty() || bi.a205c.getText().toString().isEmpty())
                     return;
-                if (bi.a205a.getText().toString().equals("00") || bi.a205b.getText().toString().equals("00") || bi.a205c.getText().toString().equals("00")) {
+                if (bi.a205a.getText().toString().equals("98") || bi.a205b.getText().toString().equals("98") || bi.a205c.getText().toString().equals("9998")) {
                     bi.a206.setEnabled(true);
                     bi.a206a.setEnabled(true);
                     return;
