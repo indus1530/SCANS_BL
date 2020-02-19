@@ -96,6 +96,10 @@ public class SectionK3Activity extends AppCompatActivity {
                     bi.k223.clearCheck();
                     if (bi.k221a.getText().toString().isEmpty() || bi.k222a.getText().toString().isEmpty())
                         return;
+                    if (!bi.k221a.isTextEqualToPattern() || !bi.k222a.isTextEqualToPattern())
+                        return;
+                    if (bi.k221a.getText().toString().split(".").length > 1 || bi.k222a.getText().toString().split(".").length > 1)
+                        return;
                     double value = Math.abs(Double.valueOf(bi.k221a.getText().toString()) - Double.valueOf(bi.k222a.getText().toString()));
                     bi.k223.check(value < 1 ? bi.k223b.getId() : bi.k223a.getId());
                 }
@@ -118,6 +122,10 @@ public class SectionK3Activity extends AppCompatActivity {
                 public void onTextChanged(CharSequence s, int start, int before, int count) {
                     bi.k227.clearCheck();
                     if (bi.k224a.getText().toString().isEmpty() || bi.k225a.getText().toString().isEmpty())
+                        return;
+                    if (!bi.k224a.isTextEqualToPattern() || !bi.k225a.isTextEqualToPattern())
+                        return;
+                    if (bi.k224a.getText().toString().split(".").length > 1 || bi.k225a.getText().toString().split(".").length > 1)
                         return;
                     double value = Math.abs(Double.valueOf(bi.k224a.getText().toString()) - Double.valueOf(bi.k225a.getText().toString()));
                     bi.k227.check(value < 0.5 ? bi.k227b.getId() : bi.k227a.getId());

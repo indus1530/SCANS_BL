@@ -137,6 +137,10 @@ public class SectionK2Activity extends AppCompatActivity implements Util.EndSecA
                     bi.k211.clearCheck();
                     if (bi.k209a.getText().toString().isEmpty() || bi.k210a.getText().toString().isEmpty())
                         return;
+                    if (!bi.k209a.isTextEqualToPattern() || !bi.k210a.isTextEqualToPattern())
+                        return;
+                    if (bi.k209a.getText().toString().split(".").length > 1 || bi.k210a.getText().toString().split(".").length > 1)
+                        return;
                     double value = Math.abs(Double.valueOf(bi.k209a.getText().toString()) - Double.valueOf(bi.k210a.getText().toString()));
                     bi.k211.check(value < 1 ? bi.k211b.getId() : bi.k211a.getId());
                 }
@@ -160,6 +164,10 @@ public class SectionK2Activity extends AppCompatActivity implements Util.EndSecA
                     bi.k215.clearCheck();
                     if (bi.k213a.getText().toString().isEmpty() || bi.k214a.getText().toString().isEmpty())
                         return;
+                    if (!bi.k213a.isTextEqualToPattern() || !bi.k214a.isTextEqualToPattern())
+                        return;
+                    if (bi.k213a.getText().toString().split(".").length > 1 || bi.k214a.getText().toString().split(".").length > 1)
+                        return;
                     double value = Math.abs(Double.valueOf(bi.k213a.getText().toString()) - Double.valueOf(bi.k214a.getText().toString()));
                     bi.k215.check(value < 0.5 ? bi.k215b.getId() : bi.k215a.getId());
                 }
@@ -182,6 +190,10 @@ public class SectionK2Activity extends AppCompatActivity implements Util.EndSecA
                 public void onTextChanged(CharSequence s, int start, int before, int count) {
                     bi.k219.clearCheck();
                     if (bi.k217a.getText().toString().isEmpty() || bi.k218a.getText().toString().isEmpty())
+                        return;
+                    if (!bi.k217a.isTextEqualToPattern() || !bi.k218a.isTextEqualToPattern())
+                        return;
+                    if (bi.k217a.getText().toString().split(".").length > 1 || bi.k218a.getText().toString().split(".").length > 1)
                         return;
                     double value = Math.abs(Double.valueOf(bi.k217a.getText().toString()) - Double.valueOf(bi.k218a.getText().toString()));
                     bi.k219.check(value < 1 ? bi.k219b.getId() : bi.k219a.getId());
