@@ -79,6 +79,13 @@ public class SectionK2Activity extends AppCompatActivity implements Util.EndSecA
                 position = i;
                 if (i == 0) return;
                 fmc_child = mwraChildrenAnthro.getThird().get(i - 1);
+
+                boolean mother_flag = fmc_child.getMother_serial().equals("0");
+                if (mother_flag) bi.childMauc.setVisibility(View.GONE);
+                else bi.childMauc.setVisibility(View.VISIBLE);
+
+                setupRanges(mother_flag);
+
             }
 
             @Override
@@ -305,6 +312,10 @@ public class SectionK2Activity extends AppCompatActivity implements Util.EndSecA
             }
         });
 
+    }
+
+    private void setupRanges(boolean mother_flag) {
+        bi.k217a.setMinvalue(mother_flag ? 100f : 10f);
     }
 
     private void setupSkips() {
