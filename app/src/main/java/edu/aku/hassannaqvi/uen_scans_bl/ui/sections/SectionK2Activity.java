@@ -7,6 +7,7 @@ import android.text.TextWatcher;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
+import android.widget.EditText;
 import android.widget.RadioGroup;
 import android.widget.Spinner;
 import android.widget.Toast;
@@ -315,7 +316,24 @@ public class SectionK2Activity extends AppCompatActivity implements Util.EndSecA
     }
 
     private void setupRanges(boolean mother_flag) {
-        bi.k217a.setMinvalue(mother_flag ? 100f : 10f);
+        /*bi.k209a.setMinvalue(mother_flag ? 100f : 10f);
+        bi.k209a.setMaxvalue(mother_flag ? 200f : 140f);
+
+        bi.k210a.setMinvalue(mother_flag ? 100f : 10f);
+        bi.k210a.setMaxvalue(mother_flag ? 200f : 140f);
+
+        bi.k212a.setMinvalue(mother_flag ? 100f : 10f);
+        bi.k212a.setMaxvalue(mother_flag ? 200f : 140f);*/
+
+        EditText[] k209_k212 = new EditText[]{bi.k209a, bi.k210a, bi.k212a};
+        for (EditText item : k209_k212) {
+            ((EditTextPicker) item).setMinvalue(mother_flag ? 100f : 10f);
+            ((EditTextPicker) item).setMaxvalue(mother_flag ? 200f : 140f);
+        }
+
+
+        /*bi.k213a.setMinvalue(mother_flag ? 15f : 0.5f);
+        bi.k213a.setMaxvalue(mother_flag ? 200f : 140f);*/
     }
 
     private void setupSkips() {
