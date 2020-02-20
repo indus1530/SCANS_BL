@@ -135,10 +135,10 @@ public class SectionInfoActivity extends AppCompatActivity {
                 Toast.makeText(this, "No Members found!", Toast.LENGTH_SHORT).show();
                 return;
             }
+            famList.add(MainApp.indexKishMWRA);
         } else {
             MainApp.indexKishMWRAChild = db.getFamilyMember(bi.a101.getText().toString(), bi.a112.getText().toString().toUpperCase(), "2", MainApp.indexKishMWRA);
         }
-        famList.add(MainApp.indexKishMWRA);
         Toast.makeText(this, "Members Found!", Toast.LENGTH_SHORT).show();
         bi.btnNext.setVisibility(View.VISIBLE);
     }
