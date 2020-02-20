@@ -116,7 +116,10 @@ public class SectionMActivity extends AppCompatActivity {
                                 "0");
 
         json.put("m102a", bi.m102a.getText().toString());
+        json.put("m102a2", bi.m102a2.getText().toString());
+
         json.put("m102b", bi.m102b.getText().toString());
+        json.put("m102b2", bi.m102b2.getText().toString());
 
         vc.setsE2(String.valueOf(json));
 
