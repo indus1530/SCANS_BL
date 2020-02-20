@@ -360,9 +360,10 @@
                                         style="@style/EditTextNum"
                                         android:layout_width="0dp"
                                         android:layout_weight="1"
-                                        android:hint="@string/kg"
+                                        android:hint="###.#"
                                         android:textDirection="ltr"
                                         app:mask="###.#"
+                                        app:pattern="^(\\d{3,3}\\.\\d{1,1})$"
                                         app:maxValue="40.00"
                                         app:minValue="0.5"
                                         app:type="range" />
@@ -404,9 +405,10 @@
                                         style="@style/EditTextNum"
                                         android:layout_width="0dp"
                                         android:layout_weight="1"
-                                        android:hint="@string/kg"
+                                        android:hint="###.#"
                                         android:textDirection="ltr"
                                         app:mask="###.#"
+                                        app:pattern="^(\\d{3,3}\\.\\d{1,1})$"
                                         app:maxValue="40.00"
                                         app:minValue="0.5"
                                         app:type="range" />
@@ -485,9 +487,10 @@
                                         style="@style/EditTextNum"
                                         android:layout_width="0dp"
                                         android:layout_weight="1"
-                                        android:hint="@string/kg"
+                                        android:hint="###.#"
                                         android:textDirection="ltr"
-                                        app:mask="###"
+                                        app:mask="###.#"
+                                        app:pattern="^(\\d{3,3}\\.\\d{1,1})$"
                                         app:maxValue="40.00"
                                         app:minValue="0.5"
                                         app:type="range" />
@@ -533,12 +536,12 @@
                                             style="@style/EditTextNum"
                                             android:layout_width="0dp"
                                             android:layout_weight="1"
-                                            android:hint="###.#"
+                                            android:hint="##.#"
                                             android:textDirection="ltr"
-                                            app:mask="###.#"
+                                            app:mask="##.#"
                                             app:maxValue="25.00"
                                             app:minValue="5.00"
-                                            app:pattern="^(\\d{3,3}\\.\\d{1,1})$"
+                                            app:pattern="^(\\d{2,2}\\.\\d{1,1})$"
                                             app:type="range" />
 
                                         <Spinner
@@ -578,12 +581,12 @@
                                             style="@style/EditTextNum"
                                             android:layout_width="0dp"
                                             android:layout_weight="1"
-                                            android:hint="###.#"
+                                            android:hint="##.#"
                                             android:textDirection="ltr"
-                                            app:mask="###.#"
+                                            app:mask="##.#"
                                             app:maxValue="25.00"
                                             app:minValue="5.00"
-                                            app:pattern="^(\\d{3,3}\\.\\d{1,1})$"
+                                            app:pattern="^(\\d{2,2}\\.\\d{1,1})$"
                                             app:type="range" />
 
                                         <Spinner
@@ -660,12 +663,12 @@
                                             style="@style/EditTextNum"
                                             android:layout_width="0dp"
                                             android:layout_weight="1"
-                                            android:hint="###.#"
+                                            android:hint="##.#"
                                             android:textDirection="ltr"
-                                            app:mask="###.#"
+                                            app:mask="##.#"
                                             app:maxValue="25.00"
                                             app:minValue="5.00"
-                                            app:pattern="^(\\d{3,3}\\.\\d{1,1})$"
+                                            app:pattern="^(\\d{2,2}\\.\\d{1,1})$"
                                             app:type="range" />
 
                                         <Spinner

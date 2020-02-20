@@ -236,9 +236,9 @@ public class SectionK2Activity extends AppCompatActivity implements Util.EndSecA
                 if (bi.k216a.getText().toString().split(".").length > 1)
                     return;
                 double value01 = Math.abs(Double.valueOf(bi.k216a.getText().toString()) - Double.valueOf(bi.k213a.getText().toString()));
-                if (value01 > 1) {
+                if (value01 > 0.5) {
                     double value02 = Math.abs(Double.valueOf(bi.k216a.getText().toString()) - Double.valueOf(bi.k214a.getText().toString()));
-                    if (value02 > 1) {
+                    if (value02 > 0.5) {
                         bi.k216a.setText(null);
                         anthroFlag = false;
                         Util.openAnthroAlert(SectionK2Activity.this);
