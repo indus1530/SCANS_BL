@@ -81,7 +81,7 @@ public class SectionK2Activity extends AppCompatActivity implements Util.EndSecA
                 if (i == 0) return;
                 fmc_child = mwraChildrenAnthro.getThird().get(i - 1);
 
-                boolean mother_flag = fmc_child.getMother_serial().equals("0");
+                boolean mother_flag = fmc_child.getMother_serial() == null;
                 if (mother_flag) bi.childMauc.setVisibility(View.GONE);
                 else bi.childMauc.setVisibility(View.VISIBLE);
 
@@ -316,24 +316,12 @@ public class SectionK2Activity extends AppCompatActivity implements Util.EndSecA
     }
 
     private void setupRanges(boolean mother_flag) {
-        /*bi.k209a.setMinvalue(mother_flag ? 100f : 10f);
-        bi.k209a.setMaxvalue(mother_flag ? 200f : 140f);
-
-        bi.k210a.setMinvalue(mother_flag ? 100f : 10f);
-        bi.k210a.setMaxvalue(mother_flag ? 200f : 140f);
-
-        bi.k212a.setMinvalue(mother_flag ? 100f : 10f);
-        bi.k212a.setMaxvalue(mother_flag ? 200f : 140f);*/
 
         EditText[] k209_k212 = new EditText[]{bi.k209a, bi.k210a, bi.k212a};
         for (EditText item : k209_k212) {
             ((EditTextPicker) item).setMinvalue(mother_flag ? 100f : 10f);
             ((EditTextPicker) item).setMaxvalue(mother_flag ? 200f : 140f);
         }
-
-
-        /*bi.k213a.setMinvalue(mother_flag ? 15f : 0.5f);
-        bi.k213a.setMaxvalue(mother_flag ? 200f : 140f);*/
     }
 
     private void setupSkips() {
@@ -373,11 +361,12 @@ public class SectionK2Activity extends AppCompatActivity implements Util.EndSecA
             }
             if (UpdateDB()) {
                 finish();
-                if (bi.k202b.isChecked() || bi.k203b.isChecked()) {
+                /*if (bi.k202b.isChecked() || bi.k203b.isChecked()) {
                     startActivity(new Intent(this, AnthroEndingActivity.class).putExtra("complete", true));
                 } else {
                     startActivity(new Intent(this, SectionK3Activity.class));
-                }
+                }*/
+                startActivity(new Intent(this, AnthroEndingActivity.class).putExtra("complete", true));
             } else {
                 Toast.makeText(this, "Failed to Update Database!", Toast.LENGTH_SHORT).show();
             }
