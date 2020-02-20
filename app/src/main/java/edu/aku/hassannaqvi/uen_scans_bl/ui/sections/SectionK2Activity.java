@@ -483,6 +483,7 @@ public class SectionK2Activity extends AppCompatActivity implements Util.EndSecA
         // Deleting item in list
         mwraChildrenAnthro.getFirst().remove(position - 1);
         mwraChildrenAnthro.getSecond().remove(position - 1);
+        mwraChildrenAnthro.getThird().remove(position - 1);
 
     }
 
