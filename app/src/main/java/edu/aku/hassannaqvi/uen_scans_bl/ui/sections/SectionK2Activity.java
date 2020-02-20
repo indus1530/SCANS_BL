@@ -34,7 +34,6 @@ import edu.aku.hassannaqvi.uen_scans_bl.core.DatabaseHelper;
 import edu.aku.hassannaqvi.uen_scans_bl.core.MainApp;
 import edu.aku.hassannaqvi.uen_scans_bl.databinding.ActivitySectionK2Binding;
 import edu.aku.hassannaqvi.uen_scans_bl.ui.other.AnthroEndingActivity;
-import edu.aku.hassannaqvi.uen_scans_bl.ui.other.EndingActivity;
 import edu.aku.hassannaqvi.uen_scans_bl.utils.Util;
 
 import static edu.aku.hassannaqvi.uen_scans_bl.core.MainApp.anthro;
@@ -47,6 +46,7 @@ public class SectionK2Activity extends AppCompatActivity implements Util.EndSecA
     DatabaseHelper db;
     FamilyMembersContract fmc_child;
     int position;
+    boolean anthroFlag = true;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -135,6 +135,8 @@ public class SectionK2Activity extends AppCompatActivity implements Util.EndSecA
                 @Override
                 public void onTextChanged(CharSequence s, int start, int before, int count) {
                     bi.k211.clearCheck();
+                    bi.k212a.setText(null);
+                    bi.k212b.setSelection(0);
                     if (bi.k209a.getText().toString().isEmpty() || bi.k210a.getText().toString().isEmpty())
                         return;
                     if (!bi.k209a.isTextEqualToPattern() || !bi.k210a.isTextEqualToPattern())
@@ -142,7 +144,7 @@ public class SectionK2Activity extends AppCompatActivity implements Util.EndSecA
                     if (bi.k209a.getText().toString().split(".").length > 1 || bi.k210a.getText().toString().split(".").length > 1)
                         return;
                     double value = Math.abs(Double.valueOf(bi.k209a.getText().toString()) - Double.valueOf(bi.k210a.getText().toString()));
-                    bi.k211.check(value < 1 ? bi.k211b.getId() : bi.k211a.getId());
+                    bi.k211.check(value > 1 ? bi.k211a.getId() : bi.k211b.getId());
                 }
 
                 @Override
@@ -151,6 +153,37 @@ public class SectionK2Activity extends AppCompatActivity implements Util.EndSecA
                 }
             });
         }
+
+        bi.k212a.addTextChangedListener(new TextWatcher() {
+            @Override
+            public void beforeTextChanged(CharSequence s, int start, int count, int after) {
+
+            }
+
+            @Override
+            public void onTextChanged(CharSequence s, int start, int before, int count) {
+                if (bi.k212a.getText().toString().isEmpty()) return;
+                if (!bi.k212a.isTextEqualToPattern())
+                    return;
+                if (bi.k212a.getText().toString().split(".").length > 1)
+                    return;
+                double value01 = Math.abs(Double.valueOf(bi.k212a.getText().toString()) - Double.valueOf(bi.k209a.getText().toString()));
+                if (value01 > 1) {
+                    double value02 = Math.abs(Double.valueOf(bi.k212a.getText().toString()) - Double.valueOf(bi.k210a.getText().toString()));
+                    if (value02 > 1) {
+                        bi.k212a.setText(null);
+                        anthroFlag = false;
+                        Util.openAnthroAlert(SectionK2Activity.this);
+                    }
+                }
+
+            }
+
+            @Override
+            public void afterTextChanged(Editable s) {
+
+            }
+        });
 
         for (EditTextPicker txt : txt213_2016) {
             txt.addTextChangedListener(new TextWatcher() {
@@ -162,6 +195,8 @@ public class SectionK2Activity extends AppCompatActivity implements Util.EndSecA
                 @Override
                 public void onTextChanged(CharSequence s, int start, int before, int count) {
                     bi.k215.clearCheck();
+                    bi.k216a.setText(null);
+                    bi.k216b.setSelection(0);
                     if (bi.k213a.getText().toString().isEmpty() || bi.k214a.getText().toString().isEmpty())
                         return;
                     if (!bi.k213a.isTextEqualToPattern() || !bi.k214a.isTextEqualToPattern())
@@ -169,7 +204,7 @@ public class SectionK2Activity extends AppCompatActivity implements Util.EndSecA
                     if (bi.k213a.getText().toString().split(".").length > 1 || bi.k214a.getText().toString().split(".").length > 1)
                         return;
                     double value = Math.abs(Double.valueOf(bi.k213a.getText().toString()) - Double.valueOf(bi.k214a.getText().toString()));
-                    bi.k215.check(value < 0.5 ? bi.k215b.getId() : bi.k215a.getId());
+                    bi.k215.check(value > 0.5 ? bi.k215a.getId() : bi.k215b.getId());
                 }
 
                 @Override
@@ -178,6 +213,37 @@ public class SectionK2Activity extends AppCompatActivity implements Util.EndSecA
                 }
             });
         }
+
+        bi.k216a.addTextChangedListener(new TextWatcher() {
+            @Override
+            public void beforeTextChanged(CharSequence s, int start, int count, int after) {
+
+            }
+
+            @Override
+            public void onTextChanged(CharSequence s, int start, int before, int count) {
+                if (bi.k216a.getText().toString().isEmpty()) return;
+                if (!bi.k216a.isTextEqualToPattern())
+                    return;
+                if (bi.k216a.getText().toString().split(".").length > 1)
+                    return;
+                double value01 = Math.abs(Double.valueOf(bi.k216a.getText().toString()) - Double.valueOf(bi.k213a.getText().toString()));
+                if (value01 > 1) {
+                    double value02 = Math.abs(Double.valueOf(bi.k216a.getText().toString()) - Double.valueOf(bi.k214a.getText().toString()));
+                    if (value02 > 1) {
+                        bi.k216a.setText(null);
+                        anthroFlag = false;
+                        Util.openAnthroAlert(SectionK2Activity.this);
+                    }
+                }
+
+            }
+
+            @Override
+            public void afterTextChanged(Editable s) {
+
+            }
+        });
 
         for (EditTextPicker txt : txt217_2020) {
             txt.addTextChangedListener(new TextWatcher() {
@@ -189,6 +255,8 @@ public class SectionK2Activity extends AppCompatActivity implements Util.EndSecA
                 @Override
                 public void onTextChanged(CharSequence s, int start, int before, int count) {
                     bi.k219.clearCheck();
+                    bi.k220a.setText(null);
+                    bi.k220b.setSelection(0);
                     if (bi.k217a.getText().toString().isEmpty() || bi.k218a.getText().toString().isEmpty())
                         return;
                     if (!bi.k217a.isTextEqualToPattern() || !bi.k218a.isTextEqualToPattern())
@@ -196,7 +264,7 @@ public class SectionK2Activity extends AppCompatActivity implements Util.EndSecA
                     if (bi.k217a.getText().toString().split(".").length > 1 || bi.k218a.getText().toString().split(".").length > 1)
                         return;
                     double value = Math.abs(Double.valueOf(bi.k217a.getText().toString()) - Double.valueOf(bi.k218a.getText().toString()));
-                    bi.k219.check(value < 1 ? bi.k219b.getId() : bi.k219a.getId());
+                    bi.k219.check(value > 1 ? bi.k219a.getId() : bi.k219b.getId());
                 }
 
                 @Override
@@ -206,30 +274,40 @@ public class SectionK2Activity extends AppCompatActivity implements Util.EndSecA
             });
         }
 
+        bi.k220a.addTextChangedListener(new TextWatcher() {
+            @Override
+            public void beforeTextChanged(CharSequence s, int start, int count, int after) {
+
+            }
+
+            @Override
+            public void onTextChanged(CharSequence s, int start, int before, int count) {
+                if (bi.k220a.getText().toString().isEmpty()) return;
+                if (!bi.k220a.isTextEqualToPattern())
+                    return;
+                if (bi.k220a.getText().toString().split(".").length > 1)
+                    return;
+                double value01 = Math.abs(Double.valueOf(bi.k220a.getText().toString()) - Double.valueOf(bi.k217a.getText().toString()));
+                if (value01 > 1) {
+                    double value02 = Math.abs(Double.valueOf(bi.k220a.getText().toString()) - Double.valueOf(bi.k218a.getText().toString()));
+                    if (value02 > 1) {
+                        bi.k220a.setText(null);
+                        anthroFlag = false;
+                        Util.openAnthroAlert(SectionK2Activity.this);
+                    }
+                }
+
+            }
+
+            @Override
+            public void afterTextChanged(Editable s) {
+
+            }
+        });
+
     }
 
     private void setupSkips() {
-
-        /*bi.k211.setOnCheckedChangeListener(((radioGroup, i) -> {
-
-            if (i != bi.k211b.getId()) {
-                Clear.clearAllFields(bi.fldGrpCVk212);
-            }
-
-        }));
-
-        bi.k215.setOnCheckedChangeListener(((radioGroup, i) -> {
-            if (i != bi.k215b.getId()) {
-                Clear.clearAllFields(bi.fldGrpCVk216);
-            }
-        }));
-
-        bi.k219.setOnCheckedChangeListener(((radioGroup, i) -> {
-            if (i != bi.k219b.getId()) {
-                Clear.clearAllFields(bi.fldGrpCVk220);
-            }
-        }));*/
-
         bi.k211.setOnCheckedChangeListener((group, checkedId) -> {
             if (checkedId == bi.k211b.getId()) {
                 bi.fldGrpCVk212.setVisibility(View.GONE);
@@ -267,7 +345,7 @@ public class SectionK2Activity extends AppCompatActivity implements Util.EndSecA
             if (UpdateDB()) {
                 finish();
                 if (bi.k202b.isChecked() || bi.k203b.isChecked()) {
-                    startActivity(new Intent(this, EndingActivity.class).putExtra("complete", true));
+                    startActivity(new Intent(this, AnthroEndingActivity.class).putExtra("complete", true));
                 } else {
                     startActivity(new Intent(this, SectionK3Activity.class));
                 }

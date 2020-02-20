@@ -13,6 +13,7 @@ import androidx.core.content.ContextCompat;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Objects;
 
 import edu.aku.hassannaqvi.uen_scans_bl.R;
 import edu.aku.hassannaqvi.uen_scans_bl.ui.other.AnthroEndingActivity;
@@ -92,6 +93,25 @@ public class Util {
         });
         dialog.findViewById(R.id.btnNo).setOnClickListener(view -> dialog.dismiss());
 
+    }
+
+
+    public static void openAnthroAlert(Activity activity) {
+        Dialog dialog = new Dialog(activity);
+        dialog.requestWindowFeature(Window.FEATURE_NO_TITLE);
+        dialog.setContentView(R.layout.item_anthro_alert);
+        dialog.setCancelable(false);
+        Objects.requireNonNull(dialog.getWindow()).setBackgroundDrawableResource(android.R.color.transparent);
+        WindowManager.LayoutParams params = new WindowManager.LayoutParams();
+        params.copyFrom(dialog.getWindow().getAttributes());
+        params.width = WindowManager.LayoutParams.WRAP_CONTENT;
+        params.height = WindowManager.LayoutParams.WRAP_CONTENT;
+        dialog.show();
+        dialog.getWindow().setAttributes(params);
+
+        dialog.findViewById(R.id.btnCloseView).setOnClickListener(view -> {
+            dialog.dismiss();
+        });
     }
 
 

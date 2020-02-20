@@ -1996,5 +1996,7 @@
     <string name="countYes">Yes</string>
     <string name="countAlertMsg">Are you sure to continue</string>
 
+    <string name="anthro_error">Kindly Re-Do the measurements</string>
+
 
 </resources>

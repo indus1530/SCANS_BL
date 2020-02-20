@@ -260,6 +260,8 @@
                                     style="@style/EditTextNum"
                                     android:layout_weight="1"
                                     app:defaultValue=""
+                                    android:hint="####-###"
+                                    android:textDirection="ltr"
                                     app:mask="####-###"
                                     app:pattern="^(\\d{4,4}\\-\\d{3,3})$"
                                     app:type="equal" />
