@@ -322,6 +322,12 @@ public class SectionK2Activity extends AppCompatActivity implements Util.EndSecA
             ((EditTextPicker) item).setMinvalue(mother_flag ? 100f : 10f);
             ((EditTextPicker) item).setMaxvalue(mother_flag ? 200f : 140f);
         }
+
+        EditText[] k213_k216 = new EditText[]{bi.k213a, bi.k214a, bi.k216a};
+        for (EditText item : k213_k216) {
+            ((EditTextPicker) item).setMinvalue(mother_flag ? 15f : 0.5f);
+            ((EditTextPicker) item).setMaxvalue(mother_flag ? 250f : 40f);
+        }
     }
 
     private void setupSkips() {
