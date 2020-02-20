@@ -220,8 +220,7 @@ public class SectionA2Activity extends AppCompatActivity {
                 : bi.a208b.isChecked() ? "2"
                 : "0");
 
-        sd.put("a209",
-                bi.a209a.isChecked() ? "0" :
+        sd.put("a209", bi.a209a.isChecked() ? "0" :
                         bi.a209b.isChecked() ? "1" :
                                 bi.a209c.isChecked() ? "2" :
                                         bi.a209d.isChecked() ? "3" :
@@ -243,8 +242,7 @@ public class SectionA2Activity extends AppCompatActivity {
                                                                                                                                                                         bi.a209t.isChecked() ? "19" :
                                                                                                                                                                                 bi.a209u.isChecked() ? "20" :
                                                                                                                                                                                         bi.a209v.isChecked() ? "98" :
-                                                                                                                                                                                                bi.a209w.isChecked() ? "97" :
-                                                                                                                                                                                                        "0");
+                                                                                                                                                                                                bi.a209w.isChecked() ? "97" : "0");
         sd.put("a210", bi.a210a.isChecked() ? "1" :
                 bi.a210b.isChecked() ? "2" :
                         bi.a210c.isChecked() ? "3" :
