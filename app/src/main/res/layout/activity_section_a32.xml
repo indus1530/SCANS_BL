@@ -1667,10 +1667,10 @@
                             android:id="@+id/a327x"
                             style="@style/EditTextNum"
                             android:hint="@string/num"
-                            android:maxLength="2"
+                            android:maxLength="3"
                             android:text='@{a32798.checked ? "" : a327x.getText().toString()}'
                             android:visibility='@{a32798.checked ? View.GONE : View.VISIBLE}'
-                            app:maxValue="15"
+                            app:maxValue="999"
                             app:minValue="1"
                             app:type="range" />
 
@@ -1756,7 +1756,7 @@
                                 android:layout_weight="1"
                                 android:hint="@string/num"
                                 android:maxLength="2"
-                                app:maxValue="10"
+                                app:maxValue="99"
                                 app:minValue="0"
                                 app:type="range" />
 
@@ -1780,7 +1780,7 @@
                                 android:layout_weight="1"
                                 android:hint="@string/num"
                                 android:maxLength="2"
-                                app:maxValue="10"
+                                app:maxValue="99"
                                 app:minValue="0"
                                 app:type="range" />
 
@@ -1804,7 +1804,7 @@
                                 android:layout_weight="1"
                                 android:hint="@string/num"
                                 android:maxLength="2"
-                                app:maxValue="10"
+                                app:maxValue="99"
                                 app:minValue="0"
                                 app:type="range" />
 
@@ -1828,7 +1828,7 @@
                                 android:layout_weight="1"
                                 android:hint="@string/num"
                                 android:maxLength="2"
-                                app:maxValue="10"
+                                app:maxValue="99"
                                 app:minValue="0"
                                 app:type="range" />
 
@@ -1852,7 +1852,7 @@
                                 android:layout_weight="1"
                                 android:hint="@string/num"
                                 android:maxLength="2"
-                                app:maxValue="10"
+                                app:maxValue="99"
                                 app:minValue="0"
                                 app:type="range" />
 
@@ -1876,7 +1876,7 @@
                                 android:layout_weight="1"
                                 android:hint="@string/num"
                                 android:maxLength="2"
-                                app:maxValue="10"
+                                app:maxValue="99"
                                 app:minValue="0"
                                 app:type="range" />
 
