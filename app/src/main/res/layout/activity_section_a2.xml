@@ -292,7 +292,7 @@
                                     android:maxLength="2"
                                     android:textColor="@android:color/black"
                                     app:defaultValue="98"
-                                    app:maxValue="30"
+                                    app:maxValue="31"
                                     app:minValue="1"
                                     app:type="range" />
 
@@ -316,7 +316,7 @@
                                     android:maxLength="2"
                                     android:textColor="@android:color/black"
                                     app:defaultValue="98"
-                                    app:maxValue="11"
+                                    app:maxValue="12"
                                     app:minValue="1"
                                     app:type="range" />
 
