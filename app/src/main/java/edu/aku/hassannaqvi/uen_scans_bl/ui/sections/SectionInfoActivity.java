@@ -99,6 +99,17 @@ public class SectionInfoActivity extends AppCompatActivity {
     public void BtnCheckCluster() {
 
         if (!Validator.emptyTextBox(this, bi.a101)) return;
+        boolean loginFlag;
+        int cluster = Integer.valueOf(bi.a101.getText().toString());
+        if (cluster <= 5000) {
+            loginFlag = !(MainApp.userName.equals("test1234") || MainApp.userName.equals("dmu@aku") || MainApp.userName.substring(0, 4).equals("user"));
+        } else {
+            loginFlag = MainApp.userName.equals("test1234") || MainApp.userName.equals("dmu@aku") || MainApp.userName.substring(0, 4).equals("user");
+        }
+        if (!loginFlag) {
+            Toast.makeText(this, "Can't proceed test cluster for current user!!", Toast.LENGTH_SHORT).show();
+            return;
+        }
 
         EnumBlockContract enumBlockContract = db.getEnumBlock(bi.a101.getText().toString());
         if (enumBlockContract != null) {

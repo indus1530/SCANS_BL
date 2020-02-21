@@ -218,7 +218,7 @@ public class SectionA1Activity extends AppCompatActivity implements Util.EndSecA
             }
             if (UpdateDB()) {
                 finish();
-                    startActivity(new Intent(this, FamilyMembersListActivity.class).putExtra("sno", Integer.valueOf(bl.getSno())));
+                startActivity(new Intent(this, FamilyMembersListActivity.class).putExtra("sno", Integer.valueOf(bl.getSno())));
             } else {
                 Toast.makeText(this, "Failed to Update Database!", Toast.LENGTH_SHORT).show();
             }
@@ -314,6 +314,17 @@ public class SectionA1Activity extends AppCompatActivity implements Util.EndSecA
     public void BtnCheckCluster() {
 
         if (!Validator.emptyTextBox(this, bi.a101)) return;
+        boolean loginFlag;
+        int cluster = Integer.valueOf(bi.a101.getText().toString());
+        if (cluster <= 5000) {
+            loginFlag = !(MainApp.userName.equals("test1234") || MainApp.userName.equals("dmu@aku") || MainApp.userName.substring(0, 4).equals("user"));
+        } else {
+            loginFlag = MainApp.userName.equals("test1234") || MainApp.userName.equals("dmu@aku") || MainApp.userName.substring(0, 4).equals("user");
+        }
+        if (!loginFlag) {
+            Toast.makeText(this, "Can't proceed test cluster for current user!!", Toast.LENGTH_SHORT).show();
+            return;
+        }
 
         EnumBlockContract enumBlockContract = db.getEnumBlock(bi.a101.getText().toString());
         if (enumBlockContract != null) {
