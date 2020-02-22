@@ -78,6 +78,7 @@
                     android:textSize="20sp"
                     android:textStyle="bold" />
 
+                <!-- OLD -->
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
@@ -116,6 +117,145 @@
                         android:typeface="monospace" />
 
                 </LinearLayout>
+
+                <!--<LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/summary"
+                    android:orientation="vertical"
+                    app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+                    <TextView
+                        android:id="@+id/lblsummary"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@color/colorSecondary"
+                        android:elevation="2dp"
+                        android:text="TODAY'S SUMMARY"
+                        android:textAlignment="center"
+                        android:textAllCaps="true"
+                        android:textColor="@color/white"
+                        android:textSize="16sp"
+                        android:textStyle="bold" />
+
+                    <android.support.v7.widget.CardView
+                        style="@style/cardView">
+
+                        <TableLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:outlineAmbientShadowColor="@color/black"
+                            android:stretchColumns="1">
+
+                            <TableRow
+                                android:elevation="2dp">
+
+                                <TextView
+                                    android:background="@color/colorSecondary"
+                                    android:layout_width="0dp"
+                                    android:layout_weight="1"
+                                    android:paddingTop="3dp"
+                                    android:paddingBottom="3dp"
+                                    android:text="ID"
+                                    android:textAlignment="center"
+                                    android:textColor="@color/white" />
+
+                                <TextView
+                                    android:layout_width="0dp"
+                                    android:layout_weight="1"
+                                    android:background="@color/colorSecondary"
+                                    android:paddingTop="3dp"
+                                    android:paddingBottom="3dp"
+                                    android:text="FORM"
+                                    android:textAlignment="center"
+                                    android:textColor="@color/white" />
+
+                                <TextView
+                                    android:background="@color/colorSecondary"
+                                    android:layout_width="0dp"
+                                    android:layout_weight="1"
+                                    android:paddingTop="3dp"
+                                    android:paddingBottom="3dp"
+                                    android:text="ANTHRO"
+                                    android:textAlignment="center"
+                                    android:textColor="@color/white" />
+
+                                <TextView
+                                    android:background="@color/colorSecondary"
+                                    android:layout_width="0dp"
+                                    android:layout_weight="1"
+                                    android:paddingTop="3dp"
+                                    android:paddingBottom="3dp"
+                                    android:text="HEMO"
+                                    android:textAlignment="center"
+                                    android:textColor="@color/white" />
+
+                                <TextView
+                                    android:background="@color/colorSecondary"
+                                    android:layout_width="0dp"
+                                    android:layout_weight="1"
+                                    android:paddingTop="3dp"
+                                    android:paddingBottom="3dp"
+                                    android:text="VISION"
+                                    android:textAlignment="center"
+                                    android:textColor="@color/white" />
+
+                            </TableRow>
+
+                            <TableRow>
+
+                                <TextView
+                                    android:id="@+id/form_id"
+                                    android:layout_width="0dp"
+                                    android:layout_weight="1"
+                                    android:paddingTop="3dp"
+                                    android:paddingBottom="3dp"
+                                    android:textAlignment="center"
+                                    android:text="1\n2\n3" />
+
+                                <TextView
+                                    android:id="@+id/form_status"
+                                    android:layout_width="0dp"
+                                    android:layout_weight="1"
+                                    android:paddingTop="3dp"
+                                    android:paddingBottom="3dp"
+                                    android:text="Complete\nIncomplete \nComplete"
+                                    android:textAlignment="center" />
+
+                                <TextView
+                                    android:id="@+id/anthro_status"
+                                    android:layout_width="0dp"
+                                    android:layout_weight="1"
+                                    android:paddingTop="3dp"
+                                    android:paddingBottom="3dp"
+                                    android:textAlignment="center"
+                                    android:text="Complete\nIncomplete \nComplete" />
+
+                                <TextView
+                                    android:id="@+id/hemo_status"
+                                    android:layout_width="0dp"
+                                    android:layout_weight="1"
+                                    android:paddingTop="3dp"
+                                    android:paddingBottom="3dp"
+                                    android:textAlignment="center"
+                                    android:text="Complete\nIncomplete \nComplete" />
+
+                                <TextView
+                                    android:id="@+id/vision_status"
+                                    android:layout_width="0dp"
+                                    android:layout_weight="1"
+                                    android:paddingTop="3dp"
+                                    android:paddingBottom="3dp"
+                                    android:textAlignment="center"
+                                    android:text="Complete\nIncomplete \nComplete" />
+
+                            </TableRow>
+
+                        </TableLayout>
+
+                    </android.support.v7.widget.CardView>
+
+                </LinearLayout>-->
 
 
                 <LinearLayout
@@ -185,6 +325,7 @@
                     </androidx.cardview.widget.CardView>
 
                 </LinearLayout>
+
 
                 <LinearLayout
                     android:layout_width="match_parent"
@@ -257,11 +398,11 @@
 
                 </LinearLayout>
 
+
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:orientation="vertical">
-
 
                     <LinearLayout
                         android:id="@+id/layout2"
@@ -404,6 +545,7 @@
                     </LinearLayout>
 
                 </LinearLayout>
+
 
                 <LinearLayout
                     android:id="@+id/adminsec"
