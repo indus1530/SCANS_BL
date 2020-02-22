@@ -94,7 +94,7 @@
                                 android:layout_width="0dp"
                                 android:layout_weight="2"
                                 android:gravity="center"
-                                android:text="@string/a108" />
+                                android:text="@string/a107" />
 
 
                             <TextView
@@ -104,7 +104,7 @@
                                 android:layout_weight="3"
                                 android:background="@color/pink_100"
                                 android:gravity="center"
-                                android:text="district"
+                                android:text="Province"
                                 android:textColor="@color/colorPrimaryDark" />
 
                             <!--a105-->
@@ -113,7 +113,7 @@
                                 android:layout_width="0dp"
                                 android:layout_weight="2"
                                 android:gravity="center"
-                                android:text="@string/a109" />
+                                android:text="@string/a108" />
 
 
                             <TextView
@@ -123,7 +123,7 @@
                                 android:layout_weight="3"
                                 android:background="@color/pink_100"
                                 android:gravity="center"
-                                android:text="tehsil"
+                                android:text="District"
                                 android:textColor="@color/colorPrimaryDark" />
 
                         </LinearLayout>
@@ -144,7 +144,7 @@
                                 android:layout_width="0dp"
                                 android:layout_weight="2"
                                 android:gravity="center"
-                                android:text="@string/a110" />
+                                android:text="@string/a109" />
 
 
                             <TextView
@@ -176,7 +176,7 @@
                                 android:layout_width="0dp"
                                 android:layout_weight="2"
                                 android:gravity="center"
-                                android:text="@string/a111" />
+                                android:text="@string/a110" />
 
 
                             <TextView
