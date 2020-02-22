@@ -17,9 +17,7 @@ import com.validatorcrawler.aliazaz.Validator;
 import org.json.JSONException;
 import org.json.JSONObject;
 
-import java.text.SimpleDateFormat;
 import java.util.ArrayList;
-import java.util.Date;
 import java.util.List;
 
 import edu.aku.hassannaqvi.uen_scans_bl.R;
@@ -185,7 +183,7 @@ public class SectionA2Activity extends AppCompatActivity {
 
         JSONObject sd = new JSONObject();
 
-        sd.put("formdate", new SimpleDateFormat("dd-MM-yy HH:mm").format(new Date().getTime()));
+        sd.put("formdate", MainApp.fc.getFormDate());
         sd.put("username", MainApp.userName);
         sd.put("deviceid", MainApp.appInfo.getDeviceID());
         sd.put("tagid", MainApp.appInfo.getTagName());
@@ -305,7 +303,7 @@ public class SectionA2Activity extends AppCompatActivity {
                 bi.a206a.setText(null);
                 if (bi.a205a.getText().toString().isEmpty() || bi.a205b.getText().toString().isEmpty() || bi.a205c.getText().toString().isEmpty())
                     return;
-                if (bi.a205a.getText().toString().equals("98") || bi.a205b.getText().toString().equals("98") || bi.a205c.getText().toString().equals("9998")) {
+                if (bi.a205a.getText().toString().equals("98") && bi.a205b.getText().toString().equals("98") && bi.a205c.getText().toString().equals("9998")) {
                     bi.a206.setEnabled(true);
                     bi.a206a.setEnabled(true);
                     return;

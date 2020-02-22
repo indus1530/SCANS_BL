@@ -16,9 +16,7 @@ import com.validatorcrawler.aliazaz.Validator;
 import org.json.JSONException;
 import org.json.JSONObject;
 
-import java.text.SimpleDateFormat;
 import java.util.ArrayList;
-import java.util.Date;
 import java.util.List;
 
 import edu.aku.hassannaqvi.uen_scans_bl.CONSTANTS;
@@ -131,7 +129,7 @@ public class SectionK1Activity extends AppCompatActivity implements Util.EndSecA
         anthro = new AnthroContract();
         anthro.set_UUID(MainApp.fc.get_UID());
         anthro.setDeviceId(MainApp.appInfo.getDeviceID());
-        anthro.setFormDate(new SimpleDateFormat("dd-MM-yy HH:mm").format(new Date().getTime()));
+        anthro.setFormDate(MainApp.fc.getFormDate());
         anthro.setUser(MainApp.userName);
         anthro.setDevicetagID(MainApp.appInfo.getTagName());
         anthro.setFormType(CONSTANTS.ANTHRO_K1);

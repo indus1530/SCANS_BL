@@ -12,9 +12,6 @@ import com.validatorcrawler.aliazaz.Validator;
 import org.json.JSONException;
 import org.json.JSONObject;
 
-import java.text.SimpleDateFormat;
-import java.util.Date;
-
 import edu.aku.hassannaqvi.uen_scans_bl.R;
 import edu.aku.hassannaqvi.uen_scans_bl.contracts.ChildContract;
 import edu.aku.hassannaqvi.uen_scans_bl.core.DatabaseHelper;
@@ -84,7 +81,7 @@ public class SectionC1Activity extends AppCompatActivity {
         MainApp.child.set_UUID(MainApp.fc.get_UID());
         MainApp.child.setDeviceId(MainApp.appInfo.getDeviceID());
         MainApp.child.setDevicetagID(MainApp.appInfo.getTagName());
-        MainApp.child.setFormDate(new SimpleDateFormat("dd-MM-yy HH:mm").format(new Date().getTime()));
+        MainApp.child.setFormDate(MainApp.fc.getFormDate());
         MainApp.child.setUser(MainApp.userName);
 
         JSONObject f1 = new JSONObject();
