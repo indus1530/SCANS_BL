@@ -92,6 +92,7 @@ public class SectionD1Activity extends AppCompatActivity {
         json.put("mm_fm_uid", MainApp.indexKishMWRA.getUid());
         json.put("mm_fm_serial", MainApp.indexKishMWRA.getSerialno());
         json.put("fm_name", MainApp.indexKishMWRAChild.getName());
+        json.put("appversion", MainApp.appInfo.getAppVersion());
 
 
         json.put("d101",

@@ -784,9 +784,9 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         // Create a new map of values, where column names are the keys
         ContentValues values = new ContentValues();
         values.put(SingleChild.COLUMN__UUID, childContract.get_UUID());
-        values.put(SingleChild.COLUMN_DEVICEID, childContract.get_UUID());
-        values.put(SingleChild.COLUMN_FORMDATE, childContract.get_UUID());
-        values.put(SingleChild.COLUMN_USER, childContract.get_UUID());
+        values.put(SingleChild.COLUMN_DEVICEID, childContract.getDeviceId());
+        values.put(SingleChild.COLUMN_FORMDATE, childContract.getFormDate());
+        values.put(SingleChild.COLUMN_USER, childContract.getUser());
         values.put(SingleChild.COLUMN_SC1, childContract.getsC1());
         values.put(SingleChild.COLUMN_DEVICETAGID, childContract.getDevicetagID());
 

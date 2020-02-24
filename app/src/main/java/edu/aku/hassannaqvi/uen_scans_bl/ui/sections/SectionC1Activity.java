@@ -93,6 +93,7 @@ public class SectionC1Activity extends AppCompatActivity {
         f1.put("fm_serial", MainApp.indexKishMWRAChild.getSerialno());
         f1.put("mm_fm_uid", MainApp.indexKishMWRA.getUid());
         f1.put("mm_fm_serial", MainApp.indexKishMWRA.getSerialno());
+        f1.put("appversion", MainApp.appInfo.getAppVersion());
 
         f1.put("c101aa", MainApp.indexKishMWRAChild.getName());
 //        f1.put("c101ab", bi.c101ab.getText().toString());

@@ -163,6 +163,7 @@ public class SectionB1Activity extends AppCompatActivity {
         f1.put("fm_uid", MainApp.indexKishMWRA.getUid());
         f1.put("fm_serial", MainApp.indexKishMWRA.getSerialno());
         f1.put("fm_name", MainApp.indexKishMWRA.getName());
+        f1.put("appversion", MainApp.appInfo.getAppVersion());
 
         f1.put("b101",
                 bi.b101a.isChecked() ? "1" :
