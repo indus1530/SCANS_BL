@@ -1,3 +1,4 @@
+<?xml version="1.0" encoding="utf-8"?>
 <resources>
 
     <!--new Strings-->
@@ -2086,10 +2087,9 @@
     <string name="nextSection"> Next Section </string>
 
 
-    <string name="dialog_text">Please add Info for second child.</string>
-    <string name="countNo">No</string>
-    <string name="countYes">Yes</string>
-    <string name="countAlertMsg">Are you sure to continue</string>
-
+    <string name="dialog_text"> Please add Info for second child. </string>
+    <string name="countNo"> No </string>
+    <string name="countYes"> Yes </string>
+    <string name="countAlertMsg"> Surely! You want to continue </string>
 
 </resources>
