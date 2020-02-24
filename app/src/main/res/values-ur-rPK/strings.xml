@@ -16,11 +16,11 @@
     <string name="permission_rationale">"Contacts permissions are needed for providing email completions." </string>
     <string name="ta1heading">SECTION A: HH Identification </string>
     <string name="ta2heading">SECTION A2: MEMBERS INFORMATION </string>
-    <string name="tdheading">SECTION D: HOUSEHOLD MEMBER’S INFORMATION</string>
+ <string name="tdheading">SECTION D: HOUSEHOLD MEMBER’S INFORMATION </string>
     <string name="teheading">SECTION E: REPRODUCTIVE HEALTH (Complete this table for all married women aged 15 &#8211; 49 years in the household) </string>
-    <string name="te2heading">MATERNAL MORTALITY STATUS</string>
-    <string name="tfheading">SECTION F: ANTENATAL CARE</string>
-    <string name="tiheading">SECTION I: CHILD HEALTH</string>
+ <string name="te2heading">MATERNAL MORTALITY STATUS </string>
+ <string name="tfheading">SECTION F: ANTENATAL CARE </string>
+ <string name="tiheading">SECTION I: CHILD HEALTH </string>
     <string name="ti2heading">SECTION I2: ACUTE RESPIRATORY INFECTION (ARI)</string>
     <string name="tjheading">SECTION J: IMMUNIZATION</string>
     <string name="tnheading">SECTION N: WATER AND SANITATION</string>
@@ -355,7 +355,7 @@
     <string name="a309a"> منٹ کی تعداد </string>
     <string name="a30998"> معلوم نہیں </string>
 
-    <string name="a310"> a310: عام طور پر گھر کے لئے پانی جمع کرنے کے لئے کون جاتا ہے؟ کیا اس کی عمر 15 سال سے کم ہے؟ جنس کیا ہے؟</string>
+ <string name="a310"> A310: عام طور پر گھر کے لئے پانی جمع کرنے کے لئے کون جاتا ہے ؟ کیا اس کی عمر 15 سال سے کم ہے ؟ جنس کیا ہے ؟ </string>
     <string name="a310a"> بالغ عورت (15 سال سے بڑی عمر)</string>
     <string name="a310b"> بالغ مرد (15 سال سے بڑی عمر) </string>
     <string name="a310c"> (15 سال سے کم عمر) لڑکی</string>
@@ -1443,7 +1443,7 @@
     <string name="d106sube"> day ہر روز آٹھ گلاس سے زیادہ</string>
     <string name="d150d"> فی دن 5 یا زیادہ چائے کے چمچ</string>
 
-    <string name="td2heading">SECTION D2: DAIRY </string>
+ <string name="td2heading"> SECTION D2: DAIRY </string>
     <string name="d201"> d201: آپ کے (بچے کا نام) عام طور پر کون سا سفید دودھ پیتے ہیں؟</string>
     <string name="d201a"> گائے کا دودھ</string>
     <string name="d201b"> بکری کا دودھ</string>
@@ -1539,7 +1539,7 @@
     <string name="d210f"> سورج مکھی کا تیل</string>
     <string name="d210g"> معلوم نہیں</string>
 
-    <string name="td3heading">SECTION D3: FAST FOOD/JUNK FOOD/SNACKS </string>
+ <string name="td3heading"> SECTION D3: FAST FOOD / JUNK FOOD / SNACKS </string>
     <string name="d301"> D301: مٹھائی (کیک، پیسٹری)</string>
     <string name="d301a"> گھر میں</string>
     <string name="d301b"> گھرکے باہر</string>
@@ -1683,7 +1683,7 @@
     <string name="d405d"> ایک مہینے میں ایک سے تین بار</string>
     <string name="d405e"> کبھی مہینے میں ایک بار سے بھی کم / نہیں</string>
 
-    <string name="td6heading">SECTION D6: GRAINS </string>
+ <string name="td6heading"> SECTION D6: GRAINS </string>
     <string name="d601"> d601: نرم اناج/غذا</string>
     <string name="d601a"> ایک دن میں ایک سے زیادہ کٹورے</string>
     <string name="d601b"> ہر ہفتہ ایک کٹورا</string>
