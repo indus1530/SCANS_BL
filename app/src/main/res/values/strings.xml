@@ -1530,27 +1530,30 @@
     <string name="d209sube"> دو یا چھ چمچ ایک ہفتے میں</string>
     <string name="d209subf"> ایک ماہ میں ایک سے تین چمچ</string>
     <string name="d209subg"> کبھی نہیں / فی مہینہ ایک چمچ سے بھی کم</string>
-    <string name="d210"> d210: آپ کاخاندان گھرمیں کونسا تیل استعمال کرتا ہے (وہ سب سلیکٹ کریں جو مناسب ہیں)</string>
-    <string name="d210a"> سرسوں کا تیل</string>
-    <string name="d210b"> مکئی کا تیل</string>
-    <string name="d210c"> زیتون کا تیل</string>
-    <string name="d210d"> سبزیوں کا تیل</string>
-    <string name="d210e"> زعفران کا تیل</string>
-    <string name="d210f"> سورج مکھی کا تیل</string>
-    <string name="d210g"> معلوم نہیں</string>
 
-    <string name="td3heading">SECTION D3: FAST FOOD/JUNK FOOD/SNACKS </string>
+   <string name="d210"> D210: آپ کا خاندان گھر میں کونسا تیل استعمال کرتا ہے </string>
+   <string name="d210a"> سرسوں کا تیل </string>
+   <string name="d210b"> مکئی کا تیل </string>
+   <string name="d210c"> زیتون کا تیل </string>
+   <string name="d210d"> سبزیوں کا تیل </string>
+   <string name="d210e"> زعفران کا تیل </string>
+   <string name="d210f"> سورج مکھی کا تیل </string>
+   <string name="d210g"> معلوم نہیں </string>
+
+   <string name="td3heading"> SECTION D3: FAST FOOD / JUNK FOOD / SNACKS </string>
     <string name="d301"> D301: مٹھائی (کیک، پیسٹری)</string>
     <string name="d301a"> گھر میں</string>
     <string name="d301b"> گھرکے باہر</string>
     <string name="d301c"> دونوں</string>
-    <string name="d301sub"> d301_sub: مٹھائی (کیک، پیسٹری)</string>
+
+   <string name="d301sub"> D301_sub: مٹھائی (کیک، پیسٹری)</string>
     <string name="d301suba"> ایک ہفتے میں ایک مرتبہ</string>
     <string name="d301subb"> ہفتے میں دو سے چار مرتبہ</string>
     <string name="d301subc"> ہفتے میں چار سے زیادہ مرتبہ</string>
     <string name="d301subd"> ایک مہینے میں ایک سے تین بار</string>
     <string name="d301sube"> مہینے میں ایک بار سے بھی کم / کبھی نہیں</string>
-    <string name="d302"> d302: بسکٹ</string>
+
+   <string name="d302"> D302: بسکٹ</string>
     <string name="d302a"> گھر میں</string>
     <string name="d302b"> گھرکے باہر</string>
     <string name="d302c"> دونوں</string>

@@ -881,6 +881,7 @@
     <string name="b312g"> Gift</string>
     <string name="b312h"> food aid</string>
     <string name="b312x"> Other</string>
+
     <string name="b313"> B313:\t Honey, sugar and Sweets </string>
     <string name="b313a"> Not Consumed </string>
     <string name="b313b"> own production</string>
@@ -1511,7 +1512,7 @@
     <string name="d104a"> With Sugar </string>
     <string name="d104b"> Without Sugar </string>
 
-    <string name="d104sub"> D104sub:\t Tea with milk</string>
+    <string name="d104sub"> D104sub:\t Tea with milk </string>
     <string name="d104suba"> 1 cup per day </string>
     <string name="d104subb"> 2 cups per day </string>
     <string name="d104subc"> 3 or more cups per day </string>
@@ -2071,7 +2072,7 @@
     <string name="l104"> l104:\t Haemoglobin</string>
 
     <!-- SECTION M -->
-    <string name="tmheading">SECTION M: VISION TEST </string>
+    <string name="tmheading"> SECTION M: VISION TEST </string>
     <string name="m101"> M101:\t Vision Test was performed ? </string>
     <string name="m101a"> Yes </string>
     <string name="m101b"> No </string>
