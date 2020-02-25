@@ -105,12 +105,14 @@ class FamilyMembersListActivity : AppCompatActivity() {
                                             val indexMwraUpdate = async { updateKishMember(indexKishMWRA, 1) }
                                             val indexChildUpdate = async { updateKishMember(indexKishMWRAChild, 2) }
                                             if (indexMwraUpdate.await().let { true } and indexChildUpdate.await().let { true }) {
+                                                finish()
                                                 startActivity(Intent(this@FamilyMembersListActivity, SectionA31Activity::class.java))
                                             }
                                         }
-                                    } else
+                                    } else {
+                                        finish()
                                         startActivity(Intent(this@FamilyMembersListActivity, EndingActivity::class.java).putExtra("complete", true))
-
+                                    }
                                 }
                                 else -> Util.openEndActivity(this)
                             }
