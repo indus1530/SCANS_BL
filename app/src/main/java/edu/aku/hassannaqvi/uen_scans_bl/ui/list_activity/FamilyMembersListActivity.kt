@@ -15,7 +15,6 @@ import edu.aku.hassannaqvi.uen_scans_bl.R
 import edu.aku.hassannaqvi.uen_scans_bl.adapter.FamilyMemberListAdapter
 import edu.aku.hassannaqvi.uen_scans_bl.contracts.FamilyMembersContract
 import edu.aku.hassannaqvi.uen_scans_bl.core.DatabaseHelper
-import edu.aku.hassannaqvi.uen_scans_bl.core.MainApp
 import edu.aku.hassannaqvi.uen_scans_bl.core.MainApp.*
 import edu.aku.hassannaqvi.uen_scans_bl.databinding.ActivityFamilyMembersListBinding
 import edu.aku.hassannaqvi.uen_scans_bl.otherClasses.KishGrid
@@ -143,7 +142,7 @@ class FamilyMembersListActivity : AppCompatActivity() {
         bi.contentScroll.recyclerView.adapter = adapter
         adapter.setItemClicked { item, position ->
             openDialog(this, item)
-            MainApp.setItemClick {
+            setItemClick {
 
                 currentFM = item
 

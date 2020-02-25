@@ -24,7 +24,7 @@
         android:theme="@style/AppTheme1">
         <provider
             android:name=".otherClasses.FamilyMemContentProvider"
-            android:authorities="com.scans.familymem"
+            android:authorities="com.scans.familymember"
             android:enabled="true"
             android:exported="true"></provider>
 
