@@ -16,11 +16,11 @@
     <string name="permission_rationale">"Contacts permissions are needed for providing email completions." </string>
     <string name="ta1heading">SECTION A: HH Identification </string>
     <string name="ta2heading">SECTION A2: MEMBERS INFORMATION </string>
-    <string name="tdheading">SECTION D: HOUSEHOLD MEMBER’S INFORMATION</string>
+    <string name="tdheading">SECTION D: HOUSEHOLD MEMBER’S INFORMATION </string>
     <string name="teheading">SECTION E: REPRODUCTIVE HEALTH (Complete this table for all married women aged 15 &#8211; 49 years in the household) </string>
-    <string name="te2heading">MATERNAL MORTALITY STATUS</string>
-    <string name="tfheading">SECTION F: ANTENATAL CARE</string>
-    <string name="tiheading">SECTION I: CHILD HEALTH</string>
+    <string name="te2heading">MATERNAL MORTALITY STATUS </string>
+    <string name="tfheading">SECTION F: ANTENATAL CARE </string>
+    <string name="tiheading">SECTION I: CHILD HEALTH </string>
     <string name="ti2heading">SECTION I2: ACUTE RESPIRATORY INFECTION (ARI)</string>
     <string name="tjheading">SECTION J: IMMUNIZATION</string>
     <string name="tnheading">SECTION N: WATER AND SANITATION</string>
@@ -343,19 +343,21 @@
     <string name="a307m"> سطح والا پانی(دریا،جھیل ،ڈیم،تالاب/ ندی/نہر کا پانی</string>
     <string name="a307n"> بوتل کا پانی</string>
     <string name="a307x"> دیگر وضاحت کریں</string>
-    <string name="a307aa"> a307aa: آپ کے گھر میں کھانا پکانے اور ہاتھ دھونے اور دوسرے مقاصد کے لئے استعمال کیے جانے والے پانی کا اہم ذریعہ کیا ہے؟ میونسپل کمیٹی کا پانی کاکنکشن </string>
+
+    <string name="a307aa"> A307aa: آپ کے گھر میں کھانا پکانے اور ہاتھ دھونے اور دوسرے مقاصد کے لئے استعمال کیے جانے والے پانی کا اہم ذریعہ کیا ہے؟ میونسپل کمیٹی کا پانی کاکنکشن </string>
     <string name="a307aaa"> ہاں</string>
     <string name="a307aab"> نہیں</string>
-    <string name="a308"> a308: پانی کا ذریعہ کہاں واقع ہے؟</string>
-    <string name="a308a"> اپنے گھر میں</string>
-    <string name="a308b"> اپنے چارديوارى/ پلاٹ میں گھرسے باہر</string>
-    <string name="a308c"> کہیں اور</string>
 
-    <string name="a309"> A309: آپکوپانی کے اہم ذریعے تک پہنچنے میں اور وہاں سے پانی لے کر گھر آنے میں کتنا وقت لگتا ہے ؟ وقت منٹوں میں لکھیں</string>
+    <string name="a308">  A308:\t پانی کا ذریعہ کہاں واقع ہے ؟ </string>
+    <string name="a308a"> اپنے گھر میں </string>
+    <string name="a308b"> اپنے چارديوارى / پلاٹ میں گھر سے باہر </string>
+    <string name="a308c"> کہیں اور </string>
+
+    <string name="a309"> A309:\t آپکو پانی کے اہم ذریعے تک پہنچنے میں اور وہاں سے پانی لے کر گھر آنے میں کتنا وقت لگتا ہے ؟ </string>
     <string name="a309a"> منٹ کی تعداد </string>
     <string name="a30998"> معلوم نہیں </string>
 
-    <string name="a310"> a310: عام طور پر گھر کے لئے پانی جمع کرنے کے لئے کون جاتا ہے؟ کیا اس کی عمر 15 سال سے کم ہے؟ جنس کیا ہے؟</string>
+    <string name="a310"> A310: عام طور پر گھر کے لئے پانی جمع کرنے کے لئے کون جاتا ہے ؟ کیا اس کی عمر 15 سال سے کم ہے ؟ جنس کیا ہے ؟ </string>
     <string name="a310a"> بالغ عورت (15 سال سے بڑی عمر)</string>
     <string name="a310b"> بالغ مرد (15 سال سے بڑی عمر) </string>
     <string name="a310c"> (15 سال سے کم عمر) لڑکی</string>
@@ -1225,7 +1227,7 @@
 
     <string name="tc5heading">SECTION C5: LIFESTYLE AND PHYSICAL ACTIVITY </string>
     <string name="c501_title"> حصہ ای :اسکول کے دنوں میں </string>
-    <string name="c501"> C501: (بچے کا نام) اسکول کے دنوں کے دوران، اوسطا کتنے گھنٹے ٹی وی دیکھتا ہے؟ </string>
+    <string name="c501"> C501:\t بچے کا نام) اسکول کے دنوں کے دوران، اوسطا کتنے گھنٹے ٹی وی دیکھتا ہے ؟) </string>
     <string name="c501a"> کوئی بھی نہیں</string>
     <string name="c501b"> 1 گھنٹہ سے کم</string>
     <string name="c501c"> 1 گھنٹہ</string>
@@ -1233,15 +1235,17 @@
     <string name="c501e"> 3 گھنٹہ</string>
     <string name="c501f"> 4 گھنٹہ</string>
     <string name="c501g"> 5 یا اس سے زیادہ گھنٹے</string>
+
     <string name="c502"> c502: بچے کا نام) اسکول کے دنوں کے دوران، اوسطاۖ کتنے گھنٹے ویڈیو یا کمپیوٹر یاموبائل یا ٹیبلٹ میں کھیل کھیلتا ہے یا کمپیوٹر کا استعمال کرتا ہے جو اس کے اسکول کاکام نہیں ہے؟ </string>
-    <string name="c502a"> کوئی بھی نہیں</string>
-    <string name="c502b"> 1 گھنٹہ سے کم</string>
-    <string name="c502c"> 1 گھنٹہ</string>
-    <string name="c502d"> 2 گھنٹہ</string>
-    <string name="c502e"> 3 گھنٹہ</string>
-    <string name="c502f"> 4 گھنٹہ</string>
-    <string name="c502g"> 5 یا اس سے زیادہ گھنٹے</string>
-    <string name="c503"> c503: بچے کا نام) اسکول کے دنوں کے دوران، اوسطاۖ کتنا وقت اسکول سے پہلے باہر گذارتاکرتا ہے؟</string>
+    <string name="c502a"> کوئی بھی نہیں </string>
+    <string name="c502b"> 1 گھنٹہ سے کم </string>
+    <string name="c502c"> 1 گھنٹہ </string>
+    <string name="c502d"> 2 گھنٹہ </string>
+    <string name="c502e"> 3 گھنٹہ </string>
+    <string name="c502f"> 4 گھنٹہ </string>
+    <string name="c502g"> 5 یا اس سے زیادہ گھنٹے </string>
+
+    <string name="c503"> C503:\t بچے کا نام) اسکول کے دنوں کے دوران، اوسطاۖ کتنا وقت اسکول سے پہلے باہر گذارتا کرتا ہے ؟)  </string>
     <string name="c503a"> کوئی بھی نہیں</string>
     <string name="c503b"> 1 گھنٹہ سے کم</string>
     <string name="c503c"> 1 گھنٹہ</string>
@@ -1249,14 +1253,15 @@
     <string name="c503e"> 3 گھنٹہ</string>
     <string name="c503f"> 4 گھنٹہ</string>
     <string name="c503g"> 5 یا اس سے زیادہ گھنٹے</string>
-    <string name="c504"> c504: بچے کا نام) اسکول کے دنوں کے دوران، اوسطا سے آنے اسکول کے بعد اورسونےسےپہلے کتناوقت گھرسے باہر گذارتا ہے؟</string>
-    <string name="c504a"> کوئی بھی نہیں</string>
-    <string name="c504b"> 1 گھنٹہ سے کم</string>
-    <string name="c504c"> 1 گھنٹہ</string>
-    <string name="c504d"> 2 گھنٹہ</string>
-    <string name="c504e"> 3 گھنٹہ</string>
-    <string name="c504f"> 4 گھنٹہ</string>
-    <string name="c504g"> 5 یا اس سے زیادہ گھنٹے</string>
+
+    <string name="c504"> C504:\t بچے کا نام) اسکول کے دنوں کے دوران، اوسطا سے آنے اسکول کے بعد اور سونے سے پہلے کتنا وقت گھر سے باہر گذارتا ہے ؟)  </string>
+    <string name="c504a"> کوئی بھی نہیں </string>
+    <string name="c504b"> 1 گھنٹہ سے کم </string>
+    <string name="c504c"> 1 گھنٹہ </string>
+    <string name="c504d"> 2 گھنٹہ </string>
+    <string name="c504e"> 3 گھنٹہ </string>
+    <string name="c504f"> 4 گھنٹہ </string>
+    <string name="c504g"> 5 یا اس سے زیادہ گھنٹے </string>
 
     <string name="c505_title"> چھٹی کے دن </string>
     <string name="c505"> C505: (بچے کا نام) اسکول کے دوران چھٹی کےدن کتنا وقت ٹی وی دیکھتا ہے؟</string>
@@ -1267,6 +1272,7 @@
     <string name="c505e"> 3 گھنٹہ</string>
     <string name="c505f"> 4 گھنٹہ</string>
     <string name="c505g"> 5 یا اس سے زیادہ گھنٹے</string>
+
     <string name="c506"> c506: (بچے کا نام) اسکول کے دوران چھٹی کےدن کتنے گھنٹے ویڈیو یا کمپیوٹر یاموبائل یا ٹیبلٹ میں کھیل کھیلتا ہے یا کمپیوٹر کا استعمال کرتا ہے جو اس کے اسکول کاکام نہیں ہے؟</string>
     <string name="c506a"> کوئی بھی نہیں</string>
     <string name="c506b"> 1 گھنٹہ سے کم</string>
@@ -1275,42 +1281,45 @@
     <string name="c506e"> 3 گھنٹہ</string>
     <string name="c506f"> 4 گھنٹہ</string>
     <string name="c506g"> 5 یا اس سے زیادہ گھنٹے</string>
-    <string name="c507"> c507: (بچے کا نام) اسکول کے دوران چھٹی کےدن کتناوقت گھرسے باہر گذارتا ہے ؟</string>
-    <string name="c507a"> کوئی بھی نہیں</string>
-    <string name="c507b"> 1 گھنٹہ سے کم</string>
-    <string name="c507c"> 1 گھنٹہ</string>
-    <string name="c507d"> 2 گھنٹہ</string>
-    <string name="c507e"> 3 گھنٹہ</string>
-    <string name="c507f"> 4 گھنٹہ</string>
-    <string name="c507g"> 5 یا اس سے زیادہ گھنٹے</string>
-    <string name="c508"> c508: گزشتہ ہفتے (7 دن) کے دوران، (بچے کا نام) کتنے دن (فی دن کم از کم 60 منٹ کے لئے) جسمانی طور پر سرگرم رہا؟ سرگرمیوں میں گذاراہوا تمام وقت جس نے آپ کے دل کی دھڑکن کو بڑھایا اور آپ کوسانس لینےمیں مشکل /دشواری ہوئی</string>
-    <string name="c508a"> 0دن</string>
-    <string name="c508b"> ایک دن</string>
+
+    <string name="c507"> C507:\t  بچے کا نام) اسکول کے دوران چھٹی کےدن کتناوقت گھرسے باہر گذارتا ہے ؟) </string>
+    <string name="c507a"> کوئی بھی نہیں </string>
+    <string name="c507b"> 1 گھنٹہ سے کم </string>
+    <string name="c507c"> 1 گھنٹہ </string>
+    <string name="c507d"> 2 گھنٹہ </string>
+    <string name="c507e"> 3 گھنٹہ </string>
+    <string name="c507f"> 4 گھنٹہ </string>
+    <string name="c507g"> 5 یا اس سے زیادہ گھنٹے </string>
+
+    <string name="c508"> C508:\t گزشتہ ہفتے (7 دن) کے دوران، (بچے کا نام) کتنے دن (فی دن کم از کم 60 منٹ کے لئے) جسمانی طور پر سرگرم رہا ؟ سرگرمیوں میں گذارا ہوا تمام وقت جس نے بچے کے دل کی دھڑکن کو بڑھایا اور بچے کو سانس لینے میں مشکل / دشواری ہوئی </string>
+    <string name="c508a"> 0 دن </string>
+    <string name="c508b"> ایک دن </string>
     <string name="c508c"> دو دن </string>
-    <string name="c508d"> تین دن</string>
+    <string name="c508d"> تین دن </string>
     <string name="c508e"> چار دن </string>
-    <string name="c508f"> پانچ دن</string>
-    <string name="c508g"> چھ دن</string>
-    <string name="c508h"> سات دن</string>
+    <string name="c508f"> پانچ دن </string>
+    <string name="c508g"> چھ دن </string>
+    <string name="c508h"> سات دن </string>
 
     <string name="c509_title"> حصہ بی: اسکول میں نہ جانے والے بچے </string>
-    <string name="c509"> C509: (بچے کا نام) عام طور پر کتنے گھنٹے ٹی وی دیکھتا ہے؟</string>
-    <string name="c509a"> نہیں دیکھا</string>
-    <string name="c509b"> 1 گھنٹہ سے کم</string>
-    <string name="c509c"> 1 گھنٹہ</string>
-    <string name="c509d"> 2 گھنٹہ</string>
-    <string name="c509e"> 3 گھنٹہ</string>
-    <string name="c509f"> 4 گھنٹہ</string>
-    <string name="c509g"> 5 یا اس سے زیادہ گھنٹے</string>
 
-    <string name="c510"> c510: (بچے کا نام) کتنے گھنٹے کمپیوٹر / ٹیبلٹ / موبائل فون پرویڈیودیکھتا یا کھیلتا ہے؟</string>
-    <string name="c510a"> نہیں دیکھا</string>
-    <string name="c510b"> 1 گھنٹہ سے کم</string>
-    <string name="c510c"> 1 گھنٹہ</string>
-    <string name="c510d"> 2 گھنٹہ</string>
-    <string name="c510e"> 3 گھنٹہ</string>
-    <string name="c510f"> 4 گھنٹہ</string>
-    <string name="c510g"> 5 یا اس سے زیادہ گھنٹے</string>
+    <string name="c509"> C509:\t بچے کا نام) عام طور پر کتنے گھنٹے ٹی وی دیکھتا ہے ؟) </string>
+    <string name="c509a"> نہیں دیکھا </string>
+    <string name="c509b"> 1 گھنٹہ سے کم </string>
+    <string name="c509c"> 1 گھنٹہ </string>
+    <string name="c509d"> 2 گھنٹہ </string>
+    <string name="c509e"> 3 گھنٹہ </string>
+    <string name="c509f"> 4 گھنٹہ </string>
+    <string name="c509g"> 5 یا اس سے زیادہ گھنٹے </string>
+
+    <string name="c510"> C510:\t  (بچے کا نام) کتنے گھنٹے کمپیوٹر / ٹیبلٹ / موبائل فون پر ویڈیو دیکھتا یا کھیلتا ہے ؟ </string>
+    <string name="c510a"> نہیں دیکھا </string>
+    <string name="c510b"> 1 گھنٹہ سے کم </string>
+    <string name="c510c"> 1 گھنٹہ </string>
+    <string name="c510d"> 2 گھنٹہ </string>
+    <string name="c510e"> 3 گھنٹہ </string>
+    <string name="c510f"> 4 گھنٹہ </string>
+    <string name="c510g"> 5 یا اس سے زیادہ گھنٹے </string>
 
     <string name="c511"> c511: (بچے کا نام)کتنا وقت گھرسے باہر گذارتا ہے ؟</string>
     <string name="c511a"> نہیں دیکھا</string>
@@ -1443,7 +1452,7 @@
     <string name="d106sube"> day ہر روز آٹھ گلاس سے زیادہ</string>
     <string name="d150d"> فی دن 5 یا زیادہ چائے کے چمچ</string>
 
-    <string name="td2heading">SECTION D2: DAIRY </string>
+    <string name="td2heading"> SECTION D2: DAIRY </string>
     <string name="d201"> d201: آپ کے (بچے کا نام) عام طور پر کون سا سفید دودھ پیتے ہیں؟</string>
     <string name="d201a"> گائے کا دودھ</string>
     <string name="d201b"> بکری کا دودھ</string>
@@ -1530,30 +1539,27 @@
     <string name="d209sube"> دو یا چھ چمچ ایک ہفتے میں</string>
     <string name="d209subf"> ایک ماہ میں ایک سے تین چمچ</string>
     <string name="d209subg"> کبھی نہیں / فی مہینہ ایک چمچ سے بھی کم</string>
-
-   <string name="d210"> D210: آپ کا خاندان گھر میں کونسا تیل استعمال کرتا ہے </string>
-   <string name="d210a"> سرسوں کا تیل </string>
-   <string name="d210b"> مکئی کا تیل </string>
-   <string name="d210c"> زیتون کا تیل </string>
-   <string name="d210d"> سبزیوں کا تیل </string>
-   <string name="d210e"> زعفران کا تیل </string>
-   <string name="d210f"> سورج مکھی کا تیل </string>
-   <string name="d210g"> معلوم نہیں </string>
+    <string name="d210"> d210: آپ کاخاندان گھرمیں کونسا تیل استعمال کرتا ہے (وہ سب سلیکٹ کریں جو مناسب ہیں)</string>
+    <string name="d210a"> سرسوں کا تیل</string>
+    <string name="d210b"> مکئی کا تیل</string>
+    <string name="d210c"> زیتون کا تیل</string>
+    <string name="d210d"> سبزیوں کا تیل</string>
+    <string name="d210e"> زعفران کا تیل</string>
+    <string name="d210f"> سورج مکھی کا تیل</string>
+    <string name="d210g"> معلوم نہیں</string>
 
    <string name="td3heading"> SECTION D3: FAST FOOD / JUNK FOOD / SNACKS </string>
     <string name="d301"> D301: مٹھائی (کیک، پیسٹری)</string>
     <string name="d301a"> گھر میں</string>
     <string name="d301b"> گھرکے باہر</string>
     <string name="d301c"> دونوں</string>
-
-   <string name="d301sub"> D301_sub: مٹھائی (کیک، پیسٹری)</string>
+    <string name="d301sub"> d301_sub: مٹھائی (کیک، پیسٹری)</string>
     <string name="d301suba"> ایک ہفتے میں ایک مرتبہ</string>
     <string name="d301subb"> ہفتے میں دو سے چار مرتبہ</string>
     <string name="d301subc"> ہفتے میں چار سے زیادہ مرتبہ</string>
     <string name="d301subd"> ایک مہینے میں ایک سے تین بار</string>
     <string name="d301sube"> مہینے میں ایک بار سے بھی کم / کبھی نہیں</string>
-
-   <string name="d302"> D302: بسکٹ</string>
+    <string name="d302"> d302: بسکٹ</string>
     <string name="d302a"> گھر میں</string>
     <string name="d302b"> گھرکے باہر</string>
     <string name="d302c"> دونوں</string>
@@ -1686,7 +1692,7 @@
     <string name="d405d"> ایک مہینے میں ایک سے تین بار</string>
     <string name="d405e"> کبھی مہینے میں ایک بار سے بھی کم / نہیں</string>
 
-    <string name="td6heading">SECTION D6: GRAINS </string>
+    <string name="td6heading"> SECTION D6: GRAINS </string>
     <string name="d601"> d601: نرم اناج/غذا</string>
     <string name="d601a"> ایک دن میں ایک سے زیادہ کٹورے</string>
     <string name="d601b"> ہر ہفتہ ایک کٹورا</string>
@@ -1998,8 +2004,6 @@
     <string name="countNo">No</string>
     <string name="countYes">Yes</string>
     <string name="countAlertMsg">Are you sure to continue</string>
-
-    <string name="anthro_error">Kindly Re-Do the measurements</string>
 
 
 </resources>
