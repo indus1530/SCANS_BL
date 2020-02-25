@@ -9,7 +9,6 @@
             type="edu.aku.hassannaqvi.uen_scans_bl.ui.sections.SectionD1Activity" />
     </data>
 
-
     <LinearLayout
         style="@style/linearlayout_view_wt_bound"
         android:orientation="vertical">
@@ -55,7 +54,7 @@
                                 android:id="@+id/d101a"
                                 style="@style/radiobutton"
                                 android:layout_width="0dp"
-                                android:layout_weight="0.8"
+                                android:layout_weight="0.9"
                                 android:text="@string/d101a" />
 
                             <RadioButton
@@ -69,8 +68,15 @@
                                 android:id="@+id/d101c"
                                 style="@style/radiobutton"
                                 android:layout_width="0dp"
-                                android:layout_weight="0.8"
+                                android:layout_weight="0.9"
                                 android:text="@string/d101c" />
+
+                            <RadioButton
+                                android:id="@+id/d10197"
+                                style="@style/radiobutton"
+                                android:layout_width="0dp"
+                                android:layout_weight="0.9"
+                                android:text="@string/never" />
 
                         </RadioGroup>
 
@@ -80,7 +86,7 @@
 
                 <!-- d101_sub  Radio   -->
                 <androidx.cardview.widget.CardView
-                    android:id="@+id/fldGrpCVd101_sub"
+                    android:id="@+id/fldGrpCVd101sub"
                     style="@style/cardView">
 
                     <LinearLayout
@@ -165,7 +171,7 @@
                                 android:id="@+id/d102a"
                                 style="@style/radiobutton"
                                 android:layout_width="0dp"
-                                android:layout_weight="0.8"
+                                android:layout_weight="0.9"
                                 android:text="@string/d102a" />
 
                             <RadioButton
@@ -179,8 +185,15 @@
                                 android:id="@+id/d102c"
                                 style="@style/radiobutton"
                                 android:layout_width="0dp"
-                                android:layout_weight="0.8"
+                                android:layout_weight="0.9"
                                 android:text="@string/d102c" />
+
+                            <RadioButton
+                                android:id="@+id/d10297"
+                                style="@style/radiobutton"
+                                android:layout_width="0dp"
+                                android:layout_weight="0.9"
+                                android:text="@string/never" />
 
                         </RadioGroup>
 
