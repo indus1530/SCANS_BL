@@ -282,18 +282,18 @@
 
                                 <TextView
                                     style="@style/textView3Head"
-                                    android:text="@string/a205a" />
+                                    android:text="@string/a205c" />
 
                                 <com.edittextpicker.aliazaz.EditTextPicker
-                                    android:id="@+id/a205a"
+                                    android:id="@+id/a205c"
                                     style="@style/textInput"
-                                    android:hint="@string/a205a"
+                                    android:hint="@string/a205c"
                                     android:inputType="number"
-                                    android:maxLength="2"
+                                    android:maxLength="4"
                                     android:textColor="@android:color/black"
-                                    app:defaultValue="98"
-                                    app:maxValue="31"
-                                    app:minValue="1"
+                                    app:defaultValue="9998"
+                                    app:maxValue="2020"
+                                    app:minValue="1950"
                                     app:type="range" />
 
                             </LinearLayout>
@@ -330,18 +330,18 @@
 
                                 <TextView
                                     style="@style/textView3Head"
-                                    android:text="@string/a205c" />
+                                    android:text="@string/a205a" />
 
                                 <com.edittextpicker.aliazaz.EditTextPicker
-                                    android:id="@+id/a205c"
+                                    android:id="@+id/a205a"
                                     style="@style/textInput"
-                                    android:hint="@string/a205c"
+                                    android:hint="@string/a205a"
                                     android:inputType="number"
-                                    android:maxLength="4"
+                                    android:maxLength="2"
                                     android:textColor="@android:color/black"
-                                    app:defaultValue="9998"
-                                    app:maxValue="2020"
-                                    app:minValue="1950"
+                                    app:defaultValue="98"
+                                    app:maxValue="31"
+                                    app:minValue="1"
                                     app:type="range" />
 
                             </LinearLayout>
