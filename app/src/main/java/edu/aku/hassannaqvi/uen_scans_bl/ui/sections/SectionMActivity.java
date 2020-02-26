@@ -47,14 +47,21 @@ public class SectionMActivity extends AppCompatActivity {
         bi.m101.setOnCheckedChangeListener(((radioGroup, i) -> {
 
             if (i == bi.m101a.getId()) {
-                bi.fldGrpCVm102.setVisibility(View.VISIBLE);
+                bi.fldGrpCVm102a.setVisibility(View.VISIBLE);
+                bi.fldGrpCVm102aa.setVisibility(View.VISIBLE);
+                bi.fldGrpCVm102b.setVisibility(View.VISIBLE);
+                bi.fldGrpCVm102bb.setVisibility(View.VISIBLE);
             } else {
-                Clear.clearAllFields(bi.fldGrpCVm102);
-                bi.fldGrpCVm102.setVisibility(View.GONE);
+                Clear.clearAllFields(bi.fldGrpCVm102a);
+                Clear.clearAllFields(bi.fldGrpCVm102aa);
+                Clear.clearAllFields(bi.fldGrpCVm102b);
+                Clear.clearAllFields(bi.fldGrpCVm102bb);
+                bi.fldGrpCVm102a.setVisibility(View.GONE);
+                bi.fldGrpCVm102aa.setVisibility(View.GONE);
+                bi.fldGrpCVm102b.setVisibility(View.GONE);
+                bi.fldGrpCVm102bb.setVisibility(View.GONE);
             }
-
         }));
-
 
     }
 
