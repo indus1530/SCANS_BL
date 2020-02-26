@@ -81,6 +81,11 @@ public class SectionK1Activity extends AppCompatActivity implements Util.EndSecA
             public void onNothingSelected(AdapterView<?> adapterView) {
             }
         });
+
+        if (!getIntent().getBooleanExtra("firstChild", false)) {
+            bi.fldGrpCVk103.setVisibility(View.GONE);
+            bi.fldGrpCVk104.setVisibility(View.GONE);
+        }
     }
 
 
