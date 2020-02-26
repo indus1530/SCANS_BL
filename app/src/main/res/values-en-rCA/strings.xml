@@ -956,7 +956,7 @@
     <string name="c107d"> About every month </string>
     <string name="c107e"> Rarely or never </string>
 
-    <string name="c108"> C108:\t Feeling low </string>
+    <string name="c108"> C108:\t Feeling Sad </string>
     <string name="c108a"> About every day </string>
     <string name="c108b"> More than 1/week </string>
     <string name="c108c"> About every week </string>
@@ -1547,8 +1547,9 @@
     <string name="d201b"> Goat milk </string>
     <string name="d201c"> Buffalo milk </string>
     <string name="d201d"> Tetra pack </string>
-    <string name="d201e"> Don’t drink milk </string>
-    <string name="d201f"> Don’t know </string>
+    <string name="d201e"> Powder Milk </string>
+    <string name="d201f"> Don’t drink milk </string>
+    <string name="d201g"> Don’t know </string>
 
     <string name="d202"> D202:\t White milk (glass or with cereal)</string>
     <string name="d202a"> 1 glass per day  </string>
@@ -1959,7 +1960,7 @@
     <string name="k102b"> Higher than for his/her age </string>
     <string name="k102c"> Lower than for his/her age </string>
 
-    <string name="k103"> K103:\t How tall is your husband (the father of Child name) than you ? </string>
+    <string name="k103"> K103:\t How is your husband height compared to you? ? </string>
     <string name="k103a"> Taller than you </string>
     <string name="k103b"> Same height as you </string>
     <string name="k103c"> Shorter than you </string>
