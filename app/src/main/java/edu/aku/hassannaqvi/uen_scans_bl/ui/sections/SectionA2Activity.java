@@ -221,28 +221,28 @@ public class SectionA2Activity extends AppCompatActivity {
                 : "0");
 
         sd.put("a209", bi.a209a.isChecked() ? "0" :
-                        bi.a209b.isChecked() ? "1" :
-                                bi.a209c.isChecked() ? "2" :
-                                        bi.a209d.isChecked() ? "3" :
-                                                bi.a209e.isChecked() ? "4" :
-                                                        bi.a209f.isChecked() ? "5" :
-                                                                bi.a209g.isChecked() ? "6" :
-                                                                        bi.a209h.isChecked() ? "7" :
-                                                                                bi.a209i.isChecked() ? "8" :
-                                                                                        bi.a209j.isChecked() ? "9" :
-                                                                                                bi.a209k.isChecked() ? "10" :
-                                                                                                        bi.a209l.isChecked() ? "11" :
-                                                                                                                bi.a209m.isChecked() ? "12" :
-                                                                                                                        bi.a209n.isChecked() ? "13" :
-                                                                                                                                bi.a209o.isChecked() ? "14" :
-                                                                                                                                        bi.a209p.isChecked() ? "15" :
-                                                                                                                                                bi.a209q.isChecked() ? "16" :
-                                                                                                                                                        bi.a209r.isChecked() ? "17" :
-                                                                                                                                                                bi.a209s.isChecked() ? "18" :
-                                                                                                                                                                        bi.a209t.isChecked() ? "19" :
-                                                                                                                                                                                bi.a209u.isChecked() ? "20" :
-                                                                                                                                                                                        bi.a209v.isChecked() ? "98" :
-                                                                                                                                                                                                bi.a209w.isChecked() ? "97" : "0");
+                bi.a209b.isChecked() ? "1" :
+                        bi.a209c.isChecked() ? "2" :
+                                bi.a209d.isChecked() ? "3" :
+                                        bi.a209e.isChecked() ? "4" :
+                                                bi.a209f.isChecked() ? "5" :
+                                                        bi.a209g.isChecked() ? "6" :
+                                                                bi.a209h.isChecked() ? "7" :
+                                                                        bi.a209i.isChecked() ? "8" :
+                                                                                bi.a209j.isChecked() ? "9" :
+                                                                                        bi.a209k.isChecked() ? "10" :
+                                                                                                bi.a209l.isChecked() ? "11" :
+                                                                                                        bi.a209m.isChecked() ? "12" :
+                                                                                                                bi.a209n.isChecked() ? "13" :
+                                                                                                                        bi.a209o.isChecked() ? "14" :
+                                                                                                                                bi.a209p.isChecked() ? "15" :
+                                                                                                                                        bi.a209q.isChecked() ? "16" :
+                                                                                                                                                bi.a209r.isChecked() ? "17" :
+                                                                                                                                                        bi.a209s.isChecked() ? "18" :
+                                                                                                                                                                bi.a209t.isChecked() ? "19" :
+                                                                                                                                                                        bi.a209u.isChecked() ? "20" :
+                                                                                                                                                                                bi.a209v.isChecked() ? "98" :
+                                                                                                                                                                                        bi.a209w.isChecked() ? "97" : "0");
         sd.put("a210", bi.a210a.isChecked() ? "1" :
                 bi.a210b.isChecked() ? "2" :
                         bi.a210c.isChecked() ? "3" :
@@ -266,12 +266,12 @@ public class SectionA2Activity extends AppCompatActivity {
         // Update in ViewModel
         mainVModel.updateFamilyMembers(fmc);
 
-        if (Integer.valueOf(fmc.getAge()) >= 15 && Integer.valueOf(fmc.getAge()) <= 49 && fmc.getGender().equals("2") && !bi.a207b.isChecked())
+        if (Integer.valueOf(fmc.getAge()) >= 15 && Integer.valueOf(fmc.getAge()) < 49 && fmc.getGender().equals("2") && !bi.a207b.isChecked())
             mainVModel.setMWRA(fmc);
-        else if (Integer.valueOf(fmc.getAge()) >= 5 && Integer.valueOf(fmc.getAge()) <= 10) {
+        else if (Integer.valueOf(fmc.getAge()) >= 5 && Integer.valueOf(fmc.getAge()) < 10) {
             mainVModel.setChildU5to10(fmc);
             if (motherFMC == null) return;
-            if (Integer.valueOf(motherFMC.getAge()) >= 15 && Integer.valueOf(motherFMC.getAge()) <= 49 && motherFMC.getAvailable().equals("1"))
+            if (Integer.valueOf(motherFMC.getAge()) >= 15 && Integer.valueOf(motherFMC.getAge()) <= 49)
                 mainVModel.setMwraChildU5to10(motherFMC);
         }
 
