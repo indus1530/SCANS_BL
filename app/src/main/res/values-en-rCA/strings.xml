@@ -1,3 +1,4 @@
+<?xml version="1.0" encoding="utf-8"?>
 <resources>
 
     <!--new Strings-->
@@ -63,6 +64,9 @@
     <string name="total">Total</string>
     <string name="mwra">MWRA</string>
     <string name="under5">Child Age 5 \- 10</string>
+    <string name="part">Partial</string>
+    <string name="complt">Complete</string>
+    <string name="anthro_error">Kindly Re-Do the measurements</string>
 
     <string name="a101"> Cluster number </string>
     <string name="a101a"> This information will be based on the list of villages generated from the district. Each enumerator will be given a list of clusters that he/she will be visiting, and before starting the interview, this information will be entered from the same list. </string>
@@ -880,6 +884,7 @@
     <string name="b312g"> Gift</string>
     <string name="b312h"> food aid</string>
     <string name="b312x"> Other</string>
+
     <string name="b313"> B313:\t Honey, sugar and Sweets </string>
     <string name="b313a"> Not Consumed </string>
     <string name="b313b"> own production</string>
@@ -951,7 +956,7 @@
     <string name="c107d"> About every month </string>
     <string name="c107e"> Rarely or never </string>
 
-    <string name="c108"> C108:\t Feeling low </string>
+    <string name="c108"> C108:\t Feeling Sad </string>
     <string name="c108a"> About every day </string>
     <string name="c108b"> More than 1/week </string>
     <string name="c108c"> About every week </string>
@@ -1510,7 +1515,7 @@
     <string name="d104a"> With Sugar </string>
     <string name="d104b"> Without Sugar </string>
 
-    <string name="d104sub"> D104sub:\t Tea with milk</string>
+    <string name="d104sub"> D104sub:\t Tea with milk </string>
     <string name="d104suba"> 1 cup per day </string>
     <string name="d104subb"> 2 cups per day </string>
     <string name="d104subc"> 3 or more cups per day </string>
@@ -1542,8 +1547,9 @@
     <string name="d201b"> Goat milk </string>
     <string name="d201c"> Buffalo milk </string>
     <string name="d201d"> Tetra pack </string>
-    <string name="d201e"> Don’t drink milk </string>
-    <string name="d201f"> Don’t know </string>
+    <string name="d201e"> Powder Milk </string>
+    <string name="d201f"> Don’t drink milk </string>
+    <string name="d201g"> Don’t know </string>
 
     <string name="d202"> D202:\t White milk (glass or with cereal)</string>
     <string name="d202a"> 1 glass per day  </string>
@@ -1954,7 +1960,7 @@
     <string name="k102b"> Higher than for his/her age </string>
     <string name="k102c"> Lower than for his/her age </string>
 
-    <string name="k103"> K103:\t How tall is your husband (the father of Child name) than you ? </string>
+    <string name="k103"> K103:\t How is your husband height compared to you? ? </string>
     <string name="k103a"> Taller than you </string>
     <string name="k103b"> Same height as you </string>
     <string name="k103c"> Shorter than you </string>
@@ -2070,7 +2076,7 @@
     <string name="l104"> l104:\t Haemoglobin</string>
 
     <!-- SECTION M -->
-    <string name="tmheading">SECTION M: VISION TEST </string>
+    <string name="tmheading"> SECTION M: VISION TEST </string>
     <string name="m101"> M101:\t Vision Test was performed ? </string>
     <string name="m101a"> Yes </string>
     <string name="m101b"> No </string>
@@ -2086,10 +2092,9 @@
     <string name="nextSection"> Next Section </string>
 
 
-    <string name="dialog_text">Please add Info for second child.</string>
-    <string name="countNo">No</string>
-    <string name="countYes">Yes</string>
-    <string name="countAlertMsg">Are you sure to continue</string>
-
+    <string name="dialog_text"> Please add Info for second child. </string>
+    <string name="countNo"> No </string>
+    <string name="countYes"> Yes </string>
+    <string name="countAlertMsg"> Surely! You want to continue </string>
 
 </resources>

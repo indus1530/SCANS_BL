@@ -2,6 +2,7 @@ package edu.aku.hassannaqvi.uen_scans_bl.ui.sections;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.view.View;
 import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
@@ -29,7 +30,110 @@ public class SectionD3Activity extends AppCompatActivity {
         bi = DataBindingUtil.setContentView(this, R.layout.activity_section_d3);
         bi.setCallback(this);
 
+        setupListeners();
 
+    }
+
+    private void setupListeners() {
+
+        bi.d301.setOnCheckedChangeListener((group, checkedId) -> {
+            if (checkedId == bi.d30197.getId()) {
+                bi.d301sub.clearCheck();
+                bi.fldGrpCVd301sub.setVisibility(View.GONE);
+            } else {
+                bi.fldGrpCVd301sub.setVisibility(View.VISIBLE);
+            }
+        });
+
+        bi.d302.setOnCheckedChangeListener((group, checkedId) -> {
+            if (checkedId == bi.d30297.getId()) {
+                bi.d302sub.clearCheck();
+                bi.fldGrpCVd302sub.setVisibility(View.GONE);
+            } else {
+                bi.fldGrpCVd302sub.setVisibility(View.VISIBLE);
+            }
+        });
+
+        bi.d303.setOnCheckedChangeListener((group, checkedId) -> {
+            if (checkedId == bi.d30397.getId()) {
+                bi.d303sub.clearCheck();
+                bi.fldGrpCVd303sub.setVisibility(View.GONE);
+            } else {
+                bi.fldGrpCVd303sub.setVisibility(View.VISIBLE);
+            }
+        });
+
+        bi.d304.setOnCheckedChangeListener((group, checkedId) -> {
+            if (checkedId == bi.d30497.getId()) {
+                bi.d304sub.clearCheck();
+                bi.fldGrpCVd304sub.setVisibility(View.GONE);
+            } else {
+                bi.fldGrpCVd304sub.setVisibility(View.VISIBLE);
+            }
+        });
+
+        bi.d305.setOnCheckedChangeListener((group, checkedId) -> {
+            if (checkedId == bi.d30597.getId()) {
+                bi.d305sub.clearCheck();
+                bi.fldGrpCVd305sub.setVisibility(View.GONE);
+            } else {
+                bi.fldGrpCVd305sub.setVisibility(View.VISIBLE);
+            }
+        });
+
+        bi.d306.setOnCheckedChangeListener((group, checkedId) -> {
+            if (checkedId == bi.d30697.getId()) {
+                bi.d306sub.clearCheck();
+                bi.fldGrpCVd306sub.setVisibility(View.GONE);
+            } else {
+                bi.fldGrpCVd306sub.setVisibility(View.VISIBLE);
+            }
+        });
+
+        bi.d307.setOnCheckedChangeListener((group, checkedId) -> {
+            if (checkedId == bi.d30797.getId()) {
+                bi.d307sub.clearCheck();
+                bi.fldGrpCVd307sub.setVisibility(View.GONE);
+            } else {
+                bi.fldGrpCVd307sub.setVisibility(View.VISIBLE);
+            }
+        });
+
+        bi.d308.setOnCheckedChangeListener((group, checkedId) -> {
+            if (checkedId == bi.d30897.getId()) {
+                bi.d308sub.clearCheck();
+                bi.fldGrpCVd308sub.setVisibility(View.GONE);
+            } else {
+                bi.fldGrpCVd308sub.setVisibility(View.VISIBLE);
+            }
+        });
+
+        bi.d309.setOnCheckedChangeListener((group, checkedId) -> {
+            if (checkedId == bi.d30997.getId()) {
+                bi.d309sub.clearCheck();
+                bi.fldGrpCVd309sub.setVisibility(View.GONE);
+            } else {
+                bi.fldGrpCVd309sub.setVisibility(View.VISIBLE);
+            }
+        });
+
+        bi.d310.setOnCheckedChangeListener((group, checkedId) -> {
+            if (checkedId == bi.d31097.getId()) {
+                bi.d310sub.clearCheck();
+                bi.fldGrpCVd310sub.setVisibility(View.GONE);
+            } else {
+                bi.fldGrpCVd310sub.setVisibility(View.VISIBLE);
+            }
+        });
+
+        bi.d311.setOnCheckedChangeListener((group, checkedId) -> {
+            if (checkedId == bi.d31197.getId()) {
+                bi.d311sub.clearCheck();
+                bi.fldGrpCVd311sub.setVisibility(View.GONE);
+            } else {
+                bi.fldGrpCVd311sub.setVisibility(View.VISIBLE);
+            }
+        });
     }
 
 
@@ -76,7 +180,9 @@ public class SectionD3Activity extends AppCompatActivity {
                 bi.d301a.isChecked() ? "1" :
                         bi.d301b.isChecked() ? "2" :
                                 bi.d301c.isChecked() ? "3" :
-                                        "0");
+                                        bi.d30197.isChecked() ? "97" :
+                                                "0");
+
         json.put("d301sub",
                 bi.d301suba.isChecked() ? "1" :
                         bi.d301subb.isChecked() ? "2" :
@@ -88,7 +194,9 @@ public class SectionD3Activity extends AppCompatActivity {
                 bi.d302a.isChecked() ? "1" :
                         bi.d302b.isChecked() ? "2" :
                                 bi.d302c.isChecked() ? "3" :
-                                        "0");
+                                        bi.d30297.isChecked() ? "97" :
+                                                "0");
+
         json.put("d302sub",
                 bi.d302suba.isChecked() ? "1" :
                         bi.d302subb.isChecked() ? "2" :
@@ -100,7 +208,9 @@ public class SectionD3Activity extends AppCompatActivity {
                 bi.d303a.isChecked() ? "1" :
                         bi.d303b.isChecked() ? "2" :
                                 bi.d303c.isChecked() ? "3" :
-                                        "0");
+                                        bi.d30397.isChecked() ? "97" :
+                                                "0");
+
         json.put("d303sub",
                 bi.d303suba.isChecked() ? "1" :
                         bi.d303subb.isChecked() ? "2" :
@@ -112,7 +222,9 @@ public class SectionD3Activity extends AppCompatActivity {
                 bi.d304a.isChecked() ? "1" :
                         bi.d304b.isChecked() ? "2" :
                                 bi.d304c.isChecked() ? "3" :
-                                        "0");
+                                        bi.d30497.isChecked() ? "97" :
+                                                "0");
+
         json.put("d304sub",
                 bi.d304suba.isChecked() ? "1" :
                         bi.d304subb.isChecked() ? "2" :
@@ -124,7 +236,9 @@ public class SectionD3Activity extends AppCompatActivity {
                 bi.d305a.isChecked() ? "1" :
                         bi.d305b.isChecked() ? "2" :
                                 bi.d305c.isChecked() ? "3" :
-                                        "0");
+                                        bi.d30597.isChecked() ? "97" :
+                                                "0");
+
         json.put("d305sub",
                 bi.d305suba.isChecked() ? "1" :
                         bi.d305subb.isChecked() ? "2" :
@@ -136,7 +250,9 @@ public class SectionD3Activity extends AppCompatActivity {
                 bi.d306a.isChecked() ? "1" :
                         bi.d306b.isChecked() ? "2" :
                                 bi.d306c.isChecked() ? "3" :
-                                        "0");
+                                        bi.d30697.isChecked() ? "97" :
+                                                "0");
+
         json.put("d306sub",
                 bi.d306suba.isChecked() ? "1" :
                         bi.d306subb.isChecked() ? "2" :
@@ -148,7 +264,9 @@ public class SectionD3Activity extends AppCompatActivity {
                 bi.d307a.isChecked() ? "1" :
                         bi.d307b.isChecked() ? "2" :
                                 bi.d307c.isChecked() ? "3" :
-                                        "0");
+                                        bi.d30797.isChecked() ? "97" :
+                                                "0");
+
         json.put("d307sub",
                 bi.d307suba.isChecked() ? "1" :
                         bi.d307subb.isChecked() ? "2" :
@@ -160,7 +278,9 @@ public class SectionD3Activity extends AppCompatActivity {
                 bi.d308a.isChecked() ? "1" :
                         bi.d308b.isChecked() ? "2" :
                                 bi.d308c.isChecked() ? "3" :
-                                        "0");
+                                        bi.d30897.isChecked() ? "97" :
+                                                "0");
+
         json.put("d308sub",
                 bi.d308suba.isChecked() ? "1" :
                         bi.d308subb.isChecked() ? "2" :
@@ -172,7 +292,9 @@ public class SectionD3Activity extends AppCompatActivity {
                 bi.d309a.isChecked() ? "1" :
                         bi.d309b.isChecked() ? "2" :
                                 bi.d309c.isChecked() ? "3" :
-                                        "0");
+                                        bi.d30997.isChecked() ? "97" :
+                                                "0");
+
         json.put("d309sub",
                 bi.d309suba.isChecked() ? "1" :
                         bi.d309subb.isChecked() ? "2" :
@@ -184,7 +306,9 @@ public class SectionD3Activity extends AppCompatActivity {
                 bi.d310a.isChecked() ? "1" :
                         bi.d310b.isChecked() ? "2" :
                                 bi.d310c.isChecked() ? "3" :
-                                        "0");
+                                        bi.d31097.isChecked() ? "97" :
+                                                "0");
+
         json.put("d310sub",
                 bi.d310suba.isChecked() ? "1" :
                         bi.d310subb.isChecked() ? "2" :
@@ -196,7 +320,9 @@ public class SectionD3Activity extends AppCompatActivity {
                 bi.d311a.isChecked() ? "1" :
                         bi.d311b.isChecked() ? "2" :
                                 bi.d311c.isChecked() ? "3" :
-                                        "0");
+                                        bi.d31197.isChecked() ? "97" :
+                                                "0");
+
         json.put("d311sub",
                 bi.d311suba.isChecked() ? "1" :
                         bi.d311subb.isChecked() ? "2" :

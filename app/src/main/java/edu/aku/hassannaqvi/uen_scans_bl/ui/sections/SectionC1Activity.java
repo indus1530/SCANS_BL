@@ -2,6 +2,9 @@ package edu.aku.hassannaqvi.uen_scans_bl.ui.sections;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.view.View;
+import android.widget.AdapterView;
+import android.widget.ArrayAdapter;
 import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
@@ -12,17 +15,27 @@ import com.validatorcrawler.aliazaz.Validator;
 import org.json.JSONException;
 import org.json.JSONObject;
 
+import java.text.SimpleDateFormat;
+import java.util.ArrayList;
+import java.util.Date;
+import java.util.List;
+
 import edu.aku.hassannaqvi.uen_scans_bl.R;
 import edu.aku.hassannaqvi.uen_scans_bl.contracts.ChildContract;
+import edu.aku.hassannaqvi.uen_scans_bl.contracts.FamilyMembersContract;
 import edu.aku.hassannaqvi.uen_scans_bl.core.DatabaseHelper;
 import edu.aku.hassannaqvi.uen_scans_bl.core.MainApp;
 import edu.aku.hassannaqvi.uen_scans_bl.databinding.ActivitySectionC1Binding;
 import edu.aku.hassannaqvi.uen_scans_bl.utils.Util;
+import kotlin.Pair;
+
+import static edu.aku.hassannaqvi.uen_scans_bl.ui.list_activity.FamilyMembersListActivity.mainVModel;
 
 public class SectionC1Activity extends AppCompatActivity {
 
     ActivitySectionC1Binding bi;
-
+    private FamilyMembersContract res_child;
+    private Pair<List<Integer>, List<String>> resList;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -33,6 +46,41 @@ public class SectionC1Activity extends AppCompatActivity {
         bi.txtHeadLbl.setText(new StringBuilder(MainApp.indexKishMWRAChild.getName().toUpperCase()).append("\n")
                 .append(MainApp.indexKishMWRA.getName().toUpperCase()));
 
+        setListener();
+        populateRespondentSpinner();
+
+    }
+
+    private void populateRespondentSpinner() {
+
+        if (MainApp.indexKishMWRA.getAvailable().equals("2")) {
+            resList = mainVModel.getAllRespondent(Integer.valueOf(MainApp.indexKishMWRA.getSerialno()));
+            List<String> respondentList = new ArrayList<String>() {
+                {
+                    add("....");
+                    addAll(resList.getSecond());
+                }
+            };
+
+            bi.c10res.setAdapter(new ArrayAdapter<>(this, android.R.layout.simple_dropdown_item_1line, respondentList));
+
+            bi.respondentSpinner.setVisibility(View.VISIBLE);
+        }
+    }
+
+    private void setListener() {
+        bi.c10res.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+            @Override
+            public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
+                if (position == 0) return;
+                res_child = mainVModel.getMemberInfo(resList.getFirst().get(bi.c10res.getSelectedItemPosition() - 1));
+            }
+
+            @Override
+            public void onNothingSelected(AdapterView<?> parent) {
+
+            }
+        });
     }
 
 
@@ -93,6 +141,8 @@ public class SectionC1Activity extends AppCompatActivity {
         f1.put("fm_serial", MainApp.indexKishMWRAChild.getSerialno());
         f1.put("mm_fm_uid", MainApp.indexKishMWRA.getUid());
         f1.put("mm_fm_serial", MainApp.indexKishMWRA.getSerialno());
+        f1.put("res_fm_uid", res_child.getUid());
+        f1.put("res_fm_serial", res_child.getSerialno());
         f1.put("appversion", MainApp.appInfo.getAppVersion());
 
         f1.put("c101aa", MainApp.indexKishMWRAChild.getName());

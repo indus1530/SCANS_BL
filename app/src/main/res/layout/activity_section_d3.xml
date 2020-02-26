@@ -48,7 +48,7 @@
                             android:id="@+id/d301a"
                             style="@style/radiobutton"
                             android:layout_width="0dp"
-                            android:layout_weight="0.8"
+                            android:layout_weight="0.9"
                             android:text="@string/d301a" />
 
                         <RadioButton
@@ -62,8 +62,15 @@
                             android:id="@+id/d301c"
                             style="@style/radiobutton"
                             android:layout_width="0dp"
-                            android:layout_weight="0.8"
+                            android:layout_weight="0.9"
                             android:text="@string/d301c" />
+
+                        <RadioButton
+                            android:id="@+id/d30197"
+                            style="@style/radiobutton"
+                            android:layout_width="0dp"
+                            android:layout_weight="0.9"
+                            android:text="@string/never" />
 
                     </RadioGroup>
 
@@ -143,7 +150,7 @@
                             android:id="@+id/d302a"
                             style="@style/radiobutton"
                             android:layout_width="0dp"
-                            android:layout_weight="0.8"
+                            android:layout_weight="0.9"
                             android:text="@string/d302a" />
 
                         <RadioButton
@@ -157,8 +164,15 @@
                             android:id="@+id/d302c"
                             style="@style/radiobutton"
                             android:layout_width="0dp"
-                            android:layout_weight="0.8"
+                            android:layout_weight="0.9"
                             android:text="@string/d302c" />
+
+                        <RadioButton
+                            android:id="@+id/d30297"
+                            style="@style/radiobutton"
+                            android:layout_width="0dp"
+                            android:layout_weight="0.9"
+                            android:text="@string/never" />
 
                     </RadioGroup>
 
@@ -238,7 +252,7 @@
                             android:id="@+id/d303a"
                             style="@style/radiobutton"
                             android:layout_width="0dp"
-                            android:layout_weight="0.8"
+                            android:layout_weight="0.9"
                             android:text="@string/d303a" />
 
                         <RadioButton
@@ -252,8 +266,15 @@
                             android:id="@+id/d303c"
                             style="@style/radiobutton"
                             android:layout_width="0dp"
-                            android:layout_weight="0.8"
+                            android:layout_weight="0.9"
                             android:text="@string/d303c" />
+
+                        <RadioButton
+                            android:id="@+id/d30397"
+                            style="@style/radiobutton"
+                            android:layout_width="0dp"
+                            android:layout_weight="0.9"
+                            android:text="@string/never" />
 
                     </RadioGroup>
 
@@ -333,7 +354,7 @@
                             android:id="@+id/d304a"
                             style="@style/radiobutton"
                             android:layout_width="0dp"
-                            android:layout_weight="0.8"
+                            android:layout_weight="0.9"
                             android:text="@string/d304a" />
 
                         <RadioButton
@@ -347,8 +368,15 @@
                             android:id="@+id/d304c"
                             style="@style/radiobutton"
                             android:layout_width="0dp"
-                            android:layout_weight="0.8"
+                            android:layout_weight="0.9"
                             android:text="@string/d304c" />
+
+                        <RadioButton
+                            android:id="@+id/d30497"
+                            style="@style/radiobutton"
+                            android:layout_width="0dp"
+                            android:layout_weight="0.9"
+                            android:text="@string/never" />
 
                     </RadioGroup>
 
@@ -428,7 +456,7 @@
                             android:id="@+id/d305a"
                             style="@style/radiobutton"
                             android:layout_width="0dp"
-                            android:layout_weight="0.8"
+                            android:layout_weight="0.9"
                             android:text="@string/d305a" />
 
                         <RadioButton
@@ -442,8 +470,15 @@
                             android:id="@+id/d305c"
                             style="@style/radiobutton"
                             android:layout_width="0dp"
-                            android:layout_weight="0.8"
+                            android:layout_weight="0.9"
                             android:text="@string/d305c" />
+
+                        <RadioButton
+                            android:id="@+id/d30597"
+                            style="@style/radiobutton"
+                            android:layout_width="0dp"
+                            android:layout_weight="0.9"
+                            android:text="@string/never" />
 
                     </RadioGroup>
 
@@ -523,7 +558,7 @@
                             android:id="@+id/d306a"
                             style="@style/radiobutton"
                             android:layout_width="0dp"
-                            android:layout_weight="0.8"
+                            android:layout_weight="0.9"
                             android:text="@string/d306a" />
 
                         <RadioButton
@@ -537,8 +572,15 @@
                             android:id="@+id/d306c"
                             style="@style/radiobutton"
                             android:layout_width="0dp"
-                            android:layout_weight="0.8"
+                            android:layout_weight="0.9"
                             android:text="@string/d306c" />
+
+                        <RadioButton
+                            android:id="@+id/d30697"
+                            style="@style/radiobutton"
+                            android:layout_width="0dp"
+                            android:layout_weight="0.9"
+                            android:text="@string/never" />
 
                     </RadioGroup>
 
@@ -618,7 +660,7 @@
                             android:id="@+id/d307a"
                             style="@style/radiobutton"
                             android:layout_width="0dp"
-                            android:layout_weight="0.8"
+                            android:layout_weight="0.9"
                             android:text="@string/d307a" />
 
                         <RadioButton
@@ -632,8 +674,15 @@
                             android:id="@+id/d307c"
                             style="@style/radiobutton"
                             android:layout_width="0dp"
-                            android:layout_weight="0.8"
+                            android:layout_weight="0.9"
                             android:text="@string/d307c" />
+
+                        <RadioButton
+                            android:id="@+id/d30797"
+                            style="@style/radiobutton"
+                            android:layout_width="0dp"
+                            android:layout_weight="0.9"
+                            android:text="@string/never" />
 
                     </RadioGroup>
 
@@ -713,7 +762,7 @@
                             android:id="@+id/d308a"
                             style="@style/radiobutton"
                             android:layout_width="0dp"
-                            android:layout_weight="0.8"
+                            android:layout_weight="0.9"
                             android:text="@string/d308a" />
 
                         <RadioButton
@@ -727,8 +776,15 @@
                             android:id="@+id/d308c"
                             style="@style/radiobutton"
                             android:layout_width="0dp"
-                            android:layout_weight="0.8"
+                            android:layout_weight="0.9"
                             android:text="@string/d308c" />
+
+                        <RadioButton
+                            android:id="@+id/d30897"
+                            style="@style/radiobutton"
+                            android:layout_width="0dp"
+                            android:layout_weight="0.9"
+                            android:text="@string/never" />
 
                     </RadioGroup>
 
@@ -808,7 +864,7 @@
                             android:id="@+id/d309a"
                             style="@style/radiobutton"
                             android:layout_width="0dp"
-                            android:layout_weight="0.8"
+                            android:layout_weight="0.9"
                             android:text="@string/d309a" />
 
                         <RadioButton
@@ -822,8 +878,15 @@
                             android:id="@+id/d309c"
                             style="@style/radiobutton"
                             android:layout_width="0dp"
-                            android:layout_weight="0.8"
+                            android:layout_weight="0.9"
                             android:text="@string/d309c" />
+
+                        <RadioButton
+                            android:id="@+id/d30997"
+                            style="@style/radiobutton"
+                            android:layout_width="0dp"
+                            android:layout_weight="0.9"
+                            android:text="@string/never" />
 
                     </RadioGroup>
 
@@ -903,7 +966,7 @@
                             android:id="@+id/d310a"
                             style="@style/radiobutton"
                             android:layout_width="0dp"
-                            android:layout_weight="0.8"
+                            android:layout_weight="0.9"
                             android:text="@string/d310a" />
 
                         <RadioButton
@@ -917,8 +980,15 @@
                             android:id="@+id/d310c"
                             style="@style/radiobutton"
                             android:layout_width="0dp"
-                            android:layout_weight="0.8"
+                            android:layout_weight="0.9"
                             android:text="@string/d310c" />
+
+                        <RadioButton
+                            android:id="@+id/d31097"
+                            style="@style/radiobutton"
+                            android:layout_width="0dp"
+                            android:layout_weight="0.9"
+                            android:text="@string/never" />
 
                     </RadioGroup>
 
@@ -998,7 +1068,7 @@
                             android:id="@+id/d311a"
                             style="@style/radiobutton"
                             android:layout_width="0dp"
-                            android:layout_weight="0.8"
+                            android:layout_weight="0.9"
                             android:text="@string/d311a" />
 
                         <RadioButton
@@ -1012,8 +1082,15 @@
                             android:id="@+id/d311c"
                             style="@style/radiobutton"
                             android:layout_width="0dp"
-                            android:layout_weight="0.8"
+                            android:layout_weight="0.9"
                             android:text="@string/d311c" />
+
+                        <RadioButton
+                            android:id="@+id/d31197"
+                            style="@style/radiobutton"
+                            android:layout_width="0dp"
+                            android:layout_weight="0.9"
+                            android:text="@string/never" />
 
                     </RadioGroup>
 

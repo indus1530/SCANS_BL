@@ -51,14 +51,10 @@
 
                             <EditText
                                 android:id="@+id/a101"
-                                style="@style/textInput"
+                                style="@style/EditTextNum"
                                 android:layout_width="0dp"
-                                android:layout_marginTop="5dp"
-                                android:layout_marginEnd="10dp"
                                 android:layout_weight="1"
-                                android:digits="0123456789-"
                                 android:hint="@string/a101"
-                                android:inputType="number"
                                 android:maxLength="6" />
 
                             <Button
@@ -84,7 +80,7 @@
                     android:visibility="gone"
                     tools:visibility="visible">
 
-                    <!-- Province - District -->
+                    <!-- District - Tehsil -->
                     <androidx.cardview.widget.CardView style="@style/cardView">
 
                         <LinearLayout
@@ -94,61 +90,42 @@
 
                             <!--a104-->
                             <TextView
+                                style="@style/i_textview"
                                 android:layout_width="0dp"
-                                android:layout_height="60sp"
-                                android:layout_marginTop="16dp"
-                                android:layout_marginBottom="4dp"
                                 android:layout_weight="2"
-                                android:background="@color/colorPrimary"
                                 android:gravity="center"
-                                android:padding="15dp"
-                                android:text="@string/a108"
-                                android:textAppearance="?android:attr/textAppearanceLarge"
-                                android:textColor="@android:color/white" />
+                                android:text="@string/a107" />
 
 
                             <TextView
                                 android:id="@+id/a104"
+                                style="@style/i_textview"
                                 android:layout_width="0dp"
-                                android:layout_height="60sp"
-                                android:layout_marginTop="13dp"
-                                android:layout_marginBottom="4dp"
                                 android:layout_weight="3"
                                 android:background="@color/pink_100"
                                 android:gravity="center"
-                                android:padding="15dp"
-                                android:text="district"
-                                android:textColor="@color/colorPrimaryDark"
-                                android:textSize="16sp" />
+                                android:text="Province"
+                                android:textColor="@color/colorPrimaryDark" />
 
                             <!--a105-->
                             <TextView
+                                style="@style/i_textview"
                                 android:layout_width="0dp"
-                                android:layout_height="60sp"
-                                android:layout_marginTop="16dp"
-                                android:layout_marginBottom="8dp"
                                 android:layout_weight="2"
-                                android:background="@color/colorPrimary"
                                 android:gravity="center"
-                                android:padding="15dp"
-                                android:text="@string/a109"
-                                android:textAppearance="?android:attr/textAppearanceLarge"
-                                android:textColor="@android:color/white" />
+                                android:text="@string/a108" />
 
 
                             <TextView
                                 android:id="@+id/a105"
+                                style="@style/i_textview"
                                 android:layout_width="0dp"
-                                android:layout_height="60sp"
-                                android:layout_marginTop="13dp"
-                                android:layout_marginBottom="4dp"
                                 android:layout_weight="3"
                                 android:background="@color/pink_100"
                                 android:gravity="center"
-                                android:padding="15dp"
-                                android:text="tehsil"
-                                android:textColor="@color/colorPrimaryDark"
-                                android:textSize="16sp" />
+                                android:text="District"
+                                android:textColor="@color/colorPrimaryDark" />
+
                         </LinearLayout>
 
                     </androidx.cardview.widget.CardView>
@@ -163,32 +140,22 @@
 
                             <!--a106-->
                             <TextView
+                                style="@style/i_textview"
                                 android:layout_width="0dp"
-                                android:layout_height="60sp"
-                                android:layout_marginTop="16dp"
-                                android:layout_marginBottom="8dp"
                                 android:layout_weight="2"
-                                android:background="@color/colorPrimary"
-                                android:gravity="center_horizontal|center_vertical"
-                                android:padding="15dp"
-                                android:text="@string/a110"
-                                android:textAppearance="?android:attr/textAppearanceLarge"
-                                android:textColor="@android:color/white" />
+                                android:gravity="center"
+                                android:text="@string/a109" />
 
 
                             <TextView
                                 android:id="@+id/a106"
+                                style="@style/i_textview"
                                 android:layout_width="0dp"
-                                android:layout_height="60sp"
-                                android:layout_marginTop="13dp"
-                                android:layout_marginBottom="8dp"
                                 android:layout_weight="3"
                                 android:background="@color/pink_100"
-                                android:gravity="center_horizontal|center_vertical"
-                                android:padding="15dp"
+                                android:gravity="center"
                                 android:text="Test"
-                                android:textColor="@color/colorPrimaryDark"
-                                android:textSize="16sp" />
+                                android:textColor="@color/colorPrimaryDark" />
 
 
                         </LinearLayout>
@@ -205,32 +172,22 @@
 
                             <!--a107-->
                             <TextView
+                                style="@style/i_textview"
                                 android:layout_width="0dp"
-                                android:layout_height="60sp"
-                                android:layout_marginTop="16dp"
-                                android:layout_marginBottom="8dp"
                                 android:layout_weight="2"
-                                android:background="@color/colorPrimary"
-                                android:gravity="center_horizontal|center_vertical"
-                                android:padding="15dp"
-                                android:text="@string/a111"
-                                android:textAppearance="?android:attr/textAppearanceLarge"
-                                android:textColor="@android:color/white" />
+                                android:gravity="center"
+                                android:text="@string/a110" />
 
 
                             <TextView
                                 android:id="@+id/a107"
+                                style="@style/i_textview"
                                 android:layout_width="0dp"
-                                android:layout_height="60sp"
-                                android:layout_marginTop="13dp"
-                                android:layout_marginBottom="8dp"
                                 android:layout_weight="3"
                                 android:background="@color/pink_100"
-                                android:gravity="center_horizontal|center_vertical"
-                                android:padding="15dp"
+                                android:gravity="center"
                                 android:text="Test"
-                                android:textColor="@color/colorPrimaryDark"
-                                android:textSize="16sp" />
+                                android:textColor="@color/colorPrimaryDark" />
 
 
                         </LinearLayout>

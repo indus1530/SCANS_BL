@@ -41,17 +41,6 @@ public class SectionA31Activity extends AppCompatActivity {
 
     private void setupSkips() {
 
-        bi.a313.setOnCheckedChangeListener(((radioGroup, i) -> {
-
-            if (i == bi.a313a.getId()) {
-                bi.fldGrpCVa314.setVisibility(View.VISIBLE);
-            } else {
-                Clear.clearAllFields(bi.fldGrpCVa314);
-                bi.fldGrpCVa314.setVisibility(View.GONE);
-            }
-
-        }));
-
         bi.a308.setOnCheckedChangeListener(((radioGroup, i) -> {
             if (i == bi.a308c.getId()) {
                 bi.fldGrpCVa309.setVisibility(View.VISIBLE);
@@ -62,6 +51,17 @@ public class SectionA31Activity extends AppCompatActivity {
                 bi.fldGrpCVa309.setVisibility(View.GONE);
                 bi.fldGrpCVa310.setVisibility(View.GONE);
             }
+        }));
+
+        bi.a313.setOnCheckedChangeListener(((radioGroup, i) -> {
+
+            if (i == bi.a313a.getId()) {
+                bi.fldGrpCVa314.setVisibility(View.VISIBLE);
+            } else {
+                Clear.clearAllFields(bi.fldGrpCVa314);
+                bi.fldGrpCVa314.setVisibility(View.GONE);
+            }
+
         }));
 
 

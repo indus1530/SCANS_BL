@@ -170,10 +170,11 @@ public class SectionK2Activity extends AppCompatActivity implements Util.EndSecA
 
             @Override
             public void onTextChanged(CharSequence s, int start, int before, int count) {
-                if (bi.k212a.getText().toString().isEmpty()) return;
+                if (bi.k212a.getText().toString().isEmpty() || bi.k219a.getText().toString().isEmpty() || bi.k210a.getText().toString().isEmpty())
+                    return;
                 if (!bi.k212a.isTextEqualToPattern())
                     return;
-                if (bi.k212a.getText().toString().split(".").length > 1)
+                if (bi.k212a.getText().toString().split(".").length > 1 || bi.k209a.getText().toString().split(".").length > 1 || bi.k210a.getText().toString().split(".").length > 1)
                     return;
                 double value01 = Math.abs(Double.valueOf(bi.k212a.getText().toString()) - Double.valueOf(bi.k209a.getText().toString()));
                 if (value01 > 1) {
@@ -230,10 +231,11 @@ public class SectionK2Activity extends AppCompatActivity implements Util.EndSecA
 
             @Override
             public void onTextChanged(CharSequence s, int start, int before, int count) {
-                if (bi.k216a.getText().toString().isEmpty()) return;
+                if (bi.k216a.getText().toString().isEmpty() || bi.k213a.getText().toString().isEmpty() || bi.k214a.getText().toString().isEmpty())
+                    return;
                 if (!bi.k216a.isTextEqualToPattern())
                     return;
-                if (bi.k216a.getText().toString().split(".").length > 1)
+                if (bi.k216a.getText().toString().split(".").length > 1 || bi.k213a.getText().toString().split(".").length > 1 || bi.k214a.getText().toString().split(".").length > 1)
                     return;
                 double value01 = Math.abs(Double.valueOf(bi.k216a.getText().toString()) - Double.valueOf(bi.k213a.getText().toString()));
                 if (value01 > 0.5) {
@@ -290,10 +292,11 @@ public class SectionK2Activity extends AppCompatActivity implements Util.EndSecA
 
             @Override
             public void onTextChanged(CharSequence s, int start, int before, int count) {
-                if (bi.k220a.getText().toString().isEmpty()) return;
+                if (bi.k217a.getText().toString().isEmpty() || bi.k218a.getText().toString().isEmpty() || bi.k220a.getText().toString().isEmpty())
+                    return;
                 if (!bi.k220a.isTextEqualToPattern())
                     return;
-                if (bi.k220a.getText().toString().split(".").length > 1)
+                if (bi.k217a.getText().toString().split(".").length > 1 || bi.k218a.getText().toString().split(".").length > 1 || bi.k220a.getText().toString().split(".").length > 1)
                     return;
                 double value01 = Math.abs(Double.valueOf(bi.k220a.getText().toString()) - Double.valueOf(bi.k217a.getText().toString()));
                 if (value01 > 1) {

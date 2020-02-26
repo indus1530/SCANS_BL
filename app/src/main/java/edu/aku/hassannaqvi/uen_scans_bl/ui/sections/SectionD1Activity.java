@@ -2,6 +2,7 @@ package edu.aku.hassannaqvi.uen_scans_bl.ui.sections;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.view.View;
 import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
@@ -30,8 +31,31 @@ public class SectionD1Activity extends AppCompatActivity {
         bi = DataBindingUtil.setContentView(this, R.layout.activity_section_d1);
         bi.setCallback(this);
 
+        setupListeners();
+
         bi.txtHeadLbl.setText(new StringBuilder(MainApp.indexKishMWRAChild.getName().toUpperCase()).append("\n")
                 .append(MainApp.indexKishMWRA.getName().toUpperCase()));
+    }
+
+    private void setupListeners() {
+
+        bi.d101.setOnCheckedChangeListener((group, checkedId) -> {
+            if (checkedId == bi.d10197.getId()) {
+                bi.d101sub.clearCheck();
+                bi.fldGrpCVd101sub.setVisibility(View.GONE);
+            } else {
+                bi.fldGrpCVd101sub.setVisibility(View.VISIBLE);
+            }
+        });
+
+        bi.d102.setOnCheckedChangeListener((group, checkedId) -> {
+            if (checkedId == bi.d10297.getId()) {
+                bi.d102sub.clearCheck();
+                bi.fldGrpCVd102sub.setVisibility(View.GONE);
+            } else {
+                bi.fldGrpCVd102sub.setVisibility(View.VISIBLE);
+            }
+        });
     }
 
 
@@ -99,7 +123,8 @@ public class SectionD1Activity extends AppCompatActivity {
                 bi.d101a.isChecked() ? "1" :
                         bi.d101b.isChecked() ? "2" :
                                 bi.d101c.isChecked() ? "3" :
-                                        "0");
+                                        bi.d10197.isChecked() ? "97" :
+                                                "0");
 
         json.put("d101sub",
                 bi.d101suba.isChecked() ? "1" :
@@ -116,7 +141,8 @@ public class SectionD1Activity extends AppCompatActivity {
                 bi.d102a.isChecked() ? "1" :
                         bi.d102b.isChecked() ? "2" :
                                 bi.d102c.isChecked() ? "3" :
-                                        "0");
+                                        bi.d10297.isChecked() ? "97" :
+                                                "0");
 
         json.put("d102sub",
                 bi.d102suba.isChecked() ? "1" :
