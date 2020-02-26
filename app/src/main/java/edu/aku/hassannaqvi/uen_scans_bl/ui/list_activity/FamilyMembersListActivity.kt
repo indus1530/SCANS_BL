@@ -106,7 +106,6 @@ class FamilyMembersListActivity : AppCompatActivity() {
                                             if (indexMwraUpdate.await().let { true } and indexChildUpdate.await().let { true }) {
                                                 finish()
                                                 startActivity(Intent(this@FamilyMembersListActivity, SectionA31Activity::class.java))
-                                                //startActivity(Intent(this@FamilyMembersListActivity, SectionC1Activity::class.java))
                                             }
                                         }
                                     } else {
