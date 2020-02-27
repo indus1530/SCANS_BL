@@ -1978,10 +1978,10 @@
                             android:id="@+id/a331x"
                             style="@style/EditTextNum"
                             android:hint="@string/rupees"
-                            android:maxLength="5"
+                            android:maxLength="6"
                             android:text='@{a331a.checked ? a331x.getText().toString() : "" }'
                             android:visibility='@{a331a.checked ? View.VISIBLE : View.GONE }'
-                            app:maxValue="50000"
+                            app:maxValue="999999"
                             app:minValue="1"
                             app:type="range" />
 

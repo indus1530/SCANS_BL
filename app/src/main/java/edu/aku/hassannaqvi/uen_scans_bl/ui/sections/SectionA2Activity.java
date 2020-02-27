@@ -440,8 +440,8 @@ public class SectionA2Activity extends AppCompatActivity {
             Clear.clearAllFields(bi.a210, true);
         }*/
 
-        bi.fldGrpCVa212.setVisibility(calAge >= 5 && calAge <= 10 ? View.VISIBLE : View.GONE);
-        bi.fldGrpCVa213.setVisibility(calAge >= 5 && calAge <= 10 ? View.VISIBLE : View.GONE);
+        bi.fldGrpCVa212.setVisibility(calAge >= 5 && calAge < 10 ? View.VISIBLE : View.GONE);
+        bi.fldGrpCVa213.setVisibility(calAge >= 5 && calAge < 10 ? View.VISIBLE : View.GONE);
 
     }
 
