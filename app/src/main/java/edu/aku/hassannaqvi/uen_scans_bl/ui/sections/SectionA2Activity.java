@@ -160,7 +160,7 @@ public class SectionA2Activity extends AppCompatActivity {
                                                                                                     bi.a203l.isChecked() ? "12" :
                                                                                                             bi.a203m.isChecked() ? "13" :
                                                                                                                     bi.a203n.isChecked() ? "14" :
-                                                                                                                            bi.a20396.isChecked() ? "96" : "0");
+                                                                                                                            bi.a20396.isChecked() ? "15" : "0");
 
             fmc.setGender(
                     bi.a204a.isChecked() ? "1" :
