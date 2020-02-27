@@ -719,7 +719,7 @@
     <string name="b204c"> زیادہ</string>
 
 
-    <string name="tb3heading">SECTION B3: HOUSEHOLD DIETRY DIVERSITY AND SOURCE ASSESMENT </string>
+    <string name="tb3heading">سیکشن بی 3 :   گھرانے  کی  مختلف اقسام کے کھانوں کے استعمال اور زرائع  کے بارے میں معلومات: </string>
     <string name="b301hint1"> فوڈ گروپ </string>
     <string name="b301hint2"> کھانا کس طرح حاصل ہوا تھا ؟ </string>
 
@@ -910,7 +910,7 @@
     <string name="c107c"> ہر ہفتے </string>
     <string name="c107d"> ہر ماہ </string>
     <string name="c107e"> کبھی کبھی یا کبھی نہیں</string>
-    <string name="c108"> c108: کمزوری </string>
+    <string name="c108"> c108: اداس </string>
     <string name="c108a"> ہر روز</string>
     <string name="c108b"> ہفتے میں ایک بارسے زائد</string>
     <string name="c108c"> ہر ہفتے </string>
@@ -1257,7 +1257,7 @@
     <string name="c503f"> 4 گھنٹہ</string>
     <string name="c503g"> 5 یا اس سے زیادہ گھنٹے</string>
 
-    <string name="c504"> C504:\t بچے کا نام) اسکول کے دنوں کے دوران، اوسطا سے آنے اسکول کے بعد اور سونے سے پہلے کتنا وقت گھر سے باہر گذارتا ہے ؟)  </string>
+    <string name="c504"> C504:\t بچے کا نام) اسکول کے دنوں کے دوران، اوسطا اسکول سے آنے کے بعد اور سونے سے پہلے کتنا وقت گھر سے باہر گذارتا ہے ؟)  </string>
     <string name="c504a"> کوئی بھی نہیں </string>
     <string name="c504b"> 1 گھنٹہ سے کم </string>
     <string name="c504c"> 1 گھنٹہ </string>
@@ -1390,7 +1390,7 @@
     <string name="cb604c"> کافی بری </string>
     <string name="cb604d"> بہت بری </string>
 
-    <string name="td1heading"> SECTION D1: BEVERAGES </string>
+    <string name="td1heading"> ماڈیول ڈی : جزوی خوراک کی تعداد </string>
     <string name="d101"> d101: مکمل چینی کاربن مشروبات (یعنی پییسی / کوکا کولا)</string>
     <string name="d101a"> گھر میں </string>
     <string name="d101b"> گھرکے باہر</string>
@@ -1429,10 +1429,10 @@
     <string name="d103sube"> ایک ہفتے میں تین سے چھ کپ</string>
     <string name="d103subf"> ایک ماہ میں ایک سے تین کپ</string>
     <string name="d103subg"> فی مہینہ 1/ سے بھی کم نہیں</string>
-    <string name="d104"> d104: دودھ کے ساتھ چائے</string>
+    <string name="d104"> d104: دودھ والی چاۓ</string>
     <string name="d104a"> چینی کے ساتھ</string>
     <string name="d104b"> چینی کے بغیر </string>
-    <string name="d104sub"> d104_sub: دودھ کے ساتھ چائے</string>
+    <string name="d104sub"> d104_sub: دودھ والی چاۓ</string>
     <string name="d104suba"> ہر روز ایک کپ</string>
     <string name="d104subb"> دو کپ ہر روز </string>
     <string name="d104subc"> روزانہ تین یا زیادہ کپ</string>
@@ -1455,7 +1455,7 @@
     <string name="d106sube"> day ہر روز آٹھ گلاس سے زیادہ</string>
     <string name="d150d"> فی دن 5 یا زیادہ چائے کے چمچ</string>
 
-    <string name="td2heading"> SECTION D2: DAIRY </string>
+    <string name="td2heading">  سیکشن ڈی  2 :  دودھ اوراس سے بنی اشیاء </string>
     <string name="d201"> d201: آپ کے (بچے کا نام) عام طور پر کون سا سفید دودھ پیتے ہیں؟</string>
     <string name="d201a"> گائے کا دودھ</string>
     <string name="d201b"> بکری کا دودھ</string>
@@ -1871,7 +1871,7 @@
     <string name="k102a"> وزن عمر کے حساب سے مناسب/صحیح ہے</string>
     <string name="k102b"> وزن عمر کے حساب سے زیادہ ہے </string>
     <string name="k102c"> وزن عمر کے حساب سے کم ہے </string>
-    <string name="k103"> k103: آپ کے مقابلے میں آپ کے شوہر(بچے کےوالدکانام) کا قد کتنا لمبا ہے؟</string>
+    <string name="k103"> k103: آپ کے مقابلے میں آپ کے شوہر(بچے کےوالدکانام) کا قد کیسا ہے؟</string>
     <string name="k103a"> آپ سے زیادہ لمبا ہے</string>
     <string name="k103b"> آپ کےبرابرہے</string>
     <string name="k103c"> آپ سے چھوٹا ہے</string>

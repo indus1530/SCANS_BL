@@ -368,7 +368,7 @@
                         android:hint="@string/c407a"
                         android:maxLength="2"
                         app:maxValue="12"
-                        app:minValue="1"
+                        app:minValue="0"
                         app:type="range" />
 
                 </LinearLayout>
