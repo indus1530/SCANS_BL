@@ -75,7 +75,7 @@
 
                 <!-- m102  EditText   -->
                 <androidx.cardview.widget.CardView
-                    android:id="@+id/fldGrpCVm102a"
+                    android:id="@+id/fldGrpCVm102"
                     style="@style/cardView">
 
                     <LinearLayout
@@ -129,7 +129,7 @@
 
                 <!-- m102a  Radio   -->
                 <androidx.cardview.widget.CardView
-                    android:id="@+id/fldGrpCVm102aa"
+                    android:id="@+id/fldGrpCVm102a"
                     style="@style/cardView">
 
                     <LinearLayout

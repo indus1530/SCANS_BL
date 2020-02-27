@@ -19,7 +19,6 @@ import edu.aku.hassannaqvi.uen_scans_bl.contracts.ChildContract;
 import edu.aku.hassannaqvi.uen_scans_bl.core.DatabaseHelper;
 import edu.aku.hassannaqvi.uen_scans_bl.core.MainApp;
 import edu.aku.hassannaqvi.uen_scans_bl.databinding.ActivitySectionC6Binding;
-import edu.aku.hassannaqvi.uen_scans_bl.ui.other.EndingActivity;
 import edu.aku.hassannaqvi.uen_scans_bl.utils.Util;
 
 import static edu.aku.hassannaqvi.uen_scans_bl.ui.list_activity.FamilyMembersListActivity.mainVModel;
@@ -60,9 +59,7 @@ public class SectionC6Activity extends AppCompatActivity {
                 MainApp.mwraChildren = mainVModel.getAllChildrenPairOfSelMWRA(Integer.valueOf(MainApp.indexKishMWRA.getSerialno()));
 
                 finish();
-                startActivity(new Intent(this, MainApp.indexKishMWRA.getAvailable().equals("1") ? SectionK1Activity.class : EndingActivity.class)
-                        .putExtra("firstChild", true)
-                        .putExtra("complete", true));
+                startActivity(new Intent(this, SectionK1Activity.class));
             } else {
                 Toast.makeText(this, "Failed to Update Database!", Toast.LENGTH_SHORT).show();
             }

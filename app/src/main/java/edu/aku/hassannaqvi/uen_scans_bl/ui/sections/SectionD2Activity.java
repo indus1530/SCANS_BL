@@ -29,6 +29,7 @@ public class SectionD2Activity extends AppCompatActivity {
         bi = DataBindingUtil.setContentView(this, R.layout.activity_section_d2);
         bi.setCallback(this);
 
+
     }
 
 
@@ -76,10 +77,8 @@ public class SectionD2Activity extends AppCompatActivity {
                                 bi.d201c.isChecked() ? "3" :
                                         bi.d201d.isChecked() ? "4" :
                                                 bi.d201e.isChecked() ? "5" :
-                                                        bi.d201f.isChecked() ? "6" :
-                                                                bi.d201g.isChecked() ? "98" :
+                                                        bi.d201f.isChecked() ? "98" :
                                                                 "0");
-
         json.put("d202",
                 bi.d202a.isChecked() ? "1" :
                         bi.d202b.isChecked() ? "2" :
@@ -90,7 +89,6 @@ public class SectionD2Activity extends AppCompatActivity {
                                                                 bi.d202g.isChecked() ? "7" :
                                                                         bi.d202h.isChecked() ? "8" :
                                                                                 "0");
-
         json.put("d203",
                 bi.d203a.isChecked() ? "1" :
                         bi.d203b.isChecked() ? "2" :
@@ -101,7 +99,6 @@ public class SectionD2Activity extends AppCompatActivity {
                                                                 bi.d203g.isChecked() ? "7" :
                                                                         bi.d203h.isChecked() ? "8" :
                                                                                 "0");
-
         json.put("d204",
                 bi.d204a.isChecked() ? "1" :
                         bi.d204b.isChecked() ? "2" :
@@ -112,12 +109,10 @@ public class SectionD2Activity extends AppCompatActivity {
                                                                 bi.d204g.isChecked() ? "7" :
                                                                         bi.d204h.isChecked() ? "8" :
                                                                                 "0");
-
         json.put("d205",
                 bi.d205a.isChecked() ? "1" :
                         bi.d205b.isChecked() ? "2" :
                                 "0");
-
         json.put("d205sub",
                 bi.d205suba.isChecked() ? "1" :
                         bi.d205subb.isChecked() ? "2" :
@@ -127,7 +122,6 @@ public class SectionD2Activity extends AppCompatActivity {
                                                         bi.d205subf.isChecked() ? "6" :
                                                                 bi.d205subg.isChecked() ? "7" :
                                                                         "0");
-
         json.put("d206",
                 bi.d206a.isChecked() ? "1" :
                         bi.d206b.isChecked() ? "2" :
@@ -146,7 +140,6 @@ public class SectionD2Activity extends AppCompatActivity {
                                                         bi.d206subf.isChecked() ? "6" :
                                                                 bi.d206subg.isChecked() ? "7" :
                                                                         "0");
-
         json.put("d207",
                 bi.d207a.isChecked() ? "1" :
                         bi.d207b.isChecked() ? "2" :
@@ -156,7 +149,6 @@ public class SectionD2Activity extends AppCompatActivity {
                                                         bi.d207f.isChecked() ? "6" :
                                                                 bi.d207g.isChecked() ? "7" :
                                                                         "0");
-
         json.put("d208",
                 bi.d208a.isChecked() ? "1" :
                         bi.d208b.isChecked() ? "2" :
@@ -166,12 +158,10 @@ public class SectionD2Activity extends AppCompatActivity {
                                                         bi.d208f.isChecked() ? "6" :
                                                                 bi.d208g.isChecked() ? "7" :
                                                                         "0");
-
         json.put("d209",
                 bi.d209a.isChecked() ? "1" :
                         bi.d209b.isChecked() ? "2" :
                                 "0");
-
         json.put("d209sub",
                 bi.d209suba.isChecked() ? "1" :
                         bi.d209subb.isChecked() ? "2" :
@@ -181,7 +171,6 @@ public class SectionD2Activity extends AppCompatActivity {
                                                         bi.d209subf.isChecked() ? "6" :
                                                                 bi.d209subg.isChecked() ? "7" :
                                                                         "0");
-
         json.put("d210",
                 bi.d210a.isChecked() ? "1" :
                         bi.d210b.isChecked() ? "2" :

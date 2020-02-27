@@ -13,6 +13,9 @@ import com.validatorcrawler.aliazaz.Validator;
 import org.json.JSONException;
 import org.json.JSONObject;
 
+import java.text.SimpleDateFormat;
+import java.util.Date;
+
 import edu.aku.hassannaqvi.uen_scans_bl.R;
 import edu.aku.hassannaqvi.uen_scans_bl.contracts.IndexMWRAContract;
 import edu.aku.hassannaqvi.uen_scans_bl.core.DatabaseHelper;
@@ -152,7 +155,7 @@ public class SectionB1Activity extends AppCompatActivity {
         MainApp.indexMwra.set_UUID(MainApp.fc.get_UID());
         MainApp.indexMwra.setDeviceId(MainApp.appInfo.getDeviceID());
         MainApp.indexMwra.setDevicetagID(MainApp.appInfo.getTagName());
-        MainApp.indexMwra.setFormDate(MainApp.fc.getFormDate());
+        MainApp.indexMwra.setFormDate(new SimpleDateFormat("dd-MM-yy HH:mm").format(new Date().getTime()));
         MainApp.indexMwra.setUser(MainApp.userName);
 
         JSONObject f1 = new JSONObject();
@@ -163,7 +166,6 @@ public class SectionB1Activity extends AppCompatActivity {
         f1.put("fm_uid", MainApp.indexKishMWRA.getUid());
         f1.put("fm_serial", MainApp.indexKishMWRA.getSerialno());
         f1.put("fm_name", MainApp.indexKishMWRA.getName());
-        f1.put("appversion", MainApp.appInfo.getAppVersion());
 
         f1.put("b101",
                 bi.b101a.isChecked() ? "1" :

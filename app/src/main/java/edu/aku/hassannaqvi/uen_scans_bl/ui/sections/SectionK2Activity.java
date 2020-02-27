@@ -420,7 +420,6 @@ public class SectionK2Activity extends AppCompatActivity implements Util.EndSecA
         json.put("fm_uid", fmc_child.getUid());
         json.put("fm_serial", fmc_child.getSerialno());
         json.put("mm_serial", fmc_child.getMother_serial());
-        json.put("appversion", MainApp.appInfo.getAppVersion());
 
         json.put("k201", bi.k201.getSelectedItem().toString());
 

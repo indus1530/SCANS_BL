@@ -47,21 +47,14 @@ public class SectionMActivity extends AppCompatActivity {
         bi.m101.setOnCheckedChangeListener(((radioGroup, i) -> {
 
             if (i == bi.m101a.getId()) {
-                bi.fldGrpCVm102a.setVisibility(View.VISIBLE);
-                bi.fldGrpCVm102aa.setVisibility(View.VISIBLE);
-                bi.fldGrpCVm102b.setVisibility(View.VISIBLE);
-                bi.fldGrpCVm102bb.setVisibility(View.VISIBLE);
+                bi.fldGrpCVm102.setVisibility(View.VISIBLE);
             } else {
-                Clear.clearAllFields(bi.fldGrpCVm102a);
-                Clear.clearAllFields(bi.fldGrpCVm102aa);
-                Clear.clearAllFields(bi.fldGrpCVm102b);
-                Clear.clearAllFields(bi.fldGrpCVm102bb);
-                bi.fldGrpCVm102a.setVisibility(View.GONE);
-                bi.fldGrpCVm102aa.setVisibility(View.GONE);
-                bi.fldGrpCVm102b.setVisibility(View.GONE);
-                bi.fldGrpCVm102bb.setVisibility(View.GONE);
+                Clear.clearAllFields(bi.fldGrpCVm102);
+                bi.fldGrpCVm102.setVisibility(View.GONE);
             }
+
         }));
+
 
     }
 
@@ -116,7 +109,6 @@ public class SectionMActivity extends AppCompatActivity {
         json.put("fm_serial", MainApp.indexKishMWRAChild.getSerialno());
         json.put("mm_fm_uid", MainApp.indexKishMWRA.getUid());
         json.put("mm_fm_serial", MainApp.indexKishMWRA.getSerialno());
-        json.put("appversion", MainApp.appInfo.getAppVersion());
 
         json.put("m101",
                 bi.m101a.isChecked() ? "1" :
@@ -126,18 +118,8 @@ public class SectionMActivity extends AppCompatActivity {
         json.put("m102a", bi.m102a.getText().toString());
         json.put("m102a2", bi.m102a2.getText().toString());
 
-        json.put("m102a3",
-                bi.m102aa.isChecked() ? "1" :
-                        bi.m102ab.isChecked() ? "2" :
-                                "0");
-
         json.put("m102b", bi.m102b.getText().toString());
         json.put("m102b2", bi.m102b2.getText().toString());
-
-        json.put("m102b3",
-                bi.m102ba.isChecked() ? "1" :
-                        bi.m102bb.isChecked() ? "2" :
-                                "0");
 
         vc.setsE2(String.valueOf(json));
 

@@ -18,35 +18,6 @@
             android:id="@+id/txtHeadLbl"
             style="@style/textView3Head" />
 
-        <!-- c10res  Spinner   -->
-        <androidx.cardview.widget.CardView
-            android:id="@+id/respondentSpinner"
-            style="@style/cardView"
-            android:visibility="gone"
-            tools:visibility="visible">
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal">
-
-                <TextView
-                    style="@style/i_textview"
-                    android:layout_width="0dp"
-                    android:layout_weight="1"
-                    android:text="Respondent Name" />
-
-                <Spinner
-                    android:id="@+id/c10res"
-                    style="@style/spinner"
-                    android:layout_width="0dp"
-                    android:layout_margin="10dp"
-                    android:layout_weight="1" />
-
-            </LinearLayout>
-
-        </androidx.cardview.widget.CardView>
-
         <ScrollView
             style="@style/i_scrollview"
             android:fadeScrollbars="false"

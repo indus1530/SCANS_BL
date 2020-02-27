@@ -13,6 +13,9 @@ import com.validatorcrawler.aliazaz.Validator;
 import org.json.JSONException;
 import org.json.JSONObject;
 
+import java.text.SimpleDateFormat;
+import java.util.Date;
+
 import edu.aku.hassannaqvi.uen_scans_bl.R;
 import edu.aku.hassannaqvi.uen_scans_bl.contracts.FoodFreqContract;
 import edu.aku.hassannaqvi.uen_scans_bl.core.DatabaseHelper;
@@ -103,7 +106,7 @@ public class SectionD1Activity extends AppCompatActivity {
         MainApp.foodFreq.set_UUID(MainApp.fc.get_UID());
         MainApp.foodFreq.setDeviceId(MainApp.appInfo.getDeviceID());
         MainApp.foodFreq.setDevicetagID(MainApp.appInfo.getTagName());
-        MainApp.foodFreq.setFormDate(MainApp.fc.getFormDate());
+        MainApp.foodFreq.setFormDate(new SimpleDateFormat("dd-MM-yy HH:mm").format(new Date().getTime()));
         MainApp.foodFreq.setUser(MainApp.userName);
 
         JSONObject json = new JSONObject();
@@ -116,7 +119,6 @@ public class SectionD1Activity extends AppCompatActivity {
         json.put("mm_fm_uid", MainApp.indexKishMWRA.getUid());
         json.put("mm_fm_serial", MainApp.indexKishMWRA.getSerialno());
         json.put("fm_name", MainApp.indexKishMWRAChild.getName());
-        json.put("appversion", MainApp.appInfo.getAppVersion());
 
 
         json.put("d101",
