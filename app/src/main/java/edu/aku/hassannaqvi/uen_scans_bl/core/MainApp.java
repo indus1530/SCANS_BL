@@ -110,7 +110,7 @@ public class MainApp extends Application {
             String acc = GPSPref.getString("Accuracy", "0");
             String dt = GPSPref.getString("Time", "0");
 
-            if (lat == "0" && lang == "0") {
+            if (lat.equals("0") && lang.equals("0")) {
                 Toast.makeText(activity, "Could not obtained GPS points", Toast.LENGTH_SHORT).show();
             } else {
                 Toast.makeText(activity, "GPS set", Toast.LENGTH_SHORT).show();

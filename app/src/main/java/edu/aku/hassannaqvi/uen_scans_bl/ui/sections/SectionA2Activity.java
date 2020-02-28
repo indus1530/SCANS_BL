@@ -190,7 +190,7 @@ public class SectionA2Activity extends AppCompatActivity {
         sd.put("appversion", MainApp.appInfo.getAppVersion());
 
         FamilyMembersContract motherFMC = null;
-        if (bi.fldGrpCVa212.getVisibility() == View.VISIBLE) {
+//        if (bi.fldGrpCVa212.getVisibility() == View.VISIBLE) {
             sd.put("a212", menSLst.getFirst().size() != 0 && bi.a212.getSelectedItemPosition() != 1
                     ? mainVModel.getMemberInfo(menSLst.getFirst().get(bi.a212.getSelectedItemPosition() - 2)).getSerialno() : "97");
             fmc.setfName(bi.a212.getSelectedItem().toString());
@@ -202,10 +202,10 @@ public class SectionA2Activity extends AppCompatActivity {
             fmc.setMother_name(bi.a213.getSelectedItem().toString());
             sd.put("a213", motherSerial);
             fmc.setMother_serial(motherSerial);
-        } else {
+        /*} else {
             sd.put("a212", "0");
             sd.put("a213", "0");
-        }
+        }*/
 
         sd.put("a205a", bi.a205a.getText().toString());
         sd.put("a205b", bi.a205b.getText().toString());
@@ -269,7 +269,7 @@ public class SectionA2Activity extends AppCompatActivity {
         else if (Integer.valueOf(fmc.getAge()) >= 5 && Integer.valueOf(fmc.getAge()) < 10) {
             mainVModel.setChildU5to10(fmc);
             if (motherFMC == null) return;
-            if (Integer.valueOf(motherFMC.getAge()) >= 15 && Integer.valueOf(motherFMC.getAge()) <= 49)
+            if (Integer.valueOf(motherFMC.getAge()) >= 15 && Integer.valueOf(motherFMC.getAge()) < 49)
                 mainVModel.setMwraChildU5to10(motherFMC);
         }
 
@@ -440,8 +440,8 @@ public class SectionA2Activity extends AppCompatActivity {
             Clear.clearAllFields(bi.a210, true);
         }*/
 
-        bi.fldGrpCVa212.setVisibility(calAge >= 5 && calAge < 10 ? View.VISIBLE : View.GONE);
-        bi.fldGrpCVa213.setVisibility(calAge >= 5 && calAge < 10 ? View.VISIBLE : View.GONE);
+        /*bi.fldGrpCVa212.setVisibility(calAge >= 5 && calAge < 10 ? View.VISIBLE : View.GONE);
+        bi.fldGrpCVa213.setVisibility(calAge >= 5 && calAge < 10 ? View.VISIBLE : View.GONE);*/
 
     }
 
