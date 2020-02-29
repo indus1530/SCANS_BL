@@ -75,19 +75,19 @@ public class ChildContract {
         if (!this.sC1.equals("")) {
             json.put(SingleChild.COLUMN_SC1, new JSONObject(this.sC1));
         }
-        if (!this.sC2.equals("")) {
+        if (this.sC2 != null && !this.sC2.equals("")) {
             json.put(SingleChild.COLUMN_SC2, new JSONObject(this.sC2));
         }
-        if (!this.sC3.equals("")) {
+        if (this.sC3 != null && !this.sC3.equals("")) {
             json.put(SingleChild.COLUMN_SC3, new JSONObject(this.sC3));
         }
-        if (!this.sC4.equals("")) {
+        if (this.sC4 != null && !this.sC4.equals("")) {
             json.put(SingleChild.COLUMN_SC4, new JSONObject(this.sC4));
         }
-        if (!this.sC5.equals("")) {
+        if (this.sC5 != null && !this.sC5.equals("")) {
             json.put(SingleChild.COLUMN_SC5, new JSONObject(this.sC5));
         }
-        if (!this.sC6.equals("")) {
+        if (this.sC6 != null && !this.sC6.equals("")) {
             json.put(SingleChild.COLUMN_SC6, new JSONObject(this.sC6));
         }/*
         if (!this.sL.equals("")) {
