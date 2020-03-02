@@ -56,6 +56,24 @@ public class SectionD1Activity extends AppCompatActivity {
                 bi.fldGrpCVd102sub.setVisibility(View.VISIBLE);
             }
         });
+
+        bi.d103.setOnCheckedChangeListener((group, checkedId) -> {
+            if (checkedId == bi.d10397.getId()) {
+                bi.d103sub.clearCheck();
+                bi.fldGrpCVd103sub.setVisibility(View.GONE);
+            } else {
+                bi.fldGrpCVd103sub.setVisibility(View.VISIBLE);
+            }
+        });
+
+        bi.d104.setOnCheckedChangeListener((group, checkedId) -> {
+            if (checkedId == bi.d10497.getId()) {
+                bi.d104sub.clearCheck();
+                bi.fldGrpCVd104sub.setVisibility(View.GONE);
+            } else {
+                bi.fldGrpCVd104sub.setVisibility(View.VISIBLE);
+            }
+        });
     }
 
 
@@ -158,7 +176,8 @@ public class SectionD1Activity extends AppCompatActivity {
         json.put("d103",
                 bi.d103a.isChecked() ? "1" :
                         bi.d103b.isChecked() ? "2" :
-                                "0");
+                                bi.d10397.isChecked() ? "97" :
+                                        "0");
 
         json.put("d103sub",
                 bi.d103suba.isChecked() ? "1" :
@@ -173,7 +192,8 @@ public class SectionD1Activity extends AppCompatActivity {
         json.put("d104",
                 bi.d104a.isChecked() ? "1" :
                         bi.d104b.isChecked() ? "2" :
-                                "0");
+                                bi.d10497.isChecked() ? "97" :
+                                        "0");
 
         json.put("d104sub",
                 bi.d104suba.isChecked() ? "1" :
