@@ -377,6 +377,8 @@ public class SectionA2Activity extends AppCompatActivity {
         } else if (calAge > 10) {
             bi.fldGrpCVa210.setVisibility(View.VISIBLE);
             bi.fldGrpCVa207.setVisibility(View.VISIBLE);
+            bi.fldGrpCVa208.setVisibility(View.VISIBLE);
+            bi.fldGrpCVa209.setVisibility(View.VISIBLE);
         }
 
         /*Clear.clearAllFields(bi.a209, false);
