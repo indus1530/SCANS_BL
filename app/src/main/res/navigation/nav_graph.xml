@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/dentalFragment">
+
+    <fragment
+        android:id="@+id/dentalFragment"
+        android:name="edu.aku.hassannaqvi.uen_scans_bl.ui.fragments.DentalFragment"
+        android:label="fragment_dental"
+        tools:layout="@layout/fragment_dental">
+        <action
+            android:id="@+id/action_dentalFragment_to_permissionsFragment"
+            app:destination="@id/permissionsFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/permissionsFragment"
+        android:name="edu.aku.hassannaqvi.uen_scans_bl.ui.fragments.PermissionsFragment"
+        android:label="PermissionsFragment">
+        <action
+            android:id="@+id/action_permissionsFragment_to_cameraFragment"
+            app:destination="@id/cameraFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/cameraFragment"
+        android:name="edu.aku.hassannaqvi.uen_scans_bl.ui.fragments.CameraFragment"
+        android:label="CameraFragment" />
+</navigation>

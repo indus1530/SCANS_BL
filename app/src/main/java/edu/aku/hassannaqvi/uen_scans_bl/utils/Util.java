@@ -22,12 +22,12 @@ import edu.aku.hassannaqvi.uen_scans_bl.ui.other.EndingActivity;
 public class Util {
 
 
-    public static String[] permissions = {Manifest.permission.READ_CONTACTS, Manifest.permission.GET_ACCOUNTS,
+    private static String[] permissions = {Manifest.permission.READ_CONTACTS, Manifest.permission.GET_ACCOUNTS,
             Manifest.permission.READ_PHONE_STATE, Manifest.permission.ACCESS_FINE_LOCATION,
             Manifest.permission.ACCESS_COARSE_LOCATION, Manifest.permission.WRITE_EXTERNAL_STORAGE,
             Manifest.permission.CAMERA};
 
-    public static int[] checkPermission(Context context) {
+    private static int[] checkPermission(Context context) {
 
         return new int[]{ContextCompat.checkSelfPermission(context,
                 Manifest.permission.READ_CONTACTS), ContextCompat.checkSelfPermission(context,
