@@ -2008,6 +2008,7 @@
     <string name="countNo">No</string>
     <string name="countYes">Yes</string>
     <string name="countAlertMsg">Are you sure to continue</string>
+ <string name="vision_error">Invalidate Field</string>
 
 
 </resources>

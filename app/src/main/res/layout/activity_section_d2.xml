@@ -314,6 +314,13 @@
                                 android:layout_weight="0.8"
                                 android:text="@string/d205b" />
 
+                            <RadioButton
+                                android:id="@+id/d20597"
+                                style="@style/radiobutton"
+                                android:layout_width="0dp"
+                                android:layout_weight="0.8"
+                                android:text="@string/never" />
+
                         </RadioGroup>
 
                     </LinearLayout>
@@ -421,6 +428,11 @@
                                 android:id="@+id/d20696"
                                 style="@style/radiobutton"
                                 android:text="@string/d206x" />
+
+                            <RadioButton
+                                android:id="@+id/d20697"
+                                style="@style/radiobutton"
+                                android:text="@string/never" />
 
                             <EditText
                                 android:id="@+id/d20696x"
@@ -644,6 +656,13 @@
                                 android:layout_width="0dp"
                                 android:layout_weight="0.8"
                                 android:text="@string/d209b" />
+
+                            <RadioButton
+                                android:id="@+id/d20997"
+                                style="@style/radiobutton"
+                                android:layout_width="0dp"
+                                android:layout_weight="0.8"
+                                android:text="@string/never" />
 
                         </RadioGroup>
 
