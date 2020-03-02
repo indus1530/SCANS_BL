@@ -354,7 +354,6 @@ public class MainActivity extends AppCompatActivity {
 
 
         if (MainApp.admin) {
-            bi.adminsec.setVisibility(View.VISIBLE);
             bi.databaseBtn.setVisibility(View.VISIBLE);
             SharedPreferences syncPref = getSharedPreferences("SyncInfo", Context.MODE_PRIVATE);
             rSumText += "Last Data Download: \t" + syncPref.getString("LastDownSyncServer", "Never Updated");
@@ -365,7 +364,6 @@ public class MainActivity extends AppCompatActivity {
             rSumText += "Unsynced Forms: \t" + unsyncedForms.size();
             rSumText += "\r\n";
         } else {
-            bi.adminsec.setVisibility(View.GONE);
             bi.databaseBtn.setVisibility(View.GONE);
         }
         Log.d(TAG, "onCreate: " + rSumText);

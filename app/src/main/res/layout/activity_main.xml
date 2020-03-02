@@ -46,12 +46,10 @@
             android:textStyle="bold"
             android:visibility="gone" />
 
-
         <ScrollView
             android:id="@+id/activity_main"
             android:layout_width="match_parent"
             android:layout_height="match_parent">
-
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -61,7 +59,6 @@
                 android:paddingTop="50dp"
                 android:paddingRight="@dimen/activity_horizontal_margin"
                 android:paddingBottom="@dimen/activity_vertical_margin">
-
 
                 <TextView
                     android:id="@+id/lblMainMenu"
@@ -257,7 +254,6 @@
 
                 </LinearLayout>-->
 
-
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
@@ -325,7 +321,6 @@
                     </androidx.cardview.widget.CardView>
 
                 </LinearLayout>
-
 
                 <LinearLayout
                     android:layout_width="match_parent"
@@ -395,9 +390,77 @@
 
                     </androidx.cardview.widget.CardView>
 
-
                 </LinearLayout>
 
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="12dp"
+                    android:orientation="horizontal">
+
+                    <androidx.cardview.widget.CardView
+                        android:id="@+id/formE"
+                        android:layout_width="0dp"
+                        android:layout_height="100dp"
+                        android:layout_margin="@dimen/cardview_compat_inset_shadow"
+                        android:layout_weight="1"
+                        android:clickable="true"
+                        android:foreground="?android:attr/selectableItemBackground"
+                        android:onClick="openForm"
+                        android:visibility="visible"
+                        app:cardCornerRadius="20dp"
+                        tools:visibility="visible">
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_centerInParent="true"
+                                android:layout_gravity="center_horizontal"
+                                android:text="Dental"
+                                android:textAppearance="@style/TextAppearance.AppCompat.Large"
+                                android:textColor="@color/colorPrimaryDark"
+                                android:textSize="30sp" />
+
+                        </RelativeLayout>
+
+                    </androidx.cardview.widget.CardView>
+
+                    <androidx.cardview.widget.CardView
+                        android:id="@+id/formF"
+                        android:layout_width="0dp"
+                        android:layout_height="100dp"
+                        android:layout_margin="@dimen/cardview_compat_inset_shadow"
+                        android:layout_weight="1"
+                        android:clickable="true"
+                        android:foreground="?android:attr/selectableItemBackground"
+                        android:onClick="openForm"
+                        android:visibility="visible"
+                        app:cardCornerRadius="20dp"
+                        tools:visibility="visible">
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_centerInParent="true"
+                                android:layout_gravity="center_horizontal"
+                                android:text="SOSAS"
+                                android:textAppearance="@style/TextAppearance.AppCompat.Large"
+                                android:textColor="@color/colorPrimaryDark"
+                                android:textSize="30sp" />
+
+                        </RelativeLayout>
+
+                    </androidx.cardview.widget.CardView>
+
+                </LinearLayout>
 
                 <LinearLayout
                     android:layout_width="match_parent"
@@ -430,7 +493,6 @@
                                 android:layout_width="match_parent"
                                 android:layout_height="match_parent"
                                 android:layout_margin="10dp">
-
 
                                 <ImageView
                                     android:layout_width="?attr/actionBarSize"
@@ -470,7 +532,6 @@
                                 android:layout_height="match_parent"
                                 android:layout_margin="10dp">
 
-
                                 <ImageView
                                     android:layout_width="?attr/actionBarSize"
                                     android:layout_height="?attr/actionBarSize"
@@ -491,7 +552,6 @@
                             </RelativeLayout>
 
                         </androidx.cardview.widget.CardView>
-
 
                     </LinearLayout>
 
@@ -520,7 +580,6 @@
                                 android:layout_height="match_parent"
                                 android:layout_margin="10dp">
 
-
                                 <ImageView
                                     android:layout_width="?attr/actionBarSize"
                                     android:layout_height="?attr/actionBarSize"
@@ -546,51 +605,10 @@
 
                 </LinearLayout>
 
-
-                <LinearLayout
-                    android:id="@+id/adminsec"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:orientation="vertical"
-                    android:visibility="gone">
-
-                    <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:orientation="vertical">
-
-                        <Button
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:onClick="openB"
-                            android:text="Open Section B (Mothers's Info)" />
-
-                        <Button
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:onClick="openC"
-                            android:text="Open Section C (Children's Info)" />
-
-                        <Button
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:onClick="openD"
-                            android:text="Open Section D (Deceased)" />
-
-                        <Button
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:onClick="openE"
-                            android:text="Open Section D (Problems)" />
-
-                    </LinearLayout>
-
-                </LinearLayout>
-
-
             </LinearLayout>
 
         </ScrollView>
+
     </LinearLayout>
 
 </layout>
