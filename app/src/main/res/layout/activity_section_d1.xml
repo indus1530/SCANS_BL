@@ -298,6 +298,13 @@
                                 android:layout_weight="1"
                                 android:text="@string/d103b" />
 
+                            <RadioButton
+                                android:id="@+id/d10397"
+                                style="@style/radiobutton"
+                                android:layout_width="0dp"
+                                android:layout_weight="1"
+                                android:text="@string/never" />
+
                         </RadioGroup>
 
                     </LinearLayout>
@@ -373,17 +380,14 @@
                         android:layout_height="wrap_content"
                         android:orientation="vertical">
 
+                        <TextView
+                            style="@style/i_textview"
+                            android:text="@string/d104" />
+
                         <RadioGroup
                             android:id="@+id/d104"
                             style="@style/radiogroup"
                             android:orientation="horizontal">
-
-                            <TextView
-                                style="@style/i_textview"
-                                android:layout_width="0dp"
-                                android:layout_height="match_parent"
-                                android:layout_weight="1"
-                                android:text="@string/d104" />
 
                             <RadioButton
                                 android:id="@+id/d104a"
@@ -396,8 +400,15 @@
                                 android:id="@+id/d104b"
                                 style="@style/radiobutton"
                                 android:layout_width="0dp"
-                                android:layout_weight="0.9"
+                                android:layout_weight="0.8"
                                 android:text="@string/d104b" />
+
+                            <RadioButton
+                                android:id="@+id/d10497"
+                                style="@style/radiobutton"
+                                android:layout_width="0dp"
+                                android:layout_weight="0.8"
+                                android:text="@string/never" />
 
                         </RadioGroup>
 

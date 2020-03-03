@@ -106,20 +106,17 @@
                                 android:maxLength="1"
                                 android:textDirection="ltr"
                                 app:maxValue="6"
-                                app:minValue="1"
+                                app:minValue="5"
                                 app:type="range" />
 
-                            <com.edittextpicker.aliazaz.EditTextPicker
+                            <EditText
                                 android:id="@+id/m102a2"
                                 style="@style/EditTextNum"
                                 android:layout_width="0dp"
                                 android:layout_weight="1"
                                 android:hint="Part 2 - ##"
                                 android:maxLength="2"
-                                android:textDirection="ltr"
-                                app:maxValue="36"
-                                app:minValue="1"
-                                app:type="range" />
+                                android:textDirection="ltr" />
 
                         </LinearLayout>
 
@@ -191,20 +188,17 @@
                                 android:maxLength="1"
                                 android:textDirection="ltr"
                                 app:maxValue="6"
-                                app:minValue="1"
+                                app:minValue="5"
                                 app:type="range" />
 
-                            <com.edittextpicker.aliazaz.EditTextPicker
+                            <EditText
                                 android:id="@+id/m102b2"
                                 style="@style/EditTextNum"
                                 android:layout_width="0dp"
                                 android:layout_weight="1"
                                 android:hint="Part 2 - ##"
                                 android:maxLength="2"
-                                android:textDirection="ltr"
-                                app:maxValue="36"
-                                app:minValue="1"
-                                app:type="range" />
+                                android:textDirection="ltr" />
 
                         </LinearLayout>
 

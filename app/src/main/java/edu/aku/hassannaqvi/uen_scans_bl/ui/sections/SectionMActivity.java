@@ -16,6 +16,8 @@ import org.json.JSONObject;
 
 import java.text.SimpleDateFormat;
 import java.util.Date;
+import java.util.HashMap;
+import java.util.Map;
 
 import edu.aku.hassannaqvi.uen_scans_bl.R;
 import edu.aku.hassannaqvi.uen_scans_bl.contracts.VisionContract;
@@ -28,6 +30,17 @@ public class SectionMActivity extends AppCompatActivity {
 
     ActivitySectionMBinding bi;
     VisionContract vc;
+    /* This is how to declare HashMap */
+    Map<Integer, Boolean> visionMap = new HashMap<Integer, Boolean>() {
+        {
+            put(6, true);
+            put(9, true);
+            put(12, true);
+            put(18, true);
+            put(24, true);
+            put(36, true);
+        }
+    };
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -118,26 +131,23 @@ public class SectionMActivity extends AppCompatActivity {
         json.put("mm_fm_serial", MainApp.indexKishMWRA.getSerialno());
         json.put("appversion", MainApp.appInfo.getAppVersion());
 
-        json.put("m101",
-                bi.m101a.isChecked() ? "1" :
-                        bi.m101b.isChecked() ? "2" :
-                                "0");
+        json.put("m101", bi.m101a.isChecked() ? "1"
+                : bi.m101b.isChecked() ? "2"
+                : "0");
 
         json.put("m102a", bi.m102a.getText().toString());
         json.put("m102a2", bi.m102a2.getText().toString());
 
-        json.put("m102a3",
-                bi.m102aa.isChecked() ? "1" :
-                        bi.m102ab.isChecked() ? "2" :
-                                "0");
+        json.put("m102a3", bi.m102aa.isChecked() ? "1"
+                : bi.m102ab.isChecked() ? "2"
+                : "0");
 
         json.put("m102b", bi.m102b.getText().toString());
         json.put("m102b2", bi.m102b2.getText().toString());
 
-        json.put("m102b3",
-                bi.m102ba.isChecked() ? "1" :
-                        bi.m102bb.isChecked() ? "2" :
-                                "0");
+        json.put("m102b3", bi.m102ba.isChecked() ? "1"
+                : bi.m102bb.isChecked() ? "2"
+                : "0");
 
         vc.setsE2(String.valueOf(json));
 
@@ -145,9 +155,19 @@ public class SectionMActivity extends AppCompatActivity {
 
 
     private boolean formValidation() {
-        return Validator.emptyCheckingContainer(this, bi.fldGrpSectionM);
+        if (!Validator.emptyCheckingContainer(this, bi.fldGrpSectionM)) return false;
 
+        if (visionMap.get(Integer.valueOf(bi.m102a2.getText().toString())) == null) {
+            Validator.emptyCustomTextBox(this, bi.m102a2, getString(R.string.vision_error));
+            return false;
+        }
+
+        if (visionMap.get(Integer.valueOf(bi.m102b2.getText().toString())) == null) {
+            Validator.emptyCustomTextBox(this, bi.m102b2, getString(R.string.vision_error));
+            return false;
+        }
+
+        return true;
     }
-
 
 }
