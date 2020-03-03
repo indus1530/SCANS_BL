@@ -23,7 +23,6 @@
         android:label="@string/app_name"
         android:screenOrientation="portrait"
         android:theme="@style/AppTheme1">
-        <activity android:name=".ui.sections.SectionDentalActivity"></activity>
 
         <provider
             android:name=".otherClasses.FamilyMemContentProvider"
@@ -173,6 +172,9 @@
             android:name=".ui.other.EndingActivity"
             android:screenOrientation="portrait" />
         <activity
+            android:name=".ui.sections.SectionDentalActivity"
+            android:screenOrientation="portrait" />
+        <activity
             android:name=".ui.other.MainActivity"
             android:screenOrientation="portrait" />
         <activity
@@ -183,8 +185,6 @@
             android:name=".ui.sync.SyncActivity"
             android:parentActivityName=".ui.other.MainActivity"
             android:screenOrientation="portrait" />
-
-        <service android:name=".DownloadFileService" />
     </application>
 
 </manifest>

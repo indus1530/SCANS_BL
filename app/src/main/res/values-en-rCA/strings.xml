@@ -2097,4 +2097,9 @@
     <string name="countYes"> Yes </string>
     <string name="countAlertMsg"> Surely! You want to continue </string>
 
+    <string name="vision_error">Invalidate Field</string>
+    <string name="delete_button_alt">Delete</string>
+    <string name="delete_dialog">Delete current photo?</string>
+    <string name="delete_title">Confirm</string>
+
 </resources>

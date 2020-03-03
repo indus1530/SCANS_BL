@@ -2008,11 +2008,11 @@
     <string name="countNo">No</string>
     <string name="countYes">Yes</string>
     <string name="countAlertMsg">Are you sure to continue</string>
- <string name="vision_error">Invalidate Field</string>
 
-    <!-- TODO: Remove or change this placeholder text -->
-    <string name="hello_blank_fragment">Hello blank fragment</string>
-    <string name="image_capture">CAPTURE IMAGES</string>
+    <string name="vision_error">Invalidate Field</string>
+    <string name="delete_button_alt">Delete</string>
+    <string name="delete_dialog">Delete current photo?</string>
+    <string name="delete_title">Confirm</string>
 
 
 </resources>

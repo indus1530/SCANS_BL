@@ -18,5 +18,7 @@ class CONSTANTS {
         const val ANTHRO = 1
         const val HB = 2
         const val VISION = 3
+        const val DENTAL = 4
+
     }
 }

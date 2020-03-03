@@ -87,4 +87,9 @@
     <color name="refused">#33EC701C</color>
     <color name="dssIncorrect">#337f00ff</color>
 
+
+    <color name="icActive">#212121</color>
+    <color name="icFocused">#424242</color>
+    <color name="icPressed">#757575</color>
+
 </resources>
