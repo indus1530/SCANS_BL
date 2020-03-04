@@ -13,7 +13,9 @@
     <fragment
         android:id="@+id/permissionsFragment"
         android:name="edu.aku.hassannaqvi.uen_scans_bl.ui.fragments.PermissionsFragment"
-        android:label="PermissionsFragment">
+        android:label="PermissionsFragment"
+        app:popUpTo="@id/nav_graph"
+        app:popUpToInclusive="true">
         <action
             android:id="@+id/action_permissionsFragment_to_cameraFragment"
             app:destination="@id/cameraFragment"
@@ -27,7 +29,7 @@
         <action
             android:id="@+id/action_cameraFragment_to_permissionsFragment"
             app:destination="@id/permissionsFragment"
-            app:popUpTo="@id/cameraFragment"
+            app:popUpTo="@id/nav_graph"
             app:popUpToInclusive="true" />
         <action
             android:id="@+id/action_cameraFragment_to_galleryFragment"
@@ -36,7 +38,9 @@
     <fragment
         android:id="@+id/galleryFragment"
         android:name="edu.aku.hassannaqvi.uen_scans_bl.ui.fragments.GalleryFragment"
-        android:label="GalleryFragment">
+        android:label="GalleryFragment"
+        app:popUpTo="@id/nav_graph"
+        app:popUpToInclusive="true">
         <action
             android:id="@+id/action_galleryFragment_to_cameraFragment"
             app:destination="@id/cameraFragment" />

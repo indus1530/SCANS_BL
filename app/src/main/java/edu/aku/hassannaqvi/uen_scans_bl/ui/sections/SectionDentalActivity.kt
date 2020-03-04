@@ -26,4 +26,7 @@ class SectionDentalActivity : AppCompatActivity() {
         }, IMMERSIVE_FLAG_TIMEOUT)
     }
 
+    companion object {
+        const val TAG = "DentalCameraX"
+    }
 }

@@ -17,6 +17,7 @@ import android.view.View
 import android.view.ViewGroup
 import android.webkit.MimeTypeMap
 import android.widget.ImageButton
+import android.widget.Toast
 import androidx.camera.core.*
 import androidx.constraintlayout.widget.ConstraintLayout
 import androidx.core.content.ContextCompat
@@ -27,6 +28,8 @@ import androidx.navigation.fragment.findNavController
 import com.bumptech.glide.Glide
 import com.bumptech.glide.request.RequestOptions
 import edu.aku.hassannaqvi.uen_scans_bl.R
+import edu.aku.hassannaqvi.uen_scans_bl.ui.sections.SectionDentalActivity.Companion.TAG
+import edu.aku.hassannaqvi.uen_scans_bl.ui.sections.SectionInfoActivity.outputDirectory
 import edu.aku.hassannaqvi.uen_scans_bl.utils.*
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
@@ -45,7 +48,7 @@ class CameraFragment : Fragment(R.layout.fragment_camera) {
     private lateinit var container: ConstraintLayout
     lateinit var viewFinder: TextureView
     private lateinit var mainExecutor: Executor
-    private lateinit var outputDirectory: File
+
     private var lensFacing = CameraX.LensFacing.BACK
     private var imageCapture: ImageCapture? = null
 
@@ -61,7 +64,7 @@ class CameraFragment : Fragment(R.layout.fragment_camera) {
         container = view.findViewById(R.id.camera_container)
 
         // Determine the output directory
-        outputDirectory = getOutputDirectory(requireContext())
+//        outputDirectory = getImageSaveDirectory(requireContext())
 
         // Wait for the views to be properly laid out
         viewFinder.post {
@@ -107,30 +110,6 @@ class CameraFragment : Fragment(R.layout.fragment_camera) {
                 // Create output file to hold the image
                 val file = createFile(outputDirectory, FILENAME, PHOTO_EXTENSION)
 
-                /*imageCapture.takePicture(file, mainExecutor,
-                        object : ImageCapture.OnImageSavedListener {
-                            override fun onError(
-                                    imageCaptureError: ImageCapture.ImageCaptureError,
-                                    message: String,
-                                    exc: Throwable?
-                            ) {
-                                val msg = "Photo capture failed: $message"
-                                Log.e("CameraXScans", msg, exc)
-                                viewFinder.post {
-                                    Toast.makeText(context, msg, Toast.LENGTH_SHORT).show()
-                                }
-                            }
-
-                            override fun onImageSaved(file: File) {
-                                val msg = "Photo capture succeeded: ${file.absolutePath}"
-                                Log.d("CameraXScans", msg)
-                                viewFinder.post {
-                                    Toast.makeText(context, msg, Toast.LENGTH_SHORT).show()
-                                }
-                            }
-                        })*/
-
-
                 // Setup image capture metadata
                 val metadata = ImageCapture.Metadata().apply {
                     // Mirror image when using the front camera
@@ -156,7 +135,17 @@ class CameraFragment : Fragment(R.layout.fragment_camera) {
 
         // Listener for button used to view last photo
         controls.findViewById<ImageButton>(R.id.photo_view_button).setOnClickListener {
-            findNavController().navigate(CameraFragmentDirections.actionCameraFragmentToGalleryFragment(outputDirectory.absolutePath))
+            if (getMediaList(outputDirectory.absolutePath).isNotEmpty())
+                findNavController().navigate(CameraFragmentDirections.actionCameraFragmentToGalleryFragment(outputDirectory.absolutePath))
+        }
+
+        // Listener for button used to view last photo
+        controls.findViewById<ImageButton>(R.id.btn_next_section).setOnClickListener {
+            if (getMediaList(outputDirectory.absolutePath).isNotEmpty()) {
+                activity?.finish()
+            } else {
+                Toast.makeText(activity, "Can't capture any photos!!", Toast.LENGTH_SHORT).show()
+            }
         }
     }
 
@@ -272,12 +261,8 @@ class CameraFragment : Fragment(R.layout.fragment_camera) {
         override fun onImageSaved(photoFile: File) {
             Log.d(TAG, "Photo capture succeeded: ${photoFile.absolutePath}")
 
-            // We can only change the foreground Drawable using API level 23+ API
-            if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
-
-                // Update the gallery thumbnail with latest picture taken
-                setGalleryThumbnail(photoFile)
-            }
+            // Update the gallery thumbnail with latest picture taken
+            setGalleryThumbnail(photoFile)
 
             // Implicit broadcasts will be ignored for devices running API
             // level >= 24, so if you only target 24+ you can remove this statement
@@ -294,10 +279,6 @@ class CameraFragment : Fragment(R.layout.fragment_camera) {
             MediaScannerConnection.scanFile(
                     context, arrayOf(photoFile.absolutePath), arrayOf(mimeType), null)
         }
-    }
-
-    companion object {
-        const val TAG = "DentalCameraX"
     }
 
 }

@@ -437,9 +437,9 @@
                         android:clickable="true"
                         android:foreground="?android:attr/selectableItemBackground"
                         android:onClick="openForm"
-                        android:visibility="visible"
+                        android:visibility="gone"
                         app:cardCornerRadius="20dp"
-                        tools:visibility="visible">
+                        tools:visibility="gone">
 
                         <RelativeLayout
                             android:layout_width="match_parent"

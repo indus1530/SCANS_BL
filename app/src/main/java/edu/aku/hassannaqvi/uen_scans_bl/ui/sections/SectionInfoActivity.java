@@ -13,6 +13,7 @@ import androidx.databinding.DataBindingUtil;
 import com.validatorcrawler.aliazaz.Clear;
 import com.validatorcrawler.aliazaz.Validator;
 
+import java.io.File;
 import java.util.ArrayList;
 import java.util.Objects;
 
@@ -25,12 +26,16 @@ import edu.aku.hassannaqvi.uen_scans_bl.core.MainApp;
 import edu.aku.hassannaqvi.uen_scans_bl.databinding.ActivitySectionInfoBinding;
 import edu.aku.hassannaqvi.uen_scans_bl.viewmodel.MainRepository;
 
+import static edu.aku.hassannaqvi.uen_scans_bl.utils.UtilsExtensionsKt.checkSDCardAvailability;
+import static edu.aku.hassannaqvi.uen_scans_bl.utils.UtilsExtensionsKt.getImageSaveDirectory;
+
 public class SectionInfoActivity extends AppCompatActivity {
 
     ActivitySectionInfoBinding bi;
     private DatabaseHelper db;
     ArrayList<FamilyMembersContract> famList;
     private int selectedBTN;
+    public static File outputDirectory;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -93,7 +98,24 @@ public class SectionInfoActivity extends AppCompatActivity {
     public void BtnContinue() {
         if (selectedBTN == 1) new MainRepository(this, famList);
         else if (selectedBTN == 2) startActivity(new Intent(this, SectionLActivity.class));
-        else startActivity(new Intent(this, SectionMActivity.class));
+        else if (selectedBTN == 3) startActivity(new Intent(this, SectionMActivity.class));
+        else storageSelection();
+    }
+
+    private void storageSelection() {
+        //CheckSDCard and assigning directory name
+        boolean value = checkSDCardAvailability();
+        if (!value) {
+            Toast.makeText(this, "Attach SD-Card", Toast.LENGTH_SHORT).show();
+            return;
+        }
+        outputDirectory = getImageSaveDirectory(this, MainApp.indexKishMWRA.getClusterno(), MainApp.indexKishMWRA.getHhno());
+        if (!outputDirectory.exists()) {
+            Toast.makeText(this, "Can't able to create folder. Kindly contact IT Services.", Toast.LENGTH_SHORT).show();
+            return;
+        }
+
+        startActivity(new Intent(this, SectionDentalActivity.class));
     }
 
     public void BtnCheckCluster() {

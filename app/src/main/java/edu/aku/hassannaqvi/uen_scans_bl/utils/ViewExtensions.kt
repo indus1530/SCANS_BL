@@ -25,6 +25,7 @@ import android.widget.ImageButton
 import androidx.annotation.RequiresApi
 import androidx.appcompat.app.AlertDialog
 import edu.aku.hassannaqvi.uen_scans_bl.R
+import edu.aku.hassannaqvi.uen_scans_bl.ui.fragments.EXTENSION_WHITELIST
 import java.io.File
 import java.text.SimpleDateFormat
 import java.util.*
@@ -113,4 +114,12 @@ fun getOutputDirectory(context: Context): File {
     }
     return if (mediaDir != null && mediaDir.exists())
         mediaDir else appContext.filesDir
+}
+
+fun getMediaList(directory: String): MutableList<File> {
+    // Walk through all files in the root directory
+    // We reverse the order of the list to present the last photos first
+    return File(directory).listFiles { file ->
+        EXTENSION_WHITELIST.contains(file.extension.toUpperCase())
+    }?.sortedDescending()?.toMutableList() ?: mutableListOf()
 }
