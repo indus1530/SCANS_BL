@@ -104,25 +104,31 @@ public class SectionInfoActivity extends AppCompatActivity {
 
     private void storageSelection() {
         //CheckSDCard and assigning directory name
-        boolean value = checkSDCardAvailability();
+        boolean value = checkSDCardAvailability(this);
         if (!value) {
             Toast.makeText(this, "Attach SD-Card", Toast.LENGTH_SHORT).show();
             return;
         }
         outputDirectory = getImageSaveDirectory(this, MainApp.indexKishMWRA.getClusterno(), MainApp.indexKishMWRA.getHhno());
-        if (!outputDirectory.exists()) {
-            Toast.makeText(this, "Can't able to create folder. Kindly contact IT Services.", Toast.LENGTH_SHORT).show();
+//        outputDirectory = getImageSaveDirectory(this, "5901", "0059-001");
+        String error_msg = "Can't able to create folder. Kindly contact IT Services.";
+        if (outputDirectory == null) {
+            Toast.makeText(this, error_msg, Toast.LENGTH_SHORT).show();
+            return;
+        } else if (!outputDirectory.exists()) {
+            Toast.makeText(this, error_msg, Toast.LENGTH_SHORT).show();
             return;
         }
-
         startActivity(new Intent(this, SectionDentalActivity.class));
     }
 
     public void BtnCheckCluster() {
 
+//        storageSelection();
+
         if (!Validator.emptyTextBox(this, bi.a101)) return;
         boolean loginFlag;
-        int cluster = Integer.valueOf(bi.a101.getText().toString());
+        int cluster = Integer.parseInt(bi.a101.getText().toString());
         if (cluster <= 5000) {
             loginFlag = !(MainApp.userName.equals("test1234") || MainApp.userName.equals("dmu@aku") || MainApp.userName.substring(0, 4).equals("user"));
         } else {

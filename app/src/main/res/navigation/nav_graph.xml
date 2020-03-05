@@ -1,15 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <navigation xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/nav_graph"
     app:startDestination="@id/permissionsFragment">
 
-    <fragment
-        android:id="@+id/dentalFragment"
-        android:name="edu.aku.hassannaqvi.uen_scans_bl.ui.fragments.DentalFragment"
-        android:label="fragment_dental"
-        tools:layout="@layout/fragment_dental" />
     <fragment
         android:id="@+id/permissionsFragment"
         android:name="edu.aku.hassannaqvi.uen_scans_bl.ui.fragments.PermissionsFragment"
