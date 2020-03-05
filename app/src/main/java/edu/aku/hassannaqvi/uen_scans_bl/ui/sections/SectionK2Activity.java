@@ -81,11 +81,14 @@ public class SectionK2Activity extends AppCompatActivity implements Util.EndSecA
                 if (i == 0) return;
                 fmc_child = mwraChildrenAnthro.getThird().get(i - 1);
 
-                boolean mother_flag = fmc_child.getKishSelected().equals("1");
+                boolean mother_flag = false;
+                if (fmc_child.getKishSelected() != null)
+                    mother_flag = fmc_child.getKishSelected().equals("1");
                 if (mother_flag) bi.childMauc.setVisibility(View.GONE);
                 else bi.childMauc.setVisibility(View.VISIBLE);
 
                 setupRanges(mother_flag);
+
 
             }
 
