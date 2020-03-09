@@ -57,7 +57,7 @@ import static edu.aku.hassannaqvi.uen_scans_bl.utils.CreateTable.SQL_CREATE_PSU_
 import static edu.aku.hassannaqvi.uen_scans_bl.utils.CreateTable.SQL_CREATE_USERS;
 import static edu.aku.hassannaqvi.uen_scans_bl.utils.CreateTable.SQL_CREATE_VERSIONAPP;
 import static edu.aku.hassannaqvi.uen_scans_bl.utils.CreateTable.SQL_CREATE_VISION;
-import static edu.aku.hassannaqvi.uen_scans_bl.utils.SummaryKt.getSummaryFromCursor;
+import static edu.aku.hassannaqvi.uen_scans_bl.utils.DashboardSummaryUtilsKt.getSummaryFromCursor;
 
 
 /**
@@ -597,7 +597,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
 
         SQLiteDatabase db = this.getReadableDatabase();
         Cursor c = null;
-        ArrayList<Summary> cursorMap = new ArrayList<>();
+        ArrayList<Summary> cursorMap = null;
 
         try {
             //execute the query results will be save in Cursor c

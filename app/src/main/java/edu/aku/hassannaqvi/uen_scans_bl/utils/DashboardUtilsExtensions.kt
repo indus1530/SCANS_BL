@@ -46,16 +46,18 @@ fun componentHTableRow(mContext: Context, tbl: TableLayout, headers: Array<Strin
     tbl.addView(componentBTableRow)
 }
 
-fun componentBTableRow(mContext: Context, tbl: TableLayout, body: ArrayList<Summary>) {
-    for (i in body.indices) {
-        val taleRowForTableD = TableRow(mContext)
-        val getSum: Array<String> = getSummaryData(body[i])
-        for (j in getSum.indices) {
-            val params = TableRow.LayoutParams(TableRow.LayoutParams.MATCH_PARENT, TableRow.LayoutParams.WRAP_CONTENT)
-            params.setMargins(1, 1, 0, 0)
-            val textViewB: TextView = bodyTextViews(mContext, getSum[j])
-            taleRowForTableD.addView(textViewB, params)
+fun componentBTableRow(mContext: Context, tbl: TableLayout, body: ArrayList<Summary>?) {
+    body?.let {
+        for (i in body.indices) {
+            val taleRowForTableD = TableRow(mContext)
+            val getSum: Array<String> = getSummaryData(body[i])
+            for (j in getSum.indices) {
+                val params = TableRow.LayoutParams(TableRow.LayoutParams.MATCH_PARENT, TableRow.LayoutParams.WRAP_CONTENT)
+                params.setMargins(1, 1, 0, 0)
+                val textViewB: TextView = bodyTextViews(mContext, getSum[j])
+                taleRowForTableD.addView(textViewB, params)
+            }
+            tbl.addView(taleRowForTableD)
         }
-        tbl.addView(taleRowForTableD)
     }
 }

@@ -60,3 +60,17 @@ fun getSummaryData(item: Summary): Array<String> {
             item.vision,
             item.hb)
 }
+
+fun getHeaders(): Array<String> {
+    return arrayOf(
+            "HH NO",
+            "CLUSTER NO",
+            "FORMDATE",
+            "MEMBER",
+            "WRA",
+            "CHILD",
+            "HB",
+            "USER",
+            "ISTATUS"
+    )
+}
