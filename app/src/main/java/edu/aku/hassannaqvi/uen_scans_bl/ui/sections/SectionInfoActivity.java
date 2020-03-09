@@ -47,7 +47,6 @@ public class SectionInfoActivity extends AppCompatActivity {
         setUIComponent();
     }
 
-
     private void setUIComponent() {
 
         bi.a101.addTextChangedListener(new TextWatcher() {
@@ -93,7 +92,6 @@ public class SectionInfoActivity extends AppCompatActivity {
         selectedBTN = getIntent().getIntExtra(CONSTANTS.MAIN_INTENT, 0);
 
     }
-
 
     public void BtnContinue() {
         if (selectedBTN == 1) new MainRepository(this, famList);

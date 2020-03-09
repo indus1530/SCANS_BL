@@ -72,8 +72,8 @@ public class SectionA2Activity extends AppCompatActivity {
             bi.fldGrpSectionD01.setVisibility(View.GONE);
             bi.fldGrpSectionD02.setVisibility(View.VISIBLE);
 
-            menSLst = mainVModel.getAllMenWomenName(1, Integer.valueOf(fmc.getSerialno()));
-            womenSLst = mainVModel.getAllMenWomenName(2, Integer.valueOf(fmc.getSerialno()));
+            menSLst = mainVModel.getAllMenWomenName(1, Integer.parseInt(fmc.getSerialno()));
+            womenSLst = mainVModel.getAllMenWomenName(2, Integer.parseInt(fmc.getSerialno()));
 
             List<String> menLst = new ArrayList<String>() {
                 {

@@ -14,11 +14,23 @@ fun checkSDCardAvailability(context: Context): Boolean {
 fun getImageSaveDirectory(context: Context, cluster: String, hhno: String): File? {
     return try {
         val path = ContextCompat.getExternalFilesDirs(context, null)[1].absolutePath
-        val environment = path + File.separator + CreateTable.PROJECT_NAME + "_IMAGES" + File.separator + cluster + "_" + hhno
+        val environment = path.plus(File.separator).plus(CreateTable.PROJECT_NAME).plus("_IMAGES").plus(File.separator).plus(cluster).plus("_").plus(hhno)
         val mediaDir = File(environment).apply { mkdirs() }
         if (mediaDir.exists())
             mediaDir else File(environment)
     } catch (ex: Exception) {
         null
+    }
+}
+
+fun createFileOnSDCard(context: Context) {
+    try {
+        val root = context.applicationContext.getExternalFilesDirs(null)
+        val sdcardRoot = root.last().absolutePath.split("/").dropLast(4).joinToString("/")
+        val rootFolder = File(sdcardRoot)
+        val newFile = File(rootFolder, "abc.temp")
+        newFile.createNewFile()
+    } catch (ex: Exception) {
+        throw RuntimeException(ex.message)
     }
 }
