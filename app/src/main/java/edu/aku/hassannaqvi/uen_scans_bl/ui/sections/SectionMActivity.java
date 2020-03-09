@@ -33,12 +33,14 @@ public class SectionMActivity extends AppCompatActivity {
     /* This is how to declare HashMap */
     Map<Integer, Boolean> visionMap = new HashMap<Integer, Boolean>() {
         {
+            put(5, true);
             put(6, true);
             put(9, true);
             put(12, true);
             put(18, true);
             put(24, true);
             put(36, true);
+            put(60, true);
         }
     };
 

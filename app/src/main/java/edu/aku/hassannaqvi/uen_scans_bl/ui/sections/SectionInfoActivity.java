@@ -26,8 +26,8 @@ import edu.aku.hassannaqvi.uen_scans_bl.core.MainApp;
 import edu.aku.hassannaqvi.uen_scans_bl.databinding.ActivitySectionInfoBinding;
 import edu.aku.hassannaqvi.uen_scans_bl.viewmodel.MainRepository;
 
-import static edu.aku.hassannaqvi.uen_scans_bl.utils.UtilsExtensionsKt.checkSDCardAvailability;
-import static edu.aku.hassannaqvi.uen_scans_bl.utils.UtilsExtensionsKt.getImageSaveDirectory;
+import static edu.aku.hassannaqvi.uen_scans_bl.utils.SDCardUtilsExtensionsKt.checkSDCardAvailability;
+import static edu.aku.hassannaqvi.uen_scans_bl.utils.SDCardUtilsExtensionsKt.getImageSaveDirectory;
 
 public class SectionInfoActivity extends AppCompatActivity {
 
