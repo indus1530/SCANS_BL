@@ -182,8 +182,9 @@ public class MainActivity extends AppCompatActivity {
             case R.id.formF:
                 oF = getPackageManager().getLaunchIntentForPackage("edu.aku.hassannaqvi.uen_scans_sosas");
                 if (oF == null) {
-                    Toast.makeText(this, "Scans SOSAS app not found. Kindly install it from server!!", Toast.LENGTH_SHORT).show();
-                    return;
+                    Toast.makeText(this, "Scans SOSAS app not found. Kindly install it from server!!", Toast.LENGTH_LONG).show();
+                    oF = new Intent(Intent.ACTION_VIEW)
+                            .setData(Uri.parse("https://vcoe1.aku.edu/scans/app/"));
                 }
                 break;
             case R.id.formG:
