@@ -179,6 +179,16 @@ public class MainActivity extends AppCompatActivity {
             case R.id.formE:
                 oF = new Intent(MainActivity.this, SectionInfoActivity.class).putExtra(CONSTANTS.MAIN_INTENT, CONSTANTS.DENTAL);
                 break;
+            case R.id.formF:
+                oF = getPackageManager().getLaunchIntentForPackage("edu.aku.hassannaqvi.uen_scans_sosas");
+                if (oF == null) {
+                    Toast.makeText(this, "Scans SOSAS app not found. Kindly install it from server!!", Toast.LENGTH_SHORT).show();
+                    return;
+                }
+                break;
+            case R.id.formG:
+                oF = new Intent(MainActivity.this, DashboardActivity.class);
+                break;
         }
         startActivity(oF);
     }
@@ -318,35 +328,11 @@ public class MainActivity extends AppCompatActivity {
             rSumText += "\tFORMS' LIST: \r\n";
             String iStatus;
             rSumText += "--------------------------------------------------\r\n";
-            rSumText += "[ DSS ID ] \t[Form Status] \t[Sync Status]\r\n";
+            rSumText += "[ DSS ID ] \t\t\t\t[Sync Status]\r\n";
             rSumText += "--------------------------------------------------\r\n";
 
             for (FormsContract fc : todaysForms) {
-                if (fc.getIstatus() != null) {
-                    switch (fc.getIstatus()) {
-                        case "1":
-                            iStatus = "Complete";
-                            break;
-                        case "2":
-                            iStatus = "Incomplete";
-                            break;
-                        case "3":
-                            iStatus = "Refused";
-                            break;
-                        case "4":
-                            iStatus = "Refused";
-                            break;
-                        default:
-                            iStatus = "N/A";
-                    }
-                } else {
-                    iStatus = "N/A";
-                }
-
                 rSumText += fc.getLuid();
-                rSumText += "\t\t\t\t\t";
-
-                rSumText += iStatus;
                 rSumText += "\t\t\t\t\t";
 
                 rSumText += (fc.getSynced() == null ? "Not Synced" : "Synced");
@@ -380,7 +366,7 @@ public class MainActivity extends AppCompatActivity {
             preVer = MainApp.appInfo.getVersionName() + "." + MainApp.appInfo.getVersionCode();
             newVer = versionAppContract.getVersionname() + "." + versionAppContract.getVersioncode();
 
-            if (MainApp.appInfo.getVersionCode() < Integer.valueOf(versionAppContract.getVersioncode())) {
+            if (MainApp.appInfo.getVersionCode() < Integer.parseInt(versionAppContract.getVersioncode())) {
                 bi.lblAppVersion.setVisibility(View.VISIBLE);
 
                 String fileName = CreateTable.DATABASE_NAME.replace(".db", "-New-Apps");
@@ -418,7 +404,7 @@ public class MainActivity extends AppCompatActivity {
         registerReceiver(broadcastReceiver, new IntentFilter(DownloadManager.ACTION_DOWNLOAD_COMPLETE));
 
 //        Testing visibility
-        if (Integer.valueOf(MainApp.appInfo.getVersionName().split("\\.")[0]) > 0) {
+        if (Integer.parseInt(MainApp.appInfo.getVersionName().split("\\.")[0]) > 0) {
             bi.testing.setVisibility(View.GONE);
         } else {
             bi.testing.setVisibility(View.VISIBLE);

@@ -191,6 +191,7 @@
         <activity
             android:name=".ui.other.DashboardActivity"
             android:parentActivityName=".ui.other.MainActivity"
+            android:label="TODAY'S SUMMARY"
             android:screenOrientation="portrait" />
     </application>
 

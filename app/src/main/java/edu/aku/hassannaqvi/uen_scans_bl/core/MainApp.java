@@ -23,6 +23,8 @@ import android.widget.Toast;
 import androidx.core.app.ActivityCompat;
 import androidx.databinding.DataBindingUtil;
 
+import com.jakewharton.threetenabp.AndroidThreeTen;
+
 import java.util.List;
 
 import edu.aku.hassannaqvi.uen_scans_bl.R;
@@ -221,6 +223,9 @@ public class MainApp extends Application {
 //        Initialize Dead Member List
 //        deadMembers = new ArrayList<String>();
         sharedPref = getSharedPreferences("PSUCodes", Context.MODE_PRIVATE);
+
+        //Initiate DateTime
+        AndroidThreeTen.init(this);
     }
 
     protected void showCurrentLocation() {

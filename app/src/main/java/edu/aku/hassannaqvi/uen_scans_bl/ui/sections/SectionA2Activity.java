@@ -6,6 +6,7 @@ import android.text.Editable;
 import android.text.TextWatcher;
 import android.view.View;
 import android.widget.ArrayAdapter;
+import android.widget.EditText;
 import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
@@ -25,8 +26,9 @@ import edu.aku.hassannaqvi.uen_scans_bl.contracts.FamilyMembersContract;
 import edu.aku.hassannaqvi.uen_scans_bl.core.DatabaseHelper;
 import edu.aku.hassannaqvi.uen_scans_bl.core.MainApp;
 import edu.aku.hassannaqvi.uen_scans_bl.databinding.ActivitySectionA2Binding;
+import edu.aku.hassannaqvi.uen_scans_bl.datecollection.AgeModel;
+import edu.aku.hassannaqvi.uen_scans_bl.datecollection.DateRepository;
 import edu.aku.hassannaqvi.uen_scans_bl.ui.list_activity.FamilyMembersListActivity;
-import edu.aku.hassannaqvi.uen_scans_bl.utils.DateUtils;
 import edu.aku.hassannaqvi.uen_scans_bl.viewmodel.MainVModel;
 import kotlin.Pair;
 
@@ -191,17 +193,17 @@ public class SectionA2Activity extends AppCompatActivity {
 
         FamilyMembersContract motherFMC = null;
 //        if (bi.fldGrpCVa212.getVisibility() == View.VISIBLE) {
-            sd.put("a212", menSLst.getFirst().size() != 0 && bi.a212.getSelectedItemPosition() != 1
-                    ? mainVModel.getMemberInfo(menSLst.getFirst().get(bi.a212.getSelectedItemPosition() - 2)).getSerialno() : "97");
-            fmc.setfName(bi.a212.getSelectedItem().toString());
+        sd.put("a212", menSLst.getFirst().size() != 0 && bi.a212.getSelectedItemPosition() != 1
+                ? mainVModel.getMemberInfo(menSLst.getFirst().get(bi.a212.getSelectedItemPosition() - 2)).getSerialno() : "97");
+        fmc.setfName(bi.a212.getSelectedItem().toString());
 
-            motherFMC = womenSLst.getFirst().size() != 0 && bi.a213.getSelectedItemPosition() != 1
-                    ? mainVModel.getMemberInfo(womenSLst.getFirst().get(bi.a213.getSelectedItemPosition() - 2)) : null;
-            String motherSerial = womenSLst.getFirst().size() != 0 && bi.a213.getSelectedItemPosition() != 1
-                    ? mainVModel.getMemberInfo(womenSLst.getFirst().get(bi.a213.getSelectedItemPosition() - 2)).getSerialno() : "97";
-            fmc.setMother_name(bi.a213.getSelectedItem().toString());
-            sd.put("a213", motherSerial);
-            fmc.setMother_serial(motherSerial);
+        motherFMC = womenSLst.getFirst().size() != 0 && bi.a213.getSelectedItemPosition() != 1
+                ? mainVModel.getMemberInfo(womenSLst.getFirst().get(bi.a213.getSelectedItemPosition() - 2)) : null;
+        String motherSerial = womenSLst.getFirst().size() != 0 && bi.a213.getSelectedItemPosition() != 1
+                ? mainVModel.getMemberInfo(womenSLst.getFirst().get(bi.a213.getSelectedItemPosition() - 2)).getSerialno() : "97";
+        fmc.setMother_name(bi.a213.getSelectedItem().toString());
+        sd.put("a213", motherSerial);
+        fmc.setMother_serial(motherSerial);
         /*} else {
             sd.put("a212", "0");
             sd.put("a213", "0");
@@ -264,12 +266,12 @@ public class SectionA2Activity extends AppCompatActivity {
         // Update in ViewModel
         mainVModel.updateFamilyMembers(fmc);
 
-        if (Integer.valueOf(fmc.getAge()) >= 15 && Integer.valueOf(fmc.getAge()) < 49 && fmc.getGender().equals("2") && !bi.a207b.isChecked())
+        if (Integer.parseInt(fmc.getAge()) >= 15 && Integer.parseInt(fmc.getAge()) < 49 && fmc.getGender().equals("2") && !bi.a207b.isChecked())
             mainVModel.setMWRA(fmc);
-        else if (Integer.valueOf(fmc.getAge()) >= 5 && Integer.valueOf(fmc.getAge()) < 10) {
+        else if (Integer.parseInt(fmc.getAge()) >= 5 && Integer.parseInt(fmc.getAge()) < 10) {
             mainVModel.setChildU5to10(fmc);
             if (motherFMC == null) return;
-            if (Integer.valueOf(motherFMC.getAge()) >= 15 && Integer.valueOf(motherFMC.getAge()) < 49)
+            if (Integer.parseInt(motherFMC.getAge()) >= 15 && Integer.parseInt(motherFMC.getAge()) < 49)
                 mainVModel.setMwraChildU5to10(motherFMC);
         }
 
@@ -289,6 +291,29 @@ public class SectionA2Activity extends AppCompatActivity {
     }
 
     private void setListeners() {
+        EditText[] txtListener = new EditText[]{bi.a205a, bi.a205b};
+        for (EditText txtItem : txtListener) {
+
+            txtItem.addTextChangedListener(new TextWatcher() {
+                @Override
+                public void beforeTextChanged(CharSequence s, int start, int count, int after) {
+
+                }
+
+                @Override
+                public void onTextChanged(CharSequence s, int start, int before, int count) {
+                    bi.a206.setText(null);
+                    bi.a206a.setText(null);
+                }
+
+                @Override
+                public void afterTextChanged(Editable s) {
+
+                }
+            });
+
+        }
+
         bi.a205c.addTextChangedListener(new TextWatcher() {
             @Override
             public void beforeTextChanged(CharSequence s, int start, int count, int after) {
@@ -309,11 +334,14 @@ public class SectionA2Activity extends AppCompatActivity {
                     return;
                 }
 
-                int day = bi.a205a.getText().toString().equals("98") ? 0 : Integer.valueOf(bi.a205a.getText().toString());
-                int month = Integer.valueOf(bi.a205b.getText().toString());
-                int year = Integer.valueOf(bi.a205c.getText().toString());
+                int day = bi.a205a.getText().toString().equals("98") ? 0 : Integer.parseInt(bi.a205a.getText().toString());
+                int month = Integer.parseInt(bi.a205b.getText().toString());
+                int year = Integer.parseInt(bi.a205c.getText().toString());
 
-                bi.a206.setText(DateUtils.ageInYears(day, month, year));
+                AgeModel age = DateRepository.Companion.getCalculatedAge(year, month, day);
+                if (age == null) return;
+                bi.a206.setText(String.valueOf(age.getYear()));
+                bi.a206a.setText(String.valueOf(age.getMonth()));
             }
 
             @Override
@@ -340,7 +368,7 @@ public class SectionA2Activity extends AppCompatActivity {
             @Override
             public void onTextChanged(CharSequence s, int start, int before, int count) {
                 if (bi.a206.getText().toString().isEmpty()) return;
-                int calAge = Integer.valueOf(bi.a206.getText().toString());
+                int calAge = Integer.parseInt(bi.a206.getText().toString());
                 if (Integer.signum(calAge) == -1) return;
                 personInfoFunctionality(calAge);
             }
@@ -364,12 +392,13 @@ public class SectionA2Activity extends AppCompatActivity {
 
     private void personInfoFunctionality(int calAge) {
 
+        bi.fldGrpCVa207.setVisibility(View.GONE);
         bi.fldGrpCVa208.setVisibility(View.GONE);
         bi.fldGrpCVa209.setVisibility(View.GONE);
         bi.fldGrpCVa210.setVisibility(View.GONE);
         Clear.clearAllFields(bi.fldGrpSectionD03);
 
-        if (calAge > 3 && calAge < 10) {
+        if (calAge >= 3 && calAge < 10) {
             bi.fldGrpCVa208.setVisibility(View.VISIBLE);
             bi.fldGrpCVa209.setVisibility(View.VISIBLE);
         } else if (calAge == 10) {

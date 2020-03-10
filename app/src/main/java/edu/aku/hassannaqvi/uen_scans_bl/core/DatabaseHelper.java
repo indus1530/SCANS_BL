@@ -227,7 +227,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         };
 
         String whereClause = SingleRandomHH.COLUMN_ENUM_BLOCK_CODE + "=? AND " + SingleRandomHH.COLUMN_HH + "=?";
-        String[] whereArgs = new String[]{subAreaCode, hh};
+        String[] whereArgs = {subAreaCode, hh};
         String groupBy = null;
         String having = null;
 
@@ -257,6 +257,64 @@ public class DatabaseHelper extends SQLiteOpenHelper {
             }
         }
         return allBL;
+    }
+
+    public Boolean getExistForm(String subAreaCode, String hh) {
+        SQLiteDatabase db = this.getReadableDatabase();
+        Cursor c = null;
+        String[] columns = {
+                FormsTable._ID,
+                FormsTable.COLUMN_UID,
+                FormsTable.COLUMN_FORMDATE,
+                FormsTable.COLUMN_USER,
+                FormsTable.COLUMN_ISTATUS,
+                FormsTable.COLUMN_ISTATUS88x,
+                FormsTable.COLUMN_LUID,
+                FormsTable.COLUMN_ENDINGDATETIME,
+                FormsTable.COLUMN_SINFO,
+                FormsTable.COLUMN_SA3,
+                FormsTable.COLUMN_SA4,
+                FormsTable.COLUMN_GPSLAT,
+                FormsTable.COLUMN_GPSLNG,
+                FormsTable.COLUMN_GPSDATE,
+                FormsTable.COLUMN_GPSACC,
+                FormsTable.COLUMN_DEVICETAGID,
+                FormsTable.COLUMN_DEVICEID,
+                FormsTable.COLUMN_APPVERSION,
+                FormsTable.COLUMN_CLUSTERCODE,
+                FormsTable.COLUMN_HHNO,
+                FormsTable.COLUMN_FORMTYPE
+        };
+
+        String whereClause = FormsTable.COLUMN_CLUSTERCODE + "=? AND " + FormsTable.COLUMN_HHNO + "=? AND " + FormsTable.COLUMN_ISTATUS + " =?";
+        String[] whereArgs = {subAreaCode, hh, "1"};
+        String groupBy = null;
+        String having = null;
+
+        String orderBy =
+                FormsTable.COLUMN_ID + " ASC";
+
+        boolean allFC = false;
+        try {
+            c = db.query(
+                    FormsTable.TABLE_NAME,  // The table to query
+                    columns,                   // The columns to return
+                    whereClause,               // The columns for the WHERE clause
+                    whereArgs,                 // The values for the WHERE clause
+                    groupBy,                   // don't group the rows
+                    having,                    // don't filter by row groups
+                    orderBy                    // The sort order
+            );
+            allFC = c.getCount() > 0;
+        } finally {
+            if (c != null) {
+                c.close();
+            }
+            if (db != null) {
+                db.close();
+            }
+        }
+        return allFC;
     }
 
     public List<String> getUsers() {
@@ -576,7 +634,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
 
     //Get Summary Data
     public ArrayList<Summary> getSummary(Context mContext) {
-        final String SQL_SUMMARY_JOIN =
+        /*final String SQL_SUMMARY_JOIN =
                 "SELECT f.formdate, f.cluster_code, f.hhno, f.istatus, f.username,\n" +
                         "count(distinct fm._uid) member, " +
                         "count(distinct m._uid) mwra,\n" +
@@ -593,7 +651,30 @@ public class DatabaseHelper extends SQLiteOpenHelper {
                         "LEFT JOIN hb s\n" +
                         "ON f._uid = s._uuid\n" +
                         "LEFT JOIN vision v\n" +
-                        "ON f._uid = v._uuid group by f._uid order by f.formdate DESC;";
+                        "ON f._uid = v._uuid group by f._uid order by f.formdate DESC;";*/
+        final String SQL_SUMMARY_JOIN =
+                "SELECT f.formdate, f.cluster_code, f.hhno, f.istatus, f.username, " +
+                        "count(distinct fm._uid) member, " +
+                        "count(distinct m._uid) mwra, " +
+                        "count(distinct c._uid) child, " +
+                        "count(an._uid) anthro_mem, " +
+                        "CASE WHEN count(distinct s.uid) > 0 THEN 'YES' ELSE 'NO' END hb, " +
+                        "CASE WHEN count(distinct v.uid) > 0 THEN 'YES' ELSE 'NO' END vision " +
+                        "FROM forms f " +
+                        "LEFT JOIN indexMwra m " +
+                        "ON f._uid = m._uuid " +
+                        "LEFT JOIN child c " +
+                        "ON f._uid = c._uuid " +
+                        "LEFT JOIN familymembers fm " +
+                        "ON f._uid = fm._uuid " +
+                        "LEFT JOIN anthro an ON f._uid = an._uuid and an.f_type = 'k2' " +
+                        "LEFT JOIN hb s " +
+                        "ON f._uid = s._uuid " +
+                        "LEFT JOIN vision v " +
+                        "ON f._uid = v._uuid " +
+                        "WHERE substr(f.formdate,1,8) = substr('" + MainApp.appInfo.getDtToday() + "',1,8) " +
+                        "GROUP BY f._uid " +
+                        "ORDER BY f._uid DESC;";
 
         SQLiteDatabase db = this.getReadableDatabase();
         Cursor c = null;
@@ -602,8 +683,11 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         try {
             //execute the query results will be save in Cursor c
             c = db.rawQuery(SQL_SUMMARY_JOIN, null);
-            while (c.moveToNext()) {
-                cursorMap.add(getSummaryFromCursor(mContext, c));
+            if (c.getCount() > 0) {
+                cursorMap = new ArrayList<>();
+                while (c.moveToNext()) {
+                    cursorMap.add(getSummaryFromCursor(mContext, c));
+                }
             }
         } finally {
             if (c != null) {
