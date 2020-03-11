@@ -159,6 +159,14 @@ public class SectionInfoActivity extends AppCompatActivity {
 
     public void BtnCheckHH() {
         if (!Validator.emptyTextBox(this, bi.a112)) return;
+
+
+        if (!MainApp.appInfo.getDbHelper().getExistForm(bi.a101.getText().toString(), bi.a112.getText().toString().toUpperCase())) {
+            Toast.makeText(this, "No HH found. Kindly do household collection first!!", Toast.LENGTH_LONG).show();
+            return;
+        }
+
+
         MainApp.indexKishMWRA = db.getFamilyMember(bi.a101.getText().toString(), bi.a112.getText().toString().toUpperCase(), "1", null);
         if (MainApp.indexKishMWRA == null) {
             Toast.makeText(this, "No Household found!", Toast.LENGTH_SHORT).show();

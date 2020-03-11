@@ -657,7 +657,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
                         "count(distinct fm._uid) member, " +
                         "count(distinct m._uid) mwra, " +
                         "count(distinct c._uid) child, " +
-                        "count(an._uid) anthro_mem, " +
+                        "CASE WHEN an.f_type = 'k2' THEN count(distinct an._uid) ELSE '0' END anthro_mem, " +
                         "CASE WHEN count(distinct s.uid) > 0 THEN 'YES' ELSE 'NO' END hb, " +
                         "CASE WHEN count(distinct v.uid) > 0 THEN 'YES' ELSE 'NO' END vision " +
                         "FROM forms f " +
@@ -667,12 +667,13 @@ public class DatabaseHelper extends SQLiteOpenHelper {
                         "ON f._uid = c._uuid " +
                         "LEFT JOIN familymembers fm " +
                         "ON f._uid = fm._uuid " +
-                        "LEFT JOIN anthro an ON f._uid = an._uuid and an.f_type = 'k2' " +
+                        "LEFT JOIN anthro an " +
+                        "ON f._uid = an._uuid and an.f_type = 'k2' " +
                         "LEFT JOIN hb s " +
                         "ON f._uid = s._uuid " +
                         "LEFT JOIN vision v " +
                         "ON f._uid = v._uuid " +
-                        "WHERE substr(f.formdate,1,8) = substr('" + MainApp.appInfo.getDtToday() + "',1,8) " +
+                        "WHERE substr(f.formdate,1,8) = substr('" + MainApp.appInfo.getDtToday() + "',1,8)" +
                         "GROUP BY f._uid " +
                         "ORDER BY f._uid DESC;";
 
