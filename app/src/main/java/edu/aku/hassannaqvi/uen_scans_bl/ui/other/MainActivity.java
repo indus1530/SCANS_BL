@@ -177,7 +177,7 @@ public class MainActivity extends AppCompatActivity {
                 oF = new Intent(this, SectionInfoActivity.class).putExtra(CONSTANTS.MAIN_INTENT, CONSTANTS.VISION);
                 break;
             case R.id.formE:
-                oF = new Intent(MainActivity.this, SectionInfoActivity.class).putExtra(CONSTANTS.MAIN_INTENT, CONSTANTS.DENTAL);
+                oF = new Intent(this, SectionInfoActivity.class).putExtra(CONSTANTS.MAIN_INTENT, CONSTANTS.DENTAL);
                 break;
             case R.id.formF:
                 oF = getPackageManager().getLaunchIntentForPackage("edu.aku.hassannaqvi.uen_scans_sosas");
@@ -185,6 +185,10 @@ public class MainActivity extends AppCompatActivity {
                     Toast.makeText(this, "Scans SOSAS app not found. Kindly install it from server!!", Toast.LENGTH_LONG).show();
                     oF = new Intent(Intent.ACTION_VIEW)
                             .setData(Uri.parse("https://vcoe1.aku.edu/scans/app/"));
+                } else {
+                    oF.setClassName("edu.aku.hassannaqvi.uen_scans_sosas", "edu.aku.hassannaqvi.uen_scans_sosas.ui.other.SplashscreenActivity");
+                    oF.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+                    oF.putExtra("username_from_wrapper", MainApp.userName);
                 }
                 break;
             case R.id.formG:

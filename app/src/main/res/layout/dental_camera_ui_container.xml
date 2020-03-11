@@ -27,7 +27,6 @@
         android:layout_height="@dimen/round_button_medium"
         android:layout_marginStart="@dimen/margin_small"
         android:layout_marginBottom="@dimen/margin_xlarge"
-        android:background="@drawable/ic_outer_circle"
         android:padding="@dimen/spacing_small"
         android:scaleType="fitCenter"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -57,5 +56,18 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintRight_toRightOf="parent"
         app:srcCompat="@drawable/ic_continue" />
+
+    <ImageButton
+        android:id="@+id/btn_front_camera"
+        android:layout_width="@dimen/round_button_medium"
+        android:layout_height="@dimen/round_button_medium"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp"
+        android:background="@drawable/ic_outer_circle"
+        android:padding="@dimen/spacing_large"
+        android:scaleType="fitCenter"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/ic_front_camera" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
