@@ -143,6 +143,7 @@ public class SectionLActivity extends AppCompatActivity {
         json.put("mm_fm_serial", MainApp.indexKishMWRA.getSerialno());
         json.put("appversion", MainApp.appInfo.getAppVersion());
 
+        json.put("l101", MainApp.indexKishMWRAChild.getName());
         json.put("l102",
                 bi.l102a.isChecked() ? "1" :
                         bi.l102b.isChecked() ? "2" :
