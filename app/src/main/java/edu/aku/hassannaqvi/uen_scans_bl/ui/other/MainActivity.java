@@ -270,8 +270,29 @@ public class MainActivity extends AppCompatActivity {
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         getMenuInflater().inflate(R.menu.item_menu, menu);
-        return super.onCreateOptionsMenu(menu);
+       return super.onCreateOptionsMenu(menu);
+
+        //return true;
     }
+
+    /*public void onStart() {
+        super.onStart();
+        createFolder(Environment.getExternalStorageState(new File("/storage/myfolder")));
+    }*/
+
+    /*public void createFolder(String fname) {
+        String myfolder = "/storage/myFolder2";
+        File newfolderDirectory = new File("/storage/NewFolder1");
+        newfolderDirectory.mkdirs();
+        if (!fname.isEmpty()) {
+            Toast.makeText(this,  myfolder + "can be created.", Toast.LENGTH_SHORT).show();
+        } else {
+                Toast.makeText(this, myfolder + "can't be created.", Toast.LENGTH_SHORT).show();
+
+            }
+    }*/
+
+
 
     public static class MyDialogFragment extends DialogFragment {
 
@@ -415,7 +436,11 @@ public class MainActivity extends AppCompatActivity {
             bi.testing.setVisibility(View.VISIBLE);
         }
 
+        /**/
+
+
     }
+
 
     @Override
     protected void onDestroy() {
