@@ -159,7 +159,7 @@ public class SectionMActivity extends AppCompatActivity {
     private boolean formValidation() {
         if (!Validator.emptyCheckingContainer(this, bi.fldGrpSectionM)) return false;
 
-        if(bi.m101a.isChecked()) {
+        if (bi.m101a.isChecked()) {
             if (visionMap.get(Integer.valueOf(bi.m102a2.getText().toString())) == null) {
                 Validator.emptyCustomTextBox(this, bi.m102a2, getString(R.string.vision_error));
                 return false;
