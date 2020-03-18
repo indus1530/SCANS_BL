@@ -23,6 +23,18 @@ fun getImageSaveDirectory(context: Context, cluster: String, hhno: String): File
     }
 }
 
+fun getImageDirectory(context: Context): File? {
+    return try {
+        val path = ContextCompat.getExternalFilesDirs(context, null)[1].absolutePath
+        val environment = path.plus(File.separator).plus(CreateTable.PROJECT_NAME).plus("_IMAGES").plus(File.separator)
+        val mediaDir = File(environment).apply { mkdirs() }
+        if (mediaDir.exists())
+            mediaDir else File(environment)
+    } catch (ex: Exception) {
+        null
+    }
+}
+
 fun createFileOnSDCard(context: Context) {
     try {
         val root = context.applicationContext.getExternalFilesDirs(null)
