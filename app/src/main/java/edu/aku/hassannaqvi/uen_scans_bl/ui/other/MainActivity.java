@@ -177,7 +177,22 @@ public class MainActivity extends AppCompatActivity {
                 oF = new Intent(this, SectionInfoActivity.class).putExtra(CONSTANTS.MAIN_INTENT, CONSTANTS.VISION);
                 break;
             case R.id.formE:
-                oF = new Intent(MainActivity.this, SectionInfoActivity.class).putExtra(CONSTANTS.MAIN_INTENT, CONSTANTS.DENTAL);
+                oF = new Intent(this, SectionInfoActivity.class).putExtra(CONSTANTS.MAIN_INTENT, CONSTANTS.DENTAL);
+                break;
+            case R.id.formF:
+                oF = getPackageManager().getLaunchIntentForPackage("edu.aku.hassannaqvi.uen_scans_sosas");
+                if (oF == null) {
+                    Toast.makeText(this, "Scans SOSAS app not found. Kindly install it from server!!", Toast.LENGTH_LONG).show();
+                    oF = new Intent(Intent.ACTION_VIEW)
+                            .setData(Uri.parse("https://vcoe1.aku.edu/scans/app/"));
+                } else {
+                    oF.setClassName("edu.aku.hassannaqvi.uen_scans_sosas", "edu.aku.hassannaqvi.uen_scans_sosas.ui.other.SplashscreenActivity");
+                    oF.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+                    oF.putExtra("username_from_wrapper", MainApp.userName);
+                }
+                break;
+            case R.id.formG:
+                oF = new Intent(MainActivity.this, DashboardActivity.class);
                 break;
         }
         startActivity(oF);
@@ -256,7 +271,28 @@ public class MainActivity extends AppCompatActivity {
     public boolean onCreateOptionsMenu(Menu menu) {
         getMenuInflater().inflate(R.menu.item_menu, menu);
         return super.onCreateOptionsMenu(menu);
+
+        //return true;
     }
+
+    /*public void onStart() {
+        super.onStart();
+        createFolder(Environment.getExternalStorageState(new File("/storage/myfolder")));
+    }*/
+
+    /*public void createFolder(String fname) {
+        String myfolder = "/storage/myFolder2";
+        File newfolderDirectory = new File("/storage/NewFolder1");
+        newfolderDirectory.mkdirs();
+        if (!fname.isEmpty()) {
+            Toast.makeText(this,  myfolder + "can be created.", Toast.LENGTH_SHORT).show();
+        } else {
+                Toast.makeText(this, myfolder + "can't be created.", Toast.LENGTH_SHORT).show();
+
+            }
+    }*/
+
+
 
     public static class MyDialogFragment extends DialogFragment {
 
@@ -318,35 +354,11 @@ public class MainActivity extends AppCompatActivity {
             rSumText += "\tFORMS' LIST: \r\n";
             String iStatus;
             rSumText += "--------------------------------------------------\r\n";
-            rSumText += "[ DSS ID ] \t[Form Status] \t[Sync Status]\r\n";
+            rSumText += "[ DSS ID ] \t\t\t\t[Sync Status]\r\n";
             rSumText += "--------------------------------------------------\r\n";
 
             for (FormsContract fc : todaysForms) {
-                if (fc.getIstatus() != null) {
-                    switch (fc.getIstatus()) {
-                        case "1":
-                            iStatus = "Complete";
-                            break;
-                        case "2":
-                            iStatus = "Incomplete";
-                            break;
-                        case "3":
-                            iStatus = "Refused";
-                            break;
-                        case "4":
-                            iStatus = "Refused";
-                            break;
-                        default:
-                            iStatus = "N/A";
-                    }
-                } else {
-                    iStatus = "N/A";
-                }
-
                 rSumText += fc.getLuid();
-                rSumText += "\t\t\t\t\t";
-
-                rSumText += iStatus;
                 rSumText += "\t\t\t\t\t";
 
                 rSumText += (fc.getSynced() == null ? "Not Synced" : "Synced");
@@ -380,7 +392,7 @@ public class MainActivity extends AppCompatActivity {
             preVer = MainApp.appInfo.getVersionName() + "." + MainApp.appInfo.getVersionCode();
             newVer = versionAppContract.getVersionname() + "." + versionAppContract.getVersioncode();
 
-            if (MainApp.appInfo.getVersionCode() < Integer.valueOf(versionAppContract.getVersioncode())) {
+            if (MainApp.appInfo.getVersionCode() < Integer.parseInt(versionAppContract.getVersioncode())) {
                 bi.lblAppVersion.setVisibility(View.VISIBLE);
 
                 String fileName = CreateTable.DATABASE_NAME.replace(".db", "-New-Apps");
@@ -418,13 +430,17 @@ public class MainActivity extends AppCompatActivity {
         registerReceiver(broadcastReceiver, new IntentFilter(DownloadManager.ACTION_DOWNLOAD_COMPLETE));
 
 //        Testing visibility
-        if (Integer.valueOf(MainApp.appInfo.getVersionName().split("\\.")[0]) > 0) {
+        if (Integer.parseInt(MainApp.appInfo.getVersionName().split("\\.")[0]) > 0) {
             bi.testing.setVisibility(View.GONE);
         } else {
             bi.testing.setVisibility(View.VISIBLE);
         }
 
+        /**/
+
+
     }
+
 
     @Override
     protected void onDestroy() {

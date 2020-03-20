@@ -14,7 +14,7 @@ import org.json.JSONObject;
 
 public class IndexMWRAContract implements Parcelable {
 
-    private String projectName = "uen_mdLine20";
+    private String projectName = "uen_scans_bl_2020";
 
     private String _ID = "";
     private String UID = "";

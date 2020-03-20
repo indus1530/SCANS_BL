@@ -32,7 +32,6 @@ import androidx.navigation.fragment.findNavController
 import androidx.navigation.fragment.navArgs
 import androidx.viewpager.widget.ViewPager
 import edu.aku.hassannaqvi.uen_scans_bl.R
-import edu.aku.hassannaqvi.uen_scans_bl.utils.getMediaList
 import edu.aku.hassannaqvi.uen_scans_bl.utils.padWithDisplayCutout
 import edu.aku.hassannaqvi.uen_scans_bl.utils.showImmersive
 import java.io.File
@@ -62,7 +61,9 @@ class GalleryFragment internal constructor() : Fragment() {
         retainInstance = true
 
         // Get root directory of media from navigation arguments
-        mediaList = getMediaList(args.rootDirectory)
+        mediaList = File(args.rootDirectory).listFiles { file ->
+            EXTENSION_WHITELIST.contains(file.extension.toUpperCase())
+        }?.sortedDescending()?.toMutableList() ?: mutableListOf()
     }
 
     override fun onCreateView(

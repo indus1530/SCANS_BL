@@ -135,16 +135,35 @@ class CameraFragment : Fragment(R.layout.fragment_camera) {
 
         // Listener for button used to view last photo
         controls.findViewById<ImageButton>(R.id.photo_view_button).setOnClickListener {
-            if (getMediaList(outputDirectory.absolutePath).isNotEmpty())
+            if (true == outputDirectory.listFiles()?.isNotEmpty())
                 findNavController().navigate(CameraFragmentDirections.actionCameraFragmentToGalleryFragment(outputDirectory.absolutePath))
         }
 
-        // Listener for button used to view last photo
+        // Listener to end camera fragment
         controls.findViewById<ImageButton>(R.id.btn_next_section).setOnClickListener {
-            if (getMediaList(outputDirectory.absolutePath).isNotEmpty()) {
+            if (true == outputDirectory.listFiles()?.isNotEmpty()) {
                 activity?.finish()
             } else {
-                Toast.makeText(activity, "Can't capture any photos!!", Toast.LENGTH_SHORT).show()
+                Toast.makeText(activity, "Try to capture photos then end this section!!", Toast.LENGTH_SHORT).show()
+            }
+        }
+
+        // Listener for front camera switch
+        controls.findViewById<ImageButton>(R.id.btn_front_camera).setOnClickListener {
+            lensFacing = if (CameraX.LensFacing.FRONT == lensFacing) {
+                CameraX.LensFacing.BACK
+            } else {
+                CameraX.LensFacing.FRONT
+            }
+            try {
+                // Only bind use cases if we can query a camera with this orientation
+                CameraX.getCameraWithLensFacing(lensFacing)
+
+                // Unbind all use cases and bind them again with the new lens facing configuration
+                CameraX.unbindAll()
+                startCamera()
+            } catch (exc: Exception) {
+                // Do nothing
             }
         }
     }

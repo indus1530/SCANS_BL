@@ -26,8 +26,8 @@ import edu.aku.hassannaqvi.uen_scans_bl.core.MainApp;
 import edu.aku.hassannaqvi.uen_scans_bl.databinding.ActivitySectionInfoBinding;
 import edu.aku.hassannaqvi.uen_scans_bl.viewmodel.MainRepository;
 
-import static edu.aku.hassannaqvi.uen_scans_bl.utils.UtilsExtensionsKt.checkSDCardAvailability;
-import static edu.aku.hassannaqvi.uen_scans_bl.utils.UtilsExtensionsKt.getImageSaveDirectory;
+import static edu.aku.hassannaqvi.uen_scans_bl.utils.SDCardUtilsExtensionsKt.checkSDCardAvailability;
+import static edu.aku.hassannaqvi.uen_scans_bl.utils.SDCardUtilsExtensionsKt.getImageSaveDirectory;
 
 public class SectionInfoActivity extends AppCompatActivity {
 
@@ -46,7 +46,6 @@ public class SectionInfoActivity extends AppCompatActivity {
 
         setUIComponent();
     }
-
 
     private void setUIComponent() {
 
@@ -94,7 +93,6 @@ public class SectionInfoActivity extends AppCompatActivity {
 
     }
 
-
     public void BtnContinue() {
         if (selectedBTN == 1) new MainRepository(this, famList);
         else if (selectedBTN == 2) startActivity(new Intent(this, SectionLActivity.class));
@@ -104,25 +102,31 @@ public class SectionInfoActivity extends AppCompatActivity {
 
     private void storageSelection() {
         //CheckSDCard and assigning directory name
-        boolean value = checkSDCardAvailability();
+        boolean value = checkSDCardAvailability(this);
         if (!value) {
             Toast.makeText(this, "Attach SD-Card", Toast.LENGTH_SHORT).show();
             return;
         }
         outputDirectory = getImageSaveDirectory(this, MainApp.indexKishMWRA.getClusterno(), MainApp.indexKishMWRA.getHhno());
-        if (!outputDirectory.exists()) {
-            Toast.makeText(this, "Can't able to create folder. Kindly contact IT Services.", Toast.LENGTH_SHORT).show();
+//        outputDirectory = getImageSaveDirectory(this, "5901", "0059-001");
+        String error_msg = "Can't able to create folder. Kindly contact IT Services.";
+        if (outputDirectory == null) {
+            Toast.makeText(this, error_msg, Toast.LENGTH_SHORT).show();
+            return;
+        } else if (!outputDirectory.exists()) {
+            Toast.makeText(this, error_msg, Toast.LENGTH_SHORT).show();
             return;
         }
-
         startActivity(new Intent(this, SectionDentalActivity.class));
     }
 
     public void BtnCheckCluster() {
 
+//        storageSelection();
+
         if (!Validator.emptyTextBox(this, bi.a101)) return;
         boolean loginFlag;
-        int cluster = Integer.valueOf(bi.a101.getText().toString());
+        int cluster = Integer.parseInt(bi.a101.getText().toString());
         if (cluster <= 5000) {
             loginFlag = !(MainApp.userName.equals("test1234") || MainApp.userName.equals("dmu@aku") || MainApp.userName.substring(0, 4).equals("user"));
         } else {
@@ -155,6 +159,14 @@ public class SectionInfoActivity extends AppCompatActivity {
 
     public void BtnCheckHH() {
         if (!Validator.emptyTextBox(this, bi.a112)) return;
+
+
+        if (!MainApp.appInfo.getDbHelper().getExistForm(bi.a101.getText().toString(), bi.a112.getText().toString().toUpperCase())) {
+            Toast.makeText(this, "No HH found. Kindly do household collection first!!", Toast.LENGTH_LONG).show();
+            return;
+        }
+
+
         MainApp.indexKishMWRA = db.getFamilyMember(bi.a101.getText().toString(), bi.a112.getText().toString().toUpperCase(), "1", null);
         if (MainApp.indexKishMWRA == null) {
             Toast.makeText(this, "No Household found!", Toast.LENGTH_SHORT).show();

@@ -349,6 +349,11 @@ public class SectionA1Activity extends AppCompatActivity implements Util.EndSecA
     public void BtnCheckHH() {
         if (!Validator.emptyTextBox(this, bi.a112)) return;
 
+        if (MainApp.appInfo.getDbHelper().getExistForm(bi.a101.getText().toString(), bi.a112.getText().toString().toUpperCase())) {
+            Toast.makeText(this, "This Form is already filled!!", Toast.LENGTH_SHORT).show();
+            return;
+        }
+
         bl = MainApp.appInfo.getDbHelper().getHHFromBLRandom(bi.a101.getText().toString(), bi.a112.getText().toString().toUpperCase());
 
         if (bl != null) {

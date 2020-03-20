@@ -191,8 +191,8 @@
                                         android:hint="###.#"
                                         android:textDirection="ltr"
                                         app:mask="###.#"
-                                        app:maxValue="140.00"
-                                        app:minValue="10.00"
+                                        app:maxValue="160.00"
+                                        app:minValue="80.00"
                                         app:pattern="^(\\d{3,3}\\.\\d{1,1})$"
                                         app:type="range" />
 
@@ -236,8 +236,8 @@
                                         android:hint="###.#"
                                         android:textDirection="ltr"
                                         app:mask="###.#"
-                                        app:maxValue="140.00"
-                                        app:minValue="10.00"
+                                        app:maxValue="160.00"
+                                        app:minValue="80.00"
                                         app:pattern="^(\\d{3,3}\\.\\d{1,1})$"
                                         app:type="range" />
 
@@ -318,8 +318,8 @@
                                         android:hint="###.#"
                                         android:textDirection="ltr"
                                         app:mask="###.#"
-                                        app:maxValue="140.00"
-                                        app:minValue="10.00"
+                                        app:maxValue="160.00"
+                                        app:minValue="80.00"
                                         app:pattern="^(\\d{3,3}\\.\\d{1,1})$"
                                         app:type="range" />
 
@@ -364,8 +364,8 @@
                                         android:textDirection="ltr"
                                         app:mask="###.#"
                                         app:pattern="^(\\d{3,3}\\.\\d{1,1})$"
-                                        app:maxValue="40.00"
-                                        app:minValue="0.5"
+                                        app:maxValue="60.00"
+                                        app:minValue="10.00"
                                         app:type="range" />
 
                                     <Spinner
@@ -409,8 +409,8 @@
                                         android:textDirection="ltr"
                                         app:mask="###.#"
                                         app:pattern="^(\\d{3,3}\\.\\d{1,1})$"
-                                        app:maxValue="40.00"
-                                        app:minValue="0.5"
+                                        app:maxValue="60.00"
+                                        app:minValue="10.00"
                                         app:type="range" />
 
                                     <Spinner
@@ -491,8 +491,8 @@
                                         android:textDirection="ltr"
                                         app:mask="###.#"
                                         app:pattern="^(\\d{3,3}\\.\\d{1,1})$"
-                                        app:maxValue="40.00"
-                                        app:minValue="0.5"
+                                        app:maxValue="60.00"
+                                        app:minValue="10.00"
                                         app:type="range" />
 
                                     <Spinner
@@ -539,8 +539,8 @@
                                             android:hint="##.#"
                                             android:textDirection="ltr"
                                             app:mask="##.#"
-                                            app:maxValue="25.00"
-                                            app:minValue="5.00"
+                                            app:maxValue="30.00"
+                                            app:minValue="10.00"
                                             app:pattern="^(\\d{2,2}\\.\\d{1,1})$"
                                             app:type="range" />
 
@@ -584,8 +584,8 @@
                                             android:hint="##.#"
                                             android:textDirection="ltr"
                                             app:mask="##.#"
-                                            app:maxValue="25.00"
-                                            app:minValue="5.00"
+                                            app:maxValue="30.00"
+                                            app:minValue="10.00"
                                             app:pattern="^(\\d{2,2}\\.\\d{1,1})$"
                                             app:type="range" />
 
@@ -666,8 +666,8 @@
                                             android:hint="##.#"
                                             android:textDirection="ltr"
                                             app:mask="##.#"
-                                            app:maxValue="25.00"
-                                            app:minValue="5.00"
+                                            app:maxValue="30.00"
+                                            app:minValue="10.00"
                                             app:pattern="^(\\d{2,2}\\.\\d{1,1})$"
                                             app:type="range" />
 

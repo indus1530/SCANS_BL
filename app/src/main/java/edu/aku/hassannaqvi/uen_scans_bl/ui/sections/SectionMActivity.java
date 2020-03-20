@@ -33,12 +33,14 @@ public class SectionMActivity extends AppCompatActivity {
     /* This is how to declare HashMap */
     Map<Integer, Boolean> visionMap = new HashMap<Integer, Boolean>() {
         {
+            put(5, true);
             put(6, true);
             put(9, true);
             put(12, true);
             put(18, true);
             put(24, true);
             put(36, true);
+            put(60, true);
         }
     };
 
@@ -157,14 +159,16 @@ public class SectionMActivity extends AppCompatActivity {
     private boolean formValidation() {
         if (!Validator.emptyCheckingContainer(this, bi.fldGrpSectionM)) return false;
 
-        if (visionMap.get(Integer.valueOf(bi.m102a2.getText().toString())) == null) {
-            Validator.emptyCustomTextBox(this, bi.m102a2, getString(R.string.vision_error));
-            return false;
-        }
+        if (bi.m101a.isChecked()) {
+            if (visionMap.get(Integer.valueOf(bi.m102a2.getText().toString())) == null) {
+                Validator.emptyCustomTextBox(this, bi.m102a2, getString(R.string.vision_error));
+                return false;
+            }
 
-        if (visionMap.get(Integer.valueOf(bi.m102b2.getText().toString())) == null) {
-            Validator.emptyCustomTextBox(this, bi.m102b2, getString(R.string.vision_error));
-            return false;
+            if (visionMap.get(Integer.valueOf(bi.m102b2.getText().toString())) == null) {
+                Validator.emptyCustomTextBox(this, bi.m102b2, getString(R.string.vision_error));
+                return false;
+            }
         }
 
         return true;

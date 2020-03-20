@@ -293,7 +293,7 @@
                                     android:textColor="@android:color/black"
                                     app:defaultValue="9998"
                                     app:maxValue="2020"
-                                    app:minValue="1950"
+                                    app:minValue="1920"
                                     app:type="range" />
 
                             </LinearLayout>
