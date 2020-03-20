@@ -7,6 +7,7 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.databinding.DataBindingUtil
 import com.dropbox.core.DbxRequestConfig
 import com.dropbox.core.v2.DbxClientV2
+import com.dropbox.core.v2.files.CreateFolderErrorException
 import edu.aku.hassannaqvi.uen_scans_bl.R
 import edu.aku.hassannaqvi.uen_scans_bl.core.DatabaseHelper
 import edu.aku.hassannaqvi.uen_scans_bl.databinding.ActivityDashboardBinding
@@ -35,7 +36,7 @@ class DashboardActivity : AppCompatActivity() {
         //Working on dropbox connectivity
         // Create Dropbox client
         val config = DbxRequestConfig.newBuilder("dropbox/java-tutorial").build()
-        client = DbxClientV2(config, "2_Ak4O3Z0OAAAAAAAAAAPCuzIUgbAMOUt1haIazT_Pbe11VWl97JM3V4CKJL-pG3")
+        client = DbxClientV2(config, getString(R.string.token))
 
         // Get current account info
         runBlocking {
@@ -77,23 +78,35 @@ class DashboardActivity : AppCompatActivity() {
         }
     }
 
-    private fun iteratingItems(filesLst: MutableList<File>) {
+    private fun iteratingItems(filesLst: MutableList<File>, rootFolder: Boolean? = null, rootPATH: String? = null) {
 
         filesLst.iterator().forEach { item ->
             if (item.isDirectory) {
                 if (true == item.listFiles()?.isNotEmpty()) {
-                    item.listFiles()?.toMutableList()?.let { iteratingItems(it) }
+                    var folderexist = false
+                    val folderPath = item.absolutePath.substringAfterLast("/")
+                    try {
+                        val fo = client.files().createFolderV2(File.separator + folderPath)
+                        folderexist = true
+
+                    } catch (ex: CreateFolderErrorException) {
+                        if (ex.errorValue.isPath && ex.errorValue.pathValue.isConflict) {
+                            folderexist = true
+                        }
+                    }
+                    item.listFiles()?.toMutableList()?.let { iteratingItems(it, folderexist, folderPath) }
                 }
             } else if (item.isFile) {
-                sendingImagesToServer(item.absolutePath.substringAfterLast("/"), item)
+                if (rootFolder != null && !rootFolder) return
+                sendingImagesToServer(item, rootPATH)
             }
         }
 
     }
 
-    private fun sendingImagesToServer(fileName: String, file: File) {
+    private fun sendingImagesToServer(file: File, rootPATH: String? = "") {
         FileInputStream(file).use { item ->
-            val metadata = client.files().uploadBuilder("/$fileName/${file.absolutePath.substringAfterLast("/")}")
+            val metadata = client.files().uploadBuilder("/$rootPATH/${file.absolutePath.substringAfterLast("/")}")
                     .uploadAndFinish(item)
         }
     }
