@@ -39,7 +39,6 @@ public class SectionLActivity extends AppCompatActivity {
         bi.setCallback(this);
         setupSkips();
 
-
     }
 
 

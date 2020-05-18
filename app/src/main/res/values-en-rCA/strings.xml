@@ -2081,6 +2081,10 @@
     <string name="m101a"> Yes </string>
     <string name="m101b"> No </string>
 
+    <string name="m1010a"> M101:\t Did the child vision is weak and he/she wear the glasses? </string>
+    <string name="m1010aa"> Yes </string>
+    <string name="m1010ab"> No </string>
+
     <string name="m102"> M102:\t If yes, what was the result ? </string>
     <string name="m102a"> Right Eye </string>
     <string name="m102b"> Left Eye </string>

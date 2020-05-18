@@ -1993,6 +1993,10 @@
     <string name="m101a"> ہاں </string>
     <string name="m101b"> نہیں </string>
 
+    <string name="m1010a"> M101A: کیا بچہ کی نظر کمزور ہے اور وہ چشمہ استعمال کرتا/کرتی  ہے؟ </string>
+    <string name="m1010aa"> ہاں </string>
+    <string name="m1010ab"> نہیں </string>
+
     <string name="m102"> M102: اگر ہاں، تو اس کا نتیجہ کیا تھا؟ </string>
     <string name="m102a"> دائیں آنکھ </string>
     <string name="m102b"> بائیں آنکھ</string>
