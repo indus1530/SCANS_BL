@@ -58,6 +58,7 @@
     <string name="name"> Name </string>
     <string name="id"> ID </string>
     <string name="time"> HH:mm </string>
+    <string name="time2"> AM:PM </string>
     <string name="mid1"> Measurer 1: ID </string>
     <string name="mid2"> Measurer 2: ID </string>
     <string name="mid3"> Measurer 3: ID </string>

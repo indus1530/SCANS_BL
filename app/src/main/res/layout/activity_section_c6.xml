@@ -67,7 +67,7 @@
                         <io.blackbox_vision.datetimepickeredittext.view.TimePickerInputEditText
                             android:id="@+id/ca601"
                             style="@style/EditTextNum"
-                            android:hint="@string/time"
+                            android:hint="@string/time2"
                             app:is24HourView="true"
                             app:timeFormat="HH:mm" />
 
@@ -92,7 +92,7 @@
                         <io.blackbox_vision.datetimepickeredittext.view.TimePickerInputEditText
                             android:id="@+id/ca602"
                             style="@style/EditTextNum"
-                            android:hint="@string/time"
+                            android:hint="@string/time2"
                             app:is24HourView="true"
                             app:timeFormat="HH:mm" />
 
@@ -156,7 +156,7 @@
                         <io.blackbox_vision.datetimepickeredittext.view.TimePickerInputEditText
                             android:id="@+id/ca604"
                             style="@style/EditTextNum"
-                            android:hint="@string/time"
+                            android:hint="@string/time2"
                             app:is24HourView="true"
                             app:timeFormat="HH:mm" />
 
@@ -181,7 +181,7 @@
                         <io.blackbox_vision.datetimepickeredittext.view.TimePickerInputEditText
                             android:id="@+id/ca605"
                             style="@style/EditTextNum"
-                            android:hint="@string/time"
+                            android:hint="@string/time2"
                             app:is24HourView="true"
                             app:timeFormat="HH:mm" />
 
@@ -316,7 +316,7 @@
                         <io.blackbox_vision.datetimepickeredittext.view.TimePickerInputEditText
                             android:id="@+id/cb601"
                             style="@style/EditTextNum"
-                            android:hint="@string/time"
+                            android:hint="@string/time2"
                             app:is24HourView="true"
                             app:timeFormat="HH:mm" />
 
@@ -341,7 +341,7 @@
                         <io.blackbox_vision.datetimepickeredittext.view.TimePickerInputEditText
                             android:id="@+id/cb602"
                             style="@style/EditTextNum"
-                            android:hint="@string/time"
+                            android:hint="@string/time2"
                             app:is24HourView="true"
                             app:timeFormat="HH:mm" />
 
