@@ -266,12 +266,12 @@ public class SectionA2Activity extends AppCompatActivity {
         // Update in ViewModel
         mainVModel.updateFamilyMembers(fmc);
 
-        if (Integer.parseInt(fmc.getAge()) >= 15 && Integer.parseInt(fmc.getAge()) < 49 && fmc.getGender().equals("2") && !bi.a207b.isChecked())
+        if (Integer.parseInt(fmc.getAge()) >= 15 && Integer.parseInt(fmc.getAge()) < 60 && fmc.getGender().equals("2") && !bi.a207b.isChecked())
             mainVModel.setMWRA(fmc);
         else if (Integer.parseInt(fmc.getAge()) >= 5 && Integer.parseInt(fmc.getAge()) < 10) {
             mainVModel.setChildU5to10(fmc);
             if (motherFMC == null) return;
-            if (Integer.parseInt(motherFMC.getAge()) >= 15 && Integer.parseInt(motherFMC.getAge()) < 49)
+            if (Integer.parseInt(motherFMC.getAge()) >= 15 && Integer.parseInt(motherFMC.getAge()) < 60)
                 mainVModel.setMwraChildU5to10(motherFMC);
         }
 
