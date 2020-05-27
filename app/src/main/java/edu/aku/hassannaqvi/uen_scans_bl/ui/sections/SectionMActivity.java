@@ -137,6 +137,10 @@ public class SectionMActivity extends AppCompatActivity {
                 : bi.m101b.isChecked() ? "2"
                 : "0");
 
+        json.put("m1010a", bi.m1010aa.isChecked() ? "1"
+                : bi.m1010ab.isChecked() ? "2"
+                : "0");
+
         json.put("m102a", bi.m102a.getText().toString());
         json.put("m102a2", bi.m102a2.getText().toString());
 

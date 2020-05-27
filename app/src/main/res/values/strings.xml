@@ -56,6 +56,7 @@
     <string name="name"> نام </string>
     <string name="id"> ID </string>
     <string name="time"> HH:mm </string>
+    <string name="time2"> AM:PM </string>
     <string name="mid1"> Measurer 1: ID </string>
     <string name="mid2"> Measurer 2: ID </string>
     <string name="mid3"> Measurer 3: ID </string>
@@ -1992,6 +1993,10 @@
     <string name="m101"> M101: بینائی کی جانچ کی گئی تھی؟ </string>
     <string name="m101a"> ہاں </string>
     <string name="m101b"> نہیں </string>
+
+    <string name="m1010a"> M101A: کیا بچہ کی نظر کمزور ہے اور وہ چشمہ استعمال کرتا/کرتی  ہے؟ </string>
+    <string name="m1010aa"> ہاں </string>
+    <string name="m1010ab"> نہیں </string>
 
     <string name="m102"> M102: اگر ہاں، تو اس کا نتیجہ کیا تھا؟ </string>
     <string name="m102a"> دائیں آنکھ </string>

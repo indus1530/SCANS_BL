@@ -73,6 +73,45 @@
 
                 </androidx.cardview.widget.CardView>
 
+                <!-- m1010a  Radio   -->
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/fldGrpCVm1010a"
+                    style="@style/cardView">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <TextView
+                            style="@style/i_textview"
+                            android:text="@string/m1010a" />
+
+                        <RadioGroup
+                            android:id="@+id/m1010a"
+                            style="@style/radiogroup"
+                            android:orientation="horizontal">
+
+                            <RadioButton
+                                android:id="@+id/m1010aa"
+                                style="@style/radiobutton"
+                                android:layout_width="0dp"
+                                android:layout_weight="1"
+                                android:text="@string/m1010aa" />
+
+                            <RadioButton
+                                android:id="@+id/m1010ab"
+                                style="@style/radiobutton"
+                                android:layout_width="0dp"
+                                android:layout_weight="1"
+                                android:text="@string/m1010ab" />
+
+                        </RadioGroup>
+
+                    </LinearLayout>
+
+                </androidx.cardview.widget.CardView>
+
                 <!-- m102  EditText   -->
                 <androidx.cardview.widget.CardView
                     android:id="@+id/fldGrpCVm102a"
