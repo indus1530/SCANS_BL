@@ -14,6 +14,7 @@ import android.util.Log;
 import android.view.SurfaceHolder;
 import android.view.SurfaceView;
 import android.view.View;
+import android.widget.Button;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -70,8 +71,12 @@ public class TakePhoto extends Activity implements SurfaceHolder.Callback, Camer
     String picView;
     String childName;
     TextView picInfo;
+    Button toggleCamera;
     private boolean previewFlag;
     private String tmpFile = null;
+    int cameraId = -1;
+    SurfaceHolder surfaceHolder;
+    private String viewFacing;
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -82,10 +87,13 @@ public class TakePhoto extends Activity implements SurfaceHolder.Callback, Camer
         picID = intent.getStringExtra("picID");
         picView = intent.getStringExtra("picView");
         childName = intent.getStringExtra("childName");
+        viewFacing = intent.getStringExtra("viewFacing");
 
         picInfo = findViewById(R.id.picInfo);
         btnGrp = findViewById(R.id.btnGrp);
+        toggleCamera = findViewById(R.id.toggleCamera);
         btnGrp.setVisibility(View.GONE);
+        toggleCamera.setVisibility(View.GONE);
 
         picInfo.setText(picView + "\r\n For: " + childName);
 
@@ -101,7 +109,7 @@ public class TakePhoto extends Activity implements SurfaceHolder.Callback, Camer
         //setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_REVERSE_LANDSCAPE);
 
         SurfaceView surfaceView = findViewById(R.id.CameraView);
-        SurfaceHolder surfaceHolder = surfaceView.getHolder();
+        surfaceHolder = surfaceView.getHolder();
         surfaceHolder.addCallback(this);
 
         surfaceView.setFocusable(true);
@@ -126,8 +134,10 @@ public class TakePhoto extends Activity implements SurfaceHolder.Callback, Camer
                         @Override
                         public void onAutoFocus(boolean b, Camera camera) {
                             previewFlag = true;
+
                             camera.takePicture(null, null, null, TakePhoto.this);
                             btnGrp.setVisibility(View.VISIBLE);
+                            //toggleCamera.setVisibility(View.GONE);
                         }
                     });
 
@@ -163,7 +173,24 @@ public class TakePhoto extends Activity implements SurfaceHolder.Callback, Camer
     @Override
     public void surfaceCreated(SurfaceHolder holder) {
 
-        camera = Camera.open();
+        // camera = Camera.open();
+        int cameraId = -1;
+        Log.d(TAG, "surfaceCreated: " + viewFacing);
+        if (viewFacing.equals("1")) {
+            cameraId = findFrontFacingCamera();
+            Log.d(TAG, "surfaceCreated: " + viewFacing);
+
+        } else if (viewFacing.equals("2")) {
+            cameraId = findBackFacingCamera();
+            Log.d(TAG, "surfaceCreated: " + viewFacing);
+
+        }
+        if (cameraId < 0) {
+            Toast.makeText(this, "No front facing camera found.",
+                    Toast.LENGTH_LONG).show();
+        }
+
+        camera = Camera.open(cameraId);
         Camera.Parameters parameters = camera.getParameters();
         List<String> focusModes = parameters.getSupportedFocusModes();
 //        for (String p : focusModes) {
@@ -276,6 +303,7 @@ public class TakePhoto extends Activity implements SurfaceHolder.Callback, Camer
             Toast.makeText(this, "Image could not be saved.",
                     Toast.LENGTH_LONG).show();
         }
+        camera.stopPreview();
     }
 
     public void dropPhoto(View view) {
@@ -304,6 +332,8 @@ public class TakePhoto extends Activity implements SurfaceHolder.Callback, Camer
             setResult(1, intent);
             finish();//finishing activity
             //previewFlag = false;
+        } else {
+            Toast.makeText(this, "TempFile is null", Toast.LENGTH_SHORT).show();
         }
     }
 
@@ -414,5 +444,78 @@ public class TakePhoto extends Activity implements SurfaceHolder.Callback, Camer
         intent.putExtra("FileName", "");
         setResult(0, intent);
         finish();//finishing activity
+    }
+
+    public void toggleCamera(View view) {
+        camera.stopPreview();
+        //camera.release();
+
+        int cameraId = -1;
+        Log.d(TAG, "surfaceCreated: " + viewFacing);
+        if (viewFacing.equals("1")) {
+            cameraId = findFrontFacingCamera();
+            Log.d(TAG, "surfaceCreated: " + viewFacing);
+
+        } else if (viewFacing.equals("2")) {
+            cameraId = findBackFacingCamera();
+            Log.d(TAG, "surfaceCreated: " + viewFacing);
+
+        }
+        if (cameraId < 0) {
+            Toast.makeText(this, "No front facing camera found.",
+                    Toast.LENGTH_LONG).show();
+        }
+        Camera.open(cameraId);
+        camera.startPreview();
+    }
+
+    private boolean findFacingCamera() {
+        // Search for the front facing camera
+        int numberOfCameras = Camera.getNumberOfCameras();
+        for (int i = 0; i < numberOfCameras; i++) {
+            Camera.CameraInfo info = new Camera.CameraInfo();
+            Camera.getCameraInfo(i, info);
+            //toggleId = Camera.CameraInfo.CAMERA_FACING_FRONT
+            if (info.facing == Camera.CameraInfo.CAMERA_FACING_FRONT) {
+                Log.d("Facing Camera", "Camera found");
+                return true;
+
+            } else {
+                return false;
+            }
+        }
+        return false;
+    }
+
+    private int findFrontFacingCamera() {
+        int cameraId = -1;
+        // Search for the front facing camera
+        int numberOfCameras = Camera.getNumberOfCameras();
+        for (int i = 0; i < numberOfCameras; i++) {
+            Camera.CameraInfo info = new Camera.CameraInfo();
+            Camera.getCameraInfo(i, info);
+            if (info.facing == Camera.CameraInfo.CAMERA_FACING_FRONT) {
+                Log.d("Front Camera", "Camera found");
+                cameraId = i;
+                break;
+            }
+        }
+        return cameraId;
+    }
+
+    private int findBackFacingCamera() {
+        int cameraId = -1;
+        // Search for the back facing camera
+        int numberOfCameras = Camera.getNumberOfCameras();
+        for (int i = 0; i < numberOfCameras; i++) {
+            Camera.CameraInfo info = new Camera.CameraInfo();
+            Camera.getCameraInfo(i, info);
+            if (info.facing == Camera.CameraInfo.CAMERA_FACING_BACK) {
+                Log.d("Back Camera", "Camera found");
+                cameraId = i;
+                break;
+            }
+        }
+        return cameraId;
     }
 }

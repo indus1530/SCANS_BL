@@ -97,7 +97,8 @@ public class SectionInfoActivity extends AppCompatActivity {
         if (selectedBTN == 1) new MainRepository(this, famList);
         else if (selectedBTN == 2) startActivity(new Intent(this, SectionLActivity.class));
         else if (selectedBTN == 3) startActivity(new Intent(this, SectionMActivity.class));
-        else storageSelection();
+        else startActivity(new Intent(this, DentalPhotoActivity.class));
+        //    else storageSelection();
     }
 
     private void storageSelection() {

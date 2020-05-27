@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:layout_gravity="center_horizontal|center_vertical"
-    tools:context=".TakePhoto">
+    tools:context=".ui.other.TakePhoto">
 
     <SurfaceView
         android:id="@+id/CameraView"
@@ -36,6 +36,16 @@
         android:textColor="#fff"
         android:textSize="24dp"
         android:textStyle="bold" />
+
+    <Button
+        android:id="@+id/toggleCamera"
+        android:layout_width="56dp"
+        android:layout_height="56dp"
+        android:layout_gravity="center_vertical|start"
+        android:background="@drawable/togglecamera"
+        android:backgroundTintMode="screen"
+        android:drawablePadding="12dp"
+        android:onClick="toggleCamera" />
 
     <LinearLayout
         android:id="@+id/btnGrp"

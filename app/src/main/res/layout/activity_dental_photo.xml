@@ -76,11 +76,20 @@
                             android:enabled="false" />
 
                         <Button
-                            android:id="@+id/btn_snap"
+                            android:id="@+id/btn_snap1"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_gravity="center_horizontal"
-                            android:text="Snap Shot" />
+                            android:onClick="takePhoto"
+                            android:text="Front Camera" />
+
+                        <Button
+                            android:id="@+id/btn_snap2"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_horizontal"
+                            android:onClick="takePhoto"
+                            android:text="Back Camera" />
 
 
                     </LinearLayout>
