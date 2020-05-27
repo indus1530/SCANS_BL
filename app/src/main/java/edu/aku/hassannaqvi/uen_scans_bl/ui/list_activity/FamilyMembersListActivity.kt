@@ -185,6 +185,7 @@ class FamilyMembersListActivity : AppCompatActivity() {
 
     companion object {
         lateinit var mainVModel: MainVModel
+        var genderFlag: String = "0"
     }
 
     override fun onBackPressed() {

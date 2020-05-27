@@ -169,6 +169,8 @@ public class SectionA2Activity extends AppCompatActivity {
                             bi.a204b.isChecked() ? "2" :
                                     bi.a204c.isChecked() ? "3" : "0");
 
+            if (serial == 1) FamilyMembersListActivity.Companion.setGenderFlag(fmc.getGender());
+
             fmc.setAge("-1");
 
             // Update in ViewModel
@@ -385,6 +387,28 @@ public class SectionA2Activity extends AppCompatActivity {
             } else {
                 bi.a209.clearCheck();
                 bi.fldGrpCVa209.setVisibility(View.GONE);
+            }
+        });
+
+        bi.a203.setOnCheckedChangeListener((group, checkedID) -> {
+            Clear.clearAllFields(bi.a204, true);
+            if (serial == 2) {
+
+                if (checkedID == bi.a203b.getId()) {
+
+                    String gender = FamilyMembersListActivity.Companion.getGenderFlag();
+                    if (!gender.equals("3")) Clear.clearAllFields(bi.a204, false);
+                    switch (gender) {
+                        case "1":
+                            bi.a204b.setChecked(true);
+                            break;
+                        case "2":
+                            bi.a204a.setChecked(true);
+                            break;
+                    }
+
+                }
+
             }
         });
 
