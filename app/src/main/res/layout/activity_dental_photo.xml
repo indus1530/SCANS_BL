@@ -58,38 +58,61 @@
                 android:orientation="vertical">
 
 
-                <!-- Button -->
+                <!-- Take Photo   -->
                 <androidx.cardview.widget.CardView
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content">
+                    android:id="@+id/fldGrpCVtakePhoto"
+                    style="@style/cardView">
 
                     <LinearLayout
-                        android:id="@+id/Lv_lhwf1cphoto"
-                        android:layout_width="match_parent"
                         android:layout_height="wrap_content"
+                        android:layout_width="match_parent"
                         android:orientation="vertical">
 
-                        <EditText
-                            android:id="@+id/dentalPhotoFile"
+                        <TextView
+                            style="@style/labels"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:enabled="false" />
+                            android:text="Take Photos" />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:orientation="horizontal">
 
                         <Button
-                            android:id="@+id/btn_snap1"
+                            android:id="@+id/btn_front_camera"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:layout_gravity="center_horizontal"
+                            android:layout_gravity="center"
+                            android:layout_margin="12dp"
+
                             android:onClick="takePhoto"
+                            android:drawableStart="@drawable/camera"
+                            android:drawablePadding="8dp"
                             android:text="Front Camera" />
 
-                        <Button
-                            android:id="@+id/btn_snap2"
-                            android:layout_width="wrap_content"
+                            <Button
+                                android:id="@+id/btnBackCamera"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:layout_margin="12dp"
+                                android:drawableStart="@drawable/camera"
+                                android:drawablePadding="8dp"
+                                android:onClick="takePhoto"
+                                android:text="Back Camera" />
+
+                        </LinearLayout>
+
+                        <EditText
+                            android:id="@+id/fileName"
+                            android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:layout_gravity="center_horizontal"
-                            android:onClick="takePhoto"
-                            android:text="Back Camera" />
+                            android:enabled="false"
+                            android:padding="12dp"
+                            android:textColor="#7f7f7f7f"
+                            android:textSize="14dp" />
 
 
                     </LinearLayout>

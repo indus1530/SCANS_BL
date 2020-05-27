@@ -49,7 +49,6 @@ import edu.aku.hassannaqvi.uen_scans_bl.core.AndroidDatabaseManager;
 import edu.aku.hassannaqvi.uen_scans_bl.core.DatabaseHelper;
 import edu.aku.hassannaqvi.uen_scans_bl.core.MainApp;
 import edu.aku.hassannaqvi.uen_scans_bl.databinding.ActivityMainBinding;
-import edu.aku.hassannaqvi.uen_scans_bl.ui.sections.DentalPhotoActivity;
 import edu.aku.hassannaqvi.uen_scans_bl.ui.sections.SectionA1Activity;
 import edu.aku.hassannaqvi.uen_scans_bl.ui.sections.SectionInfoActivity;
 import edu.aku.hassannaqvi.uen_scans_bl.ui.sync.SyncActivity;
@@ -178,9 +177,7 @@ public class MainActivity extends AppCompatActivity {
                 oF = new Intent(this, SectionInfoActivity.class).putExtra(CONSTANTS.MAIN_INTENT, CONSTANTS.VISION);
                 break;
             case R.id.formE:
-                oF = new Intent(this, DentalPhotoActivity.class);
-                // oF = new Intent(this, SectionDentalActivity.class).putExtra(CONSTANTS.MAIN_INTENT, CONSTANTS.DENTAL);
-
+                oF = new Intent(this, SectionInfoActivity.class).putExtra(CONSTANTS.MAIN_INTENT, CONSTANTS.DENTAL);
                 break;
             case R.id.formF:
                 oF = getPackageManager().getLaunchIntentForPackage("edu.aku.hassannaqvi.uen_scans_sosas");

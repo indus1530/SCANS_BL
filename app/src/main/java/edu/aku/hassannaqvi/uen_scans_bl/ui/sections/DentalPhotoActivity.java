@@ -9,7 +9,6 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.databinding.DataBindingUtil;
 
 import edu.aku.hassannaqvi.uen_scans_bl.R;
-import edu.aku.hassannaqvi.uen_scans_bl.core.MainApp;
 import edu.aku.hassannaqvi.uen_scans_bl.databinding.ActivityDentalPhotoBinding;
 import edu.aku.hassannaqvi.uen_scans_bl.ui.other.TakePhoto;
 
@@ -31,15 +30,15 @@ public class DentalPhotoActivity extends AppCompatActivity {
 
         Intent intent = new Intent(this, TakePhoto.class);
 
-        intent.putExtra("picID", MainApp.indexKishMWRA.getClusterno() + "_" + MainApp.indexKishMWRA.getHhno() + "_" + PhotoSerial);
-        //intent.putExtra("picID", "901001" + "_" + "A-0001-001" + "_" + "1" + "_");
+        //intent.putExtra("picID", MainApp.indexKishMWRA.getClusterno() + "_" + MainApp.indexKishMWRA.getHhno() + "_" + PhotoSerial);
+        intent.putExtra("picID", "901001" + "_" + "A-0001-001" + "_" + "1" + "_");
 
-        //intent.putExtra("childName", "Hassan");
-        intent.putExtra("childName", MainApp.indexKishMWRA.getClusterno() + "_" + MainApp.indexKishMWRA.getHhno());
+        intent.putExtra("childName", "Hassan");
+        //intent.putExtra("childName", MainApp.indexKishMWRA.getClusterno() + "_" + MainApp.indexKishMWRA.getHhno());
 
 
         intent.putExtra("picView", "dental".toUpperCase());
-        if (view.getId() == bi.btnSnap1.getId()) {
+        if (view.getId() == bi.btnBackCamera.getId()) {
             intent.putExtra("viewFacing", "1");
 
         } else {
@@ -67,7 +66,7 @@ public class DentalPhotoActivity extends AppCompatActivity {
             String fileName = data.getStringExtra("FileName");
             PhotoSerial++;
 
-            bi.dentalPhotoFile.setText(bi.dentalPhotoFile.getText() + String.valueOf(PhotoSerial) + " - " + fileName + ";\r\n");
+            bi.fileName.setText(bi.fileName.getText() + String.valueOf(PhotoSerial) + " - " + fileName + ";\r\n");
         } else {
             Toast.makeText(this, "Photo Cancelled", Toast.LENGTH_SHORT).show();
         }
