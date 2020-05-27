@@ -8,9 +8,10 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.databinding.DataBindingUtil;
 
 import edu.aku.hassannaqvi.uen_scans_bl.R;
+import edu.aku.hassannaqvi.uen_scans_bl.databinding.ActivityDentalPhotoBinding;
 
 public class DentalPhotoActivity extends AppCompatActivity {
-    Dentalphotoactivity bi;
+    ActivityDentalPhotoBinding bi;
     private int PhotoSerial;
 
     @Override
