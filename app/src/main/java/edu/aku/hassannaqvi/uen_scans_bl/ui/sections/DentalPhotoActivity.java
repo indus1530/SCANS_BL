@@ -74,7 +74,7 @@ public class DentalPhotoActivity extends AppCompatActivity {
             String fileName = data.getStringExtra("FileName");
             bi.fileName.setText(bi.fileName.getText() + String.valueOf(PhotoSerial) + " - " + fileName + ";\r\n");
             try {
-                SaveDraft();
+                SaveDraft(fileName);
             } catch (Exception e) {
                 e.printStackTrace();
             }
@@ -107,7 +107,7 @@ public class DentalPhotoActivity extends AppCompatActivity {
         return false;
     }
 
-    private void SaveDraft() throws JSONException {
+    private void SaveDraft(String fileName) throws JSONException {
 
         dental = new DentalContract();
         dental.set_UUID(MainApp.indexKishMWRAChild.getUuid());
@@ -125,7 +125,7 @@ public class DentalPhotoActivity extends AppCompatActivity {
         json.put("mm_serial", MainApp.indexKishMWRAChild.getMother_serial());
         json.put("appversion", MainApp.appInfo.getAppVersion());
 
-        json.put("f01", bi.fileName.getText().toString());
+        json.put("f01", fileName);
 
         dental.setsE2(String.valueOf(json));
 
