@@ -64,8 +64,8 @@
                     style="@style/cardView">
 
                     <LinearLayout
-                        android:layout_height="wrap_content"
                         android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
                         android:orientation="vertical">
 
                         <TextView
@@ -80,16 +80,16 @@
                             android:gravity="center"
                             android:orientation="horizontal">
 
-                        <Button
-                            android:id="@+id/btn_front_camera"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_gravity="center"
-                            android:layout_margin="12dp"
-                            android:onClick="@{(v) -> callback.TakePhoto(1)}"
-                            android:drawableStart="@drawable/camera"
-                            android:drawablePadding="8dp"
-                            android:text="Front Camera" />
+                            <Button
+                                android:id="@+id/btn_front_camera"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:layout_margin="12dp"
+                                android:drawableStart="@drawable/camera"
+                                android:drawablePadding="8dp"
+                                android:onClick="@{(v) -> callback.TakePhoto(1)}"
+                                android:text="Front Camera" />
 
                             <Button
                                 android:id="@+id/btnBackCamera"
@@ -132,8 +132,8 @@
                     android:layout_height="wrap_content"
                     android:layout_gravity="bottom|end"
                     android:layout_margin="10dp"
-                    android:onClick="@{() -> callback.BtnNext()}"
                     android:layout_weight="50"
+                    android:onClick="@{() -> callback.BtnNext()}"
                     android:text="Submit" />
 
             </androidx.cardview.widget.CardView>
