@@ -35,6 +35,7 @@ import edu.aku.hassannaqvi.uen_scans_bl.adapter.SyncListAdapter;
 import edu.aku.hassannaqvi.uen_scans_bl.adapter.UploadListAdapter;
 import edu.aku.hassannaqvi.uen_scans_bl.contracts.AnthroContract;
 import edu.aku.hassannaqvi.uen_scans_bl.contracts.ChildContract;
+import edu.aku.hassannaqvi.uen_scans_bl.contracts.DentalContract;
 import edu.aku.hassannaqvi.uen_scans_bl.contracts.FamilyMembersContract;
 import edu.aku.hassannaqvi.uen_scans_bl.contracts.FoodFreqContract;
 import edu.aku.hassannaqvi.uen_scans_bl.contracts.FormsContract;
@@ -287,6 +288,21 @@ public class SyncActivity extends AppCompatActivity implements SyncDevice.SyncDe
                     db.getUnsyncedVC(), 8, uploadListAdapter, uploadlist
             ).execute();
 
+            if (uploadlistActivityCreated) {
+                uploadmodel = new SyncModel();
+                uploadmodel.setstatusID(0);
+                uploadlist.add(uploadmodel);
+            }
+            new SyncAllData(
+                    this,
+                    "Dental",
+                    "updateSyncedDCForms",
+                    DentalContract.class,
+                    MainApp._HOST_URL + MainApp._SERVER_URL,
+                    DentalContract.DentalTable.TABLE_NAME,
+                    db.getUnsyncedDC(), 9, uploadListAdapter, uploadlist
+            ).execute();
+
             bi.noDataItem.setVisibility(View.GONE);
 
             uploadlistActivityCreated = false;
@@ -347,6 +363,7 @@ public class SyncActivity extends AppCompatActivity implements SyncDevice.SyncDe
         }
 
     }
+
     public void dbBackup() {
 
         sharedPref = getSharedPreferences("src", MODE_PRIVATE);

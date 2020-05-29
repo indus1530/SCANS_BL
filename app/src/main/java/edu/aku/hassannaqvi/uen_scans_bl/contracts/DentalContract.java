@@ -113,14 +113,14 @@ public class DentalContract {
     }
 
     public DentalContract hydrate(Cursor cursor) {
-        this._ID = cursor.getString(cursor.getColumnIndex(dentalTable.COLUMN__ID));
-        this.UID = cursor.getString(cursor.getColumnIndex(dentalTable.COLUMN_UID));
-        this._UUID = cursor.getString(cursor.getColumnIndex(dentalTable.COLUMN__UUID));
-        this.deviceId = cursor.getString(cursor.getColumnIndex(dentalTable.COLUMN_DEVICEID));
-        this.formDate = cursor.getString(cursor.getColumnIndex(dentalTable.COLUMN_FORMDATE));
-        this.user = cursor.getString(cursor.getColumnIndex(dentalTable.COLUMN_USER));
-        this.sE2 = cursor.getString(cursor.getColumnIndex(dentalTable.COLUMN_SE2));
-        this.devicetagID = cursor.getString(cursor.getColumnIndex(dentalTable.COLUMN_DEVICETAGID));
+        this._ID = cursor.getString(cursor.getColumnIndex(DentalTable.COLUMN__ID));
+        this.UID = cursor.getString(cursor.getColumnIndex(DentalTable.COLUMN_UID));
+        this._UUID = cursor.getString(cursor.getColumnIndex(DentalTable.COLUMN_UUID));
+        this.deviceId = cursor.getString(cursor.getColumnIndex(DentalTable.COLUMN_DEVICEID));
+        this.formDate = cursor.getString(cursor.getColumnIndex(DentalTable.COLUMN_FORMDATE));
+        this.user = cursor.getString(cursor.getColumnIndex(DentalTable.COLUMN_USER));
+        this.sE2 = cursor.getString(cursor.getColumnIndex(DentalTable.COLUMN_SE2));
+        this.devicetagID = cursor.getString(cursor.getColumnIndex(DentalTable.COLUMN_DEVICETAGID));
 
         return this;
 
@@ -129,30 +129,30 @@ public class DentalContract {
     public JSONObject toJSONObject() throws JSONException {
 
         JSONObject json = new JSONObject();
-        json.put(dentalTable.COLUMN__ID, this._ID == null ? JSONObject.NULL : this._ID);
-        json.put(dentalTable.COLUMN_UID, this.UID == null ? JSONObject.NULL : this.UID);
-        json.put(dentalTable.COLUMN__UUID, this._UUID == null ? JSONObject.NULL : this._UUID);
-        json.put(dentalTable.COLUMN_DEVICEID, this.deviceId == null ? JSONObject.NULL : this.deviceId);
-        json.put(dentalTable.COLUMN_FORMDATE, this.formDate == null ? JSONObject.NULL : this.formDate);
-        json.put(dentalTable.COLUMN_USER, this.user == null ? JSONObject.NULL : this.user);
+        json.put(DentalTable.COLUMN__ID, this._ID == null ? JSONObject.NULL : this._ID);
+        json.put(DentalTable.COLUMN_UID, this.UID == null ? JSONObject.NULL : this.UID);
+        json.put(DentalTable.COLUMN_UUID, this._UUID == null ? JSONObject.NULL : this._UUID);
+        json.put(DentalTable.COLUMN_DEVICEID, this.deviceId == null ? JSONObject.NULL : this.deviceId);
+        json.put(DentalTable.COLUMN_FORMDATE, this.formDate == null ? JSONObject.NULL : this.formDate);
+        json.put(DentalTable.COLUMN_USER, this.user == null ? JSONObject.NULL : this.user);
 
         if (!this.sE2.equals("")) {
-            json.put(dentalTable.COLUMN_SE2, new JSONObject(this.sE2));
+            json.put(DentalTable.COLUMN_SE2, new JSONObject(this.sE2));
         }
 
-        json.put(dentalTable.COLUMN_DEVICETAGID, this.devicetagID == null ? JSONObject.NULL : this.devicetagID);
+        json.put(DentalTable.COLUMN_DEVICETAGID, this.devicetagID == null ? JSONObject.NULL : this.devicetagID);
 
         return json;
 
     }
 
 
-    public static abstract class dentalTable implements BaseColumns {
+    public static abstract class DentalTable implements BaseColumns {
 
         public static final String TABLE_NAME = "dental";
         public static final String COLUMN__ID = "_id";
-        public static final String COLUMN_UID = "uid";
-        public static final String COLUMN__UUID = "_uuid";
+        public static final String COLUMN_UID = "_uid";
+        public static final String COLUMN_UUID = "_uuid";
         public static final String COLUMN_DEVICEID = "deviceid";
         public static final String COLUMN_FORMDATE = "formdate";
         public static final String COLUMN_USER = "username";

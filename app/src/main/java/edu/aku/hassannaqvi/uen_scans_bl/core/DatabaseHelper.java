@@ -48,6 +48,7 @@ import static edu.aku.hassannaqvi.uen_scans_bl.utils.CreateTable.DATABASE_VERSIO
 import static edu.aku.hassannaqvi.uen_scans_bl.utils.CreateTable.SQL_CREATE_ANTHRO;
 import static edu.aku.hassannaqvi.uen_scans_bl.utils.CreateTable.SQL_CREATE_BL_RANDOM;
 import static edu.aku.hassannaqvi.uen_scans_bl.utils.CreateTable.SQL_CREATE_CHILD_TABLE;
+import static edu.aku.hassannaqvi.uen_scans_bl.utils.CreateTable.SQL_CREATE_DENTAL;
 import static edu.aku.hassannaqvi.uen_scans_bl.utils.CreateTable.SQL_CREATE_FAMILY_MEMBERS;
 import static edu.aku.hassannaqvi.uen_scans_bl.utils.CreateTable.SQL_CREATE_FORMS;
 import static edu.aku.hassannaqvi.uen_scans_bl.utils.CreateTable.SQL_CREATE_HB;
@@ -86,6 +87,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         db.execSQL(SQL_CREATE_CHILD_TABLE);
         db.execSQL(SQL_CREATE_ANTHRO);
         db.execSQL(SQL_CREATE_VISION);
+        db.execSQL(SQL_CREATE_DENTAL);
         db.execSQL(SQL_CREATE_HB);
     }
 
@@ -101,6 +103,9 @@ public class DatabaseHelper extends SQLiteOpenHelper {
 //        db.execSQL(SQL_DELETE_UCS);
 //        db.execSQL(SQL_DELETE_AREAS);
 
+        if (i == 1) {
+            db.execSQL(SQL_CREATE_DENTAL);
+        }
 
     }
 
@@ -894,17 +899,17 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         SQLiteDatabase db = this.getWritableDatabase();
 
         ContentValues values = new ContentValues();
-        values.put(DentalContract.dentalTable.COLUMN__UUID, dc.get_UUID());
-        values.put(DentalContract.dentalTable.COLUMN_DEVICEID, dc.getDeviceId());
-        values.put(DentalContract.dentalTable.COLUMN_FORMDATE, dc.getFormDate());
-        values.put(DentalContract.dentalTable.COLUMN_USER, dc.getUser());
-        values.put(DentalContract.dentalTable.COLUMN_DEVICETAGID, dc.getDevicetagID());
-        values.put(DentalContract.dentalTable.COLUMN_SE2, dc.getsE2());
+        values.put(DentalContract.DentalTable.COLUMN_UUID, dc.get_UUID());
+        values.put(DentalContract.DentalTable.COLUMN_DEVICEID, dc.getDeviceId());
+        values.put(DentalContract.DentalTable.COLUMN_FORMDATE, dc.getFormDate());
+        values.put(DentalContract.DentalTable.COLUMN_USER, dc.getUser());
+        values.put(DentalContract.DentalTable.COLUMN_DEVICETAGID, dc.getDevicetagID());
+        values.put(DentalContract.DentalTable.COLUMN_SE2, dc.getsE2());
 
         // Insert the new row, returning the primary key value of the new row
         long newRowId;
         newRowId = db.insert(
-                DentalContract.dentalTable.TABLE_NAME,
+                DentalContract.DentalTable.TABLE_NAME,
                 null,
                 values);
         return newRowId;
@@ -1060,10 +1065,10 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         ContentValues values = new ContentValues();
         values.put(column, value);
 
-        String selection = DentalContract.dentalTable._ID + " =? ";
+        String selection = DentalContract.DentalTable._ID + " =? ";
         String[] selectionArgs = {String.valueOf(dc.get_ID())};
 
-        return db.update(DentalContract.dentalTable.TABLE_NAME,
+        return db.update(DentalContract.DentalTable.TABLE_NAME,
                 values,
                 selection,
                 selectionArgs);
@@ -1311,28 +1316,28 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         SQLiteDatabase db = this.getReadableDatabase();
         Cursor c = null;
         String[] columns = {
-                DentalContract.dentalTable._ID,
-                DentalContract.dentalTable.COLUMN_UID,
-                DentalContract.dentalTable.COLUMN__UUID,
-                DentalContract.dentalTable.COLUMN_DEVICEID,
-                DentalContract.dentalTable.COLUMN_FORMDATE,
-                DentalContract.dentalTable.COLUMN_USER,
-                DentalContract.dentalTable.COLUMN_SE2,
-                DentalContract.dentalTable.COLUMN_DEVICETAGID,
+                DentalContract.DentalTable._ID,
+                DentalContract.DentalTable.COLUMN_UID,
+                DentalContract.DentalTable.COLUMN_UUID,
+                DentalContract.DentalTable.COLUMN_DEVICEID,
+                DentalContract.DentalTable.COLUMN_FORMDATE,
+                DentalContract.DentalTable.COLUMN_USER,
+                DentalContract.DentalTable.COLUMN_SE2,
+                DentalContract.DentalTable.COLUMN_DEVICETAGID,
 
         };
-        String whereClause = DentalContract.dentalTable.COLUMN_SYNCED + " is null";
+        String whereClause = DentalContract.DentalTable.COLUMN_SYNCED + " is null";
         String[] whereArgs = null;
         String groupBy = null;
         String having = null;
 
         String orderBy =
-                DentalContract.dentalTable._ID + " ASC";
+                DentalContract.DentalTable._ID + " ASC";
 
         Collection<DentalContract> allDC = new ArrayList<DentalContract>();
         try {
             c = db.query(
-                    DentalContract.dentalTable.TABLE_NAME,  // The table to query
+                    DentalContract.DentalTable.TABLE_NAME,  // The table to query
                     columns,                   // The columns to return
                     whereClause,               // The columns for the WHERE clause
                     whereArgs,                 // The values for the WHERE clause
@@ -1810,15 +1815,15 @@ public class DatabaseHelper extends SQLiteOpenHelper {
 
 // New value for one column
         ContentValues values = new ContentValues();
-        values.put(DentalContract.dentalTable.COLUMN_SYNCED, true);
-        values.put(DentalContract.dentalTable.COLUMN_SYNCED_DATE, new Date().toString());
+        values.put(DentalContract.DentalTable.COLUMN_SYNCED, true);
+        values.put(DentalContract.DentalTable.COLUMN_SYNCED_DATE, new Date().toString());
 
 // Which row to update, based on the title
-        String where = DentalContract.dentalTable._ID + " = ?";
+        String where = DentalContract.DentalTable._ID + " = ?";
         String[] whereArgs = {id};
 
         int count = db.update(
-                DentalContract.dentalTable.TABLE_NAME,
+                DentalContract.DentalTable.TABLE_NAME,
                 values,
                 where,
                 whereArgs);

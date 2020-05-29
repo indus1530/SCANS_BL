@@ -19,7 +19,7 @@ public final class CreateTable {
     public static final String DATABASE_NAME = "scans20.db";
     public static final String DB_NAME = "scans20_copy.db";
     public static final String PROJECT_NAME = "DMU-UENSCANS2020";
-    public static final int DATABASE_VERSION = 1;
+    public static final int DATABASE_VERSION = 2;
 
     public static final String SQL_CREATE_FORMS = "CREATE TABLE "
             + FormsContract.FormsTable.TABLE_NAME + "("
@@ -219,16 +219,16 @@ public final class CreateTable {
             + VisionContract.visionTable.COLUMN_SYNCED_DATE + " TEXT );";
 
 
-    public static final String SQL_CREATE_DENTAL = "CREATE TABLE " + DentalContract.dentalTable.TABLE_NAME + "("
-            + DentalContract.dentalTable.COLUMN__ID + " INTEGER PRIMARY KEY AUTOINCREMENT,"
-            + DentalContract.dentalTable.COLUMN_UID + " TEXT,"
-            + DentalContract.dentalTable.COLUMN__UUID + " TEXT,"
-            + DentalContract.dentalTable.COLUMN_DEVICEID + " TEXT,"
-            + DentalContract.dentalTable.COLUMN_FORMDATE + " TEXT,"
-            + DentalContract.dentalTable.COLUMN_USER + " TEXT,"
-            + DentalContract.dentalTable.COLUMN_SE2 + " TEXT,"
-            + DentalContract.dentalTable.COLUMN_DEVICETAGID + " TEXT,"
-            + DentalContract.dentalTable.COLUMN_SYNCED + " TEXT,"
-            + DentalContract.dentalTable.COLUMN_SYNCED_DATE + " TEXT );";
+    public static final String SQL_CREATE_DENTAL = "CREATE TABLE " + DentalContract.DentalTable.TABLE_NAME + "("
+            + DentalContract.DentalTable.COLUMN__ID + " INTEGER PRIMARY KEY AUTOINCREMENT,"
+            + DentalContract.DentalTable.COLUMN_UID + " TEXT,"
+            + DentalContract.DentalTable.COLUMN_UUID + " TEXT,"
+            + DentalContract.DentalTable.COLUMN_DEVICEID + " TEXT,"
+            + DentalContract.DentalTable.COLUMN_FORMDATE + " TEXT,"
+            + DentalContract.DentalTable.COLUMN_USER + " TEXT,"
+            + DentalContract.DentalTable.COLUMN_SE2 + " TEXT,"
+            + DentalContract.DentalTable.COLUMN_DEVICETAGID + " TEXT,"
+            + DentalContract.DentalTable.COLUMN_SYNCED + " TEXT,"
+            + DentalContract.DentalTable.COLUMN_SYNCED_DATE + " TEXT );";
 
 }
