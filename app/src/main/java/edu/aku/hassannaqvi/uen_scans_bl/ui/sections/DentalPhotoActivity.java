@@ -2,7 +2,6 @@ package edu.aku.hassannaqvi.uen_scans_bl.ui.sections;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.view.View;
 import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
@@ -19,6 +18,7 @@ import edu.aku.hassannaqvi.uen_scans_bl.contracts.DentalContract;
 import edu.aku.hassannaqvi.uen_scans_bl.core.DatabaseHelper;
 import edu.aku.hassannaqvi.uen_scans_bl.core.MainApp;
 import edu.aku.hassannaqvi.uen_scans_bl.databinding.ActivityDentalPhotoBinding;
+import edu.aku.hassannaqvi.uen_scans_bl.ui.other.MainActivity;
 import edu.aku.hassannaqvi.uen_scans_bl.ui.other.TakePhoto;
 
 public class DentalPhotoActivity extends AppCompatActivity {
@@ -36,7 +36,7 @@ public class DentalPhotoActivity extends AppCompatActivity {
         PhotoSerial = 0;
     }
 
-    public void takePhoto(View view) {
+    public void TakePhoto(int id) {
 
         Intent intent = new Intent(this, TakePhoto.class);
 
@@ -49,12 +49,10 @@ public class DentalPhotoActivity extends AppCompatActivity {
 
 
         intent.putExtra("picView", "dental".toUpperCase());
-        if (view.getId() == bi.btnBackCamera.getId()) {
+        if (id == 0) {
             intent.putExtra("viewFacing", "1");
-
         } else {
             intent.putExtra("viewFacing", "2");
-
         }
 
         startActivityForResult(intent, 1); // Activity is started with requestCode 1 = Front
@@ -87,6 +85,12 @@ public class DentalPhotoActivity extends AppCompatActivity {
         } else {
             Toast.makeText(this, "Photo Cancelled", Toast.LENGTH_SHORT).show();
         }
+    }
+
+    public void BtnNext() {
+        finish();
+        startActivity(new Intent(this, MainActivity.class)
+                .setFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK).setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP).setFlags(Intent.FLAG_ACTIVITY_NEW_TASK));
     }
 
     private boolean UpdateDB() {

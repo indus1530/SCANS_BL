@@ -86,8 +86,7 @@
                             android:layout_height="wrap_content"
                             android:layout_gravity="center"
                             android:layout_margin="12dp"
-
-                            android:onClick="takePhoto"
+                            android:onClick="@{(v) -> callback.TakePhoto(1)}"
                             android:drawableStart="@drawable/camera"
                             android:drawablePadding="8dp"
                             android:text="Front Camera" />
@@ -100,7 +99,7 @@
                                 android:layout_margin="12dp"
                                 android:drawableStart="@drawable/camera"
                                 android:drawablePadding="8dp"
-                                android:onClick="takePhoto"
+                                android:onClick="@{(v) -> callback.TakePhoto(2)}"
                                 android:text="Back Camera" />
 
                         </LinearLayout>
@@ -133,6 +132,7 @@
                     android:layout_height="wrap_content"
                     android:layout_gravity="bottom|end"
                     android:layout_margin="10dp"
+                    android:onClick="@{() -> callback.BtnNext()}"
                     android:layout_weight="50"
                     android:text="Submit" />
 
