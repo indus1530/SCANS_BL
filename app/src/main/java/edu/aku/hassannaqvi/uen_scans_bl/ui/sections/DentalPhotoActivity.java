@@ -33,7 +33,7 @@ public class DentalPhotoActivity extends AppCompatActivity {
         bi = DataBindingUtil.setContentView(this, R.layout.activity_dental_photo);
         bi.setCallback(this);
 
-        PhotoSerial = 0;
+        PhotoSerial = 1;
     }
 
     public void TakePhoto(int id) {
@@ -72,6 +72,7 @@ public class DentalPhotoActivity extends AppCompatActivity {
         if (resultCode == 1) {
             Toast.makeText(this, "Photo Taken", Toast.LENGTH_SHORT).show();
             String fileName = data.getStringExtra("FileName");
+            bi.fileName.setText(bi.fileName.getText() + String.valueOf(PhotoSerial) + " - " + fileName + ";\r\n");
             try {
                 SaveDraft();
             } catch (Exception e) {
@@ -79,7 +80,6 @@ public class DentalPhotoActivity extends AppCompatActivity {
             }
             if (UpdateDB()) {
                 PhotoSerial++;
-                bi.fileName.setText(bi.fileName.getText() + String.valueOf(PhotoSerial) + " - " + fileName + ";\r\n");
             }
 
         } else {
