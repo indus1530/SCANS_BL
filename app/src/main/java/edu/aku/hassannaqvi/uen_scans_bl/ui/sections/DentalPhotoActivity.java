@@ -31,7 +31,7 @@ public class DentalPhotoActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_dental_photo);
         bi = DataBindingUtil.setContentView(this, R.layout.activity_dental_photo);
-
+        bi.setCallback(this);
 
         PhotoSerial = 0;
     }
