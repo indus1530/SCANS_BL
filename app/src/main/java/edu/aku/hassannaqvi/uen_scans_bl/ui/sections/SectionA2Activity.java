@@ -29,12 +29,13 @@ import edu.aku.hassannaqvi.uen_scans_bl.databinding.ActivitySectionA2Binding;
 import edu.aku.hassannaqvi.uen_scans_bl.datecollection.AgeModel;
 import edu.aku.hassannaqvi.uen_scans_bl.datecollection.DateRepository;
 import edu.aku.hassannaqvi.uen_scans_bl.ui.list_activity.FamilyMembersListActivity;
+import edu.aku.hassannaqvi.uen_scans_bl.utils.Util;
 import edu.aku.hassannaqvi.uen_scans_bl.viewmodel.MainVModel;
 import kotlin.Pair;
 
 import static edu.aku.hassannaqvi.uen_scans_bl.CONSTANTS.SERIAL_EXTRA;
 
-public class SectionA2Activity extends AppCompatActivity {
+public class SectionA2Activity extends AppCompatActivity implements Util.EndSecAActivity {
 
     ActivitySectionA2Binding bi;
     private MainVModel mainVModel;
@@ -106,21 +107,20 @@ public class SectionA2Activity extends AppCompatActivity {
 
     public void BtnContinue() {
         if (!formValidation()) return;
-        try {
-            SaveDraft();
-        } catch (JSONException e) {
-            e.printStackTrace();
-        }
+
         if (fmcFLAG) {
+            try {
+                SaveDraft();
+            } catch (JSONException e) {
+                e.printStackTrace();
+            }
             setResult(RESULT_OK, new Intent().putExtra(SERIAL_EXTRA, serial));
             finish();
         } else {
-            if (UpdateDB()) {
-                setResult(RESULT_OK);
-                finish();
-            } else {
-                Toast.makeText(this, "Failed to Update Database!", Toast.LENGTH_SHORT).show();
-            }
+            int calculatingAge = Integer.parseInt(bi.a206.getText().toString());
+            if ((calculatingAge >= 5 && calculatingAge < 10) && bi.a213.getSelectedItemPosition() == 1)
+                Util.openWarningActivity(this, "Are you confirming that mother is not available?");
+            else savingDB();
         }
 
     }
@@ -434,93 +434,36 @@ public class SectionA2Activity extends AppCompatActivity {
             bi.fldGrpCVa209.setVisibility(View.VISIBLE);
         }
 
-        /*Clear.clearAllFields(bi.a209, false);
-        Clear.clearAllFields(bi.a210, false);
-
-        if (calAge > 0 && calAge <= 2) {
-            bi.a209a.setEnabled(true);
-            bi.a209b.setEnabled(true);
-            bi.a209m.setEnabled(true);
-            bi.a210j.setEnabled(true);
-            bi.a210g.setEnabled(true);
-        }
-
-        if (calAge > 2 && calAge <= 5) {
-            bi.a209a.setEnabled(true);
-            bi.a209b.setEnabled(true);
-            bi.a209c.setEnabled(true);
-            bi.a209m.setEnabled(true);
-            bi.a210g.setEnabled(true);
-            bi.a210j.setEnabled(true);
-        }
-
-        if (calAge > 5 && calAge <= 10) {
-            bi.a209a.setEnabled(true);
-            bi.a209d.setEnabled(true);
-            bi.a209e.setEnabled(true);
-            bi.a209l.setEnabled(true);
-            bi.a209m.setEnabled(true);
-            bi.a210g.setEnabled(true);
-            bi.a210j.setEnabled(true);
-
-            bi.a209b.setEnabled(true);
-            bi.a209c.setEnabled(true);
-        }
-
-        if (calAge > 10 && calAge <= 20) {
-            bi.a209a.setEnabled(true);
-            bi.a209e.setEnabled(true);
-            bi.a209f.setEnabled(true);
-            bi.a209g.setEnabled(true);
-            bi.a209j.setEnabled(true);
-            bi.a209k.setEnabled(true);
-            bi.a209l.setEnabled(true);
-            bi.a209m.setEnabled(true);
-            bi.a210a.setEnabled(true);
-            bi.a210b.setEnabled(true);
-            bi.a210c.setEnabled(true);
-            bi.a210d.setEnabled(true);
-            bi.a210e.setEnabled(true);
-            bi.a210g.setEnabled(true);
-            bi.a210h.setEnabled(true);
-            bi.a210j.setEnabled(true);
-
-            bi.a209d.setEnabled(true);
-            bi.a209b.setEnabled(true);
-            bi.a209c.setEnabled(true);
-        }
-
-        if (calAge > 20) {
-            Clear.clearAllFields(bi.a209, true);
-            Clear.clearAllFields(bi.a210, true);
-        }*/
-
-        /*bi.fldGrpCVa212.setVisibility(calAge >= 5 && calAge < 10 ? View.VISIBLE : View.GONE);
-        bi.fldGrpCVa213.setVisibility(calAge >= 5 && calAge < 10 ? View.VISIBLE : View.GONE);*/
-
     }
 
     @Override
     public boolean onSupportNavigateUp() {
-        /*if (fmcFLAG) {
-            serial--;
-            setResult(RESULT_CANCELED, new Intent().putExtra(SERIAL_EXTRA, serial));
-            finish();
-            return true;
-        } else {
-            Toast.makeText(this, "You can't go back!!", Toast.LENGTH_SHORT).show();
-            return false;
-        }*/
-
         setResult(RESULT_CANCELED);
         finish();
-
         return true;
-
     }
 
     @Override
     public void onBackPressed() {
         Toast.makeText(this, "Press top back button.", Toast.LENGTH_SHORT).show();
+    }
+
+    @Override
+    public void endSecAActivity(boolean flag) {
+        savingDB();
+    }
+
+    private void savingDB() {
+        try {
+            SaveDraft();
+        } catch (JSONException e) {
+            e.printStackTrace();
+        }
+        if (UpdateDB()) {
+            setResult(RESULT_OK);
+            finish();
+        } else {
+            Toast.makeText(this, "Failed to Update Database!", Toast.LENGTH_SHORT).show();
+        }
     }
 }

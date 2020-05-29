@@ -110,7 +110,7 @@ class FamilyMembersListActivity : AppCompatActivity() {
                                         }
                                     } else {
                                         finish()
-                                        startActivity(Intent(this@FamilyMembersListActivity, EndingActivity::class.java).putExtra("complete", true))
+                                        startActivity(Intent(this@FamilyMembersListActivity, EndingActivity::class.java).putExtra("complete", false))
                                     }
                                 }
                                 else -> Util.openEndActivity(this)
