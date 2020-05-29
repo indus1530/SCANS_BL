@@ -49,7 +49,7 @@ public class DentalPhotoActivity extends AppCompatActivity {
 
 
         intent.putExtra("picView", "dental".toUpperCase());
-        if (id == 0) {
+        if (id == 1) {
             intent.putExtra("viewFacing", "1");
         } else {
             intent.putExtra("viewFacing", "2");
