@@ -29,6 +29,16 @@
         android:theme="@style/AppTheme1"
         tools:ignore="LockedOrientationActivity">
         <activity
+            android:name=".ui.list_activity.FormsReportCluster"
+            android:label="Forms Report"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme" />
+        <activity
+            android:name=".ui.list_activity.FormsReportDate"
+            android:label="Forms Report"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme" />
+        <activity
             android:name=".ui.sections.DentalPhotoActivity"
             android:screenOrientation="portrait"
             android:theme="@style/AppTheme"></activity>

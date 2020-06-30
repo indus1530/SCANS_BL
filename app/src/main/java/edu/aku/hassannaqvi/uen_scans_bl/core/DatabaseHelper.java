@@ -1684,7 +1684,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         return allFC;
     }
 
-    public Collection<FormsContract> getTodayForms(String sysdate) {
+    public Collection<FormsContract> getTodayForms(String formdate) {
 
         // String sysdate =  spDateT.substring(0, 8).trim()
         SQLiteDatabase db = this.getReadableDatabase();
@@ -1700,7 +1700,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
 
         };
         String whereClause = FormsTable.COLUMN_FORMDATE + " Like ? ";
-        String[] whereArgs = new String[]{"%" + sysdate + " %"};
+        String[] whereArgs = new String[]{"%" + formdate + " %"};
 //        String[] whereArgs = new String[]{"%" + spDateT.substring(0, 8).trim() + "%"};
         String groupBy = null;
         String having = null;
@@ -1931,4 +1931,62 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         cursor.close();
         return count;
     }
+
+    public Collection<FormsContract> getFormsByCluster(String cluster) {
+
+        // String sysdate =  spDateT.substring(0, 8).trim()
+        SQLiteDatabase db = this.getReadableDatabase();
+        Cursor c = null;
+        String[] columns = {
+                FormsTable._ID,
+                FormsTable.COLUMN_UID,
+                FormsTable.COLUMN_FORMDATE,
+                FormsTable.COLUMN_CLUSTERCODE,
+                FormsTable.COLUMN_HHNO,
+                FormsTable.COLUMN_ISTATUS,
+                FormsTable.COLUMN_SYNCED,
+
+        };
+        String whereClause = FormsTable.COLUMN_CLUSTERCODE + " = ? ";
+        String[] whereArgs = new String[]{cluster};
+//        String[] whereArgs = new String[]{"%" + spDateT.substring(0, 8).trim() + "%"};
+        String groupBy = null;
+        String having = null;
+
+        String orderBy =
+                FormsTable.COLUMN_ID + " ASC";
+
+        Collection<FormsContract> allFC = new ArrayList<>();
+        try {
+            c = db.query(
+                    FormsTable.TABLE_NAME,  // The table to query
+                    columns,                   // The columns to return
+                    whereClause,               // The columns for the WHERE clause
+                    whereArgs,                 // The values for the WHERE clause
+                    groupBy,                   // don't group the rows
+                    having,                    // don't filter by row groups
+                    orderBy                    // The sort order
+            );
+            while (c.moveToNext()) {
+                FormsContract fc = new FormsContract();
+                fc.set_ID(c.getString(c.getColumnIndex(FormsTable.COLUMN_ID)));
+                fc.set_UID(c.getString(c.getColumnIndex(FormsTable.COLUMN_UID)));
+                fc.setFormDate(c.getString(c.getColumnIndex(FormsTable.COLUMN_FORMDATE)));
+                fc.setClusterCode(c.getString(c.getColumnIndex(FormsTable.COLUMN_CLUSTERCODE)));
+                fc.setHhno(c.getString(c.getColumnIndex(FormsTable.COLUMN_HHNO)));
+                fc.setIstatus(c.getString(c.getColumnIndex(FormsTable.COLUMN_ISTATUS)));
+                fc.setSynced(c.getString(c.getColumnIndex(FormsTable.COLUMN_SYNCED)));
+                allFC.add(fc);
+            }
+        } finally {
+            if (c != null) {
+                c.close();
+            }
+            if (db != null) {
+                db.close();
+            }
+        }
+        return allFC;
+    }
+
 }

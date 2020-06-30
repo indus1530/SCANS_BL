@@ -49,6 +49,8 @@ import edu.aku.hassannaqvi.uen_scans_bl.core.AndroidDatabaseManager;
 import edu.aku.hassannaqvi.uen_scans_bl.core.DatabaseHelper;
 import edu.aku.hassannaqvi.uen_scans_bl.core.MainApp;
 import edu.aku.hassannaqvi.uen_scans_bl.databinding.ActivityMainBinding;
+import edu.aku.hassannaqvi.uen_scans_bl.ui.list_activity.FormsReportCluster;
+import edu.aku.hassannaqvi.uen_scans_bl.ui.list_activity.FormsReportDate;
 import edu.aku.hassannaqvi.uen_scans_bl.ui.sections.SectionA1Activity;
 import edu.aku.hassannaqvi.uen_scans_bl.ui.sections.SectionInfoActivity;
 import edu.aku.hassannaqvi.uen_scans_bl.ui.sync.SyncActivity;
@@ -264,6 +266,12 @@ public class MainActivity extends AppCompatActivity {
             case R.id.onSync:
                 startActivity(new Intent(MainActivity.this, SyncActivity.class));
                 break;
+        }
+        if (item.getItemId() == R.id.formsReportDate) {
+            startActivity(new Intent(MainActivity.this, FormsReportDate.class));
+        }
+        if (item.getItemId() == R.id.formsReportCluster) {
+            startActivity(new Intent(MainActivity.this, FormsReportCluster.class));
         }
         return super.onOptionsItemSelected(item);
     }
