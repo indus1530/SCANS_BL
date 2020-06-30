@@ -23,7 +23,7 @@ import edu.aku.hassannaqvi.uen_scans_bl.contracts.AnthroContract.SingleAnthro;
 import edu.aku.hassannaqvi.uen_scans_bl.contracts.BLRandomContract;
 import edu.aku.hassannaqvi.uen_scans_bl.contracts.BLRandomContract.SingleRandomHH;
 import edu.aku.hassannaqvi.uen_scans_bl.contracts.ChildContract;
-import edu.aku.hassannaqvi.uen_scans_bl.contracts.ChildContract.SingleChild;
+import edu.aku.hassannaqvi.uen_scans_bl.contracts.ChildContract.ChildTable;
 import edu.aku.hassannaqvi.uen_scans_bl.contracts.DentalContract;
 import edu.aku.hassannaqvi.uen_scans_bl.contracts.EnumBlockContract;
 import edu.aku.hassannaqvi.uen_scans_bl.contracts.EnumBlockContract.EnumBlockTable;
@@ -870,24 +870,24 @@ public class DatabaseHelper extends SQLiteOpenHelper {
 
         // Create a new map of values, where column names are the keys
         ContentValues values = new ContentValues();
-        values.put(SingleChild.COLUMN__UUID, childContract.get_UUID());
-        values.put(SingleChild.COLUMN_DEVICEID, childContract.getDeviceId());
-        values.put(SingleChild.COLUMN_FORMDATE, childContract.getFormDate());
-        values.put(SingleChild.COLUMN_USER, childContract.getUser());
-        values.put(SingleChild.COLUMN_SC1, childContract.getsC1());
-        values.put(SingleChild.COLUMN_SC2, childContract.getsC2());
-        values.put(SingleChild.COLUMN_SC3, childContract.getsC3());
-        values.put(SingleChild.COLUMN_SC4, childContract.getsC4());
-        values.put(SingleChild.COLUMN_SC5, childContract.getsC5());
-        values.put(SingleChild.COLUMN_SC6, childContract.getsC6());
+        values.put(ChildContract.ChildTable.COLUMN__UUID, childContract.get_UUID());
+        values.put(ChildContract.ChildTable.COLUMN_DEVICEID, childContract.getDeviceId());
+        values.put(ChildContract.ChildTable.COLUMN_FORMDATE, childContract.getFormDate());
+        values.put(ChildContract.ChildTable.COLUMN_USER, childContract.getUser());
+        values.put(ChildContract.ChildTable.COLUMN_SC1, childContract.getsC1());
+        values.put(ChildTable.COLUMN_SC2, childContract.getsC2());
+        values.put(ChildTable.COLUMN_SC3, childContract.getsC3());
+        values.put(ChildContract.ChildTable.COLUMN_SC4, childContract.getsC4());
+        values.put(ChildTable.COLUMN_SC5, childContract.getsC5());
+        values.put(ChildTable.COLUMN_SC6, childContract.getsC6());
 
-        values.put(SingleChild.COLUMN_DEVICETAGID, childContract.getDevicetagID());
+        values.put(ChildContract.ChildTable.COLUMN_DEVICETAGID, childContract.getDevicetagID());
 
 
         // Insert the new row, returning the primary key value of the new row
         long newRowId;
         newRowId = db.insert(
-                SingleChild.TABLE_NAME,
+                ChildContract.ChildTable.TABLE_NAME,
                 null,
                 values);
         return newRowId;
@@ -1161,10 +1161,10 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         ContentValues values = new ContentValues();
         values.put(column, value);
 
-        String selection = SingleChild._ID + " =? ";
+        String selection = ChildContract.ChildTable._ID + " =? ";
         String[] selectionArgs = {String.valueOf(MainApp.child.get_ID())};
 
-        return db.update(SingleChild.TABLE_NAME,
+        return db.update(ChildTable.TABLE_NAME,
                 values,
                 selection,
                 selectionArgs);
@@ -1628,27 +1628,27 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         SQLiteDatabase db = this.getReadableDatabase();
         Cursor c = null;
         String[] columns = {
-                SingleChild._ID,
-                SingleChild.COLUMN_UID,
-                SingleChild.COLUMN__UUID,
-                SingleChild.COLUMN_DEVICEID,
-                SingleChild.COLUMN_FORMDATE,
-                SingleChild.COLUMN_USER,
-                SingleChild.COLUMN_SC1,
-                SingleChild.COLUMN_SC2,
-                SingleChild.COLUMN_SC3,
-                SingleChild.COLUMN_SC4,
-                SingleChild.COLUMN_SC5,
-                SingleChild.COLUMN_SC6,
-                SingleChild.COLUMN_SL,
-                SingleChild.COLUMN_SM,
-                SingleChild.COLUMN_SK1,
-                SingleChild.COLUMN_DEVICETAGID,
+                ChildContract.ChildTable._ID,
+                ChildContract.ChildTable.COLUMN_UID,
+                ChildContract.ChildTable.COLUMN__UUID,
+                ChildContract.ChildTable.COLUMN_DEVICEID,
+                ChildContract.ChildTable.COLUMN_FORMDATE,
+                ChildTable.COLUMN_USER,
+                ChildContract.ChildTable.COLUMN_SC1,
+                ChildTable.COLUMN_SC2,
+                ChildTable.COLUMN_SC3,
+                ChildContract.ChildTable.COLUMN_SC4,
+                ChildContract.ChildTable.COLUMN_SC5,
+                ChildContract.ChildTable.COLUMN_SC6,
+                ChildContract.ChildTable.COLUMN_SL,
+                ChildContract.ChildTable.COLUMN_SM,
+                ChildContract.ChildTable.COLUMN_SK1,
+                ChildContract.ChildTable.COLUMN_DEVICETAGID,
 
         };
 
 
-        String whereClause = SingleChild.COLUMN_SYNCED + " is null";
+        String whereClause = ChildContract.ChildTable.COLUMN_SYNCED + " is null";
 
         String[] whereArgs = null;
 
@@ -1656,12 +1656,12 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         String having = null;
 
         String orderBy =
-                SingleChild._ID + " ASC";
+                ChildContract.ChildTable._ID + " ASC";
 
         Collection<ChildContract> allFC = new ArrayList<ChildContract>();
         try {
             c = db.query(
-                    SingleChild.TABLE_NAME,  // The table to query
+                    ChildContract.ChildTable.TABLE_NAME,  // The table to query
                     columns,                   // The columns to return
                     whereClause,               // The columns for the WHERE clause
                     whereArgs,                 // The values for the WHERE clause
@@ -1684,19 +1684,24 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         return allFC;
     }
 
-    public Collection<FormsContract> getTodayForms() {
+    public Collection<FormsContract> getTodayForms(String sysdate) {
+
+        // String sysdate =  spDateT.substring(0, 8).trim()
         SQLiteDatabase db = this.getReadableDatabase();
         Cursor c = null;
         String[] columns = {
                 FormsTable._ID,
-                FormsTable.COLUMN_LUID,
+                FormsTable.COLUMN_UID,
                 FormsTable.COLUMN_FORMDATE,
+                FormsTable.COLUMN_CLUSTERCODE,
+                FormsTable.COLUMN_HHNO,
                 FormsTable.COLUMN_ISTATUS,
                 FormsTable.COLUMN_SYNCED,
 
         };
         String whereClause = FormsTable.COLUMN_FORMDATE + " Like ? ";
-        String[] whereArgs = new String[]{"%" + spDateT.substring(0, 8).trim() + "%"};
+        String[] whereArgs = new String[]{"%" + sysdate + " %"};
+//        String[] whereArgs = new String[]{"%" + spDateT.substring(0, 8).trim() + "%"};
         String groupBy = null;
         String having = null;
 
@@ -1717,8 +1722,10 @@ public class DatabaseHelper extends SQLiteOpenHelper {
             while (c.moveToNext()) {
                 FormsContract fc = new FormsContract();
                 fc.set_ID(c.getString(c.getColumnIndex(FormsTable.COLUMN_ID)));
-                fc.setLuid(c.getString(c.getColumnIndex(FormsTable.COLUMN_LUID)));
+                fc.set_UID(c.getString(c.getColumnIndex(FormsTable.COLUMN_UID)));
                 fc.setFormDate(c.getString(c.getColumnIndex(FormsTable.COLUMN_FORMDATE)));
+                fc.setClusterCode(c.getString(c.getColumnIndex(FormsTable.COLUMN_CLUSTERCODE)));
+                fc.setHhno(c.getString(c.getColumnIndex(FormsTable.COLUMN_HHNO)));
                 fc.setIstatus(c.getString(c.getColumnIndex(FormsTable.COLUMN_ISTATUS)));
                 fc.setSynced(c.getString(c.getColumnIndex(FormsTable.COLUMN_SYNCED)));
                 allFC.add(fc);
@@ -1758,15 +1765,15 @@ public class DatabaseHelper extends SQLiteOpenHelper {
 
 // New value for one column
         ContentValues values = new ContentValues();
-        values.put(SingleChild.COLUMN_SYNCED, true);
-        values.put(SingleChild.COLUMN_SYNCED_DATE, new Date().toString());
+        values.put(ChildTable.COLUMN_SYNCED, true);
+        values.put(ChildContract.ChildTable.COLUMN_SYNCED_DATE, new Date().toString());
 
 // Which row to update, based on the title
-        String where = SingleChild._ID + " = ?";
+        String where = ChildTable._ID + " = ?";
         String[] whereArgs = {id};
 
         int count = db.update(
-                SingleChild.TABLE_NAME,
+                ChildContract.ChildTable.TABLE_NAME,
                 values,
                 where,
                 whereArgs);
@@ -1905,4 +1912,23 @@ public class DatabaseHelper extends SQLiteOpenHelper {
                 whereArgs);
     }
 
+    public int getChildByUUID(String UUID) {
+        //String countQuery = "SELECT  * FROM " + ChildTable.TABLE_NAME + " WHERE " + ChildTable.COLUMN__UUID + " = '" + UUID + "' AND " + ChildTable.COLUMN_SC6 + " = ''";
+        String countQuery = "SELECT  * FROM " + ChildTable.TABLE_NAME + " WHERE " + ChildTable.COLUMN__UUID + " = '" + UUID + "'";
+        SQLiteDatabase db = this.getReadableDatabase();
+        Cursor cursor = db.rawQuery(countQuery, null);
+        int count = cursor.getCount();
+        cursor.close();
+        return count;
+    }
+
+    public int getMotherByUUID(String UUID) {
+        String countQuery = "SELECT  * FROM " + MWRATable.TABLE_NAME + " WHERE " + MWRATable.COLUMN_UUID + " = '" + UUID + "'";
+        //String countQuery = "SELECT  * FROM " + MWRATable.TABLE_NAME + " WHERE " + MWRATable.COLUMN_UUID + " = '" + UUID + "' AND " + MWRATable.COLUMN_SB3 + " = ''";
+        SQLiteDatabase db = this.getReadableDatabase();
+        Cursor cursor = db.rawQuery(countQuery, null);
+        int count = cursor.getCount();
+        cursor.close();
+        return count;
+    }
 }

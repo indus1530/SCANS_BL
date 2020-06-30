@@ -177,7 +177,7 @@ public class SyncActivity extends AppCompatActivity implements SyncDevice.SyncDe
                     "updateSyncedChildForms",
                     ChildContract.class,
                     MainApp._HOST_URL + MainApp._SERVER_URL,
-                    ChildContract.SingleChild.TABLE_NAME,
+                    ChildContract.ChildTable.TABLE_NAME,
                     db.getUnsyncedChildForms(), 1, uploadListAdapter, uploadlist
             ).execute();
 

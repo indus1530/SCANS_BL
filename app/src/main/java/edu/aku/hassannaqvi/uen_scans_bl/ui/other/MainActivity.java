@@ -61,6 +61,7 @@ public class MainActivity extends AppCompatActivity {
     ActivityMainBinding bi;
     String dtToday = new SimpleDateFormat("dd-MM-yy HH:mm").format(new Date().getTime());
     String dtToday1 = new SimpleDateFormat("dd-MMM-yyyy").format(new Date());
+    String dtToday2 = new SimpleDateFormat("dd-MM-yy").format(new Date());
     SharedPreferences sharedPref;
     SharedPreferences.Editor editor;
     AlertDialog.Builder builder;
@@ -341,7 +342,7 @@ public class MainActivity extends AppCompatActivity {
 
         db = new DatabaseHelper(this);
 
-        Collection<FormsContract> todaysForms = db.getTodayForms();
+        Collection<FormsContract> todaysForms = db.getTodayForms(dtToday2);
         Collection<FormsContract> unsyncedForms = db.getUnsyncedForms();
 
         rSumText += "TODAY'S RECORDS SUMMARY\r\n";
@@ -349,35 +350,87 @@ public class MainActivity extends AppCompatActivity {
         rSumText += "=======================\r\n";
         rSumText += "\r\n";
         rSumText += "Total Forms Today" + "(" + dtToday1 + "): " + todaysForms.size() + "\r\n";
-        rSumText += "\r\n";
         if (todaysForms.size() > 0) {
-            rSumText += "\tFORMS' LIST: \r\n";
             String iStatus;
-            rSumText += "--------------------------------------------------\r\n";
-            rSumText += "[ DSS ID ] \t\t\t\t[Sync Status]\r\n";
-            rSumText += "--------------------------------------------------\r\n";
+            rSumText += "==========================================================\r\n";
+            rSumText += "[Cluster][Household][Mo/Ch][  Form Status   ][Sync Status]\r\n";
+            rSumText += "==========================================================\r\n";
 
             for (FormsContract fc : todaysForms) {
-                rSumText += fc.getLuid();
-                rSumText += "\t\t\t\t\t";
+                Log.d(TAG, "onCreate: '" + fc.getIstatus() + "'");
+                switch (fc.getIstatus()) {
+                    case "1":
+                        iStatus = "Complete        ";
+                        break;
+                    case "2":
+                        iStatus = "No Respondent   ";
+                        break;
+                    case "3":
+                        iStatus = "Absent          ";
+                        break;
+                    case "4":
+                        iStatus = "Refused         ";
+                        break;
+                    case "5":
+                        iStatus = "Empty           ";
+                        break;
+                    case "6":
+                        iStatus = "Not Found       ";
+                        break;
+                    case "7":
+                        iStatus = "No Child        ";
+                        break;
+                    case "8":
+                        iStatus = "Terminally Ill  ";
+                        break;
+                    case "9":
+                        iStatus = "Already Enrolled";
+                        break;
+
+                    case "":
+                        iStatus = "null            ";
+                        break;
+                    default:
+                        iStatus = "\t\tN/A" + fc.getIstatus();
+                }
+
+
+                rSumText += fc.getClusterCode();
+                rSumText += "  \t\t";
+
+                rSumText += fc.getHhno();
+                rSumText += "  \t\t";
+
+                int childCount = db.getChildByUUID(fc.get_UID());
+                int motherCount = db.getMotherByUUID(fc.get_UID());
+                rSumText += motherCount + "/" + childCount;
+                rSumText += "\t\t";
+
+                rSumText += iStatus;
+                rSumText += "\t\t";
 
                 rSumText += (fc.getSynced() == null ? "Not Synced" : "Synced");
                 rSumText += "\r\n";
-                rSumText += "--------------------------------------------------\r\n";
+                rSumText += "----------------------------------------------------------\r\n";
             }
         }
+        SharedPreferences syncPref = getSharedPreferences("SyncInfo", Context.MODE_PRIVATE);
+        rSumText += "\r\nDEVICE INFORMATION\r\n";
+        rSumText += "  ========================================================\r\n";
+
+        rSumText += "\t|| Unsynced Forms: \t\t\t\t" + String.format("%02d", unsyncedForms.size());
+        rSumText += "\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t||\r\n";
+        rSumText += "\t|| Last Data Download: \t\t" + syncPref.getString("LastDataDownload", "Never Downloaded   ");
+        rSumText += "\t\t\t\t\t\t||\r\n";
+        rSumText += "\t|| Last Data Upload: \t\t\t" + syncPref.getString("LastDataUpload", "Never Uploaded     ");
+        rSumText += "\t\t\t\t\t\t||\r\n";
+        rSumText += "\t|| Last Photo Upload: \t\t" + syncPref.getString("LastPhotoUpload", "Never Uploaded     ");
+        rSumText += "\t\t\t\t\t\t||\r\n";
+        rSumText += "\t========================================================\r\n";
 
 
         if (MainApp.admin) {
             bi.databaseBtn.setVisibility(View.VISIBLE);
-            SharedPreferences syncPref = getSharedPreferences("SyncInfo", Context.MODE_PRIVATE);
-            rSumText += "Last Data Download: \t" + syncPref.getString("LastDownSyncServer", "Never Updated");
-            rSumText += "\r\n";
-            rSumText += "Last Data Upload: \t" + syncPref.getString("LastUpSyncServer", "Never Synced");
-            rSumText += "\r\n";
-            rSumText += "\r\n";
-            rSumText += "Unsynced Forms: \t" + unsyncedForms.size();
-            rSumText += "\r\n";
         } else {
             bi.databaseBtn.setVisibility(View.GONE);
         }

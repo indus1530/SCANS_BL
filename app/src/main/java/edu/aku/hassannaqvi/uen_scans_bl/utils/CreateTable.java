@@ -2,7 +2,8 @@ package edu.aku.hassannaqvi.uen_scans_bl.utils;
 
 import edu.aku.hassannaqvi.uen_scans_bl.contracts.AnthroContract.SingleAnthro;
 import edu.aku.hassannaqvi.uen_scans_bl.contracts.BLRandomContract.SingleRandomHH;
-import edu.aku.hassannaqvi.uen_scans_bl.contracts.ChildContract.SingleChild;
+import edu.aku.hassannaqvi.uen_scans_bl.contracts.ChildContract;
+import edu.aku.hassannaqvi.uen_scans_bl.contracts.ChildContract.ChildTable;
 import edu.aku.hassannaqvi.uen_scans_bl.contracts.DentalContract;
 import edu.aku.hassannaqvi.uen_scans_bl.contracts.EnumBlockContract;
 import edu.aku.hassannaqvi.uen_scans_bl.contracts.FamilyMembersContract;
@@ -148,25 +149,25 @@ public final class CreateTable {
             + hbTable.COLUMN_SYNCED + " TEXT,"
             + hbTable.COLUMN_SYNCED_DATE + " TEXT );";
 
-    public static final String SQL_CREATE_CHILD_TABLE = "CREATE TABLE " + SingleChild.TABLE_NAME + "("
-            + SingleChild._ID + " INTEGER PRIMARY KEY AUTOINCREMENT,"
-            + SingleChild.COLUMN_UID + " TEXT,"
-            + SingleChild.COLUMN__UUID + " TEXT,"
-            + SingleChild.COLUMN_DEVICEID + " TEXT,"
-            + SingleChild.COLUMN_FORMDATE + " TEXT,"
-            + SingleChild.COLUMN_USER + " TEXT,"
-            + SingleChild.COLUMN_SC1 + " TEXT,"
-            + SingleChild.COLUMN_SC2 + " TEXT,"
-            + SingleChild.COLUMN_SC3 + " TEXT,"
-            + SingleChild.COLUMN_SC4 + " TEXT,"
-            + SingleChild.COLUMN_SC5 + " TEXT,"
-            + SingleChild.COLUMN_SC6 + " TEXT,"
-            + SingleChild.COLUMN_SL + " TEXT,"
-            + SingleChild.COLUMN_SM + " TEXT,"
-            + SingleChild.COLUMN_SK1 + " TEXT,"
-            + SingleChild.COLUMN_DEVICETAGID + " TEXT,"
-            + SingleChild.COLUMN_SYNCED + " TEXT,"
-            + SingleChild.COLUMN_SYNCED_DATE + " TEXT );";
+    public static final String SQL_CREATE_CHILD_TABLE = "CREATE TABLE " + ChildTable.TABLE_NAME + "("
+            + ChildContract.ChildTable._ID + " INTEGER PRIMARY KEY AUTOINCREMENT,"
+            + ChildTable.COLUMN_UID + " TEXT,"
+            + ChildTable.COLUMN__UUID + " TEXT,"
+            + ChildTable.COLUMN_DEVICEID + " TEXT,"
+            + ChildTable.COLUMN_FORMDATE + " TEXT,"
+            + ChildContract.ChildTable.COLUMN_USER + " TEXT,"
+            + ChildContract.ChildTable.COLUMN_SC1 + " TEXT,"
+            + ChildTable.COLUMN_SC2 + " TEXT,"
+            + ChildTable.COLUMN_SC3 + " TEXT,"
+            + ChildTable.COLUMN_SC4 + " TEXT,"
+            + ChildTable.COLUMN_SC5 + " TEXT,"
+            + ChildTable.COLUMN_SC6 + " TEXT,"
+            + ChildTable.COLUMN_SL + " TEXT,"
+            + ChildTable.COLUMN_SM + " TEXT,"
+            + ChildTable.COLUMN_SK1 + " TEXT,"
+            + ChildTable.COLUMN_DEVICETAGID + " TEXT,"
+            + ChildTable.COLUMN_SYNCED + " TEXT,"
+            + ChildTable.COLUMN_SYNCED_DATE + " TEXT );";
 
 
     public static final String SQL_CREATE_ANTHRO = "CREATE TABLE " + SingleAnthro.TABLE_NAME + "("

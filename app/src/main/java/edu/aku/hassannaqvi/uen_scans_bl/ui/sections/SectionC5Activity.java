@@ -69,7 +69,7 @@ public class SectionC5Activity extends AppCompatActivity {
 
     private boolean UpdateDB() {
         DatabaseHelper db = MainApp.appInfo.getDbHelper();
-        int updcount = db.updatesChildColumn(ChildContract.SingleChild.COLUMN_SC5, MainApp.child.getsC5());
+        int updcount = db.updatesChildColumn(ChildContract.ChildTable.COLUMN_SC5, MainApp.child.getsC5());
         if (updcount == 1) {
             return true;
         } else {

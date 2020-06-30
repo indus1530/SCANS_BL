@@ -44,6 +44,7 @@ public class DentalPhotoActivity extends AppCompatActivity {
 //        intent.putExtra("picID", "901001" + "_" + "A-0001-001" + "_" + "1" + "_");
         intent.putExtra("picID", MainApp.indexKishMWRAChild.getClusterno() + "_" + MainApp.indexKishMWRAChild.getHhno() + "_" + PhotoSerial + "_");
 
+        //intent.putExtra("childName", "Hassan");
         intent.putExtra("childName", MainApp.indexKishMWRAChild.getName());
         //intent.putExtra("childName", MainApp.indexKishMWRA.getClusterno() + "_" + MainApp.indexKishMWRA.getHhno());
 
