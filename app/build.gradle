@@ -31,7 +31,7 @@ android {
             minSdkVersion 21
             targetSdkVersion 29
             versionCode code
-            versionName "1.6"
+            versionName "1.7"
             testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
         }
     } else {
@@ -60,7 +60,7 @@ dependencies {
         exclude group: 'com.android.support', module: 'support-annotations'
     })
 
-    implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:1.3.61"
+    implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:1.3.72"
     implementation 'androidx.appcompat:appcompat:1.1.0'
     implementation 'com.google.android.material:material:1.1.0'
     implementation 'androidx.legacy:legacy-support-v4:1.0.0'
@@ -90,7 +90,7 @@ dependencies {
 
     //Ali libraries
     implementation 'com.github.AliAzaz:Edittext-Library:2.0.0'
-    implementation 'com.github.AliAzaz:AndroidValidatorCrawler:1.0.1'
+    implementation 'com.github.AliAzaz:AndroidValidatorCrawler:1.0.2'
 
     implementation 'com.github.whalemare:sheetmenu:2.0.1'
 
@@ -115,10 +115,10 @@ dependencies {
     implementation "androidx.camera:camera-extensions:${camerax_ext_version}"
     // Glide
     implementation 'com.github.bumptech.glide:glide:4.11.0'
-    kapt 'com.github.bumptech.glide:compiler:4.10.0'
+    kapt 'com.github.bumptech.glide:compiler:4.11.0'
 
     //Date Time
-    implementation 'com.jakewharton.threetenabp:threetenabp:1.2.2'
+    implementation 'com.jakewharton.threetenabp:threetenabp:1.2.4'
 
     // Take Photo
     implementation 'id.zelory:compressor:2.1.0'
